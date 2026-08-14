@@ -39,7 +39,6 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt only blocks wp-admin, cart/checkout/account,
                                   # filter/sort query params, and plugin dirs — /shop/ is wide open
     },
-    },
 }
 
 HEADERS = {
