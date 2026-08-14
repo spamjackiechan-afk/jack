@@ -1,0 +1,39 @@
+name: Update live prices
+
+on:
+  schedule:
+    # Runs once a day at 09:00 UTC. Adjust the cron string to change timing —
+    # crontab.guru is a good tool for building these if you want a different schedule.
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    # Lets you trigger this manually from the GitHub Actions tab, to test it
+    # without waiting for the schedule.
+
+permissions:
+  contents: write
+
+jobs:
+  check-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run the price checker
+        run: python scripts/check_prices.py
+
+      - name: Commit updated prices if anything changed
+        run: |
+          git config user.name "PeptideOutpost price bot"
+          git config user.email "actions@github.com"
+          git add data/live_prices.json
+          git diff --staged --quiet || git commit -m "Update live prices [automated]"
+          git push
