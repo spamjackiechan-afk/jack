@@ -49,21 +49,28 @@ PRICE_PATTERN = re.compile(r"\$\s?([\d,]+\.?\d*)")
 
 
 def _find_price_in_jsonld(node):
-    """Recursively search a parsed JSON-LD object for an offers.price value."""
+    """Recursively search a parsed JSON-LD object for a price value —
+    checks both a simple Offer's "price" and an AggregateOffer's "lowPrice"
+    (used by products with multiple size/dose options, where there's no
+    single fixed price, just a starting price)."""
     if isinstance(node, dict):
         offers = node.get("offers")
-        if isinstance(offers, dict) and "price" in offers:
-            try:
-                return float(offers["price"])
-            except (TypeError, ValueError):
-                pass
-        if isinstance(offers, list):
-            for o in offers:
-                if isinstance(o, dict) and "price" in o:
+        if isinstance(offers, dict):
+            for key in ("price", "lowPrice"):
+                if key in offers:
                     try:
-                        return float(o["price"])
+                        return float(offers[key])
                     except (TypeError, ValueError):
                         pass
+        if isinstance(offers, list):
+            for o in offers:
+                if isinstance(o, dict):
+                    for key in ("price", "lowPrice"):
+                        if key in o:
+                            try:
+                                return float(o[key])
+                            except (TypeError, ValueError):
+                                pass
         graph = node.get("@graph")
         if isinstance(graph, list):
             for item in graph:
