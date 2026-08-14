@@ -47,22 +47,66 @@ HEADERS = {
 PRICE_PATTERN = re.compile(r"\$\s?([\d,]+\.?\d*)")
 
 
+def _find_price_in_jsonld(node):
+    """Recursively search a parsed JSON-LD object for an offers.price value."""
+    if isinstance(node, dict):
+        offers = node.get("offers")
+        if isinstance(offers, dict) and "price" in offers:
+            try:
+                return float(offers["price"])
+            except (TypeError, ValueError):
+                pass
+        if isinstance(offers, list):
+            for o in offers:
+                if isinstance(o, dict) and "price" in o:
+                    try:
+                        return float(o["price"])
+                    except (TypeError, ValueError):
+                        pass
+        graph = node.get("@graph")
+        if isinstance(graph, list):
+            for item in graph:
+                result = _find_price_in_jsonld(item)
+                if result is not None:
+                    return result
+    elif isinstance(node, list):
+        for item in node:
+            result = _find_price_in_jsonld(item)
+            if result is not None:
+                return result
+    return None
+
+
 def extract_price(html: str) -> float | None:
     """
-    Try a few common price-markup patterns (WooCommerce is the most common
-    platform among these vendors). Returns None if nothing confident is found
-    — callers should treat None as "couldn't verify", not "price is zero".
+    Primary strategy: read the page's own structured data (JSON-LD), which
+    most e-commerce sites include for Google/SEO purposes — confirmed
+    working against Improved Peptides' real page structure. This is far
+    more reliable than guessing CSS class names, since it doesn't depend
+    on a particular theme's markup.
+
+    Falls back to common CSS price patterns if no structured data is found.
+    Returns None if nothing confident is found — callers should treat None
+    as "couldn't verify", not "price is zero".
     """
     soup = BeautifulSoup(html, "html.parser")
 
-    # WooCommerce standard markup
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(script.string or "")
+        except (json.JSONDecodeError, TypeError):
+            continue
+        price = _find_price_in_jsonld(data)
+        if price is not None:
+            return price
+
+    # Fallback: common CSS price patterns (WooCommerce, schema.org microdata)
     price_el = soup.select_one(".woocommerce-Price-amount, p.price ins .amount, p.price .amount")
     if price_el:
         match = PRICE_PATTERN.search(price_el.get_text())
         if match:
             return float(match.group(1).replace(",", ""))
 
-    # schema.org microdata, used by some storefronts
     price_meta = soup.select_one('[itemprop="price"]')
     if price_meta:
         val = price_meta.get("content") or price_meta.get_text()
