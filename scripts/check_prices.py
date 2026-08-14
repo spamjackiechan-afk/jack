@@ -35,8 +35,10 @@ VENDORS = {
                                   # URLs, and /wp-json/ipp/ — /product/ and /shop/ are wide open
     },
     "Royal Peptides": {
-        "robots_checked_by": None,
-        "robots_allows": None,
+        "robots_checked_by": "Jackson, 2026-08-14",
+        "robots_allows": True,   # confirmed: robots.txt only blocks wp-admin, cart/checkout/account,
+                                  # filter/sort query params, and plugin dirs — /shop/ is wide open
+    },
     },
 }
 
