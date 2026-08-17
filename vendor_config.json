@@ -1,0 +1,215 @@
+{
+  "_readme": "One entry per vendor. Fill in the fields as each program responds. 'status' controls what the site shows \u2014 leave it as 'not_applied' or 'pending' until you actually have a working link, so the site never shows a dead or non-affiliate link as if it were live.",
+  "_field_guide": {
+    "status": "'not_applied' | 'pending' | 'approved' | 'no_program' \u2014 controls what shows on the site",
+    "site_url": "vendor's plain homepage \u2014 used as fallback when no affiliate link exists yet",
+    "tracking_type": "'link' | 'code' | 'link_plus_code' \u2014 how this vendor actually credits you",
+    "affiliate_link_base": "your unique referral URL once approved, e.g. https://vendor.com/?ref=yourcode \u2014 leave null until you have it",
+    "promo_code": "your discount/tracking code, if the vendor uses one \u2014 leave null until you have it",
+    "cookie_days": "attribution window in days, from their terms \u2014 helps you know how long a click 'counts'",
+    "commission": "rate or structure they quote you, as text \u2014 e.g. '10% for 12 months' or '15%, tiered to 25%'",
+    "guidelines_notes": "any required disclaimer language or restricted phrasing they send you \u2014 paste it here so it's not just sitting in an email you'll lose track of",
+    "last_checked": "date you last confirmed the link/code actually works"
+  },
+  "UltraLife": {
+    "status": "not_applied",
+    "site_url": "https://ultralifepeptides.com",
+    "tracking_type": null,
+    "affiliate_link_base": null,
+    "promo_code": null,
+    "cookie_days": null,
+    "commission": null,
+    "guidelines_notes": "Site references a 'Partners Portal' \u2014 check there directly for application details.",
+    "last_checked": "2026-08-11",
+    "payment_methods": null,
+    "shipping_info": "Cold-pack shipping only (overnight/2-day air). Tiered by order size: $50 (small) to $110 (251+ peptides). 1-2 day processing.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": [
+      "HPLC",
+      "Endotoxin testing"
+    ],
+    "testing_lab": null,
+    "testing_standard": "\u226599% purity claimed",
+    "testing_note": "Manufactured in FDA-registered, NSF-certified, GMP-compliant facilities \u2014 but no independent third-party testing lab is named, unlike several other vendors here.",
+    "testing_researched": "2026-08-17"
+  },
+  "Core Peptides": {
+    "status": "not_applied",
+    "site_url": "https://www.corepeptides.com",
+    "tracking_type": null,
+    "affiliate_link_base": null,
+    "promo_code": null,
+    "cookie_days": null,
+    "commission": null,
+    "guidelines_notes": "Strict research-only policy \u2014 expect firm required-disclaimer language if approved.",
+    "last_checked": "2026-08-11",
+    "payment_methods": [
+      "Credit cards",
+      "Venmo",
+      "Zelle",
+      "CashApp"
+    ],
+    "payment_note": "No bank transfer.",
+    "shipping_info": "Free over $200. Flat rate ~$9.25-9.95 standard, or $49-49.95 overnight/priority.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": [
+      "HPLC (implied)"
+    ],
+    "testing_lab": null,
+    "testing_standard": null,
+    "testing_note": "Independent review describes COA coverage as 'mostly, but constantly being updated with new tests' \u2014 meaning not every product is tested yet.",
+    "testing_researched": "2026-08-17"
+  },
+  "Koi Peptides": {
+    "status": "no_program",
+    "site_url": "https://koipeptides.com",
+    "tracking_type": null,
+    "affiliate_link_base": null,
+    "promo_code": null,
+    "cookie_days": null,
+    "commission": null,
+    "guidelines_notes": "Runs a qualified-buyer wholesale program (labs/CROs), not a consumer affiliate program. Likely won't fit this site's model \u2014 confirm before spending more time here.",
+    "last_checked": "2026-08-11",
+    "payment_methods": null,
+    "shipping_info": "Free shipping over $200. Same-day dispatch before 2PM CT, Mon-Fri.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": [
+      "HPLC",
+      "LC-MS",
+      "Endotoxin (USP <85>/<161>)"
+    ],
+    "testing_lab": "ISO/IEC 17025-accredited lab (unnamed)",
+    "testing_standard": "\u226599% purity target",
+    "testing_note": "Dual-verified: tested in-house first, then independently re-run by an accredited external lab \u2014 one of the more thorough protocols in this group.",
+    "testing_researched": "2026-08-17"
+  },
+  "Southern Aminos": {
+    "status": "not_applied",
+    "site_url": "https://southernaminos.com",
+    "tracking_type": null,
+    "affiliate_link_base": null,
+    "promo_code": null,
+    "cookie_days": null,
+    "commission": null,
+    "guidelines_notes": "Multiple independent review sites already have disclosed affiliate links with them, so a program almost certainly exists \u2014 worth a direct email since no public application page was found.",
+    "last_checked": "2026-08-11",
+    "payment_methods": [
+      "Major credit cards",
+      "ACH bank transfer",
+      "USDC crypto (where available)"
+    ],
+    "shipping_info": "Free FedEx/USPS expedited shipping over $150.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": [
+      "HPLC",
+      "Net content",
+      "Endotoxin",
+      "Heavy metals",
+      "Sterility"
+    ],
+    "testing_lab": "Freedom Diagnostics + ILS Labs",
+    "testing_standard": "99.5% average purity across 124 independently tracked batches",
+    "testing_note": "The most externally verified of any vendor here \u2014 tracked by independent third-party sites, not just self-reported. That same tracker also logged 2 historically underdosed batches, included here for honesty rather than omitted.",
+    "testing_researched": "2026-08-17"
+  },
+  "Purity Peptides": {
+    "status": "not_applied",
+    "site_url": "https://puritypeptides.is",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": null,
+    "promo_code": null,
+    "cookie_days": 30,
+    "commission": "10% default, top affiliates 15-20%",
+    "guidelines_notes": "Apply at https://puritypeptides.is/affiliates/apply \u2014 24-48hr review. Research Use Only framing required sitewide.",
+    "last_checked": "2026-08-11",
+    "payment_methods": null,
+    "shipping_info": "Ships to US and Canada only, no international. 1-2 day processing, then 5-10 days regular or 2-4 days express.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": null,
+    "testing_lab": null,
+    "testing_standard": null,
+    "testing_note": "No testing methodology, lab, or purity standard could be confirmed from their own site.",
+    "testing_researched": "2026-08-17"
+  },
+  "Improved Peptides": {
+    "status": "approved",
+    "site_url": "https://improvedpeptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://improvedpeptides.com/?ref=vrgsdsxy",
+    "promo_code": "jacksonmoore",
+    "cookie_days": 30,
+    "commission": "20% first order, 10% recurring on repeat orders",
+    "guidelines_notes": "Approved 2026-08-11. Research Use Only framing required sitewide \u2014 keep site copy in that lane.",
+    "last_checked": "2026-08-11",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "PayPal",
+      "Venmo",
+      "Zelle"
+    ],
+    "shipping_info": "Free standard shipping; free 2-day over $200; same-day dispatch by 3PM CT.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": [
+      "HPLC (purity)",
+      "LC-MS (identity)",
+      "Endotoxin/microbial (USP)"
+    ],
+    "testing_lab": "Freedom Diagnostics",
+    "testing_standard": "\u226599% purity threshold, no exceptions (stated policy)",
+    "testing_note": "Real batch results published (e.g. BPC-157 99.18%, GLP-3R 99.96%) \u2014 though some COAs are still listed as 'in verification,' not yet downloadable.",
+    "testing_researched": "2026-08-17"
+  },
+  "Royal Peptides": {
+    "status": "approved",
+    "site_url": "https://royal-peptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://royal-peptides.com/?ref=tofnghus",
+    "promo_code": "jacksonmoore",
+    "cookie_days": null,
+    "commission": "10% (per earlier program page)",
+    "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed.",
+    "last_checked": "2026-08-11",
+    "payment_methods": [
+      "Zelle",
+      "Chime",
+      "Wise",
+      "Cryptocurrency",
+      "PayPal (Friends & Family, B2B only)"
+    ],
+    "payment_note": "No credit cards accepted (confirmed via their Terms of Service).",
+    "shipping_info": "2-5 business days via UPS from California. Exact cost not published.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": [
+      "HPLC",
+      "Mass spectrometry"
+    ],
+    "testing_lab": "Janoshik (mentioned in marketing only)",
+    "testing_standard": "Not guaranteed per batch",
+    "testing_note": "Their own FAQ hedges: testing 'may include' HPLC/MS 'depending on the batch and documentation available' \u2014 less definitive than their marketing tagline implies.",
+    "testing_researched": "2026-08-17"
+  },
+  "BioIntegrity Research": {
+    "status": "not_applied",
+    "site_url": "https://biointegrityresearch.com",
+    "tracking_type": null,
+    "affiliate_link_base": null,
+    "promo_code": null,
+    "cookie_days": null,
+    "commission": null,
+    "guidelines_notes": "Real, verified company \u2014 DBA of Triple Seven Distribution LLC. Publishes a public COA archive (strong trust signal). NOT the same as the 'BioIntegrity' name in the original spreadsheet, which remains unverified \u2014 do not conflate the two. No affiliate program contact made yet.",
+    "last_checked": "2026-08-16",
+    "payment_methods": null,
+    "shipping_info": "Calculated at checkout by weight/destination; cold-chain packaging included free. 2-3 day processing, ships via USPS/UPS/FedEx.",
+    "shipping_payment_researched": "2026-08-16",
+    "testing_methods": [
+      "HPLC",
+      "MS",
+      "Endotoxin"
+    ],
+    "testing_lab": null,
+    "testing_standard": "\u226599.0% assayed purity, every lot (claimed)",
+    "testing_note": "Publishes a genuinely unusual permanent public COA archive (38 lots across 23 compounds, even sold-out ones) \u2014 but the testing lab isn't named, so independent/third-party status is unconfirmed.",
+    "testing_researched": "2026-08-17"
+  }
+}
