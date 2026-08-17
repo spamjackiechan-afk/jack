@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Peptides — Peptide Price Comparison</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230E1211'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%233ED9A6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0E1211;
+    --paper-raised:#171B19;
+    --ink:#F2F3F1;
+    --ink-soft:#8A9490;
+    --rule:#24302B;
+    --sage:#2DA37D;
+    --sage-deep:#3ED9A6;
+    --amber:#E24B4A;
+    --amber-bg:#2E1A18;
+    --lowest:#3ED9A6;
+    --lowest-bg:#132420;
+    --success:#E8B84B;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:500;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- Masthead ---------- */
+  header.mast{
+    border-bottom:2px solid var(--ink);
+    padding:36px 0 18px;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--sage-deep);
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:10px;
+    margin-bottom:18px;
+  }
+  h1.title{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(38px, 6vw, 64px);
+    line-height:0.98;
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  h1.title .brand-word{
+    font-weight:500;
+    background:linear-gradient(180deg, #FFFFFF 0%, #9098A0 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    filter:drop-shadow(0 0 18px rgba(255,255,255,0.35));
+  }
+  h1.title em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--sage-deep);
+    text-shadow:0 0 24px rgba(62,217,166,0.55), 0 0 50px rgba(62,217,166,0.25);
+  }
+  .subtitle{
+    font-size:15px;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin:0;
+    line-height:1.5;
+  }
+
+  /* ---------- Controls ---------- */
+  .controls{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin:26px 0 8px;
+  }
+  input[type="search"]{
+    flex:1;
+    min-width:220px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    padding:11px 14px;
+    background:var(--paper-raised);
+    border:1.5px solid var(--ink);
+    color:var(--ink);
+    outline:none;
+  }
+  input[type="search"]::placeholder{color:var(--ink-soft);}
+  .chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.03em;
+    padding:9px 13px;
+    background:transparent;
+    border:1.5px solid var(--lowest);
+    color:var(--lowest);
+    cursor:pointer;
+    transition:all .15s ease;
+    text-transform:uppercase;
+  }
+  .chip:hover{background:var(--lowest-bg);}
+  .chip.active{
+    border-color:var(--lowest);
+    background:var(--lowest);
+    color:var(--paper);
+  }
+  .count{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin:6px 0 22px;
+    border-top:1px solid var(--rule);
+    padding-top:10px;
+  }
+
+  /* ---------- Cards ---------- */
+  .index{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:16px;
+    align-items:start;
+  }
+  .card{
+    display:flex;
+    flex-direction:column;
+    padding:16px;
+    background:var(--paper-raised);
+    border:1px solid var(--rule);
+    border-radius:12px;
+  }
+  .name-block h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:18px;
+    margin:0 0 4px;
+    line-height:1.2;
+  }
+  .name-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:2px;
+  }
+  .icon-badge{
+    width:32px;
+    height:32px;
+    border-radius:8px;
+    background:var(--lowest-bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    font-size:17px;
+    color:var(--lowest);
+  }
+  .meta-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin:8px 0 12px 42px;
+  }
+  .meta-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    color:var(--ink-soft);
+    background:var(--paper);
+    border:1px solid var(--rule);
+    border-radius:20px;
+    padding:2px 9px;
+  }
+  .meta-tag.vendor-count{
+    color:var(--success);
+    background:var(--paper);
+    border-color:var(--success);
+  }
+  .category-tag{
+    display:inline-block;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:10.5px;
+    font-weight:500;
+    color:var(--paper);
+    background:var(--sage);
+    padding:3px 10px;
+    border-radius:4px;
+    cursor:help;
+  }
+  .dose-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin:10px 0 6px 42px;
+  }
+  .dose-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin:0 0 4px 42px;
+  }
+  .dose-pill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    padding:6px 12px;
+    border-radius:20px;
+    border:1.5px solid var(--lowest);
+    background:transparent;
+    color:var(--lowest);
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .dose-pill.active{
+    background:var(--lowest);
+    color:var(--paper);
+    font-weight:500;
+  }
+  .dose-panel{
+    padding-top:14px;
+    margin-top:8px;
+    border-top:1px dashed var(--rule);
+  }
+  #calcToggle:hover{background:var(--sage); border-color:var(--sage);}
+  .trust-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    cursor:pointer;
+    background:none;
+    border:none;
+    padding:0;
+    text-decoration:none;
+  }
+  .trust-item:hover{color:var(--lowest);}
+  .trust-item svg{color:var(--lowest); flex-shrink:0;}
+  #suppliersToggle:hover{background:var(--lowest-bg);}
+  .supplier-card{
+    background:var(--paper);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+  }
+  .supplier-card h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:16px;
+    margin:0 0 6px;
+    color:var(--ink);
+  }
+  .supplier-badge{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9.5px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    padding:2px 8px;
+    border-radius:20px;
+    margin-bottom:10px;
+  }
+  .supplier-badge.partner{color:var(--success); border:1px solid var(--success);}
+  .supplier-badge.unverified{color:var(--amber); border:1px solid var(--amber);}
+  .supplier-badge.pending{color:var(--ink-soft); border:1px solid var(--rule);}
+  .supplier-meta{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-bottom:12px;}
+  .supplier-actions{display:flex; gap:8px; margin-top:auto;}
+  .supplier-actions a, .supplier-actions button{
+    flex:1;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    padding:8px 10px;
+    border-radius:6px;
+    cursor:pointer;
+    text-decoration:none;
+  }
+  .supplier-btn-visit{background:transparent; border:1px solid var(--rule); color:var(--ink-soft);}
+  .supplier-btn-prices{background:var(--lowest); border:1px solid var(--lowest); color:var(--paper); font-weight:500;}
+  .calc-btn-short{display:none;}
+  @media (max-width:480px){
+    .calc-btn-full{display:none;}
+    .calc-btn-short{display:inline;}
+    #suppliersLink, #calcToggle{padding:9px 12px; font-size:11px;}
+  }
+  .format-section, .card-grid{grid-column:1 / -1;}
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:16px;
+  }
+  .format-section{
+    margin:36px 0 18px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--rule);
+  }
+  .format-section:first-child{margin-top:8px;}
+  .format-section h2{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--lowest);
+    font-weight:500;
+    margin:0;
+  }
+  .meta-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .caution{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--amber);
+    background:var(--amber-bg);
+    border:1px solid var(--amber);
+    padding:3px 8px;
+    margin-bottom:8px;
+    transform:rotate(-0.6deg);
+  }
+  .note{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    margin-bottom:10px;
+  }
+
+  .price-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+  .expand-toggle{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--lowest);
+    background:transparent;
+    border:1px dashed var(--rule);
+    padding:6px 10px;
+    margin-top:6px;
+    cursor:pointer;
+    width:100%;
+    text-align:center;
+  }
+  .expand-toggle:hover{border-color:var(--lowest);}
+  .price-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    padding:8px 10px;
+    background:var(--paper-raised);
+    border:1px solid var(--lowest);
+    border-radius:8px;
+  }
+  .price-row.lowest{
+    border-color:var(--lowest);
+    background:var(--lowest-bg);
+    color:var(--sage-deep);
+    font-weight:500;
+  }
+  a.price-row{text-decoration:none; cursor:pointer; color:var(--ink);}
+  .price-amount{color:var(--ink);}
+  a.price-row:hover{border-color:var(--ink);}
+  .price-row .vendor{color:var(--lowest); font-size:11px;}
+  .live-badge{
+    color:var(--success);
+    font-size:9px;
+    letter-spacing:0.03em;
+    margin-left:5px;
+  }
+  .price-row.lowest .vendor{color:var(--sage-deep);}
+  .price-row.lowest .price-amount{color:var(--sage-deep);}
+  .price-row .val{font-weight:500; display:flex; flex-direction:column; align-items:flex-end; gap:2px;}
+  .promo-code{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--paper);
+    background:var(--sage-deep);
+    border:1px solid var(--sage-deep);
+    padding:3px 7px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .promo-code:hover{background:var(--success); border-color:var(--success);}
+  .promo-code.copied{background:var(--success); border-color:var(--success);}
+  .code-banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    background:var(--sage-deep);
+    color:var(--paper);
+    padding:14px 18px;
+    margin:4px 0 18px;
+    border:1px solid var(--sage-deep);
+  }
+  .code-banner .msg{
+    font-size:13.5px;
+    line-height:1.4;
+  }
+  .code-banner .msg strong{
+    font-family:'IBM Plex Mono', monospace;
+    background:rgba(255,255,255,0.15);
+    padding:2px 6px;
+  }
+  .code-banner button{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    background:var(--paper);
+    color:var(--sage-deep);
+    border:none;
+    padding:8px 14px;
+    cursor:pointer;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .code-banner button.copied{background:var(--success); color:var(--paper);}
+  .price-row.unavailable{
+    opacity:.55;
+    cursor:default;
+    border-style:dashed;
+  }
+  .unavailable-tag{
+    font-size:9px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .cta{
+    grid-column:1 / -1;
+    margin-top:4px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--rule);
+    padding-top:8px;
+  }
+
+  @media (max-width:720px){
+    .index{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Excluded ledger ---------- */
+  .excluded-section{
+    margin-top:56px;
+    border-top:2px solid var(--ink);
+    padding-top:24px;
+  }
+  .excluded-section h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-style:italic;
+    font-size:24px;
+    margin:0 0 10px;
+  }
+  .excluded-section p{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    max-width:640px;
+    line-height:1.6;
+  }
+  .excluded-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:16px;
+  }
+  .excluded-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    padding:6px 10px;
+    border:1px dashed var(--rule);
+    color:var(--ink-soft);
+    text-decoration:line-through;
+    text-decoration-color:var(--amber);
+  }
+
+  footer{
+    margin-top:60px;
+    border-top:2px solid var(--ink);
+    padding:24px 0 50px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+  footer strong{color:var(--ink);}
+  .calc-field{margin-bottom:20px;}
+  .calc-label{
+    display:block;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:13px;
+    font-weight:500;
+    color:var(--ink);
+    margin-bottom:2px;
+  }
+  .calc-sublabel{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    font-weight:400;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+  .calc-input-row{
+    display:flex;
+    align-items:center;
+    background:var(--paper);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    padding:0 12px;
+    margin-top:8px;
+  }
+  .calc-input-row input{
+    flex:1;
+    background:none;
+    border:none;
+    outline:none;
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:16px;
+    padding:10px 0;
+  }
+  .calc-unit{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft);}
+  .calc-pills{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;}
+  .calc-pill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    padding:5px 11px;
+    border-radius:20px;
+    border:1.5px solid var(--lowest);
+    background:transparent;
+    color:var(--lowest);
+    cursor:pointer;
+  }
+  .calc-pill.active{background:var(--lowest); color:var(--paper); font-weight:500;}
+  .calc-unit-toggle{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    padding:5px 14px;
+    border-radius:6px;
+    border:1px solid var(--rule);
+    background:transparent;
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+  .calc-unit-toggle.active{background:var(--paper-raised); border-color:var(--lowest); color:var(--lowest);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="eyebrow">
+      <span>Independent Vendor Comparison</span>
+      <span id="today"></span>
+    </div>
+    <h1 class="title"><span class="brand-word">Discount</span> <em>Peptides.</em></h1>
+    <p class="subtitle">Independent price comparison across peptide vendors, indexed by compound, for research and laboratory reference. Every listing carries its evidence caveats — not just its price.</p>
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; margin-top:14px;">
+      <p style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; color:var(--amber); margin:0;">Research use only — not for human or animal consumption</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button type="button" id="suppliersToggle" style="display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; background:transparent; border:1.5px solid var(--lowest); color:var(--lowest); padding:10px 18px; border-radius:8px; cursor:pointer;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          Suppliers
+        </button>
+        <button type="button" id="calcToggle" style="display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; background:var(--lowest); border:1.5px solid var(--lowest); color:var(--paper); padding:10px 18px; border-radius:8px; cursor:pointer; white-space:nowrap;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/></svg>
+          <span class="calc-btn-full">Reconstitution calculator</span><span class="calc-btn-short">Calculator</span>
+        </button>
+      </div>
+    </div>
+    <div id="trustStrip" style="display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:16px; padding-top:14px; border-top:1px solid var(--rule);"></div>
+  </header>
+
+  <div id="suppliersSection" style="display:none; margin:0 0 32px;">
+    <div style="border:1px solid var(--rule); border-radius:12px; padding:24px; background:var(--paper-raised);">
+      <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:0 0 4px; color:var(--ink);">Suppliers</h2>
+      <p style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin:0 0 20px;">Every vendor referenced on this site, with what we actually know about them — no invented ratings or order counts.</p>
+      <div id="suppliersGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px;"></div>
+    </div>
+  </div>
+
+  <div id="calcSection" style="display:none; margin:0 0 32px;">
+    <div style="border:1px solid var(--rule); border-radius:12px; padding:24px; background:var(--paper-raised);">
+      <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:0 0 4px; color:var(--ink);">Reconstitution calculator</h2>
+      <p style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin:0 0 20px;">Calculate syringe units for a given vial strength and dilution.</p>
+
+      <div style="display:grid; grid-template-columns:1.6fr 1fr; gap:20px;">
+        <div>
+          <div class="calc-field">
+            <label class="calc-label">Vial strength <span class="calc-sublabel">Total peptide printed on the label</span></label>
+            <div class="calc-input-row"><input type="number" id="calcVial" value="10" min="0" step="0.1"><span class="calc-unit">mg</span></div>
+            <div class="calc-pills" data-target="calcVial">
+              <button type="button" class="calc-pill" data-val="5">5mg</button>
+              <button type="button" class="calc-pill active" data-val="10">10mg</button>
+              <button type="button" class="calc-pill" data-val="15">15mg</button>
+              <button type="button" class="calc-pill" data-val="30">30mg</button>
+              <button type="button" class="calc-pill" data-val="50">50mg</button>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label">Bacteriostatic water <span class="calc-sublabel">Water added when reconstituting</span></label>
+            <div class="calc-input-row"><input type="number" id="calcWater" value="1" min="0.1" step="0.1"><span class="calc-unit">mL</span></div>
+            <div class="calc-pills" data-target="calcWater">
+              <button type="button" class="calc-pill active" data-val="1">1mL</button>
+              <button type="button" class="calc-pill" data-val="2">2mL</button>
+              <button type="button" class="calc-pill" data-val="3">3mL</button>
+              <button type="button" class="calc-pill" data-val="5">5mL</button>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label">Desired dose <span class="calc-sublabel">Optional — amount per injection</span></label>
+            <div style="display:flex; gap:8px; margin-bottom:8px;">
+              <button type="button" id="calcUnitMg" class="calc-unit-toggle active">mg</button>
+              <button type="button" id="calcUnitMcg" class="calc-unit-toggle">mcg</button>
+            </div>
+            <div class="calc-input-row"><input type="number" id="calcDose" value="2" min="0" step="0.01"><span class="calc-unit" id="calcDoseUnit">mg</span></div>
+            <div class="calc-pills" data-target="calcDose" id="calcDosePills">
+              <button type="button" class="calc-pill" data-mg="0.1">0.1mg</button>
+              <button type="button" class="calc-pill" data-mg="0.25">0.25mg</button>
+              <button type="button" class="calc-pill" data-mg="0.5">0.5mg</button>
+              <button type="button" class="calc-pill" data-mg="1">1mg</button>
+              <button type="button" class="calc-pill active" data-mg="2">2mg</button>
+              <button type="button" class="calc-pill" data-mg="5">5mg</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--paper); border:1px solid var(--lowest); border-radius:8px; padding:18px;">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px;">Draw syringe to</div>
+          <div style="font-family:'Fraunces', serif; font-size:32px; color:var(--lowest); text-shadow:0 0 20px rgba(62,217,166,0.4); margin-bottom:2px;" id="calcUnits">20 units</div>
+          <div style="font-size:12px; color:var(--ink-soft); margin-bottom:16px;" id="calcMicroliters">0.2mL per dose (200 μL)</div>
+
+          <div style="margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">
+              <span>Syringe draw</span>
+              <span id="calcGaugeRange">0 – 100 units</span>
+            </div>
+            <div style="position:relative; height:26px; background:var(--paper-raised); border:1px solid var(--rule); border-radius:6px; overflow:hidden;">
+              <div id="calcGaugeFill" style="position:absolute; top:0; left:0; bottom:0; width:20%; background:linear-gradient(90deg, var(--sage) 0%, var(--lowest) 100%); transition:width .2s ease;"></div>
+              <div style="position:absolute; inset:0; display:flex; align-items:center;">
+                <span style="position:absolute; left:4px; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--paper);">0</span>
+                <span style="position:absolute; left:25%; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">25</span>
+                <span style="position:absolute; left:50%; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">50</span>
+                <span style="position:absolute; left:75%; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">75</span>
+                <span style="position:absolute; right:4px; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">100</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; font-size:12px; padding:8px 0; border-top:1px dashed var(--rule);">
+            <span style="color:var(--ink-soft);">Doses per vial</span>
+            <span style="color:var(--ink); font-weight:500;" id="calcDosesPerVial">5</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:12px; padding:8px 0; border-top:1px dashed var(--rule);">
+            <span style="color:var(--ink-soft);">Concentration</span>
+            <span style="color:var(--ink); font-weight:500;" id="calcConcentration">10mg/mL</span>
+          </div>
+
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--amber); margin-top:16px; padding-top:12px; border-top:1px solid var(--rule);">For research reference only. Not medical advice.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="search" id="search" placeholder="Search a peptide — e.g. BPC-157, NAD+, Selank…">
+    <button class="chip active" data-filter="All">All formats</button>
+    <button class="chip" data-filter="Nasal">Nasal</button>
+    <button class="chip" data-filter="Vial">Vial</button>
+    <button class="chip" data-filter="Capsules">Capsules</button>
+    <button class="chip" data-filter="Oral">Oral</button>
+    <select id="vendorFilter" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
+      <option value="All">All vendors</option>
+    </select>
+    <select id="categoryFilter" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
+      <option value="All">All categories</option>
+    </select>
+    <select id="sortBy" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
+      <option value="name">Sort: A–Z</option>
+      <option value="price-low">Sort: Price low–high</option>
+      <option value="price-high">Sort: Price high–low</option>
+    </select>
+  </div>
+  <div id="codeBanner"></div>
+  <div class="count" id="count"></div>
+
+  <div class="index" id="index"></div>
+
+  <div class="excluded-section">
+    <h2>What isn't listed, and why</h2>
+    <p>Every excluded item falls into one of these categories — not withheld for weak evidence, but for active legal exposure.</p>
+    <div id="excludedCategories"></div>
+  </div>
+
+  <footer>
+    <p><strong>About the codes —</strong> promo codes shown on this page (like <strong>jacksonmoore</strong>) give you a discount at checkout, and also let the vendor know the order came through this site — which is how this site earns a commission on it, at no extra cost to you. Using a code isn't required to buy, but it's appreciated if this page helped you compare.</p>
+    <p><strong>Research use only —</strong> all products referenced on this page are supplied by third-party vendors for laboratory and research use only. They are not for human or animal consumption, and nothing here is a recommendation, dosing protocol, or endorsement of use.</p>
+    <p><strong>Affiliate disclosure —</strong> this page will contain affiliate links. When a listed vendor's product page is visited through a link here, this site may earn a commission on a resulting sale, at no added cost to the buyer. Vendor inclusion does not imply endorsement of a product's safety, legality, or efficacy.</p>
+    <p><strong>Not medical advice —</strong> pricing and evidence notes are for research reference and comparison only. Peptides listed here are, in most cases, not FDA-approved, and evidence quality varies widely by compound — see the note on each listing before assuming a claim is well-supported.</p>
+    <p>Vendor prices are checked against original spreadsheet data, cross-referenced with each vendor's live site, and — for vendors with an automated daily price check — confirmed against a live, scheduled read of their actual product pages (see the "● LIVE" tag on those listings).</p>
+  </footer>
+
+</div>
+
+<script>
+const DATA = {"included": [{"peptide": "5-Amino-1MQ", "format": "Nasal", "size": "400mg", "amount_mg": 400, "prices": {"UltraLife": 299}, "lowest": 299, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-5-amino-1mq-400mg/"}, "category": "Metabolic & Weight"}, {"peptide": "ARA-290 (Cibinetide)", "format": "Nasal", "size": "20mg", "amount_mg": 20, "prices": {"UltraLife": 249}, "lowest": 249, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-ara-290-20mg/"}, "category": "Tissue Repair & Recovery"}, {"peptide": "BPC-157", "format": "Nasal", "size": "30mg", "amount_mg": 30, "prices": {"UltraLife": 149, "BioIntegrity Research": 159.0}, "lowest": 149, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-bpc-157-30mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/bpc-157"}, "category": "Tissue Repair & Recovery"}, {"peptide": "CJC-1295", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 169}, "lowest": 169, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-cjc-1295-10mg/"}, "category": "Growth Hormone & Muscle"}, {"peptide": "CJC-1295 / Ipamorelin combo", "format": "Nasal", "size": "10mg/10mg", "amount_mg": 10, "prices": {"UltraLife": 199, "BioIntegrity Research": 199.0}, "lowest": 199, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-cjc-1295-ipamorelin-10mg-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin"}, "category": "Growth Hormone & Muscle"}, {"peptide": "DSIP", "format": "Nasal", "size": "8mg", "amount_mg": 8, "prices": {"UltraLife": 120}, "lowest": 120, "notes": "All positive human trials used IV administration; no dedicated data for the nasal route.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-dsip-8mg/"}, "category": "Cognitive & Neurological"}, {"peptide": "Epitalon", "format": "Nasal", "size": "100mg", "amount_mg": 100, "prices": {"UltraLife": 160, "BioIntegrity Research": 169.0}, "lowest": 155, "notes": "No large blinded placebo-controlled human trials exist for headline claims (telomere length, lifespan).", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-epitalon-100mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/epitalon"}, "category": "Cellular & Longevity"}, {"peptide": "Epitalon / Thymulin combo", "format": "Nasal", "size": "50mg/10mg", "amount_mg": 50, "prices": {"UltraLife": 175}, "lowest": 175, "notes": "Thymulin's human evidence rests on a single 1982 trial, never replicated.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-epitalon-thymulin-50mg-10mg/"}, "category": "Cellular & Longevity"}, {"peptide": "GHK-Cu (Copper Peptide)", "format": "Nasal", "size": "50mg", "amount_mg": 50, "prices": {"UltraLife": 100, "Purity Peptides": 89.99, "BioIntegrity Research": 119.0}, "lowest": 100, "notes": "No dedicated trial data for the nasal route.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-ghk-cu-50mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ghk-cu"}, "category": "Cellular & Longevity"}, {"peptide": "GHK-Cu / KPV combo", "format": "Nasal", "size": "50mg/10mg", "amount_mg": 50, "prices": {"UltraLife": 125}, "lowest": 125, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-ghk-cu-kpv-50mg-10mg/"}, "category": "Tissue Repair & Recovery"}, {"peptide": "KPV", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 120, "BioIntegrity Research": 119.0}, "lowest": 119, "notes": "Zero published human trials for KPV to date.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-kpv-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/kpv"}, "category": "Tissue Repair & Recovery"}, {"peptide": "KPV / Thymosin Alpha-1 combo", "format": "Nasal", "size": "10mg/10mg", "amount_mg": 10, "prices": {"UltraLife": 225}, "lowest": 225, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-kpv-thymosin-alpha-1-10mg-10mg/"}, "category": "Tissue Repair & Recovery"}, {"peptide": "MOTS-C", "format": "Nasal", "size": "20mg", "amount_mg": 20, "prices": {"UltraLife": 175, "BioIntegrity Research": 189.0}, "lowest": 175, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/mots-c-20mg-n/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/mots-c"}, "category": "Cellular & Longevity"}, {"peptide": "NAD+", "format": "Nasal", "size": "500mg", "amount_mg": 500, "prices": {"UltraLife": 135, "Purity Peptides": 139.99, "BioIntegrity Research": 149.0}, "lowest": 130, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/nad-plus"}, "category": "Cellular & Longevity"}, {"peptide": "Oxytocin", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 119, "Core Peptides": 52}, "lowest": 52, "notes": "Core Peptides sells this as a vial, not nasal \u2014 not a direct comparison.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/"}, "category": "Sexual Health & Hormonal"}, {"peptide": "Oxytocin / Methylene Blue combo", "format": "Nasal", "size": "3mg/1mg", "amount_mg": 3, "prices": {"UltraLife": 139}, "lowest": 139, "notes": "No evidence found for combined/synergistic effect vs. either compound alone.", "category": "Sexual Health & Hormonal"}, {"peptide": "PT-141 (Bremelanotide)", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 119, "Purity Peptides": 99.99, "BioIntegrity Research": 129.0}, "lowest": 119, "notes": "FDA-approved route is subcutaneous injection (Vyleesi); nasal is not the approved formulation.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/pt-141"}, "category": "Sexual Health & Hormonal"}, {"peptide": "PT-141 / Oxytocin combo", "format": "Nasal", "size": "5mg/10mg", "amount_mg": 5, "prices": {"UltraLife": 139}, "lowest": 139, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/"}, "category": "Sexual Health & Hormonal"}, {"peptide": "Selank", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 109, "Purity Peptides": 109.99, "BioIntegrity Research": 119.0}, "lowest": 109, "notes": "Southern Aminos 'Adalank'/'Adamax' naming unconfirmed vs Selank/Semax \u2014 needs COA before pricing here.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-selank-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/selank"}, "category": "Cognitive & Neurological"}, {"peptide": "Selank / Semax combo", "format": "Nasal", "size": "15mg/15mg", "amount_mg": 15, "prices": {"UltraLife": 135}, "lowest": 135, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-selank-semax-15mg-15mg/"}, "category": "Cognitive & Neurological"}, {"peptide": "Semax", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 109, "Purity Peptides": 78.99, "BioIntegrity Research": 119.0}, "lowest": 109, "notes": "Southern Aminos 'Adalank'/'Adamax' naming unconfirmed \u2014 needs COA before pricing here.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-semax-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/semax"}, "category": "Cognitive & Neurological"}, {"peptide": "SS-31 / Elamipretide", "format": "Nasal", "size": "25mg", "amount_mg": 25, "prices": {"UltraLife": 260, "BioIntegrity Research": 219.0}, "lowest": 199, "notes": "FDA-approved only for Barth syndrome (Forzinity), narrow indication \u2014 not general wellness.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-ss-31-25mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ss-31"}, "category": "Cellular & Longevity"}, {"peptide": "Thymosin Alpha-1", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 187, "BioIntegrity Research": 169.0}, "lowest": 169, "notes": "Not FDA-approved in the US (approved in 35+ countries); strongest evidence is hepatitis B/C specific.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-thymosin-alpha-1-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"}, "category": "Tissue Repair & Recovery"}, {"peptide": "5-Amino-1MQ", "format": "Vial", "size": "50mg", "amount_mg": 50, "prices": {"UltraLife": 139, "Improved Peptides": 65.0, "Royal Peptides": 80, "BioIntegrity Research": 54.0}, "lowest": 54, "notes": "Price range up to $620.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-5-amino-1mq-50mg/", "Improved Peptides": "https://improvedpeptides.com/product/5-amino-1mq-50mg/", "Royal Peptides": "https://royal-peptides.com/shop/5-amino-1mq/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/5-amino-1mq"}, "category": "Metabolic & Weight"}, {"peptide": "AOD-9604", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 219, "Koi Peptides": 89.95, "BioIntegrity Research": 134.0}, "lowest": 89.95, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-aod-9604-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/aod-9604"}, "category": "Metabolic & Weight"}, {"peptide": "ARA-290 (Cibinetide)", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 179, "BioIntegrity Research": 114.0}, "lowest": 114, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-ara-290-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ara-290"}, "category": "Tissue Repair & Recovery"}, {"peptide": "BPC-157", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 89, "Core Peptides": 97, "Koi Peptides": 59.95, "Purity Peptides": 94.99, "Improved Peptides": 65.0, "BioIntegrity Research": 89.0}, "lowest": 59.95, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-bpc-157-10mg/", "Koi Peptides": "https://koipeptides.com/product/bpc-157/", "Improved Peptides": "https://improvedpeptides.com/product/bpc-157/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/bpc-157"}, "category": "Tissue Repair & Recovery"}, {"peptide": "CJC-1295 / Ipamorelin combo", "format": "Vial", "size": "7.5mg/10mg", "amount_mg": 7.5, "prices": {"UltraLife": 155, "Core Peptides": 80, "BioIntegrity Research": 139.0}, "lowest": 80, "notes": "Core Peptides sells 5mg/5mg at this price, not 7.5mg/10mg \u2014 not a direct comparison.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-cjc-1295-ipamorelin-7-5mg-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin"}, "category": "Growth Hormone & Muscle"}, {"peptide": "DSIP", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Core Peptides": 41, "Purity Peptides": 49.99, "Improved Peptides": 45.0, "Royal Peptides": 45}, "lowest": 41, "notes": "Price range up to $550.", "vendor_product_urls": {"Improved Peptides": "https://improvedpeptides.com/product/dsip-5mg/", "Royal Peptides": "https://royal-peptides.com/shop/dsip-5mg-vial/"}, "category": "Cognitive & Neurological"}, {"peptide": "Epitalon", "format": "Vial", "size": "25mg", "amount_mg": 25, "prices": {"Core Peptides": 90}, "lowest": 90, "notes": null, "category": "Cellular & Longevity"}, {"peptide": "Epitalon", "format": "Vial", "size": "100mg", "amount_mg": 100, "prices": {"UltraLife": 155, "BioIntegrity Research": 159.0}, "lowest": 155, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-epitalon-100mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/epitalon"}, "category": "Cellular & Longevity"}, {"peptide": "FOXO4-DRI", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Core Peptides": 235}, "lowest": 235, "notes": "Zero human trials.", "category": "Cellular & Longevity"}, {"peptide": "GHK-Cu (Copper Peptide)", "format": "Vial", "size": "50mg", "amount_mg": 50, "prices": {"UltraLife": 89, "Core Peptides": 58, "Purity Peptides": 79.99, "Improved Peptides": 39.0, "BioIntegrity Research": 94.0}, "lowest": 58, "notes": "Strong evidence base is topical; essentially no dedicated trial data for nasal/injectable use.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-ghk-cu-50mg/", "Improved Peptides": "https://improvedpeptides.com/product/ghk-cu-50mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ghk-cu"}, "category": "Cellular & Longevity"}, {"peptide": "Glutathione", "format": "Vial", "size": "1500mg", "amount_mg": 1500, "prices": {"Southern Aminos": 44, "Purity Peptides": 109.99}, "lowest": 44, "notes": null, "category": "Cellular & Longevity"}, {"peptide": "Glutathione", "format": "Vial", "size": "2000mg", "amount_mg": 2000, "prices": {"UltraLife": 99, "BioIntegrity Research": 74.0}, "lowest": 74, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-glutathione-2000mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/glutathione"}, "category": "Cellular & Longevity"}, {"peptide": "Glutathione / Magnesium combo", "format": "Vial", "size": "50mg/12.5mg", "amount_mg": 50, "prices": {"UltraLife": 79, "BioIntegrity Research": 44.0}, "lowest": 44, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/glutathione-magnesium-50mg-12-5mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/glutathione-magnesium"}, "category": "Cellular & Longevity"}, {"peptide": "Humanin", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"UltraLife": 159, "BioIntegrity Research": 169.0}, "lowest": 159, "notes": "Human data is observational (endogenous levels) only, not interventional trials.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-humanin-5mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/humanin"}, "category": "Cellular & Longevity"}, {"peptide": "Humanin", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Core Peptides": 147}, "lowest": 147, "notes": null, "category": "Cellular & Longevity"}, {"peptide": "IGF-1 LR3", "format": "Vial", "size": "1mg", "amount_mg": 1, "prices": {"UltraLife": 249, "Core Peptides": 150, "Purity Peptides": 108.99, "Royal Peptides": 78, "BioIntegrity Research": 149.0}, "lowest": 149, "notes": "No dedicated human trials for this analog; general IGF-1 literature links elevated levels to some cancer risk.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-igf-1-lr3-1mg/", "Royal Peptides": "https://royal-peptides.com/shop/igf-1-lr3-1mg-kit/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/igf-1-lr3"}, "category": "Growth Hormone & Muscle"}, {"peptide": "Kisspeptin", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"UltraLife": 89, "Purity Peptides": 64.99, "BioIntegrity Research": 69.0}, "lowest": 69, "notes": "Confirmed genuinely kisspeptin-10 via COA \u2014 but strongest human trial data (IVF trigger etc.) is for kisspeptin-54, a different isoform.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-kisspeptin-5mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/kisspeptin"}, "category": "Sexual Health & Hormonal"}, {"peptide": "Kisspeptin", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Core Peptides": 63, "Purity Peptides": 89.99}, "lowest": 63, "notes": null, "category": "Sexual Health & Hormonal"}, {"peptide": "KPV", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 109, "Koi Peptides": 49.95, "Purity Peptides": 64.99, "Improved Peptides": 60.0, "Royal Peptides": 55, "BioIntegrity Research": 114.0}, "lowest": 49.95, "notes": "Zero published human trials for KPV to date.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-kpv-10mg/", "Koi Peptides": "https://koipeptides.com/product/kpv/", "Improved Peptides": "https://improvedpeptides.com/product/kpv-10mg/", "Royal Peptides": "https://royal-peptides.com/shop/kpv-10mg-vial/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/kpv"}, "category": "Tissue Repair & Recovery"}, {"peptide": "LL-37", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"UltraLife": 129, "Core Peptides": 89, "BioIntegrity Research": 89.0}, "lowest": 89, "notes": "Not FDA-approved; completed human trials are topical wound-healing, not injectable/systemic.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-ll-37-5mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ll-37"}, "category": "Tissue Repair & Recovery"}, {"peptide": "Methyl B12 (Methylcobalamin)", "format": "Vial", "size": "size n/a", "amount_mg": null, "prices": {"UltraLife": 79}, "lowest": 54, "notes": "Established nutrient, not investigational \u2014 different evidence category from the peptides above.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-methyl-b12/"}, "category": "Cellular & Longevity"}, {"peptide": "MOTS-C", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Core Peptides": 116, "Purity Peptides": 59.99, "Improved Peptides": 69.0}, "lowest": 116, "notes": null, "vendor_product_urls": {"Improved Peptides": "https://improvedpeptides.com/product/mots-c-10mg/"}, "category": "Cellular & Longevity"}, {"peptide": "MOTS-C", "format": "Vial", "size": "20mg", "amount_mg": 20, "prices": {"UltraLife": 169, "Purity Peptides": 99.99, "BioIntegrity Research": 174.0}, "lowest": 169, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-mots-c-20mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/mots-c"}, "category": "Cellular & Longevity"}, {"peptide": "MOTS-C", "format": "Vial", "size": "40mg", "amount_mg": 40, "prices": {"UltraLife": 281}, "lowest": 281, "notes": null, "category": "Cellular & Longevity"}, {"peptide": "NAD+", "format": "Vial", "size": "500mg", "amount_mg": 500, "prices": {"UltraLife": 139, "Purity Peptides": 126.49, "Improved Peptides": 75.0, "Royal Peptides": 35, "BioIntegrity Research": 139.0}, "lowest": 139, "notes": "Price range up to $610.", "vendor_product_urls": {"Improved Peptides": "https://improvedpeptides.com/product/nad-500mg/", "Royal Peptides": "https://royal-peptides.com/shop/nad-500mg-vial-kit-buffered/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/nad-plus"}, "category": "Cellular & Longevity"}, {"peptide": "PT-141 (Bremelanotide)", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 119, "Core Peptides": 43, "Purity Peptides": 82.49, "Improved Peptides": 45.0, "BioIntegrity Research": 124.0}, "lowest": 43, "notes": "Approved only for premenopausal women with HSDD.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/", "Improved Peptides": "https://improvedpeptides.com/product/pt-141-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/pt-141"}, "category": "Sexual Health & Hormonal"}, {"peptide": "Selank", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 105, "Purity Peptides": 84.99, "Improved Peptides": 49.0, "Royal Peptides": 65, "BioIntegrity Research": 64.0}, "lowest": 64, "notes": "Price range up to $430.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-selank-10mg/", "Improved Peptides": "https://improvedpeptides.com/product/selank-10mg/", "Royal Peptides": "https://royal-peptides.com/shop/selank-10mg-vial/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/selank"}, "category": "Cognitive & Neurological"}, {"peptide": "Semax", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 105, "Purity Peptides": 109.99, "Improved Peptides": 49.0, "Royal Peptides": 65, "BioIntegrity Research": 64.0}, "lowest": 64, "notes": "Price range up to $430.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-semax-10mg/", "Improved Peptides": "https://improvedpeptides.com/product/semax-10mg/", "Royal Peptides": "https://royal-peptides.com/shop/semax-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/semax"}, "category": "Cognitive & Neurological"}, {"peptide": "Sermorelin", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 122, "Koi Peptides": 99.95, "Purity Peptides": 89.99}, "lowest": 99.95, "notes": "No current FDA-approved product (Geref withdrawn 2008 for commercial reasons).", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-sermorelin-10mg/"}, "category": "Growth Hormone & Muscle"}, {"peptide": "SS-31 / Elamipretide", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 79.99, "BioIntegrity Research": 99.0}, "lowest": 89, "notes": "FDA-approved only for Barth syndrome \u2014 not general wellness.", "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/ss-31"}, "category": "Cellular & Longevity"}, {"peptide": "Thymosin Alpha-1", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 165, "Core Peptides": 149, "Purity Peptides": 89.99, "BioIntegrity Research": 154.0}, "lowest": 149, "notes": "Not FDA-approved in the US.", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-thymosin-alpha-1-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"}, "category": "Tissue Repair & Recovery"}, {"peptide": "VIP (Vasoactive Intestinal Peptide)", "format": "Vial", "size": "6mg", "amount_mg": 6, "prices": {"Core Peptides": 64}, "lowest": 64, "notes": null, "category": "Tissue Repair & Recovery"}, {"peptide": "VIP (Vasoactive Intestinal Peptide)", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 199, "Royal Peptides": 465, "BioIntegrity Research": 114.0}, "lowest": 114, "notes": "Strongest human evidence is a single 20-patient study within one clinical protocol (CIRS/Shoemaker).", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/vial-vip-10mg/", "Royal Peptides": "https://royal-peptides.com/shop/vip-vasoactive-intestinal-peptide-10mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/vip"}, "category": "Tissue Repair & Recovery"}, {"peptide": "5-Amino-1MQ", "format": "Capsules", "size": "50mg", "amount_mg": 50, "prices": {"UltraLife": 150, "BioIntegrity Research": 219.0}, "lowest": 150, "notes": null, "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/capsules-5-amino-1mq-50mg/", "BioIntegrity Research": "https://biointegrityresearch.com/compounds/5-amino-1mq"}, "category": "Metabolic & Weight"}, {"peptide": "Dihexa", "format": "Capsules", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 165}, "lowest": 165, "notes": "Zero published human trials. Theoretical tumorigenesis risk flagged by ADDF (HGF/c-Met pathway).", "vendor_product_urls": {"UltraLife": "https://ultralifepeptides.com/shop/capsules-dihexa-10mg/"}, "category": "Cognitive & Neurological"}, {"peptide": "AOD-9604", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 69.99, "Royal Peptides": 65}, "lowest": null, "notes": "Price range up to $425.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/aod-5mg-kit/"}, "category": "Metabolic & Weight"}, {"peptide": "BPC-157", "format": "Capsules", "size": "500mcg x100 tabs", "amount_mg": 0.5, "prices": {"Purity Peptides": 255.0}, "lowest": null, "notes": null, "category": "Tissue Repair & Recovery"}, {"peptide": "BPC-157", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 99.99}, "lowest": null, "notes": null, "category": "Tissue Repair & Recovery"}, {"peptide": "BPC-157", "format": "Vial", "size": "20mg", "amount_mg": 20, "prices": {"Purity Peptides": 124.99}, "lowest": null, "notes": null, "category": "Tissue Repair & Recovery"}, {"peptide": "BPC-157", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 59.99}, "lowest": null, "notes": null, "category": "Tissue Repair & Recovery"}, {"peptide": "CJC-1295 with DAC", "format": "Vial", "size": "2mg", "amount_mg": 2, "prices": {"Purity Peptides": 49.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "CJC-1295 with DAC", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 104.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "CJC-1295 / Ipamorelin combo", "format": "Vial", "size": "5mg/5mg", "amount_mg": 5, "prices": {"Purity Peptides": 89.99, "Royal Peptides": 70}, "lowest": null, "notes": "Price range up to $685.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/cjcno-dac-ipamorelin-10mg-kit/"}, "category": "Growth Hormone & Muscle"}, {"peptide": "CJC-1295", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 99.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "CJC-1295", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 69.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "Dihexa", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 119.99}, "lowest": null, "notes": null, "category": "Cognitive & Neurological"}, {"peptide": "DSIP", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 99.99}, "lowest": null, "notes": null, "category": "Cognitive & Neurological"}, {"peptide": "Epitalon", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 89.99, "Improved Peptides": 55.0, "Royal Peptides": 55}, "lowest": null, "notes": "Price range up to $580.", "vendor_product_urls": {"Improved Peptides": "https://improvedpeptides.com/product/epithalon-10mg/", "Royal Peptides": "https://royal-peptides.com/shop/epitalon-kit/"}, "category": "Cellular & Longevity"}, {"peptide": "GHK-Cu (Copper Peptide)", "format": "Vial", "size": "100mg", "amount_mg": 100, "prices": {"Purity Peptides": 119.99}, "lowest": null, "notes": null, "category": "Cellular & Longevity"}, {"peptide": "GHRP-2", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 60.49}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "GHRP-6", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 49.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "Gonadorelin", "format": "Vial", "size": "2mg", "amount_mg": 2, "prices": {"Purity Peptides": 99.99}, "lowest": null, "notes": null, "category": "Sexual Health & Hormonal"}, {"peptide": "Ipamorelin", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 119.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "Ipamorelin", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 59.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "KPV", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 40.99}, "lowest": null, "notes": null, "category": "Tissue Repair & Recovery"}, {"peptide": "Selank / Semax combo", "format": "Vial", "size": "5mg/5mg", "amount_mg": 5, "prices": {"Purity Peptides": 109.99}, "lowest": null, "notes": null, "category": "Cognitive & Neurological"}, {"peptide": "Sermorelin", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 59.99}, "lowest": null, "notes": null, "category": "Growth Hormone & Muscle"}, {"peptide": "SLU-PP-332", "format": "Capsules", "size": "500mcg x50 tabs", "amount_mg": 0.5, "prices": {"Purity Peptides": 114.99}, "lowest": null, "notes": null, "category": "Metabolic & Weight"}, {"peptide": "SLU-PP-332", "format": "Capsules", "size": "500mcg x100 tabs", "amount_mg": 0.5, "prices": {"Purity Peptides": 189.99}, "lowest": null, "notes": null, "category": "Metabolic & Weight"}, {"peptide": "Thymosin Alpha-1", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 72.59}, "lowest": null, "notes": null, "category": "Tissue Repair & Recovery"}, {"peptide": "5-Amino-1MQ", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 69.99}, "lowest": null, "notes": null, "category": "Metabolic & Weight"}, {"peptide": "CJC-1295 / Ipamorelin combo", "format": "Vial", "size": "20mg", "amount_mg": 20, "prices": {"Improved Peptides": 59.0}, "lowest": null, "notes": null, "vendor_product_urls": {"Improved Peptides": "https://improvedpeptides.com/product/cjc-1295-ipa-no-dac/"}, "category": "Growth Hormone & Muscle"}, {"peptide": "Vesugen", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 68}, "lowest": null, "notes": "Price range up to $520 for larger kits.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/vesugen-20mg/"}, "category": "Cellular & Longevity"}, {"peptide": "MOTS-C", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 60}, "lowest": null, "notes": "Price range up to $675.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/mots-c-peptide/"}, "category": "Cellular & Longevity"}, {"peptide": "GHK-Cu (Copper Peptide)", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 50}, "lowest": null, "notes": "Price range up to $550.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/ghk-cu-peptide/"}, "category": "Cellular & Longevity"}, {"peptide": "BPC-157", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 55}, "lowest": null, "notes": "Price range up to $580.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/bpc-157-10mg-vial-kit/"}, "category": "Tissue Repair & Recovery"}, {"peptide": "PT-141 (Bremelanotide)", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 50}, "lowest": null, "notes": "Price range up to $390.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/pt-141-10mg-vial/"}, "category": "Sexual Health & Hormonal"}, {"peptide": "Selank / Semax combo", "format": "Vial", "size": "20mg (10/10mg)", "amount_mg": null, "prices": {"Royal Peptides": 90}, "lowest": null, "notes": "Price range up to $685.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/selank-semax-blend/"}, "category": "Cognitive & Neurological"}, {"peptide": "Sermorelin", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 65}, "lowest": null, "notes": "Price range up to $460.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/sermorelin-10mg-kit/"}, "category": "Growth Hormone & Muscle"}, {"peptide": "Ipamorelin", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 45}, "lowest": null, "notes": "Price range up to $450.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/ipamorelin-10mg-kit10-vials/"}, "category": "Growth Hormone & Muscle"}, {"peptide": "Glutathione", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 65}, "lowest": null, "notes": "Price range up to $485.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/buy-glutathione/"}, "category": "Cellular & Longevity"}, {"peptide": "SS-31 / Elamipretide", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 65}, "lowest": null, "notes": "Price range up to $710.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/31pv/"}, "category": "Cellular & Longevity"}, {"peptide": "Thymosin Alpha-1", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 55}, "lowest": null, "notes": "Price range up to $480.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/thymosin-alpha-1-ta-1-10mg-kit/"}, "category": "Tissue Repair & Recovery"}, {"peptide": "ARA-290 (Cibinetide)", "format": "Vial", "size": "single vial (dose unconfirmed)", "amount_mg": null, "prices": {"Royal Peptides": 65}, "lowest": null, "notes": "Price range up to $485.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/ara-290-peptide-cibinetide/"}, "category": "Tissue Repair & Recovery"}, {"peptide": "Oxytocin", "format": "Vial", "size": "10mg", "amount_mg": null, "prices": {"Royal Peptides": 70}, "lowest": null, "notes": "Price range up to $560.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/oxyt-10mg/"}, "category": "Sexual Health & Hormonal"}, {"peptide": "Pinealon", "format": "Vial", "size": "10mg (10-vial kit)", "amount_mg": null, "prices": {"Royal Peptides": 390}, "lowest": null, "notes": "Price shown is for a 10-vial kit, not a single vial.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/pinealon-10mg-peptide/"}, "category": "Cognitive & Neurological"}, {"peptide": "CJC-1295", "format": "Vial", "size": "5-vial kit (not single-vial pricing)", "amount_mg": null, "prices": {"Royal Peptides": 430}, "lowest": null, "notes": "This is a 5-vial kit price, not a single-vial price \u2014 not directly comparable to the single-vial CJC-1295 row above. Kept separate rather than merged so it doesn't distort the comparison.", "vendor_product_urls": {"Royal Peptides": "https://royal-peptides.com/shop/cjc-1295-no-dac-5mg-kit/"}, "category": "Growth Hormone & Muscle"}, {"peptide": "CJC-1295 / Ipamorelin combo", "format": "Oral", "size": "10mg/10mg", "amount_mg": 10, "prices": {"BioIntegrity Research": 199.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin"}, "category": "Growth Hormone & Muscle"}, {"peptide": "Epitalon", "format": "Oral", "size": "100mg", "amount_mg": 100, "prices": {"BioIntegrity Research": 169.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/epitalon"}, "category": "Cellular & Longevity"}, {"peptide": "GHK-Cu (Copper Peptide)", "format": "Oral", "size": "50mg", "amount_mg": 50, "prices": {"BioIntegrity Research": 119.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/ghk-cu"}, "category": "Cellular & Longevity"}, {"peptide": "Methyl B12 (Methylcobalamin)", "format": "Vial", "size": "100mg", "amount_mg": 100, "prices": {"BioIntegrity Research": 54.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/methyl-b12"}, "category": "Cellular & Longevity"}, {"peptide": "MOTS-C", "format": "Oral", "size": "20mg", "amount_mg": 20, "prices": {"BioIntegrity Research": 189.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/mots-c"}, "category": "Cellular & Longevity"}, {"peptide": "NAD+", "format": "Oral", "size": "500mg", "amount_mg": 500, "prices": {"BioIntegrity Research": 149.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/nad-plus"}, "category": "Cellular & Longevity"}, {"peptide": "SS-31 / Elamipretide", "format": "Oral", "size": "25mg", "amount_mg": 25, "prices": {"BioIntegrity Research": 219.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/ss-31"}, "category": "Cellular & Longevity"}, {"peptide": "PT-141 (Bremelanotide)", "format": "Oral", "size": "10mg", "amount_mg": 10, "prices": {"BioIntegrity Research": 129.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/pt-141"}, "category": "Sexual Health & Hormonal"}, {"peptide": "Selank", "format": "Oral", "size": "10mg", "amount_mg": 10, "prices": {"BioIntegrity Research": 119.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/selank"}, "category": "Cognitive & Neurological"}, {"peptide": "Semax", "format": "Oral", "size": "10mg", "amount_mg": 10, "prices": {"BioIntegrity Research": 119.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/semax"}, "category": "Cognitive & Neurological"}, {"peptide": "BPC-157", "format": "Oral", "size": "30mg", "amount_mg": 30, "prices": {"BioIntegrity Research": 159.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/bpc-157"}, "category": "Tissue Repair & Recovery"}, {"peptide": "KPV", "format": "Oral", "size": "10mg", "amount_mg": 10, "prices": {"BioIntegrity Research": 119.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/kpv"}, "category": "Tissue Repair & Recovery"}, {"peptide": "Thymosin Alpha-1", "format": "Nasal", "size": "20mg", "amount_mg": 20, "prices": {"BioIntegrity Research": 219.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"}, "category": "Tissue Repair & Recovery"}, {"peptide": "Thymosin Alpha-1", "format": "Oral", "size": "10mg", "amount_mg": 10, "prices": {"BioIntegrity Research": 169.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"}, "category": "Tissue Repair & Recovery"}, {"peptide": "Thymosin Alpha-1", "format": "Oral", "size": "20mg", "amount_mg": 20, "prices": {"BioIntegrity Research": 219.0}, "lowest": null, "notes": null, "vendor_product_urls": {"BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"}, "category": "Tissue Repair & Recovery"}], "excluded": [{"peptide": "BPC-157 / TB-500 combo", "format": "Nasal", "size": "10mg/10mg", "amount_mg": 10, "prices": {"UltraLife": 135}, "lowest": 135, "notes": "TB-500 identity caveat applies to this blend too."}, {"peptide": "BPC-157 / TB-500 combo", "format": "Nasal", "size": "30mg/30mg", "amount_mg": 30, "prices": {"UltraLife": 199}, "lowest": 199, "notes": "TB-500 identity caveat applies to this blend too."}, {"peptide": "GLP-1 (Semaglutide) Oral Spray", "format": "Nasal", "size": "20mg", "amount_mg": 20, "prices": {"UltraLife": 206}, "lowest": 129, "notes": "Approved route is subcutaneous injection; oral/nasal spray has no shown absorption mechanism (see Evidence Gaps in catalog)."}, {"peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)", "format": "Nasal", "size": "20/20/100/20mg", "amount_mg": 20, "prices": {"UltraLife": 269}, "lowest": 269, "notes": "TB-500 identity caveat applies; no evidence combo outperforms components individually."}, {"peptide": "Melanotan II", "format": "Nasal", "size": "15mg", "amount_mg": 15, "prices": {"UltraLife": 149}, "lowest": 149, "notes": "Same regulatory warning as above."}, {"peptide": "Melanotan II", "format": "Nasal", "size": "30mg", "amount_mg": 30, "prices": {"UltraLife": 190}, "lowest": 190, "notes": "Same regulatory warning as above."}, {"peptide": "PT-141 / Oxytocin / Tesamorelin combo", "format": "Nasal", "size": "10mg/3mg/10mg", "amount_mg": 10, "prices": {"UltraLife": 304}, "lowest": 304, "notes": null}, {"peptide": "Retatrutide (\"GLP-3 Triple Agonist\")", "format": "Nasal", "size": "20mg", "amount_mg": 20, "prices": {"UltraLife": 339}, "lowest": 339, "notes": "Same investigational-drug flag as above."}, {"peptide": "Retatrutide (\"GLP-3 Triple Agonist\")", "format": "Nasal", "size": "40mg", "amount_mg": 40, "prices": {"UltraLife": 538}, "lowest": 538, "notes": "Same investigational-drug flag as above."}, {"peptide": "Retatrutide / GLP-1 Blend", "format": "Nasal", "size": "25mg/40mg", "amount_mg": 25, "prices": {"UltraLife": 574}, "lowest": 574, "notes": "Same investigational-drug flag as above."}, {"peptide": "Tesamorelin", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 185}, "lowest": 185, "notes": "Under active patent (~2030) \u2014 may not be eligible for 503A/503B compounding; check with legal."}, {"peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")", "format": "Nasal", "size": "20mg", "amount_mg": 20, "prices": {"UltraLife": 222}, "lowest": 149, "notes": "Approved route is subcutaneous (Mounjaro/Zepbound); nasal isn't the studied formulation. Still under patent \u2014 check compounding eligibility."}, {"peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")", "format": "Nasal", "size": "40mg", "amount_mg": 40, "prices": {"UltraLife": 349}, "lowest": 349, "notes": "Same route/patent flag as above."}, {"peptide": "BPC-157 / TB-500 combo", "format": "Vial", "size": "10mg/10mg", "amount_mg": 10, "prices": {"UltraLife": 99}, "lowest": 99, "notes": "TB-500 identity caveat applies to this blend too."}, {"peptide": "GLOW Blend (GHK-Cu/BPC-157/TB-500)", "format": "Vial", "size": "50/10/10mg", "amount_mg": 10, "prices": {"Core Peptides": 300, "Koi Peptides": 149.95}, "lowest": 149.95, "notes": "TB-500 identity caveat applies; no trial has tested this 3-peptide combo as a unit."}, {"peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)", "format": "Vial", "size": "10/10/50/10mg", "amount_mg": 10, "prices": {"UltraLife": 189, "Koi Peptides": 169.95, "BioIntegrity Research": 154}, "lowest": 154, "notes": "TB-500 identity caveat applies; no evidence combo outperforms components individually."}, {"peptide": "Melanotan II", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 119, "Core Peptides": 41, "Purity Peptides": 54.99, "Improved Peptides": 49.0, "Royal Peptides": 55}, "lowest": 41, "notes": "FLAG: FDA/TGA/MHRA/HPRA have issued public safety warnings; illegal to sell for human use in most countries incl. US. Discuss with your dad before listing."}, {"peptide": "Retatrutide (\"GLP-3 Triple Agonist\")", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 149}, "lowest": 144, "notes": "FLAG: Investigational, patent-protected, still in active Eli Lilly trials \u2014 not FDA-approved. Legal risk selling as 'research peptide' now."}, {"peptide": "Retatrutide (\"GLP-3 Triple Agonist\")", "format": "Vial", "size": "20mg", "amount_mg": 20, "prices": {"UltraLife": 289}, "lowest": 244, "notes": "Same investigational-drug flag as above."}, {"peptide": "Retatrutide (\"GLP-3 Triple Agonist\")", "format": "Vial", "size": "40mg", "amount_mg": 40, "prices": {"UltraLife": 552}, "lowest": 552, "notes": "Same investigational-drug flag as above."}, {"peptide": "TB-500", "format": "Vial", "size": "TB-500 10mg", "amount_mg": 10, "prices": {"UltraLife": 89, "Core Peptides": 140, "Koi Peptides": 59.95}, "lowest": 59.95, "notes": "UltraLife COA-confirmed identity mismatch \u2014 verify before listing."}, {"peptide": "Tesamorelin", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 175, "Core Peptides": 79, "Koi Peptides": 89.95, "Purity Peptides": 139.99}, "lowest": 79, "notes": "Under active patent \u2014 check compounding eligibility with legal."}, {"peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"UltraLife": 129}, "lowest": 124, "notes": "Same route/patent flag as above."}, {"peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")", "format": "Vial", "size": "40mg", "amount_mg": 40, "prices": {"UltraLife": 345}, "lowest": 340, "notes": "Same route/patent flag as above."}, {"peptide": "Orforglipron", "format": "Capsules", "size": "2mg", "amount_mg": 2, "prices": {"UltraLife": 125}, "lowest": 125, "notes": "FDA-approved (Foundayo, Apr 2026) for weight management specifically \u2014 under patent."}, {"peptide": "GLP-1 (Semaglutide)", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 89.99}, "lowest": null, "notes": null}, {"peptide": "GLP-1 (Semaglutide)", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 119.99}, "lowest": null, "notes": null}, {"peptide": "GLP-1 (Semaglutide)", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 139.99}, "lowest": null, "notes": null}, {"peptide": "Tirzepatide", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 104.99, "Improved Peptides": 85.0}, "lowest": null, "notes": null}, {"peptide": "Tirzepatide", "format": "Vial", "size": "20mg", "amount_mg": 20, "prices": {"Purity Peptides": 159.99}, "lowest": null, "notes": null}, {"peptide": "Retatrutide", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 104.99, "Improved Peptides": 95.0}, "lowest": null, "notes": null}, {"peptide": "Retatrutide", "format": "Vial", "size": "20mg", "amount_mg": 20, "prices": {"Purity Peptides": 199.0}, "lowest": null, "notes": null}, {"peptide": "Retatrutide", "format": "Vial", "size": "30mg", "amount_mg": 30, "prices": {"Purity Peptides": 299.99}, "lowest": null, "notes": null}, {"peptide": "Melanotan II", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 99.99}, "lowest": null, "notes": null}, {"peptide": "Tesamorelin", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 79.99, "Improved Peptides": 89.0}, "lowest": null, "notes": null}, {"peptide": "Tesamorelin / Ipamorelin combo", "format": "Vial", "size": "5mg/5mg", "amount_mg": 5, "prices": {"Purity Peptides": 159.99}, "lowest": null, "notes": null}, {"peptide": "Semaglutide", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Improved Peptides": 79.0}, "lowest": null, "notes": null}, {"peptide": "Tirzepatide", "format": "Vial", "size": "low-dose vial", "amount_mg": null, "prices": {"Royal Peptides": 36}, "lowest": null, "notes": "Price shown is vendor's lowest listed tier; kits go up to $1,380. [legal-risk]"}, {"peptide": "Retatrutide", "format": "Vial", "size": "low-dose vial", "amount_mg": null, "prices": {"Royal Peptides": 55}, "lowest": null, "notes": "Price range up to $330; 10-vial kit up to $1,500. [legal-risk]"}, {"peptide": "Semaglutide", "format": "Vial", "size": "5mg", "amount_mg": null, "prices": {"Royal Peptides": 45}, "lowest": null, "notes": "Price range up to $155; kits up to $600. [legal-risk]"}, {"peptide": "Tesamorelin", "format": "Vial", "size": "low-dose vial", "amount_mg": null, "prices": {"Royal Peptides": 75}, "lowest": null, "notes": "Price range up to $700. [legal-risk]"}, {"peptide": "Cagrilintide", "format": "Vial", "size": "5mg/10mg", "amount_mg": null, "prices": {"Royal Peptides": 90}, "lowest": null, "notes": " [legal-risk]"}, {"peptide": "Tesamorelin / Ipamorelin combo", "format": "Vial", "size": "10mg/3mg", "amount_mg": null, "prices": {"Royal Peptides": 90}, "lowest": null, "notes": "Price range up to $675. [legal-risk]"}, {"peptide": "HCG (Human Chorionic Gonadotropin)", "format": "Vial", "size": "5000-10000iu kit", "amount_mg": null, "prices": {"Royal Peptides": 560}, "lowest": null, "notes": " [prescription/SARM]"}, {"peptide": "HGH 191AA (Somatropin)", "format": "Vial", "size": "kit", "amount_mg": null, "prices": {"Royal Peptides": 385}, "lowest": null, "notes": "Price range up to $620. [prescription/SARM]"}, {"peptide": "Sildenafil Citrate", "format": "Capsules", "size": "100mg x50 tabs", "amount_mg": null, "prices": {"Royal Peptides": 135}, "lowest": null, "notes": " [prescription/SARM]"}, {"peptide": "MK-677 (Ibutamoren) / MK-2866 (Ostarine) combo", "format": "Capsules", "size": "50 tabs", "amount_mg": null, "prices": {"Royal Peptides": 85}, "lowest": null, "notes": "Price range up to $110. [prescription/SARM]"}, {"peptide": "Tesofensine", "format": "Capsules", "size": "500mcg x100 tabs", "amount_mg": null, "prices": {"Royal Peptides": 175}, "lowest": null, "notes": " [prescription/SARM]"}, {"peptide": "Melanotan I", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 54.99, "Improved Peptides": 49.0}, "lowest": null, "notes": "Same active molecule as afamelanotide (brand name Scenesse), an FDA-approved prescription drug for a rare disease (EPP), available only through licensed specialty pharmacies. Vendor vials sold as an unregulated 'research peptide' are not that approved product and are being sold outside its approved prescription channel. [prescription-drug-equivalent]", "vendor_product_urls": {"Improved Peptides": "https://improvedpeptides.com/product/mt-1-10mg/"}}, {"peptide": "BPC-157 / TB-500 blend", "format": "Vial", "size": "10mg (5/5mg)", "amount_mg": 10, "prices": {"Purity Peptides": 124.99}, "lowest": null, "notes": " [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "BPC-157 / TB-500 blend", "format": "Vial", "size": "20mg (10/10mg)", "amount_mg": 20, "prices": {"Purity Peptides": 199.99}, "lowest": null, "notes": " [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "GLOW Blend (GHK-Cu/BPC-157/TB-500)", "format": "Nasal", "size": "70mg", "amount_mg": 70, "prices": {"Purity Peptides": 179.99}, "lowest": null, "notes": " [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "GLOW Blend (GHK-Cu/BPC-157/TB-500)", "format": "Vial", "size": "70mg", "amount_mg": 70, "prices": {"Purity Peptides": 144.99, "Improved Peptides": 115.0}, "lowest": null, "notes": " [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)", "format": "Vial", "size": "80mg", "amount_mg": 80, "prices": {"Purity Peptides": 199.99, "Improved Peptides": 145.0, "Royal Peptides": 90}, "lowest": null, "notes": "Price range up to $650. [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "TB-500", "format": "Vial", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 89.99, "Improved Peptides": 65.0, "Royal Peptides": 70}, "lowest": null, "notes": "Price range up to $485. [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "TB-500", "format": "Vial", "size": "5mg", "amount_mg": 5, "prices": {"Purity Peptides": 72.59}, "lowest": null, "notes": " [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "TB-500", "format": "Nasal", "size": "10mg", "amount_mg": 10, "prices": {"Purity Peptides": 109.99}, "lowest": null, "notes": " [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "BPC-157 / TB-500 blend", "format": "Vial", "size": "20mg", "amount_mg": 20, "prices": {"Improved Peptides": 110.0}, "lowest": null, "notes": " [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "Wolverine (BPC-157/TB-500 blend)", "format": "Vial", "size": "10mg", "amount_mg": null, "prices": {"Royal Peptides": 75}, "lowest": null, "notes": "Price range up to $695. [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "GLOW Blend (GHK-Cu/BPC-157/TB-500)", "format": "Vial", "size": "50-70mg", "amount_mg": null, "prices": {"Royal Peptides": 70}, "lowest": null, "notes": "Price range up to $530. [TB-500 identity/COA flag \u2014 should never have been in the comparison; moved here after an audit found a filtering bug]"}, {"peptide": "GLP-1 (Semaglutide)", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 117.0}, "lowest": null, "notes": "[legal-risk] Named 'GLP-1' but described as a long-acting GLP-1 receptor agonist \u2014 same category as Semaglutide."}, {"peptide": "Tirzepatide (listed as 'GLP-2 Dual Agonist')", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 124.0}, "lowest": null, "notes": "[legal-risk] Dual GIP/GLP-1 agonist \u2014 Tirzepatide's exact mechanism, under a generic name."}, {"peptide": "Retatrutide (listed as 'GLP-3 Triple Agonist')", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 144.0}, "lowest": null, "notes": "[legal-risk] Triple GLP-1/GIP/glucagon agonist \u2014 Retatrutide's exact mechanism, under a generic name."}, {"peptide": "GLP-3 Triple / GLP-1 Blend", "format": "Nasal", "size": "single spray", "amount_mg": null, "prices": {"BioIntegrity Research": 259.0}, "lowest": null, "notes": "[legal-risk] Blend of two already-excluded investigational compounds."}, {"peptide": "Tesamorelin", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 164.0}, "lowest": null, "notes": "[legal-risk] Same patent-protected-drug exclusion as every other vendor."}, {"peptide": "Melanotan II", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 64.0}, "lowest": null, "notes": "[legal-risk] Same explicit illegal-for-human-use warning category as every other vendor."}, {"peptide": "TB-500", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 94.0}, "lowest": null, "notes": "[TB-500 identity/COA flag]"}, {"peptide": "BPC-157 / TB-500 blend", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 104.0}, "lowest": null, "notes": "[TB-500 identity/COA flag]"}, {"peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)", "format": "Vial", "size": "single vial", "amount_mg": null, "prices": {"BioIntegrity Research": 154.0}, "lowest": null, "notes": "[TB-500 identity/COA flag]"}]};
+const VENDOR_CONFIG = {"_readme": "One entry per vendor. Fill in the fields as each program responds. 'status' controls what the site shows \u2014 leave it as 'not_applied' or 'pending' until you actually have a working link, so the site never shows a dead or non-affiliate link as if it were live.", "_field_guide": {"status": "'not_applied' | 'pending' | 'approved' | 'no_program' \u2014 controls what shows on the site", "site_url": "vendor's plain homepage \u2014 used as fallback when no affiliate link exists yet", "tracking_type": "'link' | 'code' | 'link_plus_code' \u2014 how this vendor actually credits you", "affiliate_link_base": "your unique referral URL once approved, e.g. https://vendor.com/?ref=yourcode \u2014 leave null until you have it", "promo_code": "your discount/tracking code, if the vendor uses one \u2014 leave null until you have it", "cookie_days": "attribution window in days, from their terms \u2014 helps you know how long a click 'counts'", "commission": "rate or structure they quote you, as text \u2014 e.g. '10% for 12 months' or '15%, tiered to 25%'", "guidelines_notes": "any required disclaimer language or restricted phrasing they send you \u2014 paste it here so it's not just sitting in an email you'll lose track of", "last_checked": "date you last confirmed the link/code actually works"}, "UltraLife": {"status": "not_applied", "site_url": "https://ultralifepeptides.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Site references a 'Partners Portal' \u2014 check there directly for application details.", "last_checked": "2026-08-11", "payment_methods": null, "shipping_info": "Cold-pack shipping only (overnight/2-day air). Tiered by order size: $50 (small) to $110 (251+ peptides). 1-2 day processing.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "Endotoxin testing"], "testing_lab": null, "testing_standard": "\u226599% purity claimed", "testing_note": "Manufactured in FDA-registered, NSF-certified, GMP-compliant facilities \u2014 but no independent third-party testing lab is named, unlike several other vendors here.", "testing_researched": "2026-08-17"}, "Core Peptides": {"status": "not_applied", "site_url": "https://www.corepeptides.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Strict research-only policy \u2014 expect firm required-disclaimer language if approved.", "last_checked": "2026-08-11", "payment_methods": ["Credit cards", "Venmo", "Zelle", "CashApp"], "payment_note": "No bank transfer.", "shipping_info": "Free over $200. Flat rate ~$9.25-9.95 standard, or $49-49.95 overnight/priority.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC (implied)"], "testing_lab": null, "testing_standard": null, "testing_note": "Independent review describes COA coverage as 'mostly, but constantly being updated with new tests' \u2014 meaning not every product is tested yet.", "testing_researched": "2026-08-17"}, "Koi Peptides": {"status": "no_program", "site_url": "https://koipeptides.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Runs a qualified-buyer wholesale program (labs/CROs), not a consumer affiliate program. Likely won't fit this site's model \u2014 confirm before spending more time here.", "last_checked": "2026-08-11", "payment_methods": null, "shipping_info": "Free shipping over $200. Same-day dispatch before 2PM CT, Mon-Fri.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "LC-MS", "Endotoxin (USP <85>/<161>)"], "testing_lab": "ISO/IEC 17025-accredited lab (unnamed)", "testing_standard": "\u226599% purity target", "testing_note": "Dual-verified: tested in-house first, then independently re-run by an accredited external lab \u2014 one of the more thorough protocols in this group.", "testing_researched": "2026-08-17"}, "Southern Aminos": {"status": "not_applied", "site_url": "https://southernaminos.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Multiple independent review sites already have disclosed affiliate links with them, so a program almost certainly exists \u2014 worth a direct email since no public application page was found.", "last_checked": "2026-08-11", "payment_methods": ["Major credit cards", "ACH bank transfer", "USDC crypto (where available)"], "shipping_info": "Free FedEx/USPS expedited shipping over $150.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "Net content", "Endotoxin", "Heavy metals", "Sterility"], "testing_lab": "Freedom Diagnostics + ILS Labs", "testing_standard": "99.5% average purity across 124 independently tracked batches", "testing_note": "The most externally verified of any vendor here \u2014 tracked by independent third-party sites, not just self-reported. That same tracker also logged 2 historically underdosed batches, included here for honesty rather than omitted.", "testing_researched": "2026-08-17"}, "Purity Peptides": {"status": "not_applied", "site_url": "https://puritypeptides.is", "tracking_type": "link_plus_code", "affiliate_link_base": null, "promo_code": null, "cookie_days": 30, "commission": "10% default, top affiliates 15-20%", "guidelines_notes": "Apply at https://puritypeptides.is/affiliates/apply \u2014 24-48hr review. Research Use Only framing required sitewide.", "last_checked": "2026-08-11", "payment_methods": null, "shipping_info": "Ships to US and Canada only, no international. 1-2 day processing, then 5-10 days regular or 2-4 days express.", "shipping_payment_researched": "2026-08-16", "testing_methods": null, "testing_lab": null, "testing_standard": null, "testing_note": "No testing methodology, lab, or purity standard could be confirmed from their own site.", "testing_researched": "2026-08-17"}, "Improved Peptides": {"status": "approved", "site_url": "https://improvedpeptides.com", "tracking_type": "link_plus_code", "affiliate_link_base": "https://improvedpeptides.com/?ref=vrgsdsxy", "promo_code": "jacksonmoore", "cookie_days": 30, "commission": "20% first order, 10% recurring on repeat orders", "guidelines_notes": "Approved 2026-08-11. Research Use Only framing required sitewide \u2014 keep site copy in that lane.", "last_checked": "2026-08-11", "payment_methods": ["Visa", "Mastercard", "PayPal", "Venmo", "Zelle"], "shipping_info": "Free standard shipping; free 2-day over $200; same-day dispatch by 3PM CT.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC (purity)", "LC-MS (identity)", "Endotoxin/microbial (USP)"], "testing_lab": "Freedom Diagnostics", "testing_standard": "\u226599% purity threshold, no exceptions (stated policy)", "testing_note": "Real batch results published (e.g. BPC-157 99.18%, GLP-3R 99.96%) \u2014 though some COAs are still listed as 'in verification,' not yet downloadable.", "testing_researched": "2026-08-17"}, "Royal Peptides": {"status": "approved", "site_url": "https://royal-peptides.com", "tracking_type": "link_plus_code", "affiliate_link_base": "https://royal-peptides.com/?ref=tofnghus", "promo_code": "jacksonmoore", "cookie_days": null, "commission": "10% (per earlier program page)", "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed.", "last_checked": "2026-08-11", "payment_methods": ["Zelle", "Chime", "Wise", "Cryptocurrency", "PayPal (Friends & Family, B2B only)"], "payment_note": "No credit cards accepted (confirmed via their Terms of Service).", "shipping_info": "2-5 business days via UPS from California. Exact cost not published.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "Mass spectrometry"], "testing_lab": "Janoshik (mentioned in marketing only)", "testing_standard": "Not guaranteed per batch", "testing_note": "Their own FAQ hedges: testing 'may include' HPLC/MS 'depending on the batch and documentation available' \u2014 less definitive than their marketing tagline implies.", "testing_researched": "2026-08-17"}, "BioIntegrity Research": {"status": "not_applied", "site_url": "https://biointegrityresearch.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Real, verified company \u2014 DBA of Triple Seven Distribution LLC. Publishes a public COA archive (strong trust signal). NOT the same as the 'BioIntegrity' name in the original spreadsheet, which remains unverified \u2014 do not conflate the two. No affiliate program contact made yet.", "last_checked": "2026-08-16", "payment_methods": null, "shipping_info": "Calculated at checkout by weight/destination; cold-chain packaging included free. 2-3 day processing, ships via USPS/UPS/FedEx.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "MS", "Endotoxin"], "testing_lab": null, "testing_standard": "\u226599.0% assayed purity, every lot (claimed)", "testing_note": "Publishes a genuinely unusual permanent public COA archive (38 lots across 23 compounds, even sold-out ones) \u2014 but the testing lab isn't named, so independent/third-party status is unconfirmed.", "testing_researched": "2026-08-17"}};
+const CATEGORIES = {"Metabolic & Weight": {"desc": "Studied for fat metabolism, appetite, and metabolic regulation.", "peptides": ["5-Amino-1MQ", "AOD-9604", "SLU-PP-332"]}, "Growth Hormone & Muscle": {"desc": "Growth-hormone-axis compounds studied in relation to muscle, recovery, and body composition.", "peptides": ["CJC-1295", "CJC-1295 / Ipamorelin combo", "CJC-1295 with DAC", "IGF-1 LR3", "Ipamorelin", "GHRP-2", "GHRP-6", "Sermorelin"]}, "Cellular & Longevity": {"desc": "Mitochondrial, antioxidant, and cellular-aging-focused research compounds.", "peptides": ["Epitalon", "Epitalon / Thymulin combo", "GHK-Cu (Copper Peptide)", "Glutathione", "Glutathione / Magnesium combo", "Humanin", "MOTS-C", "NAD+", "SS-31 / Elamipretide", "Methyl B12 (Methylcobalamin)", "Vesugen", "FOXO4-DRI"]}, "Sexual Health & Hormonal": {"desc": "Studied for libido, arousal, and reproductive hormone signaling.", "peptides": ["Kisspeptin", "PT-141 (Bremelanotide)", "PT-141 / Oxytocin combo", "Oxytocin", "Oxytocin / Methylene Blue combo", "Gonadorelin"]}, "Cognitive & Neurological": {"desc": "Studied for cognition, mood, sleep, and neuroprotection.", "peptides": ["DSIP", "Dihexa", "Selank", "Selank / Semax combo", "Semax", "Pinealon"]}, "Tissue Repair & Recovery": {"desc": "Studied for wound healing, inflammation, and tissue repair.", "peptides": ["ARA-290 (Cibinetide)", "BPC-157", "GHK-Cu / KPV combo", "KPV", "KPV / Thymosin Alpha-1 combo", "LL-37", "Thymosin Alpha-1", "VIP (Vasoactive Intestinal Peptide)"]}};
+
+// Build the actual outbound URL for a vendor + product, based on that vendor's
+// current affiliate status. Falls back gracefully when nothing's approved yet.
+function toggleExpand(btn, count){
+  const hiddenDiv = btn.previousElementSibling;
+  const isHidden = hiddenDiv.style.display === 'none';
+  hiddenDiv.style.display = isHidden ? 'grid' : 'none';
+  btn.textContent = isHidden ? 'Show fewer ↑' : ('+' + count + ' more →');
+}
+
+function copyCode(btn){
+  const code = btn.dataset.code;
+  navigator.clipboard?.writeText(code).catch(()=>{});
+  const original = btn.textContent;
+  btn.textContent = 'Copied!';
+  btn.classList.add('copied');
+  setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1400);
+}
+
+function resolveVendorLink(vendorName, item){
+  const cfg = VENDOR_CONFIG[vendorName];
+  if (!cfg) return { url: null, state: 'unknown', promoCode: null };
+
+  const productUrl = (item.vendor_product_urls && item.vendor_product_urls[vendorName]) || null;
+
+  if (cfg.status === 'approved' && cfg.affiliate_link_base){
+    const base = productUrl || cfg.affiliate_link_base;
+    // Pull the tracking params (e.g. ?ref=xxxx) off the vendor's base affiliate link so they
+    // carry over even when we're linking to a specific product page, not just the homepage.
+    const baseQuery = cfg.affiliate_link_base.includes('?') ? cfg.affiliate_link_base.split('?')[1] : '';
+    const sep = base.includes('?') ? '&' : '?';
+    const showCode = cfg.tracking_type === 'link_plus_code' && cfg.promo_code;
+    let url = base + sep + (baseQuery ? baseQuery + '&' : '') + 'utm_source=formulary&utm_content=' + encodeURIComponent(item.peptide);
+    if (showCode) url += '&code=' + encodeURIComponent(cfg.promo_code);
+    return { url, state: 'affiliate', promoCode: showCode ? cfg.promo_code : null };
+  }
+  if (cfg.status === 'no_program') return { url: productUrl || cfg.site_url || null, state: 'no_program', promoCode: null };
+  if (productUrl) return { url: productUrl, state: 'pending_product', promoCode: null };
+  if (cfg.site_url) return { url: cfg.site_url, state: 'pending', promoCode: null };
+  return { url: null, state: 'unverified', promoCode: null };
+}
+
+document.getElementById('today').textContent = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long'});
+
+const indexEl = document.getElementById('index');
+const countEl = document.getElementById('count');
+const searchEl = document.getElementById('search');
+let activeFilter = 'All';
+let activeVendor = 'All';
+let activeCategory = 'All';
+let activeSort = 'name';
+
+function fmtPrice(v){ return '$' + Number(v).toFixed(2).replace(/\.00$/, ''); }
+
+function parseSizeValue(item){
+  if (typeof item.amount_mg === 'number') return item.amount_mg;
+  const match = (item.size || '').match(/[\d.]+/);
+  return match ? parseFloat(match[0]) : Infinity;
+}
+
+function sortByNameThenSize(items){
+  return items.slice().sort((a, b) => {
+    const nameCompare = a.peptide.localeCompare(b.peptide);
+    if (nameCompare !== 0) return nameCompare;
+    return parseSizeValue(a) - parseSizeValue(b);
+  });
+}
+
+function groupByPeptideFormat(items){
+  const groups = new Map();
+  items.forEach(item => {
+    const key = `${item.peptide}|||${item.format}`;
+    if (!groups.has(key)) groups.set(key, { peptide: item.peptide, format: item.format, doses: [] });
+    groups.get(key).doses.push(item);
+  });
+  const result = Array.from(groups.values());
+  result.forEach(g => g.doses.sort((a,b) => parseSizeValue(a) - parseSizeValue(b)));
+  return result;
+}
+
+function groupCheapest(group){
+  return Math.min(...group.doses.map(d => Math.min(...Object.values(d.prices))));
+}
+
+function render(){
+  const q = searchEl.value.trim().toLowerCase();
+  let items = DATA.included.filter(i => {
+    const matchesFormat = activeFilter === 'All' || i.format === activeFilter;
+    const matchesVendor = activeVendor === 'All' || (i.prices && activeVendor in i.prices);
+    const matchesCategory = activeCategory === 'All' || i.category === activeCategory;
+    const matchesQuery = !q || i.peptide.toLowerCase().includes(q);
+    return matchesFormat && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
+  });
+
+  countEl.textContent = items.length + ' listing' + (items.length === 1 ? '' : 's') +
+    (q ? ` matching "${q}"` : '') + (activeFilter !== 'All' ? ` — ${activeFilter}` : '') +
+    (activeVendor !== 'All' ? ` — ${activeVendor}` : '');
+
+  let groups = groupByPeptideFormat(items);
+  const usingPriceSort = activeSort === 'price-low' || activeSort === 'price-high';
+  if (activeSort === 'price-low') groups.sort((a,b) => groupCheapest(a) - groupCheapest(b));
+  else if (activeSort === 'price-high') groups.sort((a,b) => groupCheapest(b) - groupCheapest(a));
+  else groups.sort((a,b) => a.peptide.localeCompare(b.peptide));
+
+  const FORMAT_ORDER = ['Vial', 'Nasal', 'Capsules', 'Oral'];
+  if (activeFilter === 'All' && !usingPriceSort && !q){
+    const sections = FORMAT_ORDER
+      .map(fmt => ({ fmt, list: groups.filter(g => g.format === fmt) }))
+      .filter(s => s.list.length > 0);
+    const others = groups.filter(g => !FORMAT_ORDER.includes(g.format));
+    if (others.length) sections.push({ fmt: 'Other', list: others });
+
+    indexEl.innerHTML = sections.map(s => `
+      <div class="format-section">
+        <h2>${s.fmt} — ${s.list.length}</h2>
+      </div>
+      <div class="card-grid">${s.list.map(cardHtmlGrouped).join('')}</div>
+    `).join('') || '<p style="padding:40px 0; color:var(--ink-soft); font-family:\'IBM Plex Mono\',monospace; font-size:13px;">No listings match that search.</p>';
+  } else {
+    indexEl.innerHTML = groups.map(cardHtmlGrouped).join('') || '<p style="padding:40px 0; color:var(--ink-soft); font-family:\'IBM Plex Mono\',monospace; font-size:13px;">No listings match that search.</p>';
+  }
+}
+
+function renderPriceRow(vendor, price, item, lowestVal){
+  const link = resolveVendorLink(vendor, item);
+  const stateLabel = { affiliate: '', pending: ' · homepage only', pending_product: '', no_program: ' · no affiliate program', unverified: '' }[link.state] || '';
+  const liveBadge = item.liveVerified && item.liveVerified[vendor] ? `<span class="live-badge" title="Confirmed by automated daily check">● LIVE</span>` : '';
+  const codeBadge = link.promoCode ? `<span class="promo-code" data-code="${link.promoCode}" role="button" tabindex="0" onclick="event.preventDefault(); event.stopPropagation(); copyCode(this);" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); event.stopPropagation(); copyCode(this);}">Code: ${link.promoCode}</span>` : '';
+  const unavailableTag = !link.url ? `<span class="unavailable-tag">no link yet</span>` : '';
+  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}</span><span class="val"><span class="price-amount">${fmtPrice(price)}</span>${codeBadge}${unavailableTag}</span>`;
+  if (link.url){
+    return `<a class="price-row ${price === lowestVal ? 'lowest' : ''}" href="${link.url}" target="_blank" rel="noopener sponsored">${inner}</a>`;
+  }
+  return `<div class="price-row unavailable">${inner}</div>`;
+}
+
+function doseKey(group){ return `${group.peptide}__${group.format}`.replace(/[^a-zA-Z0-9]/g, '-'); }
+
+function dosePanelHtml(item, panelId, isActive){
+  const entries = Object.entries(item.prices).sort((a,b) => a[1]-b[1]);
+  const lowestVal = entries.length ? entries[0][1] : null;
+  const visible = entries.slice(0, 3);
+  const hidden = entries.slice(3);
+  const visibleRows = visible.map(([v,p]) => renderPriceRow(v,p,item,lowestVal)).join('');
+  const hiddenSection = hidden.length ? `
+        <div class="price-grid hidden-rows" style="display:none;">${hidden.map(([v,p]) => renderPriceRow(v,p,item,lowestVal)).join('')}</div>
+        <button type="button" class="expand-toggle" onclick="toggleExpand(this, ${hidden.length})">+${hidden.length} more →</button>` : '';
+
+  return `
+    <div class="dose-panel" id="${panelId}" style="display:${isActive ? 'block' : 'none'};">
+      <div class="meta-tags">
+        <span class="meta-tag">${item.size}</span>
+        <span class="meta-tag vendor-count">${entries.length} vendor${entries.length === 1 ? '' : 's'} compared</span>
+      </div>
+      ${item.notes ? `<div class="caution">⚠ evidence note</div><div class="note">${item.notes}</div>` : ''}
+      <div class="price-grid">${visibleRows}</div>
+      ${hiddenSection}
+      <div class="cta">View lowest-priced listing → vendor product page (affiliate)</div>
+    </div>`;
+}
+
+function selectDose(pillEl, groupId, doseIndex){
+  const card = pillEl.closest('.card');
+  card.querySelectorAll('.dose-pill').forEach(p => p.classList.remove('active'));
+  pillEl.classList.add('active');
+  card.querySelectorAll('.dose-panel').forEach(panel => { panel.style.display = 'none'; });
+  const target = document.getElementById(`${groupId}-dose-${doseIndex}`);
+  if (target) target.style.display = 'block';
+}
+
+function cardHtmlGrouped(group){
+  const gid = doseKey(group);
+  const pills = group.doses.map((item, i) => `
+    <button type="button" class="dose-pill ${i === 0 ? 'active' : ''}" onclick="selectDose(this, '${gid}', ${i})">${item.size}</button>
+  `).join('');
+  const panels = group.doses.map((item, i) => dosePanelHtml(item, `${gid}-dose-${i}`, i === 0)).join('');
+  const category = group.doses[0].category;
+  const categoryTag = category
+    ? `<span class="category-tag" title="${CATEGORIES[category]?.desc || ''}">${category}</span>`
+    : '';
+
+  return `
+    <div class="card">
+      <div class="name-block">
+        <div class="name-row">
+          <div class="icon-badge"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.1 15h11.8"/><path d="M14 3v7.342a6 6 0 0 1 1.318 10.658h-6.635a6 6 0 0 1 1.317 -10.66v-7.34h4z"/><path d="M9 3h6"/></svg></div>
+          <h3>${group.peptide}</h3>
+          <span class="meta-tag" style="margin-left:auto;">${group.format}</span>
+        </div>
+        ${categoryTag ? `<div style="margin:6px 0 0 42px;">${categoryTag}</div>` : ''}
+        ${group.doses.length > 1 ? `
+        <div class="dose-label">Dose</div>
+        <div class="dose-pills">${pills}</div>` : ''}
+      </div>
+      ${panels}
+    </div>`;
+}
+
+document.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeFilter = chip.dataset.filter;
+    render();
+  });
+});
+searchEl.addEventListener('input', render);
+
+const allVendors = [...new Set(DATA.included.flatMap(i => Object.keys(i.prices)))].sort();
+const vendorSelect = document.getElementById('vendorFilter');
+allVendors.forEach(v => {
+  const opt = document.createElement('option');
+  opt.value = v; opt.textContent = v;
+  vendorSelect.appendChild(opt);
+});
+vendorSelect.addEventListener('change', () => { activeVendor = vendorSelect.value; render(); });
+
+const categorySelect = document.getElementById('categoryFilter');
+Object.keys(CATEGORIES).forEach(cat => {
+  const opt = document.createElement('option');
+  opt.value = cat; opt.textContent = cat;
+  categorySelect.appendChild(opt);
+});
+categorySelect.addEventListener('change', () => { activeCategory = categorySelect.value; render(); });
+
+document.getElementById('sortBy').addEventListener('change', (e) => { activeSort = e.target.value; render(); });
+
+function categoryOf(peptideName){
+  const n = peptideName.toLowerCase();
+  if (n.includes('hcg') || n.includes('hgh') || n.includes('somatropin') || n.includes('sildenafil') || n.includes('melanotan i') && !n.includes('melanotan ii'))
+    return 'Actual prescription drug — not just an unapproved research peptide';
+  if (n.includes('melanotan ii') || n.includes('mt-2'))
+    return 'Explicit public safety / illegal-for-human-use warning';
+  if (n.includes('mk-677') || n.includes('ibutamoren') || n.includes('mk-2866') || n.includes('ostarine'))
+    return 'SARM with FDA warning-letter history';
+  if (n.includes('tb-500') || n.includes('glow') || n.includes('klow') || n.includes('wolverine'))
+    return 'TB-500 identity/COA mismatch (including blends containing it)';
+  if (n.includes('retatrutide') || n.includes('tirzepatide') || n.includes('cagrilintide') || n.includes('eloralintide') || n.includes('semaglutide') || n.includes('tesamorelin') || n.includes('orforglipron'))
+    return 'Investigational or patent-protected drug, still in active trials';
+  return 'Other legal-risk flag';
+}
+
+const excludedNames = [...new Set(DATA.excluded.map(i => i.peptide))];
+const grouped = {};
+excludedNames.forEach(n => {
+  const cat = categoryOf(n);
+  (grouped[cat] = grouped[cat] || []).push(n);
+});
+const categoryOrder = [
+  'Actual prescription drug — not just an unapproved research peptide',
+  'Explicit public safety / illegal-for-human-use warning',
+  'Investigational or patent-protected drug, still in active trials',
+  'TB-500 identity/COA mismatch (including blends containing it)',
+  'SARM with FDA warning-letter history',
+  'Other legal-risk flag',
+];
+document.getElementById('excludedCategories').innerHTML = categoryOrder
+  .filter(cat => grouped[cat])
+  .map(cat => `
+    <div style="margin-top:18px;">
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.04em; text-transform:uppercase; color:var(--amber); margin-bottom:8px;">${cat}</div>
+      <div class="excluded-list">${grouped[cat].map(n => `<span class="excluded-tag">${n}</span>`).join('')}</div>
+    </div>
+  `).join('');
+
+const codedVendors = Object.entries(VENDOR_CONFIG).filter(([name, cfg]) => cfg.status === 'approved' && cfg.tracking_type === 'link_plus_code' && cfg.promo_code);
+if (codedVendors.length){
+  document.getElementById('codeBanner').innerHTML = codedVendors.map(([vendorName, cfg]) => `
+    <div class="code-banner">
+      <div class="msg">Buying from <strong>${vendorName}</strong>? Use code <strong>${cfg.promo_code}</strong> at checkout — it gets you a discount, and supports this site.</div>
+      <button type="button" data-code="${cfg.promo_code}" onclick="copyCode(this)">Copy code</button>
+    </div>
+  `).join('');
+}
+
+render();
+
+// ---------- Trust strip ----------
+// Every number here is computed from real data, not hardcoded — so it never
+// goes stale as vendors and products get added.
+(function buildTrustStrip(){
+  const checkIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+  const productCount = DATA.included.length;
+  const realVendorNames = Object.keys(VENDOR_CONFIG).filter(k => !k.startsWith('_') && countProductsForVendor(k) > 0);
+  const vendorCount = realVendorNames.length;
+  const liveVendorCount = realVendorNames.filter(k => VENDOR_CONFIG[k].status === 'approved').length;
+
+  const strip = document.getElementById('trustStrip');
+  strip.innerHTML = `
+    <span class="trust-item">${checkIcon} ${productCount} products across ${vendorCount} vendors</span>
+    <span class="trust-item">${checkIcon} ${liveVendorCount} vendor${liveVendorCount === 1 ? '' : 's'} price-tracked live daily</span>
+    <button type="button" class="trust-item" id="trustTesting">${checkIcon} Real lab testing data per vendor</button>
+    <button type="button" class="trust-item" id="trustCalc">${checkIcon} Reconstitution calculator</button>
+  `;
+  document.getElementById('trustCalc').addEventListener('click', () => calcToggle.click());
+  document.getElementById('trustTesting').addEventListener('click', () => suppliersToggle.click());
+})();
+
+// ---------- Live price overlay ----------
+// Pulls real-time-checked prices from the GitHub repo running the automated
+// checker (scripts/check_prices.py) and overlays them on top of the
+// baked-in baseline prices above. If this fails for any reason (offline,
+// GitHub down, file not there yet), the page just keeps showing the
+// baseline data — nothing breaks, nothing looks wrong to a visitor.
+const LIVE_PRICES_URL = 'https://raw.githubusercontent.com/spamjackiechan-afk/jack/main/data/live_prices.json';
+
+async function loadLivePrices(){
+  try {
+    const resp = await fetch(LIVE_PRICES_URL, { cache: 'no-store' });
+    if (!resp.ok) return;
+    const live = await resp.json();
+    const results = live.results || {};
+    let updatedCount = 0;
+
+    for (const [vendor, items] of Object.entries(results)){
+      for (const [itemKey, result] of Object.entries(items)){
+        if (result.price == null) continue; // "couldn't verify" — leave baseline price as-is
+        const [peptide, format, size] = itemKey.split(' | ');
+        const match = DATA.included.find(i => i.peptide === peptide && i.format === format && i.size === size);
+        if (match){
+          match.prices[vendor] = result.price;
+          match.liveVerified = match.liveVerified || {};
+          match.liveVerified[vendor] = true;
+          updatedCount++;
+        }
+      }
+    }
+
+    if (updatedCount > 0){
+      const banner = document.createElement('div');
+      banner.style.cssText = 'font-family:\'IBM Plex Mono\', monospace; font-size:11px; color:var(--success); margin:-6px 0 18px;';
+      banner.textContent = `✓ ${updatedCount} price${updatedCount === 1 ? '' : 's'} confirmed live as of ${new Date(live.checked_at).toLocaleString()}`;
+      countEl.after(banner);
+      render();
+    }
+  } catch (err) {
+    // Silent by design — a visitor should never see a broken page just
+    // because the live-price fetch failed. Baseline data is still correct,
+    // just not confirmed as of right now.
+    console.warn('Live price fetch failed, showing baseline prices:', err);
+  }
+}
+
+loadLivePrices();
+
+// ---------- Reconstitution calculator ----------
+const calcToggle = document.getElementById('calcToggle');
+const calcSection = document.getElementById('calcSection');
+calcToggle.addEventListener('click', () => {
+  const isHidden = calcSection.style.display === 'none';
+  calcSection.style.display = isHidden ? 'block' : 'none';
+  if (isHidden) calcSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+const calcVial = document.getElementById('calcVial');
+const calcWater = document.getElementById('calcWater');
+const calcDose = document.getElementById('calcDose');
+const calcUnitMg = document.getElementById('calcUnitMg');
+const calcUnitMcg = document.getElementById('calcUnitMcg');
+const calcDoseUnit = document.getElementById('calcDoseUnit');
+let doseUnitIsMcg = false;
+
+function runCalc(){
+  const vial = parseFloat(calcVial.value) || 0;
+  const water = parseFloat(calcWater.value) || 0;
+  let dose = parseFloat(calcDose.value) || 0;
+  if (doseUnitIsMcg) dose = dose / 1000; // normalize to mg internally
+
+  const concentration = water > 0 ? vial / water : 0; // mg per mL
+
+  document.getElementById('calcConcentration').textContent = concentration ? `${round2(concentration)}mg/mL` : '—';
+
+  if (dose > 0 && concentration > 0){
+    const volumeMl = dose / concentration;
+    const units = volumeMl * 100; // U-100 insulin syringe: 100 units = 1mL
+    const microliters = volumeMl * 1000;
+    const dosesPerVial = Math.floor(vial / dose);
+    document.getElementById('calcUnits').textContent = `${round1(units)} units`;
+    document.getElementById('calcMicroliters').textContent = `${round2(volumeMl)}mL per dose (${round0(microliters)} μL)`;
+    document.getElementById('calcDosesPerVial').textContent = dosesPerVial > 0 ? dosesPerVial : '—';
+
+    // Gauge is a fixed 0–100 unit scale (standard U-100 syringe markings).
+    // If a dose genuinely needs more than 100 units, cap the visual fill at
+    // 100% but keep the real number in the text above — don't lie about the
+    // bar, just let the number carry values the bar physically can't show.
+    const gaugeMax = 100;
+    const fillPercent = Math.min(100, (units / gaugeMax) * 100);
+    document.getElementById('calcGaugeFill').style.width = `${fillPercent}%`;
+    document.getElementById('calcGaugeRange').textContent = units > gaugeMax ? `0 – 100+ units` : '0 – 100 units';
+  } else {
+    document.getElementById('calcUnits').textContent = '—';
+    document.getElementById('calcMicroliters').textContent = 'Enter a desired dose';
+    document.getElementById('calcDosesPerVial').textContent = '—';
+    document.getElementById('calcGaugeFill').style.width = '0%';
+    document.getElementById('calcGaugeRange').textContent = '0 – 100 units';
+  }
+}
+function round0(n){ return Math.round(n); }
+function round1(n){ return Math.round(n * 10) / 10; }
+function round2(n){ return Math.round(n * 100) / 100; }
+
+[calcVial, calcWater, calcDose].forEach(el => el.addEventListener('input', runCalc));
+
+document.querySelectorAll('.calc-pills').forEach(group => {
+  if (group.id === 'calcDosePills') return; // handled separately below, unit-aware
+  const targetId = group.dataset.target;
+  const input = document.getElementById(targetId);
+  group.querySelectorAll('.calc-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      group.querySelectorAll('.calc-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      input.value = pill.dataset.val;
+      runCalc();
+    });
+  });
+});
+
+function refreshDosePillLabels(){
+  document.querySelectorAll('#calcDosePills .calc-pill').forEach(pill => {
+    const mgVal = parseFloat(pill.dataset.mg);
+    const displayVal = doseUnitIsMcg ? round0(mgVal * 1000) : mgVal;
+    const unitLabel = doseUnitIsMcg ? 'mcg' : 'mg';
+    pill.textContent = `${displayVal}${unitLabel}`;
+  });
+}
+document.querySelectorAll('#calcDosePills .calc-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('#calcDosePills .calc-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const mgVal = parseFloat(pill.dataset.mg);
+    calcDose.value = doseUnitIsMcg ? round0(mgVal * 1000) : mgVal;
+    runCalc();
+  });
+});
+
+calcUnitMg.addEventListener('click', () => {
+  if (!doseUnitIsMcg) return;
+  doseUnitIsMcg = false;
+  calcUnitMg.classList.add('active');
+  calcUnitMcg.classList.remove('active');
+  calcDoseUnit.textContent = 'mg';
+  calcDose.value = round2(parseFloat(calcDose.value) / 1000);
+  refreshDosePillLabels();
+  runCalc();
+});
+calcUnitMcg.addEventListener('click', () => {
+  if (doseUnitIsMcg) return;
+  doseUnitIsMcg = true;
+  calcUnitMcg.classList.add('active');
+  calcUnitMg.classList.remove('active');
+  calcDoseUnit.textContent = 'mcg';
+  calcDose.value = round0(parseFloat(calcDose.value) * 1000);
+  refreshDosePillLabels();
+  runCalc();
+});
+
+runCalc();
+
+// ---------- Suppliers directory ----------
+const suppliersToggle = document.getElementById('suppliersToggle');
+const suppliersSection = document.getElementById('suppliersSection');
+let suppliersBuilt = false;
+
+suppliersToggle.addEventListener('click', () => {
+  const isHidden = suppliersSection.style.display === 'none';
+  suppliersSection.style.display = isHidden ? 'block' : 'none';
+  if (isHidden){
+    if (!suppliersBuilt) buildSuppliers();
+    suppliersSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+function countProductsForVendor(vendorName){
+  return DATA.included.filter(i => vendorName in i.prices).length;
+}
+
+function buildSuppliers(){
+  const grid = document.getElementById('suppliersGrid');
+  const vendorNames = Object.keys(VENDOR_CONFIG).filter(k => !k.startsWith('_')).sort();
+
+  grid.innerHTML = vendorNames.map(name => {
+    const cfg = VENDOR_CONFIG[name];
+    const productCount = countProductsForVendor(name);
+    if (productCount === 0) return '';
+
+    let badgeClass = 'pending', badgeText = 'Not yet a partner';
+    if (cfg.status === 'approved'){ badgeClass = 'partner'; badgeText = 'Affiliate partner'; }
+    else if (cfg.status === 'no_program'){ badgeClass = 'pending'; badgeText = 'No affiliate program'; }
+    else if (!cfg.site_url){ badgeClass = 'unverified'; badgeText = 'Unverified company'; }
+
+    const codeLine = (cfg.status === 'approved' && cfg.promo_code)
+      ? `<div class="supplier-meta">Code: <strong style="color:var(--lowest);">${cfg.promo_code}</strong></div>`
+      : '';
+
+    const shippingLine = cfg.shipping_info
+      ? `<div class="supplier-meta" style="margin-top:6px;">📦 ${cfg.shipping_info}</div>`
+      : '';
+
+    let paymentLine = '';
+    if (cfg.payment_methods && cfg.payment_methods.length){
+      paymentLine = `<div class="supplier-meta" style="margin-top:4px;">💳 ${cfg.payment_methods.join(', ')}${cfg.payment_note ? ` — ${cfg.payment_note}` : ''}</div>`;
+    } else if (cfg.shipping_payment_researched){
+      paymentLine = `<div class="supplier-meta" style="margin-top:4px; opacity:0.6;">💳 Payment methods not publicly listed — check at checkout</div>`;
+    }
+
+    let testingSection = '';
+    if (cfg.testing_researched){
+      const hasRealData = cfg.testing_methods && cfg.testing_methods.length;
+      const testingId = `testing-${name.replace(/[^a-zA-Z0-9]/g, '-')}`;
+      const testingBody = hasRealData ? `
+          <div class="supplier-meta" style="margin-top:2px;"><strong style="color:var(--ink);">Methods:</strong> ${cfg.testing_methods.join(', ')}</div>
+          ${cfg.testing_lab ? `<div class="supplier-meta" style="margin-top:2px;"><strong style="color:var(--ink);">Lab:</strong> ${cfg.testing_lab}</div>` : ''}
+          ${cfg.testing_standard ? `<div class="supplier-meta" style="margin-top:2px;"><strong style="color:var(--ink);">Standard:</strong> ${cfg.testing_standard}</div>` : ''}
+          <div class="supplier-meta" style="margin-top:4px; font-style:italic;">${cfg.testing_note}</div>
+        ` : `<div class="supplier-meta" style="margin-top:2px; opacity:0.6;">${cfg.testing_note}</div>`;
+
+      testingSection = `
+        <button type="button" class="expand-toggle" style="margin-top:8px; font-size:10px; padding:5px 8px;" onclick="const b=document.getElementById('${testingId}'); const open=b.style.display!=='none'; b.style.display=open?'none':'block'; this.textContent=open?'🧪 Testing & quality →':'🧪 Testing & quality ↑';">🧪 Testing & quality →</button>
+        <div id="${testingId}" style="display:none; margin-top:6px; padding-top:6px; border-top:1px dashed var(--rule);">${testingBody}</div>`;
+    }
+
+    const visitBtn = cfg.site_url
+      ? `<a href="${cfg.site_url}" target="_blank" rel="noopener" class="supplier-btn-visit">Visit site</a>`
+      : `<span class="supplier-btn-visit" style="opacity:0.5; cursor:default;">No site</span>`;
+
+    return `
+      <div class="supplier-card">
+        <h3>${name}</h3>
+        <span class="supplier-badge ${badgeClass}">${badgeText}</span>
+        <div class="supplier-meta">${productCount} product${productCount === 1 ? '' : 's'} compared on this site</div>
+        ${codeLine}
+        ${shippingLine}
+        ${paymentLine}
+        ${testingSection}
+        <div class="supplier-actions">
+          ${visitBtn}
+          <button type="button" class="supplier-btn-prices" onclick="viewSupplierPrices('${name.replace(/'/g, "\\'")}')">View prices</button>
+        </div>
+      </div>`;
+  }).join('');
+
+  suppliersBuilt = true;
+}
+
+function viewSupplierPrices(vendorName){
+  activeVendor = vendorName;
+  vendorSelect.value = vendorName;
+  render();
+  suppliersSection.style.display = 'none';
+  document.getElementById('index').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>
