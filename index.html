@@ -249,49 +249,7 @@
   }
   .trust-item:hover{color:var(--lowest);}
   .trust-item svg{color:var(--lowest); flex-shrink:0;}
-  #suppliersToggle:hover{background:var(--lowest-bg);}
-  .supplier-card{
-    background:var(--paper);
-    border:1px solid var(--rule);
-    border-radius:10px;
-    padding:16px;
-    display:flex;
-    flex-direction:column;
-  }
-  .supplier-card h3{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:16px;
-    margin:0 0 6px;
-    color:var(--ink);
-  }
-  .supplier-badge{
-    display:inline-block;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:9.5px;
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-    padding:2px 8px;
-    border-radius:20px;
-    margin-bottom:10px;
-  }
-  .supplier-badge.partner{color:var(--success); border:1px solid var(--success);}
-  .supplier-badge.unverified{color:var(--amber); border:1px solid var(--amber);}
-  .supplier-badge.pending{color:var(--ink-soft); border:1px solid var(--rule);}
-  .supplier-meta{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-bottom:12px;}
-  .supplier-actions{display:flex; gap:8px; margin-top:auto;}
-  .supplier-actions a, .supplier-actions button{
-    flex:1;
-    text-align:center;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    padding:8px 10px;
-    border-radius:6px;
-    cursor:pointer;
-    text-decoration:none;
-  }
-  .supplier-btn-visit{background:transparent; border:1px solid var(--rule); color:var(--ink-soft);}
-  .supplier-btn-prices{background:var(--lowest); border:1px solid var(--lowest); color:var(--paper); font-weight:500;}
+  #suppliersLink:hover{background:var(--lowest-bg);}
   .calc-btn-short{display:none;}
   @media (max-width:480px){
     .calc-btn-full{display:none;}
@@ -599,10 +557,10 @@
     <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; margin-top:14px;">
       <p style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; color:var(--amber); margin:0;">Research use only — not for human or animal consumption</p>
       <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <button type="button" id="suppliersToggle" style="display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; background:transparent; border:1.5px solid var(--lowest); color:var(--lowest); padding:10px 18px; border-radius:8px; cursor:pointer;">
+        <a href="suppliers.html" target="_blank" id="suppliersLink" style="display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; background:transparent; border:1.5px solid var(--lowest); color:var(--lowest); padding:10px 18px; border-radius:8px; cursor:pointer; text-decoration:none;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
           Suppliers
-        </button>
+        </a>
         <button type="button" id="calcToggle" style="display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.04em; text-transform:uppercase; background:var(--lowest); border:1.5px solid var(--lowest); color:var(--paper); padding:10px 18px; border-radius:8px; cursor:pointer; white-space:nowrap;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/></svg>
           <span class="calc-btn-full">Reconstitution calculator</span><span class="calc-btn-short">Calculator</span>
@@ -611,14 +569,6 @@
     </div>
     <div id="trustStrip" style="display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:16px; padding-top:14px; border-top:1px solid var(--rule);"></div>
   </header>
-
-  <div id="suppliersSection" style="display:none; margin:0 0 32px;">
-    <div style="border:1px solid var(--rule); border-radius:12px; padding:24px; background:var(--paper-raised);">
-      <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:0 0 4px; color:var(--ink);">Suppliers</h2>
-      <p style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin:0 0 20px;">Every vendor referenced on this site, with what we actually know about them — no invented ratings or order counts.</p>
-      <div id="suppliersGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px;"></div>
-    </div>
-  </div>
 
   <div id="calcSection" style="display:none; margin:0 0 32px;">
     <div style="border:1px solid var(--rule); border-radius:12px; padding:24px; background:var(--paper-raised);">
@@ -1043,11 +993,10 @@ render();
   strip.innerHTML = `
     <span class="trust-item">${checkIcon} ${productCount} products across ${vendorCount} vendors</span>
     <span class="trust-item">${checkIcon} ${liveVendorCount} vendor${liveVendorCount === 1 ? '' : 's'} price-tracked live daily</span>
-    <button type="button" class="trust-item" id="trustTesting">${checkIcon} Real lab testing data per vendor</button>
+    <a class="trust-item" href="suppliers.html" target="_blank">${checkIcon} Real lab testing data per vendor</a>
     <button type="button" class="trust-item" id="trustCalc">${checkIcon} Reconstitution calculator</button>
   `;
   document.getElementById('trustCalc').addEventListener('click', () => calcToggle.click());
-  document.getElementById('trustTesting').addEventListener('click', () => suppliersToggle.click());
 })();
 
 // ---------- Live price overlay ----------
@@ -1269,99 +1218,10 @@ calcUnitMcg.addEventListener('click', () => {
 
 runCalc();
 
-// ---------- Suppliers directory ----------
-const suppliersToggle = document.getElementById('suppliersToggle');
-const suppliersSection = document.getElementById('suppliersSection');
-let suppliersBuilt = false;
-
-suppliersToggle.addEventListener('click', () => {
-  const isHidden = suppliersSection.style.display === 'none';
-  suppliersSection.style.display = isHidden ? 'block' : 'none';
-  if (isHidden){
-    if (!suppliersBuilt) buildSuppliers();
-    suppliersSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-});
-
 function countProductsForVendor(vendorName){
   return DATA.included.filter(i => vendorName in i.prices).length;
 }
 
-function buildSuppliers(){
-  const grid = document.getElementById('suppliersGrid');
-  const vendorNames = Object.keys(VENDOR_CONFIG).filter(k => !k.startsWith('_')).sort();
-
-  grid.innerHTML = vendorNames.map(name => {
-    const cfg = VENDOR_CONFIG[name];
-    const productCount = countProductsForVendor(name);
-    if (productCount === 0) return '';
-
-    let badgeClass = 'pending', badgeText = 'Not yet a partner';
-    if (cfg.status === 'approved'){ badgeClass = 'partner'; badgeText = 'Affiliate partner'; }
-    else if (cfg.status === 'no_program'){ badgeClass = 'pending'; badgeText = 'No affiliate program'; }
-    else if (!cfg.site_url){ badgeClass = 'unverified'; badgeText = 'Unverified company'; }
-
-    const codeLine = (cfg.status === 'approved' && cfg.promo_code)
-      ? `<div class="supplier-meta">Code: <strong style="color:var(--lowest);">${cfg.promo_code}</strong></div>`
-      : '';
-
-    const shippingLine = cfg.shipping_info
-      ? `<div class="supplier-meta" style="margin-top:6px;">📦 ${cfg.shipping_info}</div>`
-      : '';
-
-    let paymentLine = '';
-    if (cfg.payment_methods && cfg.payment_methods.length){
-      paymentLine = `<div class="supplier-meta" style="margin-top:4px;">💳 ${cfg.payment_methods.join(', ')}${cfg.payment_note ? ` — ${cfg.payment_note}` : ''}</div>`;
-    } else if (cfg.shipping_payment_researched){
-      paymentLine = `<div class="supplier-meta" style="margin-top:4px; opacity:0.6;">💳 Payment methods not publicly listed — check at checkout</div>`;
-    }
-
-    let testingSection = '';
-    if (cfg.testing_researched){
-      const hasRealData = cfg.testing_methods && cfg.testing_methods.length;
-      const testingId = `testing-${name.replace(/[^a-zA-Z0-9]/g, '-')}`;
-      const testingBody = hasRealData ? `
-          <div class="supplier-meta" style="margin-top:2px;"><strong style="color:var(--ink);">Methods:</strong> ${cfg.testing_methods.join(', ')}</div>
-          ${cfg.testing_lab ? `<div class="supplier-meta" style="margin-top:2px;"><strong style="color:var(--ink);">Lab:</strong> ${cfg.testing_lab}</div>` : ''}
-          ${cfg.testing_standard ? `<div class="supplier-meta" style="margin-top:2px;"><strong style="color:var(--ink);">Standard:</strong> ${cfg.testing_standard}</div>` : ''}
-          <div class="supplier-meta" style="margin-top:4px; font-style:italic;">${cfg.testing_note}</div>
-        ` : `<div class="supplier-meta" style="margin-top:2px; opacity:0.6;">${cfg.testing_note}</div>`;
-
-      testingSection = `
-        <button type="button" class="expand-toggle" style="margin-top:8px; font-size:10px; padding:5px 8px;" onclick="const b=document.getElementById('${testingId}'); const open=b.style.display!=='none'; b.style.display=open?'none':'block'; this.textContent=open?'🧪 Testing & quality →':'🧪 Testing & quality ↑';">🧪 Testing & quality →</button>
-        <div id="${testingId}" style="display:none; margin-top:6px; padding-top:6px; border-top:1px dashed var(--rule);">${testingBody}</div>`;
-    }
-
-    const visitBtn = cfg.site_url
-      ? `<a href="${cfg.site_url}" target="_blank" rel="noopener" class="supplier-btn-visit">Visit site</a>`
-      : `<span class="supplier-btn-visit" style="opacity:0.5; cursor:default;">No site</span>`;
-
-    return `
-      <div class="supplier-card">
-        <h3>${name}</h3>
-        <span class="supplier-badge ${badgeClass}">${badgeText}</span>
-        <div class="supplier-meta">${productCount} product${productCount === 1 ? '' : 's'} compared on this site</div>
-        ${codeLine}
-        ${shippingLine}
-        ${paymentLine}
-        ${testingSection}
-        <div class="supplier-actions">
-          ${visitBtn}
-          <button type="button" class="supplier-btn-prices" onclick="viewSupplierPrices('${name.replace(/'/g, "\\'")}')">View prices</button>
-        </div>
-      </div>`;
-  }).join('');
-
-  suppliersBuilt = true;
-}
-
-function viewSupplierPrices(vendorName){
-  activeVendor = vendorName;
-  vendorSelect.value = vendorName;
-  render();
-  suppliersSection.style.display = 'none';
-  document.getElementById('index').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
 </script>
 </body>
 </html>
