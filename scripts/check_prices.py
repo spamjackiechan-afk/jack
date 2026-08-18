@@ -39,6 +39,21 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt only blocks wp-admin, cart/checkout/account,
                                   # filter/sort query params, and plugin dirs — /shop/ is wide open
     },
+    "BioIntegrity Research": {
+        "robots_checked_by": "Jackson, 2026-08-18",
+        "robots_allows": True,   # confirmed: robots.txt only blocks /cart, /checkout, /api/ —
+                                  # /compounds/ pages are wide open. Site explicitly names ClaudeBot
+                                  # with Allow: / too.
+    },
+    "Koi Peptides": {
+        "robots_checked_by": "Jackson, 2026-08-18",
+        "robots_allows": True,   # confirmed: blocks named AI crawlers (ClaudeBot, GPTBot, etc.) by
+                                  # name, but general "*" rule (which our own-named script falls
+                                  # under) is Allow: / — only admin/cart/checkout/account/sorting
+                                  # paths blocked, no product pages. Only 2/4 products have a known
+                                  # URL right now — the other 2 need URLs collected before they'll
+                                  # show up in results.
+    },
 }
 
 HEADERS = {
