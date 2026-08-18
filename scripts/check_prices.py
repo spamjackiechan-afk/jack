@@ -153,6 +153,18 @@ def extract_price(html: str) -> float | None:
         if match:
             return float(match.group(0).replace(",", "").lstrip("$"))
 
+    # Third fallback: some modern sites (e.g. Next.js apps, confirmed on
+    # Purity Peptides) don't use JSON-LD or simple CSS at all — instead the
+    # price lives inside a large embedded JSON payload the page uses to
+    # render itself client-side, as a plain "price":94.99 field. This grabs
+    # the FIRST such match in the raw page, which corresponds to the main
+    # product — confirmed against a real page that this correctly skips
+    # past a related/recommended product's price appearing later in the
+    # same payload.
+    raw_price_match = re.search(r'"price"\s*:\s*([\d.]+)', html)
+    if raw_price_match:
+        return float(raw_price_match.group(1))
+
     return None
 
 
