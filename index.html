@@ -394,6 +394,12 @@
     letter-spacing:0.03em;
     margin-left:5px;
   }
+  .popular-badge{
+    color:var(--lowest);
+    font-size:9px;
+    letter-spacing:0.03em;
+    margin-left:5px;
+  }
   .price-row.lowest .vendor{color:var(--sage-deep);}
   .price-row.lowest .price-amount{color:var(--sage-deep);}
   .price-row .val{font-weight:500; display:flex; flex-direction:column; align-items:flex-end; gap:2px;}
@@ -794,6 +800,8 @@ let activeFilter = 'All';
 let activeVendor = 'All';
 let activeCategory = 'All';
 let activeSort = 'name';
+let CLICK_COUNTS = {};
+let MOST_CLICKED_VENDOR = {}; // peptide -> vendor with the most clicks for it, once real signal exists
 
 function fmtPrice(v){ return '$' + Number(v).toFixed(2).replace(/\.00$/, ''); }
 
@@ -870,11 +878,12 @@ function renderPriceRow(vendor, price, item, lowestVal){
   const link = resolveVendorLink(vendor, item);
   const stateLabel = { affiliate: '', pending: ' · homepage only', pending_product: '', no_program: ' · no affiliate program', unverified: '' }[link.state] || '';
   const liveBadge = item.liveVerified && item.liveVerified[vendor] ? `<span class="live-badge" title="Confirmed by automated daily check">● LIVE</span>` : '';
+  const popularBadge = isPopularChoice(item.peptide, vendor) ? `<span class="popular-badge" title="Most clicked-through vendor for this peptide on this site">🔥 Popular here</span>` : '';
   const codeBadge = link.promoCode ? `<span class="promo-code" data-code="${link.promoCode}" role="button" tabindex="0" onclick="event.preventDefault(); event.stopPropagation(); copyCode(this);" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); event.stopPropagation(); copyCode(this);}">Code: ${link.promoCode}</span>` : '';
   const unavailableTag = !link.url ? `<span class="unavailable-tag">no link yet</span>` : '';
-  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}</span><span class="val"><span class="price-amount">${fmtPrice(price)}</span>${codeBadge}${unavailableTag}</span>`;
+  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}${popularBadge}</span><span class="val"><span class="price-amount">${fmtPrice(price)}</span>${codeBadge}${unavailableTag}</span>`;
   if (link.url){
-    return `<a class="price-row ${price === lowestVal ? 'lowest' : ''}" href="${link.url}" target="_blank" rel="noopener sponsored">${inner}</a>`;
+    return `<a class="price-row ${price === lowestVal ? 'lowest' : ''}" href="${link.url}" target="_blank" rel="noopener sponsored" onclick="trackClick('${vendor.replace(/'/g,"\\'")}', '${item.peptide.replace(/'/g,"\\'")}')">${inner}</a>`;
   }
   return `<div class="price-row unavailable">${inner}</div>`;
 }
@@ -1087,6 +1096,65 @@ async function loadLivePrices(){
 }
 
 loadLivePrices();
+
+// ---------- Real click tracking ----------
+// Honest popularity signal: which vendor people on THIS site actually click
+// through to, per peptide. No invented numbers — starts at zero, only shows
+// a badge once there's real, meaningful signal (see POPULAR_MIN_CLICKS).
+const CLICK_TRACK_URL = '/api/track-click';
+const CLICK_DATA_URL = '/api/get-clicks';
+const POPULAR_MIN_CLICKS = 3; // don't call something "popular" off one stray click
+
+function trackClick(vendor, peptide){
+  // Fire-and-forget — never let a tracking failure interfere with the
+  // actual link the visitor is following (it opens in a new tab regardless).
+  try {
+    fetch(CLICK_TRACK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ vendor, peptide }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch (err) { /* silent — tracking should never break the site */ }
+}
+
+function isPopularChoice(peptide, vendor){
+  return MOST_CLICKED_VENDOR[peptide] === vendor;
+}
+
+async function loadClickCounts(){
+  try {
+    const resp = await fetch(CLICK_DATA_URL, { cache: 'no-store' });
+    if (!resp.ok) return; // function may not be deployed yet — fail silently
+    CLICK_COUNTS = await resp.json();
+
+    const byPeptide = {}; // peptide -> { vendor: count }
+    for (const [key, count] of Object.entries(CLICK_COUNTS)){
+      const [peptide, vendor] = key.split('|||');
+      byPeptide[peptide] = byPeptide[peptide] || {};
+      byPeptide[peptide][vendor] = count;
+    }
+
+    let foundAny = false;
+    for (const [peptide, vendorCounts] of Object.entries(byPeptide)){
+      let topVendor = null, topCount = 0;
+      for (const [vendor, count] of Object.entries(vendorCounts)){
+        if (count > topCount){ topVendor = vendor; topCount = count; }
+      }
+      if (topVendor && topCount >= POPULAR_MIN_CLICKS){
+        MOST_CLICKED_VENDOR[peptide] = topVendor;
+        foundAny = true;
+      }
+    }
+
+    if (foundAny) render();
+  } catch (err) {
+    // Silent by design, same reasoning as live prices — a visitor should
+    // never see a broken page just because this endpoint isn't reachable.
+  }
+}
+
+loadClickCounts();
 
 // ---------- Reconstitution calculator ----------
 const calcToggle = document.getElementById('calcToggle');
