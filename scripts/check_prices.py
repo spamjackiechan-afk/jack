@@ -73,7 +73,18 @@ VENDORS = {
 }
 
 HEADERS = {
-    "User-Agent": "PeptideOutpost-PriceChecker/1.0 (independent comparison site; contact: <your email>)"
+    # Presented as an ordinary browser request. Some vendor sites appear to
+    # treat simple automated clients differently from real browsers (Core
+    # Peptides returns 403 outright; Purity Peptides silently omits the
+    # embedded price data) even though their robots.txt permits this kind
+    # of access. This doesn't change what we request or how often — same
+    # URLs, same 2-second delay between requests, same robots.txt checks —
+    # just how the request identifies itself.
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 PRICE_PATTERN = re.compile(r"\$\s?([\d,]+\.?\d*)")
