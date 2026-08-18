@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-18T14:47:55Z",
+  "checked_at": "2026-08-18T15:59:42Z",
   "results": {
     "Improved Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -457,6 +457,295 @@
         "url": "https://koipeptides.com/product/kpv/",
         "price": 34.95,
         "error": null
+      }
+    },
+    "Core Peptides": {
+      "Oxytocin | Nasal | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/oxytocin-10mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/oxytocin-10mg/"
+      },
+      "BPC-157 | Vial | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/bpc-157/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/bpc-157/"
+      },
+      "CJC-1295 / Ipamorelin combo | Vial | 7.5mg/10mg": {
+        "url": "https://www.corepeptides.com/peptides/cjc-1295-ipamorelin-10mg-blend/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/cjc-1295-ipamorelin-10mg-blend/"
+      },
+      "DSIP | Vial | 5mg": {
+        "url": "https://www.corepeptides.com/peptides/dsip-5mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/dsip-5mg/"
+      },
+      "Epitalon | Vial | 25mg": {
+        "url": "https://www.corepeptides.com/peptides/epitalon-25mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/epitalon-25mg/"
+      },
+      "FOXO4-DRI | Vial | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/foxo4-dri-10mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/foxo4-dri-10mg/"
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
+        "url": "https://www.corepeptides.com/peptides/ghk-cu-50mg-copper/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/ghk-cu-50mg-copper/"
+      },
+      "Humanin | Vial | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/humanin-10mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/humanin-10mg/"
+      },
+      "IGF-1 LR3 | Vial | 1mg": {
+        "url": "https://www.corepeptides.com/peptides/receptor-grade-igf-1-lr3-1mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/receptor-grade-igf-1-lr3-1mg/"
+      },
+      "Kisspeptin | Vial | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/kisspeptin-10mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/kisspeptin-10mg/"
+      },
+      "LL-37 | Vial | 5mg": {
+        "url": "https://www.corepeptides.com/peptides/ll-37-5mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/ll-37-5mg/"
+      },
+      "MOTS-C | Vial | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/mots-c-10mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/mots-c-10mg/"
+      },
+      "PT-141 (Bremelanotide) | Vial | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/pt-141-10mg-bremelanotide/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/pt-141-10mg-bremelanotide/"
+      },
+      "Thymosin Alpha-1 | Vial | 10mg": {
+        "url": "https://www.corepeptides.com/peptides/thymosin-alpha-1/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/thymosin-alpha-1/"
+      },
+      "VIP (Vasoactive Intestinal Peptide) | Vial | 6mg": {
+        "url": "https://www.corepeptides.com/peptides/vip-6mg/",
+        "price": null,
+        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/vip-6mg/"
+      }
+    },
+    "Purity Peptides": {
+      "GHK-Cu (Copper Peptide) | Nasal | 50mg": {
+        "url": "https://puritypeptides.is/product/ghk-cu-nasal-spray-50mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "NAD+ | Nasal | 500mg": {
+        "url": "https://puritypeptides.is/product/nad-nasal-spray-500mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "PT-141 (Bremelanotide) | Nasal | 10mg": {
+        "url": "https://puritypeptides.is/product/pt-141-nasal-spray-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Selank | Nasal | 10mg": {
+        "url": "https://puritypeptides.is/product/selank-nasal-spray-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Semax | Nasal | 10mg": {
+        "url": "https://puritypeptides.is/product/semax-nasal-spray-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "BPC-157 | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/bpc-157-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "DSIP | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/dsip-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
+        "url": "https://puritypeptides.is/product/ghk-50mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Glutathione | Vial | 1500mg": {
+        "url": "https://puritypeptides.is/product/glutathione-1500mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "IGF-1 LR3 | Vial | 1mg": {
+        "url": "https://puritypeptides.is/product/igf-lr-1mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Kisspeptin | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/kisspepptin-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "MOTS-C | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/mots-c-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "MOTS-C | Vial | 20mg": {
+        "url": "https://puritypeptides.is/product/mots-c-20mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "NAD+ | Vial | 500mg": {
+        "url": "https://puritypeptides.is/product/nad-adjusted-ph-500mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "PT-141 (Bremelanotide) | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/pt-141-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Selank | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/selank-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Semax | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/semax-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Sermorelin | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/sermorelin-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "SS-31 / Elamipretide | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/ss-31-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Thymosin Alpha-1 | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/thymosin-alpha-1-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "AOD-9604 | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/aod-9604-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "BPC-157 | Nasal | 10mg": {
+        "url": "https://puritypeptides.is/product/bpc-157-nasal-spray-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "BPC-157 | Vial | 20mg": {
+        "url": "https://puritypeptides.is/product/bpc-157-20mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "BPC-157 | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/bpc-157-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "CJC-1295 with DAC | Vial | 2mg": {
+        "url": "https://puritypeptides.is/product/cjc-with-dac-2mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "CJC-1295 with DAC | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/cjc-1295-with-dac-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
+        "url": "https://puritypeptides.is/product/cjc-1295-ipamorelin-blend-5mg-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "CJC-1295 | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/cjc-1295-no-dac-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "CJC-1295 | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/cjc-1295-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Dihexa | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/dihexa-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "DSIP | Nasal | 10mg": {
+        "url": "https://puritypeptides.is/product/dsip-nasal-spray-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Epitalon | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/epitalon-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 100mg": {
+        "url": "https://puritypeptides.is/product/ghk-cu-100mg-peptide",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "GHRP-2 | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/ghrp-2-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Gonadorelin | Vial | 2mg": {
+        "url": "https://puritypeptides.is/product/gonadorelin-2mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Ipamorelin | Vial | 10mg": {
+        "url": "https://puritypeptides.is/product/ipamorelin-10mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Ipamorelin | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/ipamorelin-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "KPV | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/kpv-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Sermorelin | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/sermorelin-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "SLU-PP-332 | Capsules | 500mcg x50 tabs": {
+        "url": "https://puritypeptides.is/product/slu-pp-332-500mcg-50-tablets",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "SLU-PP-332 | Capsules | 500mcg x100 tabs": {
+        "url": "https://puritypeptides.is/product/slu-pp-332-500mcg-100-tablets",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
+      },
+      "Thymosin Alpha-1 | Vial | 5mg": {
+        "url": "https://puritypeptides.is/product/thymosin-alpha-1-5mg",
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
       }
     }
   }
