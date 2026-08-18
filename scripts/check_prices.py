@@ -69,6 +69,11 @@ VENDORS = {
                                   # pages. 42/48 products have a known URL; 6 need confirming
                                   # (a few possible size mismatches, a few URLs with no size
                                   # in them at all).
+        "needs_browser": True,   # confirmed: a real browser-header request still doesn't get the
+                                  # embedded price data — their site appears to only serve full
+                                  # content to a real, JS-executing browser, not just a
+                                  # browser-flavored plain HTTP request. Uses Playwright instead
+                                  # of requests for this vendor only.
     },
 }
 
@@ -192,6 +197,30 @@ def check_product(url: str) -> dict:
     return {"url": url, "price": price, "error": None}
 
 
+def check_product_with_browser(url: str, browser) -> dict:
+    """
+    Same idea as check_product(), but for vendors that only serve full,
+    real content to an actual JS-executing browser (confirmed necessary
+    for Purity Peptides — a plain requests.get(), even with realistic
+    browser headers, doesn't get the embedded price data; a real browser
+    does). Reuses extract_price() unchanged, since the underlying page
+    content — once actually rendered — has the same structure either way.
+    """
+    page = browser.new_page()
+    try:
+        page.goto(url, timeout=20000, wait_until="networkidle")
+        html = page.content()
+    except Exception as e:
+        return {"url": url, "price": None, "error": f"browser navigation failed: {e}"}
+    finally:
+        page.close()
+
+    price = extract_price(html)
+    if price is None:
+        return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
+    return {"url": url, "price": price, "error": None}
+
+
 def main():
     catalog_path = Path(__file__).parent.parent / "data" / "product_urls.json"
     if not catalog_path.exists():
@@ -202,11 +231,13 @@ def main():
     results = {}
     errors = []
 
-    for vendor, cfg in VENDORS.items():
-        if cfg.get("robots_allows") is not True:
-            print(f"Skipping {vendor} — robots.txt not confirmed allowed (see VENDORS config at top of this file).")
-            continue
+    # Vendors that work fine with a plain HTTP request — the fast, simple
+    # path, unchanged from before.
+    fast_vendors = {v: c for v, c in VENDORS.items() if c.get("robots_allows") is True and not c.get("needs_browser")}
+    # Vendors that need a real browser to get real content.
+    browser_vendors = {v: c for v, c in VENDORS.items() if c.get("robots_allows") is True and c.get("needs_browser")}
 
+    for vendor, cfg in {**fast_vendors}.items():
         vendor_items = catalog.get(vendor, {})
         print(f"Checking {len(vendor_items)} {vendor} products...")
         for item_key, url in vendor_items.items():
@@ -215,6 +246,25 @@ def main():
             if result["error"]:
                 errors.append(f"{vendor} — {item_key}: {result['error']}")
             time.sleep(2)  # be a polite, slow crawler — no need to hammer their server
+
+    for vendor, cfg in {**VENDORS}.items():
+        if cfg.get("robots_allows") is not True:
+            print(f"Skipping {vendor} — robots.txt not confirmed allowed (see VENDORS config at top of this file).")
+
+    if browser_vendors:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            for vendor, cfg in browser_vendors.items():
+                vendor_items = catalog.get(vendor, {})
+                print(f"Checking {len(vendor_items)} {vendor} products (browser mode)...")
+                for item_key, url in vendor_items.items():
+                    result = check_product_with_browser(url, browser)
+                    results.setdefault(vendor, {})[item_key] = result
+                    if result["error"]:
+                        errors.append(f"{vendor} — {item_key}: {result['error']}")
+                    time.sleep(2)  # be a polite, slow crawler — no need to hammer their server
+            browser.close()
 
     out_path = Path(__file__).parent.parent / "data" / "live_prices.json"
     out_path.parent.mkdir(exist_ok=True)
