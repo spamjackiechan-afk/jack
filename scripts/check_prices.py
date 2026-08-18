@@ -54,6 +54,22 @@ VENDORS = {
                                   # URL right now — the other 2 need URLs collected before they'll
                                   # show up in results.
     },
+    "Core Peptides": {
+        "robots_checked_by": "Jackson, 2026-08-18",
+        "robots_allows": True,   # confirmed: robots.txt only blocks /wp-admin/, /feed/, /tmp/ —
+                                  # /peptides/ pages are wide open. All 15/15 products have a
+                                  # known URL.
+    },
+    "Purity Peptides": {
+        "robots_checked_by": "Jackson, 2026-08-18",
+        "robots_allows": True,   # confirmed: blocks named AI crawlers (ClaudeBot, GPTBot, etc.) by
+                                  # name via the newer Content-Signal format, but general "*" rule
+                                  # (which our own-named script falls under) is Allow: / — only
+                                  # /api/, /checkout, /order-confirmation/ blocked, no product
+                                  # pages. 42/48 products have a known URL; 6 need confirming
+                                  # (a few possible size mismatches, a few URLs with no size
+                                  # in them at all).
+    },
 }
 
 HEADERS = {
