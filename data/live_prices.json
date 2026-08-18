@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-18T16:24:01Z",
+  "checked_at": "2026-08-18T17:01:49Z",
   "results": {
     "Improved Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -462,78 +462,78 @@
     "Core Peptides": {
       "Oxytocin | Nasal | 10mg": {
         "url": "https://www.corepeptides.com/peptides/oxytocin-10mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/oxytocin-10mg/"
+        "price": 52.0,
+        "error": null
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://www.corepeptides.com/peptides/bpc-157/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/bpc-157/"
+        "price": 52.0,
+        "error": null
       },
       "CJC-1295 / Ipamorelin combo | Vial | 7.5mg/10mg": {
         "url": "https://www.corepeptides.com/peptides/cjc-1295-ipamorelin-10mg-blend/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/cjc-1295-ipamorelin-10mg-blend/"
+        "price": 80.0,
+        "error": null
       },
       "DSIP | Vial | 5mg": {
         "url": "https://www.corepeptides.com/peptides/dsip-5mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/dsip-5mg/"
+        "price": 41.0,
+        "error": null
       },
       "Epitalon | Vial | 25mg": {
         "url": "https://www.corepeptides.com/peptides/epitalon-25mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/epitalon-25mg/"
+        "price": 90.0,
+        "error": null
       },
       "FOXO4-DRI | Vial | 10mg": {
         "url": "https://www.corepeptides.com/peptides/foxo4-dri-10mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/foxo4-dri-10mg/"
+        "price": 235.0,
+        "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://www.corepeptides.com/peptides/ghk-cu-50mg-copper/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/ghk-cu-50mg-copper/"
+        "price": 69.0,
+        "error": null
       },
       "Humanin | Vial | 10mg": {
         "url": "https://www.corepeptides.com/peptides/humanin-10mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/humanin-10mg/"
+        "price": 147.0,
+        "error": null
       },
       "IGF-1 LR3 | Vial | 1mg": {
         "url": "https://www.corepeptides.com/peptides/receptor-grade-igf-1-lr3-1mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/receptor-grade-igf-1-lr3-1mg/"
+        "price": 150.0,
+        "error": null
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://www.corepeptides.com/peptides/kisspeptin-10mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/kisspeptin-10mg/"
+        "price": 63.0,
+        "error": null
       },
       "LL-37 | Vial | 5mg": {
         "url": "https://www.corepeptides.com/peptides/ll-37-5mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/ll-37-5mg/"
+        "price": 89.0,
+        "error": null
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://www.corepeptides.com/peptides/mots-c-10mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/mots-c-10mg/"
+        "price": 116.0,
+        "error": null
       },
       "PT-141 (Bremelanotide) | Vial | 10mg": {
         "url": "https://www.corepeptides.com/peptides/pt-141-10mg-bremelanotide/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/pt-141-10mg-bremelanotide/"
+        "price": 43.0,
+        "error": null
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://www.corepeptides.com/peptides/thymosin-alpha-1/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/thymosin-alpha-1/"
+        "price": 81.0,
+        "error": null
       },
       "VIP (Vasoactive Intestinal Peptide) | Vial | 6mg": {
         "url": "https://www.corepeptides.com/peptides/vip-6mg/",
-        "price": null,
-        "error": "403 Client Error: Forbidden for url: https://www.corepeptides.com/peptides/vip-6mg/"
+        "price": 64.0,
+        "error": null
       }
     },
     "Purity Peptides": {
