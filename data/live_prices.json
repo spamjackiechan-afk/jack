@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-18T10:04:28Z",
+  "checked_at": "2026-08-18T14:47:55Z",
   "results": {
     "Improved Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -192,6 +192,270 @@
       "CJC-1295 | Vial | 5-vial kit (not single-vial pricing)": {
         "url": "https://royal-peptides.com/shop/cjc-1295-no-dac-5mg-kit/",
         "price": 430.0,
+        "error": null
+      }
+    },
+    "BioIntegrity Research": {
+      "BPC-157 | Nasal | 30mg": {
+        "url": "https://biointegrityresearch.com/compounds/bpc-157",
+        "price": 89.0,
+        "error": null
+      },
+      "CJC-1295 / Ipamorelin combo | Nasal | 10mg/10mg": {
+        "url": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin",
+        "price": 139.0,
+        "error": null
+      },
+      "Epitalon | Nasal | 100mg": {
+        "url": "https://biointegrityresearch.com/compounds/epitalon",
+        "price": 159.0,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Nasal | 50mg": {
+        "url": "https://biointegrityresearch.com/compounds/ghk-cu",
+        "price": 94.0,
+        "error": null
+      },
+      "KPV | Nasal | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/kpv",
+        "price": 114.0,
+        "error": null
+      },
+      "MOTS-C | Nasal | 20mg": {
+        "url": "https://biointegrityresearch.com/compounds/mots-c",
+        "price": 174.0,
+        "error": null
+      },
+      "NAD+ | Nasal | 500mg": {
+        "url": "https://biointegrityresearch.com/compounds/nad-plus",
+        "price": 139.0,
+        "error": null
+      },
+      "PT-141 (Bremelanotide) | Nasal | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/pt-141",
+        "price": 124.0,
+        "error": null
+      },
+      "Selank | Nasal | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/selank",
+        "price": 64.0,
+        "error": null
+      },
+      "Semax | Nasal | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/semax",
+        "price": 64.0,
+        "error": null
+      },
+      "SS-31 / Elamipretide | Nasal | 25mg": {
+        "url": "https://biointegrityresearch.com/compounds/ss-31",
+        "price": 99.0,
+        "error": null
+      },
+      "Thymosin Alpha-1 | Nasal | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/thymosin-alpha-1",
+        "price": 154.0,
+        "error": null
+      },
+      "5-Amino-1MQ | Vial | 50mg": {
+        "url": "https://biointegrityresearch.com/compounds/5-amino-1mq",
+        "price": 54.0,
+        "error": null
+      },
+      "AOD-9604 | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/aod-9604",
+        "price": 134.0,
+        "error": null
+      },
+      "ARA-290 (Cibinetide) | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/ara-290",
+        "price": 114.0,
+        "error": null
+      },
+      "BPC-157 | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/bpc-157",
+        "price": 89.0,
+        "error": null
+      },
+      "CJC-1295 / Ipamorelin combo | Vial | 7.5mg/10mg": {
+        "url": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin",
+        "price": 139.0,
+        "error": null
+      },
+      "Epitalon | Vial | 100mg": {
+        "url": "https://biointegrityresearch.com/compounds/epitalon",
+        "price": 159.0,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
+        "url": "https://biointegrityresearch.com/compounds/ghk-cu",
+        "price": 94.0,
+        "error": null
+      },
+      "Glutathione | Vial | 2000mg": {
+        "url": "https://biointegrityresearch.com/compounds/glutathione",
+        "price": 74.0,
+        "error": null
+      },
+      "Glutathione / Magnesium combo | Vial | 50mg/12.5mg": {
+        "url": "https://biointegrityresearch.com/compounds/glutathione-magnesium",
+        "price": 44.0,
+        "error": null
+      },
+      "Humanin | Vial | 5mg": {
+        "url": "https://biointegrityresearch.com/compounds/humanin",
+        "price": 169.0,
+        "error": null
+      },
+      "IGF-1 LR3 | Vial | 1mg": {
+        "url": "https://biointegrityresearch.com/compounds/igf-1-lr3",
+        "price": 149.0,
+        "error": null
+      },
+      "Kisspeptin | Vial | 5mg": {
+        "url": "https://biointegrityresearch.com/compounds/kisspeptin",
+        "price": 69.0,
+        "error": null
+      },
+      "KPV | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/kpv",
+        "price": 114.0,
+        "error": null
+      },
+      "LL-37 | Vial | 5mg": {
+        "url": "https://biointegrityresearch.com/compounds/ll-37",
+        "price": 89.0,
+        "error": null
+      },
+      "MOTS-C | Vial | 20mg": {
+        "url": "https://biointegrityresearch.com/compounds/mots-c",
+        "price": 174.0,
+        "error": null
+      },
+      "NAD+ | Vial | 500mg": {
+        "url": "https://biointegrityresearch.com/compounds/nad-plus",
+        "price": 139.0,
+        "error": null
+      },
+      "PT-141 (Bremelanotide) | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/pt-141",
+        "price": 124.0,
+        "error": null
+      },
+      "Selank | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/selank",
+        "price": 64.0,
+        "error": null
+      },
+      "Semax | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/semax",
+        "price": 64.0,
+        "error": null
+      },
+      "SS-31 / Elamipretide | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/ss-31",
+        "price": 99.0,
+        "error": null
+      },
+      "Thymosin Alpha-1 | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/thymosin-alpha-1",
+        "price": 154.0,
+        "error": null
+      },
+      "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/vip",
+        "price": 114.0,
+        "error": null
+      },
+      "5-Amino-1MQ | Capsules | 50mg": {
+        "url": "https://biointegrityresearch.com/compounds/5-amino-1mq",
+        "price": 54.0,
+        "error": null
+      },
+      "CJC-1295 / Ipamorelin combo | Oral | 10mg/10mg": {
+        "url": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin",
+        "price": 139.0,
+        "error": null
+      },
+      "Epitalon | Oral | 100mg": {
+        "url": "https://biointegrityresearch.com/compounds/epitalon",
+        "price": 159.0,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Oral | 50mg": {
+        "url": "https://biointegrityresearch.com/compounds/ghk-cu",
+        "price": 94.0,
+        "error": null
+      },
+      "Methyl B12 (Methylcobalamin) | Vial | 100mg": {
+        "url": "https://biointegrityresearch.com/compounds/methyl-b12",
+        "price": 54.0,
+        "error": null
+      },
+      "MOTS-C | Oral | 20mg": {
+        "url": "https://biointegrityresearch.com/compounds/mots-c",
+        "price": 174.0,
+        "error": null
+      },
+      "NAD+ | Oral | 500mg": {
+        "url": "https://biointegrityresearch.com/compounds/nad-plus",
+        "price": 139.0,
+        "error": null
+      },
+      "SS-31 / Elamipretide | Oral | 25mg": {
+        "url": "https://biointegrityresearch.com/compounds/ss-31",
+        "price": 99.0,
+        "error": null
+      },
+      "PT-141 (Bremelanotide) | Oral | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/pt-141",
+        "price": 124.0,
+        "error": null
+      },
+      "Selank | Oral | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/selank",
+        "price": 64.0,
+        "error": null
+      },
+      "Semax | Oral | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/semax",
+        "price": 64.0,
+        "error": null
+      },
+      "BPC-157 | Oral | 30mg": {
+        "url": "https://biointegrityresearch.com/compounds/bpc-157",
+        "price": 89.0,
+        "error": null
+      },
+      "KPV | Oral | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/kpv",
+        "price": 114.0,
+        "error": null
+      },
+      "Thymosin Alpha-1 | Nasal | 20mg": {
+        "url": "https://biointegrityresearch.com/compounds/thymosin-alpha-1",
+        "price": 154.0,
+        "error": null
+      },
+      "Thymosin Alpha-1 | Oral | 10mg": {
+        "url": "https://biointegrityresearch.com/compounds/thymosin-alpha-1",
+        "price": 154.0,
+        "error": null
+      },
+      "Thymosin Alpha-1 | Oral | 20mg": {
+        "url": "https://biointegrityresearch.com/compounds/thymosin-alpha-1",
+        "price": 154.0,
+        "error": null
+      }
+    },
+    "Koi Peptides": {
+      "BPC-157 | Vial | 10mg": {
+        "url": "https://koipeptides.com/product/bpc-157/",
+        "price": 39.95,
+        "error": null
+      },
+      "KPV | Vial | 10mg": {
+        "url": "https://koipeptides.com/product/kpv/",
+        "price": 34.95,
         "error": null
       }
     }
