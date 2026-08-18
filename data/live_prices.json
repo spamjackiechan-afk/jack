@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-17T10:19:56Z",
+  "checked_at": "2026-08-18T10:04:28Z",
   "results": {
     "Improved Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -66,18 +66,18 @@
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
         "url": "https://royal-peptides.com/shop/5-amino-1mq/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/5-amino-1mq/"
+        "price": 80.0,
+        "error": null
       },
       "DSIP | Vial | 5mg": {
         "url": "https://royal-peptides.com/shop/dsip-5mg-vial/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/dsip-5mg-vial/"
+        "price": 45.0,
+        "error": null
       },
       "IGF-1 LR3 | Vial | 1mg": {
         "url": "https://royal-peptides.com/shop/igf-1-lr3-1mg-kit/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/igf-1-lr3-1mg-kit/"
+        "price": 78.0,
+        "error": null
       },
       "KPV | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/kpv-10mg-vial/",
