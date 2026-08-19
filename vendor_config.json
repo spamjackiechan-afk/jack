@@ -211,5 +211,14 @@
     "testing_standard": "\u226599.0% assayed purity, every lot (claimed)",
     "testing_note": "Publishes a genuinely unusual permanent public COA archive (38 lots across 23 compounds, even sold-out ones) \u2014 but the testing lab isn't named, so independent/third-party status is unconfirmed.",
     "testing_researched": "2026-08-17"
+  },
+  "Licensed Peptides": {
+    "status": "approved",
+    "site_url": "https://licensedpeptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://licensedpeptides.com/ref/Discountpeptides/",
+    "promo_code": "Affiliate5",
+    "guidelines_notes": "Approved 2026-08-18. Referral link is path-based (/ref/CODE/), not query-string \u2014 site logic routes all Licensed Peptides clicks through this link as-is rather than combining with per-product URLs, to guarantee tracking isn't silently dropped.",
+    "last_checked": "2026-08-18"
   }
 }
