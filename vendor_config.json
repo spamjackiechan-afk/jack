@@ -220,5 +220,14 @@
     "promo_code": "Affiliate5",
     "guidelines_notes": "Approved 2026-08-18. Referral link is path-based (/ref/CODE/), not query-string \u2014 site logic routes all Licensed Peptides clicks through this link as-is rather than combining with per-product URLs, to guarantee tracking isn't silently dropped.",
     "last_checked": "2026-08-18"
+  },
+  "Alpha Peptides": {
+    "status": "approved",
+    "site_url": "https://alpha-peptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://alpha-peptides.com/aff/863/",
+    "promo_code": "DISCOUNT",
+    "guidelines_notes": "Approved 2026-08-23. Referral link is path-based (/aff/863/), not query-string \u2014 site logic routes all Alpha Peptides clicks through this link as-is rather than combining with per-product URLs, same safety handling as Licensed Peptides. robots.txt confirmed clean (standard WooCommerce pattern, only blocks admin/cart-tracking paths) \u2014 eligible for the automated live price tracker.",
+    "last_checked": "2026-08-23"
   }
 }
