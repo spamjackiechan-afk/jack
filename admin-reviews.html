@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Review Moderation — Discount Peptides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0E1211; --paper-raised:#171B19; --ink:#F2F3F1; --ink-soft:#8A9490;
+    --rule:#24302B; --amber:#E24B4A; --lowest:#3ED9A6; --lowest-bg:#132420; --success:#E8B84B;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-weight:500;}
+  .wrap{max-width:840px; margin:0 auto; padding:40px 24px;}
+  h1{font-family:'Fraunces', serif; font-weight:500; font-size:28px; margin:0 0 6px;}
+  .sub{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); margin:0 0 28px;}
+
+  #loginBox{background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:24px; max-width:400px;}
+  #loginBox input{width:100%; background:var(--paper); border:1px solid var(--rule); color:var(--ink); border-radius:6px; padding:10px 12px; font-size:14px; margin-bottom:12px;}
+  #loginBox button{width:100%; background:var(--lowest); border:1px solid var(--lowest); color:var(--paper); font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:0.04em; padding:11px; border-radius:6px; cursor:pointer;}
+  #loginErr{color:var(--amber); font-family:'IBM Plex Mono', monospace; font-size:12px; margin-top:10px; min-height:16px;}
+
+  #adminPanel{display:none;}
+  .filter-tabs{display:flex; gap:8px; margin-bottom:20px;}
+  .filter-tab{font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.04em; background:transparent; border:1px solid var(--rule); color:var(--ink-soft); padding:8px 14px; border-radius:6px; cursor:pointer;}
+  .filter-tab.active{border-color:var(--lowest); color:var(--lowest);}
+
+  .review-row{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:16px 18px; margin-bottom:12px;}
+  .review-row .stars{color:var(--success); letter-spacing:2px; font-size:15px;}
+  .review-row .rmeta{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin:4px 0 10px;}
+  .review-row .rtext{font-size:14px; line-height:1.6; margin-bottom:12px;}
+  .review-row .ractions{display:flex; gap:8px; align-items:center;}
+  .btn-approve{background:var(--lowest); border:1px solid var(--lowest); color:var(--paper);}
+  .btn-reject{background:transparent; border:1px solid var(--amber); color:var(--amber);}
+  .btn-approve, .btn-reject{font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; padding:8px 14px; border-radius:6px; cursor:pointer;}
+  .status-badge{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; padding:3px 8px; border-radius:4px;}
+  .status-badge.pending{color:var(--success); border:1px solid var(--success);}
+  .status-badge.approved{color:var(--lowest); border:1px solid var(--lowest);}
+  .status-badge.rejected{color:var(--amber); border:1px solid var(--amber);}
+  .empty-msg{color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:13px; padding:20px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Review Moderation</h1>
+  <p class="sub">Not linked from the public site. Approved reviews appear on suppliers.html within about a minute.</p>
+
+  <div id="loginBox">
+    <input type="password" id="passwordInput" placeholder="Admin password">
+    <button type="button" onclick="login()">Load reviews</button>
+    <div id="loginErr"></div>
+  </div>
+
+  <div id="adminPanel">
+    <div class="filter-tabs">
+      <button type="button" class="filter-tab active" data-filter="pending" onclick="setFilter('pending')">Pending</button>
+      <button type="button" class="filter-tab" data-filter="approved" onclick="setFilter('approved')">Approved</button>
+      <button type="button" class="filter-tab" data-filter="rejected" onclick="setFilter('rejected')">Rejected</button>
+      <button type="button" class="filter-tab" data-filter="all" onclick="setFilter('all')">All</button>
+    </div>
+    <div id="reviewList"></div>
+  </div>
+</div>
+
+<script>
+let ADMIN_PASSWORD = '';
+let ALL_REVIEWS = [];
+let currentFilter = 'pending';
+
+async function login(){
+  const pw = document.getElementById('passwordInput').value;
+  const errEl = document.getElementById('loginErr');
+  errEl.textContent = '';
+  try {
+    const res = await fetch('/api/admin-reviews', { headers: { 'X-Admin-Password': pw } });
+    if (res.status === 401){
+      errEl.textContent = 'Incorrect password.';
+      return;
+    }
+    if (!res.ok){
+      errEl.textContent = 'Something went wrong loading reviews.';
+      return;
+    }
+    ADMIN_PASSWORD = pw;
+    ALL_REVIEWS = await res.json();
+    document.getElementById('loginBox').style.display = 'none';
+    document.getElementById('adminPanel').style.display = 'block';
+    render();
+  } catch (e) {
+    errEl.textContent = 'Network error — please try again.';
+  }
+}
+
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str == null ? '' : String(str);
+  return div.innerHTML;
+}
+
+function setFilter(f){
+  currentFilter = f;
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.toggle('active', t.dataset.filter === f));
+  render();
+}
+
+function render(){
+  const list = document.getElementById('reviewList');
+  const filtered = currentFilter === 'all' ? ALL_REVIEWS : ALL_REVIEWS.filter(r => r.status === currentFilter);
+
+  if (!filtered.length){
+    list.innerHTML = `<div class="empty-msg">No ${currentFilter === 'all' ? '' : currentFilter} reviews.</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(r => `
+    <div class="review-row">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <div class="stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+          <div class="rmeta">${escapeHtml(r.vendor)} · ${escapeHtml(r.reviewer_name)}${r.peptide_ordered ? ` · ordered ${escapeHtml(r.peptide_ordered)}` : ''} · ${new Date(r.date_submitted).toLocaleString()}</div>
+        </div>
+        <span class="status-badge ${r.status}">${r.status}</span>
+      </div>
+      <div class="rtext">${escapeHtml(r.review_text)}</div>
+      ${r.status === 'pending' ? `
+        <div class="ractions">
+          <button type="button" class="btn-approve" onclick="updateStatus('${r.id}', 'approved')">Approve</button>
+          <button type="button" class="btn-reject" onclick="updateStatus('${r.id}', 'rejected')">Reject</button>
+        </div>` : ''}
+    </div>`).join('');
+}
+
+async function updateStatus(id, status){
+  try {
+    const res = await fetch('/api/admin-reviews', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Password': ADMIN_PASSWORD },
+      body: JSON.stringify({ id, status }),
+    });
+    if (res.ok){
+      const review = ALL_REVIEWS.find(r => r.id === id);
+      if (review) review.status = status;
+      render();
+    }
+  } catch (e) {
+    alert('Failed to update — please try again.');
+  }
+}
+
+document.getElementById('passwordInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') login();
+});
+</script>
+</body>
+</html>
