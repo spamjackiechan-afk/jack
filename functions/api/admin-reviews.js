@@ -1,22 +1,38 @@
 // Admin-only endpoint for moderating reviews — lists every review
 // regardless of status (GET) and updates a review's status (POST).
 //
-// Protected by a shared password checked against env.ADMIN_PASSWORD, which
-// must be set as an environment variable in the Cloudflare Pages dashboard
-// (Settings -> Environment variables -> add ADMIN_PASSWORD, mark it
-// "Encrypt" so it's never visible in the dashboard again after saving).
-// The password never appears in any client-side code — it's only ever
-// checked here, server-side.
+// Password protection works via a SHA-256 hash rather than Cloudflare's
+// environment variables UI, since that panel has a known issue recognizing
+// zero-config Pages Functions projects (shows "Variables cannot be added
+// to a Worker that only has static assets" even when Functions are
+// confirmed working, as they are here). Hashing means the real password
+// is never stored anywhere — including in this file, which is safe to
+// keep in a public repo since only the one-way hash appears below.
+//
+// To change the password later: generate a new hash for the new password
+// and replace ADMIN_PASSWORD_HASH below.
 
-function checkAuth(request, env) {
+const ADMIN_PASSWORD_HASH = "5e9c17ec33fa2bc25650b1d0fd923675b0409e9dbd00f7a061daf68f22c70bb1";
+
+async function sha256Hex(text) {
+  const data = new TextEncoder().encode(text);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function checkAuth(request) {
   const password = request.headers.get("X-Admin-Password");
-  return password && env.ADMIN_PASSWORD && password === env.ADMIN_PASSWORD;
+  if (!password) return false;
+  const hash = await sha256Hex(password);
+  return hash === ADMIN_PASSWORD_HASH;
 }
 
 export async function onRequestGet(context) {
   const { request, env } = context;
 
-  if (!checkAuth(request, env)) {
+  if (!(await checkAuth(request))) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
   }
 
@@ -40,7 +56,7 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  if (!checkAuth(request, env)) {
+  if (!(await checkAuth(request))) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
   }
 
