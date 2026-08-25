@@ -1088,10 +1088,11 @@ render();
   strip.innerHTML = `
     <span class="trust-item">${checkIcon} ${productCount} products across ${vendorCount} vendors</span>
     <span class="trust-item">${checkIcon} ${liveVendorCount} vendor${liveVendorCount === 1 ? '' : 's'} price-tracked live daily</span>
-    <a class="trust-item" href="suppliers.html" target="_blank">${checkIcon} Real lab testing data per vendor</a>
+    <button type="button" class="trust-item" id="trustSuppliers">${checkIcon} Real lab testing data per vendor</button>
     <button type="button" class="trust-item" id="trustCalc">${checkIcon} Reconstitution calculator</button>
   `;
   document.getElementById('trustCalc').addEventListener('click', () => calcToggle.click());
+  document.getElementById('trustSuppliers').addEventListener('click', () => suppliersToggle.click());
 })();
 
 // ---------- Live price overlay ----------
