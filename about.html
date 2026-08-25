@@ -6,75 +6,55 @@
 <title>About — Discount Peptides</title>
 <meta name="description" content="How Discount Peptides compares research peptide vendors, and the standards every listed vendor has to meet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#0E1211; --paper-raised:#171B19; --ink:#F2F3F1; --ink-soft:#8A9490;
-    --rule:#24302B; --sage:#2DA37D; --sage-deep:#3ED9A6; --amber:#E24B4A;
-    --amber-bg:#2E1A18; --lowest:#3ED9A6; --lowest-bg:#132420; --success:#E8B84B;
+    --rule:#24302B; --amber:#E24B4A; --lowest:#3ED9A6;
   }
   *{box-sizing:border-box;}
-  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-weight:500; line-height:1.6;}
-  .wrap{max-width:760px; margin:0 auto; padding:56px 24px 80px;}
-  .back-link{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); text-decoration:none; margin-bottom:36px;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Fraunces', serif; font-weight:400; line-height:1.75;}
+  .wrap{max-width:640px; margin:0 auto; padding:64px 24px 90px;}
+  .back-link{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); text-decoration:none; margin-bottom:52px;}
   .back-link:hover{color:var(--lowest);}
-  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--lowest); margin-bottom:10px;}
-  h1{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(32px, 5vw, 44px); margin:0 0 20px; line-height:1.15;}
-  h1 em{font-style:italic; color:var(--lowest);}
-  .lede{font-size:17px; color:var(--ink-soft); margin:0 0 40px; max-width:600px;}
-  h2{font-family:'Fraunces', serif; font-weight:500; font-size:22px; margin:44px 0 14px; color:var(--ink);}
-  p{font-size:15px; color:var(--ink); margin:0 0 16px;}
-  p.soft{color:var(--ink-soft);}
-  .principle-list{list-style:none; padding:0; margin:20px 0 0; display:grid; gap:12px;}
-  .principle-list li{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:16px 18px; display:flex; gap:14px; align-items:flex-start;}
-  .principle-list .num{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--lowest); flex-shrink:0; padding-top:2px;}
-  .principle-list .body strong{display:block; font-size:14.5px; color:var(--ink); margin-bottom:3px;}
-  .principle-list .body span{font-size:13.5px; color:var(--ink-soft); line-height:1.5;}
-  .exclude-tags{display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 0;}
-  .exclude-tags span{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--amber); border:1px solid var(--amber); border-radius:6px; padding:5px 10px;}
-  .disclosure-box{background:var(--lowest-bg); border:1px solid var(--rule); border-radius:10px; padding:20px 22px; margin-top:44px;}
-  .disclosure-box h2{margin-top:0; font-size:19px;}
-  .disclosure-box p{font-size:14px; margin-bottom:0;}
-  .ruo-note{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--amber); margin-top:44px; padding-top:20px; border-top:1px solid var(--rule);}
-  @media (max-width:600px){ .wrap{padding:36px 18px 60px;} }
+  .kicker{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.1em; color:var(--lowest); margin-bottom:22px;}
+  h1{font-weight:500; font-style:italic; font-size:clamp(26px, 4vw, 32px); margin:0 0 44px; line-height:1.5; color:var(--ink);}
+  p{font-size:17px; color:var(--ink); margin:0 0 26px;}
+  p:first-of-type::first-letter{font-size:3.4em; float:left; line-height:0.8; padding:0.06em 0.08em 0 0; color:var(--lowest); font-weight:500;}
+  .divider{border:none; border-top:1px solid var(--rule); margin:48px 0;}
+  .exclusions{font-size:15.5px; color:var(--ink-soft); border-left:2px solid var(--rule); padding-left:20px; margin:0 0 26px;}
+  .exclusions em{font-style:italic; color:var(--ink);}
+  .aside{font-size:15px; color:var(--ink-soft); font-style:italic; margin:48px 0 0;}
+  .ruo{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--amber); margin-top:56px; padding-top:24px; border-top:1px solid var(--rule);}
+  @media (max-width:600px){ .wrap{padding:44px 20px 64px;} p{font-size:16px;} }
 </style>
 </head>
 <body>
 <div class="wrap">
   <a href="index.html" class="back-link">&larr; Back to price comparison</a>
 
-  <div class="eyebrow">About This Site</div>
-  <h1>Comparing peptide vendors <em>honestly</em> takes more than a price column.</h1>
-  <p class="lede">Discount Peptides exists to make that comparison easier — real prices, side by side, from vendors that have actually been checked, not just listed.</p>
+  <div class="kicker">About This Site</div>
+  <h1>On comparison, and what it does not excuse.</h1>
 
-  <h2>What this site does</h2>
-  <p>Research peptides are sold by a large and growing number of independent vendors, and prices for the same compound can vary a lot from one supplier to the next. This site pulls pricing for a given peptide across multiple vendors into one place, so the comparison itself is straightforward. Where possible, pricing updates automatically, straight from each vendor's own product pages — not a number typed in once and forgotten.</p>
+  <p>There is no shortage of places to buy research peptides, and increasingly little agreement among them — on price, on documentation, on what, precisely, ought to be trusted. Discount Peptides was built to address one narrow part of that problem: comparison, conducted as carefully as a single small operation can reasonably manage, and offered without pretending to be more than what it is.</p>
 
-  <h2>How a vendor ends up listed here</h2>
-  <p class="soft">Every vendor on this site goes through the same process before anything of theirs gets compared:</p>
-  <ul class="principle-list">
-    <li><span class="num">01</span><div class="body"><strong>Legitimacy check</strong><span>Real business signals — reviews from independent sources, verifiable contact information, an actual track record — not just a professional-looking storefront.</span></div></li>
-    <li><span class="num">02</span><div class="body"><strong>Legal-risk filtering, product by product</strong><span>Prescription drugs, compounds still in active clinical trials, and a handful of specific identity-risk blends are excluded from the comparison — see below for exactly what and why.</span></div></li>
-    <li><span class="num">03</span><div class="body"><strong>Real pricing, not marketing copy</strong><span>Prices shown are read directly from each vendor's own product pages. Where a vendor's testing or quality claims are shown, they're sourced from the vendor directly, not assumed.</span></div></li>
-  </ul>
+  <p>The premise is simple enough to state plainly. A given compound is often sold, under the same name, by a dozen or more independent suppliers, at prices that can differ by a considerable margin and for reasons rarely disclosed. This site gathers those prices — reading them, where possible, directly and automatically from each vendor's own listings, rather than relying on figures entered once and left to grow stale — and sets them beside one another, so that the comparison itself asks nothing further of the visitor.</p>
 
-  <h2>What never gets listed here</h2>
-  <p class="soft">Regardless of how a vendor otherwise checks out, these categories are excluded from every comparison on this site:</p>
-  <div class="exclude-tags">
-    <span>Prescription drugs sold without a prescription</span>
-    <span>Compounds still in active clinical trials</span>
-    <span>SARMs with an FDA warning history</span>
-    <span>TB-500 and TB-500 blends</span>
-    <span>Melanotan II</span>
-  </div>
-  <p class="soft" style="margin-top:16px; font-size:13.5px;">Some of these show up under different vendors' own generic or shortened names — the filtering is applied by what a compound actually is, not just what it's labeled.</p>
+  <hr class="divider">
 
-  <div class="disclosure-box">
-    <h2>How this site makes money</h2>
-    <p>Some vendors on this site are affiliate partners — if you buy from one through a link here, this site may earn a commission at no extra cost to you. That relationship never changes which vendors are listed or excluded, or how prices are compared: the filtering above applies the same way whether or not a vendor has an affiliate arrangement with this site.</p>
-  </div>
+  <p>No vendor appears here by default, and none is listed on the strength of its own description of itself. Each is examined first for the ordinary signs of a legitimate operation — reviews from sources with no reason to flatter it, contact information that resolves to something real, a history that can be checked rather than taken on faith. Each vendor's catalog is then read product by product, and a defined set of categories is withheld from comparison, regardless of how the vendor otherwise conducts its business.</p>
 
-  <p class="ruo-note">Research use only — nothing on this site is intended for human or animal consumption.</p>
+  <p class="exclusions">
+    Withheld, specifically: <em>prescription medications offered without a prescription</em>; <em>compounds that remain under active clinical investigation</em> and have not completed the ordinary course to market; <em>a class of SARMs</em> with a documented history of FDA warning letters; <em>TB-500, and blends built around it</em>, owing to unresolved questions of identity and verification; and <em>Melanotan II</em>, which carries its own explicit warnings against use. Several of these appear, on various vendors' own pages, under abbreviated or generic names — the exclusion is applied to what a compound is, not merely to what it is called there.
+  </p>
+
+  <hr class="divider">
+
+  <p>A note on how the site is supported, since it ought to be stated rather than left to be inferred: certain listed vendors maintain an affiliate arrangement with this site, under which a purchase made through a listed link may return a commission, at no cost to the purchaser. That arrangement is held apart, deliberately, from the standards described above. A vendor's affiliate status has no bearing on whether it is listed or excluded, or on how its pricing is presented beside others.</p>
+
+  <p class="aside">Comparison is offered here. Endorsement is not.</p>
+
+  <p class="ruo">Research use only — nothing on this site is intended for human or animal consumption.</p>
 </div>
 </body>
 </html>
