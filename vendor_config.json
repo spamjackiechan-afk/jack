@@ -230,16 +230,16 @@
     "last_checked": "2026-08-18",
     "testing_researched": "2026-08-25",
     "testing_methods": [
-      "HPLC (purity)",
-      "Mass spectrometry (identity)",
-      "Endotoxin (LAL)",
-      "Sterility (USP <71>)",
-      "Content/fill weight"
+      "HPLC-UV/VIS (purity)",
+      "Assay (vial content)",
+      "ICP-MS (heavy metals)",
+      "LAL (endotoxin)",
+      "USP <71> (sterility)"
     ],
-    "testing_lab": "ISO/IEC 17025:2017 accredited (not named); manufacturing GMP / ISO 9001:2015",
-    "testing_standard": "99%+ HPLC purity claimed site-wide",
-    "testing_note": "Cites the most complete test panel and accreditation of any vendor here. However, the batch figures displayed are identical across unrelated compounds \u2014 BPC-157, GLP3-R, Cagrilintide, LP3-R and Tesamorelin all show '99.4%' purity and '\u00b1 0.2%' content. Genuine per-batch results vary. These read as template values in a position where batch-specific data is implied. The site also carries a 'COA coming soon' placeholder, so coverage is not complete.",
-    "testing_tier": 3
+    "testing_lab": "Vanguard Laboratory \u2014 ISO 17025:2017, A2LA cert #6377.01.01",
+    "testing_standard": "99%+ HPLC purity; assay reported against vial specification",
+    "testing_note": "Names its testing laboratory and gives the accreditation certificate number, which can be checked against A2LA's public directory \u2014 the only vendor here to do so. Every vial carries a QR code linking to the certificate for that specific lot, and product pages publish the lot's own figures rather than a generic claim (MOTS-C lot: 99.08% purity, 11.00 mg assayed against a 10 mg specification, heavy metals non-detect). One caveat: a few product pages carry a placeholder rather than lot data, and a 'COA coming soon' page exists, so coverage is not yet complete across the catalogue.",
+    "testing_tier": 1
   },
   "Alpha Peptides": {
     "status": "approved",
