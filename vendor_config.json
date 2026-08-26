@@ -136,42 +136,12 @@
     "testing_researched": "2026-08-17",
     "testing_tier": 4
   },
-  "Improved Peptides": {
-    "status": "approved",
-    "site_url": "https://improvedpeptides.com",
-    "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://improvedpeptides.com/?ref=vrgsdsxy",
-    "promo_code": "jacksonmoore",
-    "cookie_days": 30,
-    "commission": "20% first order, 10% recurring on repeat orders",
-    "guidelines_notes": "Approved 2026-08-11. Research Use Only framing required sitewide \u2014 keep site copy in that lane.",
-    "last_checked": "2026-08-11",
-    "payment_methods": [
-      "Visa",
-      "Mastercard",
-      "PayPal",
-      "Venmo",
-      "Zelle"
-    ],
-    "shipping_info": "Free standard shipping; free 2-day over $200; same-day dispatch by 3PM CT.",
-    "shipping_payment_researched": "2026-08-16",
-    "testing_methods": [
-      "HPLC (purity)",
-      "LC-MS (identity)",
-      "Endotoxin/microbial (USP)"
-    ],
-    "testing_lab": "Freedom Diagnostics",
-    "testing_standard": "\u226599% purity threshold, no exceptions (stated policy)",
-    "testing_note": "Real batch results published (e.g. BPC-157 99.18%, GLP-3R 99.96%) \u2014 though some COAs are still listed as 'in verification,' not yet downloadable.",
-    "testing_researched": "2026-08-17",
-    "testing_tier": 1
-  },
   "Royal Peptides": {
     "status": "approved",
     "site_url": "https://royal-peptides.com",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://royal-peptides.com/?ref=tofnghus",
-    "promo_code": "jacksonmoore",
+    "promo_code": "discountpeptide",
     "cookie_days": null,
     "commission": "10% (per earlier program page)",
     "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed.",
