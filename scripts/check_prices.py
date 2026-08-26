@@ -82,11 +82,12 @@ VENDORS = {
                                   # params. /product/ pages are wide open. Affiliate partner.
     },
     "Licensed Peptides": {
-        "robots_checked_by": None,  # NOT YET CONFIRMED — see robots_allows below
-        "robots_allows": False,  # Set to False deliberately: their robots.txt has never been
-                                  # checked. The script skips any vendor not explicitly cleared,
-                                  # so this vendor's URLs sit ready but are not fetched. Flip to
-                                  # True only once robots.txt is confirmed to permit it.
+        "robots_checked_by": "Jackson, 2026-08-25",
+        "robots_allows": True,   # confirmed: unusually permissive robots.txt — blocks only two
+                                  # paths, /product/ghk-cu-testing/ and /landing-page/. Verified
+                                  # that none of our 17 product URLs touch either; our GHK-Cu
+                                  # page is /product/ghk-cu/, a distinct page from the blocked
+                                  # /product/ghk-cu-testing/. Affiliate partner.
     },
 }
 
