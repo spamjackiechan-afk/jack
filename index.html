@@ -187,6 +187,70 @@
     background:var(--paper);
     border-color:var(--success);
   }
+  .fav-btn{
+    background:transparent; border:none; cursor:pointer; padding:2px 4px; margin-left:6px;
+    font-size:17px; line-height:1; color:var(--rule); transition:color .12s, transform .12s;
+  }
+  .fav-btn:hover{color:var(--success); transform:scale(1.12);}
+  .fav-btn.saved{color:var(--success);}
+
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(6,9,8,.78); backdrop-filter:blur(3px);
+    display:none; align-items:center; justify-content:center; padding:24px; z-index:1000;
+    opacity:0; transition:opacity .22s ease;
+  }
+  .modal-overlay.open{display:flex; opacity:1;}
+  .modal-card{
+    position:relative; width:100%; max-width:470px;
+    background:var(--paper-raised); border:1px solid var(--rule); border-radius:14px;
+    padding:30px 30px 26px; box-shadow:0 24px 60px rgba(0,0,0,.55);
+    transform:translateY(10px) scale(.985); transition:transform .22s ease;
+  }
+  .modal-overlay.open .modal-card{transform:translateY(0) scale(1);}
+  .modal-close{
+    position:absolute; top:12px; right:12px; width:32px; height:32px;
+    background:transparent; border:none; color:var(--ink-soft); cursor:pointer;
+    font-size:20px; line-height:1; border-radius:7px;
+  }
+  .modal-close:hover{background:var(--rule); color:var(--ink);}
+  .modal-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--lowest); margin-bottom:9px;}
+  .modal-card h2{font-family:'Fraunces',serif; font-weight:500; font-size:25px; margin:0 0 9px; line-height:1.2;}
+  .modal-card p{font-size:14px; color:var(--ink-soft); margin:0 0 16px; line-height:1.55;}
+  .modal-points{list-style:none; padding:0; margin:0 0 18px;}
+  .modal-points li{display:flex; gap:9px; align-items:flex-start; font-size:13.5px; color:var(--ink); margin-bottom:8px; line-height:1.5;}
+  .modal-points .tick{color:var(--lowest); flex-shrink:0;}
+  .modal-later{
+    display:block; width:100%; margin-top:12px; background:transparent; border:none;
+    color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:11.5px;
+    cursor:pointer; text-decoration:underline; text-underline-offset:3px;
+  }
+  .modal-later:hover{color:var(--ink);}
+  @media (max-width:520px){ .modal-card{padding:26px 22px 22px;} .modal-card h2{font-size:22px;} }
+
+  .signup-band{
+    border:1px solid var(--rule); background:var(--paper-raised); border-radius:12px;
+    padding:22px 24px; margin:0 0 28px;
+  }
+  .signup-band h3{font-family:'Fraunces', serif; font-weight:500; font-size:20px; margin:0 0 5px;}
+  .signup-band p{font-size:13.5px; color:var(--ink-soft); margin:0 0 14px; max-width:620px; line-height:1.55;}
+  .signup-row{display:flex; gap:9px; flex-wrap:wrap; align-items:center;}
+  .signup-row input[type=email]{
+    flex:1; min-width:220px; background:var(--paper); border:1.5px solid var(--rule); color:var(--ink);
+    border-radius:8px; padding:11px 13px; font-family:'IBM Plex Sans',sans-serif; font-size:14px;
+  }
+  .signup-row input[type=email]:focus{border-color:var(--lowest); outline:none;}
+  .signup-row button{
+    background:var(--lowest); border:1.5px solid var(--lowest); color:var(--paper);
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600; text-transform:uppercase;
+    letter-spacing:.04em; padding:11px 20px; border-radius:8px; cursor:pointer; white-space:nowrap;
+  }
+  .signup-row button:disabled{opacity:.5; cursor:default;}
+  .signup-consent{font-size:11.5px; color:var(--ink-soft); margin-top:11px; line-height:1.5;}
+  .signup-msg{font-family:'IBM Plex Mono', monospace; font-size:12px; margin-top:10px; min-height:16px;}
+  .signup-msg.ok{color:var(--lowest);} .signup-msg.err{color:var(--amber);}
+  .fav-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--success);}
+  .empty-favs{color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:13px; padding:28px 0; text-align:center;}
+
   .category-tag{
     display:inline-block;
     font-family:'IBM Plex Sans', sans-serif;
@@ -778,6 +842,42 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" onclick="dismissModal()" aria-label="Close">&times;</button>
+      <div class="modal-eyebrow">Free · No account</div>
+      <h2 id="modalTitle">Don't overpay because you weren't watching.</h2>
+      <p>Prices here move week to week. Save the compounds you care about and we'll tell you when one gets cheaper.</p>
+      <ul class="modal-points">
+        <li><span class="tick">&#10003;</span><span>Star any peptide &mdash; saved instantly, no sign-up needed</span></li>
+        <li><span class="tick">&#10003;</span><span>Get an email when a saved compound drops in price</span></li>
+        <li><span class="tick">&#10003;</span><span>Hear about real vendor discounts, not filler</span></li>
+      </ul>
+      <div class="signup-row">
+        <input type="email" id="modalEmail" placeholder="you@example.com" autocomplete="email">
+        <button type="button" id="modalBtn" onclick="submitSignup('modal')">Notify me</button>
+      </div>
+      <div class="signup-consent">
+        Occasional emails about price changes and vendor offers. Unsubscribe link in every one, and we never sell or share your address. Email only &mdash; we don't ask for a phone number.
+      </div>
+      <div class="signup-msg" id="modalMsg"></div>
+      <button type="button" class="modal-later" onclick="dismissModal()">No thanks, I'll browse first</button>
+    </div>
+  </div>
+
+  <div class="signup-band" id="signupBand">
+    <h3>Save what you're watching</h3>
+    <p>Star any peptide to keep it on this device — no account needed. Add your email and we'll tell you when a saved compound drops in price, and when partner vendors run a real discount. Nothing else.</p>
+    <div class="signup-row">
+      <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
+      <button type="button" id="signupBtn" onclick="submitSignup()">Notify me</button>
+    </div>
+    <div class="signup-consent">
+      By subscribing you agree to receive occasional emails about price changes and vendor offers. Every email carries an unsubscribe link, and we don't sell or share your address. Email only — we don't ask for a phone number.
+    </div>
+    <div class="signup-msg" id="signupMsg"></div>
+  </div>
+
   <div class="controls">
     <input type="search" id="search" placeholder="Search a peptide — e.g. BPC-157, NAD+, Selank…">
     <button class="chip active" data-filter="All">All formats</button>
@@ -786,6 +886,7 @@
     <button class="chip" data-filter="Capsules">Capsules</button>
     <button class="chip" data-filter="Oral">Oral</button>
     <button class="chip" data-filter="Water">Water</button>
+    <button class="chip" data-filter="__saved" id="savedChip">★ Saved <span class="fav-count" id="favCount"></span></button>
     <select id="vendorFilter" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
       <option value="All">All vendors</option>
     </select>
@@ -928,16 +1029,18 @@ function groupCheapest(group){
 
 function render(){
   const q = searchEl.value.trim().toLowerCase();
+  const favSet = new Set(getFavourites());
   let items = DATA.included.filter(i => {
-    const matchesFormat = activeFilter === 'All' || i.format === activeFilter;
+    const matchesFormat = activeFilter === 'All' || activeFilter === '__saved' || i.format === activeFilter;
+    const matchesSaved = activeFilter !== '__saved' || favSet.has(i.peptide);
     const matchesVendor = activeVendor === 'All' || (i.prices && activeVendor in i.prices);
     const matchesCategory = activeCategory === 'All' || i.category === activeCategory;
     const matchesQuery = !q || i.peptide.toLowerCase().includes(q);
-    return matchesFormat && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
+    return matchesFormat && matchesSaved && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
   });
 
   countEl.textContent = items.length + ' listing' + (items.length === 1 ? '' : 's') +
-    (q ? ` matching "${q}"` : '') + (activeFilter !== 'All' ? ` — ${activeFilter}` : '') +
+    (q ? ` matching "${q}"` : '') + (activeFilter !== 'All' ? ` — ${activeFilter === '__saved' ? 'Saved' : activeFilter}` : '') +
     (activeVendor !== 'All' ? ` — ${activeVendor}` : '');
 
   let groups = groupByPeptideFormat(items);
@@ -961,7 +1064,10 @@ function render(){
       <div class="card-grid">${s.list.map(cardHtmlGrouped).join('')}</div>
     `).join('') || '<p style="padding:40px 0; color:var(--ink-soft); font-family:\'IBM Plex Mono\',monospace; font-size:13px;">No listings match that search.</p>';
   } else {
-    indexEl.innerHTML = groups.map(cardHtmlGrouped).join('') || '<p style="padding:40px 0; color:var(--ink-soft); font-family:\'IBM Plex Mono\',monospace; font-size:13px;">No listings match that search.</p>';
+    const emptyMsg = activeFilter === '__saved' && !favSet.size
+      ? '<div class="empty-favs">Nothing saved yet \u2014 tap the \u2606 on any peptide to keep an eye on it.</div>'
+      : '<p style="padding:40px 0; color:var(--ink-soft); font-family:\'IBM Plex Mono\',monospace; font-size:13px;">No listings match that search.</p>';
+    indexEl.innerHTML = groups.map(cardHtmlGrouped).join('') || emptyMsg;
   }
 }
 
@@ -1150,6 +1256,7 @@ function cardHtmlGrouped(group){
           <div class="icon-badge"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.1 15h11.8"/><path d="M14 3v7.342a6 6 0 0 1 1.318 10.658h-6.635a6 6 0 0 1 1.317 -10.66v-7.34h4z"/><path d="M9 3h6"/></svg></div>
           <h3>${group.peptide}</h3>
           <span class="meta-tag" style="margin-left:auto;">${group.format}</span>
+          <button type="button" class="fav-btn ${isFavourite(group.peptide) ? 'saved' : ''}" title="Save this peptide" aria-label="Save ${group.peptide}" onclick="toggleFavourite('${group.peptide.replace(/'/g, "\\'")}', this)">${isFavourite(group.peptide) ? '★' : '☆'}</button>
         </div>
         ${categoryTag ? `<div style="margin:6px 0 0 42px;">${categoryTag}</div>` : ''}
         ${warningHtml(group.peptide, gid)}
@@ -1692,6 +1799,155 @@ suppliersToggle.addEventListener('click', async () => {
   }
 });
 
+
+// ---------- Saved peptides ----------
+// Stored on the visitor's own device. No account, no personal data, and it
+// works instantly — signing up is only needed to receive alerts about them.
+const FAV_KEY = 'dp_favourites';
+
+function getFavourites(){
+  try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; }
+  catch { return []; }
+}
+function setFavourites(list){
+  try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch {}
+  updateFavCount();
+}
+function isFavourite(name){ return getFavourites().includes(name); }
+
+function toggleFavourite(name, btn){
+  const list = getFavourites();
+  const i = list.indexOf(name);
+  if (i === -1) list.push(name); else list.splice(i, 1);
+  setFavourites(list);
+  const saved = i === -1;
+  // Update every button for this peptide, since a compound can appear on
+  // more than one card (different formats or sizes).
+  document.querySelectorAll('.fav-btn').forEach(b => {
+    if (b.getAttribute('aria-label') === 'Save ' + name){
+      b.classList.toggle('saved', saved);
+      b.textContent = saved ? '\u2605' : '\u2606';
+    }
+  });
+  if (activeFilter === '__saved') render();
+}
+
+function updateFavCount(){
+  const n = getFavourites().length;
+  const el = document.getElementById('favCount');
+  if (el) el.textContent = n ? `(${n})` : '';
+}
+
+// ---------- Email signup ----------
+// One submit path shared by the inline band and the first-visit modal;
+// `where` selects which set of elements to read and write.
+const SIGNUP_TARGETS = {
+  band:  { input: 'signupEmail', btn: 'signupBtn', msg: 'signupMsg',  source: 'homepage-band' },
+  modal: { input: 'modalEmail',  btn: 'modalBtn',  msg: 'modalMsg',   source: 'first-visit-modal' },
+};
+
+async function submitSignup(where = 'band'){
+  const t = SIGNUP_TARGETS[where] || SIGNUP_TARGETS.band;
+  const input = document.getElementById(t.input);
+  const btn = document.getElementById(t.btn);
+  const msg = document.getElementById(t.msg);
+  const email = input.value.trim();
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
+    msg.textContent = 'Please enter a valid email address.';
+    msg.className = 'signup-msg err';
+    return;
+  }
+
+  btn.disabled = true;
+  msg.textContent = 'Saving\u2026';
+  msg.className = 'signup-msg';
+
+  try {
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, favourites: getFavourites(), source: t.source }),
+    });
+    if (res.ok){
+      const data = await res.json().catch(() => ({}));
+      const n = getFavourites().length;
+      msg.textContent = data.returning
+        ? `Updated \u2014 we'll keep watching your ${n} saved ${n === 1 ? 'peptide' : 'peptides'}.`
+        : n
+          ? `Done \u2014 we'll email you when any of your ${n} saved ${n === 1 ? 'peptide drops' : 'peptides drop'} in price.`
+          : "Done \u2014 star a few peptides and we'll watch those too.";
+      msg.className = 'signup-msg ok';
+      input.value = '';
+      // Subscribed, so the first-visit prompt has done its job for good.
+      try { localStorage.setItem(MODAL_KEY, 'subscribed'); } catch {}
+      if (where === 'modal') setTimeout(closeModal, 1600);
+    } else {
+      const err = await res.json().catch(() => ({}));
+      msg.textContent = err.error || 'Something went wrong \u2014 please try again.';
+      msg.className = 'signup-msg err';
+    }
+  } catch (e) {
+    msg.textContent = 'Network error \u2014 please try again.';
+    msg.className = 'signup-msg err';
+  }
+  btn.disabled = false;
+}
+
+['signupEmail', 'modalEmail'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('keydown', e => {
+    if (e.key === 'Enter') submitSignup(id === 'modalEmail' ? 'modal' : 'band');
+  });
+});
+
+// ---------- First-visit prompt ----------
+// Shown once, ever. Dismissing or subscribing both retire it permanently —
+// a prompt that reappears on every visit is worse than no prompt at all.
+// The delay lets the page paint first; an overlay that lands instantly reads
+// as an ad and gets closed before it is read.
+const MODAL_KEY = 'dp_modal_seen';
+const MODAL_DELAY_MS = 5000;
+let lastFocused = null;
+
+function modalAlreadyHandled(){
+  try { return Boolean(localStorage.getItem(MODAL_KEY)); } catch { return true; }
+}
+
+function openModal(){
+  const m = document.getElementById('signupModal');
+  if (!m) return;
+  lastFocused = document.activeElement;
+  m.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('modalEmail')?.focus(), 240);
+}
+
+function closeModal(){
+  const m = document.getElementById('signupModal');
+  if (!m) return;
+  m.classList.remove('open');
+  document.body.style.overflow = '';
+  if (lastFocused && lastFocused.focus) lastFocused.focus();
+}
+
+function dismissModal(){
+  try { localStorage.setItem(MODAL_KEY, 'dismissed'); } catch {}
+  closeModal();
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('signupModal')?.classList.contains('open')) dismissModal();
+});
+
+document.getElementById('signupModal')?.addEventListener('click', e => {
+  // Click the backdrop, not the card, to dismiss.
+  if (e.target.id === 'signupModal') dismissModal();
+});
+
+if (!modalAlreadyHandled()) setTimeout(openModal, MODAL_DELAY_MS);
+
+updateFavCount();
 </script>
 </body>
 </html>
