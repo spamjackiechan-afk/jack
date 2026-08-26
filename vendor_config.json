@@ -31,7 +31,8 @@
     "testing_lab": null,
     "testing_standard": "\u226599% purity claimed",
     "testing_note": "Manufactured in FDA-registered, NSF-certified, GMP-compliant facilities \u2014 but no independent third-party testing lab is named, unlike several other vendors here.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 3
   },
   "Core Peptides": {
     "status": "not_applied",
@@ -58,7 +59,8 @@
     "testing_lab": null,
     "testing_standard": null,
     "testing_note": "Independent review describes COA coverage as 'mostly, but constantly being updated with new tests' \u2014 meaning not every product is tested yet.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 3
   },
   "Koi Peptides": {
     "status": "no_program",
@@ -81,7 +83,8 @@
     "testing_lab": "ISO/IEC 17025-accredited lab (unnamed)",
     "testing_standard": "\u226599% purity target",
     "testing_note": "Dual-verified: tested in-house first, then independently re-run by an accredited external lab \u2014 one of the more thorough protocols in this group.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 2
   },
   "Southern Aminos": {
     "status": "not_applied",
@@ -110,7 +113,8 @@
     "testing_lab": "Freedom Diagnostics + ILS Labs",
     "testing_standard": "99.5% average purity across 124 independently tracked batches",
     "testing_note": "The most externally verified of any vendor here \u2014 tracked by independent third-party sites, not just self-reported. That same tracker also logged 2 historically underdosed batches, included here for honesty rather than omitted.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 1
   },
   "Purity Peptides": {
     "status": "not_applied",
@@ -129,7 +133,8 @@
     "testing_lab": null,
     "testing_standard": null,
     "testing_note": "No testing methodology, lab, or purity standard could be confirmed from their own site.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 4
   },
   "Improved Peptides": {
     "status": "approved",
@@ -158,7 +163,8 @@
     "testing_lab": "Freedom Diagnostics",
     "testing_standard": "\u226599% purity threshold, no exceptions (stated policy)",
     "testing_note": "Real batch results published (e.g. BPC-157 99.18%, GLP-3R 99.96%) \u2014 though some COAs are still listed as 'in verification,' not yet downloadable.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 1
   },
   "Royal Peptides": {
     "status": "approved",
@@ -187,7 +193,8 @@
     "testing_lab": "Janoshik (mentioned in marketing only)",
     "testing_standard": "Not guaranteed per batch",
     "testing_note": "Their own FAQ hedges: testing 'may include' HPLC/MS 'depending on the batch and documentation available' \u2014 less definitive than their marketing tagline implies.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 4
   },
   "BioIntegrity Research": {
     "status": "not_applied",
@@ -210,7 +217,8 @@
     "testing_lab": null,
     "testing_standard": "\u226599.0% assayed purity, every lot (claimed)",
     "testing_note": "Publishes a genuinely unusual permanent public COA archive (38 lots across 23 compounds, even sold-out ones) \u2014 but the testing lab isn't named, so independent/third-party status is unconfirmed.",
-    "testing_researched": "2026-08-17"
+    "testing_researched": "2026-08-17",
+    "testing_tier": 2
   },
   "Licensed Peptides": {
     "status": "approved",
@@ -219,7 +227,19 @@
     "affiliate_link_base": "https://licensedpeptides.com/ref/Discountpeptides/",
     "promo_code": "Affiliate5",
     "guidelines_notes": "Approved 2026-08-18. Referral link is path-based (/ref/CODE/), not query-string \u2014 site logic routes all Licensed Peptides clicks through this link as-is rather than combining with per-product URLs, to guarantee tracking isn't silently dropped.",
-    "last_checked": "2026-08-18"
+    "last_checked": "2026-08-18",
+    "testing_researched": "2026-08-25",
+    "testing_methods": [
+      "HPLC (purity)",
+      "Mass spectrometry (identity)",
+      "Endotoxin (LAL)",
+      "Sterility (USP <71>)",
+      "Content/fill weight"
+    ],
+    "testing_lab": "ISO/IEC 17025:2017 accredited (not named); manufacturing GMP / ISO 9001:2015",
+    "testing_standard": "99%+ HPLC purity claimed site-wide",
+    "testing_note": "Cites the most complete test panel and accreditation of any vendor here. However, the batch figures displayed are identical across unrelated compounds \u2014 BPC-157, GLP3-R, Cagrilintide, LP3-R and Tesamorelin all show '99.4%' purity and '\u00b1 0.2%' content. Genuine per-batch results vary. These read as template values in a position where batch-specific data is implied. The site also carries a 'COA coming soon' placeholder, so coverage is not complete.",
+    "testing_tier": 3
   },
   "Alpha Peptides": {
     "status": "approved",
@@ -228,6 +248,18 @@
     "affiliate_link_base": "https://alpha-peptides.com/aff/863/",
     "promo_code": "DISCOUNT",
     "guidelines_notes": "Approved 2026-08-23. Referral link is path-based (/aff/863/), not query-string \u2014 site logic routes all Alpha Peptides clicks through this link as-is rather than combining with per-product URLs, same safety handling as Licensed Peptides. robots.txt confirmed clean (standard WooCommerce pattern, only blocks admin/cart-tracking paths) \u2014 eligible for the automated live price tracker.",
-    "last_checked": "2026-08-23"
+    "last_checked": "2026-08-23",
+    "testing_researched": "2026-08-25",
+    "testing_methods": [
+      "HPLC (purity)",
+      "ESI mass spectrometry (identity)",
+      "Quantitative assay",
+      "Heavy metals panel",
+      "Endotoxin"
+    ],
+    "testing_lab": "Independent ISO 17025-aligned US laboratory (not named)",
+    "testing_standard": "\u226599% purity floor; lots below floor rejected outright",
+    "testing_note": "Describes a five-test panel per lot (Qualitative ID, Percent Purity, Quantitative Assay, Heavy Metals, Conformity) and confirms identity by HPLC and MS before accepting a lot into inventory. COAs are not published on the site \u2014 they are supplied on request by email against a lot number, so a buyer cannot check before ordering.",
+    "testing_tier": 2
   }
 }
