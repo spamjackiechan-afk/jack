@@ -75,6 +75,19 @@ VENDORS = {
                                   # browser-flavored plain HTTP request. Uses Playwright instead
                                   # of requests for this vendor only.
     },
+    "Alpha Peptides": {
+        "robots_checked_by": "Jackson, 2026-08-23",
+        "robots_allows": True,   # confirmed: standard WooCommerce robots.txt — only blocks
+                                  # /wp-admin/, wc-logs, transient files and add-to-cart query
+                                  # params. /product/ pages are wide open. Affiliate partner.
+    },
+    "Licensed Peptides": {
+        "robots_checked_by": None,  # NOT YET CONFIRMED — see robots_allows below
+        "robots_allows": False,  # Set to False deliberately: their robots.txt has never been
+                                  # checked. The script skips any vendor not explicitly cleared,
+                                  # so this vendor's URLs sit ready but are not fetched. Flip to
+                                  # True only once robots.txt is confirmed to permit it.
+    },
 }
 
 HEADERS = {
@@ -180,6 +193,19 @@ def extract_price(html: str) -> float | None:
     raw_price_match = re.search(r'"price"\s*:\s*([\d.]+)', html)
     if raw_price_match:
         return float(raw_price_match.group(1))
+
+    # Fourth fallback: WooCommerce *variable* products (multiple vial sizes or
+    # pack quantities behind a selector) often carry no single price in the
+    # static HTML at all — the selected variant's price is written by JS after
+    # load. What they do reliably expose is a range in the Twitter card meta,
+    # e.g. content="$76.99 - $839.94". The low end of that range is the base
+    # single-unit price, which is what this site compares. Confirmed against
+    # Licensed Peptides' real product pages.
+    tw = soup.select_one('meta[name="twitter:data1"]')
+    if tw and tw.get("content"):
+        match = re.search(r"[\d,]+\.?\d*", tw["content"])
+        if match:
+            return float(match.group(0).replace(",", ""))
 
     return None
 
