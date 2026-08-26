@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testing & Quality — Discount Peptides</title>
+<meta name="description" content="What each vendor actually tests, which laboratory does it, and what a Certificate of Analysis does and does not tell you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0E1211; --paper-raised:#171B19; --ink:#F2F3F1; --ink-soft:#8A9490;
+    --rule:#24302B; --sage:#2DA37D; --sage-deep:#3ED9A6; --amber:#E24B4A;
+    --amber-bg:#2E1A18; --lowest:#3ED9A6; --lowest-bg:#132420; --success:#E8B84B;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-weight:500; line-height:1.6;}
+  .wrap{max-width:1000px; margin:0 auto; padding:48px 24px 80px;}
+  a{color:inherit;}
+
+  .back-link{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); text-decoration:none; margin-bottom:32px;}
+  .back-link:hover{color:var(--lowest);}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--lowest); margin-bottom:10px;}
+  h1{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(30px, 4.6vw, 42px); margin:0 0 18px; line-height:1.15;}
+  .lede{font-size:16.5px; color:var(--ink-soft); margin:0 0 12px; max-width:660px;}
+
+  h2{font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:52px 0 6px;}
+  .sect-sub{font-size:14.5px; color:var(--ink-soft); margin:0 0 22px; max-width:680px;}
+  .divider{height:1px; background:var(--rule); border:none; margin:44px 0 0;}
+
+  /* COA explainer */
+  .coa-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:12px; margin-top:18px;}
+  .coa-item{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:16px 17px;}
+  .coa-item h3{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--lowest); margin:0 0 7px;}
+  .coa-item p{font-size:13px; line-height:1.55; color:var(--ink-soft); margin:0;}
+  .coa-item p strong{color:var(--ink); font-weight:600;}
+  .coa-callout{background:var(--lowest-bg); border:1px solid var(--rule); border-radius:10px; padding:16px 18px; margin-top:14px; font-size:14px;}
+  .coa-callout strong{color:var(--lowest);}
+
+  /* Comparison table */
+  .table-scroll{overflow-x:auto; margin-top:20px; border:1px solid var(--rule); border-radius:10px;}
+  table{border-collapse:collapse; width:100%; min-width:760px; font-size:13px;}
+  th{background:var(--paper-raised); font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); text-align:left; padding:11px 13px; font-weight:500; border-bottom:1px solid var(--rule); white-space:nowrap;}
+  td{padding:11px 13px; border-bottom:1px solid var(--rule); vertical-align:top; color:var(--ink-soft);}
+  tr:last-child td{border-bottom:none;}
+  td.vendor{color:var(--ink); font-weight:600; white-space:nowrap;}
+  .yes{color:var(--lowest);} .no{color:var(--amber);} .part{color:var(--success);}
+  .tier-pill{display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:9.5px; letter-spacing:0.05em; padding:2px 7px; border-radius:20px; white-space:nowrap;}
+  .tier-1{color:var(--lowest); border:1px solid var(--lowest);}
+  .tier-2{color:var(--sage); border:1px solid var(--sage);}
+  .tier-3{color:var(--success); border:1px solid var(--success);}
+  .tier-4{color:var(--amber); border:1px solid var(--amber);}
+
+  /* Tier groups */
+  .tier-block{margin-top:26px;}
+  .tier-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:4px;}
+  .tier-head h3{font-family:'Fraunces', serif; font-weight:500; font-size:19px; margin:0;}
+  .tier-desc{font-size:13.5px; color:var(--ink-soft); margin:0 0 14px; max-width:660px;}
+  .vendor-card{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:17px 19px; margin-bottom:10px;}
+  .vendor-card h4{font-family:'Fraunces', serif; font-weight:500; font-size:17px; margin:0 0 9px; display:flex; align-items:center; gap:9px; flex-wrap:wrap;}
+  .vc-row{font-size:13px; margin:0 0 5px; color:var(--ink-soft);}
+  .vc-row b{font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); font-weight:500; display:inline-block; min-width:74px;}
+  .vc-note{font-size:13px; line-height:1.55; color:var(--ink); margin:10px 0 0; padding-top:10px; border-top:1px dashed var(--rule);}
+  .partner-tag{font-family:'IBM Plex Mono', monospace; font-size:9px; text-transform:uppercase; letter-spacing:0.05em; color:var(--success); border:1px solid var(--success); border-radius:20px; padding:2px 7px;}
+
+  /* Compound concerns */
+  .concern{border:1px solid var(--amber); background:var(--amber-bg); border-radius:10px; margin-bottom:10px; overflow:hidden;}
+  .concern-head{display:flex; align-items:center; gap:9px; width:100%; background:transparent; border:none; cursor:pointer; text-align:left; padding:13px 16px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.03em; color:var(--amber);}
+  .concern-head:hover{background:rgba(226,75,74,0.07);}
+  .concern-head .caret{margin-left:auto;}
+  .concern-body{display:none; padding:0 16px 15px; font-size:13.5px; line-height:1.6;}
+  .concern-body p{margin:0 0 9px;}
+  .affected{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 12px;}
+  .affected span{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-soft); border:1px solid var(--rule); border-radius:5px; padding:3px 8px; background:var(--paper);}
+  .check-box{background:var(--paper); border:1px dashed var(--amber); border-radius:7px; padding:11px 13px;}
+  .check-box strong{display:block; font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--amber); margin-bottom:5px;}
+  code{font-family:'IBM Plex Mono', monospace; font-size:11.5px; background:var(--paper-raised); padding:1px 5px; border-radius:3px; color:var(--lowest);}
+
+  .footnote{font-size:12.5px; color:var(--ink-soft); margin-top:34px; padding-top:18px; border-top:1px solid var(--rule); line-height:1.6;}
+  .ruo{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--amber); margin-top:22px;}
+  @media (max-width:640px){ .wrap{padding:32px 17px 60px;} .vc-row b{display:block; min-width:0;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" class="back-link">&larr; Back to price comparison</a>
+
+  <div class="eyebrow">Testing &amp; Quality</div>
+  <h1>Every vendor says they test. The useful question is who checks the checker.</h1>
+  <p class="lede">Purity claims are cheap to make and hard to verify. This page sets out what each vendor actually documents, whether the laboratory doing the work is named, and what a Certificate of Analysis can and cannot tell you.</p>
+
+  <hr class="divider">
+
+  <h2>What a COA actually proves</h2>
+  <p class="sect-sub">Most disputes about peptide quality come down to confusing two separate questions. A certificate can answer both, one, or neither.</p>
+
+  <div class="coa-grid">
+    <div class="coa-item">
+      <h3>Purity — by HPLC</h3>
+      <p><strong>How clean is it.</strong> Reported as a percentage of total peak area. A figure is method-dependent: two labs using different columns or wavelengths can differ by 1–3% on identical material, so the stated method matters as much as the number.</p>
+    </div>
+    <div class="coa-item">
+      <h3>Identity — by mass spectrometry</h3>
+      <p><strong>Is it the right molecule.</strong> Compares observed mass against the theoretical mass for the sequence. A compound can be 99.5% pure and still be entirely the wrong peptide — purity alone cannot catch that.</p>
+    </div>
+    <div class="coa-item">
+      <h3>Content — quantitative assay</h3>
+      <p><strong>How much is in the vial.</strong> Distinct from purity, which says nothing about fill weight. This is the figure that matters when a label says 10&nbsp;mg and the vial holds less.</p>
+    </div>
+    <div class="coa-item">
+      <h3>Endotoxin, heavy metals, sterility</h3>
+      <p><strong>What else is in there.</strong> Contaminants that neither purity nor identity testing will reveal. Commonly the first tests omitted when a panel is abbreviated.</p>
+    </div>
+  </div>
+
+  <div class="coa-callout">
+    <strong>The single most useful habit:</strong> ask for the COA for <em>your lot number</em>, not a sample certificate. A batch-specific document with a date and a named laboratory is a different kind of evidence from a purity figure printed on a product page.
+  </div>
+
+  <hr class="divider">
+
+  <h2>Vendor comparison</h2>
+  <p class="sect-sub">Drawn from each vendor's own published material. Where a column reads "not stated", that means the vendor does not say — not that the testing did not happen.</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Vendor</th><th>Standing</th><th>Purity</th><th>Identity</th><th>Contaminants</th><th>Lab named</th><th>COAs public</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Grouped by how far the evidence goes</h2>
+  <p class="sect-sub">The grouping is not about who claims the highest purity — nearly everyone claims 99%. It is about whether an outside party could confirm the claim.</p>
+  <div id="tierBlocks"></div>
+
+  <hr class="divider">
+
+  <h2>Concerns attached to specific compounds</h2>
+  <p class="sect-sub">Separate from vendor quality. These follow the molecule regardless of who sells it, and appear on the relevant listings as well.</p>
+  <div id="concerns"></div>
+
+  <p class="footnote">
+    Testing information is taken from each vendor's own website and, where noted, from independent third-party trackers. It reflects what could be confirmed on the date shown against each vendor and is not itself laboratory verification. Vendors change practices; a claim confirmed once is not a permanent guarantee. Nothing here is an endorsement, and a higher grouping is not a recommendation to buy.
+  </p>
+  <p class="ruo">Research use only — nothing on this site is intended for human or animal consumption.</p>
+</div>
+
+<script>
+const VENDOR_CONFIG = {"_readme": "One entry per vendor. Fill in the fields as each program responds. 'status' controls what the site shows \u2014 leave it as 'not_applied' or 'pending' until you actually have a working link, so the site never shows a dead or non-affiliate link as if it were live.", "_field_guide": {"status": "'not_applied' | 'pending' | 'approved' | 'no_program' \u2014 controls what shows on the site", "site_url": "vendor's plain homepage \u2014 used as fallback when no affiliate link exists yet", "tracking_type": "'link' | 'code' | 'link_plus_code' \u2014 how this vendor actually credits you", "affiliate_link_base": "your unique referral URL once approved, e.g. https://vendor.com/?ref=yourcode \u2014 leave null until you have it", "promo_code": "your discount/tracking code, if the vendor uses one \u2014 leave null until you have it", "cookie_days": "attribution window in days, from their terms \u2014 helps you know how long a click 'counts'", "commission": "rate or structure they quote you, as text \u2014 e.g. '10% for 12 months' or '15%, tiered to 25%'", "guidelines_notes": "any required disclaimer language or restricted phrasing they send you \u2014 paste it here so it's not just sitting in an email you'll lose track of", "last_checked": "date you last confirmed the link/code actually works"}, "UltraLife": {"status": "not_applied", "site_url": "https://ultralifepeptides.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Site references a 'Partners Portal' \u2014 check there directly for application details.", "last_checked": "2026-08-11", "payment_methods": null, "shipping_info": "Cold-pack shipping only (overnight/2-day air). Tiered by order size: $50 (small) to $110 (251+ peptides). 1-2 day processing.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "Endotoxin testing"], "testing_lab": null, "testing_standard": "\u226599% purity claimed", "testing_note": "Manufactured in FDA-registered, NSF-certified, GMP-compliant facilities \u2014 but no independent third-party testing lab is named, unlike several other vendors here.", "testing_researched": "2026-08-17", "testing_tier": 3}, "Core Peptides": {"status": "not_applied", "site_url": "https://www.corepeptides.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Strict research-only policy \u2014 expect firm required-disclaimer language if approved.", "last_checked": "2026-08-11", "payment_methods": ["Credit cards", "Venmo", "Zelle", "CashApp"], "payment_note": "No bank transfer.", "shipping_info": "Free over $200. Flat rate ~$9.25-9.95 standard, or $49-49.95 overnight/priority.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC (implied)"], "testing_lab": null, "testing_standard": null, "testing_note": "Independent review describes COA coverage as 'mostly, but constantly being updated with new tests' \u2014 meaning not every product is tested yet.", "testing_researched": "2026-08-17", "testing_tier": 3}, "Koi Peptides": {"status": "no_program", "site_url": "https://koipeptides.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Runs a qualified-buyer wholesale program (labs/CROs), not a consumer affiliate program. Likely won't fit this site's model \u2014 confirm before spending more time here.", "last_checked": "2026-08-11", "payment_methods": null, "shipping_info": "Free shipping over $200. Same-day dispatch before 2PM CT, Mon-Fri.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "LC-MS", "Endotoxin (USP <85>/<161>)"], "testing_lab": "ISO/IEC 17025-accredited lab (unnamed)", "testing_standard": "\u226599% purity target", "testing_note": "Dual-verified: tested in-house first, then independently re-run by an accredited external lab \u2014 one of the more thorough protocols in this group.", "testing_researched": "2026-08-17", "testing_tier": 2}, "Southern Aminos": {"status": "not_applied", "site_url": "https://southernaminos.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Multiple independent review sites already have disclosed affiliate links with them, so a program almost certainly exists \u2014 worth a direct email since no public application page was found.", "last_checked": "2026-08-11", "payment_methods": ["Major credit cards", "ACH bank transfer", "USDC crypto (where available)"], "shipping_info": "Free FedEx/USPS expedited shipping over $150.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "Net content", "Endotoxin", "Heavy metals", "Sterility"], "testing_lab": "Freedom Diagnostics + ILS Labs", "testing_standard": "99.5% average purity across 124 independently tracked batches", "testing_note": "The most externally verified of any vendor here \u2014 tracked by independent third-party sites, not just self-reported. That same tracker also logged 2 historically underdosed batches, included here for honesty rather than omitted.", "testing_researched": "2026-08-17", "testing_tier": 1}, "Purity Peptides": {"status": "not_applied", "site_url": "https://puritypeptides.is", "tracking_type": "link_plus_code", "affiliate_link_base": null, "promo_code": null, "cookie_days": 30, "commission": "10% default, top affiliates 15-20%", "guidelines_notes": "Apply at https://puritypeptides.is/affiliates/apply \u2014 24-48hr review. Research Use Only framing required sitewide.", "last_checked": "2026-08-11", "payment_methods": null, "shipping_info": "Ships to US and Canada only, no international. 1-2 day processing, then 5-10 days regular or 2-4 days express.", "shipping_payment_researched": "2026-08-16", "testing_methods": null, "testing_lab": null, "testing_standard": null, "testing_note": "No testing methodology, lab, or purity standard could be confirmed from their own site.", "testing_researched": "2026-08-17", "testing_tier": 4}, "Improved Peptides": {"status": "approved", "site_url": "https://improvedpeptides.com", "tracking_type": "link_plus_code", "affiliate_link_base": "https://improvedpeptides.com/?ref=vrgsdsxy", "promo_code": "jacksonmoore", "cookie_days": 30, "commission": "20% first order, 10% recurring on repeat orders", "guidelines_notes": "Approved 2026-08-11. Research Use Only framing required sitewide \u2014 keep site copy in that lane.", "last_checked": "2026-08-11", "payment_methods": ["Visa", "Mastercard", "PayPal", "Venmo", "Zelle"], "shipping_info": "Free standard shipping; free 2-day over $200; same-day dispatch by 3PM CT.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC (purity)", "LC-MS (identity)", "Endotoxin/microbial (USP)"], "testing_lab": "Freedom Diagnostics", "testing_standard": "\u226599% purity threshold, no exceptions (stated policy)", "testing_note": "Real batch results published (e.g. BPC-157 99.18%, GLP-3R 99.96%) \u2014 though some COAs are still listed as 'in verification,' not yet downloadable.", "testing_researched": "2026-08-17", "testing_tier": 1}, "Royal Peptides": {"status": "approved", "site_url": "https://royal-peptides.com", "tracking_type": "link_plus_code", "affiliate_link_base": "https://royal-peptides.com/?ref=tofnghus", "promo_code": "jacksonmoore", "cookie_days": null, "commission": "10% (per earlier program page)", "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed.", "last_checked": "2026-08-11", "payment_methods": ["Zelle", "Chime", "Wise", "Cryptocurrency", "PayPal (Friends & Family, B2B only)"], "payment_note": "No credit cards accepted (confirmed via their Terms of Service).", "shipping_info": "2-5 business days via UPS from California. Exact cost not published.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "Mass spectrometry"], "testing_lab": "Janoshik (mentioned in marketing only)", "testing_standard": "Not guaranteed per batch", "testing_note": "Their own FAQ hedges: testing 'may include' HPLC/MS 'depending on the batch and documentation available' \u2014 less definitive than their marketing tagline implies.", "testing_researched": "2026-08-17", "testing_tier": 4}, "BioIntegrity Research": {"status": "not_applied", "site_url": "https://biointegrityresearch.com", "tracking_type": null, "affiliate_link_base": null, "promo_code": null, "cookie_days": null, "commission": null, "guidelines_notes": "Real, verified company \u2014 DBA of Triple Seven Distribution LLC. Publishes a public COA archive (strong trust signal). NOT the same as the 'BioIntegrity' name in the original spreadsheet, which remains unverified \u2014 do not conflate the two. No affiliate program contact made yet.", "last_checked": "2026-08-16", "payment_methods": null, "shipping_info": "Calculated at checkout by weight/destination; cold-chain packaging included free. 2-3 day processing, ships via USPS/UPS/FedEx.", "shipping_payment_researched": "2026-08-16", "testing_methods": ["HPLC", "MS", "Endotoxin"], "testing_lab": null, "testing_standard": "\u226599.0% assayed purity, every lot (claimed)", "testing_note": "Publishes a genuinely unusual permanent public COA archive (38 lots across 23 compounds, even sold-out ones) \u2014 but the testing lab isn't named, so independent/third-party status is unconfirmed.", "testing_researched": "2026-08-17", "testing_tier": 2}, "Licensed Peptides": {"status": "approved", "site_url": "https://licensedpeptides.com", "tracking_type": "link_plus_code", "affiliate_link_base": "https://licensedpeptides.com/ref/Discountpeptides/", "promo_code": "Affiliate5", "guidelines_notes": "Approved 2026-08-18. Referral link is path-based (/ref/CODE/), not query-string \u2014 site logic routes all Licensed Peptides clicks through this link as-is rather than combining with per-product URLs, to guarantee tracking isn't silently dropped.", "last_checked": "2026-08-18", "testing_researched": "2026-08-25", "testing_methods": ["HPLC (purity)", "Mass spectrometry (identity)", "Endotoxin (LAL)", "Sterility (USP <71>)", "Content/fill weight"], "testing_lab": "ISO/IEC 17025:2017 accredited (not named); manufacturing GMP / ISO 9001:2015", "testing_standard": "99%+ HPLC purity claimed site-wide", "testing_note": "Cites the most complete test panel and accreditation of any vendor here. However, the batch figures displayed are identical across unrelated compounds \u2014 BPC-157, GLP3-R, Cagrilintide, LP3-R and Tesamorelin all show '99.4%' purity and '\u00b1 0.2%' content. Genuine per-batch results vary. These read as template values in a position where batch-specific data is implied. The site also carries a 'COA coming soon' placeholder, so coverage is not complete.", "testing_tier": 3}, "Alpha Peptides": {"status": "approved", "site_url": "https://alpha-peptides.com", "tracking_type": "link_plus_code", "affiliate_link_base": "https://alpha-peptides.com/aff/863/", "promo_code": "DISCOUNT", "guidelines_notes": "Approved 2026-08-23. Referral link is path-based (/aff/863/), not query-string \u2014 site logic routes all Alpha Peptides clicks through this link as-is rather than combining with per-product URLs, same safety handling as Licensed Peptides. robots.txt confirmed clean (standard WooCommerce pattern, only blocks admin/cart-tracking paths) \u2014 eligible for the automated live price tracker.", "last_checked": "2026-08-23", "testing_researched": "2026-08-25", "testing_methods": ["HPLC (purity)", "ESI mass spectrometry (identity)", "Quantitative assay", "Heavy metals panel", "Endotoxin"], "testing_lab": "Independent ISO 17025-aligned US laboratory (not named)", "testing_standard": "\u226599% purity floor; lots below floor rejected outright", "testing_note": "Describes a five-test panel per lot (Qualitative ID, Percent Purity, Quantitative Assay, Heavy Metals, Conformity) and confirms identity by HPLC and MS before accepting a lot into inventory. COAs are not published on the site \u2014 they are supplied on request by email against a lot number, so a buyer cannot check before ordering.", "testing_tier": 2}};
+
+const TIER_META = {
+  1: { name: 'Independently verifiable', desc: 'The testing laboratory is named, and results can be cross-checked against a source that is not the vendor.' },
+  2: { name: 'Documented, but self-reported', desc: 'A full test panel is described and appears credible, but the laboratory is unnamed or certificates are not published where a buyer can see them before ordering.' },
+  3: { name: 'Claimed, verification unclear', desc: 'Testing is asserted, but coverage is incomplete, the evidence is inconsistent, or the only assurance is a facility certification rather than a product test.' },
+  4: { name: 'Nothing confirmable', desc: 'No testing methodology, laboratory, or purity standard could be confirmed from the vendor\u2019s own material — or the vendor\u2019s own wording avoids committing to it.' },
+};
+
+function esc(s){ const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+
+const vendors = Object.entries(VENDOR_CONFIG)
+  .filter(([k]) => !k.startsWith('_'))
+  .filter(([, c]) => c.testing_tier)
+  .sort((a, b) => (a[1].testing_tier - b[1].testing_tier) || a[0].localeCompare(b[0]));
+
+// --- comparison table ---
+function has(methods, ...needles){
+  if (!methods || !methods.length) return null;
+  const j = methods.join(' ').toLowerCase();
+  return needles.some(n => j.includes(n));
+}
+const COA_PUBLIC = {
+  'BioIntegrity Research': ['yes', 'Permanent archive'],
+  'Improved Peptides':     ['yes', 'Batch results published'],
+  'Southern Aminos':       ['yes', 'Third-party tracked'],
+  'Licensed Peptides':     ['part', 'On product pages'],
+  'Alpha Peptides':        ['part', 'By email request'],
+  'Koi Peptides':          ['part', 'Not stated'],
+  'Core Peptides':         ['part', 'Partial coverage'],
+  'UltraLife':             ['no', 'Not stated'],
+  'Royal Peptides':        ['no', 'Not stated'],
+  'Purity Peptides':       ['no', 'Not stated'],
+};
+
+document.getElementById('tableBody').innerHTML = vendors.map(([name, c]) => {
+  const m = c.testing_methods;
+  const cell = (v) => v === true ? '<span class="yes">Yes</span>'
+                    : v === false ? '<span class="no">Not stated</span>'
+                    : '<span class="part">Unclear</span>';
+  const labNamed = c.testing_lab && !/not named|unnamed/i.test(c.testing_lab);
+  const labText = !c.testing_lab ? '<span class="no">Not stated</span>'
+    : labNamed ? `<span class="yes">${esc(c.testing_lab.split(';')[0])}</span>`
+    : `<span class="part">${esc(c.testing_lab.replace(/\s*\(not named\)/i, ''))}</span>`;
+  const [coaState, coaText] = COA_PUBLIC[name] || ['part', 'Not stated'];
+  return `<tr>
+    <td class="vendor">${esc(name)}</td>
+    <td><span class="tier-pill tier-${c.testing_tier}">Tier ${c.testing_tier}</span></td>
+    <td>${cell(has(m, 'hplc'))}</td>
+    <td>${cell(has(m, 'ms', 'mass spec', 'spectrometry'))}</td>
+    <td>${cell(has(m, 'endotoxin', 'heavy metal', 'sterility', 'microbial'))}</td>
+    <td>${labText}</td>
+    <td><span class="${coaState}">${esc(coaText)}</span></td>
+  </tr>`;
+}).join('');
+
+// --- tier blocks ---
+const byTier = {};
+vendors.forEach(([n, c]) => { (byTier[c.testing_tier] ||= []).push([n, c]); });
+
+document.getElementById('tierBlocks').innerHTML = Object.keys(byTier).sort().map(t => {
+  const meta = TIER_META[t];
+  const cards = byTier[t].map(([name, c]) => {
+    const partner = c.status === 'approved' ? '<span class="partner-tag">Affiliate partner</span>' : '';
+    const rows = [
+      c.testing_methods && c.testing_methods.length ? `<div class="vc-row"><b>Panel</b> ${esc(c.testing_methods.join(', '))}</div>` : '',
+      c.testing_lab ? `<div class="vc-row"><b>Laboratory</b> ${esc(c.testing_lab)}</div>` : '',
+      c.testing_standard ? `<div class="vc-row"><b>Standard</b> ${esc(c.testing_standard)}</div>` : '',
+    ].filter(Boolean).join('');
+    return `<div class="vendor-card">
+      <h4>${esc(name)} <span class="tier-pill tier-${t}">Tier ${t}</span> ${partner}</h4>
+      ${rows || '<div class="vc-row">No testing detail published.</div>'}
+      ${c.testing_note ? `<div class="vc-note">${esc(c.testing_note)}</div>` : ''}
+    </div>`;
+  }).join('');
+  return `<div class="tier-block">
+    <div class="tier-head"><h3>Tier ${t} — ${esc(meta.name)}</h3></div>
+    <p class="tier-desc">${esc(meta.desc)}</p>
+    ${cards}
+  </div>`;
+}).join('');
+
+// --- compound concerns ---
+const CONCERNS = [
+  {
+    title: 'Contested identity — TB-500 and blends containing it',
+    affected: ['TB-500', 'BPC-157 / TB-500', 'GLOW', 'KLOW', 'Wolverine'],
+    body: `<p>TB-500 and Thymosin Beta-4 are different molecules, and vendors use the names interchangeably. TB-500 is a short synthetic fragment at roughly <code>888 Da</code>; full-length Thymosin Beta-4 is a 43-amino-acid protein at roughly <code>4,900 Da</code>. Nearly all published research — including the dosing figures repeated across vendor sites — was conducted on the full protein, not the fragment most vendors ship. The fragment is not standardised either: different manufacturers sell different lengths under the same name.</p>
+      <div class="check-box"><strong>What to ask for</strong>The batch COA's mass spectrometry result. <code>~888 Da</code> is the fragment; <code>~4,900 Da</code> is full Thymosin Beta-4, whatever the label says. A COA without MS data cannot confirm identity at all — only the purity of whatever is in the vial.</div>
+      <p style="margin-top:9px;">WADA prohibits Thymosin Beta-4 and its fragments under S2. Athletes in tested sport face disqualification.</p>`,
+  },
+  {
+    title: 'No approval anywhere, with documented adverse events — Melanotan II',
+    affected: ['Melanotan II'],
+    body: `<p>Melanotan II has never been approved by any regulator, for any indication. Published case reports link it to melanoma, ischemic priapism, rhabdomyolysis, renal infarction and posterior reversible encephalopathy syndrome. Case reports cannot establish causation, but the pattern prompted a Skin Cancer Foundation warning in July 2026. It also darkens existing moles and can prompt new ones, which makes visual monitoring for early skin cancer harder.</p>
+      <div class="check-box"><strong>What to ask for</strong>Quantitative content, not purity alone. Independent testing of gray-market vials found actual peptide content between <code>4.32 mg</code> and <code>8.84 mg</code> against a labelled <code>10 mg</code>.</div>`,
+  },
+  {
+    title: 'Unapproved and under active enforcement — the GLP-1 development class',
+    affected: ['Retatrutide', 'Cagrilintide', 'Orforglipron', 'Tesofensine'],
+    body: `<p>These compounds are not approved by any regulator, anywhere. They remain in clinical development by the companies that own them, and the material sold here does not come from those companies.</p>
+      <p>The FDA has stated that products containing these compounds, labelled "for research purposes" but sold with dosing instructions, are illegally marketed unapproved drugs. On 12 August 2026 Eli Lilly filed six federal lawsuits over retatrutide sales, four of them against research-use-only peptide vendors, and has separately referred over 200 entities to authorities.</p>
+      <div class="check-box"><strong>What this means for an order</strong>Lilly has publicly asked payment processors and shipping carriers to cut off sellers in this category. Vendors here have a documented history of closing abruptly once payment processing is withdrawn, which can strand paid but unshipped orders. Prefer a payment method with recourse and treat long pre-order windows as risk.</div>
+      <p style="margin-top:9px;">On content: the FDA notes unapproved versions may be contaminated, may contain more or less active ingredient than labelled, or none at all. Poison-centre exposure reports involving retatrutide averaged roughly 95 per month in early 2026, up 265% from late 2025.</p>`,
+  },
+  {
+    title: 'Approved medicines sold outside the prescription system',
+    affected: ['Tirzepatide', 'Semaglutide', 'Tesamorelin', 'HCG', 'Sildenafil', 'Melanotan I'],
+    body: `<p>These are not unapproved research chemicals. Each is the active ingredient in a medicine that has completed full regulatory review and is approved for sale — on prescription, dispensed by a licensed pharmacy, under a brand name.</p>
+      <p>What is sold here is the same molecule outside that system: no prescription, no pharmacy dispensing, and none of the manufacturing oversight that applies to the approved product. The approved version exists and is obtainable through a clinician.</p>
+      <div class="check-box"><strong>What to ask for</strong>There is no regulatory floor on identity, sterility or content for material sold this way — every assurance comes from the vendor's own documentation. A batch-specific COA with MS identity confirmation and quantitative content, from a laboratory independent of the seller, is the minimum worth accepting.</div>`,
+  },
+  {
+    title: 'FDA safety communications and prohibited in sport — SARMs',
+    affected: ['MK-677 (Ibutamoren)', 'MK-2866 (Ostarine)'],
+    body: `<p>Selective androgen receptor modulators have been the subject of FDA public safety communications and warning letters to sellers. They are not approved for any use, and the agency has specifically cautioned about products in this class sold as research chemicals and supplements.</p>
+      <p>Both are on the WADA Prohibited List, and SARMs have been a recurring source of positive tests attributed to contaminated or mislabelled products rather than deliberate use.</p>
+      <div class="check-box"><strong>What to ask for</strong>Independent analyses of this class have repeatedly found label-to-content mismatches, including products containing a different compound than stated or none of the labelled compound at all. A batch COA with MS identity confirmation is the minimum documentation worth accepting.</div>`,
+  },
+];
+
+document.getElementById('concerns').innerHTML = CONCERNS.map((c, i) => `
+  <div class="concern">
+    <button type="button" class="concern-head" onclick="const b=document.getElementById('cb${i}'); const open=b.style.display==='block'; b.style.display=open?'none':'block'; this.querySelector('.caret').textContent=open?'▼':'▲';">
+      <span aria-hidden="true">⚠</span><span>${esc(c.title)}</span><span class="caret">▼</span>
+    </button>
+    <div class="concern-body" id="cb${i}">
+      <div class="affected">${c.affected.map(a => `<span>${esc(a)}</span>`).join('')}</div>
+      ${c.body}
+    </div>
+  </div>`).join('');
+</script>
+</body>
+</html>
