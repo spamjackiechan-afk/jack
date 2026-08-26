@@ -29,11 +29,6 @@ from bs4 import BeautifulSoup
 # One entry per vendor. Only add a vendor here after checking their
 # robots.txt yourself — see the warning above.
 VENDORS = {
-    "Improved Peptides": {
-        "robots_checked_by": "Jackson, 2026-08-13",
-        "robots_allows": True,   # confirmed: robots.txt only blocks wp-admin, logs, cart-tracking
-                                  # URLs, and /wp-json/ipp/ — /product/ and /shop/ are wide open
-    },
     "Royal Peptides": {
         "robots_checked_by": "Jackson, 2026-08-14",
         "robots_allows": True,   # confirmed: robots.txt only blocks wp-admin, cart/checkout/account,
@@ -150,7 +145,7 @@ def extract_price(html: str) -> float | None:
     """
     Primary strategy: read the page's own structured data (JSON-LD), which
     most e-commerce sites include for Google/SEO purposes — confirmed
-    working against Improved Peptides' real page structure. This is far
+    working against real vendor page structures. This is far
     more reliable than guessing CSS class names, since it doesn't depend
     on a particular theme's markup.
 
