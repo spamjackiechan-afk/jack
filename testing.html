@@ -86,6 +86,24 @@
   .source-list a{color:var(--lowest); text-decoration:none; word-break:break-word;}
   .source-list a:hover{text-decoration:underline;}
   .source-list li:target{background:var(--lowest-bg);}
+  .contact-block{
+    border:1px solid var(--lowest); background:var(--lowest-bg); border-radius:12px;
+    padding:24px 26px; margin:34px 0 0; text-align:center;
+  }
+  .contact-block h3{font-family:'Fraunces', serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink);}
+  .contact-block p{font-size:14px; color:var(--ink-soft); margin:0 auto 16px; max-width:520px; line-height:1.55;}
+  .contact-email{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:17px; font-weight:500;
+    color:var(--paper); background:var(--lowest); text-decoration:none;
+    padding:13px 24px; border-radius:9px; transition:background .12s; word-break:break-all;
+  }
+  .contact-email:hover{background:var(--sage-deep);}
+  .contact-sub{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin:14px 0 0;}
+  @media (max-width:520px){
+    .contact-block{padding:20px 16px;}
+    .contact-email{font-size:14px; padding:12px 16px;}
+  }
   .footnote{font-size:12.5px; color:var(--ink-soft); margin-top:34px; padding-top:18px; border-top:1px solid var(--rule); line-height:1.6;}
   .ruo{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--amber); margin-top:22px;}
   @media (max-width:640px){ .wrap{padding:32px 17px 60px;} .vc-row b{display:block; min-width:0;} }
@@ -164,9 +182,16 @@
   <p class="footnote">
     Testing information is taken from each vendor's own website and, where noted, from independent third-party trackers. It reflects what could be confirmed on the date shown against each vendor and is not itself laboratory verification. Vendors change practices; a claim confirmed once is not a permanent guarantee. Nothing here is an endorsement, and a higher grouping is not a recommendation to buy.
   </p>
-  <p style="font-size:13px; color:var(--ink-soft); margin-top:26px; padding-top:18px; border-top:1px solid var(--rule);">
-    Questions, corrections, or vendor enquiries: <a href="mailto:discountspeptides@gmail.com" style="color:var(--lowest); text-decoration:none;">discountspeptides@gmail.com</a>
-  </p>
+  <div class="contact-block">
+    <h3>Get in touch</h3>
+    <p>Spotted a price that looks wrong, a vendor missing, or something on this site that needs correcting? Say so — corrections are welcome and get acted on.</p>
+    <a class="contact-email" href="mailto:discountspeptides@gmail.com">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      discountspeptides@gmail.com
+    </a>
+    <p class="contact-sub">Vendors — enquiries about being listed, or corrections to your entry, go to the same address.</p>
+  </div>
+
   <p class="ruo">Research use only — nothing on this site is intended for human or animal consumption.</p>
 </div>
 
