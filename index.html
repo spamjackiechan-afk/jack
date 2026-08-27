@@ -264,6 +264,13 @@
   }
 
   /* ---------- Compound-level warning block ---------- */
+  .sort-note{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);
+    background:var(--paper-raised); border:1px solid var(--rule); border-left:2px solid var(--lowest);
+    border-radius:7px; padding:9px 13px; margin:0 0 14px; line-height:1.5; display:none;
+  }
+  .sort-note strong{color:var(--ink); font-weight:500;}
+
   .compound-warn{
     margin:10px 0 0 42px;
     border:1px solid var(--amber);
@@ -299,7 +306,14 @@
     background:var(--paper-raised); padding:1px 5px; border-radius:3px; color:var(--lowest);
   }
   @media (max-width:640px){
-    .compound-warn{margin-left:0;}
+    .sort-note{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);
+    background:var(--paper-raised); border:1px solid var(--rule); border-left:2px solid var(--lowest);
+    border-radius:7px; padding:9px 13px; margin:0 0 14px; line-height:1.5; display:none;
+  }
+  .sort-note strong{color:var(--ink); font-weight:500;}
+
+  .compound-warn{margin-left:0;}
   }
   .dose-label{
     font-family:'IBM Plex Mono', monospace;
@@ -845,11 +859,11 @@
   <div class="modal-overlay" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
       <button type="button" class="modal-close" onclick="dismissModal()" aria-label="Close">&times;</button>
-      <div class="modal-eyebrow">Free · No account</div>
+      <div class="modal-eyebrow" id="modalEyebrow">Free · No password</div>
       <h2 id="modalTitle">Don't overpay because you weren't watching.</h2>
-      <p>Prices here move week to week. Save the compounds you care about and we'll tell you when one gets cheaper.</p>
+      <p id="modalBlurb">Prices here move week to week. Save the compounds you care about and we'll tell you when one gets cheaper.</p>
       <ul class="modal-points">
-        <li><span class="tick">&#10003;</span><span>Star any peptide &mdash; saved instantly, no sign-up needed</span></li>
+        <li><span class="tick">&#10003;</span><span>Save any peptide to your own watchlist</span></li>
         <li><span class="tick">&#10003;</span><span>Get an email when a saved compound drops in price</span></li>
         <li><span class="tick">&#10003;</span><span>Hear about real vendor discounts, not filler</span></li>
       </ul>
@@ -867,7 +881,7 @@
 
   <div class="signup-band" id="signupBand">
     <h3>Save what you're watching</h3>
-    <p>Star any peptide to keep it on this device — no account needed. Add your email and we'll tell you when a saved compound drops in price, and when partner vendors run a real discount. Nothing else.</p>
+    <p>Star any peptide to add it to your watchlist. We ask for an email so we can tell you when a saved compound drops in price, and when partner vendors run a real discount. Nothing else.</p>
     <div class="signup-row">
       <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
       <button type="button" id="signupBtn" onclick="submitSignup()">Notify me</button>
@@ -877,6 +891,8 @@
     </div>
     <div class="signup-msg" id="signupMsg"></div>
   </div>
+
+  <div class="sort-note" id="sortNote"></div>
 
   <div class="controls">
     <input type="search" id="search" placeholder="Search a peptide — e.g. BPC-157, NAD+, Selank…">
@@ -897,6 +913,8 @@
       <option value="name">Sort: A–Z</option>
       <option value="price-low">Sort: Price low–high</option>
       <option value="price-high">Sort: Price high–low</option>
+      <option value="verified">Sort: Best-verified vendor</option>
+      <option value="evidence">Sort: Evidence strength</option>
     </select>
   </div>
   <div id="codeBanner"></div>
@@ -916,6 +934,7 @@
     <p><strong>Affiliate disclosure —</strong> this page will contain affiliate links. When a listed vendor's product page is visited through a link here, this site may earn a commission on a resulting sale, at no added cost to the buyer. Vendor inclusion does not imply endorsement of a product's safety, legality, or efficacy.</p>
     <p><strong>Not medical advice —</strong> pricing and evidence notes are for research reference and comparison only. Peptides listed here are, in most cases, not FDA-approved, and evidence quality varies widely by compound — see the note on each listing before assuming a claim is well-supported.</p>
     <p>Vendor prices are checked against original spreadsheet data, cross-referenced with each vendor's live site, and — for vendors with an automated daily price check — confirmed against a live, scheduled read of their actual product pages (see the "● LIVE" tag on those listings).</p>
+    <p style="border-top:1px solid var(--rule); padding-top:14px; margin-top:16px;"><strong>Contact —</strong> questions about a listing, a price that looks wrong, or a vendor that should be here? Email <a href="mailto:discountspeptides@gmail.com" style="color:var(--lowest); text-decoration:none;">discountspeptides@gmail.com</a>. Vendors: enquiries about being listed or corrections to your entry are welcome at the same address.</p>
   </footer>
 
 </div>
@@ -1027,6 +1046,77 @@ function groupCheapest(group){
   return Math.min(...group.doses.map(d => Math.min(...Object.values(d.prices))));
 }
 
+
+// ---------- Sorting by vendor verification and evidence ----------
+// Both are coarse and deliberately labelled as such. Neither claims more
+// precision than the underlying data supports.
+
+// How well a buyer can independently check a vendor's testing. Mirrors the
+// tiers set out on the Testing & Quality page: 1 = laboratory named and
+// results verifiable, 4 = nothing confirmable.
+function bestVendorTier(item){
+  let best = 99;
+  for (const v of Object.keys(item.prices)){
+    const tier = (VENDOR_CONFIG[v] || {}).testing_tier;
+    if (tier && tier < best) best = tier;
+  }
+  return best;
+}
+
+// Three evidence bands. Band 1 means the compound is the active ingredient
+// in a medicine that completed regulatory review somewhere — not that the
+// material sold here is that medicine. Band 3 means no published human
+// trial data was found for the compound at all. Everything else sits in
+// band 2, which spans a wide range and should not be read as a ranking
+// within itself.
+const APPROVED_COMPOUNDS = [
+  'tirzepatide','semaglutide','glp-1','glp-2','tesamorelin','sildenafil','hcg',
+  'chorionic','pt-141','bremelanotide','ss-31','elamipretide','melanotan i',
+  'methyl b12','methylcobalamin','oxytocin','gonadorelin','sermorelin',
+];
+const NO_HUMAN_TRIAL_PHRASES = [
+  'zero published human trials','zero human trials','no dedicated human trials',
+  'observational (endogenous levels) only','no evidence found for combined',
+];
+
+// Group-level: a group holds several dose rows, so take the best across them.
+function groupBestTier(group){
+  return Math.min(...group.doses.map(bestVendorTier));
+}
+function groupEvidenceBand(group){
+  return Math.min(...group.doses.map(evidenceBand));
+}
+
+function evidenceBand(item){
+  return compoundEvidenceBand(item.peptide);
+}
+
+// Evidence is a property of the molecule, not of a particular vial, so this
+// is computed once per compound across every listing that mentions it. A
+// caveat recorded on one listing (e.g. "zero published human trials") holds
+// for the compound regardless of which size or format is being viewed.
+const _evidenceCache = new Map();
+function compoundEvidenceBand(peptide){
+  if (_evidenceCache.has(peptide)) return _evidenceCache.get(peptide);
+  const n = (peptide || '').toLowerCase();
+  let band;
+
+  if (n.includes('melanotan ii')){
+    band = 3;                                    // never approved anywhere
+  } else if (APPROVED_COMPOUNDS.some(c => n.includes(c))){
+    band = 1;
+  } else {
+    // Scan every listing of this compound, not just the one being sorted.
+    const notes = DATA.included
+      .filter(i => i.peptide === peptide)
+      .map(i => (i.notes || '').toLowerCase());
+    band = notes.some(note => NO_HUMAN_TRIAL_PHRASES.some(p => note.includes(p))) ? 3 : 2;
+  }
+  _evidenceCache.set(peptide, band);
+  return band;
+}
+
+
 function render(){
   const q = searchEl.value.trim().toLowerCase();
   const favSet = new Set(getFavourites());
@@ -1045,12 +1135,32 @@ function render(){
 
   let groups = groupByPeptideFormat(items);
   const usingPriceSort = activeSort === 'price-low' || activeSort === 'price-high';
+  const usingRankSort = activeSort === 'verified' || activeSort === 'evidence';
+
+  // Say plainly what a ranked sort is ordering by. Both are coarse, and a
+  // reader should know that before drawing conclusions from the order.
+  const sortNote = document.getElementById('sortNote');
+  if (sortNote){
+    if (activeSort === 'verified'){
+      sortNote.style.display = 'block';
+      sortNote.innerHTML = '<strong>Ordered by how far a vendor\'s testing can be checked</strong> \u2014 listings sold by a vendor that names its laboratory come first, then those documenting a full panel without naming the lab, then unverified. This ranks the seller, not the compound. See the <a href="testing.html" style="color:var(--lowest);">Testing &amp; Quality</a> page for what each tier means.';
+    } else if (activeSort === 'evidence'){
+      sortNote.style.display = 'block';
+      sortNote.innerHTML = '<strong>Three coarse bands, not a score.</strong> First: compounds that are the active ingredient in an approved medicine somewhere \u2014 which says nothing about the material sold here. Last: compounds with no published human trial data found. Everything between sits in one middle band and is <em>not</em> ranked within it.';
+    } else {
+      sortNote.style.display = 'none';
+    }
+  }
   if (activeSort === 'price-low') groups.sort((a,b) => groupCheapest(a) - groupCheapest(b));
   else if (activeSort === 'price-high') groups.sort((a,b) => groupCheapest(b) - groupCheapest(a));
+  else if (activeSort === 'verified')
+    groups.sort((a,b) => (groupBestTier(a) - groupBestTier(b)) || a.peptide.localeCompare(b.peptide));
+  else if (activeSort === 'evidence')
+    groups.sort((a,b) => (groupEvidenceBand(a) - groupEvidenceBand(b)) || a.peptide.localeCompare(b.peptide));
   else groups.sort((a,b) => a.peptide.localeCompare(b.peptide));
 
   const FORMAT_ORDER = ['Vial', 'Nasal', 'Capsules', 'Oral', 'Water'];
-  if (activeFilter === 'All' && !usingPriceSort && !q){
+  if (activeFilter === 'All' && !usingPriceSort && !usingRankSort && !q){
     const sections = FORMAT_ORDER
       .map(fmt => ({ fmt, list: groups.filter(g => g.format === fmt) }))
       .filter(s => s.list.length > 0);
@@ -1065,7 +1175,9 @@ function render(){
     `).join('') || '<p style="padding:40px 0; color:var(--ink-soft); font-family:\'IBM Plex Mono\',monospace; font-size:13px;">No listings match that search.</p>';
   } else {
     const emptyMsg = activeFilter === '__saved' && !favSet.size
-      ? '<div class="empty-favs">Nothing saved yet \u2014 tap the \u2606 on any peptide to keep an eye on it.</div>'
+      ? (isMember()
+          ? '<div class="empty-favs">Nothing saved yet \u2014 tap the \u2606 on any peptide to keep an eye on it.</div>'
+          : '<div class="empty-favs">Saving is for members \u2014 tap the \u2606 on any peptide and we\'ll set you up in one step.</div>')
       : '<p style="padding:40px 0; color:var(--ink-soft); font-family:\'IBM Plex Mono\',monospace; font-size:13px;">No listings match that search.</p>';
     indexEl.innerHTML = groups.map(cardHtmlGrouped).join('') || emptyMsg;
   }
@@ -1804,8 +1916,29 @@ suppliersToggle.addEventListener('click', async () => {
 });
 
 
+// ---------- Membership ----------
+// A "member" is simply someone who has given an email. Held on the device,
+// so it survives across visits without a login. Saving peptides requires it.
+const MEMBER_KEY = 'dp_member';
+let pendingFavourite = null;
+
+function isMember(){
+  try { return Boolean(localStorage.getItem(MEMBER_KEY)); } catch { return false; }
+}
+function setMember(email){
+  try { localStorage.setItem(MEMBER_KEY, email); } catch {}
+  updateMemberUI();
+}
+function updateMemberUI(){
+  const member = isMember();
+  document.body.classList.toggle('is-member', member);
+  // The inline band is only useful to non-members.
+  const band = document.getElementById('signupBand');
+  if (band) band.style.display = member ? 'none' : '';
+}
+
 // ---------- Saved peptides ----------
-// Stored on the visitor's own device. No account, no personal data, and it
+// Stored on the visitor's own device, keyed to their membership email.
 // works instantly — signing up is only needed to receive alerts about them.
 const FAV_KEY = 'dp_favourites';
 
@@ -1816,17 +1949,32 @@ function getFavourites(){
 function setFavourites(list){
   try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch {}
   updateFavCount();
+updateMemberUI();
 }
 function isFavourite(name){ return getFavourites().includes(name); }
 
 function toggleFavourite(name, btn){
+  // Saving is a member feature. Rather than disabling the star, let the click
+  // through and use it as the moment to ask — someone who has just tried to
+  // save something has already shown intent, which is a far better time to
+  // request an email than an unprompted banner.
+  if (!isMember()){
+    pendingFavourite = name;
+    openModal('save');
+    return;
+  }
+  applyFavourite(name);
+}
+
+// The actual save, once membership is established.
+function applyFavourite(name){
   const list = getFavourites();
   const i = list.indexOf(name);
   if (i === -1) list.push(name); else list.splice(i, 1);
   setFavourites(list);
   const saved = i === -1;
-  // Update every button for this peptide, since a compound can appear on
-  // more than one card (different formats or sizes).
+  // A compound can appear on more than one card (different formats or
+  // sizes), so every star for that name updates together.
   document.querySelectorAll('.fav-btn').forEach(b => {
     if (b.getAttribute('aria-label') === 'Save ' + name){
       b.classList.toggle('saved', saved);
@@ -1835,6 +1983,7 @@ function toggleFavourite(name, btn){
   });
   if (activeFilter === '__saved') render();
 }
+
 
 function updateFavCount(){
   const n = getFavourites().length;
@@ -1885,6 +2034,16 @@ async function submitSignup(where = 'band'){
       input.value = '';
       // Subscribed, so the first-visit prompt has done its job for good.
       try { localStorage.setItem(MODAL_KEY, 'subscribed'); } catch {}
+      setMember(email);
+
+      // If they got here by trying to star something, finish that action —
+      // otherwise they would have to hunt for the card and click it again.
+      if (pendingFavourite){
+        const name = pendingFavourite;
+        pendingFavourite = null;
+        applyFavourite(name);
+        msg.textContent = `Saved \u2014 we'll watch ${name} for you.`;
+      }
       if (where === 'modal') setTimeout(closeModal, 1600);
     } else {
       const err = await res.json().catch(() => ({}));
@@ -1918,14 +2077,36 @@ function modalAlreadyHandled(){
   try { return Boolean(localStorage.getItem(MODAL_KEY)); } catch { return true; }
 }
 
-function openModal(){
+function openModal(mode = 'intro'){
   const m = document.getElementById('signupModal');
   if (!m) return;
+
+  // Two modes share one dialog. "save" is triggered by trying to star
+  // something and names the specific compound; "intro" is the first-visit
+  // pitch. Naming the thing they just tried to save is the whole point —
+  // it turns an abstract signup into finishing an action already started.
+  const title = document.getElementById('modalTitle');
+  const blurb = document.getElementById('modalBlurb');
+  const eyebrow = document.getElementById('modalEyebrow');
+  const later = document.querySelector('.modal-later');
+  if (mode === 'save' && pendingFavourite){
+    title.textContent = `Save ${pendingFavourite} to your list`;
+    blurb.textContent = 'Saving is free — we just need an email so we can tell you when it drops in price. That is the only reason we ask.';
+    if (later) later.textContent = 'Not now';
+    if (eyebrow) eyebrow.textContent = 'One step \u00b7 No password';
+  } else {
+    title.textContent = "Don't overpay because you weren't watching.";
+    blurb.textContent = 'Prices here move week to week. Save the compounds you care about and we\u2019ll tell you when one gets cheaper.';
+    if (later) later.textContent = "No thanks, I'll browse first";
+    if (eyebrow) eyebrow.textContent = 'Free \u00b7 No password';
+  }
+
   lastFocused = document.activeElement;
   m.classList.add('open');
   document.body.style.overflow = 'hidden';
   setTimeout(() => document.getElementById('modalEmail')?.focus(), 240);
 }
+
 
 function closeModal(){
   const m = document.getElementById('signupModal');
@@ -1936,7 +2117,13 @@ function closeModal(){
 }
 
 function dismissModal(){
-  try { localStorage.setItem(MODAL_KEY, 'dismissed'); } catch {}
+  // Only the first-visit pitch is retired on dismissal. Declining one save
+  // prompt should not stop the next one appearing when they try to save
+  // something else.
+  if (!pendingFavourite){
+    try { localStorage.setItem(MODAL_KEY, 'dismissed'); } catch {}
+  }
+  pendingFavourite = null;
   closeModal();
 }
 
@@ -1949,7 +2136,7 @@ document.getElementById('signupModal')?.addEventListener('click', e => {
   if (e.target.id === 'signupModal') dismissModal();
 });
 
-if (!modalAlreadyHandled()) setTimeout(openModal, MODAL_DELAY_MS);
+if (!modalAlreadyHandled() && !isMember()) setTimeout(() => openModal('intro'), MODAL_DELAY_MS);
 
 updateFavCount();
 </script>
