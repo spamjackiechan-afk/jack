@@ -264,6 +264,33 @@
   }
 
   /* ---------- Compound-level warning block ---------- */
+  .contact-block{
+    border:1px solid var(--lowest); background:var(--lowest-bg); border-radius:12px;
+    padding:24px 26px; margin:34px 0 0; text-align:center;
+  }
+  .contact-block h3{
+    font-family:'Fraunces', serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink);
+  }
+  .contact-block p{
+    font-size:14px; color:var(--ink-soft); margin:0 auto 16px; max-width:520px; line-height:1.55;
+  }
+  .contact-email{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:17px; font-weight:500;
+    color:var(--paper); background:var(--lowest); text-decoration:none;
+    padding:13px 24px; border-radius:9px; transition:background .12s;
+    word-break:break-all;
+  }
+  .contact-email:hover{background:var(--sage-deep);}
+  .contact-sub{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);
+    margin:14px 0 0;
+  }
+  @media (max-width:520px){
+    .contact-block{padding:20px 16px;}
+    .contact-email{font-size:14px; padding:12px 16px;}
+  }
+
   .sort-note{
     font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);
     background:var(--paper-raised); border:1px solid var(--rule); border-left:2px solid var(--lowest);
@@ -306,7 +333,34 @@
     background:var(--paper-raised); padding:1px 5px; border-radius:3px; color:var(--lowest);
   }
   @media (max-width:640px){
-    .sort-note{
+    .contact-block{
+    border:1px solid var(--lowest); background:var(--lowest-bg); border-radius:12px;
+    padding:24px 26px; margin:34px 0 0; text-align:center;
+  }
+  .contact-block h3{
+    font-family:'Fraunces', serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink);
+  }
+  .contact-block p{
+    font-size:14px; color:var(--ink-soft); margin:0 auto 16px; max-width:520px; line-height:1.55;
+  }
+  .contact-email{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:17px; font-weight:500;
+    color:var(--paper); background:var(--lowest); text-decoration:none;
+    padding:13px 24px; border-radius:9px; transition:background .12s;
+    word-break:break-all;
+  }
+  .contact-email:hover{background:var(--sage-deep);}
+  .contact-sub{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);
+    margin:14px 0 0;
+  }
+  @media (max-width:520px){
+    .contact-block{padding:20px 16px;}
+    .contact-email{font-size:14px; padding:12px 16px;}
+  }
+
+  .sort-note{
     font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);
     background:var(--paper-raised); border:1px solid var(--rule); border-left:2px solid var(--lowest);
     border-radius:7px; padding:9px 13px; margin:0 0 14px; line-height:1.5; display:none;
@@ -934,8 +988,17 @@
     <p><strong>Affiliate disclosure —</strong> this page will contain affiliate links. When a listed vendor's product page is visited through a link here, this site may earn a commission on a resulting sale, at no added cost to the buyer. Vendor inclusion does not imply endorsement of a product's safety, legality, or efficacy.</p>
     <p><strong>Not medical advice —</strong> pricing and evidence notes are for research reference and comparison only. Peptides listed here are, in most cases, not FDA-approved, and evidence quality varies widely by compound — see the note on each listing before assuming a claim is well-supported.</p>
     <p>Vendor prices are checked against original spreadsheet data, cross-referenced with each vendor's live site, and — for vendors with an automated daily price check — confirmed against a live, scheduled read of their actual product pages (see the "● LIVE" tag on those listings).</p>
-    <p style="border-top:1px solid var(--rule); padding-top:14px; margin-top:16px;"><strong>Contact —</strong> questions about a listing, a price that looks wrong, or a vendor that should be here? Email <a href="mailto:discountspeptides@gmail.com" style="color:var(--lowest); text-decoration:none;">discountspeptides@gmail.com</a>. Vendors: enquiries about being listed or corrections to your entry are welcome at the same address.</p>
   </footer>
+
+  <div class="contact-block">
+    <h3>Get in touch</h3>
+    <p>Spotted a price that looks wrong, a vendor missing, or something on this site that needs correcting? Say so — corrections are welcome and get acted on.</p>
+    <a class="contact-email" href="mailto:discountspeptides@gmail.com">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      discountspeptides@gmail.com
+    </a>
+    <p class="contact-sub">Vendors — enquiries about being listed, or corrections to your entry, go to the same address.</p>
+  </div>
 
 </div>
 
