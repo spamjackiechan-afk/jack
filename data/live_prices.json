@@ -1,68 +1,6 @@
 {
-  "checked_at": "2026-08-26T11:07:52Z",
+  "checked_at": "2026-08-28T21:58:11Z",
   "results": {
-    "Improved Peptides": {
-      "5-Amino-1MQ Capsules | Vial | 50mg": {
-        "url": "https://improvedpeptides.com/product/5-amino-1mq-50mg/",
-        "price": 75.0,
-        "error": null
-      },
-      "BPC-157 | Vial | 10mg": {
-        "url": "https://improvedpeptides.com/product/bpc-157/",
-        "price": 75.0,
-        "error": null
-      },
-      "DSIP | Vial | 5mg": {
-        "url": "https://improvedpeptides.com/product/dsip-5mg/",
-        "price": 52.0,
-        "error": null
-      },
-      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
-        "url": "https://improvedpeptides.com/product/ghk-cu-50mg/",
-        "price": 45.0,
-        "error": null
-      },
-      "KPV | Vial | 10mg": {
-        "url": "https://improvedpeptides.com/product/kpv-10mg/",
-        "price": 69.0,
-        "error": null
-      },
-      "MOTS-C | Vial | 10mg": {
-        "url": "https://improvedpeptides.com/product/mots-c-10mg/",
-        "price": 79.0,
-        "error": null
-      },
-      "NAD+ | Vial | 500mg": {
-        "url": "https://improvedpeptides.com/product/nad-500mg/",
-        "price": 89.0,
-        "error": null
-      },
-      "PT-141 (Bremelanotide) | Vial | 10mg": {
-        "url": "https://improvedpeptides.com/product/pt-141-10mg/",
-        "price": 65.0,
-        "error": null
-      },
-      "Selank | Vial | 10mg": {
-        "url": "https://improvedpeptides.com/product/selank-10mg/",
-        "price": 56.0,
-        "error": null
-      },
-      "Semax | Vial | 10mg": {
-        "url": "https://improvedpeptides.com/product/semax-10mg/",
-        "price": 56.0,
-        "error": null
-      },
-      "Epitalon | Vial | 10mg": {
-        "url": "https://improvedpeptides.com/product/epithalon-10mg/",
-        "price": 65.0,
-        "error": null
-      },
-      "CJC-1295 / Ipamorelin combo | Vial | 20mg": {
-        "url": "https://improvedpeptides.com/product/cjc-1295-ipa-no-dac/",
-        "price": 59.0,
-        "error": null
-      }
-    },
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
         "url": "https://royal-peptides.com/shop/5-amino-1mq/",
@@ -91,28 +29,28 @@
       },
       "Selank | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/selank-10mg-vial/",
-        "price": 65.0,
-        "error": null
+        "price": null,
+        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/selank-10mg-vial/"
       },
       "Semax | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/semax-10mg/",
-        "price": 65.0,
-        "error": null
+        "price": null,
+        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/semax-10mg/"
       },
       "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/vip-vasoactive-intestinal-peptide-10mg/",
-        "price": 465.0,
-        "error": null
+        "price": null,
+        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/vip-vasoactive-intestinal-peptide-10mg/"
       },
       "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
         "url": "https://royal-peptides.com/shop/cjcno-dac-ipamorelin-10mg-kit/",
         "price": null,
-        "error": "HTTPSConnectionPool(host='royal-peptides.com', port=443): Read timed out. (read timeout=15)"
+        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/cjcno-dac-ipamorelin-10mg-kit/"
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/epitalon-kit/",
-        "price": 55.0,
-        "error": null
+        "price": null,
+        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/epitalon-kit/"
       },
       "Vesugen | Vial | single vial (dose unconfirmed)": {
         "url": "https://royal-peptides.com/shop/vesugen-20mg/",
@@ -450,13 +388,13 @@
     "Koi Peptides": {
       "BPC-157 | Vial | 10mg": {
         "url": "https://koipeptides.com/product/bpc-157/",
-        "price": 39.95,
-        "error": null
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
       },
       "KPV | Vial | 10mg": {
         "url": "https://koipeptides.com/product/kpv/",
-        "price": 34.95,
-        "error": null
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
       }
     },
     "Core Peptides": {
@@ -540,202 +478,202 @@
       "AOD-9604 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/aod-9604/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/aod-9604/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "ARA-290 (Cibinetide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ara-290/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/ara-290/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/bpc-157/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/bpc-157/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "DSIP | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/dsip/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/dsip/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "FOXO4-DRI | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/foxo4-dri/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/foxo4-dri/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://alpha-peptides.com/product/ghk-cu/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/ghk-cu/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Glutathione | Vial | 1500mg": {
         "url": "https://alpha-peptides.com/product/glutathione/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/glutathione/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Humanin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/humanin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/humanin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "IGF-1 LR3 | Vial | 1mg": {
         "url": "https://alpha-peptides.com/product/igf-1-lr3/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/igf-1-lr3/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/kisspeptin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/kisspeptin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "KPV | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/kpv/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/kpv/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "LL-37 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ll-37/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/ll-37/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/mots-c/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/mots-c/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "NAD+ | Vial | 500mg": {
         "url": "https://alpha-peptides.com/product/nad/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/nad/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "PT-141 (Bremelanotide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/pt-141/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/pt-141/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Selank | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/selank/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/selank/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Semax | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/semax/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/semax/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Sermorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/sermorelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/sermorelin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ss-31/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/ss-31/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/thymosin-alpha-1/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/thymosin-alpha-1/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/vip/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/vip/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "CJC-1295 with DAC | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-dac/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/cjc-1295-dac/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "CJC-1295 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-no-dac/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/cjc-1295-no-dac/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/epitalon/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/epitalon/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "GHRP-2 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ghrp-2/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/ghrp-2/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "GHRP-6 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ghrp-6/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/ghrp-6/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ipamorelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/ipamorelin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "5-Amino-1MQ | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/5-amino-1mq/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/5-amino-1mq/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Oxytocin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/oxytocin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/oxytocin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Thymalin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/thymalin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/thymalin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Gonadorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/gonadorelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/gonadorelin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Hexarelin | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/hexarelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/hexarelin/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Pinealon | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/pinealon/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/pinealon/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "SLU-PP-332 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/slu-pp-332/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/slu-pp-332/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/snap-8/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/snap-8/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Follistatin-344 | Vial | 1mg": {
         "url": "https://alpha-peptides.com/product/follistatin-344/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/follistatin-344/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Dihexa | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/dihexa/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/dihexa/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Bacteriostatic Water | Water | 10mL": {
         "url": "https://alpha-peptides.com/product/bac-water/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/bac-water/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "Melanotan II | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/mt-2/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/mt-2/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://alpha-peptides.com/product/glow/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='alpha-peptides.com', port=443): Max retries exceeded with url: /product/glow/ (Caused by NameResolutionError(\"HTTPSConnection(host='alpha-peptides.com', port=443): Failed to resolve 'alpha-peptides.com' ([Errno -2] Name or service not known)\"))"
       }
     },
     "Licensed Peptides": {
