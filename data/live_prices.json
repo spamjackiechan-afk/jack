@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-28T21:58:11Z",
+  "checked_at": "2026-08-29T09:14:37Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -29,28 +29,28 @@
       },
       "Selank | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/selank-10mg-vial/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/selank-10mg-vial/"
+        "price": 65.0,
+        "error": null
       },
       "Semax | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/semax-10mg/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/semax-10mg/"
+        "price": 65.0,
+        "error": null
       },
       "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/vip-vasoactive-intestinal-peptide-10mg/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/vip-vasoactive-intestinal-peptide-10mg/"
+        "price": 465.0,
+        "error": null
       },
       "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
         "url": "https://royal-peptides.com/shop/cjcno-dac-ipamorelin-10mg-kit/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/cjcno-dac-ipamorelin-10mg-kit/"
+        "price": 70.0,
+        "error": null
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/epitalon-kit/",
-        "price": null,
-        "error": "503 Server Error: Service Unavailable for url: https://royal-peptides.com/shop/epitalon-kit/"
+        "price": 55.0,
+        "error": null
       },
       "Vesugen | Vial | single vial (dose unconfirmed)": {
         "url": "https://royal-peptides.com/shop/vesugen-20mg/",
@@ -388,13 +388,13 @@
     "Koi Peptides": {
       "BPC-157 | Vial | 10mg": {
         "url": "https://koipeptides.com/product/bpc-157/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 39.95,
+        "error": null
       },
       "KPV | Vial | 10mg": {
         "url": "https://koipeptides.com/product/kpv/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 34.95,
+        "error": null
       }
     },
     "Core Peptides": {
