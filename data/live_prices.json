@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-04T09:19:35Z",
+  "checked_at": "2026-09-05T09:17:50Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -388,7 +388,7 @@
     "Koi Peptides": {
       "BPC-157 | Vial | 10mg": {
         "url": "https://koipeptides.com/product/bpc-157/",
-        "price": 39.95,
+        "price": 49.95,
         "error": null
       },
       "KPV | Vial | 10mg": {
@@ -552,7 +552,7 @@
       },
       "Selank | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/selank/",
-        "price": 23.15,
+        "price": 24.82,
         "error": null
       },
       "Semax | Vial | 10mg": {
@@ -607,7 +607,7 @@
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ipamorelin/",
-        "price": 42.99,
+        "price": 25.25,
         "error": null
       },
       "5-Amino-1MQ | Vial | 10mg": {
