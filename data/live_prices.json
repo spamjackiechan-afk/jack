@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-06T09:17:57Z",
+  "checked_at": "2026-09-07T09:19:25Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -388,13 +388,13 @@
     "Koi Peptides": {
       "BPC-157 | Vial | 10mg": {
         "url": "https://koipeptides.com/product/bpc-157/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 49.95,
+        "error": null
       },
       "KPV | Vial | 10mg": {
         "url": "https://koipeptides.com/product/kpv/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 34.95,
+        "error": null
       }
     },
     "Core Peptides": {
@@ -487,7 +487,7 @@
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/bpc-157/",
-        "price": 25.99,
+        "price": 27.29,
         "error": null
       },
       "DSIP | Vial | 5mg": {
@@ -502,7 +502,7 @@
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://alpha-peptides.com/product/ghk-cu/",
-        "price": 23.99,
+        "price": 25.19,
         "error": null
       },
       "Glutathione | Vial | 1500mg": {
@@ -527,7 +527,7 @@
       },
       "KPV | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/kpv/",
-        "price": 25.25,
+        "price": 26.51,
         "error": null
       },
       "LL-37 | Vial | 5mg": {
@@ -537,7 +537,7 @@
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/mots-c/",
-        "price": 27.55,
+        "price": 28.93,
         "error": null
       },
       "NAD+ | Vial | 500mg": {
@@ -547,17 +547,17 @@
       },
       "PT-141 (Bremelanotide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/pt-141/",
-        "price": 22.07,
+        "price": 23.17,
         "error": null
       },
       "Selank | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/selank/",
-        "price": 24.82,
+        "price": 26.06,
         "error": null
       },
       "Semax | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/semax/",
-        "price": 20.84,
+        "price": 21.88,
         "error": null
       },
       "Sermorelin | Vial | 10mg": {
@@ -567,7 +567,7 @@
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ss-31/",
-        "price": 35.79,
+        "price": 37.58,
         "error": null
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
@@ -587,7 +587,7 @@
       },
       "CJC-1295 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-no-dac/",
-        "price": 28.41,
+        "price": 29.83,
         "error": null
       },
       "Epitalon | Vial | 10mg": {
@@ -607,7 +607,7 @@
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ipamorelin/",
-        "price": 25.25,
+        "price": 26.51,
         "error": null
       },
       "5-Amino-1MQ | Vial | 10mg": {
@@ -662,7 +662,7 @@
       },
       "Bacteriostatic Water | Water | 10mL": {
         "url": "https://alpha-peptides.com/product/bac-water/",
-        "price": 10.99,
+        "price": 11.54,
         "error": null
       },
       "Melanotan II | Vial | 10mg": {
@@ -672,7 +672,7 @@
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://alpha-peptides.com/product/glow/",
-        "price": 48.41,
+        "price": 50.83,
         "error": null
       }
     },
