@@ -1482,11 +1482,6 @@ function warningHtml(name, gid){
 }
 
 
-// Most vendors on any single dose in this group. A control to reorder
-// vendors is pointless where there is only ever one, so it is not drawn.
-function maxVendorsInGroup(group){
-  return Math.max(...group.doses.map(d => Object.keys(d.prices).length));
-}
 
 // The setting is shared across the site rather than held per card — someone
 // who has said they want best-verified first means it generally, and having
@@ -1547,22 +1542,21 @@ function cardHtmlGrouped(group){
         </div>
         ${categoryTag ? `<div style="margin:6px 0 0 42px;">${categoryTag}</div>` : ''}
         ${warningHtml(group.peptide, gid)}
-        ${(group.doses.length > 1 || maxVendorsInGroup(group) > 1) ? `
         <div class="dose-row">
           <div class="dose-left">
             ${group.doses.length > 1 ? `
             <div class="dose-label">Dose</div>
             <div class="dose-pills">${pills}</div>` : ''}
           </div>
-          ${maxVendorsInGroup(group) > 1 ? `
+          ${`
           <div class="vendor-order-wrap">
             <select class="vendor-order-sel" title="Order vendors by price, by whose purity claim can be checked, or by how often visitors here actually click through to them" aria-label="How vendors are ordered for ${group.peptide}" onchange="setVendorOrder(this.value)">
               <option value="cheapest"${vendorOrder === 'cheapest' ? ' selected' : ''}>↓ Cheapest</option>
               <option value="verified"${vendorOrder === 'verified' ? ' selected' : ''}>✓ Purity</option>
               <option value="popular"${vendorOrder === 'popular' ? ' selected' : ''}>★ Popular</option>
             </select>
-          </div>` : ''}
-        </div>` : ''}
+          </div>`}
+        </div>
       </div>
       ${panels}
     </div>`;
