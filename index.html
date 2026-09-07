@@ -1520,6 +1520,28 @@ function setVendorOrder(value){
   });
 }
 
+// Each format gets its own icon so the badge matches the format tag rather
+// than showing a flask on capsules. Same stroke weight and 24x24 viewBox as
+// the rest of the icon set.
+const FORMAT_ICONS = {
+  // Erlenmeyer flask — the original, kept for vials
+  Vial: '<path d="M6.1 15h11.8"/><path d="M14 3v7.342a6 6 0 0 1 1.318 10.658h-6.635a6 6 0 0 1 1.317 -10.66v-7.34h4z"/><path d="M9 3h6"/>',
+  // Pump bottle with spray
+  Nasal: '<path d="M9 3h5v3H9z"/><path d="M14 4.5h3"/><path d="M8 9h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z"/><path d="M9 6v3"/><path d="M14 6v3"/><path d="M19.5 3.5v0"/><path d="M20.5 6v0"/><path d="M19.5 8.5v0"/>',
+  // Two-tone capsule on the diagonal
+  Capsules: '<path d="M15.5 3.5a5 5 0 0 1 5 5L8.5 20.5a5 5 0 0 1-5-5z"/><path d="M9.5 9.5l5 5"/>',
+  // Spoon — oral liquids and troches. The dropper shape read as a second
+  // bottle and was near-indistinguishable from the nasal icon at 17px.
+  Oral: '<ellipse cx="12" cy="7" rx="4" ry="5"/><path d="M12 12v10"/>',
+  // Droplet — bacteriostatic water
+  Water: '<path d="M12 2.7s5.5 6 5.5 10.3a5.5 5.5 0 1 1-11 0C6.5 8.7 12 2.7 12 2.7z"/>',
+};
+
+function formatIcon(fmt){
+  const paths = FORMAT_ICONS[fmt] || FORMAT_ICONS.Vial;
+  return `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+}
+
 function cardHtmlGrouped(group){
   const gid = doseKey(group);
   const pills = group.doses.map((item, i) => `
@@ -1535,7 +1557,7 @@ function cardHtmlGrouped(group){
     <div class="card">
       <div class="name-block">
         <div class="name-row">
-          <div class="icon-badge"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.1 15h11.8"/><path d="M14 3v7.342a6 6 0 0 1 1.318 10.658h-6.635a6 6 0 0 1 1.317 -10.66v-7.34h4z"/><path d="M9 3h6"/></svg></div>
+          <div class="icon-badge" title="${group.format}">${formatIcon(group.format)}</div>
           <h3>${group.peptide}</h3>
           <span class="meta-tag" style="margin-left:auto;">${group.format}</span>
           <button type="button" class="fav-btn ${isFavourite(group.peptide) ? 'saved' : ''}" title="Save this peptide" aria-label="Save ${group.peptide}" onclick="toggleFavourite('${group.peptide.replace(/'/g, "\\'")}', this)">${isFavourite(group.peptide) ? '★' : '☆'}</button>
