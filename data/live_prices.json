@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-08T09:18:17Z",
+  "checked_at": "2026-09-09T09:19:15Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -886,8 +886,8 @@
       },
       "CJC-1295 with DAC | Vial | 2mg": {
         "url": "https://puritypeptides.is/product/cjc-with-dac-2mg",
-        "price": 49.99,
-        "error": null
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
       },
       "CJC-1295 with DAC | Vial | 5mg": {
         "url": "https://puritypeptides.is/product/cjc-1295-with-dac-5mg",
@@ -936,8 +936,8 @@
       },
       "Gonadorelin | Vial | 2mg": {
         "url": "https://puritypeptides.is/product/gonadorelin-2mg",
-        "price": 99.99,
-        "error": null
+        "price": null,
+        "error": "no confident price match \u2014 page structure may have changed"
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://puritypeptides.is/product/ipamorelin-10mg",
@@ -956,8 +956,8 @@
       },
       "Sermorelin | Vial | 5mg": {
         "url": "https://puritypeptides.is/product/sermorelin-5mg",
-        "price": 59.99,
-        "error": null
+        "price": null,
+        "error": "browser navigation failed: Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://puritypeptides.is/product/sermorelin-5mg\", waiting until \"networkidle\"\n"
       },
       "SLU-PP-332 | Capsules | 500mcg x50 tabs": {
         "url": "https://puritypeptides.is/product/slu-pp-332-500mcg-50-tablets",
