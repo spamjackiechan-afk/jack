@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-09T09:19:15Z",
+  "checked_at": "2026-09-10T09:19:18Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -477,203 +477,203 @@
     "Alpha Peptides": {
       "AOD-9604 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/aod-9604/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 32.99,
+        "error": null
       },
       "ARA-290 (Cibinetide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ara-290/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 36.0,
+        "error": null
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/bpc-157/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 27.29,
+        "error": null
       },
       "DSIP | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/dsip/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 21.45,
+        "error": null
       },
       "FOXO4-DRI | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/foxo4-dri/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 62.63,
+        "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://alpha-peptides.com/product/ghk-cu/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 25.19,
+        "error": null
       },
       "Glutathione | Vial | 1500mg": {
         "url": "https://alpha-peptides.com/product/glutathione/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 36.83,
+        "error": null
       },
       "Humanin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/humanin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 108.95,
+        "error": null
       },
       "IGF-1 LR3 | Vial | 1mg": {
         "url": "https://alpha-peptides.com/product/igf-1-lr3/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 45.47,
+        "error": null
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/kisspeptin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 27.37,
+        "error": null
       },
       "KPV | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/kpv/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 26.51,
+        "error": null
       },
       "LL-37 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ll-37/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 35.79,
+        "error": null
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/mots-c/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 28.93,
+        "error": null
       },
       "NAD+ | Vial | 500mg": {
         "url": "https://alpha-peptides.com/product/nad/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 30.52,
+        "error": null
       },
       "PT-141 (Bremelanotide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/pt-141/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 23.17,
+        "error": null
       },
       "Selank | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/selank/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 26.06,
+        "error": null
       },
       "Semax | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/semax/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 21.88,
+        "error": null
       },
       "Sermorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/sermorelin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 44.53,
+        "error": null
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ss-31/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 37.58,
+        "error": null
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/thymosin-alpha-1/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 41.44,
+        "error": null
       },
       "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/vip/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 37.89,
+        "error": null
       },
       "CJC-1295 with DAC | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-dac/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 33.99,
+        "error": null
       },
       "CJC-1295 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-no-dac/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 29.83,
+        "error": null
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/epitalon/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "404 Client Error: Not Found for url: https://alpha-peptides.com/product/epitalon/"
       },
       "GHRP-2 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ghrp-2/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 14.32,
+        "error": null
       },
       "GHRP-6 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ghrp-6/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 14.32,
+        "error": null
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ipamorelin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 26.51,
+        "error": null
       },
       "5-Amino-1MQ | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/5-amino-1mq/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 33.12,
+        "error": null
       },
       "Oxytocin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/oxytocin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 39.59,
+        "error": null
       },
       "Thymalin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/thymalin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 50.53,
+        "error": null
       },
       "Gonadorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/gonadorelin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 70.0,
+        "error": null
       },
       "Hexarelin | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/hexarelin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 29.53,
+        "error": null
       },
       "Pinealon | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/pinealon/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 33.16,
+        "error": null
       },
       "SLU-PP-332 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/slu-pp-332/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 84.21,
+        "error": null
       },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/snap-8/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 22.11,
+        "error": null
       },
       "Follistatin-344 | Vial | 1mg": {
         "url": "https://alpha-peptides.com/product/follistatin-344/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 84.21,
+        "error": null
       },
       "Dihexa | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/dihexa/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 35.79,
+        "error": null
       },
       "Bacteriostatic Water | Water | 10mL": {
         "url": "https://alpha-peptides.com/product/bac-water/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 11.54,
+        "error": null
       },
       "Melanotan II | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/mt-2/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 22.1,
+        "error": null
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://alpha-peptides.com/product/glow/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 50.83,
+        "error": null
       }
     },
     "Licensed Peptides": {
@@ -886,8 +886,8 @@
       },
       "CJC-1295 with DAC | Vial | 2mg": {
         "url": "https://puritypeptides.is/product/cjc-with-dac-2mg",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 49.99,
+        "error": null
       },
       "CJC-1295 with DAC | Vial | 5mg": {
         "url": "https://puritypeptides.is/product/cjc-1295-with-dac-5mg",
@@ -936,8 +936,8 @@
       },
       "Gonadorelin | Vial | 2mg": {
         "url": "https://puritypeptides.is/product/gonadorelin-2mg",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 99.99,
+        "error": null
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://puritypeptides.is/product/ipamorelin-10mg",
@@ -956,8 +956,8 @@
       },
       "Sermorelin | Vial | 5mg": {
         "url": "https://puritypeptides.is/product/sermorelin-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://puritypeptides.is/product/sermorelin-5mg\", waiting until \"networkidle\"\n"
+        "price": 59.99,
+        "error": null
       },
       "SLU-PP-332 | Capsules | 500mcg x50 tabs": {
         "url": "https://puritypeptides.is/product/slu-pp-332-500mcg-50-tablets",
