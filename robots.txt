@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Not useful in search results and holds no public content
+Disallow: /admin-reviews.html
+Disallow: /api/
+
+Sitemap: https://discountspeptides.com/sitemap.xml
