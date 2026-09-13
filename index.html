@@ -239,6 +239,34 @@
   .modal-later:hover{color:var(--ink);}
   @media (max-width:520px){ .modal-card{padding:26px 22px 22px;} .modal-card h2{font-size:22px;} }
 
+  .deals-band{
+    display:none; border:1px solid var(--success); background:linear-gradient(180deg, rgba(232,184,75,.07), transparent);
+    border-radius:12px; padding:16px 18px; margin:0 0 20px;
+  }
+  .deals-band.show{display:block;}
+  .deals-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:12px;}
+  .deals-head h3{font-family:'Fraunces',serif; font-weight:500; font-size:18px; margin:0; color:var(--ink);}
+  .deals-head .sub{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft);}
+  .deals-scroll{display:flex; gap:10px; overflow-x:auto; padding-bottom:4px;}
+  .deal-card{
+    flex:0 0 auto; min-width:186px; max-width:210px; background:var(--paper); border:1px solid var(--rule);
+    border-radius:9px; padding:11px 13px; text-decoration:none; color:inherit; transition:border-color .12s;
+  }
+  .deal-card:hover{border-color:var(--success);}
+  .deal-pep{font-size:13.5px; font-weight:600; color:var(--ink); line-height:1.3; margin-bottom:2px;}
+  .deal-vendor{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--lowest); margin-bottom:7px;}
+  .deal-prices{display:flex; align-items:baseline; gap:7px;}
+  .deal-now{font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:var(--ink);}
+  .deal-was{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-soft); text-decoration:line-through;}
+  .deal-off{
+    display:inline-block; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:10px;
+    font-weight:600; color:var(--paper); background:var(--success); padding:2px 7px; border-radius:4px;
+  }
+  .sale-badge{
+    font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:600; color:var(--paper);
+    background:var(--success); padding:1px 5px; border-radius:3px; margin-left:6px; white-space:nowrap;
+  }
+
   .signup-band{
     border:1px solid var(--rule); background:var(--paper-raised); border-radius:12px;
     padding:22px 24px; margin:0 0 28px;
@@ -1016,6 +1044,14 @@
     </div>
   </div>
 
+  <div class="deals-band" id="dealsBand">
+    <div class="deals-head">
+      <h3>On sale right now</h3>
+      <span class="sub" id="dealsSub"></span>
+    </div>
+    <div class="deals-scroll" id="dealsScroll"></div>
+  </div>
+
   <div class="signup-band" id="signupBand">
     <h3>Save what you're watching</h3>
     <p>Star any peptide to add it to your watchlist. We ask for an email so we can tell you when a saved compound drops in price, and when partner vendors run a real discount. Nothing else.</p>
@@ -1351,7 +1387,13 @@ function renderPriceRow(vendor, price, item, lowestVal){
   const popularBadge = isPopularChoice(item.peptide, vendor) ? `<span class="popular-badge" title="Most clicked-through vendor for this peptide on this site">🔥 Popular here</span>` : '';
   const codeBadge = link.promoCode ? `<span class="promo-code" data-code="${link.promoCode}" role="button" tabindex="0" onclick="event.preventDefault(); event.stopPropagation(); copyCode(this);" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); event.stopPropagation(); copyCode(this);}">Code: ${link.promoCode}</span>` : '';
   const unavailableTag = !link.url ? `<span class="unavailable-tag">no link yet</span>` : '';
-  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}${popularBadge}</span><span class="val"><span class="price-amount">${fmtPrice(price)}</span>${codeBadge}${unavailableTag}</span>`;
+  // Only shown where the tracker saw a struck-through higher price on the
+  // vendor's own page today — never inferred from our own stored data.
+  const wasPrice = item.onSale && item.onSale[vendor];
+  const saleBadge = (wasPrice && wasPrice > price)
+    ? `<span class="sale-badge" title="Was ${fmtPrice(wasPrice)} \u2014 sale price seen on the vendor's page today">${Math.round((1 - price / wasPrice) * 100)}% off</span>`
+    : '';
+  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}${popularBadge}</span><span class="val"><span class="price-amount">${fmtPrice(price)}</span>${saleBadge}${codeBadge}${unavailableTag}</span>`;
   if (link.url){
     return `<a class="price-row ${price === lowestVal ? 'lowest' : ''}" href="${link.url}" target="_blank" rel="noopener sponsored" onclick="trackClick('${vendor.replace(/'/g,"\\'")}', '${item.peptide.replace(/'/g,"\\'")}')">${inner}</a>`;
   }
@@ -1748,6 +1790,11 @@ async function loadLivePrices(){
           match.prices[vendor] = result.price;
           match.liveVerified = match.liveVerified || {};
           match.liveVerified[vendor] = true;
+          // A vendor showing a struck-through higher price is running a sale.
+          if (result.regular_price && result.regular_price > result.price){
+            match.onSale = match.onSale || {};
+            match.onSale[vendor] = result.regular_price;
+          }
           updatedCount++;
         }
       }
@@ -1759,6 +1806,7 @@ async function loadLivePrices(){
       banner.textContent = `✓ ${updatedCount} price${updatedCount === 1 ? '' : 's'} confirmed live as of ${new Date(live.checked_at).toLocaleString()}`;
       countEl.after(banner);
       render();
+      renderDeals();
     }
   } catch (err) {
     // Silent by design — a visitor should never see a broken page just
@@ -2170,6 +2218,64 @@ suppliersToggle.addEventListener('click', async () => {
   }
 });
 
+
+
+// ---------- Live deals ----------
+// Built only from sales the tracker actually observed on a vendor's page
+// (a struck-through higher price). Nothing here is inferred or estimated,
+// so the band simply stays hidden when no vendor is running anything.
+function collectDeals(){
+  const deals = [];
+  DATA.included.forEach(item => {
+    if (!item.onSale) return;
+    Object.entries(item.onSale).forEach(([vendor, was]) => {
+      const now = item.prices[vendor];
+      if (!now || !was || was <= now) return;
+      deals.push({
+        peptide: item.peptide, format: item.format, size: item.size,
+        vendor, now, was, pct: Math.round((1 - now / was) * 100), item,
+      });
+    });
+  });
+  // Biggest saving first, and only one entry per compound so a vendor-wide
+  // sale doesn't fill the strip with the same product at every size.
+  deals.sort((a, b) => b.pct - a.pct);
+  const seen = new Set();
+  return deals.filter(d => {
+    const k = d.peptide + '|' + d.vendor;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  }).slice(0, 12);
+}
+
+function renderDeals(){
+  const band = document.getElementById('dealsBand');
+  const scroll = document.getElementById('dealsScroll');
+  const sub = document.getElementById('dealsSub');
+  if (!band) return;
+
+  const deals = collectDeals();
+  if (!deals.length){ band.classList.remove('show'); return; }
+
+  const vendors = new Set(deals.map(d => d.vendor));
+  sub.textContent = `${deals.length} price${deals.length === 1 ? '' : 's'} cut across ${vendors.size} vendor${vendors.size === 1 ? '' : 's'} \u00b7 checked today`;
+
+  scroll.innerHTML = deals.map(d => {
+    const link = resolveVendorLink(d.vendor, d.item);
+    return `<a class="deal-card" href="${link.url}" target="_blank" rel="noopener sponsored"
+              onclick="trackClick('${d.vendor.replace(/'/g, "\\'")}', '${d.peptide.replace(/'/g, "\\'")}')">
+      <div class="deal-pep">${escapeHtml(d.peptide)}</div>
+      <div class="deal-vendor">${escapeHtml(d.vendor)} \u00b7 ${escapeHtml(d.size)}</div>
+      <div class="deal-prices">
+        <span class="deal-now">$${d.now}</span>
+        <span class="deal-was">$${d.was}</span>
+      </div>
+      <span class="deal-off">${d.pct}% off</span>
+    </a>`;
+  }).join('');
+  band.classList.add('show');
+}
 
 // ---------- Membership ----------
 // A "member" is simply someone who has given an email. Held on the device,
