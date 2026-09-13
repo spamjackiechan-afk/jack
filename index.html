@@ -288,6 +288,8 @@
   .signup-consent{font-size:11.5px; color:var(--ink-soft); margin-top:11px; line-height:1.5;}
   .signup-msg{font-family:'IBM Plex Mono', monospace; font-size:12px; margin-top:10px; min-height:16px;}
   .signup-msg.ok{color:var(--lowest);} .signup-msg.err{color:var(--amber);}
+  .sale-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--success);}
+  #saleChip.active{background:var(--success); border-color:var(--success); color:var(--paper);}
   .fav-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--success);}
   .empty-favs{color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:13px; padding:28px 0; text-align:center;}
 
@@ -1075,6 +1077,7 @@
     <button class="chip" data-filter="Capsules">Capsules</button>
     <button class="chip" data-filter="Oral">Oral</button>
     <button class="chip" data-filter="Water">Water</button>
+    <button class="chip" data-filter="__sale" id="saleChip" style="display:none;">% On sale <span class="sale-count" id="saleCount"></span></button>
     <button class="chip" data-filter="__saved" id="savedChip">★ Saved <span class="fav-count" id="favCount"></span></button>
     <select id="vendorFilter" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
       <option value="All">All vendors</option>
@@ -1318,16 +1321,17 @@ function render(){
   const q = searchEl.value.trim().toLowerCase();
   const favSet = new Set(getFavourites());
   let items = DATA.included.filter(i => {
-    const matchesFormat = activeFilter === 'All' || activeFilter === '__saved' || i.format === activeFilter;
+    const matchesFormat = activeFilter === 'All' || activeFilter === '__saved' || activeFilter === '__sale' || i.format === activeFilter;
     const matchesSaved = activeFilter !== '__saved' || favSet.has(i.peptide);
+    const matchesSale  = activeFilter !== '__sale' || Boolean(i.onSale && Object.keys(i.onSale).length);
     const matchesVendor = activeVendor === 'All' || (i.prices && activeVendor in i.prices);
     const matchesCategory = activeCategory === 'All' || i.category === activeCategory;
     const matchesQuery = !q || i.peptide.toLowerCase().includes(q);
-    return matchesFormat && matchesSaved && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
+    return matchesFormat && matchesSaved && matchesSale && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
   });
 
   countEl.textContent = items.length + ' listing' + (items.length === 1 ? '' : 's') +
-    (q ? ` matching "${q}"` : '') + (activeFilter !== 'All' ? ` — ${activeFilter === '__saved' ? 'Saved' : activeFilter}` : '') +
+    (q ? ` matching "${q}"` : '') + (activeFilter !== 'All' ? ` — ${activeFilter === '__saved' ? 'Saved' : activeFilter === '__sale' ? 'On sale' : activeFilter}` : '') +
     (activeVendor !== 'All' ? ` — ${activeVendor}` : '');
 
   let groups = groupByPeptideFormat(items);
@@ -2275,6 +2279,16 @@ function renderDeals(){
     </a>`;
   }).join('');
   band.classList.add('show');
+
+  // The chip only appears when something is actually discounted, so it never
+  // leads to an empty result.
+  const onSaleListings = DATA.included.filter(i => i.onSale && Object.keys(i.onSale).length).length;
+  const chip = document.getElementById('saleChip');
+  const count = document.getElementById('saleCount');
+  if (chip && onSaleListings){
+    chip.style.display = '';
+    if (count) count.textContent = `(${onSaleListings})`;
+  }
 }
 
 // ---------- Membership ----------
