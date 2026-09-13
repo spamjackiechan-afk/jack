@@ -1317,6 +1317,66 @@ function compoundEvidenceBand(peptide){
 }
 
 
+
+// ---------- Search aliases ----------
+// Someone searching "Ozempic" is looking for semaglutide; someone searching
+// "epithalon" is using the spelling their vendor uses. Matching only the
+// literal peptide name means those searches return nothing at all.
+// Each key is what a person might type; the values are matched against the
+// compound name.
+const SEARCH_ALIASES = {
+  // Brand names of the approved medicine a compound is the ingredient of
+  'ozempic': ['semaglutide'], 'wegovy': ['semaglutide'], 'rybelsus': ['semaglutide'],
+  'mounjaro': ['tirzepatide'], 'zepbound': ['tirzepatide'],
+  'egrifta': ['tesamorelin'],
+  'scenesse': ['melanotan i'], 'afamelanotide': ['melanotan i'],
+  'vyleesi': ['pt-141'],
+  'viagra': ['sildenafil'],
+
+  // Vendors' own coded names
+  'glp-3': ['retatrutide'], 'glp3': ['retatrutide'], 'glp-3 rt': ['retatrutide'],
+  'glp-2': ['tirzepatide'], 'glp2': ['tirzepatide'], 'glp-2 tz': ['tirzepatide'],
+  'glp-1 sm': ['semaglutide'],
+
+  // Alternate spellings and second names
+  'epithalon': ['epitalon'], 'epithalone': ['epitalon'],
+  'mod grf': ['cjc-1295'], 'modgrf': ['cjc-1295'], 'mod grf 1-29': ['cjc-1295'],
+  'thymalfasin': ['thymosin alpha-1'],
+  'tb500': ['tb-500'], 'thymosin beta': ['tb-500'],
+  'bpc157': ['bpc-157'], 'pentadecapeptide': ['bpc-157'],
+  'ghk': ['ghk-cu'],
+  'mt2': ['melanotan ii'], 'mt-ii': ['melanotan ii'],
+  'ss31': ['ss-31'], 'elamipretide': ['ss-31'],
+  'ibutamoren': ['mk-677'], 'ostarine': ['mk-2866'],
+  'cibinetide': ['ara-290'],
+  'methylcobalamin': ['methyl b12'], 'b-12': ['methyl b12'],
+  'motsc': ['mots-c'], 'mots c': ['mots-c'],
+  'igf1': ['igf-1'], 'igf': ['igf-1'],
+
+  // What people are actually looking for
+  'tanning': ['melanotan'],
+  'sleep': ['dsip', 'epitalon'],
+  'bac water': ['bacteriostatic'], 'bacwater': ['bacteriostatic'],
+  'reconstitution': ['bacteriostatic'],
+  'weight loss': ['semaglutide', 'tirzepatide', 'retatrutide', 'aod-9604', 'cagrilintide'],
+  'glow': ['glow'], 'healing': ['bpc-157', 'tb-500', 'kpv'],
+};
+
+// Returns every compound-name fragment a query should also match against.
+function aliasTargets(q){
+  const out = [];
+  for (const [alias, targets] of Object.entries(SEARCH_ALIASES)){
+    if (alias.includes(q) || q.includes(alias)) out.push(...targets);
+  }
+  return out;
+}
+
+function matchesSearch(peptide, q){
+  const name = peptide.toLowerCase();
+  if (name.includes(q)) return true;
+  return aliasTargets(q).some(t => name.includes(t));
+}
+
 function render(){
   const q = searchEl.value.trim().toLowerCase();
   const favSet = new Set(getFavourites());
@@ -1326,7 +1386,7 @@ function render(){
     const matchesSale  = activeFilter !== '__sale' || Boolean(i.onSale && Object.keys(i.onSale).length);
     const matchesVendor = activeVendor === 'All' || (i.prices && activeVendor in i.prices);
     const matchesCategory = activeCategory === 'All' || i.category === activeCategory;
-    const matchesQuery = !q || i.peptide.toLowerCase().includes(q);
+    const matchesQuery = !q || matchesSearch(i.peptide, q);
     return matchesFormat && matchesSaved && matchesSale && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
   });
 
