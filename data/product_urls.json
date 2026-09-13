@@ -215,7 +215,7 @@
     "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": "https://alpha-peptides.com/product/vip/",
     "CJC-1295 with DAC | Vial | 5mg": "https://alpha-peptides.com/product/cjc-1295-dac/",
     "CJC-1295 | Vial | 10mg": "https://alpha-peptides.com/product/cjc-1295-no-dac/",
-    "Epitalon | Vial | 10mg": "https://alpha-peptides.com/product/epitalon/",
+    "Epitalon | Vial | 10mg": "https://alpha-peptides.com/product/epithalon/",
     "GHRP-2 | Vial | 5mg": "https://alpha-peptides.com/product/ghrp-2/",
     "GHRP-6 | Vial | 5mg": "https://alpha-peptides.com/product/ghrp-6/",
     "Ipamorelin | Vial | 10mg": "https://alpha-peptides.com/product/ipamorelin/",
@@ -231,7 +231,15 @@
     "Dihexa | Vial | 5mg": "https://alpha-peptides.com/product/dihexa/",
     "Bacteriostatic Water | Water | 10mL": "https://alpha-peptides.com/product/bac-water/",
     "Melanotan II | Vial | 10mg": "https://alpha-peptides.com/product/mt-2/",
-    "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": "https://alpha-peptides.com/product/glow/"
+    "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": "https://alpha-peptides.com/product/glow/",
+    "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": "https://alpha-peptides.com/product/cjc-1295-ipamorelin-blend/",
+    "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 10/10/50/10mg": "https://alpha-peptides.com/product/klow/",
+    "TB-500 | Vial | TB-500 10mg": "https://alpha-peptides.com/product/tb-500/",
+    "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": "https://alpha-peptides.com/product/klow/",
+    "TB-500 | Vial | 10mg": "https://alpha-peptides.com/product/tb-500/",
+    "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": "https://alpha-peptides.com/product/glp-3-rt/",
+    "Retatrutide | Vial | 10mg": "https://alpha-peptides.com/product/glp-3-rt/",
+    "Cagrilintide | Vial | 5mg/10mg": "https://alpha-peptides.com/product/cagrilintide/"
   },
   "Licensed Peptides": {
     "GHK-Cu (Copper Peptide) | Vial | 50mg": "https://licensedpeptides.com/product/ghk-cu/",
