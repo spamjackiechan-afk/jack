@@ -141,6 +141,31 @@ def _find_price_in_jsonld(node):
     return None
 
 
+def extract_regular_price(html: str, current: float | None) -> float | None:
+    """The pre-sale price, where a vendor is showing one.
+
+    WooCommerce renders a sale as <del>old</del><ins>new</ins>, and also spells
+    it out in text ("Original price was: $37.58"). Only returns a figure that is
+    genuinely higher than the current price, so a mis-parse can't invent a
+    discount that isn't there.
+    """
+    candidates = []
+
+    for m in re.finditer(r"<del[^>]*>(.*?)</del>", html, re.DOTALL | re.IGNORECASE):
+        found = re.search(r"[\d,]+\.?\d*", re.sub(r"<[^>]+>", "", m.group(1)))
+        if found:
+            candidates.append(float(found.group(0).replace(",", "")))
+
+    for m in re.finditer(r"Original price was:\s*\$?([\d,]+\.?\d*)", html, re.IGNORECASE):
+        candidates.append(float(m.group(1).replace(",", "")))
+
+    if not candidates or current is None:
+        return None
+    # A sale means the old price is higher. Anything else is a parsing artefact.
+    higher = [p for p in candidates if p > current]
+    return min(higher) if higher else None
+
+
 def extract_price(html: str) -> float | None:
     """
     Primary strategy: read the page's own structured data (JSON-LD), which
@@ -216,7 +241,7 @@ def check_product(url: str) -> dict:
     price = extract_price(resp.text)
     if price is None:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
-    return {"url": url, "price": price, "error": None}
+    return {"url": url, "price": price, "regular_price": extract_regular_price(html, price), "error": None}
 
 
 def check_product_with_browser(url: str, browser) -> dict:
@@ -240,7 +265,7 @@ def check_product_with_browser(url: str, browser) -> dict:
     price = extract_price(html)
     if price is None:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
-    return {"url": url, "price": price, "error": None}
+    return {"url": url, "price": price, "regular_price": extract_regular_price(html, price), "error": None}
 
 
 def main():
