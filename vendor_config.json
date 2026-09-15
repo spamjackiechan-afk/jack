@@ -231,5 +231,14 @@
     "testing_standard": "\u226599% purity floor; lots below floor rejected outright",
     "testing_note": "Describes a five-test panel per lot (Qualitative ID, Percent Purity, Quantitative Assay, Heavy Metals, Conformity) and confirms identity by HPLC and MS before accepting a lot into inventory. COAs are not published on the site \u2014 they are supplied on request by email against a lot number, so a buyer cannot check before ordering.",
     "testing_tier": 2
+  },
+  "Midwest Peptide": {
+    "status": "approved",
+    "site_url": "https://midwestpeptide.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://midwestpeptide.com/?ref=DISCOUNT",
+    "promo_code": "DISCOUNT",
+    "guidelines_notes": "Approved 2026-09-15. Query-string referral (?ref=DISCOUNT) \u2014 same handling as Royal Peptides: site logic merges the ref param onto per-product URLs when present. robots.txt confirmed clean (Allow: /; only blocks /admin/, /account/, /affiliate/, /checkout/, /cart, /api/) \u2014 eligible for the automated live price tracker.",
+    "last_checked": "2026-09-15"
   }
 }

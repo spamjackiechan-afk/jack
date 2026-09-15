@@ -84,6 +84,12 @@ VENDORS = {
                                   # page is /product/ghk-cu/, a distinct page from the blocked
                                   # /product/ghk-cu-testing/. Affiliate partner.
     },
+    "Midwest Peptide": {
+        "robots_checked_by": "Jackson, 2026-09-15",
+        "robots_allows": True,   # confirmed: robots.txt Allow: / with only /admin/, /account/,
+                                  # /affiliate/, /checkout/, /cart, /api/ blocked — /products/
+                                  # pages are wide open. Affiliate partner.
+    },
 }
 
 HEADERS = {
