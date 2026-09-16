@@ -4,7 +4,12 @@ Used by the Grok automation `testing-refs-weekly`.
 Does not publish. A finding is proposed for `testing.html` only if all four gates pass.
 
 Live page: https://discountspeptides.com/testing.html
-Source files: `testing.html`, optionally `data/site-guide-evidence.json`
+Source files: `testing.html`, `data/testing-refs-status.json`, `vendor_config.json`
+
+After a human approves a draft (or a NO CHANGE verify), update:
+- `data/testing-refs-status.json` (`last_verified`, `status`)
+- the "last verified" line on `testing.html` (`#refs-verified`)
+- `testing.html` Sources / concern copy only when verdict is PROPOSE and Jackson accepts it
 
 ## Gate 1 — source_ok
 
@@ -63,4 +68,4 @@ verdict: PROPOSE | REJECT
 Propose only if all four are yes.
 If any PROPOSE or a current numbered ref is dead, open a GitHub issue:
 `[testing refs] YYYY-MM-DD draft`
-Do not edit `testing.html` or other live files.
+Do not edit `testing.html` or other live files from the automation.
