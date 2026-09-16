@@ -225,7 +225,7 @@ function welcomeFor(page) {
   if (page === "suppliers") {
     return "You’re on suppliers — who’s listed, shipping/payment from our notes, or links to testing and the price list. Facts only, no hype.";
   }
-  return "Hi — catalog lookup, price compares, and pointers to testing or suppliers. Research use only; no dosing or medical advice.";
+  return "Hi — browse a catalog shelf, compare prices, or ask about a named peptide. Research use only; no dosing or medical advice.";
 }
 
 function isRefusal(lower) {

@@ -12,8 +12,8 @@
   const GREETINGS = {
     home: {
       welcome:
-        "Hi — I can help you find a peptide on this catalog, compare prices, or point you to testing notes and suppliers. Research use only; I don’t give dosing or medical advice.",
-      pills: ["Find a peptide", "Compare prices", "What does testing mean?", "Go to suppliers"],
+        "Hi — browse a catalog shelf, compare prices, or ask about a named peptide. Research use only; no dosing or medical advice.",
+      pills: ["Tissue Repair & Recovery", "Metabolic & Weight", "Growth Hormone & Muscle", "Cognitive & Neurological", "Cellular & Longevity", "Sexual Health & Hormonal"],
     },
     testing: {
       welcome:
