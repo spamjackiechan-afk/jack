@@ -213,12 +213,12 @@
   },
   "Alpha Peptides": {
     "status": "approved",
-    "site_url": "https://alpha-peptides.com",
+    "site_url": "https://alpha-peptides.io",
     "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://alpha-peptides.com/aff/863/",
+    "affiliate_link_base": "https://alpha-peptides.io/aff/863/",
     "promo_code": "DISCOUNT",
-    "guidelines_notes": "Approved 2026-08-23. Referral link is path-based (/aff/863/), not query-string \u2014 site logic routes all Alpha Peptides clicks through this link as-is rather than combining with per-product URLs, same safety handling as Licensed Peptides. robots.txt confirmed clean (standard WooCommerce pattern, only blocks admin/cart-tracking paths) \u2014 eligible for the automated live price tracker.",
-    "last_checked": "2026-08-23",
+    "guidelines_notes": "Approved 2026-08-23. Referral link is path-based (/aff/863/), not query-string \u2014 site logic routes all Alpha Peptides clicks through this link as-is rather than combining with per-product URLs, same safety handling as Licensed Peptides. robots.txt confirmed clean (standard WooCommerce pattern, only blocks admin/cart-tracking paths) \u2014 eligible for the automated live price tracker. Domain migration 2026-08-27: registrar took alpha-peptides.io offline; store moved to alpha-peptides.io (paths + aff ID 863 unchanged).",
+    "last_checked": "2026-09-15",
     "testing_researched": "2026-08-25",
     "testing_methods": [
       "HPLC (purity)",
