@@ -238,7 +238,18 @@
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://midwestpeptide.com/?ref=DISCOUNT",
     "promo_code": "DISCOUNT",
-    "guidelines_notes": "Approved 2026-09-15. Query-string referral (?ref=DISCOUNT) \u2014 same handling as Royal Peptides: site logic merges the ref param onto per-product URLs when present. robots.txt confirmed clean (Allow: /; only blocks /admin/, /account/, /affiliate/, /checkout/, /cart, /api/) \u2014 eligible for the automated live price tracker.",
-    "last_checked": "2026-09-15"
+    "guidelines_notes": "Approved 2026-09-15. Query-string referral (?ref=DISCOUNT) \u2014 same handling as Royal Peptides: site logic merges the ref param onto per-product URLs when present. robots.txt confirmed clean (Allow: /; only blocks /admin/, /account/, /affiliate/, /checkout/, /cart, /api/) \u2014 eligible for the automated live price tracker. Trust/COA red flags (2026-09-15): Tesamorelin 10mg Chromate COA (batch MPTM001, chromate.org/verify MIDWEST7M91B) labeled 10mg but measured ~2.956mg (\u221270.4%); purity ~99% conforms but quantity fails \u2014 product still sold with that COA attached. GLP-1 SM (Semaglutide) coa_url points to a Freedom Diagnostics COA that is actually for Semax (lot MPSX001) \u2014 wrong document on the Semaglutide product; Semax coa_url is null. Lighter trust context: Trustpilot ~4.5\u20134.8 mostly positive, but the affiliate programme incentivises Trustpilot reviews (500 pts); domain relatively new; mixed third-party risk scores \u2014 the COA quantity fail and wrong-document attachment are the main flags.",
+    "last_checked": "2026-09-15",
+    "cookie_days": 30,
+    "commission": "10%",
+    "testing_researched": "2026-09-15",
+    "testing_methods": [
+      "HPLC (purity)",
+      "Quantitative assay / net content"
+    ],
+    "testing_lab": "Freedom Diagnostics + Chromate (named; public verify portals)",
+    "testing_standard": "High purity claimed on published COAs; net content reported on Chromate COAs where present",
+    "testing_note": "COA RED FLAGS \u2014 not a clean testing story. (1) Tesamorelin 10mg Chromate COA batch MPTM001 (chromate.org/verify MIDWEST7M91B): labeled 10mg, measured ~2.956mg (\u221270.4%); purity ~99% conforms but quantity fails \u2014 product still sold with that failing COA attached. (2) GLP-1 SM (Semaglutide) coa_url points to a Freedom Diagnostics COA that is actually for Semax (lot MPSX001) \u2014 wrong document on the Semaglutide product; Semax coa_url is null. Labs (Freedom Diagnostics + Chromate) are named and publicly verifiable, which supports tier 2 on lab-identity verifiability alone \u2014 do not read the tier as a clean bill of health given the quantity fail and mismatched COA.",
+    "testing_tier": 2
   }
 }
