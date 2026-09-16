@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-16T14:16:35Z",
+  "checked_at": "2026-09-16T14:47:31Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1344,20 +1344,26 @@
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://www.americanpeptides.us/products/glow-mix",
-        "price": 150.0,
-        "regular_price": null,
+        "price": 120.0,
+        "regular_price": 150.0,
         "error": null
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://www.americanpeptides.us/products/klow-blend",
-        "price": 200.0,
-        "regular_price": null,
+        "price": 160.0,
+        "regular_price": 200.0,
         "error": null
       },
       "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/bpc-157-tb-500",
         "price": 195.0,
         "regular_price": null,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
+        "url": "https://www.americanpeptides.us/products/copper-binding-peptide-ghk-cu",
+        "price": 40.0,
+        "regular_price": 50.0,
         "error": null
       }
     },
