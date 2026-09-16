@@ -139,13 +139,13 @@
   "Royal Peptides": {
     "status": "approved",
     "site_url": "https://royal-peptides.com",
-    "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://royal-peptides.com/?ref=tofnghus",
-    "promo_code": "discountpeptide",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://royal-peptides.com/?ref=discount",
+    "promo_code": null,
     "cookie_days": null,
     "commission": "10% (per earlier program page)",
-    "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed.",
-    "last_checked": "2026-08-11",
+    "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed. GoAffPro hub 2026-09-15: referral synced to ?ref=discount (was tofnghus). 2026-09-15: promo_code cleared \u2014 neither discountpeptide nor discount verified on public storefront/checkout; GoAffPro portal reported no coupon. Tracking link-only via ?ref=discount until checkout-verified.",
+    "last_checked": "2026-09-15",
     "payment_methods": [
       "Zelle",
       "Chime",
