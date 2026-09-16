@@ -139,13 +139,13 @@
   "Royal Peptides": {
     "status": "approved",
     "site_url": "https://royal-peptides.com",
-    "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://royal-peptides.com/?ref=tofnghus",
-    "promo_code": "discountpeptide",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://royal-peptides.com/?ref=discount",
+    "promo_code": null,
     "cookie_days": null,
     "commission": "10% (per earlier program page)",
-    "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides — those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed.",
-    "last_checked": "2026-08-11",
+    "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides — those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed. GoAffPro (royalpeptides.goaffpro.com) confirmed 2026-09-16: Jackson — NO affiliation/promo coupon; dashboard reports “No coupon code found!”; promo_code null; tracking_type link. Commission via GoAffPro product affiliate links: affiliate_link_base https://royal-peptides.com/?ref=discount so resolveVendorLink merges ?ref=discount onto per-product shop URLs (e.g. https://royal-peptides.com/shop/5-amino-1mq/?ref=discount). Do not display a Royal coupon on the site.",
+    "last_checked": "2026-09-16",
     "payment_methods": [
       "Zelle",
       "Chime",
@@ -164,7 +164,8 @@
     "testing_standard": "Not guaranteed per batch",
     "testing_note": "Their own FAQ hedges: testing 'may include' HPLC/MS 'depending on the batch and documentation available' — less definitive than their marketing tagline implies.",
     "testing_researched": "2026-08-17",
-    "testing_tier": 4
+    "testing_tier": 4,
+    "affiliate_path_suffix": null
   },
   "BioIntegrity Research": {
     "status": "not_applied",
