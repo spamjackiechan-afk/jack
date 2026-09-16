@@ -90,6 +90,12 @@ VENDORS = {
                                   # /affiliate/, /checkout/, /cart, /api/ blocked — /products/
                                   # pages are wide open. Affiliate partner.
     },
+    "Orbitrex Peptide": {
+        "robots_checked_by": "research 2026-09-15 (GoAffPro onboarding)",
+        "robots_allows": True,   # confirmed: User-agent * Disallow only /api/, account/cart/checkout,
+                                  # portal/affiliate-portal, wp-admin/login/json/xmlrpc, and a few
+                                  # querystrings — /product/ and /shop/ pages are not disallowed.
+    },
 }
 
 HEADERS = {
