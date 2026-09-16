@@ -97,6 +97,12 @@ VENDORS = {
                                   # Domain lock: americanpeptides.us only (NOT buyamericanpeptides.com /
                                   # Legion, NOT americanpeptide.com). Affiliate partner (probation).
     },
+    "Offline Peptides": {
+        "robots_checked_by": "research 2026-09-15 (AffiliateWP onboarding)",
+        "robots_allows": True,   # confirmed: User-agent * Disallow only wc-logs/uploads, add-to-cart
+                                  # querystrings, /wp-admin/ (Allow admin-ajax); Yoast empty Disallow.
+                                  # /product/, /shop/, /coa/ not disallowed. Affiliate partner.
+    },
 }
 
 HEADERS = {
