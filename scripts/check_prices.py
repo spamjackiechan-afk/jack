@@ -247,7 +247,7 @@ def check_product(url: str) -> dict:
     price = extract_price(resp.text)
     if price is None:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
-    return {"url": url, "price": price, "regular_price": extract_regular_price(html, price), "error": None}
+    return {"url": url, "price": price, "regular_price": extract_regular_price(resp.text, price), "error": None}
 
 
 def check_product_with_browser(url: str, browser) -> dict:
