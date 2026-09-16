@@ -196,8 +196,8 @@
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://licensedpeptides.com/ref/Discountpeptides/",
     "promo_code": "Affiliate5",
-    "guidelines_notes": "Approved 2026-08-18. Referral link is path-based (/ref/CODE/), not query-string — site logic routes all Licensed Peptides clicks through this link as-is rather than combining with per-product URLs, to guarantee tracking isn't silently dropped.",
-    "last_checked": "2026-08-18",
+    "guidelines_notes": "Approved 2026-08-18. Referral link is path-based (/ref/CODE/), not query-string — site logic routes all Licensed Peptides clicks through this link as-is rather than combining with per-product URLs, to guarantee tracking isn't silently dropped. Active deal (storefront; auto at checkout — no code): 2 FOR 1 SALE · NO LIMITS — free unit automatically added at checkout, storewide / all peptides. End: “Sale ends today” observed on licensedpeptides.com/all-peptides/ ~2026-09-15 evening PT (no timezone on banner — treat as end of that calendar day unless storefront updates). Sources: https://licensedpeptides.com/all-peptides/ browser check 2026-09-15. Affiliate path https://licensedpeptides.com/ref/Discountpeptides/ unchanged; promo Affiliate5 remains for affiliate tracking but this sale is auto — do not invent stacking or a second code. Do not invent single-vial onSale / live_prices sale tags for this BOGO (no <del> strikethrough prices on PDPs; deals band stays tracker onSale-only).",
+    "last_checked": "2026-09-15",
     "testing_researched": "2026-08-25",
     "testing_methods": [
       "HPLC-UV/VIS (purity)",
