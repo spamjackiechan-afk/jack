@@ -291,9 +291,9 @@
     "status": "approved",
     "site_url": "https://offlinepeptides.com",
     "tracking_type": "link",
-    "affiliate_link_base": "https://offlinepeptides.com/ref/discountspeptides@gmail.com/",
+    "affiliate_link_base": "https://offlinepeptides.com/?ref=discountspeptides@gmail.com",
     "promo_code": null,
-    "guidelines_notes": "Approved 2026-09-16. Listed with retail prices only — Jackson: NEVER surface deals/sales/onSale/EOS3/B2G1/End-of-Summer for Offline (terms void commission when promo discounts apply). AffiliateWP link-only https://offlinepeptides.com/ref/discountspeptides@gmail.com/ ; promo_code null until Offline confirms dedicated partner code AND Jackson says show it. Programme excludes coupon/deal sites — accepted for price comparison only without promoting their sales. testing_tier 3. COA RED FLAG: GHK-Cu underfill. HGH excluded. robots_allows true.",
+    "guidelines_notes": "Approved 2026-09-16. Listed with retail prices only — Jackson: NEVER surface deals/sales/onSale/EOS3/B2G1/End-of-Summer for Offline (terms void commission when promo discounts apply). AffiliateWP query-style deep-link confirmed 2026-09-15: affiliate_link_base https://offlinepeptides.com/?ref=discountspeptides@gmail.com so resolveVendorLink merges ?ref= onto product URLs (affwp_ref / visit cookies after marketing consent; referral_var=ref; affiliate_id 119). Fallback entry URL still valid: https://offlinepeptides.com/ref/discountspeptides@gmail.com/ . promo_code null until Offline confirms dedicated partner code AND Jackson says show it. Programme excludes coupon/deal sites — accepted for price comparison only without promoting their sales. testing_tier 3. COA RED FLAG: GHK-Cu underfill. HGH excluded. robots_allows true.",
     "last_checked": "2026-09-15",
     "cookie_days": 30,
     "commission": "20% new customer / 10% lifetime returning (public terms; FAQ cites 15%/365 conflict — confirm on dashboard)",
@@ -315,6 +315,7 @@
     "testing_lab": "Krause Analytical; Freedom Diagnostics (lot-dependent)",
     "testing_standard": "≥99% purity claimed; public batch COAs",
     "testing_note": "Public third-party COAs on /coa/ (Krause Analytical, Freedom Diagnostics; HPLC + MS). COA RED FLAG: GHK-Cu 100mg lot OP-CU100-0626 (Krause) shows chromatographic purity >99.9% but measured content ~13.2 mg vs 100 mg label claim — underfill. Do not market Offline as content-verified without noting this. testing_tier 3.",
-    "testing_tier": 3
+    "testing_tier": 3,
+    "affiliate_path_suffix": null
   }
 }
