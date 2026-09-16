@@ -90,6 +90,13 @@ VENDORS = {
                                   # /affiliate/, /checkout/, /cart, /api/ blocked — /products/
                                   # pages are wide open. Affiliate partner.
     },
+    "American Peptides": {
+        "robots_checked_by": "Jackson, 2026-09-15",
+        "robots_allows": True,   # confirmed: robots.txt Allow: /; only Disallow /api/, /catalog/
+                                  # — /products/ pages are wide open. Host: www.americanpeptides.us.
+                                  # Domain lock: americanpeptides.us only (NOT buyamericanpeptides.com /
+                                  # Legion, NOT americanpeptide.com). Affiliate partner (probation).
+    },
 }
 
 HEADERS = {
