@@ -1,2 +1,214 @@
 <!doctype html>
-<!-- restored; see artifacts/testing.html if this is incomplete -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testing & Quality — What Each Peptide Vendor Actually Verifies</title>
+<meta name="description" content="What each vendor tests, which laboratory does it, and what a Certificate of Analysis can and cannot prove. Vendors grouped by how far their evidence goes.">
+<link rel="canonical" href="https://discountspeptides.com/testing.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Discount Peptides">
+<meta property="og:url" content="https://discountspeptides.com/testing.html">
+<meta property="og:title" content="Testing & Quality — What Each Peptide Vendor Actually Verifies">
+<meta property="og:description" content="What each vendor tests, which laboratory does it, and what a Certificate of Analysis can and cannot prove. Vendors grouped by how far their evidence goes.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Testing & Quality — What Each Peptide Vendor Actually Verifies">
+<meta name="twitter:description" content="What each vendor tests, which laboratory does it, and what a Certificate of Analysis can and cannot prove. Vendors grouped by how far their evidence goes.">
+
+<meta name="description" content="What each vendor actually tests, which laboratory does it, and what a Certificate of Analysis does and does not tell you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#09100E; --paper-raised:#101B17; --ink:#F2F3F1; --ink-soft:#8A9490;
+    --rule:#24302B; --sage:#4FBF98; --sage-deep:#79D9B8; --amber:#C98383;
+    --amber-bg:#25171A; --lowest:#79D9B8; --lowest-bg:#0F211B; --success:#E8B84B;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-weight:500; line-height:1.6;}
+  .wrap{max-width:1000px; margin:0 auto; padding:48px 24px 80px;}
+  a{color:inherit;}
+
+  .back-link{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); text-decoration:none; margin-bottom:32px;}
+  .back-link:hover{color:var(--lowest);}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--lowest); margin-bottom:10px;}
+  h1{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(30px, 4.6vw, 42px); margin:0 0 18px; line-height:1.15;}
+  .lede{font-size:16.5px; color:var(--ink-soft); margin:0 0 12px; max-width:660px;}
+
+  h2{font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:52px 0 6px;}
+  .sect-sub{font-size:14.5px; color:var(--ink-soft); margin:0 0 22px; max-width:680px;}
+  .divider{height:1px; background:var(--rule); border:none; margin:44px 0 0;}
+
+  /* COA explainer */
+  .coa-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:12px; margin-top:18px;}
+  .coa-item{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:16px 17px;}
+  .coa-item h3{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--lowest); margin:0 0 7px;}
+  .coa-item p{font-size:13px; line-height:1.55; color:var(--ink-soft); margin:0;}
+  .coa-item p strong{color:var(--ink); font-weight:600;}
+  .coa-callout{background:var(--lowest-bg); border:1px solid var(--rule); border-radius:10px; padding:16px 18px; margin-top:14px; font-size:14px;}
+  .coa-callout strong{color:var(--lowest);}
+
+  /* Comparison table */
+  .table-scroll{overflow-x:auto; margin-top:20px; border:1px solid var(--rule); border-radius:10px;}
+  table{border-collapse:collapse; width:100%; min-width:760px; font-size:13px;}
+  th{background:var(--paper-raised); font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); text-align:left; padding:11px 13px; font-weight:500; border-bottom:1px solid var(--rule); white-space:nowrap;}
+  td{padding:11px 13px; border-bottom:1px solid var(--rule); vertical-align:top; color:var(--ink-soft);}
+  tr:last-child td{border-bottom:none;}
+  td.vendor{color:var(--ink); font-weight:600; white-space:nowrap;}
+  .yes{color:var(--lowest);} .no{color:var(--amber);} .part{color:var(--success);}
+  .tier-pill{display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:9.5px; letter-spacing:0.05em; padding:2px 7px; border-radius:20px; white-space:nowrap;}
+  .tier-1{color:var(--lowest); border:1px solid var(--lowest);}
+  .tier-2{color:var(--sage); border:1px solid var(--sage);}
+  .tier-3{color:var(--success); border:1px solid var(--success);}
+  .tier-4{color:var(--amber); border:1px solid var(--amber);}
+
+  /* Tier groups */
+  .tier-block{margin-top:26px;}
+  .tier-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:4px;}
+  .tier-head h3{font-family:'Fraunces', serif; font-weight:500; font-size:19px; margin:0;}
+  .tier-desc{font-size:13.5px; color:var(--ink-soft); margin:0 0 14px; max-width:660px;}
+  .vendor-card{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:17px 19px; margin-bottom:10px;}
+  .vendor-card h4{font-family:'Fraunces', serif; font-weight:500; font-size:17px; margin:0 0 9px; display:flex; align-items:center; gap:9px; flex-wrap:wrap;}
+  .vc-row{font-size:13px; margin:0 0 5px; color:var(--ink-soft);}
+  .vc-row b{font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); font-weight:500; display:inline-block; min-width:74px;}
+  .vc-note{font-size:13px; line-height:1.55; color:var(--ink); margin:10px 0 0; padding-top:10px; border-top:1px dashed var(--rule);}
+  .partner-tag{font-family:'IBM Plex Mono', monospace; font-size:9px; text-transform:uppercase; letter-spacing:0.05em; color:var(--success); border:1px solid var(--success); border-radius:20px; padding:2px 7px;}
+
+  /* Compound concerns */
+  .concern{border:1px solid var(--amber); background:var(--amber-bg); border-radius:10px; margin-bottom:10px; overflow:hidden;}
+  .concern-head{display:flex; align-items:center; gap:9px; width:100%; background:transparent; border:none; cursor:pointer; text-align:left; padding:13px 16px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.03em; color:var(--amber);}
+  .concern-head:hover{background:rgba(226,75,74,0.07);}
+  .concern-head .caret{margin-left:auto;}
+  .concern-body{display:none; padding:0 16px 15px; font-size:13.5px; line-height:1.6;}
+  .concern-body p{margin:0 0 9px;}
+  .affected{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 12px;}
+  .affected span{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-soft); border:1px solid var(--rule); border-radius:5px; padding:3px 8px; background:var(--paper);}
+  .check-box{background:var(--paper); border:1px dashed var(--amber); border-radius:7px; padding:11px 13px;}
+  .check-box strong{display:block; font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--amber); margin-bottom:5px;}
+  code{font-family:'IBM Plex Mono', monospace; font-size:11.5px; background:var(--paper-raised); padding:1px 5px; border-radius:3px; color:var(--lowest);}
+
+  .refmark{color:var(--lowest); text-decoration:none; font-weight:600; padding:0 1px;}
+  .refmark:hover{text-decoration:underline;}
+  .source-list{list-style:none; padding:0; margin:18px 0 0; counter-reset:src;}
+  .source-list li{display:flex; gap:11px; padding:11px 0; border-bottom:1px solid var(--rule); font-size:13px; line-height:1.55;}
+  .source-list li:last-child{border-bottom:none;}
+  .source-list .num{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--lowest); flex-shrink:0; padding-top:2px; min-width:20px;}
+  .source-list .txt{color:var(--ink-soft);}
+  .source-list a{color:var(--lowest); text-decoration:none; word-break:break-word;}
+  .source-list a:hover{text-decoration:underline;}
+  .source-list li:target{background:var(--lowest-bg);}
+  .contact-block{
+    border:1px solid var(--lowest); background:var(--lowest-bg); border-radius:12px;
+    padding:24px 26px; margin:34px 0 0; text-align:center;
+  }
+  .contact-block h3{font-family:'Fraunces', serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink);}
+  .contact-block p{font-size:14px; color:var(--ink-soft); margin:0 auto 16px; max-width:520px; line-height:1.55;}
+  .contact-email{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:17px; font-weight:500;
+    color:var(--paper); background:var(--lowest); text-decoration:none;
+    padding:13px 24px; border-radius:9px; transition:background .12s; word-break:break-all;
+  }
+  .contact-email:hover{background:var(--sage-deep);}
+  .contact-sub{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin:14px 0 0;}
+  @media (max-width:520px){
+    .contact-block{padding:20px 16px;}
+    .contact-email{font-size:14px; padding:12px 16px;}
+  }
+  .footnote{font-size:12.5px; color:var(--ink-soft); margin-top:34px; padding-top:18px; border-top:1px solid var(--rule); line-height:1.6;}
+  .ruo{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--amber); margin-top:22px;}
+  @media (max-width:640px){ .wrap{padding:32px 17px 60px;} .vc-row b{display:block; min-width:0;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" class="back-link">&larr; Back to price comparison</a>
+
+  <div class="eyebrow">Testing & Quality</div>
+  <h1>Every vendor says they test. The useful question is who checks the checker.</h1>
+  <p class="lede">Purity claims are cheap to make and hard to verify. This page sets out what each vendor actually documents, whether the laboratory doing the work is named, and what a Certificate of Analysis can and cannot tell you.</p>
+
+  <hr class="divider">
+
+  <h2>What a COA actually proves</h2>
+  <p class="sect-sub">Most disputes about peptide quality come down to confusing two separate questions. A certificate can answer both, one, or neither.</p>
+
+  <div class="coa-grid">
+    <div class="coa-item">
+      <h3>Purity — by HPLC</h3>
+      <p><strong>How clean is it.</strong> Reported as a percentage of total peak area. A figure is method-dependent: two labs using different columns or wavelengths can differ by 1–3% on identical material, so the stated method matters as much as the number.</p>
+    </div>
+    <div class="coa-item">
+      <h3>Identity — by mass spectrometry</h3>
+      <p><strong>Is it the right molecule.</strong> Compares observed mass against the theoretical mass for the sequence. A compound can be 99.5% pure and still be entirely the wrong peptide — purity alone cannot catch that.</p>
+    </div>
+    <div class="coa-item">
+      <h3>Content — quantitative assay</h3>
+      <p><strong>How much is in the vial.</strong> Distinct from purity, which says nothing about fill weight. This is the figure that matters when a label says 10&nbsp;mg and the vial holds less.</p>
+    </div>
+    <div class="coa-item">
+      <h3>Endotoxin, heavy metals, sterility</h3>
+      <p><strong>What else is in there.</strong> Contaminants that neither purity nor identity testing will reveal. Commonly the first tests omitted when a panel is abbreviated.</p>
+    </div>
+  </div>
+
+  <div class="coa-callout">
+    <strong>The single most useful habit:</strong> ask for the COA for <em>your lot number</em>, not a sample certificate. A batch-specific document with a date and a named laboratory is a different kind of evidence from a purity figure printed on a product page.
+  </div>
+
+  <hr class="divider">
+
+  <h2>Vendor comparison</h2>
+  <p class="sect-sub">Drawn from each vendor's own published material. Where a column reads "not stated", that means the vendor does not say — not that the testing did not happen.</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Vendor</th><th>Standing</th><th>Purity</th><th>Identity</th><th>Contaminants</th><th>Lab named</th><th>COAs public</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Grouped by how far the evidence goes</h2>
+  <p class="sect-sub">The grouping is not about who claims the highest purity — nearly everyone claims 99%. It is about whether an outside party could confirm the claim.</p>
+  <div id="tierBlocks"></div>
+
+  <hr class="divider">
+
+  <h2>Concerns attached to specific compounds</h2>
+  <p class="sect-sub">Separate from vendor quality. These follow the molecule regardless of who sells it, and appear on the relevant listings as well.</p>
+  <div id="concerns"></div>
+
+  <hr class="divider">
+
+  <h2>References</h2>
+  <p class="sect-sub">Every numbered claim above links here. Regulatory status and molecular data come from the issuing body or a public chemical database; the enforcement account comes from mainstream news reporting; the Melanotan II content figures come from a peer-reviewed analytical study.</p>
+  <ol class="source-list" id="sourceList"></ol>
+
+  <p class="footnote">
+    Testing information is taken from each vendor's own website and, where noted, from independent third-party trackers. It reflects what could be confirmed on the date shown against each vendor and is not itself laboratory verification. Vendors change practices; a claim confirmed once is not a permanent guarantee. Nothing here is an endorsement, and a higher grouping is not a recommendation to buy.
+  </p>
+  <div class="contact-block">
+    <h3>Get in touch</h3>
+    <p>Spotted a price that looks wrong, a vendor missing, or something on this site that needs correcting? Say so — corrections are welcome and get acted on.</p>
+    <a class="contact-email" href="mailto:discountspeptides@gmail.com">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      discountspeptides@gmail.com
+    </a>
+    <p class="contact-sub">Vendors — enquiries about being listed, or corrections to your entry, go to the same address.</p>
+  </div>
+
+  <p class="ruo">Research use only — nothing on this site is intended for human or animal consumption.</p>
+</div>
+
+<script>
+const VENDOR_CONFIG = PLACEHOLDER_TOO_LARGE;
+</script>
+</body>
+</html>
