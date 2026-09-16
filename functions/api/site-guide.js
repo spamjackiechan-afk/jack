@@ -149,7 +149,7 @@ export async function onRequestPost(context) {
     if (/find a peptide/.test(lower)) {
       return json({
         reply:
-          "Tell me the compound name (e.g. GLOW, BPC-157, Selank). I’ll summarize what’s in our evidence file and point to formats / prices on the catalog: " +
+          "Tell me a compound name (e.g. GLOW, BPC-157, Selank) or a topic (e.g. fat loss, sleep, recovery) and I’ll point you to matching catalog entries + evidence notes: " +
           evidence.site_map.home,
       });
     }
@@ -165,6 +165,12 @@ export async function onRequestPost(context) {
     return json({
       reply: priceBlock + "\n\n" + DISCLAIMER,
     });
+  }
+
+  // Topic / category browse (e.g. "fat loss", "sleep") — before compound lookup
+  const topic = findTopic(lower);
+  if (topic) {
+    return json({ reply: await formatTopic(request, evidence, topic) });
   }
 
   // Evidence card lookup
@@ -254,6 +260,112 @@ async function loadEvidence(request) {
   EVIDENCE_CACHE = BUNDLED_EVIDENCE;
   return EVIDENCE_CACHE;
 }
+
+
+function findTopic(lower) {
+  // Category / use-case browse — NOT medical claims. Point to catalog compounds
+  // that appear on this site and (when present) evidence cards. Never say these
+  // compounds cause fat loss / healing / etc. in people.
+  const topics = [
+    {
+      id: "fat_loss",
+      match: /\b(fat\s*loss|fatloss|weight\s*loss|lose\s*weight|weight\s*management|obesity|metabolic\s*weight|slim(ming)?|body\s*fat)\b/,
+      title: "Weight / metabolic research compounds",
+      blurb:
+        "People often browse these on the catalog when looking under weight or metabolic research. That is a catalog grouping — not a claim that any of them cause fat loss in people, and research-chemical vials are not licensed drug products.",
+      compounds: [
+        { name: "AOD-9604 / HGH fragment 176-191", evidence: "hgh-fragment-176-191" },
+        { name: "Mazdutide", evidence: "mazdutide" },
+        { name: "Semaglutide", evidence: null },
+        { name: "Tirzepatide", evidence: null },
+        { name: "Retatrutide", evidence: null },
+        { name: "Cagrilintide", evidence: null },
+        { name: "SLU-PP-332", evidence: "slu-pp-332" },
+        { name: "Tesofensine", evidence: null },
+      ],
+    },
+    {
+      id: "sleep",
+      match: /\b(sleep|insomnia|jet\s*lag)\b/,
+      title: "Sleep-related catalog entries",
+      blurb: "Catalog grouping only — not treatment advice.",
+      compounds: [
+        { name: "DSIP", evidence: null },
+        { name: "Melatonin", evidence: "melatonin" },
+        { name: "Epitalon", evidence: "epitalon-epithalon" },
+      ],
+    },
+    {
+      id: "recovery",
+      match: /\b(recovery|heal(ing)?|injury|tissue|wound|tendon|joint)\b/,
+      title: "Often browsed under recovery / tissue research",
+      blurb:
+        "Catalog grouping only. No dosing. Blends like GLOW/KLOW/Wolverine have no published combination trials.",
+      compounds: [
+        { name: "BPC-157", evidence: "bpc-157" },
+        { name: "TB-500", evidence: "tb-500" },
+        { name: "GHK-Cu", evidence: "ghk-cu" },
+        { name: "GLOW", evidence: "glow" },
+        { name: "KLOW", evidence: "klow" },
+        { name: "Wolverine", evidence: null },
+        { name: "KPV", evidence: "kpv" },
+      ],
+    },
+    {
+      id: "cognitive",
+      match: /\b(cognit|nootropic|focus|memory|anxiety|brain)\b/,
+      title: "Cognitive / nootropic research compounds on catalog",
+      blurb: "Catalog grouping only — not treatment advice.",
+      compounds: [
+        { name: "Selank", evidence: "selank" },
+        { name: "Semax", evidence: "semax" },
+        { name: "Selank / Semax combo", evidence: null },
+      ],
+    },
+  ];
+  for (const t of topics) {
+    if (t.match.test(lower)) return t;
+  }
+  return null;
+}
+
+async function formatTopic(request, evidence, topic) {
+  const home = evidence.site_map.home;
+  const lines = [];
+  lines.push(topic.title + ".");
+  lines.push(topic.blurb);
+  lines.push("On this site, start here:");
+  const data = await loadPrices(request);
+  const catalogBlob = data?.results
+    ? JSON.stringify(data.results).toLowerCase()
+    : "";
+
+  for (const c of topic.compounds) {
+    const needle = c.name.toLowerCase().split("/")[0].trim();
+    const onCatalog =
+      !catalogBlob ||
+      catalogBlob.includes(needle.replace(/\s+/g, " ")) ||
+      catalogBlob.includes(needle.replace(/[^a-z0-9]/g, ""));
+    let bit = "• " + c.name;
+    if (catalogBlob && !onCatalog) {
+      // still list if evidence exists; note if not in live snapshot
+      bit += " (check catalog — may not be in current live snapshot)";
+    }
+    if (c.evidence) {
+      const card = (evidence.cards || []).find((x) => x.id === c.evidence);
+      if (card?.tier) bit += " — evidence file tier: " + oneLine(card.tier).slice(0, 80);
+    } else if (["Semaglutide", "Tirzepatide", "Retatrutide"].includes(c.name)) {
+      bit += " — licensed product ≠ research vial (see evidence other-catalog notes)";
+    }
+    lines.push(bit);
+  }
+  lines.push("Open the price list and search those names: " + home);
+  lines.push("Or name one compound and I’ll pull the evidence card we have on file.");
+  lines.push("");
+  lines.push(DISCLAIMER);
+  return lines.join("\n");
+}
+
 
 function findCard(evidence, lower) {
   const aliases = evidence.aliases || {};
