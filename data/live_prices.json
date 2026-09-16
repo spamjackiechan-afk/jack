@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-16T00:22:24Z",
+  "checked_at": "2026-09-16T04:33:20Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1425,6 +1425,32 @@
         "url": "https://puritypeptides.is/product/thymosin-alpha-1-5mg",
         "price": null,
         "error": "no confident price match \u2014 page structure may have changed"
+      }
+    },
+    "American Peptides": {
+      "BPC-157 | Vial | 5mg": {
+        "url": "https://www.americanpeptides.us/products/bpc-157",
+        "price": 48.0,
+        "regular_price": 60.0,
+        "error": null
+      },
+      "BPC-157 | Vial | 10mg": {
+        "url": "https://www.americanpeptides.us/products/bpc-157",
+        "price": null,
+        "regular_price": null,
+        "error": "10 MG variant sold out on PDP; Day 2 sale price observed on 5 MG only ($48 / was $60)"
+      },
+      "TB-500 | Vial | 10mg": {
+        "url": "https://www.americanpeptides.us/products/tb-500",
+        "price": 80.0,
+        "regular_price": 100.0,
+        "error": null
+      },
+      "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
+        "url": "https://www.americanpeptides.us/products/bpc-157-tb-500",
+        "price": 156.0,
+        "regular_price": 195.0,
+        "error": null
       }
     }
   }

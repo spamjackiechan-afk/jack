@@ -168,6 +168,19 @@ def extract_regular_price(html: str, current: float | None) -> float | None:
     genuinely higher than the current price, so a mis-parse can't invent a
     discount that isn't there.
     """
+    # American Peptides (Next.js): sale shown as
+    #   <div class="pdp-price">$48.00 <small class="pdp-price-was">$60.00</small>
+    m = re.search(
+        r'class=["\']pdp-price["\'][^>]*>\s*\$([0-9.]+)\s*<small class=["\']pdp-price-was["\']>\s*\$([0-9.]+)',
+        html,
+        re.I,
+    )
+    if m:
+        now, was = float(m.group(1)), float(m.group(2))
+        if current is None or abs(now - current) < 0.01:
+            if was > now:
+                return was
+
     candidates = []
 
     for m in re.finditer(r"<del[^>]*>(.*?)</del>", html, re.DOTALL | re.IGNORECASE):
@@ -197,6 +210,17 @@ def extract_price(html: str) -> float | None:
     Returns None if nothing confident is found — callers should treat None
     as "couldn't verify", not "price is zero".
     """
+    # Prefer American Peptides visible PDP sale price when the page shows
+    # both sale and was (pdp-price / pdp-price-was). JSON-LD on that site
+    # still lists the pre-discount Offer price, which would hide the sale.
+    m = re.search(
+        r'class=["\']pdp-price["\'][^>]*>\s*\$([0-9.]+)\s*<small class=["\']pdp-price-was["\']>',
+        html,
+        re.I,
+    )
+    if m:
+        return float(m.group(1))
+
     soup = BeautifulSoup(html, "html.parser")
 
     for script in soup.find_all("script", type="application/ld+json"):
