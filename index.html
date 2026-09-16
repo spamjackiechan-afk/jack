@@ -1354,12 +1354,63 @@ const SEARCH_ALIASES = {
   'igf1': ['igf-1'], 'igf': ['igf-1'],
 
   // What people are actually looking for
-  'tanning': ['melanotan'],
   'sleep': ['dsip', 'epitalon'],
   'bac water': ['bacteriostatic'], 'bacwater': ['bacteriostatic'],
   'reconstitution': ['bacteriostatic'],
-  'weight loss': ['semaglutide', 'tirzepatide', 'retatrutide', 'aod-9604', 'cagrilintide'],
   'glow': ['glow'], 'healing': ['bpc-157', 'tb-500', 'kpv'],
+
+  // Site category synonyms → peptide name fragments (catalog shelf browse)
+  'tissue repair': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'tissue recovery': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'recovery': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'healing': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'wound': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'injury': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'rehab': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'tendon': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'post workout': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'post-workout': ['ara-290', 'bpc-157', 'ghk-cu', 'glow blend', 'klow', 'kpv', 'll-37', 'tb-500', 'thymosin alpha-1', 'vip', 'wolverine'],
+  'metabolic': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'weight loss': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'fat loss': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'fatloss': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'weightloss': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'obesity': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'body fat': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'burn fat': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'lose weight': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'weight management': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'lipolysis': ['5-amino-1mq', 'aod-9604', 'cagrilintide', 'glp-1', 'glp-3 triple', 'orforglipron', 'retatrutide', 'slu-pp-332', 'semaglutide', 'tesofensine', 'tirzepatide'],
+  'growth hormone': ['cjc-1295', 'cjc-1295 with dac', 'follistatin-344', 'ghrp-2', 'ghrp-6', 'hexarelin', 'igf-1 lr3', 'ipamorelin', 'mk-677', 'sermorelin', 'tesamorelin'],
+  'gh secretagogue': ['cjc-1295', 'cjc-1295 with dac', 'follistatin-344', 'ghrp-2', 'ghrp-6', 'hexarelin', 'igf-1 lr3', 'ipamorelin', 'mk-677', 'sermorelin', 'tesamorelin'],
+  'muscle growth': ['cjc-1295', 'cjc-1295 with dac', 'follistatin-344', 'ghrp-2', 'ghrp-6', 'hexarelin', 'igf-1 lr3', 'ipamorelin', 'mk-677', 'sermorelin', 'tesamorelin'],
+  'ghrh': ['cjc-1295', 'cjc-1295 with dac', 'follistatin-344', 'ghrp-2', 'ghrp-6', 'hexarelin', 'igf-1 lr3', 'ipamorelin', 'mk-677', 'sermorelin', 'tesamorelin'],
+  'secretagogue': ['cjc-1295', 'cjc-1295 with dac', 'follistatin-344', 'ghrp-2', 'ghrp-6', 'hexarelin', 'igf-1 lr3', 'ipamorelin', 'mk-677', 'sermorelin', 'tesamorelin'],
+  'body composition': ['cjc-1295', 'cjc-1295 with dac', 'follistatin-344', 'ghrp-2', 'ghrp-6', 'hexarelin', 'igf-1 lr3', 'ipamorelin', 'mk-677', 'sermorelin', 'tesamorelin'],
+  'cognitive': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'neurological': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'nootropic': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'cognition': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'memory': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'focus': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'brain': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'neuro': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'anxiety': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'anxiolytic': ['dsip', 'dihexa', 'pinealon', 'selank', 'semax'],
+  'cellular': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'longevity': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'anti aging': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'anti-aging': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'mitochondria': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'mitochondrial': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'aging': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'telomere': ['epitalon', 'foxo4-dri', 'ghk-cu', 'glutathione', 'humanin', 'mots-c', 'methyl b12', 'nad+', 'snap-8', 'ss-31', 'thymalin', 'vesugen'],
+  'sexual health': ['gonadorelin', 'hcg', 'kisspeptin', 'melanotan i', 'melanotan ii', 'oxytocin', 'pt-141', 'sildenafil citrate'],
+  'sexual': ['gonadorelin', 'hcg', 'kisspeptin', 'melanotan i', 'melanotan ii', 'oxytocin', 'pt-141', 'sildenafil citrate'],
+  'libido': ['gonadorelin', 'hcg', 'kisspeptin', 'melanotan i', 'melanotan ii', 'oxytocin', 'pt-141', 'sildenafil citrate'],
+  'hormonal': ['gonadorelin', 'hcg', 'kisspeptin', 'melanotan i', 'melanotan ii', 'oxytocin', 'pt-141', 'sildenafil citrate'],
+  'erectile': ['gonadorelin', 'hcg', 'kisspeptin', 'melanotan i', 'melanotan ii', 'oxytocin', 'pt-141', 'sildenafil citrate'],
+  'melanocortin': ['gonadorelin', 'hcg', 'kisspeptin', 'melanotan i', 'melanotan ii', 'oxytocin', 'pt-141', 'sildenafil citrate'],
 };
 
 // Returns every compound-name fragment a query should also match against.
@@ -1762,6 +1813,36 @@ Object.keys(CATEGORIES).forEach(cat => {
   categorySelect.appendChild(opt);
 });
 categorySelect.addEventListener('change', () => { activeCategory = categorySelect.value; render(); });
+
+// Deep-links: /?q=… fills search; /?category=<exact CATEGORIES key> sets the filter.
+(function applyCatalogUrlParams(){
+  try {
+    const params = new URLSearchParams(location.search);
+    const q = params.get('q');
+    const cat = params.get('category');
+    let touched = false;
+    if (q != null && String(q).trim() !== ''){
+      searchEl.value = String(q);
+      touched = true;
+    }
+    if (cat != null && String(cat).trim() !== ''){
+      const exact = String(cat);
+      const keys = Object.keys(CATEGORIES);
+      const match = keys.find(k => k === exact) || keys.find(k => k.toLowerCase() === exact.toLowerCase());
+      if (match){
+        categorySelect.value = match;
+        activeCategory = match;
+        touched = true;
+      }
+    }
+    if (touched){
+      render();
+      try { searchEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (_) {}
+      try { searchEl.focus({ preventScroll: true }); } catch (_) { try { searchEl.focus(); } catch (_) {} }
+    }
+  } catch (_) {}
+})();
+
 
 document.getElementById('sortBy').addEventListener('change', (e) => { activeSort = e.target.value; render(); });
 document.getElementById('vendorOrderMaster').addEventListener('change', (e) => setVendorOrder(e.target.value));

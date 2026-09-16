@@ -263,182 +263,258 @@ async function loadEvidence(request) {
 
 
 
+// Mirror of home-page CATEGORIES — topic browse lists these and deep-links via ?q= / ?category=
+const SITE_CATEGORIES = {
+  "Metabolic & Weight": {
+    "desc": "Studied for fat metabolism, appetite, and metabolic regulation.",
+    "peptides": [
+      "5-Amino-1MQ",
+      "AOD-9604",
+      "Cagrilintide",
+      "GLP-1 (Semaglutide)",
+      "GLP-1 (Semaglutide) Oral Spray",
+      "GLP-3 Triple / GLP-1 Blend",
+      "Orforglipron",
+      "Retatrutide",
+      "Retatrutide / GLP-1 Blend",
+      "SLU-PP-332",
+      "Semaglutide",
+      "Tesofensine",
+      "Tirzepatide"
+    ]
+  },
+  "Growth Hormone & Muscle": {
+    "desc": "Growth-hormone-axis compounds studied in relation to muscle, recovery, and body composition.",
+    "peptides": [
+      "CJC-1295",
+      "CJC-1295 / Ipamorelin combo",
+      "CJC-1295 with DAC",
+      "Follistatin-344",
+      "GHRP-2",
+      "GHRP-6",
+      "Hexarelin",
+      "IGF-1 LR3",
+      "Ipamorelin",
+      "MK-677 (Ibutamoren) / MK-2866 (Ostarine) combo",
+      "Sermorelin",
+      "Tesamorelin",
+      "Tesamorelin / Ipamorelin combo"
+    ]
+  },
+  "Cellular & Longevity": {
+    "desc": "Mitochondrial, antioxidant, and cellular-aging-focused research compounds.",
+    "peptides": [
+      "Epitalon",
+      "Epitalon / Thymulin combo",
+      "FOXO4-DRI",
+      "GHK-Cu (Copper Peptide)",
+      "Glutathione",
+      "Glutathione / Magnesium combo",
+      "Humanin",
+      "MOTS-C",
+      "Methyl B12 (Methylcobalamin)",
+      "NAD+",
+      "SNAP-8",
+      "SS-31 / Elamipretide",
+      "Thymalin",
+      "Vesugen"
+    ]
+  },
+  "Sexual Health & Hormonal": {
+    "desc": "Studied for libido, arousal, and reproductive hormone signaling.",
+    "peptides": [
+      "Gonadorelin",
+      "HCG (Human Chorionic Gonadotropin)",
+      "Kisspeptin",
+      "Melanotan I",
+      "Melanotan II",
+      "Oxytocin",
+      "Oxytocin / Methylene Blue combo",
+      "PT-141 (Bremelanotide)",
+      "PT-141 / Oxytocin / Tesamorelin combo",
+      "PT-141 / Oxytocin combo",
+      "Sildenafil Citrate"
+    ]
+  },
+  "Cognitive & Neurological": {
+    "desc": "Studied for cognition, mood, sleep, and neuroprotection.",
+    "peptides": [
+      "DSIP",
+      "Dihexa",
+      "Pinealon",
+      "Selank",
+      "Selank / Semax combo",
+      "Semax"
+    ]
+  },
+  "Tissue Repair & Recovery": {
+    "desc": "Studied for wound healing, inflammation, and tissue repair.",
+    "peptides": [
+      "ARA-290 (Cibinetide)",
+      "BPC-157",
+      "BPC-157 / TB-500 blend",
+      "BPC-157 / TB-500 combo",
+      "GHK-Cu / KPV combo",
+      "GLOW Blend (GHK-Cu/BPC-157/TB-500)",
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV)",
+      "KPV",
+      "KPV / Thymosin Alpha-1 combo",
+      "LL-37",
+      "TB-500",
+      "Thymosin Alpha-1",
+      "VIP (Vasoactive Intestinal Peptide)",
+      "Wolverine (BPC-157/TB-500 blend)"
+    ]
+  }
+};
+
 function findTopic(lower) {
-  // Category / use-case browse — NOT medical claims. Point to catalog compounds
-  // that appear on this site and (when present) evidence cards. Never say these
-  // compounds cause fat loss / healing / etc. in people.
-  // Prefer word-boundary matches. Named peptides are handled by findCard first.
+  // Six site shelves + synonyms. Librarian framing only — not medical claims.
+  // Named peptides are handled by findCard first.
   const topics = [
     {
-      id: "fat_loss",
-      match: /\b(fat\s*loss|fatloss|weight\s*loss|weightloss|lose\s*weight|losing\s*weight|weight\s*management|obesity|body\s*fat|burn\s*fat|slim(ming)?|lipolysis|metabolic)\b/,
-      title: "Weight / metabolic research compounds",
+      id: "tissue_repair",
+      categoryKey: "Tissue Repair & Recovery",
+      match: /\b(tissue\s*repair|tissue\s*recovery|recovery|heal(ing)?|injury|wound|tendon|joint\s*repair|rehab|post[-\s]?workout)\b/,
+      title: "Catalog shelf: Tissue Repair & Recovery",
       blurb:
-        "People often browse these on the catalog when looking under weight or metabolic research. That is a catalog grouping — not a claim that any of them cause fat loss in people, and research-chemical vials are not licensed drug products.",
-      compounds: [
-        { name: "AOD-9604", evidence: "hgh-fragment-176-191" },
-        { name: "SLU-PP-332", evidence: "slu-pp-332" },
-        { name: "Oxytocin", evidence: "oxytocin" },
-        { name: "GLP-1 (Semaglutide)", evidence: null, note: "licensed product ≠ research vial" },
-        { name: "Semaglutide", evidence: null, note: "licensed product ≠ research vial" },
-        { name: "Tirzepatide", evidence: null, note: "licensed product ≠ research vial" },
-        { name: "Retatrutide", evidence: null, note: "licensed product ≠ research vial" },
-        { name: "Cagrilintide", evidence: null },
-        { name: "5-Amino-1MQ", evidence: null },
-        { name: "MOTS-C", evidence: null },
-        { name: "Tesamorelin", evidence: null },
-        { name: "Mazdutide", evidence: "mazdutide" },
-        { name: "AICAR", evidence: "aicar" },
-        { name: "hCG", evidence: "hcg", note: "not approved for weight loss" },
-      ],
+        "Compounds filed under this site’s Tissue Repair & Recovery category. Catalog grouping only — not a claim they heal injuries or repair tissue in people. Blends like GLOW/KLOW/Wolverine have no published combination trials in our file.",
     },
     {
-      id: "sleep",
-      match: /\b(sleep|insomnia|jet\s*lag|jetlag|dsip)\b/,
-      title: "Sleep-related catalog entries",
-      blurb: "Catalog grouping only — not a claim they treat insomnia or improve sleep in people.",
-      compounds: [
-        { name: "DSIP", evidence: null },
-        { name: "Melatonin", evidence: "melatonin" },
-        { name: "Epitalon", evidence: "epitalon-epithalon" },
-        { name: "Pinealon", evidence: null },
-      ],
-    },
-    {
-      id: "recovery",
-      match: /\b(recovery|heal(ing)?|injury|tissue\s*repair|wound|tendon|joint\s*repair|rehab|post[-\s]?workout)\b/,
-      title: "Often browsed under recovery / tissue research",
+      id: "metabolic_weight",
+      categoryKey: "Metabolic & Weight",
+      match: /\b(fat\s*loss|fatloss|weight\s*loss|weightloss|lose\s*weight|losing\s*weight|weight\s*management|obesity|body\s*fat|burn\s*fat|slim(ming)?|lipolysis|metabolic|metabolism)\b/,
+      title: "Catalog shelf: Metabolic & Weight",
       blurb:
-        "Catalog grouping only. No dosing. Blends like GLOW/KLOW/Wolverine have no published combination trials. Not a claim they heal injuries in people.",
-      compounds: [
-        { name: "BPC-157", evidence: "bpc-157" },
-        { name: "TB-500", evidence: "tb-500" },
-        { name: "GHK-Cu (Copper Peptide)", evidence: "ghk-cu" },
-        { name: "GLOW Blend (GHK-Cu/BPC-157/TB-500)", evidence: "glow" },
-        { name: "KLOW (BPC-157/TB-500/GHK-Cu/KPV)", evidence: "klow" },
-        { name: "Wolverine (BPC-157/TB-500 blend)", evidence: null },
-        { name: "KPV", evidence: "kpv" },
-        { name: "LL-37", evidence: "ll-37" },
-      ],
-    },
-    {
-      id: "cognitive",
-      match: /\b(cognit(ive|ion)?|nootropic|focus|memory|anxiety|anxiolytic|brain|mental)\b/,
-      title: "Cognitive / nootropic research compounds on catalog",
-      blurb: "Catalog grouping only — not a claim they improve cognition in people.",
-      compounds: [
-        { name: "Selank", evidence: "selank" },
-        { name: "Semax", evidence: "semax" },
-        { name: "Selank / Semax combo", evidence: null },
-        { name: "Dihexa", evidence: null },
-        { name: "Pinealon", evidence: null },
-      ],
-    },
-    {
-      id: "immune",
-      match: /\b(immune|immunity|thymic|infection|sepsis)\b/,
-      title: "Immune / thymic research compounds on catalog",
-      blurb: "Catalog grouping only — not a claim they treat infection or boost immunity in people.",
-      compounds: [
-        { name: "Thymosin Alpha-1", evidence: "thymosin-alpha-1-thymalfasin" },
-        { name: "Thymalin", evidence: "thymalin" },
-        { name: "KPV", evidence: "kpv" },
-        { name: "LL-37", evidence: "ll-37" },
-        { name: "NAD+", evidence: null },
-      ],
-    },
-    {
-      id: "mitochondria",
-      match: /\b(mitochondri(a|al)|endurance|exercise\s*mimetic|barth)\b/,
-      title: "Mitochondria / energetics research compounds on catalog",
-      blurb: "Catalog grouping only — not a claim they boost energy in people. Do not generalize Barth approval for SS-31 to other uses.",
-      compounds: [
-        { name: "SS-31 / Elamipretide", evidence: "ss-31-elamipretide" },
-        { name: "SLU-PP-332", evidence: "slu-pp-332" },
-        { name: "MOTS-C", evidence: null },
-        { name: "Humanin", evidence: null },
-        { name: "NAD+", evidence: null },
-        { name: "5-Amino-1MQ", evidence: null },
-        { name: "AICAR", evidence: "aicar" },
-      ],
-    },
-    {
-      id: "skin",
-      match: /\b(skin|tanning|pigment(ation)?|cosmetic|wrinkle|collagen|hair\s*growth)\b/,
-      title: "Skin / pigmentation / cosmetic research compounds on catalog",
-      blurb: "Catalog grouping only — not a claim they tan or rejuvenate skin safely in people. PT-141 is a different approved product from Melanotan.",
-      compounds: [
-        { name: "GHK-Cu (Copper Peptide)", evidence: "ghk-cu" },
-        { name: "Melanotan II", evidence: "melanotan-2" },
-        { name: "Melanotan I", evidence: null },
-        { name: "SNAP-8", evidence: null },
-        { name: "PT-141 (Bremelanotide)", evidence: null },
-      ],
-    },
-    {
-      id: "sexual",
-      match: /\b(sexual|libido|erectile|pt[-\s]?141|bremelanotide)\b/,
-      title: "Sexual / melanocortin research compounds on catalog",
-      blurb: "Catalog grouping only — not medical advice. PT-141 (bremelanotide) is related but different from Melanotan 2.",
-      compounds: [
-        { name: "PT-141 (Bremelanotide)", evidence: null },
-        { name: "Melanotan II", evidence: "melanotan-2" },
-        { name: "Oxytocin", evidence: "oxytocin" },
-      ],
+        "Compounds filed under this site’s Metabolic & Weight category. Catalog grouping only — not a claim that any of them cause fat loss in people. Research-chemical incretin vials are not licensed drug products.",
     },
     {
       id: "growth_hormone",
-      match: /\b(growth\s*hormone|gh\s*secretagogue|ghrh|sermorelin|ipamorelin|cjc[-\s]?1295|hexarelin|ghrp)\b/,
-      title: "GH-axis / secretagogue research compounds on catalog",
-      blurb: "Catalog grouping only — not a claim they raise GH usefully or safely in people.",
-      compounds: [
-        { name: "CJC-1295", evidence: null },
-        { name: "CJC-1295 with DAC", evidence: null },
-        { name: "CJC-1295 / Ipamorelin combo", evidence: null },
-        { name: "Ipamorelin", evidence: null },
-        { name: "Sermorelin", evidence: null },
-        { name: "GHRP-2", evidence: "ghrp-2-pralmorelin" },
-        { name: "GHRP-6", evidence: null },
-        { name: "Hexarelin", evidence: null },
-        { name: "Tesamorelin", evidence: null },
-      ],
+      categoryKey: "Growth Hormone & Muscle",
+      match: /\b(growth\s*hormone|gh\s*secretagogue|ghrh|sermorelin|ipamorelin|cjc[-\s]?1295|hexarelin|ghrp|muscle\s*growth|secretagogue|body\s*composition)\b/,
+      title: "Catalog shelf: Growth Hormone & Muscle",
+      blurb:
+        "Compounds filed under this site’s Growth Hormone & Muscle category. Catalog grouping only — not a claim they raise GH usefully or safely in people.",
+    },
+    {
+      id: "cognitive",
+      categoryKey: "Cognitive & Neurological",
+      match: /\b(cognit(ive|ion)?|neurolog(ical|y)?|nootropic|focus|memory|anxiety|anxiolytic|brain|mental|neuro)\b/,
+      title: "Catalog shelf: Cognitive & Neurological",
+      blurb:
+        "Compounds filed under this site’s Cognitive & Neurological category. Catalog grouping only — not a claim they improve cognition or treat neurological conditions in people.",
+    },
+    {
+      id: "cellular_longevity",
+      categoryKey: "Cellular & Longevity",
+      match: /\b(cellular|longevity|anti[-\s]?aging|mitochondri(a|al)|aging|telomere|senescen)\b/,
+      title: "Catalog shelf: Cellular & Longevity",
+      blurb:
+        "Compounds filed under this site’s Cellular & Longevity category. Catalog grouping only — not a claim they extend lifespan or reverse aging in people. Do not generalize Barth approval for SS-31 to other uses.",
+    },
+    {
+      id: "sexual_hormonal",
+      categoryKey: "Sexual Health & Hormonal",
+      match: /\b(sexual(\s*health)?|libido|erectile|hormonal|melanocortin|pt[-\s]?141|bremelanotide)\b/,
+      title: "Catalog shelf: Sexual Health & Hormonal",
+      blurb:
+        "Compounds filed under this site’s Sexual Health & Hormonal category. Catalog grouping only — not medical advice. PT-141 (bremelanotide) is related but different from Melanotan 2.",
+    },
+    // Secondary non-shelf topics (still useful; not one of the six filters)
+    {
+      id: "sleep",
+      categoryKey: null,
+      match: /\b(sleep|insomnia|jet\s*lag|jetlag)\b/,
+      title: "Sleep-related catalog entries",
+      blurb: "Catalog grouping only — not a claim they treat insomnia or improve sleep in people.",
+      compounds: ["DSIP", "Epitalon", "Pinealon", "Oxytocin"],
+    },
+    {
+      id: "immune",
+      categoryKey: null,
+      match: /\b(immune|immunity|thymic|infection|sepsis)\b/,
+      title: "Immune / thymic research compounds on catalog",
+      blurb: "Catalog grouping only — not a claim they treat infection or boost immunity in people.",
+      compounds: ["Thymosin Alpha-1", "Thymalin", "KPV", "LL-37", "NAD+"],
+    },
+    {
+      id: "skin",
+      categoryKey: null,
+      match: /\b(skin|tanning|pigment(ation)?|cosmetic|wrinkle|collagen|hair\s*growth)\b/,
+      title: "Skin / pigmentation / cosmetic research compounds on catalog",
+      blurb: "Catalog grouping only — not a claim they tan or rejuvenate skin safely in people. PT-141 is a different approved product from Melanotan.",
+      compounds: ["GHK-Cu (Copper Peptide)", "Melanotan II", "Melanotan I", "SNAP-8", "PT-141 (Bremelanotide)"],
     },
   ];
   for (const t of topics) {
     if (t.match.test(lower)) return t;
   }
+  // Exact category-name mentions (e.g. "tissue repair & recovery")
+  for (const key of Object.keys(SITE_CATEGORIES)) {
+    if (lower.includes(key.toLowerCase())) {
+      return {
+        id: "exact_" + key,
+        categoryKey: key,
+        title: "Catalog shelf: " + key,
+        blurb:
+          "Compounds filed under this site’s " +
+          key +
+          " category. Catalog grouping only — not medical advice or efficacy claims.",
+      };
+    }
+  }
   return null;
 }
 
 async function formatTopic(request, evidence, topic) {
-  const home = evidence.site_map.home;
+  const home = (evidence.site_map && evidence.site_map.home) || "https://discountspeptides.com/";
+  const base = home.replace(/\/?$/, "/");
   const lines = [];
   lines.push(topic.title + ".");
   lines.push(topic.blurb);
-  lines.push("On this site, start here:");
+
+  let names = [];
+  if (topic.categoryKey && SITE_CATEGORIES[topic.categoryKey]) {
+    names = SITE_CATEGORIES[topic.categoryKey].peptides.slice();
+  } else if (topic.compounds && topic.compounds.length) {
+    names = topic.compounds.slice();
+  }
+
   const data = await loadPrices(request);
   const catalogBlob = data?.results
     ? JSON.stringify(data.results).toLowerCase()
     : "";
 
-  for (const c of topic.compounds) {
-    const needle = c.name.toLowerCase().split("/")[0].trim();
+  // Prefer names that appear in live_prices; keep others marked.
+  const ranked = [];
+  for (const name of names) {
+    const needle = name.toLowerCase().split("/")[0].trim();
     const onCatalog =
       !catalogBlob ||
       catalogBlob.includes(needle) ||
       catalogBlob.includes(needle.replace(/[^a-z0-9+]/g, ""));
-    let bit = "• " + c.name;
-    if (catalogBlob && !onCatalog) {
+    ranked.push({ name, onCatalog: Boolean(onCatalog) });
+  }
+  if (catalogBlob) {
+    ranked.sort((a, b) => Number(b.onCatalog) - Number(a.onCatalog));
+  }
+
+  lines.push("On this site, start here:");
+  for (const c of ranked) {
+    const qUrl = base + "?q=" + encodeURIComponent(c.name);
+    let bit = "• " + c.name + " — " + qUrl;
+    if (catalogBlob && !c.onCatalog) {
       bit += " (check catalog — may not be in current live snapshot)";
     }
-    if (c.evidence) {
-      const card = (evidence.cards || []).find((x) => x.id === c.evidence);
-      if (card?.tier) bit += " — evidence file: " + oneLine(card.tier).slice(0, 90);
-    }
-    if (c.note) bit += " — " + c.note;
     lines.push(bit);
   }
-  lines.push("Open the price list and search those names: " + home);
+
+  if (topic.categoryKey) {
+    const catUrl = base + "?category=" + encodeURIComponent(topic.categoryKey);
+    lines.push("Open the full category filter: " + catUrl);
+  } else {
+    lines.push("Open the price list: " + home);
+  }
   lines.push("Or name one compound and I’ll pull the evidence card we have on file.");
   lines.push("");
   lines.push(DISCLAIMER);
