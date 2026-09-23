@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-21T15:53:59Z",
+  "checked_at": "2026-09-23T00:33:38Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1388,6 +1388,18 @@
         "url": "https://www.americanpeptides.us/products/copper-binding-peptide-ghk-cu",
         "price": 50.0,
         "regular_price": null,
+        "error": null
+      },
+      "Selank | Vial | 10mg": {
+        "url": "https://www.americanpeptides.us/products/selank",
+        "price": 52.0,
+        "regular_price": 65.0,
+        "error": null
+      },
+      "Semax | Vial | 10mg": {
+        "url": "https://www.americanpeptides.us/products/semax",
+        "price": 52.0,
+        "regular_price": 65.0,
         "error": null
       }
     },
