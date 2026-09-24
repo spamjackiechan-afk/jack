@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-23T15:07:20Z",
+  "checked_at": "2026-09-24T14:48:00Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1218,8 +1218,8 @@
     "American Peptides": {
       "BPC-157 | Vial | 5mg": {
         "url": "https://www.americanpeptides.us/products/bpc-157",
-        "price": 48.0,
-        "regular_price": 60.0,
+        "price": 60.0,
+        "regular_price": null,
         "error": null
       },
       "BPC-157 | Vial | 10mg": {
@@ -1242,8 +1242,8 @@
       },
       "Ipamorelin | Vial | 5mg": {
         "url": "https://www.americanpeptides.us/products/ipamorelin",
-        "price": 32.0,
-        "regular_price": 40.0,
+        "price": 40.0,
+        "regular_price": null,
         "error": null
       },
       "Ipamorelin | Vial | 10mg": {
@@ -1386,14 +1386,14 @@
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://www.americanpeptides.us/products/copper-binding-peptide-ghk-cu",
-        "price": 40.0,
-        "regular_price": 50.0,
+        "price": 50.0,
+        "regular_price": null,
         "error": null
       },
       "Selank | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/selank",
-        "price": 52.0,
-        "regular_price": 65.0,
+        "price": 65.0,
+        "regular_price": null,
         "error": null
       },
       "Semax | Vial | 10mg": {
