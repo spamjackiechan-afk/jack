@@ -1197,13 +1197,10 @@
       <option value="name">Sort: A–Z</option>
       <option value="price-low">Sort: Price low–high</option>
       <option value="price-high">Sort: Price high–low</option>
-      <option value="verified">Sort: Best-verified vendor</option>
-      <option value="evidence">Sort: Evidence strength</option>
     </select>
 
     <select id="vendorOrderMaster" title="How vendors are ordered inside each listing" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
       <option value="cheapest">Vendors: Cheapest</option>
-      <option value="verified">Vendors: Purity</option>
       <option value="popular">Vendors: Popular</option>
     </select>
 
@@ -1351,76 +1348,6 @@ function groupCheapest(group){
 }
 
 
-// ---------- Sorting by vendor verification and evidence ----------
-// Both are coarse and deliberately labelled as such. Neither claims more
-// precision than the underlying data supports.
-
-// How well a buyer can independently check a vendor's testing. Mirrors the
-// tiers set out on the Testing & Quality page: 1 = laboratory named and
-// results verifiable, 4 = nothing confirmable.
-function bestVendorTier(item){
-  let best = 99;
-  for (const v of Object.keys(item.prices)){
-    const tier = (VENDOR_CONFIG[v] || {}).testing_tier;
-    if (tier && tier < best) best = tier;
-  }
-  return best;
-}
-
-// Three evidence bands. Band 1 means the compound is the active ingredient
-// in a medicine that completed regulatory review somewhere — not that the
-// material sold here is that medicine. Band 3 means no published human
-// trial data was found for the compound at all. Everything else sits in
-// band 2, which spans a wide range and should not be read as a ranking
-// within itself.
-const APPROVED_COMPOUNDS = [
-  'tirzepatide','semaglutide','glp-1','glp-2','tesamorelin','sildenafil','hcg',
-  'chorionic','pt-141','bremelanotide','ss-31','elamipretide','melanotan i',
-  'methyl b12','methylcobalamin','oxytocin','gonadorelin','sermorelin',
-];
-const NO_HUMAN_TRIAL_PHRASES = [
-  'zero published human trials','zero human trials','no dedicated human trials',
-  'observational (endogenous levels) only','no evidence found for combined',
-];
-
-// Group-level: a group holds several dose rows, so take the best across them.
-function groupBestTier(group){
-  return Math.min(...group.doses.map(bestVendorTier));
-}
-function groupEvidenceBand(group){
-  return Math.min(...group.doses.map(evidenceBand));
-}
-
-function evidenceBand(item){
-  return compoundEvidenceBand(item.peptide);
-}
-
-// Evidence is a property of the molecule, not of a particular vial, so this
-// is computed once per compound across every listing that mentions it. A
-// caveat recorded on one listing (e.g. "zero published human trials") holds
-// for the compound regardless of which size or format is being viewed.
-const _evidenceCache = new Map();
-function compoundEvidenceBand(peptide){
-  if (_evidenceCache.has(peptide)) return _evidenceCache.get(peptide);
-  const n = (peptide || '').toLowerCase();
-  let band;
-
-  if (n.includes('melanotan ii')){
-    band = 3;                                    // never approved anywhere
-  } else if (APPROVED_COMPOUNDS.some(c => n.includes(c))){
-    band = 1;
-  } else {
-    // Scan every listing of this compound, not just the one being sorted.
-    const notes = DATA.included
-      .filter(i => i.peptide === peptide)
-      .map(i => (i.notes || '').toLowerCase());
-    band = notes.some(note => NO_HUMAN_TRIAL_PHRASES.some(p => note.includes(p))) ? 3 : 2;
-  }
-  _evidenceCache.set(peptide, band);
-  return band;
-}
-
-
 
 // ---------- Search aliases ----------
 // Someone searching "Ozempic" is looking for semaglutide; someone searching
@@ -1552,33 +1479,19 @@ function render(){
   }
 
   let groups = groupByPeptideFormat(items);
+  // Remap removed sort modes (bookmarked / stale state) to A–Z.
+  if (activeSort === 'verified' || activeSort === 'evidence') activeSort = 'name';
   const usingPriceSort = activeSort === 'price-low' || activeSort === 'price-high';
-  const usingRankSort = activeSort === 'verified' || activeSort === 'evidence';
 
-  // Say plainly what a ranked sort is ordering by. Both are coarse, and a
-  // reader should know that before drawing conclusions from the order.
   const sortNote = document.getElementById('sortNote');
-  if (sortNote){
-    if (activeSort === 'verified'){
-      sortNote.style.display = 'block';
-      sortNote.innerHTML = '<strong>Ordered by how far a vendor\'s testing can be checked</strong> \u2014 listings sold by a vendor that names its laboratory come first, then those documenting a full panel without naming the lab, then unverified. This ranks the seller, not the compound. See the <a href="testing.html" style="color:var(--lowest);">Testing &amp; Quality</a> page for what each tier means.';
-    } else if (activeSort === 'evidence'){
-      sortNote.style.display = 'block';
-      sortNote.innerHTML = '<strong>Three coarse bands, not a score.</strong> First: compounds that are the active ingredient in an approved medicine somewhere \u2014 which says nothing about the material sold here. Last: compounds with no published human trial data found. Everything between sits in one middle band and is <em>not</em> ranked within it.';
-    } else {
-      sortNote.style.display = 'none';
-    }
-  }
+  if (sortNote) sortNote.style.display = 'none';
+
   if (activeSort === 'price-low') groups.sort((a,b) => groupCheapest(a) - groupCheapest(b));
   else if (activeSort === 'price-high') groups.sort((a,b) => groupCheapest(b) - groupCheapest(a));
-  else if (activeSort === 'verified')
-    groups.sort((a,b) => (groupBestTier(a) - groupBestTier(b)) || a.peptide.localeCompare(b.peptide));
-  else if (activeSort === 'evidence')
-    groups.sort((a,b) => (groupEvidenceBand(a) - groupEvidenceBand(b)) || a.peptide.localeCompare(b.peptide));
   else groups.sort((a,b) => a.peptide.localeCompare(b.peptide));
 
   const FORMAT_ORDER = ['Vial', 'Nasal', 'Capsules', 'Oral', 'Water'];
-  if (activeFilter === 'All' && !usingPriceSort && !usingRankSort && !q){
+  if (activeFilter === 'All' && !usingPriceSort && !q){
     const sections = FORMAT_ORDER
       .map(fmt => ({ fmt, list: groups.filter(g => g.format === fmt) }))
       .filter(s => s.list.length > 0);
@@ -1637,11 +1550,6 @@ function dosePanelHtml(item, panelId, isActive){
     // rather than arbitrary while a compound is still gathering signal.
     const clicksFor = v => CLICK_COUNTS[`${item.peptide}|||${v}`] || 0;
     entries = priced.slice().sort((a,b) => (clicksFor(b[0]) - clicksFor(a[0])) || (a[1] - b[1]));
-  } else if (vendorOrder === 'verified'){
-    // Best-verified first, then cheapest within the same tier. Vendors with
-    // no tier recorded sort last rather than being treated as unverified.
-    const tierOf = v => (VENDOR_CONFIG[v] || {}).testing_tier || 99;
-    entries = priced.slice().sort((a,b) => (tierOf(a[0]) - tierOf(b[0])) || (a[1] - b[1]));
   } else {
     entries = priced.slice().sort((a,b) => a[1] - b[1]);
   }
@@ -1796,6 +1704,8 @@ function warningHtml(name, gid){
 // who has said they want best-verified first means it generally, and having
 // each listing remember a different order would be hard to reason about.
 function setVendorOrder(value){
+  // Remap removed "Purity" mode (stale UI / bookmarked state) to cheapest.
+  if (value === 'verified' || value === 'purity') value = 'cheapest';
   if (value === vendorOrder) return;
   vendorOrder = value;
   // The master control is outside the re-rendered grid, so it has to be
@@ -1881,9 +1791,8 @@ function cardHtmlGrouped(group){
           </div>
           ${`
           <div class="vendor-order-wrap">
-            <select class="vendor-order-sel" title="Order vendors by price, by whose purity claim can be checked, or by how often visitors here actually click through to them" aria-label="How vendors are ordered for ${group.peptide}" onchange="setVendorOrder(this.value)">
+            <select class="vendor-order-sel" title="Order vendors by price or by how often visitors here actually click through to them" aria-label="How vendors are ordered for ${group.peptide}" onchange="setVendorOrder(this.value)">
               <option value="cheapest"${vendorOrder === 'cheapest' ? ' selected' : ''}>↓ Cheapest</option>
-              <option value="verified"${vendorOrder === 'verified' ? ' selected' : ''}>✓ Purity</option>
               <option value="popular"${vendorOrder === 'popular' ? ' selected' : ''}>★ Popular</option>
             </select>
           </div>`}
@@ -1950,7 +1859,12 @@ categorySelect.addEventListener('change', () => { activeCategory = categorySelec
 })();
 
 
-document.getElementById('sortBy').addEventListener('change', (e) => { activeSort = e.target.value; render(); });
+document.getElementById('sortBy').addEventListener('change', (e) => {
+  let v = e.target.value;
+  if (v === 'verified' || v === 'evidence') v = 'name';
+  activeSort = v;
+  render();
+});
 document.getElementById('vendorOrderMaster').addEventListener('change', (e) => setVendorOrder(e.target.value));
 
 
