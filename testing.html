@@ -126,54 +126,7 @@
   <a href="index.html" class="back-link">&larr; Back to price comparison</a>
 
   <div class="eyebrow">Testing &amp; Quality</div>
-  <h1>Every vendor says they test. The useful question is who checks the checker.</h1>
-  <p class="lede">Purity claims are cheap to make and hard to verify. This page sets out what each vendor actually documents, whether the laboratory doing the work is named, and what a Certificate of Analysis can and cannot tell you.</p>
-
-  <hr class="divider">
-
-  <h2>What a COA actually proves</h2>
-  <p class="sect-sub">Most disputes about peptide quality come down to confusing two separate questions. A certificate can answer both, one, or neither.</p>
-
-  <div class="coa-grid">
-    <div class="coa-item">
-      <h3>Purity — by HPLC</h3>
-      <p><strong>How clean is it.</strong> Reported as a percentage of total peak area. A figure is method-dependent: two labs using different columns or wavelengths can differ by 1–3% on identical material, so the stated method matters as much as the number.</p>
-    </div>
-    <div class="coa-item">
-      <h3>Identity — by mass spectrometry</h3>
-      <p><strong>Is it the right molecule.</strong> Compares observed mass against the theoretical mass for the sequence. A compound can be 99.5% pure and still be entirely the wrong peptide — purity alone cannot catch that.</p>
-    </div>
-    <div class="coa-item">
-      <h3>Content — quantitative assay</h3>
-      <p><strong>How much is in the vial.</strong> Distinct from purity, which says nothing about fill weight. This is the figure that matters when a label says 10&nbsp;mg and the vial holds less.</p>
-    </div>
-    <div class="coa-item">
-      <h3>Endotoxin, heavy metals, sterility</h3>
-      <p><strong>What else is in there.</strong> Contaminants that neither purity nor identity testing will reveal. Commonly the first tests omitted when a panel is abbreviated.</p>
-    </div>
-  </div>
-
-  <div class="coa-callout">
-    <strong>The single most useful habit:</strong> ask for the COA for <em>your lot number</em>, not a sample certificate. A batch-specific document with a date and a named laboratory is a different kind of evidence from a purity figure printed on a product page.
-  </div>
-
-  <hr class="divider">
-
-  <h2>Vendor comparison</h2>
-  <p class="sect-sub">Drawn from each vendor's own published material. Where a column reads "not stated", that means the vendor does not say — not that the testing did not happen.</p>
-
-  <div class="table-scroll">
-    <table>
-      <thead>
-        <tr>
-          <th>Vendor</th><th>Standing</th><th>Purity</th><th>Identity</th><th>Contaminants</th><th>Lab named</th><th>COAs public</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody"></tbody>
-    </table>
-  </div>
-
-  <hr class="divider">
+  <h1>Testing &amp; Quality</h1>
 
   <h2>Grouped by how far the evidence goes</h2>
   <p class="sect-sub">The grouping is not about who claims the highest purity — nearly everyone claims 99%. It is about whether an outside party could confirm the claim.</p>
@@ -222,45 +175,6 @@ const vendors = Object.entries(VENDOR_CONFIG)
   .filter(([k]) => !k.startsWith('_'))
   .filter(([, c]) => c.testing_tier)
   .sort((a, b) => (a[1].testing_tier - b[1].testing_tier) || a[0].localeCompare(b[0]));
-
-// --- comparison table ---
-function has(methods, ...needles){
-  if (!methods || !methods.length) return null;
-  const j = methods.join(' ').toLowerCase();
-  return needles.some(n => j.includes(n));
-}
-const COA_PUBLIC = {
-  'BioIntegrity Research': ['yes', 'Permanent archive'],
-  'Southern Aminos':       ['yes', 'Third-party tracked'],
-  'Licensed Peptides':     ['part', 'On product pages'],
-  'Alpha Peptides':        ['part', 'By email request'],
-  'Koi Peptides':          ['part', 'Not stated'],
-  'Core Peptides':         ['part', 'Partial coverage'],
-  'UltraLife':             ['no', 'Not stated'],
-  'Royal Peptides':        ['no', 'Not stated'],
-  'Purity Peptides':       ['no', 'Not stated'],
-};
-
-document.getElementById('tableBody').innerHTML = vendors.map(([name, c]) => {
-  const m = c.testing_methods;
-  const cell = (v) => v === true ? '<span class="yes">Yes</span>'
-                    : v === false ? '<span class="no">Not stated</span>'
-                    : '<span class="part">Unclear</span>';
-  const labNamed = c.testing_lab && !/not named|unnamed/i.test(c.testing_lab);
-  const labText = !c.testing_lab ? '<span class="no">Not stated</span>'
-    : labNamed ? `<span class="yes">${esc(c.testing_lab.split(';')[0])}</span>`
-    : `<span class="part">${esc(c.testing_lab.replace(/\s*\(not named\)/i, ''))}</span>`;
-  const [coaState, coaText] = COA_PUBLIC[name] || ['part', 'Not stated'];
-  return `<tr>
-    <td class="vendor">${esc(name)}</td>
-    <td><span class="tier-pill tier-${c.testing_tier}">Tier ${c.testing_tier}</span></td>
-    <td>${cell(has(m, 'hplc'))}</td>
-    <td>${cell(has(m, 'ms', 'mass spec', 'spectrometry'))}</td>
-    <td>${cell(has(m, 'endotoxin', 'heavy metal', 'sterility', 'microbial'))}</td>
-    <td>${labText}</td>
-    <td><span class="${coaState}">${esc(coaText)}</span></td>
-  </tr>`;
-}).join('');
 
 // --- tier blocks ---
 const byTier = {};

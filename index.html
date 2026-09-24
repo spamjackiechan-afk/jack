@@ -1016,26 +1016,6 @@
       </nav>
     </div>
 
-    <div class="hero">
-      <div class="hero-copy">
-        <div class="hero-eyebrow">Price context, not just low prices</div>
-        <h2 class="hero-h">Compare research peptide prices<br><em>with the evidence beside them.</em></h2>
-        <p class="hero-sub">One calm place to compare equivalent products across vendors, along with testing, freshness, and verification notes.</p>
-        <div class="hero-actions">
-          <button type="button" class="btn-primary" id="browseBtn">Browse <span id="browseCount">comparisons</span></button>
-          <a class="btn-secondary" href="testing.html">How we verify</a>
-        </div>
-        <p class="hero-disclosure">We may earn a commission when you use a vendor code. It never changes ranking.</p>
-      </div>
-
-      <aside class="hero-proof">
-        <div class="proof-label">This week&rsquo;s coverage</div>
-        <div class="proof-item"><strong id="proofVendors">&mdash;</strong><span>Compared across formats and doses</span></div>
-        <div class="proof-item"><strong id="proofLive">&mdash;</strong><span>Prices monitored daily with timestamps</span></div>
-        <div class="proof-item"><strong>Testing notes</strong><span>Evidence and caveats per listing</span></div>
-      </aside>
-    </div>
-
     <p class="ruo-line">Research use only &mdash; not for human or animal consumption</p>
 
     <div class="trust-band">
@@ -1197,24 +1177,6 @@
   <div class="sort-note" id="sortNote"></div>
 
 
-  <div class="method-band" id="methodBand">
-    <h3>How these prices compare</h3>
-    <div class="method-grid">
-      <div class="method-item">
-        <h4>Like for like</h4>
-        <p>Listings are grouped by compound, format and vial size, so a 10&nbsp;mg vial is only ever compared against another 10&nbsp;mg vial. Where a vendor sells a multi-vial kit, the listing says so rather than showing a misleadingly large number.</p>
-      </div>
-      <div class="method-item">
-        <h4>How current a price is</h4>
-        <p>Most listings are re-read from the vendor&rsquo;s own product page every morning. Those carry a <span class="method-live">&#9679;&nbsp;LIVE</span> marker. Anything without it is the last confirmed price, which may have moved.</p>
-      </div>
-      <div class="method-item">
-        <h4>What verification means</h4>
-        <p>Nearly every vendor claims 99% purity, so the claim itself separates nobody. What differs is whether the testing can be checked &mdash; whether the laboratory is named and its certificates are public. <a href="testing.html">See the method</a>.</p>
-      </div>
-    </div>
-  </div>
-
   <div class="controls">
     <input type="search" id="search" placeholder="Search a peptide — e.g. BPC-157, NAD+, Selank…">
     <button class="chip active" data-filter="All">All formats</button>
@@ -1246,9 +1208,6 @@
     </select>
 
   </div>
-  <div id="codeBanner"></div>
-  <div class="count" id="count"></div>
-
   <div class="index" id="index"></div>
 
   <div class="excluded-section">
@@ -1586,9 +1545,11 @@ function render(){
     return matchesFormat && matchesSaved && matchesSale && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
   });
 
-  countEl.textContent = items.length + ' listing' + (items.length === 1 ? '' : 's') +
-    (q ? ` matching "${q}"` : '') + (activeFilter !== 'All' ? ` — ${activeFilter === '__saved' ? 'Saved' : activeFilter === '__sale' ? 'On sale' : activeFilter}` : '') +
-    (activeVendor !== 'All' ? ` — ${activeVendor}` : '');
+  if (countEl){
+    countEl.textContent = items.length + ' listing' + (items.length === 1 ? '' : 's') +
+      (q ? ` matching "${q}"` : '') + (activeFilter !== 'All' ? ` — ${activeFilter === '__saved' ? 'Saved' : activeFilter === '__sale' ? 'On sale' : activeFilter}` : '') +
+      (activeVendor !== 'All' ? ` — ${activeVendor}` : '');
+  }
 
   let groups = groupByPeptideFormat(items);
   const usingPriceSort = activeSort === 'price-low' || activeSort === 'price-high';
@@ -2019,16 +1980,6 @@ document.getElementById('excludedCategories').innerHTML = categoryOrder
     </div>
   `).join('');
 
-const codedVendors = Object.entries(VENDOR_CONFIG).filter(([name, cfg]) => cfg.status === 'approved' && cfg.tracking_type === 'link_plus_code' && cfg.promo_code);
-if (codedVendors.length){
-  document.getElementById('codeBanner').innerHTML = codedVendors.map(([vendorName, cfg]) => `
-    <div class="code-banner">
-      <div class="msg">Buying from <strong>${vendorName}</strong>? Use code <strong>${cfg.promo_code}</strong> at checkout — it gets you a discount, and supports this site.</div>
-      <button type="button" data-code="${cfg.promo_code}" onclick="copyCode(this)">Copy code</button>
-    </div>
-  `).join('');
-}
-
 render();
 
 // ---------- Trust strip ----------
@@ -2091,10 +2042,6 @@ async function loadLivePrices(){
     }
 
     if (updatedCount > 0){
-      const banner = document.createElement('div');
-      banner.style.cssText = 'font-family:\'IBM Plex Mono\', monospace; font-size:11px; color:var(--success); margin:-6px 0 18px;';
-      banner.textContent = `✓ ${updatedCount} price${updatedCount === 1 ? '' : 's'} confirmed live as of ${new Date(live.checked_at).toLocaleString()}`;
-      countEl.after(banner);
       render();
       renderDeals();
     }
