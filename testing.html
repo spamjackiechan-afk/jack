@@ -128,6 +128,10 @@
   <div class="eyebrow">Testing &amp; Quality</div>
   <h1>Testing &amp; Quality</h1>
 
+  <h2>References</h2>
+  <p class="sect-sub">Public links on peptides — research, approvals, and enforcement.</p>
+  <ol class="source-list" id="sourceList"></ol>
+
   <div class="contact-block">
     <h3>Get in touch</h3>
     <p>Spotted a price that looks wrong, a vendor missing, or something on this site that needs correcting? Say so — corrections are welcome and get acted on.</p>
@@ -141,6 +145,27 @@
   <p class="ruo">Research use only — nothing on this site is intended for human or animal consumption.</p>
 </div>
 
+<script>
+function esc(s){ const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+
+const SOURCES = {
+  wada:      { n: 1, label: 'World Anti-Doping Agency, The Prohibited List (S1.2, S2.2, S2.3)', url: 'https://www.wada-ama.org/en/prohibited-list' },
+  breindahl: { n: 2, label: 'Breindahl T. et al., “Identification and characterization by LC-UV-MS/MS of melanotan II skin-tanning products sold illegally on the Internet”, Drug Testing and Analysis (2015), DOI 10.1002/dta.1655', url: 'https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/dta.1655' },
+  dorr:      { n: 3, label: 'Dorr R.T. et al., “Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide in a pilot phase-I clinical study”, PubMed 8637402', url: 'https://pubmed.ncbi.nlm.nih.gov/8637402/' },
+  cnbc:      { n: 4, label: 'CNBC — “Lilly sues six companies over alleged illegal sales of experimental obesity drug retatrutide” (12 Aug 2026)', url: 'https://www.cnbc.com/2026/08/12/lilly-lawsuits-obesity-drug-retatrutide.html' },
+  npr:       { n: 5, label: 'NPR — “Eli Lilly files 6 lawsuits against businesses selling ‘black market’ obesity drug” (13 Aug 2026)', url: 'https://www.npr.org/2026/08/13/g-s1-138594/eli-lilly-files-6-lawsuits-against-businesses-selling-black-market-obesity-drug' },
+  wapo:      { n: 6, label: 'The Washington Post — “Eli Lilly sues alleged black-market GLP-1 vendors over imitation retatrutide” (12 Aug 2026)', url: 'https://www.washingtonpost.com/health/2026/08/12/eli-lilly-sues-alleged-black-market-glp-1-vendors-over-imitation-retatrutide/' },
+  cbs:       { n: 7, label: 'CBS News — “Eli Lilly takes aim at illicit market for its experimental weight-loss drug” (12 Aug 2026)', url: 'https://www.cbsnews.com/news/eli-lilly-lawsuits-weight-loss-drug/' },
+  frier:     { n: 8, label: 'Frier Levitt — case-by-case analysis of the six filings, including docket numbers', url: 'https://www.frierlevitt.com/articles/lilly-retatrutide-lawsuits-ruo-peptide-sellers/' },
+  biopharma: { n: 9, label: 'BioPharma Dive — “Lilly files six lawsuits in bid to shut down ‘black market’ for retatrutide” (12 Aug 2026)', url: 'https://www.biopharmadive.com/news/lilly-lawsuit-retatrutide-black-market-obesity-drug/827659/' },
+  pubchem:   { n: 10, label: 'PubChem CID 16132341 — Thymosin beta-4 (43 residues, 4,963 Da); TB-500 fragment Ac-LKKTETQ listed separately at 889 Da', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/16132341' },
+};
+
+document.getElementById('sourceList').innerHTML = Object.values(SOURCES)
+  .sort((a, b) => a.n - b.n)
+  .map(s => `<li id="src-${s.n}"><span class="num">${s.n}</span><span class="txt">${esc(s.label)}<br><a href="${s.url}" target="_blank" rel="noopener">${esc(s.url)}</a></span></li>`)
+  .join('');
+</script>
 <script src="/site-guide-widget.js" defer></script>
 </body>
 </html>
