@@ -295,24 +295,9 @@
     text-transform:uppercase; color:var(--amber); margin:34px 0 0;
   }
 
-  .trust-band{
-    display:grid; grid-template-columns:minmax(0,1fr) auto; gap:40px; align-items:center;
-    margin-top:26px; padding-top:26px; border-top:1px solid var(--rule);
-  }
-  .trust-band-copy h3{font-family:'Fraunces', serif; font-weight:400; font-size:26px; margin:0 0 7px; color:var(--ink);}
-  .trust-band-copy p{font-size:14px; color:var(--ink-soft); margin:0;}
-  .trust-stats{display:flex; gap:0;}
-  .tstat{padding:0 30px; border-left:1px solid var(--rule); text-align:left;}
-  .tstat:first-child{border-left:none; padding-left:0;}
-  .tstat strong{display:block; font-size:27px; font-weight:600; color:var(--ink); margin-bottom:4px;}
-  .tstat span{font-size:13px; color:var(--ink-soft);}
-
   @media (max-width:900px){
     .hero{grid-template-columns:1fr; gap:34px;}
     .hero-proof{border-left:none; border-top:1px solid var(--rule); padding-left:0; padding-top:26px;}
-    .trust-band{grid-template-columns:1fr; gap:24px;}
-    .trust-stats{flex-wrap:wrap; gap:20px 0;}
-    .tstat{padding:0 22px 0 0; border-left:none;}
     .mast-nav{padding-top:0;}
   }
   @media (max-width:520px){
@@ -1017,19 +1002,6 @@
     </div>
 
     <p class="ruo-line">Research use only &mdash; not for human or animal consumption</p>
-
-    <div class="trust-band">
-      <div class="trust-band-copy">
-        <div class="hero-eyebrow">A clearer trust signal</div>
-        <h3>What &ldquo;best price&rdquo; actually means</h3>
-        <p>Normalize dose. Flag non-comparable packs. Label price freshness.</p>
-      </div>
-      <div class="trust-stats">
-        <div class="tstat"><strong id="statVerified">&mdash;</strong><span>prices verified</span></div>
-        <div class="tstat"><strong id="statDeals">&mdash;</strong><span>active discounts</span></div>
-        <div class="tstat"><strong id="statRefresh">&mdash;</strong><span>last refresh</span></div>
-      </div>
-    </div>
 
     <div id="trustStrip" style="display:none;"></div>
   </header>
@@ -2666,19 +2638,14 @@ updateFavCount();
 function updateHeroStats(){
   const vendors = new Set(DATA.included.flatMap(i => Object.keys(i.prices))).size;
   const liveVendors = new Set();
-  let verified = 0;
   DATA.included.forEach(i => {
     if (!i.liveVerified) return;
-    Object.keys(i.liveVerified).forEach(v => { liveVendors.add(v); verified++; });
+    Object.keys(i.liveVerified).forEach(v => { liveVendors.add(v); });
   });
-  const deals = DATA.included.reduce((n, i) => n + (i.onSale ? Object.keys(i.onSale).length : 0), 0);
   const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
   set('browseCount', `${DATA.included.length} comparisons`);
   set('proofVendors', `${vendors} vendors`);
   set('proofLive', liveVendors.size ? `${liveVendors.size} live sources` : 'Daily checks');
-  set('statVerified', verified || '\u2014');
-  set('statDeals', deals || '\u2014');
-  set('statRefresh', verified ? 'Today' : '\u2014');
 }
 document.getElementById('browseBtn')?.addEventListener('click', () => {
   document.querySelector('.controls')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
