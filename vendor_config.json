@@ -231,7 +231,8 @@
     "testing_lab": "Independent ISO 17025-aligned US laboratory (not named)",
     "testing_standard": "\u226599% purity floor; lots below floor rejected outright",
     "testing_note": "Describes a five-test panel per lot (Qualitative ID, Percent Purity, Quantitative Assay, Heavy Metals, Conformity) and confirms identity by HPLC and MS before accepting a lot into inventory. COAs are not published on the site \u2014 they are supplied on request by email against a lot number, so a buyer cannot check before ordering.",
-    "testing_tier": 2
+    "testing_tier": 2,
+    "affiliate_path_suffix": "aff/863/"
   },
   "Midwest Peptide": {
     "status": "approved",
