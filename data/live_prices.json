@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-24T14:48:00Z",
+  "checked_at": "2026-09-25T14:30:00Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1218,8 +1218,8 @@
     "American Peptides": {
       "BPC-157 | Vial | 5mg": {
         "url": "https://www.americanpeptides.us/products/bpc-157",
-        "price": 60.0,
-        "regular_price": null,
+        "price": 45.0,
+        "regular_price": 60.0,
         "error": null
       },
       "BPC-157 | Vial | 10mg": {
@@ -1290,14 +1290,14 @@
       },
       "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide",
-        "price": 100.0,
-        "regular_price": null,
+        "price": 75.0,
+        "regular_price": 100.0,
         "error": null
       },
       "Tirzepatide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide",
-        "price": 100.0,
-        "regular_price": null,
+        "price": 75.0,
+        "regular_price": 100.0,
         "error": null
       },
       "Tirzepatide | Vial | 20mg": {
@@ -1320,14 +1320,14 @@
       },
       "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide",
-        "price": 105.0,
-        "regular_price": null,
+        "price": 78.75,
+        "regular_price": 105.0,
         "error": null
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide",
-        "price": 105.0,
-        "regular_price": null,
+        "price": 78.75,
+        "regular_price": 105.0,
         "error": null
       },
       "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
@@ -1374,8 +1374,8 @@
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://www.americanpeptides.us/products/klow-blend",
-        "price": 200.0,
-        "regular_price": null,
+        "price": 150.0,
+        "regular_price": 200.0,
         "error": null
       },
       "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
