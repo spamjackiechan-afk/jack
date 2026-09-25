@@ -21,6 +21,7 @@ import json
 import re
 import sys
 import time
+from html import unescape
 from pathlib import Path
 
 import requests
@@ -189,12 +190,21 @@ def extract_regular_price(html: str, current: float | None) -> float | None:
 
     candidates = []
 
-    for m in re.finditer(r"<del[^>]*>(.*?)</del>", html, re.DOTALL | re.IGNORECASE):
-        # Must start with a digit: a bare "," (e.g. from inline JS templates
-        # like <del>'+money(reg,u)+'</del>) would otherwise crash float().
-        found = re.search(r"\d[\d,]*\.?\d*", re.sub(r"<[^>]+>", "", m.group(1)))
-        if found:
-            candidates.append(float(found.group(0).replace(",", "")))
+    def _amount(fragment):
+        # Strip tags and decode entities first: "&#36;31.00" must read as
+        # $31.00, not 36. Must start with a digit: a bare "," (e.g. from inline
+        # JS templates like <del>'+money(reg,u)+'</del>) would crash float().
+        text = unescape(re.sub(r"<[^>]+>", "", fragment))
+        found = re.search(r"\d[\d,]*\.?\d*", text)
+        return float(found.group(0).replace(",", "")) if found else None
+
+    # Only a <del> directly paired with an <ins> showing the current price is
+    # this product's sale; other <del>s on the page (related products, promo
+    # widgets) are not.
+    for m in re.finditer(r"<del[^>]*>(.*?)</del>\s*<ins[^>]*>(.*?)</ins>", html, re.DOTALL | re.IGNORECASE):
+        old, new = _amount(m.group(1)), _amount(m.group(2))
+        if old is not None and new is not None and current is not None and abs(new - current) < 0.01:
+            candidates.append(old)
 
     for m in re.finditer(r"Original price was:\s*\$?(\d[\d,]*\.?\d*)", html, re.IGNORECASE):
         candidates.append(float(m.group(1).replace(",", "")))
