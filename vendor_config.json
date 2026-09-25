@@ -318,5 +318,28 @@
     "testing_note": "Public third-party COAs on /coa/ (Krause Analytical, Freedom Diagnostics; HPLC + MS). COA RED FLAG: GHK-Cu 100mg lot OP-CU100-0626 (Krause) shows chromatographic purity >99.9% but measured content ~13.2 mg vs 100 mg label claim \u2014 underfill. Do not market Offline as content-verified without noting this. testing_tier 3.",
     "testing_tier": 3,
     "affiliate_path_suffix": null
+  },
+  "Orbitrex Peptide": {
+    "status": "approved",
+    "site_url": "https://orbitrexpeptide.is",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://orbitrexpeptide.is/?ref=Discount&utm_campaign=Discount&utm_medium=referral&utm_source=affiliate",
+    "promo_code": "discount",
+    "guidelines_notes": "Approved GoAffPro 2026-09. Domain MUST be orbitrexpeptide.is only (clone domains exist). GLP-coded SKUs EXCLUDED from listings (G2-TRZ=Tirzepatide-class per vendor schema; 3G-RT/1G-SGT coded). Public COA library. testing_tier 2.",
+    "last_checked": "2026-09-15",
+    "cookie_days": 30,
+    "commission": null,
+    "testing_researched": "2026-09-15",
+    "testing_methods": [
+      "Identity",
+      "Molecular/fill mass",
+      "Heavy metals",
+      "Bacterial endotoxins",
+      "Purity (HPLC claimed)"
+    ],
+    "testing_lab": "Named labs vary by lot (Freedom Diagnostics, TrustPointe, ILS, Kovera, Chromate cited in secondary sources; summary UI does not always name lab)",
+    "testing_standard": "Public batch COA library (~170 certificates / 56 products); 99%+ purity marketing",
+    "testing_note": "Public COA library at /coas/ with batch purity/endotoxins/heavy metals/sterility columns. Finnrick independent dataset exists. Lab names not always front-and-center on summary UI → tier 2, not 1.",
+    "testing_tier": 2
   }
 }
