@@ -3,98 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — How Discount Peptides Compares Vendors</title>
-<meta name="description" content="How this site chooses which vendors and compounds to list, what is withheld and why, and how affiliate arrangements are kept separate from the comparison.">
+<title>About — Discount Peptides</title>
+<meta name="description" content="What Discount Peptides compares, how prices are checked, how supplier testing is described, and how affiliate commissions are kept separate from the comparison.">
 <link rel="canonical" href="https://discountspeptides.com/about.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Discount Peptides">
 <meta property="og:url" content="https://discountspeptides.com/about.html">
-<meta property="og:title" content="About — How Discount Peptides Compares Vendors">
-<meta property="og:description" content="How this site chooses which vendors and compounds to list, what is withheld and why, and how affiliate arrangements are kept separate from the comparison.">
+<meta property="og:title" content="About — Discount Peptides">
+<meta property="og:description" content="What Discount Peptides compares, how prices are checked, how supplier testing is described, and how affiliate commissions are kept separate from the comparison.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About — How Discount Peptides Compares Vendors">
-<meta name="twitter:description" content="How this site chooses which vendors and compounds to list, what is withheld and why, and how affiliate arrangements are kept separate from the comparison.">
-
-<meta name="description" content="How Discount Peptides compares research peptide vendors, and the standards every listed vendor has to meet.">
+<meta name="twitter:title" content="About — Discount Peptides">
+<meta name="twitter:description" content="What Discount Peptides compares, how prices are checked, how supplier testing is described, and how affiliate commissions are kept separate from the comparison.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* Same palette as testing.html / index.html — no new colours. */
   :root{
     --paper:#09100E; --paper-raised:#101B17; --ink:#F2F3F1; --ink-soft:#8A9490;
-    --rule:#24302B; --amber:#C98383; --lowest:#79D9B8;
+    --rule:#24302B; --sage:#4FBF98; --sage-deep:#79D9B8; --amber:#C98383;
+    --amber-bg:#25171A; --lowest:#79D9B8; --lowest-bg:#0F211B; --success:#E8B84B;
   }
   *{box-sizing:border-box;}
-  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Fraunces', serif; font-weight:400; line-height:1.75;}
-  .wrap{max-width:640px; margin:0 auto; padding:64px 24px 90px;}
-  .back-link{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); text-decoration:none; margin-bottom:52px;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-weight:500; line-height:1.6;}
+  .wrap{max-width:1000px; margin:0 auto; padding:48px 24px 80px;}
+  a{color:inherit;}
+  .back-link{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); text-decoration:none; margin-bottom:40px;}
   .back-link:hover{color:var(--lowest);}
-  .kicker{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.1em; color:var(--lowest); margin-bottom:22px;}
-  h1{font-weight:500; font-style:italic; font-size:clamp(26px, 4vw, 32px); margin:0 0 44px; line-height:1.5; color:var(--ink);}
-  p{font-size:17px; color:var(--ink); margin:0 0 26px;}
-  p:first-of-type::first-letter{font-size:3.4em; float:left; line-height:0.8; padding:0.06em 0.08em 0 0; color:var(--lowest); font-weight:500;}
-  .divider{border:none; border-top:1px solid var(--rule); margin:48px 0;}
-  .exclusions{font-size:15.5px; color:var(--ink-soft); border-left:2px solid var(--rule); padding-left:20px; margin:0 0 26px;}
-  .exclusions em{font-style:italic; color:var(--ink);}
-  .aside{font-size:15px; color:var(--ink-soft); font-style:italic; margin:48px 0 0;}
-  .contact-block{
-    border:1px solid var(--lowest); background:var(--lowest-bg); border-radius:12px;
-    padding:24px 26px; margin:34px 0 0; text-align:center;
-  }
-  .contact-block h3{font-family:'Fraunces', serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink);}
-  .contact-block p{font-size:14px; color:var(--ink-soft); margin:0 auto 16px; max-width:520px; line-height:1.55;}
-  .contact-email{
-    display:inline-flex; align-items:center; gap:10px;
-    font-family:'IBM Plex Mono', monospace; font-size:17px; font-weight:500;
-    color:var(--paper); background:var(--lowest); text-decoration:none;
-    padding:13px 24px; border-radius:9px; transition:background .12s; word-break:break-all;
-  }
-  .contact-email:hover{background:var(--sage-deep);}
-  .contact-sub{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin:14px 0 0;}
-  @media (max-width:520px){
-    .contact-block{padding:20px 16px;}
-    .contact-email{font-size:14px; padding:12px 16px;}
-  }
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--lowest); margin-bottom:10px;}
+  h1{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(30px, 4.6vw, 42px); margin:0 0 18px; line-height:1.15;}
+  h2{font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:56px 0 6px;}
+  .sect-sub{font-size:14.5px; color:var(--ink-soft); margin:0 0 22px; max-width:680px;}
+
+  /* 1) Stats strip */
+  .stats{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:8px;}
+  .stat{background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:26px 20px; text-align:center;}
+  .stat-num{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(36px, 6vw, 52px); line-height:1; color:var(--lowest);}
+  .stat-label{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-soft); margin-top:10px;}
+  .stats-note{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-soft); margin:10px 0 0; text-align:right;}
+
+  /* 2) Numbered how-it-works cards */
+  .steps{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:44px;}
+  .step{background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:22px 20px;}
+  .step-num{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.08em; color:var(--lowest);}
+  .step h3{font-family:'Fraunces', serif; font-weight:500; font-size:20px; margin:8px 0 6px;}
+  .step p{font-size:14px; line-height:1.55; color:var(--ink-soft); margin:0;}
+
+  /* 3) Values 2x2 */
+  .values{display:grid; grid-template-columns:repeat(2, 1fr); gap:12px;}
+  .value{background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:20px 22px;}
+  .value h3{font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--lowest); margin:0 0 8px; font-weight:500;}
+  .value p{font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0;}
+  .value p a{color:var(--ink);}
+
+  /* 4) Contact */
+  .contact-card{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:18px 20px;}
+  .contact-card .label{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); margin-bottom:4px;}
+  .contact-email{font-family:'IBM Plex Mono', monospace; font-size:17px; color:var(--ink); text-decoration:none; word-break:break-all;}
+  .contact-email:hover{color:var(--lowest);}
+  .copy-btn{font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--paper); background:var(--lowest); border:none; border-radius:8px; padding:10px 16px; cursor:pointer; transition:background .12s; min-width:92px;}
+  .copy-btn:hover{background:var(--sage);}
+  .copy-btn.copied{background:var(--sage);}
+
   .ruo{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--amber); margin-top:56px; padding-top:24px; border-top:1px solid var(--rule);}
-  @media (max-width:600px){ .wrap{padding:44px 20px 64px;} p{font-size:16px;} }
+
+  @media (max-width:720px){
+    .stats, .steps{grid-template-columns:1fr;}
+    .values{grid-template-columns:1fr;}
+    .stats-note{text-align:left;}
+  }
+  @media (max-width:600px){ .wrap{padding:40px 18px 64px;} }
 </style>
 </head>
 <body>
 <div class="wrap">
   <a href="index.html" class="back-link">&larr; Back to price comparison</a>
 
-  <div class="kicker">About This Site</div>
-  <h1>On comparison, and what it does not excuse.</h1>
+  <div class="eyebrow">About Discount Peptides</div>
+  <h1>Research peptide prices, compared in one place.</h1>
 
-  <p>There is no shortage of places to buy research peptides, and increasingly little agreement among them — on price, on documentation, on what, precisely, ought to be trusted. Discount Peptides was built to address one narrow part of that problem: comparison, conducted as carefully as a single small operation can reasonably manage, and offered without pretending to be more than what it is.</p>
+  <!--
+    1) Stats strip.
+    Fallback values are a snapshot of main (2026-09-25), rounded DOWN:
+      PRODUCTS  = DATA.included.length on index.html (one row per peptide + format + size) = 196  -> "190+"
+      SUPPLIERS = unique vendor names across DATA.included[*].prices (= every vendor in vendor_config.json) = 13
+      PRICES    = sum of Object.keys(row.prices).length over DATA.included (vendor x product price cells) = 463 -> "460+"
+    On the live site the script below recomputes all three from the same DATA the homepage uses.
+  -->
+  <section class="stats" aria-label="Site statistics">
+    <div class="stat"><div class="stat-num" id="statProducts">190+</div><div class="stat-label">Products</div></div>
+    <div class="stat"><div class="stat-num" id="statSuppliers">13</div><div class="stat-label">Suppliers</div></div>
+    <div class="stat"><div class="stat-num" id="statPrices">460+</div><div class="stat-label">Prices</div></div>
+  </section>
+  <p class="stats-note" id="statsNote">Counted from the listings on our comparison page.</p>
 
-  <p>The premise is simple enough to state plainly. A given compound is often sold, under the same name, by a dozen or more independent suppliers, at prices that can differ by a considerable margin and for reasons rarely disclosed. This site gathers those prices — reading them, where possible, directly and automatically from each vendor's own listings, rather than relying on figures entered once and left to grow stale — and sets them beside one another, so that the comparison itself asks nothing further of the visitor.</p>
+  <!-- 2) How it works -->
+  <section class="steps" aria-label="How it works">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Live prices</h3>
+      <p>Most prices are re-read from each supplier&rsquo;s own product pages by an automated check; the rest are updated by hand.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Side-by-side</h3>
+      <p>Every supplier&rsquo;s price for the same compound and size on one card, cheapest first.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Verified coupons</h3>
+      <p>Verified partner deals and codes &mdash; vendor-specific, shown on the supplier they belong to.</p>
+    </div>
+  </section>
 
-  <hr class="divider">
+  <!-- 3) Values -->
+  <h2>Our Values</h2>
+  <p class="sect-sub">What we hold ourselves to &mdash; and nothing we can&rsquo;t back up.</p>
+  <section class="values">
+    <div class="value">
+      <h3>Testing, described honestly</h3>
+      <p>For every supplier we record what their published testing actually shows &mdash; methods, the named lab if any, public COAs &mdash; and note gaps and red flags. We don&rsquo;t run our own lab tests, and a COA is not a guarantee. <a href="testing.html">Testing &amp; Quality</a></p>
+    </div>
+    <div class="value">
+      <h3>Prices checked at the source</h3>
+      <p>Our price checker reads suppliers&rsquo; own product pages. Each run is timestamped and saved to version history, so changes are on record &mdash; not silently overwritten.</p>
+    </div>
+    <div class="value">
+      <h3>Affiliate commissions, disclosed</h3>
+      <p>We earn affiliate commissions from some listed suppliers, at no extra cost to you. It doesn&rsquo;t change the prices shown, and listings and sort order are not paid placements &mdash; suppliers are ordered by price (or by real visitor clicks, if you choose).</p>
+    </div>
+    <div class="value">
+      <h3>Corrections welcome</h3>
+      <p>We read every message and fix errors fast. Wrong price, missing supplier, broken link &mdash; tell us.</p>
+    </div>
+  </section>
 
-  <p>No vendor appears here by default, and none is listed on the strength of its own description of itself. Each is examined first for the ordinary signs of a legitimate operation — reviews from sources with no reason to flatter it, contact information that resolves to something real, a history that can be checked rather than taken on faith. Each vendor's catalog is then read product by product, and a defined set of categories is withheld from comparison, regardless of how the vendor otherwise conducts its business.</p>
-
-  <p class="exclusions">
-    Withheld, specifically: <em>prescription medications offered without a prescription</em>; <em>compounds that remain under active clinical investigation</em> and have not completed the ordinary course to market; <em>a class of SARMs</em> with a documented history of FDA warning letters; <em>TB-500, and blends built around it</em>, owing to unresolved questions of identity and verification; and <em>Melanotan II</em>, which carries its own explicit warnings against use. Several of these appear, on various vendors' own pages, under abbreviated or generic names — the exclusion is applied to what a compound is, not merely to what it is called there.
-  </p>
-
-  <hr class="divider">
-
-  <p>A note on how the site is supported, since it ought to be stated rather than left to be inferred: certain listed vendors maintain an affiliate arrangement with this site, under which a purchase made through a listed link may return a commission, at no cost to the purchaser. That arrangement is held apart, deliberately, from the standards described above. A vendor's affiliate status has no bearing on whether it is listed or excluded, or on how its pricing is presented beside others.</p>
-
-  <p class="aside">Comparison is offered here. Endorsement is not.</p>
-
-  <div class="contact-block">
-    <h3>Get in touch</h3>
-    <p>Spotted a price that looks wrong, a vendor missing, or something on this site that needs correcting? Say so — corrections are welcome and get acted on.</p>
-    <a class="contact-email" href="mailto:discountspeptides@gmail.com">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      discountspeptides@gmail.com
-    </a>
-    <p class="contact-sub">Vendors — enquiries about being listed, or corrections to your entry, go to the same address.</p>
+  <!-- 4) Contact -->
+  <h2>Questions, corrections, suggestions?</h2>
+  <p class="sect-sub">Missing supplier? Price looks off? Send it our way. Suppliers &mdash; listing enquiries and corrections go to the same address.</p>
+  <div class="contact-card">
+    <div>
+      <div class="label">Email</div>
+      <a class="contact-email" id="contactEmail" href="mailto:discountspeptides@gmail.com">discountspeptides@gmail.com</a>
+    </div>
+    <button type="button" class="copy-btn" id="copyEmail" aria-live="polite">Copy</button>
   </div>
 
-  <p class="ruo">Research use only — nothing on this site is intended for human or animal consumption.</p>
+  <p class="ruo">Research use only &mdash; nothing on this site is intended for human or animal consumption.</p>
 </div>
+
+<script>
+// Copy-to-clipboard with "Copied" feedback.
+(function(){
+  var btn = document.getElementById('copyEmail');
+  var email = 'discountspeptides@gmail.com';
+  function done(ok){
+    btn.textContent = ok ? 'Copied' : 'Copy failed';
+    btn.classList.toggle('copied', ok);
+    clearTimeout(btn._t);
+    btn._t = setTimeout(function(){ btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
+  }
+  function fallback(){
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = email; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta); done(ok);
+    } catch (e) { done(false); }
+  }
+  btn.addEventListener('click', function(){
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(email).then(function(){ done(true); }, fallback);
+    } else { fallback(); }
+  });
+})();
+
+// Live stats: recompute from the same DATA block the homepage embeds.
+// If anything fails (offline, file://, markup change) the snapshot values stay.
+(function(){
+  if (!window.fetch || location.protocol === 'file:') return;
+  fetch('/', { credentials: 'same-origin' })
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+    .then(function(html){
+      var marker = 'const DATA = ';
+      var i = html.indexOf(marker);
+      if (i < 0) return;
+      var end = html.indexOf('\n', i);
+      var src = html.slice(i + marker.length, end < 0 ? undefined : end).trim().replace(/;$/, '');
+      var data = JSON.parse(src);
+      var rows = (data && data.included) || [];
+      if (!rows.length) return;
+      var vendors = {}, cells = 0;
+      rows.forEach(function(r){
+        Object.keys(r.prices || {}).forEach(function(v){ vendors[v] = 1; cells++; });
+      });
+      document.getElementById('statProducts').textContent = rows.length.toLocaleString('en-US');
+      document.getElementById('statSuppliers').textContent = Object.keys(vendors).length.toLocaleString('en-US');
+      document.getElementById('statPrices').textContent = cells.toLocaleString('en-US');
+    })
+    .catch(function(err){ console.warn('About stats: using snapshot values.', err); });
+})();
+</script>
 </body>
 </html>

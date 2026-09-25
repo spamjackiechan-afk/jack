@@ -1,0 +1,4 @@
+# Legacy "Methodology" name for the About page. about.html itself is served
+# at /about by Pages (automatic .html -> extensionless 308), so no rule for it here.
+/methodology /about 301
+/methodology.html /about 301
