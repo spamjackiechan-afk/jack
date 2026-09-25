@@ -190,11 +190,13 @@ def extract_regular_price(html: str, current: float | None) -> float | None:
     candidates = []
 
     for m in re.finditer(r"<del[^>]*>(.*?)</del>", html, re.DOTALL | re.IGNORECASE):
-        found = re.search(r"[\d,]+\.?\d*", re.sub(r"<[^>]+>", "", m.group(1)))
+        # Must start with a digit: a bare "," (e.g. from inline JS templates
+        # like <del>'+money(reg,u)+'</del>) would otherwise crash float().
+        found = re.search(r"\d[\d,]*\.?\d*", re.sub(r"<[^>]+>", "", m.group(1)))
         if found:
             candidates.append(float(found.group(0).replace(",", "")))
 
-    for m in re.finditer(r"Original price was:\s*\$?([\d,]+\.?\d*)", html, re.IGNORECASE):
+    for m in re.finditer(r"Original price was:\s*\$?(\d[\d,]*\.?\d*)", html, re.IGNORECASE):
         candidates.append(float(m.group(1).replace(",", "")))
 
     if not candidates or current is None:
