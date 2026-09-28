@@ -300,7 +300,7 @@ def check_product(url: str) -> dict:
         return {"url": url, "price": None, "error": str(e)}
 
     price = extract_price(resp.text)
-    if price is None:
+    if price is None or price <= 0:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
     return {"url": url, "price": price, "regular_price": extract_regular_price(resp.text, price), "error": None}
 
@@ -324,7 +324,7 @@ def check_product_with_browser(url: str, browser) -> dict:
         page.close()
 
     price = extract_price(html)
-    if price is None:
+    if price is None or price <= 0:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
     return {"url": url, "price": price, "regular_price": extract_regular_price(html, price), "error": None}
 
