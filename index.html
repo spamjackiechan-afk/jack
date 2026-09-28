@@ -1923,36 +1923,66 @@ render();
 // baseline data — nothing breaks, nothing looks wrong to a visitor.
 const LIVE_PRICES_URL = 'https://raw.githubusercontent.com/spamjackiechan-afk/jack/main/data/live_prices.json';
 
+// Apply one live_prices.json payload onto DATA.included.
+// Contract (mirrored by scripts/check_prices.apply_live_overlay):
+//   • numeric price + vendor already on the row → update price, mark liveVerified,
+//     and (except Offline Peptides) record onSale from regular_price when higher.
+//   • price === null (404, no parse, network error) → REMOVE that vendor from the
+//     row's prices / vendor_product_urls / onSale / liveVerified and recompute
+//     lowest, so a stale embedded baseline cannot keep showing. If the row then
+//     has no vendors left, drop it from DATA.included.
+//   • vendor not already on the row → ignore (overlay is freshness, not catalog).
+//   • safety: if EVERY result for a vendor is null (site down / blocked run),
+//     nothing is cleared for that vendor — baseline prices stay until a run
+//     that actually reaches the site.
+function applyLiveOverlay(results){
+  let touched = 0;
+  for (const [vendor, items] of Object.entries(results || {})){
+    const vals = Object.values(items || {});
+    const vendorUnreachable = vals.length > 0 && vals.every(r => r == null || r.price == null);
+    for (const [itemKey, result] of Object.entries(items || {})){
+      if (result == null) continue;
+      if (result.price == null && vendorUnreachable) continue;
+      const [peptide, format, size] = itemKey.split(' | ');
+      const match = DATA.included.find(i => i.peptide === peptide && i.format === format && i.size === size);
+      if (!match || !(vendor in match.prices)) continue;
+
+      if (result.price == null){
+        delete match.prices[vendor];
+        if (match.vendor_product_urls) delete match.vendor_product_urls[vendor];
+        if (match.onSale) delete match.onSale[vendor];
+        if (match.liveVerified) delete match.liveVerified[vendor];
+        const remaining = Object.values(match.prices);
+        if (remaining.length){
+          match.lowest = Math.min(...remaining);
+        } else {
+          DATA.included = DATA.included.filter(i => i !== match);
+        }
+        touched++;
+        continue;
+      }
+
+      match.prices[vendor] = result.price;
+      match.liveVerified = match.liveVerified || {};
+      match.liveVerified[vendor] = true;
+      match.lowest = Math.min(...Object.values(match.prices));
+      // Offline Peptides: never surface deals/sales/onSale (standing rule).
+      if (vendor !== 'Offline Peptides' && result.regular_price && result.regular_price > result.price){
+        match.onSale = match.onSale || {};
+        match.onSale[vendor] = result.regular_price;
+      }
+      touched++;
+    }
+  }
+  return touched;
+}
+
 async function loadLivePrices(){
   try {
     const resp = await fetch(LIVE_PRICES_URL, { cache: 'no-store' });
     if (!resp.ok) return;
     const live = await resp.json();
-    const results = live.results || {};
-    let updatedCount = 0;
-
-    for (const [vendor, items] of Object.entries(results)){
-      for (const [itemKey, result] of Object.entries(items)){
-        if (result.price == null) continue; // "couldn't verify" — leave baseline price as-is
-        const [peptide, format, size] = itemKey.split(' | ');
-        const match = DATA.included.find(i => i.peptide === peptide && i.format === format && i.size === size);
-        // Only refresh a price that already exists on this listing. This file
-        // is a freshness overlay, not a source of truth about which vendors
-        // carry what — without this guard, a vendor removed from the site
-        // reappears on cards until the next tracker run overwrites the data.
-        if (match && vendor in match.prices){
-          match.prices[vendor] = result.price;
-          match.liveVerified = match.liveVerified || {};
-          match.liveVerified[vendor] = true;
-          // A vendor showing a struck-through higher price is running a sale.
-          if (result.regular_price && result.regular_price > result.price){
-            match.onSale = match.onSale || {};
-            match.onSale[vendor] = result.regular_price;
-          }
-          updatedCount++;
-        }
-      }
-    }
+    const updatedCount = applyLiveOverlay(live.results || {});
 
     if (updatedCount > 0){
       render();
