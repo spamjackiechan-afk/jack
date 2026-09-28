@@ -15,7 +15,8 @@ Fails on:
   * homepage < MIN_CARDS product cards, or < MIN_VENDORS distinct vendor names
   * the render safety net having kicked in (window.__DP_FALLBACK)
   * the calculator not producing a result for sample inputs
-  * the suppliers panel / suppliers.html rendering < MIN_SUPPLIERS cards
+  * the homepage Suppliers nav item not linking to /suppliers
+  * suppliers.html rendering < MIN_SUPPLIERS cards
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
@@ -102,16 +103,14 @@ def main():
         except Exception as e:
             problems.append(f"calculator: could not exercise it: {str(e).splitlines()[0]}")
 
-        # ---- Suppliers panel (on the homepage)
+        # ---- Suppliers nav item (homepage) must link to the /suppliers page
         try:
-            page.click("#suppliersToggle", timeout=5000)
-            page.wait_for_timeout(1500)
-            n = page.locator("#supplierGrid .supplier-card").count()
-            notes.append(f"suppliers panel: {n} cards")
-            if n < MIN_SUPPLIERS:
-                problems.append(f"suppliers panel: only {n} supplier cards (min {MIN_SUPPLIERS})")
+            href = page.get_attribute("#suppliersLink", "href", timeout=5000)
+            notes.append(f"suppliers nav link: {href!r}")
+            if (href or "").rstrip("/") not in ("/suppliers", "suppliers", "/suppliers.html", "suppliers.html"):
+                problems.append(f"suppliers nav link: expected /suppliers, got {href!r}")
         except Exception as e:
-            problems.append(f"suppliers panel: could not exercise it: {str(e).splitlines()[0]}")
+            problems.append(f"suppliers nav link: missing: {str(e).splitlines()[0]}")
         page.close()
 
         # ---- suppliers.html
