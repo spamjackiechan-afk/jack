@@ -1,8 +1,9 @@
 name: Site smoke test
 
 # Cloudflare deploys main straight to discountspeptides.com, so this runs on
-# every PR (before merge) and on every push to main. It is a required status
-# check on main: site changes must go through a PR. See docs/site-changes.md.
+# every PR (before merge) and on every push to main. Site changes must go
+# through a PR, and only merge when this is green. See docs/site-changes.md
+# (it isn't a GitHub-enforced required check yet; that doc explains why).
 on:
   pull_request:
   push:

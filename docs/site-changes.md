@@ -5,10 +5,16 @@ Anything merged or pushed to main is live within about a minute.
 
 **All site changes go through a pull request.** The `Site smoke test`
 workflow (`.github/workflows/site-smoke.yml`, check name `site-smoke`) runs on
-every PR and must pass before merging. It is a required status check on main
-(repository ruleset "main: require site smoke test"). The price bot is
-allowed to bypass it for its automated `data/live_prices.json` commits, and
-the check re-runs on main after each price run.
+every PR. Do not merge unless it is green. It also runs on every push to main
+and after each automated price run.
+
+It is **not** a GitHub-enforced required check yet. This is a personal-account
+repo, and GitHub won't let the Actions bot bypass a ruleset here, so requiring
+`site-smoke` would reject the daily price bot's direct push of
+`data/live_prices.json` to main. To enforce it later, either move the repo to
+an organization (then add a ruleset requiring `site-smoke`, with GitHub
+Actions as a bypass actor) or change the price bot to push a branch, run
+`scripts/smoke_test.py`, and only then update main.
 
 The check serves the repo statically and renders it in headless Chromium. It fails if:
 
