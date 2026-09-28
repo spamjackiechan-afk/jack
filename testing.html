@@ -90,14 +90,28 @@
 
   .refmark{color:var(--lowest); text-decoration:none; font-weight:600; padding:0 1px;}
   .refmark:hover{text-decoration:underline;}
-  .source-list{list-style:none; padding:0; margin:18px 0 0; counter-reset:src;}
-  .source-list li{display:flex; gap:11px; padding:11px 0; border-bottom:1px solid var(--rule); font-size:13px; line-height:1.55;}
-  .source-list li:last-child{border-bottom:none;}
-  .source-list .num{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--lowest); flex-shrink:0; padding-top:2px; min-width:20px;}
-  .source-list .txt{color:var(--ink-soft);}
-  .source-list a{color:var(--lowest); text-decoration:none; word-break:break-word;}
-  .source-list a:hover{text-decoration:underline;}
-  .source-list li:target{background:var(--lowest-bg);}
+  /* References, grouped Latest / Recent (data: NEWS below; format: docs/references-format.md) */
+  .news-tier{margin-top:30px;}
+  .news-tier + .news-tier{margin-top:40px; padding-top:28px; border-top:1px solid var(--rule);}
+  .news-tier-head{display:flex; align-items:center; gap:10px; margin:0 0 14px;}
+  .news-tier-head h3{font-family:'Fraunces', serif; font-weight:500; font-size:20px; margin:0;}
+  .news-tier-pill{font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; padding:3px 9px; border-radius:20px; white-space:nowrap;}
+  .news-tier-latest .news-tier-pill{color:var(--paper); background:var(--lowest);}
+  .news-tier-recent .news-tier-pill{color:var(--ink-soft); border:1px solid var(--rule);}
+  .news-tier-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-left:auto;}
+  .news-empty{font-size:13.5px; color:var(--ink-soft); margin:0; padding:14px 16px; border:1px dashed var(--rule); border-radius:10px;}
+  .news-list{list-style:none; padding:0; margin:0; display:grid; gap:10px;}
+  .news-item{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:14px 16px;}
+  .news-item:target{border-color:var(--lowest);}
+  .news-meta{display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-bottom:6px;}
+  .news-type{color:var(--lowest); text-transform:uppercase; letter-spacing:0.05em; font-size:10px;}
+  .news-num{margin-left:auto; opacity:0.7;}
+  .news-title{display:block; font-size:14.5px; line-height:1.45; color:var(--ink); text-decoration:none; font-weight:500;}
+  .news-title:hover{color:var(--lowest); text-decoration:underline;}
+  .news-host{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-top:4px; word-break:break-word;}
+  .news-chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;}
+  .peptide-chip{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink); background:var(--lowest-bg); border:1px solid var(--rule); border-radius:20px; padding:2px 9px;}
+  @media (max-width:520px){ .news-item{padding:13px 14px;} .news-title{font-size:14px;} }
   .contact-block{
     border:1px solid var(--lowest); background:var(--lowest-bg); border-radius:12px;
     padding:24px 26px; margin:34px 0 0; text-align:center;
@@ -129,8 +143,8 @@
   <h1>Testing &amp; Quality</h1>
 
   <h2>References</h2>
-  <p class="sect-sub">Public links on peptides — research, approvals, and enforcement.</p>
-  <ol class="source-list" id="sourceList"></ol>
+  <p class="sect-sub">Public links on peptides — research, approvals, and enforcement. Newest first.</p>
+  <div id="refsNews"></div>
 
   <div class="contact-block">
     <h3>Get in touch</h3>
@@ -148,36 +162,105 @@
 <script>
 function esc(s){ const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
 
-const SOURCES = {
-  wada:      { n: 1, label: 'World Anti-Doping Agency, The Prohibited List (S1.2, S2.2, S2.3)', url: 'https://www.wada-ama.org/en/prohibited-list' },
-  breindahl: { n: 2, label: 'Breindahl T. et al., “Identification and characterization by LC-UV-MS/MS of melanotan II skin-tanning products sold illegally on the Internet”, Drug Testing and Analysis (2015), DOI 10.1002/dta.1655', url: 'https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/dta.1655' },
-  dorr:      { n: 3, label: 'Dorr R.T. et al., “Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide in a pilot phase-I clinical study”, PubMed 8637402', url: 'https://pubmed.ncbi.nlm.nih.gov/8637402/' },
-  cnbc:      { n: 4, label: 'CNBC — “Lilly sues six companies over alleged illegal sales of experimental obesity drug retatrutide” (12 Aug 2026)', url: 'https://www.cnbc.com/2026/08/12/lilly-lawsuits-obesity-drug-retatrutide.html' },
-  npr:       { n: 5, label: 'NPR — “Eli Lilly files 6 lawsuits against businesses selling ‘black market’ obesity drug” (13 Aug 2026)', url: 'https://www.npr.org/2026/08/13/g-s1-138594/eli-lilly-files-6-lawsuits-against-businesses-selling-black-market-obesity-drug' },
-  wapo:      { n: 6, label: 'The Washington Post — “Eli Lilly sues alleged black-market GLP-1 vendors over imitation retatrutide” (12 Aug 2026)', url: 'https://www.washingtonpost.com/health/2026/08/12/eli-lilly-sues-alleged-black-market-glp-1-vendors-over-imitation-retatrutide/' },
-  cbs:       { n: 7, label: 'CBS News — “Eli Lilly takes aim at illicit market for its experimental weight-loss drug” (12 Aug 2026)', url: 'https://www.cbsnews.com/news/eli-lilly-lawsuits-weight-loss-drug/' },
-  frier:     { n: 8, label: 'Frier Levitt — case-by-case analysis of the six filings, including docket numbers', url: 'https://www.frierlevitt.com/articles/lilly-retatrutide-lawsuits-ruo-peptide-sellers/' },
-  biopharma: { n: 9, label: 'BioPharma Dive — “Lilly files six lawsuits in bid to shut down ‘black market’ for retatrutide” (12 Aug 2026)', url: 'https://www.biopharmadive.com/news/lilly-lawsuit-retatrutide-black-market-obesity-drug/827659/' },
-  pubchem:   { n: 10, label: 'PubChem CID 16132341 — Thymosin beta-4 (43 residues, 4,963 Da); TB-500 fragment Ac-LKKTETQ listed separately at 889 Da', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/16132341' },
-  fdabulks:  { n: 11, label: 'FDA — “Certain Bulk Drug Substances for Use in Compounding that May Present Significant Safety Risks” (updated 22 Apr 2026)', url: 'https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks' },
-  fdaglp1:   { n: 12, label: 'FDA — “FDA clarifies policies for compounders as national GLP-1 supply begins to stabilize” (1 Apr 2026)', url: 'https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize' },
-  fedreg:    { n: 13, label: 'Federal Register — “List of Bulk Drug Substances for Which There Is a Clinical Need Under Section 503B of the Federal Food, Drug, and Cosmetic Act” (1 May 2026)', url: 'https://www.federalregister.gov/documents/2026/05/01/2026-08552/list-of-bulk-drug-substances-for-which-there-is-a-clinical-need-under-section-503b-of-the-federal' },
-  fdapcac:   { n: 14, label: 'FDA — Pharmacy Compounding Advisory Committee meeting (23–24 Jul 2026)', url: 'https://www.fda.gov/advisory-committees/advisory-committee-calendar/july-23-24-2026-meeting-pharmacy-compounding-advisory-committee-07232026' },
-  fdapeak:   { n: 15, label: 'FDA Warning Letter — Peak Performance Peptides (24 Aug 2026)', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/peak-performance-peptides-735127-08242026' },
-  fdagram:   { n: 16, label: 'FDA Warning Letter — Gram Peptides (31 Mar 2026)', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/gram-peptides-721806-03312026' },
-  cbssent:   { n: 17, label: 'CBS News — “Judge sentences peptide vendor to nearly 6 years in prison for ‘an incredible trail of harm’” (30 Jul 2026)', url: 'https://www.cbsnews.com/news/peptides-seller-prison-sentence-unapproved-drugs/' },
-  mcguire:   { n: 18, label: 'McGuire F.P. et al., “Regeneration or Risk? A Narrative Review of BPC-157 for Musculoskeletal Healing”, Current Reviews in Musculoskeletal Medicine (12 Aug 2025), DOI 10.1007/s12178-025-09990-7', url: 'https://link.springer.com/article/10.1007/s12178-025-09990-7' },
-  frontiers: { n: 19, label: 'Frontiers in Endocrinology — “The emerging landscape of performance-enhancing peptides modulating GH-IGF1 axis: bridging the gap between clinical evidence and patient self-administration” (18 Jun 2026)', url: 'https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1822475/full' },
-  bjd:       { n: 20, label: 'British Journal of Diabetes — “Association of tanning injection with hypercortisolism, hyperglycaemia and ketosis in type 1 diabetes mellitus” (30 Jun 2025)', url: 'https://www.bjd-abcd.com/index.php/bjd/article/view/1359' },
-  fdaroyal:  { n: 21, label: 'FDA Warning Letter — Royal Peptides LLC (24 Aug 2026)', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/royal-peptides-llc-734884-08242026' },
-  fdanusci:  { n: 22, label: 'FDA Warning Letter — NuScience Peptides LLC (24 Aug 2026)', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/nuscience-peptides-llc-733652-08242026' },
-  fda503b:   { n: 23, label: 'FDA — “FDA Proposes to Exclude Semaglutide, Tirzepatide, and Liraglutide on 503B Bulks List” (30 Apr 2026)', url: 'https://www.fda.gov/news-events/press-announcements/fda-proposes-exclude-semaglutide-tirzepatide-and-liraglutide-503b-bulks-list' },
-};
+// References list. One entry per source; newest items are added at the end
+// of the array (order here doesn't matter — the page sorts by date).
+// Format and rules: docs/references-format.md
+//   n       permanent number; the item's anchor is #src-<n>. Never reuse.
+//   type    neutral document type (see the doc for the fixed list)
+//   date    'YYYY-MM-DD', 'YYYY-MM', 'YYYY' or null if the source gives none
+//   date_text  optional display text for the date (e.g. a date range)
+//   tags    peptide names the source is specifically about ([] if none)
+//   tier    null = placed by date (Latest if within 14 days, else Recent).
+//           'live' is reserved for later and is NOT rendered at the moment.
+//   tone    reserved for later; leave ''. Not rendered.
+const NEWS = [
+  { n: 1,  type: 'Reference',           publisher: 'World Anti-Doping Agency', title: 'The Prohibited List (S1.2, S2.2, S2.3)', date: null, url: 'https://www.wada-ama.org/en/prohibited-list', tags: [], tier: null, tone: '' },
+  { n: 2,  type: 'Study',               publisher: 'Drug Testing and Analysis', title: 'Breindahl T. et al., “Identification and characterization by LC-UV-MS/MS of melanotan II skin-tanning products sold illegally on the Internet”, DOI 10.1002/dta.1655', date: '2015', url: 'https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/dta.1655', tags: ['Melanotan II'], tier: null, tone: '' },
+  { n: 3,  type: 'Study',               publisher: 'PubMed', title: 'Dorr R.T. et al., “Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide in a pilot phase-I clinical study”, PubMed 8637402', date: null, url: 'https://pubmed.ncbi.nlm.nih.gov/8637402/', tags: ['Melanotan II'], tier: null, tone: '' },
+  { n: 4,  type: 'News report',         publisher: 'CNBC', title: 'Lilly sues six companies over alleged illegal sales of experimental obesity drug retatrutide', date: '2026-08-12', url: 'https://www.cnbc.com/2026/08/12/lilly-lawsuits-obesity-drug-retatrutide.html', tags: ['Retatrutide'], tier: null, tone: '' },
+  { n: 5,  type: 'News report',         publisher: 'NPR', title: 'Eli Lilly files 6 lawsuits against businesses selling ‘black market’ obesity drug', date: '2026-08-13', url: 'https://www.npr.org/2026/08/13/g-s1-138594/eli-lilly-files-6-lawsuits-against-businesses-selling-black-market-obesity-drug', tags: ['Retatrutide'], tier: null, tone: '' },
+  { n: 6,  type: 'News report',         publisher: 'The Washington Post', title: 'Eli Lilly sues alleged black-market GLP-1 vendors over imitation retatrutide', date: '2026-08-12', url: 'https://www.washingtonpost.com/health/2026/08/12/eli-lilly-sues-alleged-black-market-glp-1-vendors-over-imitation-retatrutide/', tags: ['Retatrutide'], tier: null, tone: '' },
+  { n: 7,  type: 'News report',         publisher: 'CBS News', title: 'Eli Lilly takes aim at illicit market for its experimental weight-loss drug', date: '2026-08-12', url: 'https://www.cbsnews.com/news/eli-lilly-lawsuits-weight-loss-drug/', tags: ['Retatrutide'], tier: null, tone: '' },
+  { n: 8,  type: 'Legal analysis',      publisher: 'Frier Levitt', title: 'Case-by-case analysis of the six filings, including docket numbers', date: '2026-08-18', url: 'https://www.frierlevitt.com/articles/lilly-retatrutide-lawsuits-ruo-peptide-sellers/', tags: ['Retatrutide'], tier: null, tone: '' },
+  { n: 9,  type: 'News report',         publisher: 'BioPharma Dive', title: 'Lilly files six lawsuits in bid to shut down ‘black market’ for retatrutide', date: '2026-08-12', url: 'https://www.biopharmadive.com/news/lilly-lawsuit-retatrutide-black-market-obesity-drug/827659/', tags: ['Retatrutide'], tier: null, tone: '' },
+  { n: 10, type: 'Reference',           publisher: 'PubChem', title: 'CID 16132341 — Thymosin beta-4 (43 residues, 4,963 Da); TB-500 fragment Ac-LKKTETQ listed separately at 889 Da', date: null, url: 'https://pubchem.ncbi.nlm.nih.gov/compound/16132341', tags: ['TB-500'], tier: null, tone: '' },
+  { n: 11, type: 'FDA list',            publisher: 'FDA', title: 'Certain Bulk Drug Substances for Use in Compounding that May Present Significant Safety Risks', date: '2026-04-22', date_text: 'Updated 22 Apr 2026', url: 'https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks', tags: ['BPC-157', 'TB-500', 'Melanotan II', 'CJC-1295', 'Ipamorelin', 'GHK-Cu'], tier: null, tone: '' },
+  { n: 12, type: 'FDA guidance',        publisher: 'FDA', title: 'FDA clarifies policies for compounders as national GLP-1 supply begins to stabilize', date: '2026-04-01', url: 'https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize', tags: ['Semaglutide', 'Tirzepatide', 'GLP-1 class'], tier: null, tone: '' },
+  { n: 13, type: 'Federal Register notice', publisher: 'Federal Register', title: 'List of Bulk Drug Substances for Which There Is a Clinical Need Under Section 503B of the Federal Food, Drug, and Cosmetic Act', date: '2026-05-01', url: 'https://www.federalregister.gov/documents/2026/05/01/2026-08552/list-of-bulk-drug-substances-for-which-there-is-a-clinical-need-under-section-503b-of-the-federal', tags: ['Semaglutide', 'Tirzepatide', 'Liraglutide'], tier: null, tone: '' },
+  { n: 14, type: 'Advisory committee',  publisher: 'FDA', title: 'Pharmacy Compounding Advisory Committee meeting', date: '2026-07-23', date_text: '23–24 Jul 2026', url: 'https://www.fda.gov/advisory-committees/advisory-committee-calendar/july-23-24-2026-meeting-pharmacy-compounding-advisory-committee-07232026', tags: ['BPC-157', 'TB-500', 'KPV', 'MOTS-c', 'DSIP', 'Semax', 'Epitalon'], tier: null, tone: '' },
+  { n: 15, type: 'FDA warning letter',  publisher: 'FDA', title: 'Warning Letter — Peak Performance Peptides', date: '2026-08-24', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/peak-performance-peptides-735127-08242026', tags: ['Retatrutide', 'Semaglutide', 'SS-31', 'PT-141', 'Tesamorelin'], tier: null, tone: '' },
+  { n: 16, type: 'FDA warning letter',  publisher: 'FDA', title: 'Warning Letter — Gram Peptides', date: '2026-03-31', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/gram-peptides-721806-03312026', tags: ['Retatrutide', 'Tirzepatide'], tier: null, tone: '' },
+  { n: 17, type: 'News report',         publisher: 'CBS News', title: 'Judge sentences peptide vendor to nearly 6 years in prison for ‘an incredible trail of harm’', date: '2026-07-30', url: 'https://www.cbsnews.com/news/peptides-seller-prison-sentence-unapproved-drugs/', tags: ['BPC-157'], tier: null, tone: '' },
+  { n: 18, type: 'Review article',      publisher: 'Current Reviews in Musculoskeletal Medicine', title: 'McGuire F.P. et al., “Regeneration or Risk? A Narrative Review of BPC-157 for Musculoskeletal Healing”, DOI 10.1007/s12178-025-09990-7', date: '2025-08-12', url: 'https://link.springer.com/article/10.1007/s12178-025-09990-7', tags: ['BPC-157'], tier: null, tone: '' },
+  { n: 19, type: 'Review article',      publisher: 'Frontiers in Endocrinology', title: 'The emerging landscape of performance-enhancing peptides modulating GH-IGF1 axis: bridging the gap between clinical evidence and patient self-administration', date: '2026-06-18', url: 'https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1822475/full', tags: ['Tesamorelin', 'CJC-1295', 'Ipamorelin', 'IGF-1 LR3'], tier: null, tone: '' },
+  { n: 20, type: 'Case report',         publisher: 'British Journal of Diabetes', title: 'Association of tanning injection with hypercortisolism, hyperglycaemia and ketosis in type 1 diabetes mellitus', date: '2025-06-30', url: 'https://www.bjd-abcd.com/index.php/bjd/article/view/1359', tags: ['Melanotan II'], tier: null, tone: '' },
+  { n: 21, type: 'FDA warning letter',  publisher: 'FDA', title: 'Warning Letter — Royal Peptides LLC', date: '2026-08-24', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/royal-peptides-llc-734884-08242026', tags: ['Tirzepatide', 'Semaglutide', 'Retatrutide', 'SS-31', 'PT-141', 'Tesamorelin'], tier: null, tone: '' },
+  { n: 22, type: 'FDA warning letter',  publisher: 'FDA', title: 'Warning Letter — NuScience Peptides LLC', date: '2026-08-24', url: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/nuscience-peptides-llc-733652-08242026', tags: ['Tirzepatide', 'Semaglutide', 'Retatrutide', 'PT-141', 'Tesamorelin'], tier: null, tone: '' },
+  { n: 23, type: 'FDA announcement',    publisher: 'FDA', title: 'FDA Proposes to Exclude Semaglutide, Tirzepatide, and Liraglutide on 503B Bulks List', date: '2026-04-30', url: 'https://www.fda.gov/news-events/press-announcements/fda-proposes-exclude-semaglutide-tirzepatide-and-liraglutide-503b-bulks-list', tags: ['Semaglutide', 'Tirzepatide', 'Liraglutide'], tier: null, tone: '' },
+];
 
-document.getElementById('sourceList').innerHTML = Object.values(SOURCES)
-  .sort((a, b) => a.n - b.n)
-  .map(s => `<li id="src-${s.n}"><span class="num">${s.n}</span><span class="txt">${esc(s.label)}<br><a href="${s.url}" target="_blank" rel="noopener">${esc(s.url)}</a></span></li>`)
-  .join('');
+const LATEST_DAYS = 14;
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function fmtDate(item){
+  if (item.date_text) return item.date_text;
+  if (!item.date) return '';
+  const [y, m, d] = item.date.split('-');
+  if (d) return `${Number(d)} ${MONTHS[Number(m) - 1]} ${y}`;
+  if (m) return `${MONTHS[Number(m) - 1]} ${y}`;
+  return y;
+}
+
+// Sort key: full dates sort by day; partial dates (YYYY-MM / YYYY) sort as
+// the start of that period; undated items go last.
+function sortKey(item){
+  if (!item.date) return -Infinity;
+  const [y, m = '01', d = '01'] = item.date.split('-');
+  return Date.UTC(Number(y), Number(m) - 1, Number(d));
+}
+
+// Latest = a full YYYY-MM-DD date within the last LATEST_DAYS days (checked
+// when the page loads). Everything else is Recent. tier/tone are not used for
+// placement or display for now (see docs/references-format.md).
+function placeTier(item, now){
+  if (!item.date || item.date.split('-').length !== 3) return 'recent';
+  const age = (now - sortKey(item)) / 86400000;
+  return age >= 0 && age <= LATEST_DAYS ? 'latest' : 'recent';
+}
+
+function hostOf(url){ try { return new URL(url).hostname.replace(/^www\./, ''); } catch (e) { return url; } }
+
+function newsItemHtml(item){
+  const date = fmtDate(item);
+  const chips = (item.tags || []).map(t => `<span class="peptide-chip">${esc(t)}</span>`).join('');
+  return `<li class="news-item" id="src-${item.n}">
+    <div class="news-meta"><span class="news-type">${esc(item.type)}</span>${date ? `<span>${esc(date)}</span>` : ''}<span>${esc(item.publisher)}</span><span class="news-num">#${item.n}</span></div>
+    <a class="news-title" href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>
+    <div class="news-host">${esc(hostOf(item.url))}</div>
+    ${chips ? `<div class="news-chips">${chips}</div>` : ''}
+  </li>`;
+}
+
+function renderNews(){
+  const now = Date.now();
+  const groups = { latest: [], recent: [] };
+  NEWS.forEach(item => groups[placeTier(item, now)].push(item));
+  Object.values(groups).forEach(list => list.sort((a, b) => sortKey(b) - sortKey(a) || b.n - a.n));
+  const section = (key, heading, pill, emptyText) => `
+    <section class="news-tier news-tier-${key}" aria-labelledby="news-h-${key}">
+      <div class="news-tier-head">
+        <h3 id="news-h-${key}">${heading}</h3><span class="news-tier-pill">${pill}</span>
+        <span class="news-tier-count">${groups[key].length} item${groups[key].length === 1 ? '' : 's'}</span>
+      </div>
+      ${groups[key].length ? `<ol class="news-list">${groups[key].map(newsItemHtml).join('')}</ol>` : `<p class="news-empty">${emptyText}</p>`}
+    </section>`;
+  document.getElementById('refsNews').innerHTML =
+    section('latest', 'Latest', `Last ${LATEST_DAYS} days`, `Nothing new in the last ${LATEST_DAYS} days.`) +
+    section('recent', 'Recent', 'Earlier', 'Nothing here yet.');
+  // Re-apply #src-N anchors now that the items exist.
+  if (location.hash){ const el = document.getElementById(location.hash.slice(1)); if (el) el.scrollIntoView(); }
+}
+renderNews();
 </script>
 <script src="/site-guide-widget.js" defer></script>
 </body>

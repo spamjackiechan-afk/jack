@@ -10,6 +10,7 @@ After a human approves a draft (or a NO CHANGE verify), update:
 - `data/testing-refs-status.json` (`last_verified`, `status`)
 - the "last verified" line on `testing.html` (`#refs-verified`)
 - `testing.html` Sources / concern copy only when verdict is PROPOSE and Jackson accepts it
+  (references are the `NEWS` array; see `docs/references-format.md`. Keep `tier: null` and `tone: ''`)
 
 ## Gate 1 — source_ok
 

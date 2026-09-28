@@ -23,6 +23,10 @@ The check serves the repo statically and renders it in headless Chromium. It fai
 - the in-page render safety net had to kick in (`[site-guard]` console errors);
 - the reconstitution calculator doesn't return `10 units` for 5 mg / 2 mL / 0.25 mg;
 - the homepage Suppliers nav item doesn't link to `/suppliers`, or `suppliers.html` shows fewer than 8 supplier cards.
+- the References news markup from `testing.html` (`news-tier`, `news-item`,
+  `news-type`, `peptide-chip`, `data-tone`, `tone-read`, "Looks concerning",
+  "Developing") appears in `index.html` or `suppliers.html`, in the file or the
+  rendered page, or `testing.html` shows fewer than 20 reference items.
 
 It also breaks a scratch copy on purpose (deletes `CATEGORIES`) and checks
 that the safety net still draws a usable vendor list.
@@ -52,3 +56,14 @@ blanked the homepage until PR #50.)
   `DATA` / `VENDOR_CONFIG` (or `vendor_config.json`) plus
   `data/live_prices.json`. It shows prices and links only: no codes, no deals.
   It does nothing when the normal render works.
+
+## testing.html References (Latest / Recent)
+
+The References list on `testing.html` is grouped into **Latest** (dated in the
+last 14 days, worked out when the page loads) and **Recent** (everything else),
+newest first, with a neutral type label, date, publisher and peptide chips.
+The data is the `NEWS` array in `testing.html`; the format and rules are in
+[`references-format.md`](references-format.md). It lives on `testing.html`
+only: no homepage teaser, and site-smoke fails if its markup shows up on
+`index.html` or `suppliers.html`. Tone labels and a "Live" tier are reserved in
+the data but deliberately not rendered until a lawyer has reviewed the wording.
