@@ -1,6 +1,12 @@
 // Site Guide chat API — deterministic retrieval from evidence JSON.
 // POST { message, page } → { reply }
 // No Workers AI binding. Refuse dosing / injection / stacking server-side.
+// Vendor-partner compliance (Offline Peptides Partner Guide, Sep 26 2026):
+// never pair Offline Peptides with GLP-category products (semaglutide /
+// tirzepatide / retatrutide / cagrilintide / orforglipron / GLP blends, incl.
+// Offline's GLP-1S / GLP-2T / GLP-3R), the Metabolic & Weight shelf, or any
+// dosing / reconstitution / bac-water / personal-use answer. Enforced by
+// enforceOfflineCompliance() on every reply + a row filter in formatPrices().
 //
 // Match other Pages Functions style: onRequestPost + onRequestOptions.
 
@@ -26,6 +32,22 @@ export async function onRequestOptions() {
 }
 
 export async function onRequestPost(context) {
+  // Read the message once (clone) so the compliance gate can see the question.
+  let lowerMsg = "";
+  try {
+    const b = await context.request.clone().json();
+    lowerMsg = String(b?.message || "").trim().slice(0, 500).toLowerCase();
+  } catch (_) {}
+  const res = await handlePost(context);
+  if (res.status !== 200) return res;
+  const data = await res.json();
+  if (typeof data.reply === "string") {
+    data.reply = enforceOfflineCompliance(data.reply, lowerMsg);
+  }
+  return json(data);
+}
+
+async function handlePost(context) {
   const { request } = context;
 
   let body;
@@ -231,7 +253,46 @@ function welcomeFor(page) {
 function isRefusal(lower) {
   return /\b(dos(e|ing|es)|reconstitut|inject(ion|ing|able)? technique|how (do|would|should) i (inject|pin|reconstitute)|syringe|iu\b|mcg\/kg|mg\/kg|stack(ing)?|cycle length|what dose|dose for my|for my (knee|shoulder|injury))\b/.test(
     lower
+  ) || PREP_OR_PERSONAL_USE_RE.test(lower);
+}
+
+// Preparation / personal-use phrasings the original regex missed
+// (e.g. "how much semaglutide should I inject", "bacteriostatic water for tirzepatide").
+const PREP_OR_PERSONAL_USE_RE =
+  /\b(bac(teriostatic)?\s*water|should i (inject|take|use|pin|run)|how much\b.*\b(inject|pin)|mix(ing)? (it|with|in)|how (do|should|to) (i )?(mix|prepare|store)|dosage|protocol)\b/;
+
+// ---------- Offline Peptides partner-guideline gate ----------
+const OFFLINE_RE = /offline\s*peptides?|offlinepeptides\.com/i;
+const GLP_RE =
+  /(semaglutide|tirzepatide|retatrutide|cagrilintide|orforglipron|mazdutide|survodutide|\bglp[-\s]?\d|incretin|ozempic|wegovy|mounjaro|zepbound|metabolic\s*(&|and)\s*weight)/i;
+const METABOLIC_TOPIC_RE =
+  /\b(fat\s*loss|fatloss|weight\s*loss|weightloss|lose\s*weight|losing\s*weight|weight\s*management|obesity|body\s*fat|burn\s*fat|slim(ming)?|lipolysis|metabolic|metabolism|appetite)\b/;
+
+function isOfflineSensitive(reply, lower) {
+  return (
+    GLP_RE.test(lower) ||
+    METABOLIC_TOPIC_RE.test(lower) ||
+    isRefusal(lower) ||
+    GLP_RE.test(reply) ||
+    reply.startsWith(REFUSAL)
   );
+}
+
+// Strip every Offline Peptides mention/link from GLP, Metabolic & Weight,
+// dosing / prep / personal-use replies. Non-GLP answers are left untouched.
+function enforceOfflineCompliance(reply, lower) {
+  if (!OFFLINE_RE.test(reply) || !isOfflineSensitive(reply, lower || "")) return reply;
+  return reply
+    .split("\n")
+    .filter((line) => !(/^\s*•/.test(line) && OFFLINE_RE.test(line)))
+    .map((line) =>
+      line
+        .replace(/https?:\/\/(www\.)?offlinepeptides\.com\S*/gi, "")
+        .replace(/,\s*offline\s*peptides?\b/gi, "")
+        .replace(/\boffline\s*peptides?\s*,\s*/gi, "")
+        .replace(/\boffline\s*peptides?\b/gi, "")
+    )
+    .join("\n");
 }
 
 function wantsNav(lower, target) {
@@ -618,6 +679,8 @@ async function formatPrices(request, card, lower = "", brief = false) {
     for (const [key, info] of Object.entries(products || {})) {
       const k = key.toLowerCase();
       if (!needles.some((n) => k.includes(n))) continue;
+      // Partner guideline: never show Offline Peptides rows for GLP-category keys.
+      if (OFFLINE_RE.test(vendor) && GLP_RE.test(key)) continue;
       const price = info?.price;
       const priceStr =
         price == null || Number.isNaN(Number(price))
