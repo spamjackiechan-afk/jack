@@ -1801,7 +1801,7 @@ Object.keys(CATEGORIES).forEach(cat => {
 });
 categorySelect.addEventListener('change', () => { activeCategory = categorySelect.value; render(); });
 
-// Deep-links: /?q=… fills search; /?category=<exact CATEGORIES key> sets the filter.
+// Deep-links: /?q=… fills search; /?category=<exact CATEGORIES key> sets the filter; /?vendor=<name> sets the vendor filter.
 (function applyCatalogUrlParams(){
   try {
     const params = new URLSearchParams(location.search);
@@ -1822,7 +1822,24 @@ categorySelect.addEventListener('change', () => { activeCategory = categorySelec
         touched = true;
       }
     }
-    if (touched){
+    // /?vendor=<vendor name> (used by "View prices" on /suppliers) sets the
+    // existing vendor dropdown.
+    const vendor = params.get('vendor');
+    let vendorOnly = false;
+    if (vendor != null && String(vendor).trim() !== ''){
+      const want = String(vendor).trim().toLowerCase();
+      const opt = Array.from(vendorSelect.options).find(o => o.value !== 'All' && o.value.toLowerCase() === want);
+      if (opt){
+        vendorSelect.value = opt.value;
+        activeVendor = opt.value;
+        vendorOnly = !touched;
+        touched = true;
+      }
+    }
+    if (touched && vendorOnly){
+      render();
+      try { document.querySelector('.controls')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (_) {}
+    } else if (touched){
       render();
       try { searchEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (_) {}
       try { searchEl.focus({ preventScroll: true }); } catch (_) { try { searchEl.focus(); } catch (_) {} }
