@@ -1,0 +1,55 @@
+name: Site smoke test
+
+# Cloudflare deploys main straight to discountspeptides.com, so this runs on
+# every PR (before merge) and on every push to main. It is a required status
+# check on main: site changes must go through a PR. See docs/site-changes.md.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  # The price bot pushes with GITHUB_TOKEN, which does not trigger `push`
+  # workflows, so re-check main after every price run as well.
+  workflow_run:
+    workflows: ["Update live prices"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  site-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Playwright + Chromium
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Render homepage, calculator, suppliers (must pass)
+        run: python scripts/smoke_test.py
+
+      - name: Safety-net self-test (break the page on purpose; fallback must still list vendors)
+        run: |
+          rm -rf /tmp/broken && mkdir -p /tmp/broken
+          git ls-files | tar -cf - -T - | tar -xf - -C /tmp/broken
+          python3 - <<'PY'
+          p = '/tmp/broken/index.html'
+          lines = open(p, encoding='utf-8').read().split('\n')
+          kept = [l for l in lines if not l.startswith('const CATEGORIES = ')
+                  and not l.startswith("if (typeof CATEGORIES === 'undefined')")]
+          assert len(kept) == len(lines) - 2, 'CATEGORIES line or its guard not found in index.html'
+          open(p, 'w', encoding='utf-8').write('\n'.join(kept))
+          PY
+          python scripts/smoke_test.py --root /tmp/broken --expect-fallback
