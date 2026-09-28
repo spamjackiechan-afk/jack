@@ -22,7 +22,7 @@ The check serves the repo statically and renders it in headless Chromium. It fai
 - the homepage shows fewer than 50 product cards or fewer than 8 vendor names;
 - the in-page render safety net had to kick in (`[site-guard]` console errors);
 - the reconstitution calculator doesn't return `10 units` for 5 mg / 2 mL / 0.25 mg;
-- the Suppliers panel or `suppliers.html` shows fewer than 8 supplier cards.
+- the homepage Suppliers nav item doesn't link to `/suppliers`, or `suppliers.html` shows fewer than 8 supplier cards.
 
 It also breaks a scratch copy on purpose (deletes `CATEGORIES`) and checks
 that the safety net still draws a usable vendor list.

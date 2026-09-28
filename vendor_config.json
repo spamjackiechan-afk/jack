@@ -144,7 +144,7 @@
     "promo_code": null,
     "cookie_days": null,
     "commission": "10% (per earlier program page)",
-    "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed. GoAffPro (royalpeptides.goaffpro.com) confirmed 2026-09-16: Jackson \u2014 NO affiliation/promo coupon; dashboard reports \u201cNo coupon code found!\u201d; promo_code null; tracking_type link. Commission via GoAffPro product affiliate links: affiliate_link_base https://royal-peptides.com/?ref=discount so resolveVendorLink merges ?ref=discount onto per-product shop URLs (e.g. https://royal-peptides.com/shop/5-amino-1mq/?ref=discount). Do not display a Royal coupon on the site.",
+    "guidelines_notes": "Approved 2026-08-11. Site sells several actual prescription pharmaceuticals (HCG, HGH/Somatropin, Sildenafil) and SARMs (MK-677, Ostarine) alongside research peptides \u2014 those are deliberately excluded from the comparison, not just the usual TB-500/investigational-drug flags. Research Use Only framing required for everything that IS listed. GoAffPro (royalpeptides.goaffpro.com) confirmed 2026-09-16: Jackson \u2014 NO affiliation/promo coupon; dashboard reports \u201cNo coupon code found!\u201d; promo_code null; tracking_type link. Commission via GoAffPro product affiliate links: affiliate_link_base https://royal-peptides.com/?ref=discount so resolveVendorLink merges ?ref=discount onto per-product shop URLs (e.g. https://royal-peptides.com/shop/5-amino-1mq/?ref=discount). Do not display a Royal coupon on the site. Source for 'no credit cards' payment note: their Terms of Service.",
     "last_checked": "2026-09-16",
     "payment_methods": [
       "Zelle",
@@ -153,7 +153,7 @@
       "Cryptocurrency",
       "PayPal (Friends & Family, B2B only)"
     ],
-    "payment_note": "No credit cards accepted (confirmed via their Terms of Service).",
+    "payment_note": "No credit cards accepted.",
     "shipping_info": "2-5 business days via UPS from California. Exact cost not published.",
     "shipping_payment_researched": "2026-08-16",
     "testing_methods": [
@@ -260,7 +260,7 @@
     "tracking_type": "link",
     "affiliate_link_base": "https://www.americanpeptides.us?bg_ref=jcLXZhD8Nk",
     "promo_code": null,
-    "guidelines_notes": "Approved 2026-08-24. Listed on probation 2026-09-15 (testing_tier 3; Peptigrity 50/100, 0 reviews; Finnrick independent tests thin). GLP SKUs included per Jackson. robots_allows true for /products/. Domain lock: americanpeptides.us / www.americanpeptides.us ONLY \u2014 do not confuse with buyamericanpeptides.com (Legion Peptides) or americanpeptide.com (singular, unrelated). CUTOVER 2026-09-23: Discount Peptides seat din489828 \u2014 affiliate attribution is LINK-ONLY via bg_ref=jcLXZhD8Nk (affiliate_link_base https://www.americanpeptides.us?bg_ref=jcLXZhD8Nk). tracking_type link; promo_code null; commission via bg_ref only; no coupon on site. Do not invent DISCOUNT. Old JACKSON101302 seat deprecated for site clicks (do not show JACKSON101302 as a checkout code). resolveVendorLink merges ?bg_ref=jcLXZhD8Nk onto per-product URLs (query-style, same as Royal/Offline/Midwest). Christmas-in-September campaign ended Sat Sep 26, 2026 9:00am CT \u2014 Day 12 Santa\u2019s Last Run (25% sitewide + Santa\u2019s Sack $150+) cleared from Active deal and live_prices; no Day 13; do not carry the $150+ Santa\u2019s Sack threshold forward. Still active (temporary storefront promo): SPRAY20 \u2014 20% off every liquid spray (banner/email; new 10 mL atomized sprays featured) until Sunday Sep 27, 2026 midnight CT. Code SPRAY20 (exact casing); email also says discount may apply automatically when shopping from email links. SPRAY20 is a vendor storefront promo (guidelines-only) \u2014 not our affiliate code; affiliate attribution remains bg_ref only. Do not invent spray live_prices \u2014 email-observed spray SKUs (NAD+ 500mg 10mL, REM Blend, PT-141 10mg 10mL, Glutathione 500mg 10mL, Adamax 10mg 10mL, Oxytocin 10mg 10mL) are not in American product_urls catalogue; leave guidelines-only. Catalogue nasal sprays (Selank/Semax) also guidelines-only pending verified PDP onSale strikethrough. Do not claim SPRAY20 stacks with anything. Source: shipping@americanpeptides.us Wed Sep 23 ~5:57am PT subject \u201cNew products have arrived \u2014 20% off with SPRAY20\u201d. Do not invent other onSale prices.",
+    "guidelines_notes": "Approved 2026-08-24. Listed on probation 2026-09-15 (testing_tier 3; Peptigrity 50/100, 0 reviews; Finnrick independent tests thin). GLP SKUs included per Jackson. robots_allows true for /products/. Domain lock: americanpeptides.us / www.americanpeptides.us ONLY \u2014 do not confuse with buyamericanpeptides.com (Legion Peptides) or americanpeptide.com (singular, unrelated). CUTOVER 2026-09-23: Discount Peptides seat din489828 \u2014 affiliate attribution is LINK-ONLY via bg_ref=jcLXZhD8Nk (affiliate_link_base https://www.americanpeptides.us?bg_ref=jcLXZhD8Nk). tracking_type link; promo_code null; commission via bg_ref only; no coupon on site. Do not invent DISCOUNT. Old JACKSON101302 seat deprecated for site clicks (do not show JACKSON101302 as a checkout code). resolveVendorLink merges ?bg_ref=jcLXZhD8Nk onto per-product URLs (query-style, same as Royal/Offline/Midwest). Christmas-in-September campaign ended Sat Sep 26, 2026 9:00am CT \u2014 Day 12 Santa\u2019s Last Run (25% sitewide + Santa\u2019s Sack $150+) cleared from Active deal and live_prices; no Day 13; do not carry the $150+ Santa\u2019s Sack threshold forward. Still active (temporary storefront promo): SPRAY20 \u2014 20% off every liquid spray (banner/email; new 10 mL atomized sprays featured) until Sunday Sep 27, 2026 midnight CT. Code SPRAY20 (exact casing); email also says discount may apply automatically when shopping from email links. SPRAY20 is a vendor storefront promo (guidelines-only) \u2014 not our affiliate code; affiliate attribution remains bg_ref only. Do not invent spray live_prices \u2014 email-observed spray SKUs (NAD+ 500mg 10mL, REM Blend, PT-141 10mg 10mL, Glutathione 500mg 10mL, Adamax 10mg 10mL, Oxytocin 10mg 10mL) are not in American product_urls catalogue; leave guidelines-only. Catalogue nasal sprays (Selank/Semax) also guidelines-only pending verified PDP onSale strikethrough. Do not claim SPRAY20 stacks with anything. Source: shipping@americanpeptides.us Wed Sep 23 ~5:57am PT subject \u201cNew products have arrived \u2014 20% off with SPRAY20\u201d. Do not invent other onSale prices. Shipping/payment research notes (moved out of displayed fields 2026-09-28): shipping SLA copy on their site has CT vs EST inconsistencies \u2014 do not over-promise speed. Payment methods are per their Terms of Service; the Peptigrity profile listing crypto-only is incomplete vs Terms.",
     "last_checked": "2026-09-26",
     "cookie_days": 30,
     "commission": "10%\u201335% tiered (public affiliate page)",
@@ -272,8 +272,8 @@
       "ACH / wire",
       "Cryptocurrency (BTC, ETH, USDT)"
     ],
-    "payment_note": "Per Terms of Service; Peptigrity profile listing crypto-only is incomplete vs Terms.",
-    "shipping_info": "Free shipping on orders $300+. Typical 24\u201348 business hours dispatch; Standard vs Expedited at checkout. Shipping SLA copy on site has CT vs EST inconsistencies \u2014 do not over-promise speed.",
+    "payment_note": null,
+    "shipping_info": "Free shipping on orders $300+. Typically dispatched within 24\u201348 business hours; choose Standard or Expedited at checkout.",
     "shipping_payment_researched": "2026-09-15",
     "testing_researched": "2026-09-15",
     "testing_methods": [
@@ -295,7 +295,7 @@
     "tracking_type": "link",
     "affiliate_link_base": "https://offlinepeptides.com/?ref=discountspeptides@gmail.com",
     "promo_code": null,
-    "guidelines_notes": "Approved 2026-09-16. Listed with retail prices only \u2014 Jackson: NEVER surface deals/sales/onSale/EOS3/B2G1/End-of-Summer for Offline (terms void commission when promo discounts apply). AffiliateWP query-style deep-link confirmed 2026-09-15: affiliate_link_base https://offlinepeptides.com/?ref=discountspeptides@gmail.com so resolveVendorLink merges ?ref= onto product URLs (affwp_ref / visit cookies after marketing consent; referral_var=ref; affiliate_id 119). Fallback entry URL still valid: https://offlinepeptides.com/ref/discountspeptides@gmail.com/ . promo_code null until Offline confirms dedicated partner code AND Jackson says show it. Programme excludes coupon/deal sites \u2014 accepted for price comparison only without promoting their sales. testing_tier 3. COA RED FLAG: GHK-Cu underfill. HGH excluded. robots_allows true.",
+    "guidelines_notes": "Approved 2026-09-16. Listed with retail prices only \u2014 Jackson: NEVER surface deals/sales/onSale/EOS3/B2G1/End-of-Summer for Offline (terms void commission when promo discounts apply). AffiliateWP query-style deep-link confirmed 2026-09-15: affiliate_link_base https://offlinepeptides.com/?ref=discountspeptides@gmail.com so resolveVendorLink merges ?ref= onto product URLs (affwp_ref / visit cookies after marketing consent; referral_var=ref; affiliate_id 119). Fallback entry URL still valid: https://offlinepeptides.com/ref/discountspeptides@gmail.com/ . promo_code null until Offline confirms dedicated partner code AND Jackson says show it. Programme excludes coupon/deal sites \u2014 accepted for price comparison only without promoting their sales. testing_tier 3. COA RED FLAG: GHK-Cu underfill. HGH excluded. robots_allows true. Shipping/payment research notes (moved out of displayed fields 2026-09-28): free Priority Shipping over $250 is from the site banner. Statement descriptor OFFLINEPEPTIDES.COM is per their FAQ. Exact card/ACH/crypto matrix not fully enumerated on policy pages.",
     "last_checked": "2026-09-15",
     "cookie_days": 30,
     "commission": "20% new customer / 10% lifetime returning (public terms; FAQ cites 15%/365 conflict \u2014 confirm on dashboard)",
@@ -305,8 +305,8 @@
       "Square (front-end fingerprint)",
       "Stripe (front-end fingerprint)"
     ],
-    "payment_note": "Statement descriptor OFFLINEPEPTIDES.COM per FAQ. Exact card/ACH/crypto matrix not fully enumerated on policy pages.",
-    "shipping_info": "US only; typically 1\u20132 business days processing with tracking. Free Priority Shipping on orders over $250 (site banner). Delivery estimates not guaranteed.",
+    "payment_note": "Charges appear on statements as OFFLINEPEPTIDES.COM.",
+    "shipping_info": "US only; typically 1\u20132 business days processing with tracking. Free Priority Shipping on orders over $250. Delivery estimates not guaranteed.",
     "shipping_payment_researched": "2026-09-15",
     "testing_researched": "2026-09-15",
     "testing_methods": [
@@ -340,7 +340,7 @@
     ],
     "testing_lab": "Named labs vary by lot (Freedom Diagnostics, TrustPointe, ILS, Kovera, Chromate cited in secondary sources; summary UI does not always name lab)",
     "testing_standard": "Public batch COA library (~170 certificates / 56 products); 99%+ purity marketing",
-    "testing_note": "Public COA library at /coas/ with batch purity/endotoxins/heavy metals/sterility columns. Finnrick independent dataset exists. Lab names not always front-and-center on summary UI → tier 2, not 1.",
+    "testing_note": "Public COA library at /coas/ with batch purity/endotoxins/heavy metals/sterility columns. Finnrick independent dataset exists. Lab names not always front-and-center on summary UI \u2192 tier 2, not 1.",
     "testing_tier": 2
   }
 }
