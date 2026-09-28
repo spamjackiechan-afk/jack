@@ -17,6 +17,10 @@ Fails on:
   * the calculator not producing a result for sample inputs
   * the homepage Suppliers nav item not linking to /suppliers
   * suppliers.html rendering < MIN_SUPPLIERS cards
+  * the testing.html References news markup (NEWS_MARKERS) showing up on
+    index.html or suppliers.html, in the raw file or the rendered page; it
+    belongs on testing.html only (see docs/references-format.md)
+  * testing.html rendering fewer than MIN_REFERENCES reference items
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
@@ -26,6 +30,21 @@ from playwright.sync_api import sync_playwright
 MIN_CARDS = 50
 MIN_VENDORS = 8
 MIN_SUPPLIERS = 8
+MIN_REFERENCES = 20
+# Markup/copy used only by the testing.html References list. None of it may
+# appear on the homepage or the suppliers page.
+NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
+                "data-tone", "tone-read", "Looks concerning", "Developing"]
+
+
+def check_no_news(page, root, filename, problems):
+    raw = open(os.path.join(root, filename), encoding="utf-8").read()
+    rendered = page.content()
+    for m in NEWS_MARKERS:
+        if m in raw:
+            problems.append(f"{filename}: contains testing-page news markup {m!r} (source file)")
+        elif m in rendered:
+            problems.append(f"{filename}: contains testing-page news markup {m!r} (rendered page)")
 
 
 def serve(root):
@@ -56,7 +75,8 @@ def main():
     ap.add_argument("--root", default=os.path.join(os.path.dirname(__file__), ".."))
     ap.add_argument("--expect-fallback", action="store_true")
     args = ap.parse_args()
-    httpd, base = serve(os.path.abspath(args.root))
+    root = os.path.abspath(args.root)
+    httpd, base = serve(root)
     problems, notes = [], []
 
     with sync_playwright() as p:
@@ -111,6 +131,7 @@ def main():
                 problems.append(f"suppliers nav link: expected /suppliers, got {href!r}")
         except Exception as e:
             problems.append(f"suppliers nav link: missing: {str(e).splitlines()[0]}")
+        check_no_news(page, root, "index.html", problems)
         page.close()
 
         # ---- suppliers.html
@@ -119,6 +140,15 @@ def main():
         notes.append(f"suppliers.html: {n} cards")
         if n < MIN_SUPPLIERS:
             problems.append(f"suppliers.html: only {n} supplier cards (min {MIN_SUPPLIERS})")
+        check_no_news(page, root, "suppliers.html", problems)
+        page.close()
+
+        # ---- testing.html References (the only page allowed to carry them)
+        page = open_page(browser, base + "/testing.html", problems, "testing.html")
+        refs = page.locator("#refsNews .news-item").count()
+        notes.append(f"testing.html: {refs} reference items")
+        if refs < MIN_REFERENCES:
+            problems.append(f"testing.html: only {refs} reference items (min {MIN_REFERENCES})")
         page.close()
         browser.close()
     httpd.shutdown()
