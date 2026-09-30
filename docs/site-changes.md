@@ -89,3 +89,14 @@ The data is the `NEWS` array in `testing.html`; the format and rules are in
 only: no homepage teaser, and site-smoke fails if its markup shows up on
 `index.html` or `suppliers.html`. Tone labels and a "Live" tier are reserved in
 the data but deliberately not rendered until a lawyer has reviewed the wording.
+
+## Manual sale prices (price overrides)
+
+The daily price run rewrites `data/live_prices.json` from scratch. To keep a
+confirmed sale price (e.g. from a vendor's code email), add it to
+`data/price_overrides.json` under the vendor and the **exact** item key from
+`data/product_urls.json`, with `price`, `regular_price`, `expires` (UTC,
+`YYYY-MM-DDTHH:MM:SSZ`) and `source`. `scripts/check_prices.py` merges
+unexpired entries after each run and marks them `"override": true`. It skips
+and logs expired entries and keys that aren't in the catalogue, and it never
+works out prices for other sizes. Jackson confirms every entry before it goes in.

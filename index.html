@@ -1150,7 +1150,7 @@
 
 
   <div class="controls">
-    <input type="search" id="search" placeholder="Search a peptide — e.g. BPC-157, NAD+, Selank…">
+    <input type="search" id="search" placeholder="Search a peptide or vendor — e.g. BPC-157, NAD+, Alpha Peptides…">
     <button class="chip active" data-filter="All">All formats</button>
     <button class="chip" data-filter="Nasal">Nasal</button>
     <button class="chip" data-filter="Vial">Vial</button>
@@ -1434,10 +1434,24 @@ function aliasTargets(q){
   return out;
 }
 
-function matchesSearch(peptide, q){
-  const name = peptide.toLowerCase();
+// Lower-case and drop spaces, hyphens and punctuation, so "bpc 157",
+// "bpc157" and "BPC-157" all compare the same way.
+function normSearch(s){
+  return String(s || '').toLowerCase().replace(/[\s\-_.,\/()]+/g, '');
+}
+
+function matchesSearch(item, q){
+  const name = item.peptide.toLowerCase();
   if (name.includes(q)) return true;
-  return aliasTargets(q).some(t => name.includes(t));
+  const nq = normSearch(q);
+  if (nq && normSearch(name).includes(nq)) return true;
+  if (aliasTargets(q).some(t => name.includes(t))) return true;
+  // Vendor names: "alpha peptides", "royal", "koi" show that vendor's listings.
+  // Needs 3+ characters so short fragments don't pull in whole vendors.
+  if (nq.length >= 3 && item.prices){
+    return Object.keys(item.prices).some(v => normSearch(v).includes(nq));
+  }
+  return false;
 }
 
 function render(){
@@ -1449,7 +1463,7 @@ function render(){
     const matchesSale  = activeFilter !== '__sale' || Boolean(i.onSale && Object.keys(i.onSale).length);
     const matchesVendor = activeVendor === 'All' || (i.prices && activeVendor in i.prices);
     const matchesCategory = activeCategory === 'All' || i.category === activeCategory;
-    const matchesQuery = !q || matchesSearch(i.peptide, q);
+    const matchesQuery = !q || matchesSearch(i, q);
     return matchesFormat && matchesSaved && matchesSale && matchesVendor && matchesCategory && matchesQuery && Object.keys(i.prices).length > 0;
   });
 
@@ -1470,6 +1484,14 @@ function render(){
   if (activeSort === 'price-low') groups.sort((a,b) => groupCheapest(a) - groupCheapest(b));
   else if (activeSort === 'price-high') groups.sort((a,b) => groupCheapest(b) - groupCheapest(a));
   else groups.sort((a,b) => a.peptide.localeCompare(b.peptide));
+  // While searching, put names that start with the search first
+  // ("nad" shows NAD+ before Gonadorelin). The sort is stable, so the
+  // chosen order is kept within each group.
+  if (q){
+    const nq = normSearch(q);
+    const rank = g => { const n = normSearch(g.peptide); return n.startsWith(nq) ? 0 : n.includes(nq) ? 1 : 2; };
+    groups.sort((a,b) => rank(a) - rank(b));
+  }
 
   const FORMAT_ORDER = ['Vial', 'Nasal', 'Capsules', 'Oral', 'Water'];
   if (activeFilter === 'All' && !usingPriceSort && !q){
@@ -1921,7 +1943,7 @@ render();
 // baked-in baseline prices above. If this fails for any reason (offline,
 // GitHub down, file not there yet), the page just keeps showing the
 // baseline data — nothing breaks, nothing looks wrong to a visitor.
-const LIVE_PRICES_URL = 'https://raw.githubusercontent.com/spamjackiechan-afk/jack/main/data/live_prices.json';
+const LIVE_PRICES_URL = '/data/live_prices.json'; // same file, served by this site (works if the repo goes private)
 
 // Apply one live_prices.json payload onto DATA.included.
 // Contract (mirrored by scripts/check_prices.apply_live_overlay):

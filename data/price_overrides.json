@@ -1,0 +1,3 @@
+{
+  "_readme": "Manual sale prices that survive the daily price run (scripts/check_prices.py). Format: {\"<vendor>\": {\"<exact item key from data/product_urls.json>\": {\"price\": 80, \"regular_price\": 100, \"expires\": \"2026-10-05T04:59:00Z\", \"source\": \"vendor email 2026-09-28, code FALL20\"}}}. Only listed sizes get the sale price; entries are skipped once 'expires' (UTC) has passed. Jackson confirms every entry from the vendor's email before it is added."
+}
