@@ -1,15 +1,16 @@
 // Returns every APPROVED review as JSON. Pending and rejected reviews are
 // never included here — this is the only endpoint the public-facing site
 // reads from, so anything not yet approved is simply invisible to visitors.
+// Merges per-record review:* keys with the old "reviews" blob.
+
+import { readReviews } from "../_lib/records.js";
 
 export async function onRequestGet(context) {
   const { env } = context;
 
   let reviews = [];
   try {
-    const raw = await env.CLICK_COUNTS.get("reviews");
-    const all = raw ? JSON.parse(raw) : [];
-    reviews = all.filter(r => r.status === "approved");
+    reviews = await readReviews(env.CLICK_COUNTS, "approved");
   } catch (e) {
     reviews = [];
   }

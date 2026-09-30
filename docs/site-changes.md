@@ -67,3 +67,22 @@ The data is the `NEWS` array in `testing.html`; the format and rules are in
 only: no homepage teaser, and site-smoke fails if its markup shows up on
 `index.html` or `suppliers.html`. Tone labels and a "Live" tier are reserved in
 the data but deliberately not rendered until a lawyer has reviewed the wording.
+
+## Reviews, subscribers and clicks in KV
+
+The API functions store **one KV key per record** in `CLICK_COUNTS`:
+`review:<id>`, `sub:<email>` and `click:<peptide>|||<vendor>` (helpers in
+`functions/_lib/records.js`). The old single blobs (`reviews`, `subscribers`,
+`counts`) are still read and merged, so older data keeps showing, and they are
+never deleted by code. `POST /api/admin-migrate` (admin login; `?dry_run=1`
+to preview) copies the blobs into per-record keys. Only run it when Jackson
+says so. Deleting the old blobs afterwards is his decision.
+
+Unsubscribe links must include the subscriber's token:
+`/api/subscribe?unsubscribe=<email>&token=<unsubscribe_token>`. The token is in
+each `sub:<email>` record, and the migration adds one for older subscribers.
+
+The review and email forms carry a hidden `website` honeypot field and the time
+since the form appeared (`form_ms`). The server rejects honeypot-filled
+submissions and anything sent within 3 seconds, and limits each IP to 3 reviews
+and 5 sign-ups per hour (`rl:review:<ip>`, `rl:sub:<ip>`).

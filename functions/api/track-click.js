@@ -5,6 +5,11 @@
 // Requires a KV namespace bound to this project with the variable name
 // CLICK_COUNTS (Settings -> Bindings -> Add -> KV namespace, in the
 // Cloudflare Pages dashboard).
+//
+// Each pair has its own counter key (click:<peptide>|||<vendor>), so two
+// clicks at once can only clash on that one counter, not wipe out others.
+
+import { incrementClick } from "../_lib/records.js";
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -29,10 +34,7 @@ export async function onRequestPost(context) {
   const key = `${peptide}|||${vendor}`;
 
   try {
-    const raw = await env.CLICK_COUNTS.get("counts");
-    const existing = raw ? JSON.parse(raw) : {};
-    existing[key] = (existing[key] || 0) + 1;
-    await env.CLICK_COUNTS.put("counts", JSON.stringify(existing));
+    await incrementClick(env.CLICK_COUNTS, key);
   } catch (e) {
     return new Response("Storage error", { status: 500 });
   }

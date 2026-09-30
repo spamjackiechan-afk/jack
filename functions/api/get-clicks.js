@@ -3,14 +3,16 @@
 // mark as popular — real counts, starting at zero, nothing invented.
 //
 // Requires the same CLICK_COUNTS KV binding as track-click.js.
+// Merges the per-pair click:* keys with the old "counts" blob.
+
+import { readClickCounts } from "../_lib/records.js";
 
 export async function onRequestGet(context) {
   const { env } = context;
 
   let counts = {};
   try {
-    const raw = await env.CLICK_COUNTS.get("counts");
-    counts = raw ? JSON.parse(raw) : {};
+    counts = await readClickCounts(env.CLICK_COUNTS);
   } catch (e) {
     counts = {};
   }

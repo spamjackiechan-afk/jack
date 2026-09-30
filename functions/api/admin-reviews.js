@@ -20,6 +20,12 @@
 //
 // Failed logins are limited per IP (KV key adminfail:<ip>): after
 // MAX_FAILURES within 15 minutes, requests get 429 without checking the password.
+//
+// Reviews are read from per-record review:* keys merged with the old
+// "reviews" blob (functions/_lib/records.js). checkAuth/authError are also
+// used by admin-migrate.js.
+
+import { readReviews, putReview } from "../_lib/records.js";
 
 // Empty until Jackson supplies new values; with them empty, every login fails (fail closed).
 const ADMIN_PASSWORD_SALT = "";   // hex, 16 random bytes
@@ -63,7 +69,7 @@ function constantTimeEqual(a, b) {
 }
 
 // Returns "ok", "denied" (401) or "limited" (429).
-async function checkAuth(request, env) {
+export async function checkAuth(request, env) {
   const ip = request.headers.get("CF-Connecting-IP") || "unknown";
   const failKey = "adminfail:" + ip;
   const failures = parseInt((await env.CLICK_COUNTS.get(failKey)) || "0", 10) || 0;
@@ -81,7 +87,7 @@ async function checkAuth(request, env) {
   return "denied";
 }
 
-function authError(result) {
+export function authError(result) {
   return result === "limited"
     ? new Response(JSON.stringify({ error: "Too many attempts. Try again later." }), { status: 429 })
     : new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
@@ -95,8 +101,7 @@ export async function onRequestGet(context) {
 
   let reviews = [];
   try {
-    const raw = await env.CLICK_COUNTS.get("reviews");
-    reviews = raw ? JSON.parse(raw) : [];
+    reviews = await readReviews(env.CLICK_COUNTS);
   } catch (e) {
     reviews = [];
   }
@@ -129,14 +134,15 @@ export async function onRequestPost(context) {
   }
 
   try {
-    const raw = await env.CLICK_COUNTS.get("reviews");
-    const reviews = raw ? JSON.parse(raw) : [];
+    // Updates only this review's own key. A review that so far exists only
+    // in the old blob gets its own key here; that copy wins from now on.
+    const reviews = await readReviews(env.CLICK_COUNTS);
     const review = reviews.find(r => r.id === id);
     if (!review) {
       return new Response(JSON.stringify({ error: "Review not found" }), { status: 404 });
     }
     review.status = status;
-    await env.CLICK_COUNTS.put("reviews", JSON.stringify(reviews));
+    await putReview(env.CLICK_COUNTS, review);
   } catch (e) {
     return new Response(JSON.stringify({ error: "Storage error" }), { status: 500 });
   }
