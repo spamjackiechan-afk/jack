@@ -137,9 +137,12 @@ HEADERS = {
 
 # Used instead of HEADERS for vendors that asked to recognise us (see
 # "identify_as_bot" in VENDORS), so they can spot the checker in their logs.
+# User-Agent value asked for by SiteGround (Alpha email, 30 Sept 2026): the
+# old "Mozilla/5.0 (compatible; ...)" wrapper tripped a SiteGround security
+# rule (the 403s), so the value is now fully custom.
 BOT_HEADERS = {
     **HEADERS,
-    "User-Agent": "Mozilla/5.0 (compatible; DiscountPeptides-PriceChecker/1.0; +https://discountspeptides.com/about)",
+    "User-Agent": "DiscountPeptides-PriceChecker/1.0; +https://discountspeptides.com/about",
 }
 
 
