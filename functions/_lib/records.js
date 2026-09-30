@@ -15,6 +15,10 @@
 // into per-record keys (admin-only, run once, on Jackson's say-so).
 
 export const MIGRATED_CLICKS_KEY = "migrated:clicks";
+// Saved copy of the public (approved) reviews, exactly what get-reviews
+// returns. Rewritten only by admin-reviews.js (approve/reject) and by
+// admin-migrate.js, so get-reviews never needs a KV list request.
+export const REVIEWS_SNAPSHOT_KEY = "reviews:approved_snapshot";
 
 export async function listKeys(kv, prefix) {
   const keys = [];
@@ -61,6 +65,20 @@ export async function readReviews(kv, onlyStatus) {
   return onlyStatus ? all.filter(r => r.status === onlyStatus) : all;
 }
 
+// Rebuilds the approved-reviews snapshot from the old blob + review:* keys.
+// Admin-only callers (a list request is fine there). Returns how many.
+export async function rebuildReviewsSnapshot(kv) {
+  const approved = await readReviews(kv, "approved");
+  await kv.put(REVIEWS_SNAPSHOT_KEY, JSON.stringify(approved));
+  return approved.length;
+}
+
+// Approved reviews from the old "reviews" blob only ([] if missing/unreadable).
+export async function approvedFromBlob(kv) {
+  const blob = await readJson(kv, "reviews", []);
+  return (Array.isArray(blob) ? blob : []).filter(r => r && r.status === "approved");
+}
+
 // ---- Subscribers
 export function putSubscriber(kv, sub) {
   return kv.put("sub:" + sub.email, JSON.stringify(sub));
@@ -75,10 +93,15 @@ export async function readSubscriber(kv, email) {
 }
 
 // ---- Click counts
+// Keeps migrated_old (set by admin-migrate.js in the same write that added
+// the old blob count) so a re-run migration can't add that count twice.
 export async function incrementClick(kv, key) {
   const k = "click:" + key;
-  const n = (parseInt((await kv.get(k)) || "0", 10) || 0) + 1;
-  await kv.put(k, String(n), { metadata: { count: n } });
+  const { value, metadata } = await kv.getWithMetadata(k);
+  const n = (parseInt(value || "0", 10) || 0) + 1;
+  const meta = { count: n };
+  if (metadata && metadata.migrated_old != null) meta.migrated_old = metadata.migrated_old;
+  await kv.put(k, String(n), { metadata: meta });
 }
 
 // All counts keyed "peptide|||vendor". Until the migration has copied the
@@ -92,7 +115,9 @@ export async function readClickCounts(kv) {
     const key = k.name.slice("click:".length);
     let n = k.metadata && Number.isFinite(k.metadata.count) ? k.metadata.count : null;
     if (n == null) n = parseInt((await kv.get(k.name)) || "0", 10) || 0;
-    counts[key] = (counts[key] || 0) + n;
+    // A counter the migration already handled includes its old blob count.
+    const done = k.metadata && k.metadata.migrated_old != null;
+    counts[key] = done ? n : (counts[key] || 0) + n;
   }
   return counts;
 }

@@ -1,14 +1,16 @@
 // Returns every APPROVED review as JSON. Pending and rejected reviews are
 // never included here — this is the only endpoint the public-facing site
 // reads from, so anything not yet approved is simply invisible to visitors.
-// Merges per-record review:* keys with the old "reviews" blob.
+// Reads ONE key, the approved-reviews snapshot that admin-reviews.js and
+// admin-migrate.js rewrite, so it makes no KV list requests (free plan:
+// 1,000 a day). Until the first approval/migration writes the snapshot, and
+// on any error, it serves the approved reviews from the old "reviews" blob.
 //
-// Cached at the edge for 5 minutes (Cache API, per data centre) so page loads
-// don't each spend a KV list request (free plan: 1,000 a day). New approvals
-// can take up to 5 minutes to show. The admin page reads KV directly through
-// admin-reviews.js, so it always sees fresh data.
+// Also cached at the edge for 5 minutes (Cache API, per data centre), so new
+// approvals can take up to 5 minutes to show. The admin page reads KV
+// directly through admin-reviews.js, so it always sees fresh data.
 
-import { readReviews, readJson } from "../_lib/records.js";
+import { REVIEWS_SNAPSHOT_KEY, approvedFromBlob } from "../_lib/records.js";
 
 const CACHE_SECONDS = 300;
 const FALLBACK_CACHE_SECONDS = 60;
@@ -26,13 +28,18 @@ export async function onRequestGet(context) {
   let reviews = [];
   let fellBack = false;
   try {
-    reviews = await readReviews(env.CLICK_COUNTS, "approved");
+    const raw = await env.CLICK_COUNTS.get(REVIEWS_SNAPSHOT_KEY);
+    if (raw === null) {
+      // No snapshot yet (before the first approval or the migration).
+      reviews = await approvedFromBlob(env.CLICK_COUNTS);
+    } else {
+      reviews = JSON.parse(raw);
+      if (!Array.isArray(reviews)) throw new Error("snapshot is not an array");
+    }
   } catch (e) {
-    // e.g. the daily list limit is used up: serve the old blob instead.
-    console.error("get-reviews: per-record read failed, using old 'reviews' blob:", e);
+    console.error("get-reviews: snapshot read failed, using old 'reviews' blob:", e);
     fellBack = true;
-    const blob = await readJson(env.CLICK_COUNTS, "reviews", []);
-    reviews = (Array.isArray(blob) ? blob : []).filter(r => r && r.status === "approved");
+    reviews = await approvedFromBlob(env.CLICK_COUNTS);
   }
 
   const response = new Response(JSON.stringify(reviews), {

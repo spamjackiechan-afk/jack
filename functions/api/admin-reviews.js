@@ -22,10 +22,11 @@
 // MAX_FAILURES within 15 minutes, requests get 429 without checking the password.
 //
 // Reviews are read from per-record review:* keys merged with the old
-// "reviews" blob (functions/_lib/records.js). checkAuth/authError are also
-// used by admin-migrate.js.
+// "reviews" blob (functions/_lib/records.js). Each approve/reject also
+// rewrites the public snapshot that get-reviews serves. checkAuth/authError
+// are also used by admin-migrate.js.
 
-import { readReviews, putReview } from "../_lib/records.js";
+import { readReviews, putReview, rebuildReviewsSnapshot } from "../_lib/records.js";
 
 // Empty until Jackson supplies new values; with them empty, every login fails (fail closed).
 const ADMIN_PASSWORD_SALT = "b6348d50b10823a317461b0590304abd";   // hex, 16 random bytes
@@ -145,6 +146,15 @@ export async function onRequestPost(context) {
     await putReview(env.CLICK_COUNTS, review);
   } catch (e) {
     return new Response(JSON.stringify({ error: "Storage error" }), { status: 500 });
+  }
+
+  // Refresh the public snapshot. If this fails the status is already saved;
+  // clicking Approve/Reject again saves the same status and retries this.
+  try {
+    await rebuildReviewsSnapshot(env.CLICK_COUNTS);
+  } catch (e) {
+    console.error("admin-reviews: snapshot rebuild failed:", e);
+    return new Response(JSON.stringify({ error: "Saved, but the public review list could not be refreshed. Please try again." }), { status: 500 });
   }
 
   return new Response(JSON.stringify({ ok: true }), {
