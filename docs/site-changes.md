@@ -78,9 +78,14 @@ never deleted by code. `POST /api/admin-migrate` (admin login; `?dry_run=1`
 to preview) copies the blobs into per-record keys. Only run it when Jackson
 says so. Deleting the old blobs afterwards is his decision.
 
-Unsubscribe links must include the subscriber's token:
+New unsubscribe links should include the subscriber's token:
 `/api/subscribe?unsubscribe=<email>&token=<unsubscribe_token>`. The token is in
 each `sub:<email>` record, and the migration adds one for older subscribers.
+Old email-only links (`?unsubscribe=<email>`, no token) keep working while
+`ALLOW_EMAIL_ONLY_UNSUBSCRIBE` in `functions/api/subscribe.js` is `true`:
+CAN-SPAM requires an opt-out link to keep working for at least 30 days after
+each email is sent. Only switch it off once every email that went out with an
+email-only link is more than 30 days old.
 
 The review and email forms carry a hidden `website` honeypot field and the time
 since the form appeared (`form_ms`). The server rejects honeypot-filled

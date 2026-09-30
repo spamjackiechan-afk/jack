@@ -73,8 +73,17 @@ export async function onRequestPost(context) {
 // CAN-SPAM requires a working opt-out honoured within 10 days; this handles
 // it immediately. Kept as a GET so it can be reached straight from a link in
 // an email without any JavaScript. The token stops anyone unsubscribing
-// someone else's address. A missing token, a wrong token and an unknown
-// address all get the same reply, so the page doesn't reveal who is on the list.
+// someone else's address.
+//
+// Emails sent before tokens existed link to /api/subscribe?unsubscribe=<email>
+// with no token, and CAN-SPAM requires an opt-out link to keep working for at
+// least 30 days after each email is sent. So while ALLOW_EMAIL_ONLY_UNSUBSCRIBE
+// is true, a link with no token (or a wrong one) still unsubscribes the address,
+// exactly as before. Only set it to false once every email that went out with
+// the old email-only link is more than 30 days old, and every new email uses
+// the token link.
+const ALLOW_EMAIL_ONLY_UNSUBSCRIBE = true;
+
 export async function onRequestGet(context) {
   const { request, env } = context;
   const params = new URL(request.url).searchParams;
@@ -85,7 +94,10 @@ export async function onRequestGet(context) {
   try {
     const key = email.trim().toLowerCase();
     const sub = await readSubscriber(env.CLICK_COUNTS, key);
-    if (!sub || !sub.unsubscribe_token || !sameString(token, sub.unsubscribe_token)) {
+    const tokenOk = Boolean(sub && sub.unsubscribe_token && token && sameString(token, sub.unsubscribe_token));
+    if (!tokenOk && !ALLOW_EMAIL_ONLY_UNSUBSCRIBE) {
+      // A missing token, a wrong token and an unknown address all get the same
+      // reply, so the page doesn't reveal who is on the list.
       return new Response(
         "<html><body style='background:#0E1211;color:#F2F3F1;font-family:sans-serif;padding:60px;text-align:center'>" +
         "<h1 style='font-weight:500'>This unsubscribe link isn't valid.</h1>" +
@@ -94,7 +106,11 @@ export async function onRequestGet(context) {
         { status: 400, headers: { "Content-Type": "text/html" } }
       );
     }
-    await putSubscriber(env.CLICK_COUNTS, { ...sub, email: key, unsubscribed: true, unsubscribed_at: new Date().toISOString() });
+    if (sub && !sub.unsubscribed) {
+      await putSubscriber(env.CLICK_COUNTS, { ...sub, email: key, unsubscribed: true, unsubscribed_at: new Date().toISOString() });
+    }
+    // Always report success — confirming whether an address is on the list
+    // would leak membership to anyone who guesses.
     return new Response(
       "<html><body style='background:#0E1211;color:#F2F3F1;font-family:sans-serif;padding:60px;text-align:center'>" +
       "<h1 style='font-weight:500'>You're unsubscribed.</h1>" +
