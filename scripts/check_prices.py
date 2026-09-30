@@ -24,6 +24,7 @@ import sys
 import time
 from html import unescape
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit, urlunsplit
 
 import requests
 from bs4 import BeautifulSoup
@@ -339,6 +340,76 @@ def extract_price(html: str) -> float | None:
     return None
 
 
+def variant_id_from_url(url: str) -> str | None:
+    """Shopify-style ?variant=ID pins a listing to one size of a multi-size
+    product page (e.g. American Peptides' Semaglutide page sells 5/10/20/30/50 mg
+    and the page itself always shows the first size)."""
+    vals = parse_qs(urlsplit(url).query).get("variant") or []
+    return vals[0] if vals and vals[0].isdigit() else None
+
+
+def _jsonld_offer_prices_by_sku(html: str) -> dict:
+    out = {}
+    for m in re.finditer(r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", html, re.DOTALL | re.IGNORECASE):
+        try:
+            stack = [json.loads(m.group(1))]
+        except ValueError:
+            continue
+        while stack:
+            node = stack.pop()
+            if isinstance(node, list):
+                stack.extend(node)
+            elif isinstance(node, dict):
+                if node.get("@type") == "Offer" and node.get("sku") and isinstance(node.get("price"), (int, float, str)):
+                    try:
+                        out[str(node["sku"])] = float(node["price"])
+                    except ValueError:
+                        pass
+                stack.extend(node.values())
+    return out
+
+
+def extract_variant_price(html: str, variant_id: str) -> tuple:
+    """(price, regular_price) of ONE variant, read from the product data the page
+    embeds (American Peptides: a flat {"id":"<id>","title":"10 mg","sku":...,
+    "price":90,...} object in the Next.js payload). Trusted only when the page's
+    JSON-LD Offer for the same SKU shows the same price, which rules out a stray
+    id match or a cents-vs-dollars payload. Returns (None, None) otherwise; the
+    default variant's price is never used as a stand-in."""
+    text = html.replace('\\"', '"')
+    offers = None
+    for m in re.finditer(r'\{"id":"?%s"?[,}]' % variant_id, text):
+        obj = text[m.start():text.find("}", m.start()) + 1]
+        price, sku = re.search(r'"price":"?(\d+(?:\.\d+)?)[",}]', obj), re.search(r'"sku":"([^"]+)"', obj)
+        if not (price and sku):
+            continue
+        price = float(price.group(1))
+        offers = _jsonld_offer_prices_by_sku(html) if offers is None else offers
+        if sku.group(1) not in offers or abs(offers[sku.group(1)] - price) > 0.005:
+            continue
+        was = re.search(r'"compare_?at_?price":"?(\d+(?:\.\d+)?)', obj, re.IGNORECASE)
+        return price, (float(was.group(1)) if was and float(was.group(1)) > price else None)
+    return None, None
+
+
+def _shopify_variant_price(url: str, variant_id: str, headers: dict, proxies: dict | None) -> tuple:
+    """Fallback for stock Shopify storefronts: /products/<handle>.js lists every
+    variant with price / compare_at_price in cents."""
+    parts = urlsplit(url)
+    try:
+        resp = requests.get(urlunsplit((parts.scheme, parts.netloc, parts.path.rstrip("/") + ".js", "", "")),
+                            headers=headers, proxies=proxies, timeout=20)
+        resp.raise_for_status()
+        variants = resp.json().get("variants") or []
+    except (requests.RequestException, ValueError, AttributeError):
+        return None, None
+    for v in variants:
+        if str(v.get("id")) == variant_id and isinstance(v.get("price"), int):
+            price, was = v["price"] / 100, v.get("compare_at_price")
+            return price, (was / 100 if isinstance(was, int) and was / 100 > price else None)
+    return None, None
+
+
 def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None) -> dict:
     try:
         resp = requests.get(url, headers=headers, proxies=proxies, timeout=20)
@@ -347,6 +418,15 @@ def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None
         resp.raise_for_status()
     except requests.RequestException as e:
         return {"url": url, "price": None, "error": str(e)}
+
+    variant_id = variant_id_from_url(url)
+    if variant_id:
+        price, regular = extract_variant_price(resp.text, variant_id)
+        if price is None:
+            price, regular = _shopify_variant_price(url, variant_id, headers, proxies)
+        if price is None:
+            return {"url": url, "price": None, "error": f"variant {variant_id} price not found (default variant not used)"}
+        return {"url": url, "price": price, "regular_price": regular, "error": None}
 
     price = extract_price(resp.text)
     if price is None:
@@ -374,6 +454,12 @@ def check_product_with_browser(url: str, browser) -> dict:
 
     if is_bot_challenge(200, {}, html):
         return {"url": url, "price": None, "error": BOT_CHALLENGE_ERROR}
+    variant_id = variant_id_from_url(url)
+    if variant_id:
+        price, regular = extract_variant_price(html, variant_id)
+        if price is None:
+            return {"url": url, "price": None, "error": f"variant {variant_id} price not found (default variant not used)"}
+        return {"url": url, "price": price, "regular_price": regular, "error": None}
     price = extract_price(html)
     if price is None:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
