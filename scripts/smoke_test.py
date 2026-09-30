@@ -17,14 +17,14 @@ Fails on:
   * the calculator not producing a result for sample inputs
   * the homepage Suppliers nav item not linking to /suppliers
   * suppliers.html rendering < MIN_SUPPLIERS cards
-  * the testing.html References news markup (NEWS_MARKERS) showing up on
-    index.html or suppliers.html, in the raw file or the rendered page; it
-    belongs on testing.html only (see docs/references-format.md)
-  * testing.html rendering fewer than MIN_REFERENCES reference items
   * a vendor count on index.html, suppliers.html or about.html ("13 vendors",
     "13 suppliers", title/meta tags, the About stats strip), in the raw file or
     the rendered page, that differs from the number of distinct vendors with
     listings in the homepage DATA
+  * the testing.html References news markup (NEWS_MARKERS) showing up on
+    index.html or suppliers.html, in the raw file or the rendered page; it
+    belongs on testing.html only (see docs/references-format.md)
+  * testing.html rendering fewer than MIN_REFERENCES reference items
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
