@@ -537,15 +537,13 @@
       "amount_mg": 10,
       "prices": {
         "Core Peptides": 235,
-        "Alpha Peptides": 62.63,
-        "Offline Peptides": 69.0
+        "Alpha Peptides": 62.63
       },
       "lowest": 62.63,
       "notes": null,
       "category": "Cellular & Longevity",
       "vendor_product_urls": {
-        "Alpha Peptides": "https://alpha-peptides.com/product/foxo4-dri/",
-        "Offline Peptides": "https://offlinepeptides.com/product/foxo4-dri/"
+        "Alpha Peptides": "https://alpha-peptides.com/product/foxo4-dri/"
       }
     },
     {
@@ -674,8 +672,7 @@
         "Royal Peptides": 78,
         "BioIntegrity Research": 149.0,
         "Licensed Peptides": 45.99,
-        "Alpha Peptides": 45.47,
-        "Offline Peptides": 69.0
+        "Alpha Peptides": 45.47
       },
       "lowest": 45.47,
       "notes": null,
@@ -684,8 +681,7 @@
         "Royal Peptides": "https://royal-peptides.com/shop/igf-1-lr3-1mg-kit/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/igf-1-lr3",
         "Licensed Peptides": "https://licensedpeptides.com/product/igf-1-lr3/",
-        "Alpha Peptides": "https://alpha-peptides.com/product/igf-1-lr3/",
-        "Offline Peptides": "https://offlinepeptides.com/product/igf-1lr3/"
+        "Alpha Peptides": "https://alpha-peptides.com/product/igf-1-lr3/"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -895,16 +891,14 @@
         "Core Peptides": 43,
         "Purity Peptides": 82.49,
         "BioIntegrity Research": 124.0,
-        "Alpha Peptides": 22.07,
-        "Offline Peptides": 39.0
+        "Alpha Peptides": 22.07
       },
       "lowest": 22.07,
       "notes": null,
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/pt-141",
-        "Alpha Peptides": "https://alpha-peptides.com/product/pt-141/",
-        "Offline Peptides": "https://offlinepeptides.com/product/pt-141/"
+        "Alpha Peptides": "https://alpha-peptides.com/product/pt-141/"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -999,8 +993,7 @@
         "BioIntegrity Research": 99.0,
         "Licensed Peptides": 99.99,
         "Alpha Peptides": 35.79,
-        "Midwest Peptide": 59.99,
-        "Offline Peptides": 46.0
+        "Midwest Peptide": 59.99
       },
       "lowest": 35.79,
       "notes": null,
@@ -1008,8 +1001,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ss-31",
         "Licensed Peptides": "https://licensedpeptides.com/product/ss-31/",
         "Alpha Peptides": "https://alpha-peptides.com/product/ss-31/",
-        "Midwest Peptide": "https://midwestpeptide.com/products/ss-31",
-        "Offline Peptides": "https://offlinepeptides.com/product/ss-31/"
+        "Midwest Peptide": "https://midwestpeptide.com/products/ss-31"
       },
       "category": "Cellular & Longevity"
     },
@@ -1449,16 +1441,14 @@
       "prices": {
         "Purity Peptides": 59.99,
         "Licensed Peptides": 68.99,
-        "American Peptides": 60,
-        "Offline Peptides": 34.0
+        "American Peptides": 60
       },
-      "lowest": 34.0,
+      "lowest": 59.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/sermorelin/",
-        "American Peptides": "https://www.americanpeptides.us/products/sermorelin",
-        "Offline Peptides": "https://offlinepeptides.com/product/sermorelin/"
+        "American Peptides": "https://www.americanpeptides.us/products/sermorelin"
       }
     },
     {
@@ -2053,15 +2043,13 @@
       "size": "5mg",
       "prices": {
         "Alpha Peptides": 84.21,
-        "Offline Peptides": 42.0,
         "Orbitrex Peptide": 49.99
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/slu-pp-332/",
-        "Offline Peptides": "https://offlinepeptides.com/product/slu-pp-332/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/slu-pp-332/"
       },
-      "lowest": 42.0
+      "lowest": 49.99
     },
     {
       "peptide": "SNAP-8",
@@ -2234,8 +2222,7 @@
         "Purity Peptides": 54.99,
         "Royal Peptides": 55,
         "Alpha Peptides": 21.05,
-        "Midwest Peptide": 29.99,
-        "Offline Peptides": 29.0
+        "Midwest Peptide": 29.99
       },
       "lowest": 21.05,
       "notes": null,
@@ -2245,7 +2232,6 @@
         "Purity Peptides": "https://puritypeptides.is/product/melanotan-ii-10mg",
         "Alpha Peptides": "https://alpha-peptides.com/product/mt-2/",
         "Midwest Peptide": "https://midwestpeptide.com/products/mt-2-10mg",
-        "Offline Peptides": "https://offlinepeptides.com/product/melanotan-2/",
         "Royal Peptides": "https://royal-peptides.com/shop/melanotan-10mg/"
       }
     },
@@ -2692,7 +2678,6 @@
         "Purity Peptides": 139.99,
         "Midwest Peptide": 69.99,
         "American Peptides": 120,
-        "Offline Peptides": 78.0,
         "Orbitrex Peptide": 79.99
       },
       "lowest": 69.99,
@@ -2701,7 +2686,6 @@
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/tesamorelin-10mg",
         "American Peptides": "https://www.americanpeptides.us/products/tesamorelin",
-        "Offline Peptides": "https://offlinepeptides.com/product/tesamorelin/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/tesa-10mg-2/"
       }
     },
@@ -2885,15 +2869,12 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 79.99,
-        "Offline Peptides": 29.0
+        "Purity Peptides": 79.99
       },
-      "lowest": 29.0,
+      "lowest": 79.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
-      "vendor_product_urls": {
-        "Offline Peptides": "https://offlinepeptides.com/product/tesamorelin/"
-      }
+      "vendor_product_urls": {}
     },
     {
       "peptide": "Tesamorelin / Ipamorelin combo",
@@ -3063,14 +3044,12 @@
       "amount_mg": 10,
       "prices": {
         "Purity Peptides": 54.99,
-        "Midwest Peptide": 29.99,
-        "Offline Peptides": 29.0
+        "Midwest Peptide": 29.99
       },
-      "lowest": 29.0,
+      "lowest": 29.99,
       "notes": null,
       "vendor_product_urls": {
-        "Midwest Peptide": "https://midwestpeptide.com/products/mt-1-10mg",
-        "Offline Peptides": "https://offlinepeptides.com/product/melanotan-1/"
+        "Midwest Peptide": "https://midwestpeptide.com/products/mt-1-10mg"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -3156,15 +3135,13 @@
       "amount_mg": 10,
       "prices": {
         "Midwest Peptide": 69.99,
-        "American Peptides": 170,
-        "Offline Peptides": 89.0
+        "American Peptides": 170
       },
       "lowest": 69.99,
       "notes": null,
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/cagrilintide",
-        "American Peptides": "https://www.americanpeptides.us/products/cagrilintide",
-        "Offline Peptides": "https://offlinepeptides.com/product/cagrilintide/"
+        "American Peptides": "https://www.americanpeptides.us/products/cagrilintide"
       },
       "category": "Metabolic & Weight"
     },
