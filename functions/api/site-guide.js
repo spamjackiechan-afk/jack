@@ -595,14 +595,15 @@ async function loadPrices(request) {
 }
 
 // Same source as the suppliers page: every vendor in vendor_config.json
-// (keys starting with "_" are not vendors), sorted by name. Falls back to the
-// live price file only if the config can't be read.
+// (keys starting with "_" are not vendors; vendors with "hidden": true are
+// not shown on the site), sorted by name. Falls back to the live price file
+// only if the config can't be read.
 async function listVendors(request) {
   try {
     const res = await fetch(new URL("/vendor_config.json", request.url).toString());
     if (res.ok) {
       const cfg = await res.json();
-      const names = Object.keys(cfg || {}).filter((k) => !k.startsWith("_")).sort();
+      const names = Object.keys(cfg || {}).filter((k) => !k.startsWith("_") && !(cfg[k] && cfg[k].hidden === true)).sort();
       if (names.length) return { vendors: names, fromConfig: true };
     }
   } catch (_) {}

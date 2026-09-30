@@ -7,6 +7,14 @@ fails, and the fallback script relies on them). They are generated from:
   vendor_config.json  ->  `const VENDOR_CONFIG = ...;`  (compact, \\uXXXX escapes)
   data/catalog.json   ->  `const DATA = ...;`           (compact, UTF-8 as-is)
 
+Hidden vendors: a vendor with `"hidden": true` in vendor_config.json keeps
+all its data (catalog.json, product_urls.json, its config and its VENDORS
+entry in check_prices.py) but is left out of the `const DATA` line: its
+prices and links are removed from every row, `lowest` is recomputed from the
+remaining vendors, and rows left with no vendor are dropped. The price
+checker skips hidden vendors too. To bring a vendor back, delete the flag
+and run this script.
+
 vendor_config.json is public (served at /vendor_config.json and embedded), so
 it must hold only the fields the site code reads. Internal notes (commission,
 cookie length, programme terms, guidelines_notes, last_checked, testing_tier,
@@ -23,8 +31,9 @@ Syncing:
      (key order and vendor order are preserved; anything else is dropped and
      listed on stdout), then writes it back (2-space indent, \\uXXXX escapes),
   2. rewrites ONLY the `const VENDOR_CONFIG = ...;` and `const DATA = ...;`
-     lines in index.html and suppliers.html. Nothing else in the pages changes.
-     data/catalog.json itself is never rewritten.
+     lines in index.html and suppliers.html (DATA without hidden vendors, see
+     above). Nothing else in the pages changes. data/catalog.json itself is
+     never rewritten.
 Running it twice changes nothing the second time. scripts/smoke_test.py runs
 the --check and fails the site-smoke check if the embeds don't match.
 """
@@ -44,8 +53,11 @@ DATA_PREFIX = "const DATA = "
 PUBLIC_FIELDS = [
     "status", "site_url", "tracking_type", "affiliate_link_base",
     "affiliate_path_suffix", "promo_code", "payment_methods", "payment_note",
-    "shipping_info", "shipping_payment_researched",
+    "shipping_info", "shipping_payment_researched", "hidden",
 ]
+
+# Per-vendor fields on a catalog row that must go when the vendor is hidden.
+ROW_VENDOR_FIELDS = ("prices", "vendor_product_urls", "onSale", "liveVerified")
 
 
 def public_config(cfg):
@@ -59,6 +71,39 @@ def public_config(cfg):
     return out, sorted(dropped)
 
 
+def hidden_vendors(cfg):
+    """Vendors marked `"hidden": true` in vendor_config.json."""
+    return {v for v, f in cfg.items() if not v.startswith("_") and isinstance(f, dict) and f.get("hidden") is True}
+
+
+def visible_catalog(catalog, hidden):
+    """catalog.json as the pages should embed it: hidden vendors removed from
+    every row, `lowest` recomputed on rows that lost one, rows left with no
+    vendor dropped. Rows without a hidden vendor are left exactly as they are."""
+    if not hidden:
+        return catalog
+    out = OrderedDict(catalog)
+    for section in ("included", "excluded"):
+        rows = catalog.get(section)
+        if not isinstance(rows, list):
+            continue
+        kept = []
+        for row in rows:
+            if not any(v in (row.get("prices") or {}) for v in hidden):
+                kept.append(row)
+                continue
+            row = OrderedDict(row)
+            for field in ROW_VENDOR_FIELDS:
+                if isinstance(row.get(field), dict):
+                    row[field] = OrderedDict((k, v) for k, v in row[field].items() if k not in hidden)
+            if not row["prices"]:
+                continue
+            row["lowest"] = min(row["prices"].values())
+            kept.append(row)
+        out[section] = kept
+    return out
+
+
 def load_json(root, rel):
     with open(os.path.join(root, rel), encoding="utf-8") as f:
         return json.load(f, object_pairs_hook=OrderedDict)
@@ -68,9 +113,10 @@ def expected_lines(root):
     """The public vendor_config.json text and the two embed lines it should produce."""
     pub, dropped = public_config(load_json(root, CONFIG))
     config_text = json.dumps(pub, indent=2, ensure_ascii=True) + "\n"
+    data = visible_catalog(load_json(root, CATALOG), hidden_vendors(pub))
     lines = {
         PREFIX: PREFIX + json.dumps(pub, separators=(",", ":"), ensure_ascii=True) + ";",
-        DATA_PREFIX: DATA_PREFIX + json.dumps(load_json(root, CATALOG), separators=(",", ":"), ensure_ascii=False) + ";",
+        DATA_PREFIX: DATA_PREFIX + json.dumps(data, separators=(",", ":"), ensure_ascii=False) + ";",
     }
     return config_text, lines, dropped
 
