@@ -2625,8 +2625,7 @@
         "UltraLife": 149,
         "Alpha Peptides": 44.09,
         "Midwest Peptide": 69.99,
-        "American Peptides": 105,
-        "Offline Peptides": 64.0
+        "American Peptides": 105
       },
       "lowest": 44.09,
       "notes": null,
@@ -2634,8 +2633,7 @@
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/glp-3-rt/",
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-3r/"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
       }
     },
     {
@@ -2646,16 +2644,14 @@
       "prices": {
         "UltraLife": 289,
         "Midwest Peptide": 134.99,
-        "American Peptides": 200,
-        "Offline Peptides": 99.0
+        "American Peptides": 200
       },
-      "lowest": 99.0,
+      "lowest": 134.99,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-3r/"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
       }
     },
     {
@@ -2702,15 +2698,13 @@
       "amount_mg": 10,
       "prices": {
         "UltraLife": 129,
-        "American Peptides": 100,
-        "Offline Peptides": 65.0
+        "American Peptides": 100
       },
-      "lowest": 65.0,
+      "lowest": 100,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-2t/"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
       }
     },
     {
@@ -2761,16 +2755,14 @@
       "prices": {
         "Purity Peptides": 119.99,
         "Midwest Peptide": 49.99,
-        "American Peptides": 90,
-        "Offline Peptides": 39.0
+        "American Peptides": 90
       },
-      "lowest": 39.0,
+      "lowest": 49.99,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-1-sm",
-        "American Peptides": "https://www.americanpeptides.us/products/semaglutide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-1s/"
+        "American Peptides": "https://www.americanpeptides.us/products/semaglutide"
       }
     },
     {
@@ -2792,15 +2784,13 @@
       "amount_mg": 10,
       "prices": {
         "Purity Peptides": 104.99,
-        "American Peptides": 100,
-        "Offline Peptides": 65.0
+        "American Peptides": 100
       },
-      "lowest": 65.0,
+      "lowest": 100,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-2t/"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
       }
     },
     {
@@ -2810,15 +2800,13 @@
       "amount_mg": 20,
       "prices": {
         "Purity Peptides": 159.99,
-        "American Peptides": 170,
-        "Offline Peptides": 77.0
+        "American Peptides": 170
       },
-      "lowest": 77.0,
+      "lowest": 159.99,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-2t/"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
       }
     },
     {
@@ -2830,8 +2818,7 @@
         "Purity Peptides": 104.99,
         "Alpha Peptides": 44.09,
         "Midwest Peptide": 69.99,
-        "American Peptides": 105,
-        "Offline Peptides": 64.0
+        "American Peptides": 105
       },
       "lowest": 44.09,
       "notes": null,
@@ -2839,8 +2826,7 @@
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/glp-3-rt/",
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-3r/"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
       }
     },
     {
@@ -2851,16 +2837,14 @@
       "prices": {
         "Purity Peptides": 199.0,
         "Midwest Peptide": 134.99,
-        "American Peptides": 200,
-        "Offline Peptides": 99.0
+        "American Peptides": 200
       },
-      "lowest": 99.0,
+      "lowest": 134.99,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-3r/"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
       }
     },
     {
@@ -2871,16 +2855,14 @@
       "prices": {
         "Purity Peptides": 299.99,
         "Midwest Peptide": 199.99,
-        "American Peptides": 240,
-        "Offline Peptides": 148.0
+        "American Peptides": 240
       },
-      "lowest": 148.0,
+      "lowest": 199.99,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-3r/"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
       }
     },
     {
@@ -3179,15 +3161,13 @@
       "amount_mg": 30,
       "prices": {
         "Midwest Peptide": 79.99,
-        "American Peptides": 240,
-        "Offline Peptides": 93.0
+        "American Peptides": 240
       },
       "lowest": 79.99,
       "notes": null,
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-2-tz",
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-2t/"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
       },
       "category": "Metabolic & Weight"
     },
@@ -3198,15 +3178,13 @@
       "amount_mg": 30,
       "prices": {
         "Midwest Peptide": 79.99,
-        "American Peptides": 240,
-        "Offline Peptides": 93.0
+        "American Peptides": 240
       },
       "lowest": 79.99,
       "notes": null,
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-2-tz",
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide",
-        "Offline Peptides": "https://offlinepeptides.com/product/glp-2t/"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
       },
       "category": "Metabolic & Weight"
     },
