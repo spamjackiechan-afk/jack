@@ -1475,61 +1475,6 @@
         "regular_price": null,
         "error": null
       },
-      "GLP-1 (Semaglutide) | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-1s/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-1-sm/"
-      },
-      "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide | Vial | 20mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 30mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide | Vial | 30mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide | Vial | 20mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide | Vial | 30mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
       "MOTS-C | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/mots-c/",
         "price": 42.0,

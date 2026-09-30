@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+"""Keep the embedded data in index.html / suppliers.html in sync with the JSON files.
+
+The pages embed two data lines on purpose (the page still works if a fetch
+fails, and the fallback script relies on them). They are generated from:
+
+  vendor_config.json  ->  `const VENDOR_CONFIG = ...;`  (compact, \\uXXXX escapes)
+  data/catalog.json   ->  `const DATA = ...;`           (compact, UTF-8 as-is)
+
+vendor_config.json is public (served at /vendor_config.json and embedded), so
+it must hold only the fields the site code reads. Internal notes (commission,
+cookie length, programme terms, guidelines_notes, last_checked, testing_tier,
+testing_methods, testing_lab, testing_standard, testing_note, testing_researched,
+_readme, _field_guide) live in the private vendor notes file, not in this repo.
+See docs/site-changes.md.
+
+Usage:
+  python scripts/sync_vendor_config.py          # rewrite the embed lines
+  python scripts/sync_vendor_config.py --check  # change nothing; exit 1 if
+                                                # anything is out of sync
+Syncing:
+  1. reads vendor_config.json and keeps only PUBLIC_FIELDS for each vendor
+     (key order and vendor order are preserved; anything else is dropped and
+     listed on stdout), then writes it back (2-space indent, \\uXXXX escapes),
+  2. rewrites ONLY the `const VENDOR_CONFIG = ...;` and `const DATA = ...;`
+     lines in index.html and suppliers.html. Nothing else in the pages changes.
+     data/catalog.json itself is never rewritten.
+Running it twice changes nothing the second time. scripts/smoke_test.py runs
+the --check and fails the site-smoke check if the embeds don't match.
+"""
+import json
+import os
+import sys
+from collections import OrderedDict
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+CONFIG = "vendor_config.json"
+CATALOG = os.path.join("data", "catalog.json")
+PAGES = ["index.html", "suppliers.html"]
+PREFIX = "const VENDOR_CONFIG = "
+DATA_PREFIX = "const DATA = "
+
+# Fields read by index.html / suppliers.html (and the fallback script).
+PUBLIC_FIELDS = [
+    "status", "site_url", "tracking_type", "affiliate_link_base",
+    "affiliate_path_suffix", "promo_code", "payment_methods", "payment_note",
+    "shipping_info", "shipping_payment_researched",
+]
+
+
+def public_config(cfg):
+    out, dropped = OrderedDict(), set()
+    for vendor, fields in cfg.items():
+        if vendor.startswith("_"):
+            dropped.add(vendor)
+            continue
+        out[vendor] = OrderedDict((k, v) for k, v in fields.items() if k in PUBLIC_FIELDS)
+        dropped.update(k for k in fields if k not in PUBLIC_FIELDS)
+    return out, sorted(dropped)
+
+
+def load_json(root, rel):
+    with open(os.path.join(root, rel), encoding="utf-8") as f:
+        return json.load(f, object_pairs_hook=OrderedDict)
+
+
+def expected_lines(root):
+    """The public vendor_config.json text and the two embed lines it should produce."""
+    pub, dropped = public_config(load_json(root, CONFIG))
+    config_text = json.dumps(pub, indent=2, ensure_ascii=True) + "\n"
+    lines = {
+        PREFIX: PREFIX + json.dumps(pub, separators=(",", ":"), ensure_ascii=True) + ";",
+        DATA_PREFIX: DATA_PREFIX + json.dumps(load_json(root, CATALOG), separators=(",", ":"), ensure_ascii=False) + ";",
+    }
+    return config_text, lines, dropped
+
+
+def read_page(root, page):
+    with open(os.path.join(root, page), encoding="utf-8", newline="") as f:
+        return f.read().split("\n")
+
+
+def find_line(lines, prefix, page):
+    hits = [i for i, l in enumerate(lines) if l.startswith(prefix)]
+    if len(hits) != 1:
+        raise ValueError(f"{page}: expected exactly one line starting with {prefix!r}, found {len(hits)}")
+    return hits[0]
+
+
+def check(root=ROOT):
+    """Return a list of problems (empty = everything in sync). Changes nothing."""
+    problems = []
+    try:
+        config_text, want, dropped = expected_lines(root)
+    except (OSError, ValueError) as e:
+        return [f"embeds: cannot read the JSON sources: {e}"]
+    with open(os.path.join(root, CONFIG), encoding="utf-8") as f:
+        if f.read() != config_text:
+            extra = f" (non-public fields: {', '.join(dropped)})" if dropped else ""
+            problems.append(f"{CONFIG} is not in synced form{extra}; run python scripts/sync_vendor_config.py")
+    for page in PAGES:
+        try:
+            lines = read_page(root, page)
+            for prefix, line in want.items():
+                if lines[find_line(lines, prefix, page)] != line:
+                    src = CATALOG if prefix == DATA_PREFIX else CONFIG
+                    problems.append(f"{page}: the `{prefix.strip()}` line doesn't match {src}; "
+                                    "edit the JSON and run python scripts/sync_vendor_config.py")
+        except (OSError, ValueError) as e:
+            problems.append(str(e))
+    return problems
+
+
+def sync(root=ROOT):
+    config_text, want, dropped = expected_lines(root)
+    if dropped:
+        print("dropped from the public config (keep these in the private notes file):",
+              ", ".join(dropped))
+    path = os.path.join(root, CONFIG)
+    with open(path, encoding="utf-8") as f:
+        changed = f.read() != config_text
+    if changed:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(config_text)
+    print(("updated" if changed else "unchanged") + f": {CONFIG}")
+
+    for page in PAGES:
+        lines = read_page(root, page)
+        idx = {prefix: find_line(lines, prefix, page) for prefix in want}  # all found before writing
+        changed = [p.strip() for p, i in idx.items() if lines[i] != want[p]]
+        for prefix, i in idx.items():
+            lines[i] = want[prefix]
+        if changed:
+            with open(os.path.join(root, page), "w", encoding="utf-8", newline="") as f:
+                f.write("\n".join(lines))
+        print(f"{'updated' if changed else 'unchanged'}: {page}" + (f" ({', '.join(changed)} line)" if changed else ""))
+
+
+def main():
+    if "--check" in sys.argv[1:]:
+        problems = check()
+        if problems:
+            print("OUT OF SYNC:\n  " + "\n  ".join(problems))
+            sys.exit(1)
+        print("OK: embeds match vendor_config.json and data/catalog.json")
+        return
+    try:
+        sync()
+    except ValueError as e:
+        sys.exit(f"{e}. Nothing written.")
+
+
+if __name__ == "__main__":
+    main()
