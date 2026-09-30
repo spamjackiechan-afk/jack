@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-30T17:56:06Z",
+  "checked_at": "2026-09-30T18:46:13Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1333,8 +1333,8 @@
         "error": null
       },
       "GLP-1 (Semaglutide) | Vial | 10mg": {
-        "url": "https://www.americanpeptides.us/products/semaglutide",
-        "price": 60.0,
+        "url": "https://www.americanpeptides.us/products/semaglutide?variant=48978865127579",
+        "price": 90.0,
         "regular_price": null,
         "error": null
       },
@@ -1432,8 +1432,8 @@
         "regular_price": null,
         "error": null
       },
-      "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
-        "url": "https://www.americanpeptides.us/products/bpc-157-tb-500",
+      "Wolverine (BPC-157/TB-500 blend) | Vial | 20mg": {
+        "url": "https://www.americanpeptides.us/products/bpc-157-tb-500?variant=48167416168603",
         "price": 195.0,
         "regular_price": null,
         "error": null
