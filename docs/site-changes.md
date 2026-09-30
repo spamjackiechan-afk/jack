@@ -24,7 +24,7 @@ The check serves the repo statically and renders it in headless Chromium. It fai
 - the reconstitution calculator doesn't return `10 units` for 5 mg / 2 mL / 0.25 mg;
 - the homepage Suppliers nav item doesn't link to `/suppliers`, or `suppliers.html` shows fewer than 8 supplier cards.
 - the embedded `DATA` / `VENDOR_CONFIG` lines don't exactly match
-  `data/catalog.json` / `vendor_config.json`.
+  `data/catalog.json` (minus any hidden vendors, see below) / `vendor_config.json`.
 - the References news markup from `testing.html` (`news-tier`, `news-item`,
   `news-type`, `peptide-chip`, `data-tone`, `tone-read`, "Looks concerning",
   "Developing") appears in `index.html` or `suppliers.html`, in the file or the
@@ -62,6 +62,18 @@ python scripts/sync_vendor_config.py --check  # what site-smoke runs
 ```
 
 site-smoke fails if either embed line differs from its JSON file.
+
+### Hiding a vendor (keeping its data)
+
+To take a vendor off the site without deleting anything (e.g. its site is
+down), add `"hidden": true` to its entry in `vendor_config.json` and run the
+sync. The generated `const DATA` line then leaves that vendor out: its
+prices and links are removed from every row, `lowest` is recomputed, and
+rows with no other vendor are dropped. `data/catalog.json`,
+`data/product_urls.json` and its `VENDORS` entry in `check_prices.py` stay as
+they are, and the price checker skips hidden vendors. The site's vendor count
+drops by one, so update the count copy as for a removal. To bring the vendor
+back, delete the flag, run the sync and update the count again.
 Do not delete the `CATEGORIES` line or the `typeof CATEGORIES` guard below
 it. (On 2026-09-26, PR #49 rewrote a line that also held `CATEGORIES` and
 blanked the homepage until PR #50.)

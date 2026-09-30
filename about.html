@@ -85,16 +85,16 @@
 
   <!--
     1) Stats strip.
-    Fallback values are a snapshot of main (2026-09-25), rounded DOWN:
-      PRODUCTS  = DATA.included.length on index.html (one row per peptide + format + size) = 196  -> "190+"
-      SUPPLIERS = unique vendor names across DATA.included[*].prices (= every vendor in vendor_config.json) = 13
-      PRICES    = sum of Object.keys(row.prices).length over DATA.included (vendor x product price cells) = 441 (2026-09-30) -> "440+"
+    Fallback values, rounded DOWN:
+      PRODUCTS  = DATA.included.length on index.html (one row per peptide + format + size) = 179 (2026-09-30) -> "170+"
+      SUPPLIERS = unique vendor names across DATA.included[*].prices (= every vendor in vendor_config.json not marked "hidden") = 12
+      PRICES    = sum of Object.keys(row.prices).length over DATA.included (vendor x product price cells) = 370 (2026-09-30) -> "370+"
     On the live site the script below recomputes all three from the same DATA the homepage uses.
   -->
   <section class="stats" aria-label="Site statistics">
-    <div class="stat"><div class="stat-num" id="statProducts">190+</div><div class="stat-label">Products</div></div>
-    <div class="stat"><div class="stat-num" id="statSuppliers">13</div><div class="stat-label">Suppliers</div></div>
-    <div class="stat"><div class="stat-num" id="statPrices">440+</div><div class="stat-label">Prices</div></div>
+    <div class="stat"><div class="stat-num" id="statProducts">170+</div><div class="stat-label">Products</div></div>
+    <div class="stat"><div class="stat-num" id="statSuppliers">12</div><div class="stat-label">Suppliers</div></div>
+    <div class="stat"><div class="stat-num" id="statPrices">370+</div><div class="stat-label">Prices</div></div>
   </section>
   <p class="stats-note" id="statsNote">Counted from the listings on our comparison page.</p>
 

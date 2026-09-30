@@ -521,6 +521,20 @@ def apply_live_overlay(included: list, results: dict) -> int:
     return touched
 
 
+def hidden_vendors(config_path: Path) -> set:
+    """Vendors marked "hidden": true in vendor_config.json. They are left off
+    the public site (see scripts/sync_vendor_config.py) and are not checked,
+    so a site that is down doesn't fill the daily log with errors. Their
+    VENDORS entry and product URLs stay so they can come back by removing the
+    flag."""
+    try:
+        cfg = json.loads(config_path.read_text())
+    except (OSError, ValueError) as e:
+        print(f"Could not read {config_path.name} ({e}); no vendors treated as hidden.")
+        return set()
+    return {v for v, c in cfg.items() if not v.startswith("_") and isinstance(c, dict) and c.get("hidden") is True}
+
+
 def main():
     catalog_path = Path(__file__).parent.parent / "data" / "product_urls.json"
     if not catalog_path.exists():
@@ -530,12 +544,15 @@ def main():
     catalog = json.loads(catalog_path.read_text())
     results = {}
     errors = []
+    hidden = hidden_vendors(Path(__file__).parent.parent / "vendor_config.json")
+    for vendor in sorted(hidden & set(VENDORS)):
+        print(f"Skipping {vendor} — hidden in vendor_config.json (not shown on the site).")
 
     # Vendors that work fine with a plain HTTP request — the fast, simple
     # path, unchanged from before.
-    fast_vendors = {v: c for v, c in VENDORS.items() if c.get("robots_allows") is True and not c.get("needs_browser")}
+    fast_vendors = {v: c for v, c in VENDORS.items() if c.get("robots_allows") is True and not c.get("needs_browser") and v not in hidden}
     # Vendors that need a real browser to get real content.
-    browser_vendors = {v: c for v, c in VENDORS.items() if c.get("robots_allows") is True and c.get("needs_browser")}
+    browser_vendors = {v: c for v, c in VENDORS.items() if c.get("robots_allows") is True and c.get("needs_browser") and v not in hidden}
 
     for vendor, cfg in {**fast_vendors}.items():
         vendor_items = catalog.get(vendor, {})
@@ -570,6 +587,8 @@ def main():
 
     # Manual sale prices (e.g. a vendor's emailed code) survive the daily run.
     apply_price_overrides(results, catalog, Path(__file__).parent.parent / "data" / "price_overrides.json")
+    for vendor in hidden:
+        results.pop(vendor, None)  # no override resurrects a hidden vendor
 
     out_path = Path(__file__).parent.parent / "data" / "live_prices.json"
     out_path.parent.mkdir(exist_ok=True)
