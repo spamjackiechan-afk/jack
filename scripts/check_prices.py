@@ -18,6 +18,7 @@ price silently shown as real data is worse.
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -76,6 +77,13 @@ VENDORS = {
         "robots_allows": True,   # confirmed: standard WooCommerce robots.txt — only blocks
                                   # /wp-admin/, wc-logs, transient files and add-to-cart query
                                   # params. /product/ pages are wide open. Affiliate partner.
+        # Alpha's SiteGround Anti-Bot blocks GitHub's ever-changing IPs. Alpha
+        # agreed (email, 2026-09-25) to allowlist a fixed IP, so their requests
+        # go through our own small fixed-IP proxy server when the
+        # ALPHA_PROXY_URL secret is set, and say who we are instead of
+        # posing as Chrome. Without the secret they go direct, as before.
+        "proxy_env": "ALPHA_PROXY_URL",
+        "identify_as_bot": True,
     },
     "Licensed Peptides": {
         "robots_checked_by": "Jackson, 2026-08-25",
@@ -126,6 +134,42 @@ HEADERS = {
     "Connection": "keep-alive",
     "Upgrade-Insecure-Requests": "1",
 }
+
+# Used instead of HEADERS for vendors that asked to recognise us (see
+# "identify_as_bot" in VENDORS), so they can spot the checker in their logs.
+BOT_HEADERS = {
+    **HEADERS,
+    "User-Agent": "Mozilla/5.0 (compatible; DiscountPeptides-PriceChecker/1.0; +https://discountspeptides.com/about)",
+}
+
+
+def vendor_request_options(cfg: dict) -> tuple[dict, dict | None]:
+    """Headers and (optional) proxy settings for one vendor."""
+    headers = BOT_HEADERS if cfg.get("identify_as_bot") else HEADERS
+    proxy_url = os.environ.get(cfg["proxy_env"], "").strip() if cfg.get("proxy_env") else ""
+    proxies = {"http": proxy_url, "https": proxy_url} if proxy_url else None
+    return headers, proxies
+
+
+BOT_CHALLENGE_ERROR = "blocked by the vendor's bot protection (captcha page) — not a page change"
+
+
+def is_bot_challenge(status: int, headers, html: str) -> bool:
+    """True when the vendor served a bot check instead of the product page.
+
+    SiteGround's Anti-Bot AI answers with HTTP 202, an "sg-captcha: challenge"
+    header and a redirect to /.well-known/sgcaptcha/. Reporting this as a
+    block (instead of "page structure may have changed") keeps the error
+    list honest about what actually went wrong.
+    """
+    head = (html or "")[:20000].lower()
+    return (
+        status == 202
+        or "sg-captcha" in {k.lower() for k in (headers or {})}
+        or "/.well-known/sgcaptcha" in head
+        or "sgcaptcha" in head
+    )
+
 
 PRICE_PATTERN = re.compile(r"\$\s?([\d,]+\.?\d*)")
 
@@ -292,9 +336,11 @@ def extract_price(html: str) -> float | None:
     return None
 
 
-def check_product(url: str) -> dict:
+def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None) -> dict:
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
+        resp = requests.get(url, headers=headers, proxies=proxies, timeout=20)
+        if is_bot_challenge(resp.status_code, resp.headers, resp.text):
+            return {"url": url, "price": None, "error": BOT_CHALLENGE_ERROR}
         resp.raise_for_status()
     except requests.RequestException as e:
         return {"url": url, "price": None, "error": str(e)}
@@ -323,6 +369,8 @@ def check_product_with_browser(url: str, browser) -> dict:
     finally:
         page.close()
 
+    if is_bot_challenge(200, {}, html):
+        return {"url": url, "price": None, "error": BOT_CHALLENGE_ERROR}
     price = extract_price(html)
     if price is None:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
@@ -347,9 +395,11 @@ def main():
 
     for vendor, cfg in {**fast_vendors}.items():
         vendor_items = catalog.get(vendor, {})
-        print(f"Checking {len(vendor_items)} {vendor} products...")
+        headers, proxies = vendor_request_options(cfg)
+        via = " via fixed-IP proxy" if proxies else ""
+        print(f"Checking {len(vendor_items)} {vendor} products{via}...")
         for item_key, url in vendor_items.items():
-            result = check_product(url)
+            result = check_product(url, headers=headers, proxies=proxies)
             results.setdefault(vendor, {})[item_key] = result
             if result["error"]:
                 errors.append(f"{vendor} — {item_key}: {result['error']}")
