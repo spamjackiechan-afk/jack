@@ -374,6 +374,9 @@ def main():
                     time.sleep(2)  # be a polite, slow crawler — no need to hammer their server
             browser.close()
 
+    # Manual sale prices (e.g. a vendor's emailed code) survive the daily run.
+    apply_price_overrides(results, catalog, Path(__file__).parent.parent / "data" / "price_overrides.json")
+
     out_path = Path(__file__).parent.parent / "data" / "live_prices.json"
     out_path.parent.mkdir(exist_ok=True)
     out_path.write_text(json.dumps({
@@ -386,6 +389,63 @@ def main():
         print(f"\n{len(errors)} items could not be verified:")
         for e in errors:
             print(f"  - {e}")
+
+
+def apply_price_overrides(results: dict, catalog: dict, overrides_path: Path, now: float | None = None) -> list:
+    """Merge data/price_overrides.json into `results` (in place).
+
+    Each entry is  {vendor: {item_key: {"price", "regular_price", "expires", "source"}}}.
+    An entry is used only if item_key exists in product_urls.json for that
+    vendor (exact match; sale prices are never worked out for other sizes),
+    price is a number, and `expires` (ISO time, e.g. 2026-10-05T04:59:00Z) is
+    still in the future. Used entries replace the checked result and carry
+    "override": true. Expired or invalid entries are skipped and logged.
+    Top-level keys starting with "_" are notes and ignored. Returns the
+    applied "vendor — item" names.
+    """
+    from datetime import datetime, timezone
+
+    if not overrides_path.exists():
+        return []
+    try:
+        overrides = json.loads(overrides_path.read_text())
+    except ValueError as e:
+        print(f"Price overrides: could not read {overrides_path.name} ({e}); none applied.")
+        return []
+    now = time.time() if now is None else now
+    applied = []
+    for vendor, items in overrides.items():
+        if vendor.startswith("_") or not isinstance(items, dict):
+            continue
+        for item_key, ov in items.items():
+            label = f"{vendor} — {item_key}"
+            url = catalog.get(vendor, {}).get(item_key)
+            if url is None:
+                print(f"Price override skipped (not in product_urls.json): {label}")
+                continue
+            try:
+                expires = datetime.strptime(ov["expires"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc).timestamp()
+            except (KeyError, TypeError, ValueError):
+                print(f"Price override skipped (missing or bad 'expires', need YYYY-MM-DDTHH:MM:SSZ): {label}")
+                continue
+            if expires <= now:
+                print(f"Price override skipped (expired {ov['expires']}): {label}")
+                continue
+            price, regular = ov.get("price"), ov.get("regular_price")
+            if not isinstance(price, (int, float)) or isinstance(price, bool) or price <= 0 or (
+                    regular is not None and (not isinstance(regular, (int, float)) or isinstance(regular, bool))):
+                print(f"Price override skipped (price / regular_price must be numbers): {label}")
+                continue
+            results.setdefault(vendor, {})[item_key] = {
+                "url": url,
+                "price": float(price),
+                "regular_price": float(regular) if regular is not None else None,
+                "error": None,
+                "override": True,
+            }
+            applied.append(label)
+            print(f"Price override applied (until {ov['expires']}): {label}")
+    return applied
 
 
 if __name__ == "__main__":
