@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-30T18:46:13Z",
+  "checked_at": "2026-09-30T23:06:23Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1272,8 +1272,8 @@
         "override": true
       },
       "BPC-157 | Vial | 10mg": {
-        "url": "https://www.americanpeptides.us/products/bpc-157",
-        "price": 60.0,
+        "url": "https://www.americanpeptides.us/products/bpc-157?variant=48140415762587",
+        "price": 80.0,
         "regular_price": null,
         "error": null
       },
@@ -1297,8 +1297,8 @@
         "error": null
       },
       "Ipamorelin | Vial | 10mg": {
-        "url": "https://www.americanpeptides.us/products/ipamorelin",
-        "price": 40.0,
+        "url": "https://www.americanpeptides.us/products/ipamorelin?variant=49007439806619",
+        "price": 60.0,
         "regular_price": null,
         "error": null
       },
@@ -1353,19 +1353,19 @@
       "Tirzepatide | Vial | 20mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide",
         "price": 80.0,
-        "regular_price": 100.0,
+        "regular_price": 170.0,
         "error": null,
         "override": true
       },
       "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 30mg": {
-        "url": "https://www.americanpeptides.us/products/tirzepatide",
-        "price": 100.0,
+        "url": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
+        "price": 240.0,
         "regular_price": null,
         "error": null
       },
       "Tirzepatide | Vial | 30mg": {
-        "url": "https://www.americanpeptides.us/products/tirzepatide",
-        "price": 100.0,
+        "url": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
+        "price": 240.0,
         "regular_price": null,
         "error": null
       },
@@ -1384,20 +1384,20 @@
         "override": true
       },
       "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
-        "url": "https://www.americanpeptides.us/products/retatrutide",
-        "price": 105.0,
+        "url": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179",
+        "price": 200.0,
         "regular_price": null,
         "error": null
       },
       "Retatrutide | Vial | 20mg": {
-        "url": "https://www.americanpeptides.us/products/retatrutide",
-        "price": 105.0,
+        "url": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179",
+        "price": 200.0,
         "regular_price": null,
         "error": null
       },
       "Retatrutide | Vial | 30mg": {
-        "url": "https://www.americanpeptides.us/products/retatrutide",
-        "price": 105.0,
+        "url": "https://www.americanpeptides.us/products/retatrutide?variant=48622112637083",
+        "price": 240.0,
         "regular_price": null,
         "error": null
       },
@@ -1414,8 +1414,8 @@
         "error": null
       },
       "MOTS-C | Vial | 40mg": {
-        "url": "https://www.americanpeptides.us/products/mots-c",
-        "price": 100.0,
+        "url": "https://www.americanpeptides.us/products/mots-c?variant=48882685116571",
+        "price": 160.0,
         "regular_price": null,
         "error": null
       },
@@ -1507,11 +1507,6 @@
         "regular_price": null,
         "error": null
       },
-      "Cagrilintide | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/cagrilintide/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/cagrilintide/"
-      },
       "Epitalon | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/epithalon/",
         "price": 39.0,
@@ -1554,37 +1549,17 @@
         "regular_price": null,
         "error": null
       },
-      "Tesamorelin | Vial | 5mg": {
-        "url": "https://offlinepeptides.com/product/tesamorelin/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/tesamorelin/"
-      },
-      "Tesamorelin | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/tesamorelin/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/tesamorelin/"
-      },
       "DSIP | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/dsip/",
         "price": 39.0,
         "regular_price": null,
         "error": null
       },
-      "FOXO4-DRI | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/foxo4-dri/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/foxo4-dri/"
-      },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://offlinepeptides.com/product/glow-blend/",
         "price": 79.0,
         "regular_price": null,
         "error": null
-      },
-      "IGF-1 LR3 | Vial | 1mg": {
-        "url": "https://offlinepeptides.com/product/igf-1lr3/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/igf-1lr3/"
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/ipamorelin/",
@@ -1616,26 +1591,11 @@
         "regular_price": null,
         "error": null
       },
-      "Melanotan I | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/melanotan-1/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/mt-1/"
-      },
-      "Melanotan II | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/melanotan-2/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/mt-2/"
-      },
       "NAD+ | Vial | 500mg": {
         "url": "https://offlinepeptides.com/product/nad/",
         "price": 51.0,
         "regular_price": null,
         "error": null
-      },
-      "PT-141 (Bremelanotide) | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/pt-141/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/pt-141/"
       },
       "Selank | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/selank/",
@@ -1649,26 +1609,11 @@
         "regular_price": null,
         "error": null
       },
-      "Sermorelin | Vial | 5mg": {
-        "url": "https://offlinepeptides.com/product/sermorelin/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/sermorelin/"
-      },
-      "SLU-PP-332 | Vial | 5mg": {
-        "url": "https://offlinepeptides.com/product/slu-pp-332/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/slu-pp-332/"
-      },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/snap-8/",
         "price": 37.0,
         "regular_price": null,
         "error": null
-      },
-      "SS-31 / Elamipretide | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/ss-31/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/ss-31/"
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/thymosin-alpha-1/",
@@ -1737,218 +1682,6 @@
         "price": 119.99,
         "regular_price": null,
         "error": null
-      }
-    },
-    "Purity Peptides": {
-      "GHK-Cu (Copper Peptide) | Nasal | 50mg": {
-        "url": "https://puritypeptides.is/product/ghk-cu-nasal-spray-50mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/ghk-cu-nasal-spray-50mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/ghk-cu-nasal-spray-50mg\", waiting until \"networkidle\"\n"
-      },
-      "NAD+ | Nasal | 500mg": {
-        "url": "https://puritypeptides.is/product/nad-nasal-spray-500mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/nad-nasal-spray-500mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/nad-nasal-spray-500mg\", waiting until \"networkidle\"\n"
-      },
-      "PT-141 (Bremelanotide) | Nasal | 10mg": {
-        "url": "https://puritypeptides.is/product/pt-141-nasal-spray-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/pt-141-nasal-spray-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/pt-141-nasal-spray-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Selank | Nasal | 10mg": {
-        "url": "https://puritypeptides.is/product/selank-nasal-spray-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/selank-nasal-spray-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/selank-nasal-spray-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Semax | Nasal | 10mg": {
-        "url": "https://puritypeptides.is/product/semax-nasal-spray-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/semax-nasal-spray-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/semax-nasal-spray-10mg\", waiting until \"networkidle\"\n"
-      },
-      "BPC-157 | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/bpc-157-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/bpc-157-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/bpc-157-10mg\", waiting until \"networkidle\"\n"
-      },
-      "DSIP | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/dsip-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/dsip-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/dsip-5mg\", waiting until \"networkidle\"\n"
-      },
-      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
-        "url": "https://puritypeptides.is/product/ghk-50mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/ghk-50mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/ghk-50mg\", waiting until \"networkidle\"\n"
-      },
-      "Glutathione | Vial | 1500mg": {
-        "url": "https://puritypeptides.is/product/glutathione-1500mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/glutathione-1500mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/glutathione-1500mg\", waiting until \"networkidle\"\n"
-      },
-      "IGF-1 LR3 | Vial | 1mg": {
-        "url": "https://puritypeptides.is/product/igf-lr-1mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/igf-lr-1mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/igf-lr-1mg\", waiting until \"networkidle\"\n"
-      },
-      "Kisspeptin | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/kisspepptin-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/kisspepptin-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/kisspepptin-5mg\", waiting until \"networkidle\"\n"
-      },
-      "MOTS-C | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/mots-c-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/mots-c-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/mots-c-10mg\", waiting until \"networkidle\"\n"
-      },
-      "MOTS-C | Vial | 20mg": {
-        "url": "https://puritypeptides.is/product/mots-c-20mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/mots-c-20mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/mots-c-20mg\", waiting until \"networkidle\"\n"
-      },
-      "NAD+ | Vial | 500mg": {
-        "url": "https://puritypeptides.is/product/nad-adjusted-ph-500mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/nad-adjusted-ph-500mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/nad-adjusted-ph-500mg\", waiting until \"networkidle\"\n"
-      },
-      "PT-141 (Bremelanotide) | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/pt-141-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/pt-141-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/pt-141-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Selank | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/selank-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/selank-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/selank-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Semax | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/semax-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/semax-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/semax-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Sermorelin | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/sermorelin-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/sermorelin-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/sermorelin-10mg\", waiting until \"networkidle\"\n"
-      },
-      "SS-31 / Elamipretide | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/ss-31-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/ss-31-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/ss-31-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Thymosin Alpha-1 | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/thymosin-alpha-1-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/thymosin-alpha-1-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/thymosin-alpha-1-10mg\", waiting until \"networkidle\"\n"
-      },
-      "AOD-9604 | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/aod-9604-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/aod-9604-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/aod-9604-5mg\", waiting until \"networkidle\"\n"
-      },
-      "BPC-157 | Nasal | 10mg": {
-        "url": "https://puritypeptides.is/product/bpc-157-nasal-spray-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/bpc-157-nasal-spray-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/bpc-157-nasal-spray-10mg\", waiting until \"networkidle\"\n"
-      },
-      "BPC-157 | Vial | 20mg": {
-        "url": "https://puritypeptides.is/product/bpc-157-20mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/bpc-157-20mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/bpc-157-20mg\", waiting until \"networkidle\"\n"
-      },
-      "BPC-157 | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/bpc-157-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/bpc-157-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/bpc-157-5mg\", waiting until \"networkidle\"\n"
-      },
-      "CJC-1295 with DAC | Vial | 2mg": {
-        "url": "https://puritypeptides.is/product/cjc-with-dac-2mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/cjc-with-dac-2mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/cjc-with-dac-2mg\", waiting until \"networkidle\"\n"
-      },
-      "CJC-1295 with DAC | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/cjc-1295-with-dac-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/cjc-1295-with-dac-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/cjc-1295-with-dac-5mg\", waiting until \"networkidle\"\n"
-      },
-      "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
-        "url": "https://puritypeptides.is/product/cjc-1295-ipamorelin-blend-5mg-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/cjc-1295-ipamorelin-blend-5mg-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/cjc-1295-ipamorelin-blend-5mg-5mg\", waiting until \"networkidle\"\n"
-      },
-      "CJC-1295 | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/cjc-1295-no-dac-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/cjc-1295-no-dac-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/cjc-1295-no-dac-10mg\", waiting until \"networkidle\"\n"
-      },
-      "CJC-1295 | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/cjc-1295-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/cjc-1295-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/cjc-1295-5mg\", waiting until \"networkidle\"\n"
-      },
-      "Dihexa | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/dihexa-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/dihexa-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/dihexa-10mg\", waiting until \"networkidle\"\n"
-      },
-      "DSIP | Nasal | 10mg": {
-        "url": "https://puritypeptides.is/product/dsip-nasal-spray-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/dsip-nasal-spray-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/dsip-nasal-spray-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Epitalon | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/epitalon-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/epitalon-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/epitalon-10mg\", waiting until \"networkidle\"\n"
-      },
-      "GHK-Cu (Copper Peptide) | Vial | 100mg": {
-        "url": "https://puritypeptides.is/product/ghk-cu-100mg-peptide",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/ghk-cu-100mg-peptide\nCall log:\n  - navigating to \"https://puritypeptides.is/product/ghk-cu-100mg-peptide\", waiting until \"networkidle\"\n"
-      },
-      "GHRP-2 | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/ghrp-2-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/ghrp-2-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/ghrp-2-5mg\", waiting until \"networkidle\"\n"
-      },
-      "Gonadorelin | Vial | 2mg": {
-        "url": "https://puritypeptides.is/product/gonadorelin-2mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/gonadorelin-2mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/gonadorelin-2mg\", waiting until \"networkidle\"\n"
-      },
-      "Ipamorelin | Vial | 10mg": {
-        "url": "https://puritypeptides.is/product/ipamorelin-10mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/ipamorelin-10mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/ipamorelin-10mg\", waiting until \"networkidle\"\n"
-      },
-      "Ipamorelin | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/ipamorelin-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/ipamorelin-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/ipamorelin-5mg\", waiting until \"networkidle\"\n"
-      },
-      "KPV | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/kpv-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/kpv-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/kpv-5mg\", waiting until \"networkidle\"\n"
-      },
-      "Sermorelin | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/sermorelin-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/sermorelin-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/sermorelin-5mg\", waiting until \"networkidle\"\n"
-      },
-      "SLU-PP-332 | Capsules | 500mcg x50 tabs": {
-        "url": "https://puritypeptides.is/product/slu-pp-332-500mcg-50-tablets",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/slu-pp-332-500mcg-50-tablets\nCall log:\n  - navigating to \"https://puritypeptides.is/product/slu-pp-332-500mcg-50-tablets\", waiting until \"networkidle\"\n"
-      },
-      "SLU-PP-332 | Capsules | 500mcg x100 tabs": {
-        "url": "https://puritypeptides.is/product/slu-pp-332-500mcg-100-tablets",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/slu-pp-332-500mcg-100-tablets\nCall log:\n  - navigating to \"https://puritypeptides.is/product/slu-pp-332-500mcg-100-tablets\", waiting until \"networkidle\"\n"
-      },
-      "Thymosin Alpha-1 | Vial | 5mg": {
-        "url": "https://puritypeptides.is/product/thymosin-alpha-1-5mg",
-        "price": null,
-        "error": "browser navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://puritypeptides.is/product/thymosin-alpha-1-5mg\nCall log:\n  - navigating to \"https://puritypeptides.is/product/thymosin-alpha-1-5mg\", waiting until \"networkidle\"\n"
       }
     }
   }
