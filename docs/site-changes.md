@@ -23,6 +23,8 @@ The check serves the repo statically and renders it in headless Chromium. It fai
 - the in-page render safety net had to kick in (`[site-guard]` console errors);
 - the reconstitution calculator doesn't return `10 units` for 5 mg / 2 mL / 0.25 mg;
 - the homepage Suppliers nav item doesn't link to `/suppliers`, or `suppliers.html` shows fewer than 8 supplier cards.
+- the embedded `DATA` / `VENDOR_CONFIG` lines don't exactly match
+  `data/catalog.json` / `vendor_config.json`.
 - the References news markup from `testing.html` (`news-tier`, `news-item`,
   `news-type`, `peptide-chip`, `data-tone`, `tone-read`, "Looks concerning",
   "Developing") appears in `index.html` or `suppliers.html`, in the file or the
@@ -41,8 +43,20 @@ python scripts/smoke_test.py
 ## Editing the embeds in index.html / suppliers.html
 
 `const DATA = …`, `const VENDOR_CONFIG = …` and `const CATEGORIES = …` are
-each on **their own line** near the top of the main `<script>`. When
-re-syncing `VENDOR_CONFIG` from `vendor_config.json`, replace only that line.
+each on **their own line** near the top of the main `<script>`.
+
+`DATA` and `VENDOR_CONFIG` are generated. Don't edit them by hand. **Edit the
+JSON, run the sync script, commit both:**
+
+- product data: `data/catalog.json` → `const DATA` in both pages
+- vendor fields: `vendor_config.json` → `const VENDOR_CONFIG` in both pages
+
+```
+python scripts/sync_vendor_config.py          # rewrites only those two lines
+python scripts/sync_vendor_config.py --check  # what site-smoke runs
+```
+
+site-smoke fails if either embed line differs from its JSON file.
 Do not delete the `CATEGORIES` line or the `typeof CATEGORIES` guard below
 it. (On 2026-09-26, PR #49 rewrote a line that also held `CATEGORIES` and
 blanked the homepage until PR #50.)

@@ -21,11 +21,17 @@ Fails on:
     index.html or suppliers.html, in the raw file or the rendered page; it
     belongs on testing.html only (see docs/references-format.md)
   * testing.html rendering fewer than MIN_REFERENCES reference items
+  * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
+    suppliers.html not exactly matching data/catalog.json / vendor_config.json
+    (scripts/sync_vendor_config.py --check)
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
 import argparse, functools, http.server, os, socketserver, sys, threading
 from playwright.sync_api import sync_playwright
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sync_vendor_config  # noqa: E402  (embed check)
 
 MIN_CARDS = 50
 MIN_VENDORS = 8
@@ -78,6 +84,11 @@ def main():
     root = os.path.abspath(args.root)
     httpd, base = serve(root)
     problems, notes = [], []
+
+    # ---- Embedded data lines must match their JSON sources
+    embed_problems = sync_vendor_config.check(root)
+    problems.extend(embed_problems)
+    notes.append("embeds: " + ("OUT OF SYNC" if embed_problems else "DATA + VENDOR_CONFIG match the JSON files"))
 
     with sync_playwright() as p:
         browser = p.chromium.launch()
