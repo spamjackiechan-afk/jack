@@ -65,10 +65,12 @@ blanked the homepage until PR #50.)
 
 `vendor_config.json` and the `VENDOR_CONFIG` embeds are public (anyone can
 view source or open `/vendor_config.json`), so they hold only the fields the
-site code reads: status, links, promo code, payment, shipping and testing
-fields. Internal notes (`commission`, `cookie_days`, `guidelines_notes`,
-`last_checked`, `testing_tier`, `_readme`, `_field_guide`) live in a private
-`vendor_notes.json` kept outside this repo. Jackson decides where it is stored.
+site code reads: status, links, promo code, payment and shipping fields.
+Internal notes (`commission`, `cookie_days`, `guidelines_notes`,
+`last_checked`, `testing_tier`, `_readme`, `_field_guide`) and the vendor
+testing fields (`testing_methods`, `testing_lab`, `testing_standard`,
+`testing_note`, `testing_researched`; no visible page shows them) live in a
+private `vendor_notes.json` kept outside this repo. Jackson decides where it is stored.
 Never add them back here. `private/` is git-ignored as a safety net.
 
 To change a public field, edit `vendor_config.json`, then run:
