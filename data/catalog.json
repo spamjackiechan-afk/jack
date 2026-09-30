@@ -456,7 +456,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/bpc-157",
         "Alpha Peptides": "https://alpha-peptides.com/product/bpc-157/",
         "Midwest Peptide": "https://midwestpeptide.com/products/bpc-157-10mg",
-        "American Peptides": "https://www.americanpeptides.us/products/bpc-157",
+        "American Peptides": "https://www.americanpeptides.us/products/bpc-157?variant=48140415762587",
         "Offline Peptides": "https://offlinepeptides.com/product/bpc-157/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/bpc-15710mg/"
       },
@@ -850,7 +850,7 @@
       "notes": null,
       "category": "Cellular & Longevity",
       "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/mots-c",
+        "American Peptides": "https://www.americanpeptides.us/products/mots-c?variant=48882685116571",
         "Offline Peptides": "https://offlinepeptides.com/product/mots-c/"
       }
     },
@@ -1386,7 +1386,7 @@
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ipamorelin/",
-        "American Peptides": "https://www.americanpeptides.us/products/ipamorelin",
+        "American Peptides": "https://www.americanpeptides.us/products/ipamorelin?variant=49007439806619",
         "Offline Peptides": "https://offlinepeptides.com/product/ipamorelin/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/ipa-10mg/"
       }
@@ -2651,7 +2651,7 @@
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179"
       }
     },
     {
@@ -2842,7 +2842,7 @@
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179"
       }
     },
     {
@@ -2860,7 +2860,7 @@
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
+        "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48622112637083"
       }
     },
     {
@@ -3158,7 +3158,7 @@
       "notes": null,
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-2-tz",
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515"
       },
       "category": "Metabolic & Weight"
     },
@@ -3175,7 +3175,7 @@
       "notes": null,
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-2-tz",
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515"
       },
       "category": "Metabolic & Weight"
     },
