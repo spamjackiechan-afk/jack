@@ -395,7 +395,10 @@ async function submitReview(btn){
     const res = await fetch('/api/submit-review', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ vendor, rating, reviewer_name, peptide_ordered, review_text }),
+      // website = hidden honeypot (people never see it); form_ms = time since the form appeared.
+      body: JSON.stringify({ vendor, rating, reviewer_name, peptide_ordered, review_text,
+        website: form.querySelector('.review-website-input')?.value || '',
+        form_ms: Date.now() - Number(form.dataset.rendered || 0) }),
     });
     if (res.ok){
       statusEl.textContent = 'Thanks — your review is pending approval and will appear once reviewed.';
@@ -577,7 +580,8 @@ function supplierCardHtml(name){
       <div class="row-body">
         <div class="reviews-title">${avg ? `${avg.toFixed(1)} from ${vendorReviews.length} review${vendorReviews.length === 1 ? '' : 's'}` : 'No reviews yet'}</div>
         ${reviewsList}
-        <div class="review-form">
+        <div class="review-form" data-rendered="${Date.now()}">
+          <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;"><input type="text" name="website" class="review-website-input" tabindex="-1" autocomplete="off"></div>
           <div style="font-size:12.5px; color:var(--ink-soft);">Ordered from ${safe}? Tell people how it went — shipping, packaging, communication, whether it matched the listing. Please don't describe personal use or results.</div>
           <label>Your rating</label>
           <div class="star-picker" data-vendor="${safe}" data-rating="0">

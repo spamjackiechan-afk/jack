@@ -4,11 +4,16 @@
 // language retained as evidence. Numbers gathered without that are unusable
 // for marketing later, so there is no value in collecting them "for now".
 //
-// Reuses the CLICK_COUNTS KV namespace under a "subscribers" key, same as
-// the reviews system — no additional binding needed.
+// Reuses the CLICK_COUNTS KV namespace, same as the reviews system — no
+// additional binding needed. Each subscriber is its own key (sub:<email>);
+// older sign-ups may still sit in the single "subscribers" blob, which is
+// read as a fallback (functions/_lib/records.js).
+
+import { readSubscriber, putSubscriber, looksAutomated, underRateLimit, clientIp, GENERIC_ERROR } from "../_lib/records.js";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const MAX_FAVOURITES = 200;
+const MAX_SIGNUPS_PER_IP_PER_HOUR = 5;
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -19,6 +24,9 @@ export async function onRequestPost(context) {
   } catch {
     return json({ error: "Invalid request" }, 400);
   }
+
+  // Honeypot filled in, or sent too fast after the form appeared.
+  if (looksAutomated(body)) return json({ error: GENERIC_ERROR }, 400);
 
   const email = String(body.email || "").trim().toLowerCase();
   if (!email || email.length > 254 || !EMAIL_RE.test(email)) {
@@ -35,11 +43,12 @@ export async function onRequestPost(context) {
   const wantsAlerts = body.wants_alerts !== false;
 
   try {
-    const raw = await env.CLICK_COUNTS.get("subscribers");
-    const subs = raw ? JSON.parse(raw) : {};
+    if (!(await underRateLimit(env.CLICK_COUNTS, "rl:sub:" + clientIp(request), MAX_SIGNUPS_PER_IP_PER_HOUR, 3600))) {
+      return json({ error: "Too many sign-ups from this connection — please try again later." }, 429);
+    }
 
-    const existing = subs[email];
-    subs[email] = {
+    const existing = await readSubscriber(env.CLICK_COUNTS, email);
+    await putSubscriber(env.CLICK_COUNTS, {
       email,
       favourites,
       wants_deals: wantsDeals,
@@ -50,31 +59,55 @@ export async function onRequestPost(context) {
       updated_at: new Date().toISOString(),
       source: String(body.source || "site").slice(0, 60),
       unsubscribed: false,
-    };
-
-    await env.CLICK_COUNTS.put("subscribers", JSON.stringify(subs));
+      // Secret per-subscriber token; unsubscribe links must carry it.
+      // Kept when an existing subscriber signs up again, so old links still work.
+      unsubscribe_token: existing?.unsubscribe_token || crypto.randomUUID(),
+    });
     return json({ ok: true, returning: Boolean(existing) });
   } catch (e) {
     return json({ error: "Could not save — please try again" }, 500);
   }
 }
 
-// Unsubscribe by email. CAN-SPAM requires a working opt-out honoured within
-// 10 days; this handles it immediately. Kept as a GET so it can be reached
-// straight from a link in an email without any JavaScript.
+// Unsubscribe: /api/subscribe?unsubscribe=<email>&token=<unsubscribe_token>.
+// CAN-SPAM requires a working opt-out honoured within 10 days; this handles
+// it immediately. Kept as a GET so it can be reached straight from a link in
+// an email without any JavaScript. The token stops anyone unsubscribing
+// someone else's address.
+//
+// Emails sent before tokens existed link to /api/subscribe?unsubscribe=<email>
+// with no token, and CAN-SPAM requires an opt-out link to keep working for at
+// least 30 days after each email is sent. So while ALLOW_EMAIL_ONLY_UNSUBSCRIBE
+// is true, a link with no token (or a wrong one) still unsubscribes the address,
+// exactly as before. Only set it to false once every email that went out with
+// the old email-only link is more than 30 days old, and every new email uses
+// the token link.
+const ALLOW_EMAIL_ONLY_UNSUBSCRIBE = true;
+
 export async function onRequestGet(context) {
   const { request, env } = context;
-  const email = new URL(request.url).searchParams.get("unsubscribe");
+  const params = new URL(request.url).searchParams;
+  const email = params.get("unsubscribe");
+  const token = params.get("token") || "";
   if (!email) return json({ error: "No email supplied" }, 400);
 
   try {
-    const raw = await env.CLICK_COUNTS.get("subscribers");
-    const subs = raw ? JSON.parse(raw) : {};
     const key = email.trim().toLowerCase();
-    if (subs[key]) {
-      subs[key].unsubscribed = true;
-      subs[key].unsubscribed_at = new Date().toISOString();
-      await env.CLICK_COUNTS.put("subscribers", JSON.stringify(subs));
+    const sub = await readSubscriber(env.CLICK_COUNTS, key);
+    const tokenOk = Boolean(sub && sub.unsubscribe_token && token && sameString(token, sub.unsubscribe_token));
+    if (!tokenOk && !ALLOW_EMAIL_ONLY_UNSUBSCRIBE) {
+      // A missing token, a wrong token and an unknown address all get the same
+      // reply, so the page doesn't reveal who is on the list.
+      return new Response(
+        "<html><body style='background:#0E1211;color:#F2F3F1;font-family:sans-serif;padding:60px;text-align:center'>" +
+        "<h1 style='font-weight:500'>This unsubscribe link isn't valid.</h1>" +
+        "<p style='color:#8A9490'>Please use the unsubscribe link in your most recent email from Discount Peptides.</p>" +
+        "<p><a href='/' style='color:#3ED9A6'>Back to the site</a></p></body></html>",
+        { status: 400, headers: { "Content-Type": "text/html" } }
+      );
+    }
+    if (sub && !sub.unsubscribed) {
+      await putSubscriber(env.CLICK_COUNTS, { ...sub, email: key, unsubscribed: true, unsubscribed_at: new Date().toISOString() });
     }
     // Always report success — confirming whether an address is on the list
     // would leak membership to anyone who guesses.
@@ -88,6 +121,13 @@ export async function onRequestGet(context) {
   } catch (e) {
     return json({ error: "Could not process" }, 500);
   }
+}
+
+function sameString(a, b) {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return diff === 0;
 }
 
 function json(obj, status) {

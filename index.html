@@ -1115,6 +1115,7 @@
       </ul>
       <div class="signup-row">
         <input type="email" id="modalEmail" placeholder="you@example.com" autocomplete="email">
+        <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;"><input type="text" id="modalWebsite" name="website" tabindex="-1" autocomplete="off"></div>
         <button type="button" id="modalBtn" onclick="submitSignup('modal')">Notify me</button>
       </div>
       <div class="signup-consent">
@@ -1138,6 +1139,7 @@
     <p>Press the star on all peptides you want saved. We ask for your email so you get notified on prices changes, speical deals, discounts and vendors on your saved peptides.</p>
     <div class="signup-row">
       <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
+      <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;"><input type="text" id="signupWebsite" name="website" tabindex="-1" autocomplete="off"></div>
       <button type="button" id="signupBtn" onclick="submitSignup()">Notify me</button>
     </div>
     <div class="signup-consent">
@@ -2307,7 +2309,8 @@ function supplierCardHtml(name){
     <div id="${reviewsId}" style="display:none; margin-top:6px; padding-top:6px; border-top:1px dashed var(--rule);">
       ${summaryLine}
       ${reviewsList}
-      <div class="review-form">
+      <div class="review-form" data-rendered="${Date.now()}">
+        <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;"><input type="text" name="website" class="review-website-input" tabindex="-1" autocomplete="off"></div>
         <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-bottom:2px;">Ordered from ${name}? Leave a review about your experience as a customer — shipping, packaging, communication, whether the product matched what was described. This isn't the place to discuss usage.</div>
         <label>Your rating</label>
         <div class="star-picker" data-vendor="${escapeHtml(name)}" data-rating="0">
@@ -2372,7 +2375,10 @@ async function submitReview(btn){
     const res = await fetch('/api/submit-review', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ vendor, rating, reviewer_name, peptide_ordered, review_text }),
+      // website = hidden honeypot (people never see it); form_ms = time since the form appeared.
+      body: JSON.stringify({ vendor, rating, reviewer_name, peptide_ordered, review_text,
+        website: form.querySelector('.review-website-input')?.value || '',
+        form_ms: Date.now() - Number(form.dataset.rendered || 0) }),
     });
     if (res.ok){
       statusEl.textContent = 'Thanks — your review is pending approval and will appear once reviewed.';
@@ -2574,9 +2580,12 @@ function updateFavCount(){
 // One submit path shared by the inline band and the first-visit modal;
 // `where` selects which set of elements to read and write.
 const SIGNUP_TARGETS = {
-  band:  { input: 'signupEmail', btn: 'signupBtn', msg: 'signupMsg',  source: 'homepage-band' },
-  modal: { input: 'modalEmail',  btn: 'modalBtn',  msg: 'modalMsg',   source: 'first-visit-modal' },
+  band:  { input: 'signupEmail', btn: 'signupBtn', msg: 'signupMsg',  source: 'homepage-band',     hp: 'signupWebsite' },
+  modal: { input: 'modalEmail',  btn: 'modalBtn',  msg: 'modalMsg',   source: 'first-visit-modal', hp: 'modalWebsite' },
 };
+// Both signup forms are in the page from the start; the server rejects
+// sign-ups sent less than 3 seconds after this.
+const SIGNUP_RENDERED_AT = Date.now();
 
 async function submitSignup(where = 'band'){
   const t = SIGNUP_TARGETS[where] || SIGNUP_TARGETS.band;
@@ -2599,7 +2608,9 @@ async function submitSignup(where = 'band'){
     const res = await fetch('/api/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, favourites: getFavourites(), source: t.source }),
+      // website = hidden honeypot (people never see it); form_ms = time since the form appeared.
+      body: JSON.stringify({ email, favourites: getFavourites(), source: t.source,
+        website: document.getElementById(t.hp)?.value || '', form_ms: Date.now() - SIGNUP_RENDERED_AT }),
     });
     if (res.ok){
       const data = await res.json().catch(() => ({}));

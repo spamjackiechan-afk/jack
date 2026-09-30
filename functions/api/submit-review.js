@@ -6,13 +6,17 @@
 //
 // Requires the same KV namespace already bound for click tracking
 // (CLICK_COUNTS), reusing it with a different key prefix rather than
-// requiring a second namespace.
+// requiring a second namespace. Each review is its own key (review:<id>);
+// see functions/_lib/records.js.
+
+import { putReview, looksAutomated, underRateLimit, clientIp, GENERIC_ERROR } from "../_lib/records.js";
 
 const MAX_NAME_LEN = 60;
 const MAX_PEPTIDE_LEN = 80;
 const MAX_REVIEW_LEN = 2000;
 const MIN_REVIEW_LEN = 10;
 const URL_PATTERN = /https?:\/\/|www\./i;
+const MAX_REVIEWS_PER_IP_PER_HOUR = 3;
 
 function sanitize(str) {
   return String(str || "").trim().slice(0, 5000);
@@ -26,6 +30,11 @@ export async function onRequestPost(context) {
     body = await request.json();
   } catch {
     return new Response(JSON.stringify({ error: "Invalid JSON" }), { status: 400 });
+  }
+
+  // Honeypot filled in, or sent too fast after the form appeared.
+  if (looksAutomated(body)) {
+    return new Response(JSON.stringify({ error: GENERIC_ERROR }), { status: 400 });
   }
 
   const vendor = sanitize(body.vendor);
@@ -56,6 +65,10 @@ export async function onRequestPost(context) {
     return new Response(JSON.stringify({ error: "Links are not allowed in reviews" }), { status: 400 });
   }
 
+  if (!(await underRateLimit(env.CLICK_COUNTS, "rl:review:" + clientIp(request), MAX_REVIEWS_PER_IP_PER_HOUR, 3600))) {
+    return new Response(JSON.stringify({ error: "Too many reviews from this connection — please try again later." }), { status: 429 });
+  }
+
   const id = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
   const review = {
     id,
@@ -69,10 +82,7 @@ export async function onRequestPost(context) {
   };
 
   try {
-    const raw = await env.CLICK_COUNTS.get("reviews");
-    const reviews = raw ? JSON.parse(raw) : [];
-    reviews.push(review);
-    await env.CLICK_COUNTS.put("reviews", JSON.stringify(reviews));
+    await putReview(env.CLICK_COUNTS, review);
   } catch (e) {
     return new Response(JSON.stringify({ error: "Storage error" }), { status: 500 });
   }

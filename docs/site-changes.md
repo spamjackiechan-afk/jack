@@ -109,6 +109,51 @@ only: no homepage teaser, and site-smoke fails if its markup shows up on
 `index.html` or `suppliers.html`. Tone labels and a "Live" tier are reserved in
 the data but deliberately not rendered until a lawyer has reviewed the wording.
 
+## Reviews, subscribers and clicks in KV
+
+The API functions store **one KV key per record** in `CLICK_COUNTS`:
+`review:<id>`, `sub:<email>` and `click:<peptide>|||<vendor>` (helpers in
+`functions/_lib/records.js`). The old single blobs (`reviews`, `subscribers`,
+`counts`) are still read and merged, so older data keeps showing, and they are
+never deleted by code. `POST /api/admin-migrate` (admin login; `?dry_run=1`
+to preview, writes nothing) copies the blobs into per-record keys. Only run it
+when Jackson says so. Deleting the old blobs afterwards is his decision.
+
+The migration works in batches of at most 800 KV operations per request
+(Cloudflare allows 1,000). A response with `"complete": false` includes
+`next_cursor`: run it again with `?cursor=<next_cursor>` to continue. Running
+it again without a cursor is safe (done records are skipped) but re-checks
+from the start. Each click counter is marked done in the same write that adds
+its old count, so a re-run can't count it twice. The free plan allows 1,000 KV
+writes a day for everything (clicks and sign-ups too): check
+`writes_this_run` / the dry run's `estimated_writes`, and if needed, spread
+the batches over several days. A run that hits the limit stops with an error
+and a `next_cursor` to continue from the next day.
+
+`/api/get-reviews` reads one key, `reviews:approved_snapshot`, and makes no
+list requests. Approving or rejecting a review on the admin page, and the
+migration's last step, rewrite that key. Until it exists, and on any error,
+get-reviews serves the approved reviews from the old `reviews` blob.
+`/api/get-clicks` still lists `click:*` keys (free plan: 1,000 list requests
+a day). Both are cached for 5 minutes per Cloudflare data centre (Cache API),
+so new approvals and clicks can take up to 5 minutes to show. If get-clicks
+can't list, it returns the old `counts` blob instead (still 200) and logs the
+error. The admin page reads KV directly.
+
+New unsubscribe links should include the subscriber's token:
+`/api/subscribe?unsubscribe=<email>&token=<unsubscribe_token>`. The token is in
+each `sub:<email>` record, and the migration adds one for older subscribers.
+Old email-only links (`?unsubscribe=<email>`, no token) keep working while
+`ALLOW_EMAIL_ONLY_UNSUBSCRIBE` in `functions/api/subscribe.js` is `true`:
+CAN-SPAM requires an opt-out link to keep working for at least 30 days after
+each email is sent. Only switch it off once every email that went out with an
+email-only link is more than 30 days old.
+
+The review and email forms carry a hidden `website` honeypot field and the time
+since the form appeared (`form_ms`). The server rejects honeypot-filled
+submissions and anything sent within 3 seconds, and limits each IP to 3 reviews
+and 5 sign-ups per hour (`rl:review:<ip>`, `rl:sub:<ip>`).
+
 ## Manual sale prices (price overrides)
 
 The daily price run rewrites `data/live_prices.json` from scratch. To keep a
