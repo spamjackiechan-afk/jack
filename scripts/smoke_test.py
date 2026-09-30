@@ -28,6 +28,12 @@ Fails on:
   * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
     suppliers.html not exactly matching data/catalog.json / vendor_config.json
     (scripts/sync_vendor_config.py --check)
+  * Google Analytics (ga-consent.js): a public page (index, about, suppliers,
+    testing, privacy) not loading it; admin-reviews.html or functions/ loading
+    it; the Measurement ID appearing in any file other than ga-consent.js;
+    privacy.html missing or not in sitemap.xml; on a first visit, the cookie
+    banner not showing or any request going to Google's analytics hosts
+    before Accept (also checked after Decline)
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
@@ -45,6 +51,75 @@ MIN_REFERENCES = 20
 # appear on the homepage or the suppliers page.
 NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
                 "data-tone", "tone-read", "Looks concerning", "Developing"]
+# Google Analytics. The ID is split here so this file doesn't count as a
+# second copy of it; it may appear only in ga-consent.js.
+GA_FILE = "ga-consent.js"
+GA_ID = "G-" + "CYYYPQ5ZDX"
+GA_PAGES = ["index.html", "about.html", "suppliers.html", "testing.html", "privacy.html"]
+GA_HOSTS = ("googletagmanager.com", "google-analytics.com")
+
+
+def check_ga_static(root, problems, notes):
+    tag = f'src="/{GA_FILE}"'
+    for f in GA_PAGES:
+        path = os.path.join(root, f)
+        if not os.path.exists(path):
+            problems.append(f"{f}: missing")
+        elif tag not in open(path, encoding="utf-8").read():
+            problems.append(f"{f}: does not load /{GA_FILE}")
+    if GA_FILE in open(os.path.join(root, "admin-reviews.html"), encoding="utf-8").read():
+        problems.append(f"admin-reviews.html: must not load {GA_FILE}")
+    holders = []
+    for dirpath, dirnames, filenames in os.walk(root):
+        dirnames[:] = [d for d in dirnames if d not in (".git", "node_modules", "__pycache__")]
+        for name in filenames:
+            path = os.path.join(dirpath, name)
+            rel = os.path.relpath(path, root)
+            try:
+                data = open(path, "rb").read()
+            except OSError:
+                continue
+            if rel.startswith("functions" + os.sep) and (GA_FILE.encode() in data or b"googletagmanager" in data):
+                problems.append(f"{rel}: functions/ must not load Google Analytics")
+            if GA_ID.encode() in data:
+                holders.append(rel)
+    if holders != [GA_FILE]:
+        problems.append(f"Measurement ID must appear only in {GA_FILE}; found in: {sorted(holders) or 'nowhere'}")
+    sitemap = open(os.path.join(root, "sitemap.xml"), encoding="utf-8").read()
+    if "<loc>https://discountspeptides.com/privacy</loc>" not in sitemap:
+        problems.append("sitemap.xml: /privacy is missing")
+    notes.append(f"GA: {GA_FILE} on {len(GA_PAGES)} public pages, ID only in {', '.join(holders)}")
+
+
+def check_ga_first_visit(browser, base, problems, notes):
+    # Fresh browser profile: no saved choice, so the banner must show and
+    # nothing may be requested from Google until Accept.
+    ctx = browser.new_context(viewport={"width": 375, "height": 812})
+    page = ctx.new_page()
+    page.set_default_timeout(8000)
+    google = []
+    page.on("request", lambda r: google.append(r.url) if any(h in r.url for h in GA_HOSTS) else None)
+    page.on("pageerror", lambda e: problems.append(f"GA first visit: uncaught JS error: {e}"))
+    try:
+        page.goto(base + "/index.html", wait_until="load", timeout=60000)
+        page.wait_for_timeout(1500)
+        if not page.is_visible("#dp-consent"):
+            problems.append("GA first visit: cookie banner not shown")
+        else:
+            page.click("#dp-consent [data-dp-choice='denied']")
+            page.wait_for_timeout(300)
+            if page.is_visible("#dp-consent"):
+                problems.append("GA: Decline did not hide the banner")
+            page.reload(wait_until="load")
+            page.wait_for_timeout(1000)
+            if page.is_visible("#dp-consent"):
+                problems.append("GA: banner came back after Decline + reload")
+    except Exception as e:
+        problems.append(f"GA first visit: could not exercise the banner: {str(e).splitlines()[0]}")
+    if google:
+        problems.append(f"GA: requests to Google before Accept: {google[:3]}")
+    notes.append(f"GA first visit: banner + Decline checked, {len(google)} Google analytics requests")
+    ctx.close()
 
 
 def check_no_news(page, root, filename, problems):
@@ -105,8 +180,10 @@ def serve(root):
 def open_page(browser, url, problems, label):
     page = browser.new_page(viewport={"width": 1366, "height": 900})
     page.set_default_timeout(8000)
-    # Pre-dismiss the timed signup modal so it can't cover what we click.
-    page.add_init_script("try{localStorage.setItem('dp_modal_seen','dismissed')}catch(e){}")
+    # Pre-dismiss the timed signup modal and the cookie banner (as declined,
+    # so nothing loads from Google) so neither can cover what we click.
+    page.add_init_script("try{localStorage.setItem('dp_modal_seen','dismissed');"
+                         "localStorage.setItem('dp_consent','denied')}catch(e){}")
     page.on("pageerror", lambda e: problems.append(f"{label}: uncaught JS error: {e}"))
     page.on("console", lambda m: problems.append(f"{label}: {m.text}")
             if m.type == "error" and "[site-guard]" in m.text else None)
@@ -222,6 +299,12 @@ def main():
         if refs < MIN_REFERENCES:
             problems.append(f"testing.html: only {refs} reference items (min {MIN_REFERENCES})")
         page.close()
+
+        # ---- Google Analytics: consent-first banner, privacy page
+        check_ga_static(root, problems, notes)
+        page = open_page(browser, base + "/privacy.html", problems, "privacy.html")
+        page.close()
+        check_ga_first_visit(browser, base, problems, notes)
         browser.close()
     httpd.shutdown()
 

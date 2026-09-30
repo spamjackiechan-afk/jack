@@ -66,6 +66,7 @@
   .copy-btn.copied{background:var(--sage);}
 
   .ruo{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--amber); margin-top:56px; padding-top:24px; border-top:1px solid var(--rule);}
+  .dp-foot-links{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-top:14px;}
 
   @media (max-width:720px){
     .stats, .steps{grid-template-columns:1fr;}
@@ -150,6 +151,7 @@
   </div>
 
   <p class="ruo">Research use only &mdash; nothing on this site is intended for human or animal consumption.</p>
+  <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a></p>
 </div>
 
 <script>
@@ -205,5 +207,6 @@
     .catch(function(err){ console.warn('About stats: using snapshot values.', err); });
 })();
 </script>
+<script src="/ga-consent.js" defer></script>
 </body>
 </html>

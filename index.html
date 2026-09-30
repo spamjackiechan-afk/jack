@@ -828,6 +828,7 @@
     line-height:1.7;
   }
   footer strong{color:var(--ink);}
+  .dp-foot-links a{color:inherit;}
   .calc-field{margin-bottom:20px;}
   .calc-label{
     display:block;
@@ -1111,12 +1112,13 @@
     <div id="excludedCategories"></div>
   </div>
 
-  <footer>
+  <footer id="disclosures">
     <p><strong>About the codes —</strong> promo codes shown on this page (like <strong>DISCOUNT</strong>) give you a discount at checkout, and also let the vendor know the order came through this site — which is how this site earns a commission on it, at no extra cost to you. Using a code isn't required to buy, but it's appreciated if this page helped you compare.</p>
     <p><strong>Research use only —</strong> all products referenced on this page are supplied by third-party vendors for laboratory and research use only. They are not for human or animal consumption, and nothing here is a recommendation, dosing protocol, or endorsement of use.</p>
     <p><strong>Affiliate disclosure —</strong> this page will contain affiliate links. When a listed vendor's product page is visited through a link here, this site may earn a commission on a resulting sale, at no added cost to the buyer. Vendor inclusion does not imply endorsement of a product's safety, legality, or efficacy.</p>
     <p><strong>Not medical advice —</strong> pricing and evidence notes are for research reference and comparison only. Peptides listed here are, in most cases, not FDA-approved, and evidence quality varies widely by compound — see the note on each listing before assuming a claim is well-supported.</p>
     <p>Vendor prices are checked against original spreadsheet data, cross-referenced with each vendor's live site, and — for vendors with an automated daily price check — confirmed against a live, scheduled read of their actual product pages (see the "● LIVE" tag on those listings).</p>
+    <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a></p>
   </footer>
 
   <div class="contact-block">
@@ -1964,6 +1966,13 @@ function trackClick(vendor, peptide){
       keepalive: true,
     }).catch(() => {});
   } catch (err) { /* silent — tracking should never break the site */ }
+  // Google Analytics event, only if the visitor accepted analytics
+  // (dp_ga_loaded is set by ga-consent.js). Vendor + peptide names only.
+  try {
+    if (typeof window.gtag === 'function' && window.dp_ga_loaded) {
+      gtag('event', 'affiliate_click', { vendor_name: vendor, peptide_name: peptide });
+    }
+  } catch (err) { /* silent — analytics must never stop the link opening */ }
 }
 
 function isPopularChoice(peptide, vendor){
@@ -2541,5 +2550,6 @@ updateHeroStats();
 })();
 </script>
 <script src="/site-guide-widget.js" defer></script>
+<script src="/ga-consent.js" defer></script>
 </body>
 </html>
