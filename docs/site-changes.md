@@ -67,7 +67,7 @@ blanked the homepage until PR #50.)
 view source or open `/vendor_config.json`), so they hold only the fields the
 site code reads: status, links, promo code, payment, shipping and testing
 fields. Internal notes (`commission`, `cookie_days`, `guidelines_notes`,
-`last_checked`, `_readme`, `_field_guide`) live in a private
+`last_checked`, `testing_tier`, `_readme`, `_field_guide`) live in a private
 `vendor_notes.json` kept outside this repo. Jackson decides where it is stored.
 Never add them back here. `private/` is git-ignored as a safety net.
 
