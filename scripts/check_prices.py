@@ -377,6 +377,61 @@ def check_product_with_browser(url: str, browser) -> dict:
     return {"url": url, "price": price, "regular_price": extract_regular_price(html, price), "error": None}
 
 
+def apply_live_overlay(included: list, results: dict) -> int:
+    """Reference implementation of how the homepage applies live_prices.json
+    (index.html applyLiveOverlay — keep the two in step). Mutates `included`
+    (the DATA.included list) in place and returns how many vendor prices it
+    touched.
+
+    * numeric price, vendor already on the row -> price updated, `lowest`
+      recomputed. Offline Peptides never gets an onSale mark (standing rule).
+    * price None (404, no confident parse, network error) -> that vendor is
+      REMOVED from the row (prices, vendor_product_urls, onSale, liveVerified)
+      and `lowest` recomputed; a row left with no vendors is dropped. Before
+      this change a null was skipped, so the stale embedded price stayed up.
+    * vendor not already on the row -> ignored (freshness overlay, not catalog).
+    * safety: if every result for a vendor is None (site down / run blocked),
+      nothing is cleared for that vendor.
+    """
+    touched = 0
+    for vendor, items in (results or {}).items():
+        vals = list((items or {}).values())
+        unreachable = bool(vals) and all(r is None or r.get("price") is None for r in vals)
+        for item_key, result in (items or {}).items():
+            if result is None:
+                continue
+            price = result.get("price")
+            if price is None and unreachable:
+                continue
+            parts = item_key.split(" | ")
+            if len(parts) != 3:
+                continue
+            peptide, fmt, size = parts
+            match = next((i for i in included if i.get("peptide") == peptide
+                          and i.get("format") == fmt and i.get("size") == size), None)
+            if match is None or vendor not in match.get("prices", {}):
+                continue
+            if price is None:
+                match["prices"].pop(vendor, None)
+                for field in ("vendor_product_urls", "onSale", "liveVerified"):
+                    if isinstance(match.get(field), dict):
+                        match[field].pop(vendor, None)
+                if match["prices"]:
+                    match["lowest"] = min(match["prices"].values())
+                else:
+                    included.remove(match)
+                touched += 1
+                continue
+            match["prices"][vendor] = price
+            match.setdefault("liveVerified", {})[vendor] = True
+            match["lowest"] = min(match["prices"].values())
+            regular = result.get("regular_price")
+            if vendor != "Offline Peptides" and regular and regular > price:
+                match.setdefault("onSale", {})[vendor] = regular
+            touched += 1
+    return touched
+
+
 def main():
     catalog_path = Path(__file__).parent.parent / "data" / "product_urls.json"
     if not catalog_path.exists():
