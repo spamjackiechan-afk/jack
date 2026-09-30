@@ -15,9 +15,9 @@
     },
     "Tirzepatide | Vial | 20mg": {
       "price": 80,
-      "regular_price": 100,
+      "regular_price": 170,
       "expires": "2026-10-05T04:59:00Z",
-      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29; regular price corrected 2026-09-30 to the 20mg list price from the vendor site (was the 10mg price)"
     },
     "Retatrutide | Vial | 10mg": {
       "price": 84,
