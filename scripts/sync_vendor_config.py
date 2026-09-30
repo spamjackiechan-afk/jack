@@ -4,7 +4,7 @@
 vendor_config.json is public (it is served at /vendor_config.json and embedded
 in index.html and suppliers.html), so it must hold only the fields the site
 code reads. Internal notes (commission, cookie length, programme terms,
-guidelines_notes, last_checked, _readme, _field_guide) live in the private
+guidelines_notes, last_checked, testing_tier, _readme, _field_guide) live in the private
 vendor notes file, not in this repo. See docs/site-changes.md.
 
 What this does:
@@ -34,9 +34,6 @@ PUBLIC_FIELDS = [
     "affiliate_path_suffix", "promo_code", "payment_methods", "payment_note",
     "shipping_info", "shipping_payment_researched", "testing_methods",
     "testing_lab", "testing_standard", "testing_note", "testing_researched",
-    # Not read by any site code today. Kept public until Jackson decides
-    # whether it stays (it is a quality rating, not a secret).
-    "testing_tier",
 ]
 
 
