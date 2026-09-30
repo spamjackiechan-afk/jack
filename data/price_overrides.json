@@ -1,0 +1,47 @@
+{
+  "_readme": "Manual sale prices that survive the daily price run (scripts/check_prices.py). Format: {\"<vendor>\": {\"<exact item key from data/product_urls.json>\": {\"price\": 80, \"regular_price\": 100, \"expires\": \"2026-10-05T04:59:00Z\", \"source\": \"vendor email 2026-09-28, code FALL20\"}}}. Only listed sizes get the sale price; entries are skipped once 'expires' (UTC) has passed. Jackson confirms every entry from the vendor's email before it is added.",
+  "American Peptides": {
+    "BPC-157 | Vial | 5mg": {
+      "price": 48,
+      "regular_price": 60,
+      "expires": "2026-10-05T04:59:00Z",
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+    },
+    "TB-500 | Vial | 10mg": {
+      "price": 80,
+      "regular_price": 100,
+      "expires": "2026-10-05T04:59:00Z",
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+    },
+    "Tirzepatide | Vial | 20mg": {
+      "price": 80,
+      "regular_price": 100,
+      "expires": "2026-10-05T04:59:00Z",
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+    },
+    "Retatrutide | Vial | 10mg": {
+      "price": 84,
+      "regular_price": 105,
+      "expires": "2026-10-05T04:59:00Z",
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+    },
+    "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
+      "price": 84,
+      "regular_price": 105,
+      "expires": "2026-10-05T04:59:00Z",
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+    },
+    "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
+      "price": 120,
+      "regular_price": 150,
+      "expires": "2026-10-05T04:59:00Z",
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+    },
+    "GHK-Cu (Copper Peptide) | Vial | 50mg": {
+      "price": 40,
+      "regular_price": 50,
+      "expires": "2026-10-05T04:59:00Z",
+      "source": "American FALL20 email 2026-09-28 (shipping@americanpeptides.us); approved by Jackson 2026-09-29"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-29T15:34:15Z",
+  "checked_at": "2026-09-30T05:16:39Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -643,242 +643,242 @@
       "AOD-9604 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/aod-9604/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/aod-9604/"
       },
       "ARA-290 (Cibinetide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ara-290/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/ara-290/"
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/bpc-157/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/bpc-157/"
       },
       "DSIP | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/dsip/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/dsip/"
       },
       "FOXO4-DRI | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/foxo4-dri/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/foxo4-dri/"
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://alpha-peptides.com/product/ghk-cu/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/ghk-cu/"
       },
       "Glutathione | Vial | 1500mg": {
         "url": "https://alpha-peptides.com/product/glutathione/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/glutathione/"
       },
       "Humanin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/humanin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/humanin/"
       },
       "IGF-1 LR3 | Vial | 1mg": {
         "url": "https://alpha-peptides.com/product/igf-1-lr3/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/igf-1-lr3/"
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/kisspeptin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/kisspeptin/"
       },
       "KPV | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/kpv/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/kpv/"
       },
       "LL-37 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ll-37/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/ll-37/"
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/mots-c/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/mots-c/"
       },
       "NAD+ | Vial | 500mg": {
         "url": "https://alpha-peptides.com/product/nad/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/nad/"
       },
       "PT-141 (Bremelanotide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/pt-141/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/pt-141/"
       },
       "Selank | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/selank/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/selank/"
       },
       "Semax | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/semax/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/semax/"
       },
       "Sermorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/sermorelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/sermorelin/"
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ss-31/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/ss-31/"
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/thymosin-alpha-1/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/thymosin-alpha-1/"
       },
       "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/vip/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/vip/"
       },
       "CJC-1295 with DAC | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-dac/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/cjc-1295-dac/"
       },
       "CJC-1295 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-no-dac/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/cjc-1295-no-dac/"
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/epithalon/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/epithalon/"
       },
       "GHRP-2 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ghrp-2/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/ghrp-2/"
       },
       "GHRP-6 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/ghrp-6/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/ghrp-6/"
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/ipamorelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/ipamorelin/"
       },
       "5-Amino-1MQ | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/5-amino-1mq/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/5-amino-1mq/"
       },
       "Oxytocin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/oxytocin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/oxytocin/"
       },
       "Thymalin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/thymalin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/thymalin/"
       },
       "Gonadorelin | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/gonadorelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/gonadorelin/"
       },
       "Hexarelin | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/hexarelin/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/hexarelin/"
       },
       "Pinealon | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/pinealon/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/pinealon/"
       },
       "SLU-PP-332 | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/slu-pp-332/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/slu-pp-332/"
       },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/snap-8/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/snap-8/"
       },
       "Follistatin-344 | Vial | 1mg": {
         "url": "https://alpha-peptides.com/product/follistatin-344/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/follistatin-344/"
       },
       "Dihexa | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/dihexa/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/dihexa/"
       },
       "Bacteriostatic Water | Water | 10mL": {
         "url": "https://alpha-peptides.com/product/bac-water/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/bac-water/"
       },
       "Melanotan II | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/mt-2/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/mt-2/"
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://alpha-peptides.com/product/glow/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/glow/"
       },
       "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
         "url": "https://alpha-peptides.com/product/cjc-1295-ipamorelin-blend/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/cjc-1295-ipamorelin-blend/"
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 10/10/50/10mg": {
         "url": "https://alpha-peptides.com/product/klow/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/klow/"
       },
       "TB-500 | Vial | TB-500 10mg": {
         "url": "https://alpha-peptides.com/product/tb-500/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/tb-500/"
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://alpha-peptides.com/product/klow/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/klow/"
       },
       "TB-500 | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/tb-500/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/tb-500/"
       },
       "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/glp-3-rt/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/glp-3-rt/"
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/glp-3-rt/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/glp-3-rt/"
       },
       "Cagrilintide | Vial | 5mg/10mg": {
         "url": "https://alpha-peptides.com/product/cagrilintide/",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "403 Client Error: Forbidden for url: https://alpha-peptides.com/product/cagrilintide/"
       }
     },
     "Licensed Peptides": {
@@ -1220,7 +1220,8 @@
         "url": "https://www.americanpeptides.us/products/bpc-157",
         "price": 48.0,
         "regular_price": 60.0,
-        "error": null
+        "error": null,
+        "override": true
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/bpc-157",
@@ -1232,7 +1233,8 @@
         "url": "https://www.americanpeptides.us/products/tb-500",
         "price": 80.0,
         "regular_price": 100.0,
-        "error": null
+        "error": null,
+        "override": true
       },
       "CJC-1295 | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/cjc-1295-no-dac",
@@ -1304,7 +1306,8 @@
         "url": "https://www.americanpeptides.us/products/tirzepatide",
         "price": 80.0,
         "regular_price": 100.0,
-        "error": null
+        "error": null,
+        "override": true
       },
       "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 30mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide",
@@ -1322,13 +1325,15 @@
         "url": "https://www.americanpeptides.us/products/retatrutide",
         "price": 84.0,
         "regular_price": 105.0,
-        "error": null
+        "error": null,
+        "override": true
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide",
         "price": 84.0,
         "regular_price": 105.0,
-        "error": null
+        "error": null,
+        "override": true
       },
       "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide",
@@ -1370,7 +1375,8 @@
         "url": "https://www.americanpeptides.us/products/glow-mix",
         "price": 120.0,
         "regular_price": 150.0,
-        "error": null
+        "error": null,
+        "override": true
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://www.americanpeptides.us/products/klow-blend",
@@ -1388,7 +1394,8 @@
         "url": "https://www.americanpeptides.us/products/copper-binding-peptide-ghk-cu",
         "price": 40.0,
         "regular_price": 50.0,
-        "error": null
+        "error": null,
+        "override": true
       },
       "Selank | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/selank",
@@ -1474,61 +1481,6 @@
         "price": 35.0,
         "regular_price": null,
         "error": null
-      },
-      "GLP-1 (Semaglutide) | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-1s/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-1-sm/"
-      },
-      "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide | Vial | 20mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 30mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Tirzepatide | Vial | 30mg": {
-        "url": "https://offlinepeptides.com/product/glp-2t/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-2-tz/"
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide | Vial | 10mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide | Vial | 20mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
-      },
-      "Retatrutide | Vial | 30mg": {
-        "url": "https://offlinepeptides.com/product/glp-3r/",
-        "price": null,
-        "error": "404 Client Error: Not Found for url: https://offlinepeptides.com/product/glp-3-rt/"
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/mots-c/",

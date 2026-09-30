@@ -17,15 +17,25 @@ Fails on:
   * the calculator not producing a result for sample inputs
   * the homepage Suppliers nav item not linking to /suppliers
   * suppliers.html rendering < MIN_SUPPLIERS cards
+  * a vendor count on index.html, suppliers.html or about.html ("13 vendors",
+    "13 suppliers", title/meta tags, the About stats strip), in the raw file or
+    the rendered page, that differs from the number of distinct vendors with
+    listings in the homepage DATA
   * the testing.html References news markup (NEWS_MARKERS) showing up on
     index.html or suppliers.html, in the raw file or the rendered page; it
     belongs on testing.html only (see docs/references-format.md)
   * testing.html rendering fewer than MIN_REFERENCES reference items
+  * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
+    suppliers.html not exactly matching data/catalog.json / vendor_config.json
+    (scripts/sync_vendor_config.py --check)
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
-import argparse, functools, http.server, os, socketserver, sys, threading
+import argparse, functools, http.server, json, os, re, socketserver, sys, threading
 from playwright.sync_api import sync_playwright
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sync_vendor_config  # noqa: E402  (embed check)
 
 MIN_CARDS = 50
 MIN_VENDORS = 8
@@ -45,6 +55,41 @@ def check_no_news(page, root, filename, problems):
             problems.append(f"{filename}: contains testing-page news markup {m!r} (source file)")
         elif m in rendered:
             problems.append(f"{filename}: contains testing-page news markup {m!r} (rendered page)")
+
+
+# "13 vendors", "13 suppliers", "Across 13 Vendors", "13\nSUPPLIERS" (About
+# stats strip). Per-product counts on the homepage cards ("4 vendors compared")
+# are not site-wide claims and are skipped.
+NUMBER_WORDS = {w: i for i, w in enumerate(
+    "zero one two three four five six seven eight nine ten eleven twelve thirteen "
+    "fourteen fifteen sixteen seventeen eighteen nineteen twenty".split())}
+VENDOR_COUNT_RE = re.compile(
+    r"\b(\d+|" + "|".join(NUMBER_WORDS) + r")\s+(?:peptide\s+)?(?:vendors|suppliers)\b(?!\s+compared)",
+    re.I)
+
+
+def data_vendor_count(root):
+    """Distinct vendors with at least one listing in the homepage DATA line."""
+    for line in open(os.path.join(root, "index.html"), encoding="utf-8"):
+        if line.startswith("const DATA = "):
+            data = json.loads(line[len("const DATA = "):].rstrip().rstrip(";"))
+            return len({v for row in data.get("included", []) for v in row.get("prices", {})})
+    return None
+
+
+def check_vendor_count(text, where, expected, problems):
+    for m in VENDOR_COUNT_RE.finditer(text):
+        word = m.group(1).lower()
+        n = NUMBER_WORDS[word] if word in NUMBER_WORDS else int(word)
+        if n != expected:
+            problems.append(f"{where}: says {' '.join(m.group(0).split())!r} but the data has {expected} vendors")
+
+
+def check_vendor_count_raw(root, filename, expected, problems):
+    # The embedded data lines are data, not copy; skip them.
+    raw = "".join(l for l in open(os.path.join(root, filename), encoding="utf-8")
+                  if not l.startswith(("const DATA = ", "const VENDOR_CONFIG = ")))
+    check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
 def serve(root):
@@ -78,6 +123,11 @@ def main():
     root = os.path.abspath(args.root)
     httpd, base = serve(root)
     problems, notes = [], []
+
+    # ---- Embedded data lines must match their JSON sources
+    embed_problems = sync_vendor_config.check(root)
+    problems.extend(embed_problems)
+    notes.append("embeds: " + ("OUT OF SYNC" if embed_problems else "DATA + VENDOR_CONFIG match the JSON files"))
 
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -132,6 +182,13 @@ def main():
         except Exception as e:
             problems.append(f"suppliers nav link: missing: {str(e).splitlines()[0]}")
         check_no_news(page, root, "index.html", problems)
+        vendor_count = data_vendor_count(root)
+        notes.append(f"vendor count in DATA: {vendor_count}")
+        if not vendor_count:
+            problems.append("index.html: could not read the vendor count from the DATA line")
+        else:
+            check_vendor_count_raw(root, "index.html", vendor_count, problems)
+            check_vendor_count(page.inner_text("body"), "index.html (rendered page)", vendor_count, problems)
         page.close()
 
         # ---- suppliers.html
@@ -141,7 +198,22 @@ def main():
         if n < MIN_SUPPLIERS:
             problems.append(f"suppliers.html: only {n} supplier cards (min {MIN_SUPPLIERS})")
         check_no_news(page, root, "suppliers.html", problems)
+        if vendor_count:
+            check_vendor_count_raw(root, "suppliers.html", vendor_count, problems)
+            check_vendor_count(page.inner_text("body"), "suppliers.html (rendered page)", vendor_count, problems)
         page.close()
+
+        # ---- about.html: the stats strip and any "N vendors" copy
+        if vendor_count:
+            page = open_page(browser, base + "/about.html", problems, "about.html")
+            check_vendor_count_raw(root, "about.html", vendor_count, problems)
+            text = page.inner_text("body")
+            check_vendor_count(text, "about.html (rendered page)", vendor_count, problems)
+            stat = page.inner_text("#statSuppliers").strip()
+            notes.append(f"about.html: Suppliers stat {stat!r}")
+            if stat != str(vendor_count):
+                problems.append(f"about.html: Suppliers stat shows {stat!r} but the data has {vendor_count} vendors")
+            page.close()
 
         # ---- testing.html References (the only page allowed to carry them)
         page = open_page(browser, base + "/testing.html", problems, "testing.html")
