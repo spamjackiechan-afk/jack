@@ -29,6 +29,11 @@ The check serves the repo statically and renders it in headless Chromium. It fai
   `news-type`, `peptide-chip`, `data-tone`, `tone-read`, "Looks concerning",
   "Developing") appears in `index.html` or `suppliers.html`, in the file or the
   rendered page, or `testing.html` shows fewer than 20 reference items.
+- a vendor count on `index.html`, `suppliers.html` or `about.html` ("13 vendors",
+  "13 suppliers", the title and meta tags, the About "Suppliers" stat), in the
+  file or the rendered page, differs from the number of distinct vendors with
+  listings in the homepage `DATA`. When a vendor is added or removed, update
+  that copy in the same PR.
 
 It also breaks a scratch copy on purpose (deletes `CATEGORIES`) and checks
 that the safety net still draws a usable vendor list.
