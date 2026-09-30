@@ -46,7 +46,7 @@
 <body>
 <div class="wrap">
   <h1>Review Moderation</h1>
-  <p class="sub">Not linked from the public site. Approved reviews appear on suppliers.html within about a minute.</p>
+  <p class="sub">Not linked from the public site. Approved reviews appear on suppliers.html within about 5 minutes.</p>
 
   <div id="loginBox">
     <input type="password" id="passwordInput" placeholder="Admin password">
@@ -78,6 +78,13 @@ async function login(){
     const res = await fetch('/api/admin-reviews', { headers: { 'X-Admin-Password': pw } });
     if (res.status === 401){
       errEl.textContent = 'Incorrect password.';
+      return;
+    }
+    // 429 = this IP is locked out after 5 failed logins. The lock clears
+    // 15 minutes after the last failed attempt (FAILURE_WINDOW_SECONDS = 900
+    // in functions/api/admin-reviews.js; change both together).
+    if (res.status === 429){
+      errEl.textContent = 'Too many login attempts. Please wait 15 minutes and try again.';
       return;
     }
     if (!res.ok){
