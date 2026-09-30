@@ -23,10 +23,17 @@ The check serves the repo statically and renders it in headless Chromium. It fai
 - the in-page render safety net had to kick in (`[site-guard]` console errors);
 - the reconstitution calculator doesn't return `10 units` for 5 mg / 2 mL / 0.25 mg;
 - the homepage Suppliers nav item doesn't link to `/suppliers`, or `suppliers.html` shows fewer than 8 supplier cards.
+- the embedded `DATA` / `VENDOR_CONFIG` lines don't exactly match
+  `data/catalog.json` / `vendor_config.json`.
 - the References news markup from `testing.html` (`news-tier`, `news-item`,
   `news-type`, `peptide-chip`, `data-tone`, `tone-read`, "Looks concerning",
   "Developing") appears in `index.html` or `suppliers.html`, in the file or the
   rendered page, or `testing.html` shows fewer than 20 reference items.
+- a vendor count on `index.html`, `suppliers.html` or `about.html` ("13 vendors",
+  "13 suppliers", the title and meta tags, the About "Suppliers" stat), in the
+  file or the rendered page, differs from the number of distinct vendors with
+  listings in the homepage `DATA`. When a vendor is added or removed, update
+  that copy in the same PR.
 
 It also breaks a scratch copy on purpose (deletes `CATEGORIES`) and checks
 that the safety net still draws a usable vendor list.
@@ -41,11 +48,45 @@ python scripts/smoke_test.py
 ## Editing the embeds in index.html / suppliers.html
 
 `const DATA = …`, `const VENDOR_CONFIG = …` and `const CATEGORIES = …` are
-each on **their own line** near the top of the main `<script>`. When
-re-syncing `VENDOR_CONFIG` from `vendor_config.json`, replace only that line.
+each on **their own line** near the top of the main `<script>`.
+
+`DATA` and `VENDOR_CONFIG` are generated. Don't edit them by hand. **Edit the
+JSON, run the sync script, commit both:**
+
+- product data: `data/catalog.json` → `const DATA` in both pages
+- vendor fields: `vendor_config.json` → `const VENDOR_CONFIG` in both pages
+
+```
+python scripts/sync_vendor_config.py          # rewrites only those two lines
+python scripts/sync_vendor_config.py --check  # what site-smoke runs
+```
+
+site-smoke fails if either embed line differs from its JSON file.
 Do not delete the `CATEGORIES` line or the `typeof CATEGORIES` guard below
 it. (On 2026-09-26, PR #49 rewrote a line that also held `CATEGORIES` and
 blanked the homepage until PR #50.)
+
+## Vendor config: public fields only
+
+`vendor_config.json` and the `VENDOR_CONFIG` embeds are public (anyone can
+view source or open `/vendor_config.json`), so they hold only the fields the
+site code reads: status, links, promo code, payment and shipping fields.
+Internal notes (`commission`, `cookie_days`, `guidelines_notes`,
+`last_checked`, `testing_tier`, `_readme`, `_field_guide`) and the vendor
+testing fields (`testing_methods`, `testing_lab`, `testing_standard`,
+`testing_note`, `testing_researched`; no visible page shows them) live in a
+private `vendor_notes.json` kept outside this repo. Jackson decides where it is stored.
+Never add them back here. `private/` is git-ignored as a safety net.
+
+To change a public field, edit `vendor_config.json`, then run:
+
+```
+python scripts/sync_vendor_config.py
+```
+
+This drops any non-public field and rewrites only the `VENDOR_CONFIG` line in
+`index.html` and `suppliers.html`. Commit all three files. Old commits in git
+history still contain the notes removed on 2026-09-29.
 
 ## Safety nets in the page
 
@@ -91,3 +132,14 @@ The review and email forms carry a hidden `website` honeypot field and the time
 since the form appeared (`form_ms`). The server rejects honeypot-filled
 submissions and anything sent within 3 seconds, and limits each IP to 3 reviews
 and 5 sign-ups per hour (`rl:review:<ip>`, `rl:sub:<ip>`).
+
+## Manual sale prices (price overrides)
+
+The daily price run rewrites `data/live_prices.json` from scratch. To keep a
+confirmed sale price (e.g. from a vendor's code email), add it to
+`data/price_overrides.json` under the vendor and the **exact** item key from
+`data/product_urls.json`, with `price`, `regular_price`, `expires` (UTC,
+`YYYY-MM-DDTHH:MM:SSZ`) and `source`. `scripts/check_prices.py` merges
+unexpired entries after each run and marks them `"override": true`. It skips
+and logs expired entries and keys that aren't in the catalogue, and it never
+works out prices for other sizes. Jackson confirms every entry before it goes in.
