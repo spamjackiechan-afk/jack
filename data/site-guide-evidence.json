@@ -222,7 +222,7 @@
       "id": "quality-testing",
       "name": "Quality / testing",
       "identity": "COA and vendor-testing literacy for this site.",
-      "what_exists": "A COA can show HPLC purity, MS identity, sometimes content, sometimes endotoxin / metals / sterility. A COA cannot show that the material is safe or effective in people. Ask for the COA that matches the lot number, with a named laboratory and a date. Vendor testing claims on this site are taken from each vendor’s own published material and grouped by how far an outsider could check them.",
+      "what_exists": "A COA can show HPLC purity, MS identity, sometimes content, sometimes endotoxin / metals / sterility. A COA cannot show that the material is safe or effective in people. Ask for the COA that matches the lot number, with a named laboratory and a date. This site doesn’t show per-vendor test results, so check the vendor’s own COA for your lot.",
       "caveats": "A COA cannot show that the material is safe or effective in people."
     }
   ],
