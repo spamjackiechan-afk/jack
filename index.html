@@ -1943,7 +1943,7 @@ render();
 // baked-in baseline prices above. If this fails for any reason (offline,
 // GitHub down, file not there yet), the page just keeps showing the
 // baseline data — nothing breaks, nothing looks wrong to a visitor.
-const LIVE_PRICES_URL = 'https://raw.githubusercontent.com/spamjackiechan-afk/jack/main/data/live_prices.json';
+const LIVE_PRICES_URL = '/data/live_prices.json'; // same file, served by this site (works if the repo goes private)
 
 async function loadLivePrices(){
   try {
