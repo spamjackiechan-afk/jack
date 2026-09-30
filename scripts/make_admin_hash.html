@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<!-- Nothing on this page can load or send anything over the network. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; form-action 'none'; base-uri 'none'">
+<title>Make admin password hash (local only)</title>
+<style>
+  body{font-family:system-ui, sans-serif; max-width:640px; margin:40px auto; padding:0 16px; line-height:1.5;}
+  input{width:100%; padding:8px; font-size:15px; box-sizing:border-box;}
+  button{margin-top:10px; padding:8px 16px; font-size:15px;}
+  pre{background:#f3f3f3; padding:12px; white-space:pre-wrap; word-break:break-all;}
+  .note{color:#555; font-size:14px;}
+</style>
+</head>
+<body>
+<h1>Admin password hash</h1>
+<p class="note">Open this file from your own computer. It runs entirely in this browser tab and sends nothing anywhere. Type the new admin password, then copy <strong>only the salt and hash</strong> into <code>functions/api/admin-reviews.js</code>. Never share the password itself.</p>
+<label for="pw">New password (24+ characters, from your password manager)</label>
+<input type="password" id="pw" autocomplete="new-password">
+<button type="button" id="go">Make salt + hash</button>
+<p id="msg" class="note"></p>
+<pre id="out" hidden></pre>
+<script>
+// Must match functions/api/admin-reviews.js: PBKDF2-SHA-256, 16-byte salt,
+// PBKDF2_ROUNDS chained calls of PBKDF2_ITERATIONS each, 32-byte result.
+const PBKDF2_ITERATIONS = 100000;
+const PBKDF2_ROUNDS = 2;
+
+const hex = bytes => Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+
+async function derive(password, salt){
+  let material = new TextEncoder().encode(password);
+  for (let round = 0; round < PBKDF2_ROUNDS; round++){
+    const key = await crypto.subtle.importKey('raw', material, 'PBKDF2', false, ['deriveBits']);
+    const bits = await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt, iterations: PBKDF2_ITERATIONS }, key, 256);
+    material = new Uint8Array(bits);
+  }
+  return hex(material);
+}
+
+document.getElementById('go').addEventListener('click', async () => {
+  const input = document.getElementById('pw');
+  const msg = document.getElementById('msg');
+  const out = document.getElementById('out');
+  out.hidden = true;
+  if (input.value.length < 24){ msg.textContent = 'Use at least 24 characters.'; return; }
+  msg.textContent = 'Working…';
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  const hash = await derive(input.value, salt);
+  input.value = '';
+  out.textContent =
+    'const ADMIN_PASSWORD_SALT = "' + hex(salt) + '";\n' +
+    'const ADMIN_PASSWORD_PBKDF2 = "' + hash + '";';
+  out.hidden = false;
+  msg.textContent = 'Done. The password box has been cleared. Send only these two lines.';
+});
+</script>
+</body>
+</html>
