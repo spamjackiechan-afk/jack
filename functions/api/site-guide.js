@@ -96,11 +96,11 @@ export async function onRequestPost(context) {
 
   if (wantsNav(lower, "suppliers") || /go to suppliers|list suppliers|who('?s| is) on the site/.test(lower)) {
     if (/list suppliers|who('?s| is) on|which vendors|list vendors/.test(lower)) {
-      const vendors = await listVendors(request);
+      const { vendors, fromConfig } = await listVendors(request);
       if (vendors.length) {
         return json({
           reply:
-            "Suppliers currently on the live catalog snapshot: " +
+            (fromConfig ? "Suppliers listed on this site (" + vendors.length + "): " : "Suppliers currently on the live catalog snapshot: ") +
             vendors.join(", ") +
             ".\nMore context: " +
             evidence.site_map.suppliers +
@@ -594,10 +594,20 @@ async function loadPrices(request) {
   return null;
 }
 
+// Same source as the suppliers page: every vendor in vendor_config.json
+// (keys starting with "_" are not vendors), sorted by name. Falls back to the
+// live price file only if the config can't be read.
 async function listVendors(request) {
+  try {
+    const res = await fetch(new URL("/vendor_config.json", request.url).toString());
+    if (res.ok) {
+      const cfg = await res.json();
+      const names = Object.keys(cfg || {}).filter((k) => !k.startsWith("_")).sort();
+      if (names.length) return { vendors: names, fromConfig: true };
+    }
+  } catch (_) {}
   const data = await loadPrices(request);
-  if (!data?.results) return [];
-  return Object.keys(data.results);
+  return { vendors: data?.results ? Object.keys(data.results) : [], fromConfig: false };
 }
 
 async function formatPrices(request, card, lower = "", brief = false) {
