@@ -89,7 +89,8 @@ class OverlayTests(unittest.TestCase):
         js = ("const DATA = " + json.dumps(data) + ";\n" + m.group(0) +
               "\napplyLiveOverlay(" + json.dumps(live["results"]) + ");\n"
               "process.stdout.write(JSON.stringify(DATA.included));")
-        out = subprocess.run(["node", "-e", js], capture_output=True, text=True, check=True).stdout
+        # Script goes in on stdin: as an argument it can exceed the OS limit (E2BIG).
+        out = subprocess.run(["node"], input=js, capture_output=True, text=True, check=True).stdout
         page = json.loads(out)
         ref = copy.deepcopy(data["included"])
         apply_live_overlay(ref, live["results"])
