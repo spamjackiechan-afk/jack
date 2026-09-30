@@ -28,7 +28,8 @@
 
 import { readReviews, putReview, rebuildReviewsSnapshot } from "../_lib/records.js";
 
-// Empty until Jackson supplies new values; with them empty, every login fails (fail closed).
+// Salt and PBKDF2 hash of the admin password (never the password itself), from
+// scripts/make_admin_hash.html. If either is ever empty, every login fails (fail closed).
 const ADMIN_PASSWORD_SALT = "b6348d50b10823a317461b0590304abd";   // hex, 16 random bytes
 const ADMIN_PASSWORD_PBKDF2 = "addd1a109cb494fd9a0f112339c7be7130e38b4f9083b87dde9f7ddc315b5bbe"; // hex, 32 bytes
 const PBKDF2_ITERATIONS = 100000;
