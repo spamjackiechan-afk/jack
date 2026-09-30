@@ -119,6 +119,12 @@ never deleted by code. `POST /api/admin-migrate` (admin login; `?dry_run=1`
 to preview) copies the blobs into per-record keys. Only run it when Jackson
 says so. Deleting the old blobs afterwards is his decision.
 
+`/api/get-reviews` and `/api/get-clicks` are cached for 5 minutes per
+Cloudflare data centre (Cache API), because each uncached call spends a KV list
+request (free plan: 1,000 a day). New approvals and clicks can take up to
+5 minutes to show. If the per-record read fails, they return the old blob
+instead (still 200) and log the error. The admin page reads KV directly.
+
 New unsubscribe links should include the subscriber's token:
 `/api/subscribe?unsubscribe=<email>&token=<unsubscribe_token>`. The token is in
 each `sub:<email>` record, and the migration adds one for older subscribers.

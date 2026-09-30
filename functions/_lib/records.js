@@ -87,15 +87,12 @@ export async function incrementClick(kv, key) {
 export async function readClickCounts(kv) {
   const migrated = Boolean(await kv.get(MIGRATED_CLICKS_KEY));
   const counts = migrated ? {} : { ...(await readJson(kv, "counts", {})) };
-  try {
-    for (const k of await listKeys(kv, "click:")) {
-      const key = k.name.slice("click:".length);
-      let n = k.metadata && Number.isFinite(k.metadata.count) ? k.metadata.count : null;
-      if (n == null) n = parseInt((await kv.get(k.name)) || "0", 10) || 0;
-      counts[key] = (counts[key] || 0) + n;
-    }
-  } catch (e) {
-    // If listing fails, still return what the blob had.
+  // A failed list throws; get-clicks.js then falls back to the old blob.
+  for (const k of await listKeys(kv, "click:")) {
+    const key = k.name.slice("click:".length);
+    let n = k.metadata && Number.isFinite(k.metadata.count) ? k.metadata.count : null;
+    if (n == null) n = parseInt((await kv.get(k.name)) || "0", 10) || 0;
+    counts[key] = (counts[key] || 0) + n;
   }
   return counts;
 }
