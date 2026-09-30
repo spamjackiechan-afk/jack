@@ -30,6 +30,8 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Run the price checker
+                 env:
+             ALPHA_PROXY_URL: ${{ secrets.ALPHA_PROXY_URL }}
         run: python scripts/check_prices.py
 
       - name: Commit updated prices if anything changed
