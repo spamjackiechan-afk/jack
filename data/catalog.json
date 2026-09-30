@@ -2447,14 +2447,28 @@
       "size": "10mg",
       "amount_mg": null,
       "prices": {
-        "Royal Peptides": 75,
-        "American Peptides": 195
+        "Royal Peptides": 75
       },
       "lowest": 75,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/wolverine-bpc-157-tb-500-blend/"
+      }
+    },
+    {
+      "peptide": "Wolverine (BPC-157/TB-500 blend)",
+      "format": "Vial",
+      "size": "20mg",
+      "amount_mg": null,
+      "prices": {
+        "American Peptides": 195
+      },
+      "lowest": 195,
+      "notes": null,
+      "category": "Tissue Repair & Recovery",
+      "vendor_product_urls": {
+        "American Peptides": "https://www.americanpeptides.us/products/bpc-157-tb-500?variant=48167416168603"
       }
     },
     {
@@ -2762,7 +2776,7 @@
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-1-sm",
-        "American Peptides": "https://www.americanpeptides.us/products/semaglutide"
+        "American Peptides": "https://www.americanpeptides.us/products/semaglutide?variant=48978865127579"
       }
     },
     {
