@@ -55,13 +55,14 @@ JSON, run the sync script, commit both:**
 
 - product data: `data/catalog.json` → `const DATA` in both pages
 - vendor fields: `vendor_config.json` → `const VENDOR_CONFIG` in both pages
+- vendor sales: `data/vendor_sales.json` → `const VENDOR_SALES` in suppliers.html only
 
 ```
-python scripts/sync_vendor_config.py          # rewrites only those two lines
+python scripts/sync_vendor_config.py          # rewrites only those lines
 python scripts/sync_vendor_config.py --check  # what site-smoke runs
 ```
 
-site-smoke fails if either embed line differs from its JSON file.
+site-smoke fails if any embed line differs from its JSON file.
 
 ### Hiding a vendor (keeping its data)
 
@@ -176,3 +177,21 @@ confirmed sale price (e.g. from a vendor's code email), add it to
 unexpired entries after each run and marks them `"override": true`. It skips
 and logs expired entries and keys that aren't in the catalogue, and it never
 works out prices for other sizes. Jackson confirms every entry before it goes in.
+
+## Vendor sales (vendor-run promos)
+
+Some vendors run their own sale codes (e.g. Midwest Peptide's WEBACK30).
+These show on suppliers.html as a **"Vendor sale"** row on the vendor's
+card, separate from the "Code at checkout" row that carries OUR affiliate
+code (`vendor_config.json` → `promo_code`). Never put a vendor's sale code
+in `promo_code`; that field is only for our own affiliate code.
+
+To add one, append an entry to `data/vendor_sales.json` under the vendor:
+`code`, `gives`, `start`, `end`, `exclusions`, `combines_with_our_code`,
+`source`, `verified`. Fill fields ONLY from the vendor's own site, terms,
+or email; leave a field null when it isn't confirmed. `end` is UTC
+`YYYY-MM-DDTHH:MM:SSZ`; a sale past its `end` is hidden automatically at
+render time (same idea as price_overrides expiry), and a null `end` shows
+until the entry is removed. Then run the sync script so the generated
+`const VENDOR_SALES` line in suppliers.html picks it up. Jackson confirms
+every entry before it goes in.

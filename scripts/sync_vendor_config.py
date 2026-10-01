@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Keep the embedded data in index.html / suppliers.html in sync with the JSON files.
 
-The pages embed two data lines on purpose (the page still works if a fetch
+The pages embed data lines on purpose (the page still works if a fetch
 fails, and the fallback script relies on them). They are generated from:
 
-  vendor_config.json  ->  `const VENDOR_CONFIG = ...;`  (compact, \\uXXXX escapes)
-  data/catalog.json   ->  `const DATA = ...;`           (compact, UTF-8 as-is)
+  vendor_config.json   ->  `const VENDOR_CONFIG = ...;`  (compact, \\uXXXX escapes)
+  data/catalog.json    ->  `const DATA = ...;`            (compact, UTF-8 as-is)
+  data/vendor_sales.json -> `const VENDOR_SALES = ...;`   (suppliers.html only;
+                            vendor-run sale promos, shown as a "Vendor sale"
+                            row separate from our affiliate code)
 
 Hidden vendors: a vendor with `"hidden": true` in vendor_config.json keeps
 all its data (catalog.json, product_urls.json, its config and its VENDORS
@@ -32,8 +35,9 @@ Syncing:
      listed on stdout), then writes it back (2-space indent, \\uXXXX escapes),
   2. rewrites ONLY the `const VENDOR_CONFIG = ...;` and `const DATA = ...;`
      lines in index.html and suppliers.html (DATA without hidden vendors, see
-     above). Nothing else in the pages changes. data/catalog.json itself is
-     never rewritten.
+     above), plus the `const VENDOR_SALES = ...;` line in suppliers.html
+     (from data/vendor_sales.json). Nothing else in the pages changes.
+     data/catalog.json and data/vendor_sales.json themselves are never rewritten.
 Running it twice changes nothing the second time. scripts/smoke_test.py runs
 the --check and fails the site-smoke check if the embeds don't match.
 """
@@ -45,9 +49,11 @@ from collections import OrderedDict
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CONFIG = "vendor_config.json"
 CATALOG = os.path.join("data", "catalog.json")
+SALES = os.path.join("data", "vendor_sales.json")
 PAGES = ["index.html", "suppliers.html"]
 PREFIX = "const VENDOR_CONFIG = "
 DATA_PREFIX = "const DATA = "
+SALES_PREFIX = "const VENDOR_SALES = "
 
 # Fields read by index.html / suppliers.html (and the fallback script).
 PUBLIC_FIELDS = [
@@ -110,15 +116,26 @@ def load_json(root, rel):
 
 
 def expected_lines(root):
-    """The public vendor_config.json text and the two embed lines it should produce."""
+    """The public vendor_config.json text and the embed lines each page should carry.
+
+    Returns (config_text, lines_by_page, dropped) where lines_by_page maps
+    page -> {prefix: full line}. suppliers.html additionally carries
+    const VENDOR_SALES from data/vendor_sales.json (the vendor's own sale
+    promos, shown separately from our affiliate code); keys starting with
+    "_" (e.g. _readme) are not embedded."""
     pub, dropped = public_config(load_json(root, CONFIG))
     config_text = json.dumps(pub, indent=2, ensure_ascii=True) + "\n"
     data = visible_catalog(load_json(root, CATALOG), hidden_vendors(pub))
-    lines = {
+    sales = OrderedDict((k, v) for k, v in load_json(root, SALES).items() if not k.startswith("_"))
+    shared = {
         PREFIX: PREFIX + json.dumps(pub, separators=(",", ":"), ensure_ascii=True) + ";",
         DATA_PREFIX: DATA_PREFIX + json.dumps(data, separators=(",", ":"), ensure_ascii=False) + ";",
     }
-    return config_text, lines, dropped
+    lines_by_page = {page: dict(shared) for page in PAGES}
+    lines_by_page["suppliers.html"][SALES_PREFIX] = (
+        SALES_PREFIX + json.dumps(sales, separators=(",", ":"), ensure_ascii=False) + ";"
+    )
+    return config_text, lines_by_page, dropped
 
 
 def read_page(root, page):
@@ -147,9 +164,9 @@ def check(root=ROOT):
     for page in PAGES:
         try:
             lines = read_page(root, page)
-            for prefix, line in want.items():
+            for prefix, line in want[page].items():
                 if lines[find_line(lines, prefix, page)] != line:
-                    src = CATALOG if prefix == DATA_PREFIX else CONFIG
+                    src = {DATA_PREFIX: CATALOG, SALES_PREFIX: SALES}.get(prefix, CONFIG)
                     problems.append(f"{page}: the `{prefix.strip()}` line doesn't match {src}; "
                                     "edit the JSON and run python scripts/sync_vendor_config.py")
         except (OSError, ValueError) as e:
@@ -172,10 +189,10 @@ def sync(root=ROOT):
 
     for page in PAGES:
         lines = read_page(root, page)
-        idx = {prefix: find_line(lines, prefix, page) for prefix in want}  # all found before writing
-        changed = [p.strip() for p, i in idx.items() if lines[i] != want[p]]
+        idx = {prefix: find_line(lines, prefix, page) for prefix in want[page]}  # all found before writing
+        changed = [p.strip() for p, i in idx.items() if lines[i] != want[page][p]]
         for prefix, i in idx.items():
-            lines[i] = want[prefix]
+            lines[i] = want[page][prefix]
         if changed:
             with open(os.path.join(root, page), "w", encoding="utf-8", newline="") as f:
                 f.write("\n".join(lines))
@@ -188,7 +205,7 @@ def main():
         if problems:
             print("OUT OF SYNC:\n  " + "\n  ".join(problems))
             sys.exit(1)
-        print("OK: embeds match vendor_config.json and data/catalog.json")
+        print("OK: embeds match vendor_config.json, data/catalog.json and data/vendor_sales.json")
         return
     try:
         sync()
