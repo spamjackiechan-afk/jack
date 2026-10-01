@@ -575,12 +575,17 @@ function supplierCardHtml(name){
   // embedded as const VENDOR_SALES by scripts/sync_vendor_config.py). Shown
   // as their own row, clearly separate from our affiliate code above:
   // cfg.promo_code stays OUR code and is never replaced by a sale code.
-  // A sale with a past `end` (UTC) is hidden automatically, the same idea as
-  // price_overrides expiry; a null `end` shows until the entry is removed.
+  // A sale is hidden automatically when past its `end` (UTC) — the same idea
+  // as price_overrides expiry — or when its `verified` date is more than
+  // 7 days old (a missing `verified` hides it too), so a code nobody has
+  // re-checked doesn't stay up forever. A null `end` shows until removed,
+  // as long as `verified` stays fresh.
   const nowMs = Date.now();
   const vendorSales = (typeof VENDOR_SALES !== 'undefined' && VENDOR_SALES[name]) || [];
   for (const sale of vendorSales){
     if (sale.end && Date.parse(sale.end) < nowMs) continue;
+    const verifiedMs = sale.verified ? Date.parse(sale.verified + 'T00:00:00Z') : NaN;
+    if (Number.isNaN(verifiedMs) || nowMs - verifiedMs > 7 * 24 * 60 * 60 * 1000) continue;
     let offer = sale.gives ? escapeHtml(sale.gives) : 'Sale';
     if (sale.code){
       const sc = escapeHtml(sale.code);
@@ -591,8 +596,9 @@ function supplierCardHtml(name){
     offer += ' at checkout';
     if (sale.end) offer += ` (ends ${new Date(sale.end).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })})`;
     if (sale.exclusions) offer += `. Excludes ${escapeHtml(sale.exclusions)}`;
-    if (sale.combines_with_our_code === true && cfg.promo_code) offer += `. Stacks with our ${escapeHtml(cfg.promo_code)} code`;
+    if (sale.combines_with_our_code === true && cfg.promo_code) offer += `. Can be combined with our ${escapeHtml(cfg.promo_code)} code`;
     if (sale.combines_with_our_code === false) offer += '. Cannot be combined with our affiliate code';
+    if (sale.combines_with_our_code == null) offer += `. One code per order unless ${escapeHtml(name)} says otherwise`;
     const srcBits = [sale.source, sale.verified ? `verified ${sale.verified}` : null].filter(Boolean).map(escapeHtml).join(', ');
     const affRef = cfg.promo_code ? ` our ${escapeHtml(cfg.promo_code)} affiliate code` : ' our affiliate code';
     rows.push(`

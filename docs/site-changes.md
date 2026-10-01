@@ -192,6 +192,9 @@ To add one, append an entry to `data/vendor_sales.json` under the vendor:
 or email; leave a field null when it isn't confirmed. `end` is UTC
 `YYYY-MM-DDTHH:MM:SSZ`; a sale past its `end` is hidden automatically at
 render time (same idea as price_overrides expiry), and a null `end` shows
-until the entry is removed. Then run the sync script so the generated
+until the entry is removed. A sale is ALSO hidden when its `verified` date
+is more than 7 days old (a missing `verified` hides it too): a code nobody
+has re-checked doesn't stay up forever. To keep a sale showing, re-verify
+the code on the vendor's site and bump `verified` to the new date. Then run the sync script so the generated
 `const VENDOR_SALES` line in suppliers.html picks it up. Jackson confirms
 every entry before it goes in.
