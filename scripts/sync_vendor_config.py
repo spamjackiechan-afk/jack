@@ -60,6 +60,13 @@ PUBLIC_FIELDS = [
     "status", "site_url", "tracking_type", "affiliate_link_base",
     "affiliate_path_suffix", "promo_code", "payment_methods", "payment_note",
     "shipping_info", "shipping_payment_researched", "hidden",
+    # Currency / shipping region (any vendor): `currency` is an ISO 4217 code,
+    # USD when absent. `ships_to` is a region code (e.g. "CA") and
+    # `ships_to_label` the neutral text shown next to that vendor's prices and
+    # on its Suppliers card; absent = no label. Prices are never converted:
+    # non-USD prices are shown with their currency and kept out of every
+    # lowest-price / price-sort computation.
+    "currency", "ships_to", "ships_to_label",
 ]
 
 # Per-vendor fields on a catalog row that must go when the vendor is hidden.
@@ -82,11 +89,32 @@ def hidden_vendors(cfg):
     return {v for v, f in cfg.items() if not v.startswith("_") and isinstance(f, dict) and f.get("hidden") is True}
 
 
-def visible_catalog(catalog, hidden):
+def non_usd_vendors(cfg):
+    """Vendor -> currency for every vendor whose `currency` is set and isn't USD."""
+    out = {}
+    for v, f in cfg.items():
+        if v.startswith("_") or not isinstance(f, dict):
+            continue
+        cur = str(f.get("currency") or "USD").upper()
+        if cur != "USD":
+            out[v] = cur
+    return out
+
+
+def usd_lowest(prices, non_usd):
+    """Lowest price among USD vendors only; None when the row has no USD price.
+    Non-USD prices are never converted and never count as the lowest."""
+    vals = [p for v, p in (prices or {}).items() if v not in non_usd]
+    return min(vals) if vals else None
+
+
+def visible_catalog(catalog, hidden, non_usd=None):
     """catalog.json as the pages should embed it: hidden vendors removed from
     every row, `lowest` recomputed on rows that lost one, rows left with no
-    vendor dropped. Rows without a hidden vendor are left exactly as they are."""
-    if not hidden:
+    vendor dropped. On rows carrying a non-USD vendor, `lowest` is the lowest
+    USD price (None if there is none). Other rows are left exactly as they are."""
+    non_usd = non_usd or {}
+    if not hidden and not non_usd:
         return catalog
     out = OrderedDict(catalog)
     for section in ("included", "excluded"):
@@ -95,16 +123,19 @@ def visible_catalog(catalog, hidden):
             continue
         kept = []
         for row in rows:
-            if not any(v in (row.get("prices") or {}) for v in hidden):
+            prices = row.get("prices") or {}
+            has_hidden = any(v in prices for v in hidden)
+            has_non_usd = any(v in prices for v in non_usd)
+            if not has_hidden and not has_non_usd:
                 kept.append(row)
                 continue
             row = OrderedDict(row)
             for field in ROW_VENDOR_FIELDS:
-                if isinstance(row.get(field), dict):
+                if has_hidden and isinstance(row.get(field), dict):
                     row[field] = OrderedDict((k, v) for k, v in row[field].items() if k not in hidden)
             if not row["prices"]:
                 continue
-            row["lowest"] = min(row["prices"].values())
+            row["lowest"] = usd_lowest(row["prices"], non_usd)
             kept.append(row)
         out[section] = kept
     return out
@@ -125,7 +156,7 @@ def expected_lines(root):
     "_" (e.g. _readme) are not embedded."""
     pub, dropped = public_config(load_json(root, CONFIG))
     config_text = json.dumps(pub, indent=2, ensure_ascii=True) + "\n"
-    data = visible_catalog(load_json(root, CATALOG), hidden_vendors(pub))
+    data = visible_catalog(load_json(root, CATALOG), hidden_vendors(pub), non_usd_vendors(pub))
     sales = OrderedDict((k, v) for k, v in load_json(root, SALES).items() if not k.startswith("_"))
     shared = {
         PREFIX: PREFIX + json.dumps(pub, separators=(",", ":"), ensure_ascii=True) + ";",

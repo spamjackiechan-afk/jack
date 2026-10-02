@@ -611,8 +611,28 @@ async function listVendors(request) {
   return { vendors: data?.results ? Object.keys(data.results) : [], fromConfig: false };
 }
 
+// Currency per vendor from vendor_config.json (`currency`, USD when absent).
+// Prices are never converted: non-USD prices keep their own label (CA$64.99)
+// and are listed after the USD ones, never as the cheapest.
+const CURRENCY_PREFIX = { USD: "$", CAD: "CA$", AUD: "A$", NZD: "NZ$", EUR: "\u20ac", GBP: "\u00a3" };
+async function loadVendorConfig(request) {
+  try {
+    const res = await fetch(new URL("/vendor_config.json", request.url).toString());
+    if (res.ok) return await res.json();
+  } catch (_) {}
+  return {};
+}
+function vendorCurrency(cfg, vendor) {
+  return String((cfg && cfg[vendor] && cfg[vendor].currency) || "USD").toUpperCase();
+}
+function fmtMoney(price, currency) {
+  const prefix = CURRENCY_PREFIX[currency];
+  return prefix ? prefix + Number(price).toFixed(2) : currency + " " + Number(price).toFixed(2);
+}
+
 async function formatPrices(request, card, lower = "", brief = false) {
   const data = await loadPrices(request);
+  const cfg = await loadVendorConfig(request);
   const home = "https://discountspeptides.com/";
   if (!data?.results) {
     return (
@@ -630,11 +650,13 @@ async function formatPrices(request, card, lower = "", brief = false) {
       const k = key.toLowerCase();
       if (!needles.some((n) => k.includes(n))) continue;
       const price = info?.price;
+      const currency = vendorCurrency(cfg, vendor);
+      const ships = cfg && cfg[vendor] && cfg[vendor].ships_to_label;
       const priceStr =
         price == null || Number.isNaN(Number(price))
           ? "no confident price"
-          : "$" + Number(price).toFixed(2);
-      rows.push({ vendor, key, priceStr, price: price == null ? null : Number(price) });
+          : fmtMoney(price, currency) + (ships ? " (" + ships + ")" : "");
+      rows.push({ vendor, key, priceStr, currency, price: price == null ? null : Number(price) });
     }
   }
 
@@ -648,6 +670,9 @@ async function formatPrices(request, card, lower = "", brief = false) {
   }
 
   rows.sort((a, b) => {
+    // USD prices first (cheapest first); non-USD prices after, never mixed in.
+    const ua = a.currency === "USD", ub = b.currency === "USD";
+    if (ua !== ub) return ua ? -1 : 1;
     if (a.price == null && b.price == null) return 0;
     if (a.price == null) return 1;
     if (b.price == null) return -1;
