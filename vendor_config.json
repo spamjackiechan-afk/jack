@@ -51,7 +51,6 @@
   },
   "Purity Peptides": {
     "status": "not_applied",
-    "hidden": true,
     "site_url": "https://puritypeptides.is",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": null,
