@@ -343,9 +343,11 @@ def extract_price(html: str) -> float | None:
 def variant_id_from_url(url: str) -> str | None:
     """Shopify-style ?variant=ID pins a listing to one size of a multi-size
     product page (e.g. American Peptides' Semaglutide page sells 5/10/20/30/50 mg
-    and the page itself always shows the first size)."""
+    and the page itself always shows the first size). IDs are numeric (Shopify,
+    American) or UUIDs (Midwest Peptide)."""
     vals = parse_qs(urlsplit(url).query).get("variant") or []
-    return vals[0] if vals and vals[0].isdigit() else None
+    ok = vals and (vals[0].isdigit() or re.fullmatch(r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}", vals[0]))
+    return vals[0] if ok else None
 
 
 def _jsonld_offer_prices_by_sku(html: str) -> dict:
@@ -372,24 +374,42 @@ def _jsonld_offer_prices_by_sku(html: str) -> dict:
 def extract_variant_price(html: str, variant_id: str) -> tuple:
     """(price, regular_price) of ONE variant, read from the product data the page
     embeds (American Peptides: a flat {"id":"<id>","title":"10 mg","sku":...,
-    "price":90,...} object in the Next.js payload). Trusted only when the page's
-    JSON-LD Offer for the same SKU shows the same price, which rules out a stray
-    id match or a cents-vs-dollars payload. Returns (None, None) otherwise; the
-    default variant's price is never used as a stand-in."""
+    "price":90,...} object in the Next.js payload; Midwest Peptide: the same shape
+    with "name" and a UUID id). Trusted only when the page confirms that data:
+    the JSON-LD Offer for the same SKU shows the same price (American), or, when
+    the JSON-LD has no per-size offers (Midwest), the price the page visibly
+    renders for its default size (the cheapest in that variants list) matches the
+    list. That rules out a stray id match or a cents-vs-dollars payload. Returns
+    (None, None) otherwise; the default variant's price is never used as a
+    stand-in. regular_price is always None here: an embedded compare-at value
+    is not proof the page shows a sale (Midwest only strikes it through during
+    its own promo windows), matching extract_regular_price's visible-sale rule."""
     text = html.replace('\\"', '"')
     offers = None
-    for m in re.finditer(r'\{"id":"?%s"?[,}]' % variant_id, text):
+    for m in re.finditer(r'\{"id":"?%s"?[,}]' % re.escape(variant_id), text):
         obj = text[m.start():text.find("}", m.start()) + 1]
         price, sku = re.search(r'"price":"?(\d+(?:\.\d+)?)[",}]', obj), re.search(r'"sku":"([^"]+)"', obj)
         if not (price and sku):
             continue
         price = float(price.group(1))
         offers = _jsonld_offer_prices_by_sku(html) if offers is None else offers
-        if sku.group(1) not in offers or abs(offers[sku.group(1)] - price) > 0.005:
+        if sku.group(1) in offers:
+            if abs(offers[sku.group(1)] - price) > 0.005:
+                continue
+        elif not _default_size_shown(html, text, m.start()):
             continue
-        was = re.search(r'"compare_?at_?price":"?(\d+(?:\.\d+)?)', obj, re.IGNORECASE)
-        return price, (float(was.group(1)) if was and float(was.group(1)) > price else None)
+        return price, None
     return None, None
+
+
+def _default_size_shown(html: str, text: str, pos: int) -> bool:
+    """True when the variants list holding position `pos` is the one the page
+    renders: its cheapest price appears in the page as a visible "$NN.NN"."""
+    start, end = text.rfind('"variants":[', 0, pos), text.find("]", pos)
+    if start < 0 or end < 0 or "]" in text[start:pos]:
+        return False
+    prices = [float(p) for p in re.findall(r'"price":"?(\d+(?:\.\d+)?)', text[start:end])]
+    return bool(prices) and re.search(r">\s*\$\s*%.2f\s*<" % min(prices), html) is not None
 
 
 def _shopify_variant_price(url: str, variant_id: str, headers: dict, proxies: dict | None) -> tuple:
