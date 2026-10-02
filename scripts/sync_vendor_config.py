@@ -58,7 +58,7 @@ SALES_PREFIX = "const VENDOR_SALES = "
 # Fields read by index.html / suppliers.html (and the fallback script).
 PUBLIC_FIELDS = [
     "status", "site_url", "tracking_type", "affiliate_link_base",
-    "affiliate_path_suffix", "promo_code", "payment_methods", "payment_note",
+    "affiliate_path_suffix", "promo_code", "code_disclosure", "payment_methods", "payment_note",
     "shipping_info", "shipping_payment_researched", "hidden",
 ]
 
