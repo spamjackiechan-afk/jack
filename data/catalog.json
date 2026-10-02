@@ -2194,19 +2194,23 @@
     {
       "peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)",
       "format": "Vial",
-      "size": "10/10/50/10mg",
-      "amount_mg": 10,
+      "size": "80mg (10/10/50/10mg)",
+      "amount_mg": 80,
       "prices": {
         "UltraLife": 189,
         "Koi Peptides": 169.95,
         "BioIntegrity Research": 154,
-        "Alpha Peptides": 70.79
+        "Alpha Peptides": 70.79,
+        "Royal Peptides": 90,
+        "Midwest Peptide": 119.99
       },
       "lowest": 70.79,
-      "notes": null,
+      "notes": "Midwest Peptide: vendor page lists 80mg in details and 90mg in title; size not yet confirmed.",
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
-        "Alpha Peptides": "https://alpha-peptides.com/product/klow/"
+        "Alpha Peptides": "https://alpha-peptides.com/product/klow/",
+        "Royal Peptides": "https://royal-peptides.com/shop/buy-klow-peptide-blend-online-usa/",
+        "Midwest Peptide": "https://midwestpeptide.com/products/klow-90mg"
       }
     },
     {
@@ -2346,23 +2350,17 @@
       "amount_mg": 80,
       "prices": {
         "Purity Peptides": 199.99,
-        "Royal Peptides": 90,
-        "Alpha Peptides": 70.79,
-        "Midwest Peptide": 119.99,
         "American Peptides": 200,
         "Offline Peptides": 109.0,
         "Orbitrex Peptide": 109.99
       },
-      "lowest": 70.79,
+      "lowest": 109.0,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/klow-blend",
-        "Alpha Peptides": "https://alpha-peptides.com/product/klow/",
-        "Midwest Peptide": "https://midwestpeptide.com/products/klow-90mg",
         "American Peptides": "https://www.americanpeptides.us/products/klow-blend",
         "Offline Peptides": "https://offlinepeptides.com/product/klow-bpc-157-tb-500-ghk-cu-kpv/",
-        "Royal Peptides": "https://royal-peptides.com/shop/buy-klow-peptide-blend-online-usa/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/klow-80-blend/"
       }
     },
