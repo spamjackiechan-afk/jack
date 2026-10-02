@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-02T21:56:08Z",
+  "checked_at": "2026-10-02T22:52:04Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -910,12 +910,6 @@
         "regular_price": null,
         "error": null
       },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
-        "url": "https://alpha-peptides.com/product/glp-3-rt/",
-        "price": 44.09,
-        "regular_price": null,
-        "error": null
-      },
       "Retatrutide | Vial | 10mg": {
         "url": "https://alpha-peptides.com/product/glp-3-rt/",
         "price": 44.09,
@@ -1052,7 +1046,7 @@
         "regular_price": null,
         "error": null
       },
-      "GLP-1 (Semaglutide) | Vial | 10mg": {
+      "Semaglutide | Vial | 10mg": {
         "url": "https://midwestpeptide.com/products/glp-1-sm",
         "price": 49.99,
         "regular_price": null,
@@ -1178,12 +1172,6 @@
         "regular_price": null,
         "error": null
       },
-      "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 30mg": {
-        "url": "https://midwestpeptide.com/products/glp-2-tz",
-        "price": 79.99,
-        "regular_price": null,
-        "error": null
-      },
       "Tirzepatide | Vial | 30mg": {
         "url": "https://midwestpeptide.com/products/glp-2-tz",
         "price": 79.99,
@@ -1202,27 +1190,9 @@
         "regular_price": null,
         "error": null
       },
-      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 10/10/50/10mg": {
-        "url": "https://midwestpeptide.com/products/klow-90mg",
-        "price": 119.99,
-        "regular_price": null,
-        "error": null
-      },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://midwestpeptide.com/products/klow-90mg",
         "price": 119.99,
-        "regular_price": null,
-        "error": null
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
-        "url": "https://midwestpeptide.com/products/glp-3-rt?variant=21a42426-d69d-4fe1-958a-7b940e6b0887",
-        "price": 69.99,
-        "regular_price": null,
-        "error": null
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
-        "url": "https://midwestpeptide.com/products/glp-3-rt?variant=d185705c-48cc-4dc2-a399-d38e11e46774",
-        "price": 134.99,
         "regular_price": null,
         "error": null
       },
@@ -1320,27 +1290,15 @@
         "regular_price": null,
         "error": null
       },
-      "GLP-1 (Semaglutide) | Vial | 5mg": {
-        "url": "https://www.americanpeptides.us/products/semaglutide",
-        "price": 60.0,
-        "regular_price": null,
-        "error": null
-      },
       "Semaglutide | Vial | 5mg": {
         "url": "https://www.americanpeptides.us/products/semaglutide",
         "price": 60.0,
         "regular_price": null,
         "error": null
       },
-      "GLP-1 (Semaglutide) | Vial | 10mg": {
+      "Semaglutide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/semaglutide?variant=48978865127579",
         "price": 90.0,
-        "regular_price": null,
-        "error": null
-      },
-      "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 10mg": {
-        "url": "https://www.americanpeptides.us/products/tirzepatide",
-        "price": 100.0,
         "regular_price": null,
         "error": null
       },
@@ -1357,24 +1315,11 @@
         "error": null,
         "override": true
       },
-      "Tirzepatide (\"GLP-2 Dual Agonist\") | Vial | 30mg": {
-        "url": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
-        "price": 240.0,
-        "regular_price": null,
-        "error": null
-      },
       "Tirzepatide | Vial | 30mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
         "price": 240.0,
         "regular_price": null,
         "error": null
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
-        "url": "https://www.americanpeptides.us/products/retatrutide",
-        "price": 84.0,
-        "regular_price": 105.0,
-        "error": null,
-        "override": true
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide",
@@ -1382,12 +1327,6 @@
         "regular_price": 105.0,
         "error": null,
         "override": true
-      },
-      "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
-        "url": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179",
-        "price": 200.0,
-        "regular_price": null,
-        "error": null
       },
       "Retatrutide | Vial | 20mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179",
@@ -1611,8 +1550,9 @@
       },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/snap-8/",
-        "price": null,
-        "error": "HTTPSConnectionPool(host='offlinepeptides.com', port=443): Read timed out. (read timeout=20)"
+        "price": 37.0,
+        "regular_price": null,
+        "error": null
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/thymosin-alpha-1/",
