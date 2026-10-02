@@ -52,11 +52,14 @@
   "Purity Peptides": {
     "status": "not_applied",
     "site_url": "https://puritypeptides.is",
+    "currency": "CAD",
+    "ships_to": "CA",
+    "ships_to_label": "Ships within Canada only",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": null,
     "promo_code": null,
     "payment_methods": null,
-    "shipping_info": "Ships to US and Canada only, no international. 1-2 day processing, then 5-10 days regular or 2-4 days express.",
+    "shipping_info": "Ships within Canada only; prices are in Canadian dollars (CAD). 1-2 day processing, then 5-10 days regular or 2-4 days express.",
     "shipping_payment_researched": "2026-08-16"
   },
   "Royal Peptides": {

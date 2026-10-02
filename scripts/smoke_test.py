@@ -28,6 +28,12 @@ Fails on:
   * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
     suppliers.html not exactly matching data/catalog.json / vendor_config.json
     (scripts/sync_vendor_config.py --check)
+  * a non-USD vendor's price (vendor_config `currency`, USD when absent)
+    shown without its currency prefix (CA$ for CAD, else "CODE 0.00"), a USD
+    price shown with anything but "$", a non-USD row marked as the lowest
+    price, a vendor's `ships_to_label` missing from its price rows, or (price
+    sort low->high and high->low) a card with no USD price placed before a
+    card that has one. Rows are checked in the fallback list too.
   * Google Analytics (ga-consent.js): a public page (index, about, suppliers,
     testing, privacy) not loading it; admin-reviews.html or functions/ loading
     it; the Measurement ID appearing in any file other than ga-consent.js;
@@ -167,6 +173,85 @@ def check_vendor_count_raw(root, filename, expected, problems):
     check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
+CURRENCY_ROWS_JS = r"""
+() => {
+  const cfg = (typeof VENDOR_CONFIG !== 'undefined') ? VENDOR_CONFIG : {};
+  const PREFIX = { USD: '$', CAD: 'CA$', AUD: 'A$', NZD: 'NZ$', EUR: '\u20ac', GBP: '\u00a3' };
+  const cur = v => String((cfg[v] || {}).currency || 'USD').toUpperCase();
+  const out = { rows: 0, nonUsd: 0, nonUsdVendors: [], problems: [] };
+  document.querySelectorAll('#index .price-row').forEach(row => {
+    const vEl = row.querySelector('.vendor');
+    const amtEl = row.querySelector('.price-amount');
+    if (!vEl || !amtEl) return;
+    const vendor = ((vEl.childNodes[0] && vEl.childNodes[0].textContent) || '').split(' \u00b7 ')[0].trim();
+    const amt = amtEl.textContent.trim();
+    const c = cur(vendor);
+    out.rows++;
+    const card = row.closest('.card');
+    const where = (card && card.querySelector('h3') ? card.querySelector('h3').textContent : '?') + ' / ' + vendor;
+    if (c === 'USD'){
+      if (!/^\$\d/.test(amt)) out.problems.push(where + ': USD price shown as ' + JSON.stringify(amt));
+    } else {
+      out.nonUsd++;
+      if (!out.nonUsdVendors.includes(vendor)) out.nonUsdVendors.push(vendor);
+      const want = PREFIX[c] || (c + ' ');
+      if (!amt.startsWith(want) || (want === '$')) out.problems.push(where + ': ' + c + ' price shown as ' + JSON.stringify(amt) + ' (expected prefix ' + JSON.stringify(want) + ')');
+      if (row.classList.contains('lowest')) out.problems.push(where + ': ' + c + ' price is highlighted as the lowest price');
+    }
+    const label = (cfg[vendor] || {}).ships_to_label;
+    if (label && !row.textContent.includes(label)) out.problems.push(where + ': missing shipping label ' + JSON.stringify(label));
+  });
+  return out;
+}
+"""
+
+CURRENCY_SORT_JS = r"""
+() => {
+  const cfg = (typeof VENDOR_CONFIG !== 'undefined') ? VENDOR_CONFIG : {};
+  const isUsd = v => String((cfg[v] || {}).currency || 'USD').toUpperCase() === 'USD';
+  const cards = [...document.querySelectorAll('#index .card')];
+  const flags = cards.map(card => [...card.querySelectorAll('.price-row .vendor')].some(el =>
+    isUsd(((el.childNodes[0] && el.childNodes[0].textContent) || '').split(' \u00b7 ')[0].trim())));
+  const firstNoUsd = flags.indexOf(false);
+  const misplaced = firstNoUsd < 0 ? [] : cards.slice(firstNoUsd).filter((c, i) => flags[firstNoUsd + i])
+    .map(c => c.querySelector('h3') ? c.querySelector('h3').textContent : '?');
+  return { cards: cards.length, noUsd: flags.filter(f => !f).length, misplaced };
+}
+"""
+
+
+def check_currency(page, label, problems, notes, sorts=True):
+    """Non-USD prices: labelled with their currency, never the lowest price,
+    shipping label shown, and (price sorts) cards without a USD price last."""
+    r = page.evaluate(CURRENCY_ROWS_JS)
+    notes.append(f"{label} currency: {r['rows']} price rows, {r['nonUsd']} non-USD"
+                 + (f" ({', '.join(r['nonUsdVendors'])})" if r['nonUsdVendors'] else ""))
+    problems.extend(f"{label}: {p}" for p in r["problems"][:20])
+    if len(r["problems"]) > 20:
+        problems.append(f"{label}: ...and {len(r['problems']) - 20} more currency problems")
+    if not sorts:
+        return
+    for mode in ("price-low", "price-high"):
+        try:
+            page.select_option("#sortBy", mode)
+            page.wait_for_timeout(400)
+            s = page.evaluate(CURRENCY_SORT_JS)
+            where = "placed last" if not s["misplaced"] else "NOT all placed last"
+            notes.append(f"{label} sort {mode}: {s['cards']} cards, {s['noUsd']} with no USD price, {where}")
+            if s["misplaced"]:
+                problems.append(f"{label}: sort {mode} puts cards with no USD price before USD-priced cards: "
+                                + ", ".join(s["misplaced"][:10]))
+            r2 = page.evaluate(CURRENCY_ROWS_JS)
+            problems.extend(f"{label} (sort {mode}): {p}" for p in r2["problems"][:10])
+        except Exception as e:
+            problems.append(f"{label}: could not exercise the price sort ({mode}): {str(e).splitlines()[0]}")
+    try:
+        page.select_option("#sortBy", "name")
+        page.wait_for_timeout(300)
+    except Exception:
+        pass
+
+
 def serve(root):
     class Quiet(http.server.SimpleHTTPRequestHandler):
         def log_message(self, *a, **k):
@@ -225,17 +310,21 @@ def main():
             problems.append(f"index.html: only {len(vendors)} vendor names rendered (min {MIN_VENDORS}): {vendors}")
 
         if args.expect_fallback:
+            check_currency(page, "fallback list", problems, notes, sorts=False)
+            cur_problems = [x for x in problems if x.startswith("fallback list")]
             browser.close(); httpd.shutdown()
             print("\n".join(notes))
             if not fallback:
                 print("FAIL: expected the render safety net to kick in, but it did not"); sys.exit(1)
-            real = [x for x in problems if "product cards" in x or "vendor names" in x]
+            real = [x for x in problems if "product cards" in x or "vendor names" in x] + cur_problems
             if real:
                 print("FAIL: safety net ran but did not draw a usable list:\n  " + "\n  ".join(real)); sys.exit(1)
             print("OK: main render broken as intended and the safety net drew a usable list"); sys.exit(0)
 
         if fallback:
             problems.append("index.html: render safety net was used (main render failed); see errors above")
+        else:
+            check_currency(page, "index.html", problems, notes)
 
         # ---- Calculator (panel on the homepage)
         try:
