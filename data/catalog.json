@@ -2200,15 +2200,13 @@
         "UltraLife": 189,
         "Koi Peptides": 169.95,
         "BioIntegrity Research": 154,
-        "Alpha Peptides": 70.79,
-        "Midwest Peptide": 119.99
+        "Alpha Peptides": 70.79
       },
       "lowest": 70.79,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
-        "Alpha Peptides": "https://alpha-peptides.com/product/klow/",
-        "Midwest Peptide": "https://midwestpeptide.com/products/klow-90mg"
+        "Alpha Peptides": "https://alpha-peptides.com/product/klow/"
       }
     },
     {
@@ -2545,7 +2543,7 @@
       "category": "Sexual Health & Hormonal"
     },
     {
-      "peptide": "Retatrutide (\"GLP-3 Triple Agonist\")",
+      "peptide": "Retatrutide",
       "format": "Nasal",
       "size": "20mg",
       "amount_mg": 20,
@@ -2557,7 +2555,7 @@
       "category": "Metabolic & Weight"
     },
     {
-      "peptide": "Retatrutide (\"GLP-3 Triple Agonist\")",
+      "peptide": "Retatrutide",
       "format": "Nasal",
       "size": "40mg",
       "amount_mg": 40,
@@ -2593,7 +2591,7 @@
       "category": "Growth Hormone & Muscle"
     },
     {
-      "peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")",
+      "peptide": "Tirzepatide",
       "format": "Nasal",
       "size": "20mg",
       "amount_mg": 20,
@@ -2605,7 +2603,7 @@
       "category": "Metabolic & Weight"
     },
     {
-      "peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")",
+      "peptide": "Tirzepatide",
       "format": "Nasal",
       "size": "40mg",
       "amount_mg": 40,
@@ -2617,45 +2615,7 @@
       "category": "Metabolic & Weight"
     },
     {
-      "peptide": "Retatrutide (\"GLP-3 Triple Agonist\")",
-      "format": "Vial",
-      "size": "10mg",
-      "amount_mg": 10,
-      "prices": {
-        "UltraLife": 149,
-        "Alpha Peptides": 44.09,
-        "Midwest Peptide": 69.99,
-        "American Peptides": 105
-      },
-      "lowest": 44.09,
-      "notes": null,
-      "category": "Metabolic & Weight",
-      "vendor_product_urls": {
-        "Alpha Peptides": "https://alpha-peptides.com/product/glp-3-rt/",
-        "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=21a42426-d69d-4fe1-958a-7b940e6b0887",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide"
-      }
-    },
-    {
-      "peptide": "Retatrutide (\"GLP-3 Triple Agonist\")",
-      "format": "Vial",
-      "size": "20mg",
-      "amount_mg": 20,
-      "prices": {
-        "UltraLife": 289,
-        "Midwest Peptide": 134.99,
-        "American Peptides": 200
-      },
-      "lowest": 134.99,
-      "notes": null,
-      "category": "Metabolic & Weight",
-      "vendor_product_urls": {
-        "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=d185705c-48cc-4dc2-a399-d38e11e46774",
-        "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179"
-      }
-    },
-    {
-      "peptide": "Retatrutide (\"GLP-3 Triple Agonist\")",
+      "peptide": "Retatrutide",
       "format": "Vial",
       "size": "40mg",
       "amount_mg": 40,
@@ -2690,23 +2650,7 @@
       }
     },
     {
-      "peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")",
-      "format": "Vial",
-      "size": "10mg",
-      "amount_mg": 10,
-      "prices": {
-        "UltraLife": 129,
-        "American Peptides": 100
-      },
-      "lowest": 100,
-      "notes": null,
-      "category": "Metabolic & Weight",
-      "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide"
-      }
-    },
-    {
-      "peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")",
+      "peptide": "Tirzepatide",
       "format": "Vial",
       "size": "40mg",
       "amount_mg": 40,
@@ -2730,23 +2674,7 @@
       "category": "Metabolic & Weight"
     },
     {
-      "peptide": "GLP-1 (Semaglutide)",
-      "format": "Vial",
-      "size": "5mg",
-      "amount_mg": 5,
-      "prices": {
-        "Purity Peptides": 89.99,
-        "American Peptides": 60
-      },
-      "lowest": 60,
-      "notes": null,
-      "category": "Metabolic & Weight",
-      "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/semaglutide"
-      }
-    },
-    {
-      "peptide": "GLP-1 (Semaglutide)",
+      "peptide": "Semaglutide",
       "format": "Vial",
       "size": "10mg",
       "amount_mg": 10,
@@ -2764,7 +2692,7 @@
       }
     },
     {
-      "peptide": "GLP-1 (Semaglutide)",
+      "peptide": "Semaglutide",
       "format": "Nasal",
       "size": "10mg",
       "amount_mg": 10,
@@ -2782,7 +2710,8 @@
       "amount_mg": 10,
       "prices": {
         "Purity Peptides": 104.99,
-        "American Peptides": 100
+        "American Peptides": 100,
+        "UltraLife": 129
       },
       "lowest": 100,
       "notes": null,
@@ -2816,7 +2745,8 @@
         "Purity Peptides": 104.99,
         "Alpha Peptides": 44.09,
         "Midwest Peptide": 69.99,
-        "American Peptides": 105
+        "American Peptides": 105,
+        "UltraLife": 149
       },
       "lowest": 44.09,
       "notes": null,
@@ -2835,7 +2765,8 @@
       "prices": {
         "Purity Peptides": 199.0,
         "Midwest Peptide": 134.99,
-        "American Peptides": 200
+        "American Peptides": 200,
+        "UltraLife": 289
       },
       "lowest": 134.99,
       "notes": null,
@@ -2922,10 +2853,11 @@
       "peptide": "Semaglutide",
       "format": "Vial",
       "size": "5mg",
-      "amount_mg": null,
+      "amount_mg": 5,
       "prices": {
         "Royal Peptides": 45,
-        "American Peptides": 60
+        "American Peptides": 60,
+        "Purity Peptides": 89.99
       },
       "lowest": 45,
       "notes": null,
@@ -3142,23 +3074,6 @@
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/cagrilintide",
         "American Peptides": "https://www.americanpeptides.us/products/cagrilintide"
-      },
-      "category": "Metabolic & Weight"
-    },
-    {
-      "peptide": "Tirzepatide (\"GLP-2 Dual Agonist\")",
-      "format": "Vial",
-      "size": "30mg",
-      "amount_mg": 30,
-      "prices": {
-        "Midwest Peptide": 79.99,
-        "American Peptides": 240
-      },
-      "lowest": 79.99,
-      "notes": null,
-      "vendor_product_urls": {
-        "Midwest Peptide": "https://midwestpeptide.com/products/glp-2-tz",
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515"
       },
       "category": "Metabolic & Weight"
     },
