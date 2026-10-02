@@ -430,6 +430,33 @@ def _shopify_variant_price(url: str, variant_id: str, headers: dict, proxies: di
     return None, None
 
 
+def woo_attributes_from_url(url: str) -> dict:
+    """WooCommerce's own ?attribute_<name>=<value> pins a listing to one
+    variation of a variable product (e.g. Royal Peptides' single-vial pages sell
+    5/10/15/... mg as variations of one page). WooCommerce also preselects that
+    option for the visitor."""
+    return {k: v[0] for k, v in parse_qs(urlsplit(url).query).items() if k.startswith("attribute_") and v}
+
+
+def extract_woo_variation_price(html: str, attrs: dict) -> tuple:
+    """(price, regular_price) of the ONE variation whose attributes match `attrs`,
+    read from the variations form's data-product_variations JSON. Returns
+    (None, None) when there is no such variation; the cheapest variation (what
+    JSON-LD lowPrice shows) is never used as a stand-in."""
+    m = re.search(r'data-product_variations="([^"]*)"', html)
+    try:
+        variations = json.loads(unescape(m.group(1))) if m else None
+    except ValueError:
+        variations = None
+    want = {k.lower(): v.lower() for k, v in attrs.items()}
+    for v in variations if isinstance(variations, list) else []:
+        have = {k.lower(): str(val).lower() for k, val in (v.get("attributes") or {}).items()}
+        if have == want and isinstance(v.get("display_price"), (int, float)):
+            price, was = float(v["display_price"]), v.get("display_regular_price")
+            return price, (float(was) if isinstance(was, (int, float)) and was > price else None)
+    return None, None
+
+
 def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None) -> dict:
     try:
         resp = requests.get(url, headers=headers, proxies=proxies, timeout=20)
@@ -438,6 +465,13 @@ def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None
         resp.raise_for_status()
     except requests.RequestException as e:
         return {"url": url, "price": None, "error": str(e)}
+
+    woo_attrs = woo_attributes_from_url(url)
+    if woo_attrs:
+        price, regular = extract_woo_variation_price(resp.text, woo_attrs)
+        if price is None:
+            return {"url": url, "price": None, "error": f"variation {woo_attrs} price not found (cheapest variation not used)"}
+        return {"url": url, "price": price, "regular_price": regular, "error": None}
 
     variant_id = variant_id_from_url(url)
     if variant_id:
@@ -474,6 +508,12 @@ def check_product_with_browser(url: str, browser) -> dict:
 
     if is_bot_challenge(200, {}, html):
         return {"url": url, "price": None, "error": BOT_CHALLENGE_ERROR}
+    woo_attrs = woo_attributes_from_url(url)
+    if woo_attrs:
+        price, regular = extract_woo_variation_price(html, woo_attrs)
+        if price is None:
+            return {"url": url, "price": None, "error": f"variation {woo_attrs} price not found (cheapest variation not used)"}
+        return {"url": url, "price": price, "regular_price": regular, "error": None}
     variant_id = variant_id_from_url(url)
     if variant_id:
         price, regular = extract_variant_price(html, variant_id)

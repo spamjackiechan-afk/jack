@@ -2891,7 +2891,7 @@
     {
       "peptide": "Tirzepatide",
       "format": "Vial",
-      "size": "low-dose vial",
+      "size": "5mg",
       "amount_mg": null,
       "prices": {
         "Royal Peptides": 36
@@ -2900,22 +2900,22 @@
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
-        "Royal Peptides": "https://royal-peptides.com/shop/buy-tirzepatide-online-usa-canada/"
+        "Royal Peptides": "https://royal-peptides.com/shop/tirzepatide-vials/?attribute_pa_choose-an-option=5mg"
       }
     },
     {
       "peptide": "Retatrutide",
       "format": "Vial",
-      "size": "low-dose vial",
+      "size": "5mg",
       "amount_mg": null,
       "prices": {
-        "Royal Peptides": 55
+        "Royal Peptides": 45
       },
-      "lowest": 55,
+      "lowest": 45,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
-        "Royal Peptides": "https://royal-peptides.com/shop/buy-retatrutide-online-usa/"
+        "Royal Peptides": "https://royal-peptides.com/shop/retatrutide-vial/?attribute_pa_choose-an-option=5mg"
       }
     },
     {
@@ -2932,7 +2932,7 @@
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/semaglutide",
-        "Royal Peptides": "https://royal-peptides.com/shop/semaglutide-kits/"
+        "Royal Peptides": "https://royal-peptides.com/shop/semaglutide-vial/?attribute_pa_choose-an-option=5mg"
       }
     },
     {
