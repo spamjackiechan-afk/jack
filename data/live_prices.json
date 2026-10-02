@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-02T15:27:58Z",
+  "checked_at": "2026-10-02T21:56:08Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -188,21 +188,21 @@
         "regular_price": null,
         "error": null
       },
-      "Tirzepatide | Vial | low-dose vial": {
-        "url": "https://royal-peptides.com/shop/buy-tirzepatide-online-usa-canada/",
-        "price": 310.0,
+      "Tirzepatide | Vial | 5mg": {
+        "url": "https://royal-peptides.com/shop/tirzepatide-vials/?attribute_pa_choose-an-option=5mg",
+        "price": 36.0,
         "regular_price": null,
         "error": null
       },
-      "Retatrutide | Vial | low-dose vial": {
-        "url": "https://royal-peptides.com/shop/buy-retatrutide-online-usa/",
-        "price": 380.0,
+      "Retatrutide | Vial | 5mg": {
+        "url": "https://royal-peptides.com/shop/retatrutide-vial/?attribute_pa_choose-an-option=5mg",
+        "price": 45.0,
         "regular_price": null,
         "error": null
       },
       "Semaglutide | Vial | 5mg": {
-        "url": "https://royal-peptides.com/shop/semaglutide-kits/",
-        "price": 235.0,
+        "url": "https://royal-peptides.com/shop/semaglutide-vial/?attribute_pa_choose-an-option=5mg",
+        "price": 45.0,
         "regular_price": null,
         "error": null
       },
@@ -1155,14 +1155,14 @@
         "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
-        "url": "https://midwestpeptide.com/products/ghk-cu-50mg",
-        "price": 39.99,
+        "url": "https://midwestpeptide.com/products/ghk-cu-50mg?variant=ed5dc886-3ee7-494b-a81f-adc2793065a2",
+        "price": 29.99,
         "regular_price": null,
         "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 100mg": {
-        "url": "https://midwestpeptide.com/products/ghk-cu-50mg",
-        "price": 39.99,
+        "url": "https://midwestpeptide.com/products/ghk-cu-50mg?variant=c7c41895-e737-43d0-967f-79d61bde1270",
+        "price": 57.99,
         "regular_price": null,
         "error": null
       },
@@ -1215,32 +1215,32 @@
         "error": null
       },
       "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 10mg": {
-        "url": "https://midwestpeptide.com/products/glp-3-rt",
-        "price": 49.99,
+        "url": "https://midwestpeptide.com/products/glp-3-rt?variant=21a42426-d69d-4fe1-958a-7b940e6b0887",
+        "price": 69.99,
         "regular_price": null,
         "error": null
       },
       "Retatrutide (\"GLP-3 Triple Agonist\") | Vial | 20mg": {
-        "url": "https://midwestpeptide.com/products/glp-3-rt",
-        "price": 49.99,
+        "url": "https://midwestpeptide.com/products/glp-3-rt?variant=d185705c-48cc-4dc2-a399-d38e11e46774",
+        "price": 134.99,
         "regular_price": null,
         "error": null
       },
       "Retatrutide | Vial | 10mg": {
-        "url": "https://midwestpeptide.com/products/glp-3-rt",
-        "price": 49.99,
+        "url": "https://midwestpeptide.com/products/glp-3-rt?variant=21a42426-d69d-4fe1-958a-7b940e6b0887",
+        "price": 69.99,
         "regular_price": null,
         "error": null
       },
       "Retatrutide | Vial | 20mg": {
-        "url": "https://midwestpeptide.com/products/glp-3-rt",
-        "price": 49.99,
+        "url": "https://midwestpeptide.com/products/glp-3-rt?variant=d185705c-48cc-4dc2-a399-d38e11e46774",
+        "price": 134.99,
         "regular_price": null,
         "error": null
       },
       "Retatrutide | Vial | 30mg": {
-        "url": "https://midwestpeptide.com/products/glp-3-rt",
-        "price": 49.99,
+        "url": "https://midwestpeptide.com/products/glp-3-rt?variant=37249d34-0184-46ed-b9e7-37532d0e375a",
+        "price": 199.99,
         "regular_price": null,
         "error": null
       },
@@ -1611,9 +1611,8 @@
       },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/snap-8/",
-        "price": 37.0,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "HTTPSConnectionPool(host='offlinepeptides.com', port=443): Read timed out. (read timeout=20)"
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/thymosin-alpha-1/",
