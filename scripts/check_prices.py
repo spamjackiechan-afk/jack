@@ -483,7 +483,7 @@ def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None
         return {"url": url, "price": price, "regular_price": regular, "error": None}
 
     price = extract_price(resp.text)
-    if price is None:
+    if price is None or price <= 0:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
     return {"url": url, "price": price, "regular_price": extract_regular_price(resp.text, price), "error": None}
 
@@ -521,7 +521,7 @@ def check_product_with_browser(url: str, browser) -> dict:
             return {"url": url, "price": None, "error": f"variant {variant_id} price not found (default variant not used)"}
         return {"url": url, "price": price, "regular_price": regular, "error": None}
     price = extract_price(html)
-    if price is None:
+    if price is None or price <= 0:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
     return {"url": url, "price": price, "regular_price": extract_regular_price(html, price), "error": None}
 
