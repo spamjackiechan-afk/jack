@@ -2,9 +2,10 @@ name: Update live prices
 
 on:
   schedule:
-    # Runs once a day at 09:00 UTC. Adjust the cron string to change timing —
-    # crontab.guru is a good tool for building these if you want a different schedule.
-    - cron: '0 9 * * *'
+    # Runs once a day at 09:17 UTC. Not on the hour: GitHub's scheduler is
+    # busiest at :00 and delays or drops runs then. crontab.guru helps if you
+    # want a different schedule.
+    - cron: '17 9 * * *'
   workflow_dispatch:
     # Lets you trigger this manually from the GitHub Actions tab, to test it
     # without waiting for the schedule.
@@ -15,6 +16,9 @@ permissions:
 jobs:
   check-prices:
     runs-on: ubuntu-latest
+    # A normal run takes about 15 minutes. Stop a stuck run after 30 so it
+    # fails quickly instead of hanging for GitHub's 6-hour limit.
+    timeout-minutes: 30
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
