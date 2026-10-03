@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-02T22:52:04Z",
+  "checked_at": "2026-10-03T14:17:18Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -164,7 +164,7 @@
         "regular_price": null,
         "error": null
       },
-      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg)": {
         "url": "https://royal-peptides.com/shop/buy-klow-peptide-blend-online-usa/",
         "price": 90.0,
         "regular_price": null,
@@ -886,7 +886,7 @@
         "regular_price": null,
         "error": null
       },
-      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 10/10/50/10mg": {
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg)": {
         "url": "https://alpha-peptides.com/product/klow/",
         "price": 70.79,
         "regular_price": null,
@@ -895,12 +895,6 @@
       "TB-500 | Vial | TB-500 10mg": {
         "url": "https://alpha-peptides.com/product/tb-500/",
         "price": 31.32,
-        "regular_price": null,
-        "error": null
-      },
-      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
-        "url": "https://alpha-peptides.com/product/klow/",
-        "price": 70.79,
         "regular_price": null,
         "error": null
       },
@@ -1190,7 +1184,7 @@
         "regular_price": null,
         "error": null
       },
-      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg)": {
         "url": "https://midwestpeptide.com/products/klow-90mg",
         "price": 119.99,
         "regular_price": null,
@@ -1309,7 +1303,7 @@
         "error": null
       },
       "Tirzepatide | Vial | 20mg": {
-        "url": "https://www.americanpeptides.us/products/tirzepatide",
+        "url": "https://www.americanpeptides.us/products/tirzepatide?variant=48622112800923",
         "price": 80.0,
         "regular_price": 170.0,
         "error": null,
