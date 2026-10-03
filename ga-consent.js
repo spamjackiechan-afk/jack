@@ -1,5 +1,5 @@
 /* Google Analytics (GA4), consent first. Loaded (defer) on the public pages
- * only: index, about, suppliers, testing, privacy. Not on admin-reviews.html
+ * only: index, about, suppliers, testing, privacy, calculator. Not on admin-reviews.html
  * or anything under functions/.
  *
  * - Nothing is requested from Google until the visitor clicks Accept.

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reconstitution Calculator — Discount Peptides</title>
+<meta name="description" content="General reconstitution calculator: calculate syringe units for a given vial strength and dilution. Research reference only.">
+<link rel="canonical" href="https://discountspeptides.com/calculator">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Discount Peptides">
+<meta property="og:url" content="https://discountspeptides.com/calculator.html">
+<meta property="og:title" content="Reconstitution Calculator — Discount Peptides">
+<meta property="og:description" content="General reconstitution calculator: calculate syringe units for a given vial strength and dilution. Research reference only.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reconstitution Calculator — Discount Peptides">
+<meta name="twitter:description" content="General reconstitution calculator: calculate syringe units for a given vial strength and dilution. Research reference only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2309100E'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%2379D9B8' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Same palette as about.html / index.html — no new colours. */
+  :root{
+    --paper:#09100E; --paper-raised:#101B17; --ink:#F2F3F1; --ink-soft:#8A9490;
+    --rule:#24302B; --sage:#4FBF98; --sage-deep:#79D9B8; --amber:#C98383;
+    --amber-bg:#25171A; --lowest:#79D9B8; --lowest-bg:#0F211B; --success:#E8B84B;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; font-weight:500; line-height:1.6;}
+  .wrap{max-width:1000px; margin:0 auto; padding:48px 24px 80px;}
+  a{color:inherit;}
+  .back-link{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); text-decoration:none; margin-bottom:40px;}
+  .back-link:hover{color:var(--lowest);}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--lowest); margin-bottom:10px;}
+  h1{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(30px, 4.6vw, 42px); margin:0 0 18px; line-height:1.15;}
+  .sect-sub{font-size:14.5px; color:var(--ink-soft); margin:0 0 28px; max-width:680px;}
+  .calc-field{margin-bottom:20px;}
+  .calc-label{
+    display:block;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:13px;
+    font-weight:500;
+    color:var(--ink);
+    margin-bottom:2px;
+  }
+  .calc-sublabel{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    font-weight:400;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+  .calc-input-row{
+    display:flex;
+    align-items:center;
+    background:var(--paper);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    padding:0 12px;
+    margin-top:8px;
+  }
+  .calc-input-row input{
+    flex:1;
+    background:none;
+    border:none;
+    outline:none;
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:16px;
+    padding:10px 0;
+  }
+  .calc-unit{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft);}
+  .calc-pills{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;}
+  .calc-pill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    padding:5px 11px;
+    border-radius:20px;
+    border:1.5px solid var(--lowest);
+    background:transparent;
+    color:var(--lowest);
+    cursor:pointer;
+  }
+  .calc-pill.active{background:var(--lowest); color:var(--paper); font-weight:500;}
+  .calc-unit-toggle{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    padding:5px 14px;
+    border-radius:6px;
+    border:1px solid var(--rule);
+    background:transparent;
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+  .calc-unit-toggle.active{background:var(--paper-raised); border-color:var(--lowest); color:var(--lowest);}
+  .ruo{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--amber); margin-top:56px; padding-top:24px; border-top:1px solid var(--rule);}
+  .dp-foot-links{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-top:14px;}
+  @media (max-width:600px){ .wrap{padding:40px 18px 64px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" class="back-link">&larr; Back to price comparison</a>
+
+  <div class="eyebrow">General tool</div>
+  <h1>Reconstitution calculator</h1>
+  <p class="sect-sub">A general calculator not tied to any vendor. Enter the vial strength and dilution to work out syringe units for a desired dose.</p>
+
+<div id="calcSection" style="margin:0 0 32px;">
+    <div style="border:1px solid var(--rule); border-radius:12px; padding:24px; background:var(--paper-raised);">
+      <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:0 0 4px; color:var(--ink);">Reconstitution calculator</h2>
+      <p style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin:0 0 20px;">Calculate syringe units for a given vial strength and dilution.</p>
+
+      <div style="display:grid; grid-template-columns:1.6fr 1fr; gap:20px;">
+        <div>
+          <div class="calc-field">
+            <label class="calc-label">Vial strength <span class="calc-sublabel">Total peptide printed on the label</span></label>
+            <div class="calc-input-row"><input type="number" id="calcVial" value="10" min="0" step="0.1"><span class="calc-unit">mg</span></div>
+            <div class="calc-pills" data-target="calcVial">
+              <button type="button" class="calc-pill" data-val="5">5mg</button>
+              <button type="button" class="calc-pill active" data-val="10">10mg</button>
+              <button type="button" class="calc-pill" data-val="15">15mg</button>
+              <button type="button" class="calc-pill" data-val="30">30mg</button>
+              <button type="button" class="calc-pill" data-val="50">50mg</button>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label">Bacteriostatic water <span class="calc-sublabel">Water added when reconstituting</span></label>
+            <div class="calc-input-row"><input type="number" id="calcWater" value="1" min="0.1" step="0.1"><span class="calc-unit">mL</span></div>
+            <div class="calc-pills" data-target="calcWater">
+              <button type="button" class="calc-pill active" data-val="1">1mL</button>
+              <button type="button" class="calc-pill" data-val="2">2mL</button>
+              <button type="button" class="calc-pill" data-val="3">3mL</button>
+              <button type="button" class="calc-pill" data-val="5">5mL</button>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label">Desired dose <span class="calc-sublabel">Optional — amount per injection</span></label>
+            <div style="display:flex; gap:8px; margin-bottom:8px;">
+              <button type="button" id="calcUnitMg" class="calc-unit-toggle active">mg</button>
+              <button type="button" id="calcUnitMcg" class="calc-unit-toggle">mcg</button>
+            </div>
+            <div class="calc-input-row"><input type="number" id="calcDose" value="2" min="0" step="0.01"><span class="calc-unit" id="calcDoseUnit">mg</span></div>
+            <div class="calc-pills" data-target="calcDose" id="calcDosePills">
+              <button type="button" class="calc-pill" data-mg="0.1">0.1mg</button>
+              <button type="button" class="calc-pill" data-mg="0.25">0.25mg</button>
+              <button type="button" class="calc-pill" data-mg="0.5">0.5mg</button>
+              <button type="button" class="calc-pill" data-mg="1">1mg</button>
+              <button type="button" class="calc-pill active" data-mg="2">2mg</button>
+              <button type="button" class="calc-pill" data-mg="5">5mg</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--paper); border:1px solid var(--lowest); border-radius:8px; padding:18px;">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px;">Draw syringe to</div>
+          <div style="font-family:'Fraunces', serif; font-size:32px; color:var(--lowest); text-shadow:0 0 20px rgba(121,217,184,0.4); margin-bottom:2px;" id="calcUnits">20 units</div>
+          <div style="font-size:12px; color:var(--ink-soft); margin-bottom:16px;" id="calcMicroliters">0.2mL per dose (200 μL)</div>
+
+          <div style="margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">
+              <span>Syringe draw</span>
+              <span id="calcGaugeRange">0 – 100 units</span>
+            </div>
+            <div style="position:relative; height:26px; background:var(--paper-raised); border:1px solid var(--rule); border-radius:6px; overflow:hidden;">
+              <div id="calcGaugeFill" style="position:absolute; top:0; left:0; bottom:0; width:20%; background:linear-gradient(90deg, var(--sage) 0%, var(--lowest) 100%); transition:width .2s ease;"></div>
+              <div style="position:absolute; inset:0; display:flex; align-items:center;">
+                <span style="position:absolute; left:4px; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--paper);">0</span>
+                <span style="position:absolute; left:25%; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">25</span>
+                <span style="position:absolute; left:50%; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">50</span>
+                <span style="position:absolute; left:75%; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">75</span>
+                <span style="position:absolute; right:4px; font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);">100</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; font-size:12px; padding:8px 0; border-top:1px dashed var(--rule);">
+            <span style="color:var(--ink-soft);">Doses per vial</span>
+            <span style="color:var(--ink); font-weight:500;" id="calcDosesPerVial">5</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:12px; padding:8px 0; border-top:1px dashed var(--rule);">
+            <span style="color:var(--ink-soft);">Concentration</span>
+            <span style="color:var(--ink); font-weight:500;" id="calcConcentration">10mg/mL</span>
+          </div>
+
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--amber); margin-top:16px; padding-top:12px; border-top:1px solid var(--rule);">For research reference only. Not medical advice.</div>
+        </div>
+      </div>
+    </div>
+
+  <p class="ruo">Research use only &mdash; nothing on this site is intended for human or animal consumption.</p>
+  <p class="dp-foot-links"><a href="/privacy">Privacy</a> &middot; <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a> &middot; <a href="/calculator">Calculator</a></p>
+</div>
+
+<script>
+// ---------- Reconstitution calculator ----------
+const calcVial = document.getElementById('calcVial');
+const calcWater = document.getElementById('calcWater');
+const calcDose = document.getElementById('calcDose');
+const calcUnitMg = document.getElementById('calcUnitMg');
+const calcUnitMcg = document.getElementById('calcUnitMcg');
+const calcDoseUnit = document.getElementById('calcDoseUnit');
+let doseUnitIsMcg = false;
+
+function runCalc(){
+  const vial = parseFloat(calcVial.value) || 0;
+  const water = parseFloat(calcWater.value) || 0;
+  let dose = parseFloat(calcDose.value) || 0;
+  if (doseUnitIsMcg) dose = dose / 1000; // normalize to mg internally
+
+  const concentration = water > 0 ? vial / water : 0; // mg per mL
+
+  document.getElementById('calcConcentration').textContent = concentration ? `${round2(concentration)}mg/mL` : '—';
+
+  if (dose > 0 && concentration > 0){
+    const volumeMl = dose / concentration;
+    const units = volumeMl * 100; // U-100 insulin syringe: 100 units = 1mL
+    const microliters = volumeMl * 1000;
+    const dosesPerVial = Math.floor(vial / dose);
+    document.getElementById('calcUnits').textContent = `${round1(units)} units`;
+    document.getElementById('calcMicroliters').textContent = `${round2(volumeMl)}mL per dose (${round0(microliters)} μL)`;
+    document.getElementById('calcDosesPerVial').textContent = dosesPerVial > 0 ? dosesPerVial : '—';
+
+    // Gauge is a fixed 0–100 unit scale (standard U-100 syringe markings).
+    // If a dose genuinely needs more than 100 units, cap the visual fill at
+    // 100% but keep the real number in the text above — don't lie about the
+    // bar, just let the number carry values the bar physically can't show.
+    const gaugeMax = 100;
+    const fillPercent = Math.min(100, (units / gaugeMax) * 100);
+    document.getElementById('calcGaugeFill').style.width = `${fillPercent}%`;
+    document.getElementById('calcGaugeRange').textContent = units > gaugeMax ? `0 – 100+ units` : '0 – 100 units';
+  } else {
+    document.getElementById('calcUnits').textContent = '—';
+    document.getElementById('calcMicroliters').textContent = 'Enter a desired dose';
+    document.getElementById('calcDosesPerVial').textContent = '—';
+    document.getElementById('calcGaugeFill').style.width = '0%';
+    document.getElementById('calcGaugeRange').textContent = '0 – 100 units';
+  }
+}
+function round0(n){ return Math.round(n); }
+function round1(n){ return Math.round(n * 10) / 10; }
+function round2(n){ return Math.round(n * 100) / 100; }
+
+[calcVial, calcWater, calcDose].forEach(el => el.addEventListener('input', runCalc));
+
+document.querySelectorAll('.calc-pills').forEach(group => {
+  if (group.id === 'calcDosePills') return; // handled separately below, unit-aware
+  const targetId = group.dataset.target;
+  const input = document.getElementById(targetId);
+  group.querySelectorAll('.calc-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      group.querySelectorAll('.calc-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      input.value = pill.dataset.val;
+      runCalc();
+    });
+  });
+});
+
+function refreshDosePillLabels(){
+  document.querySelectorAll('#calcDosePills .calc-pill').forEach(pill => {
+    const mgVal = parseFloat(pill.dataset.mg);
+    const displayVal = doseUnitIsMcg ? round0(mgVal * 1000) : mgVal;
+    const unitLabel = doseUnitIsMcg ? 'mcg' : 'mg';
+    pill.textContent = `${displayVal}${unitLabel}`;
+  });
+}
+document.querySelectorAll('#calcDosePills .calc-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('#calcDosePills .calc-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const mgVal = parseFloat(pill.dataset.mg);
+    calcDose.value = doseUnitIsMcg ? round0(mgVal * 1000) : mgVal;
+    runCalc();
+  });
+});
+
+calcUnitMg.addEventListener('click', () => {
+  if (!doseUnitIsMcg) return;
+  doseUnitIsMcg = false;
+  calcUnitMg.classList.add('active');
+  calcUnitMcg.classList.remove('active');
+  calcDoseUnit.textContent = 'mg';
+  calcDose.value = round2(parseFloat(calcDose.value) / 1000);
+  refreshDosePillLabels();
+  runCalc();
+});
+calcUnitMcg.addEventListener('click', () => {
+  if (doseUnitIsMcg) return;
+  doseUnitIsMcg = true;
+  calcUnitMcg.classList.add('active');
+  calcUnitMg.classList.remove('active');
+  calcDoseUnit.textContent = 'mcg';
+  calcDose.value = round0(parseFloat(calcDose.value) * 1000);
+  refreshDosePillLabels();
+  runCalc();
+});
+
+runCalc();
+</script>
+<script src="/ga-consent.js" defer></script>
+</body>
+</html>
