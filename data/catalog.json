@@ -3106,6 +3106,51 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/dsip"
       },
       "category": "Cognitive & Neurological"
+    },
+    {
+      "peptide": "Survodutide",
+      "format": "Vial",
+      "size": "10mg",
+      "amount_mg": 10,
+      "prices": {
+        "Orbitrex Peptide": 99.99
+      },
+      "lowest": 99.99,
+      "notes": null,
+      "vendor_product_urls": {
+        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/survodutide-10mg/"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "Retatrutide / Cagrilintide blend",
+      "format": "Vial",
+      "size": "10mg (5/5mg)",
+      "amount_mg": 10,
+      "prices": {
+        "Licensed Peptides": 109.99
+      },
+      "lowest": 109.99,
+      "notes": null,
+      "vendor_product_urls": {
+        "Licensed Peptides": "https://licensedpeptides.com/product/cagrilintide-lp3-r-blend/"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "Adamax",
+      "format": "Vial",
+      "size": "10mg",
+      "amount_mg": 10,
+      "prices": {
+        "Orbitrex Peptide": 79.99
+      },
+      "lowest": 79.99,
+      "notes": null,
+      "vendor_product_urls": {
+        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/adamax-10mg/"
+      },
+      "category": "Cognitive & Neurological"
     }
   ],
   "excluded": [
