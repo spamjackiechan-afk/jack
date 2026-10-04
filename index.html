@@ -1459,7 +1459,8 @@ function warningForPeptide(name){
   // GLP-1 Blend" — carry the more serious of the two warnings.
   if (n.includes('retatrutide') || n.includes('glp-3') ||
       n.includes('cagrilintide') || n.includes('orforglipron') ||
-      n.includes('tesofensine') || n.includes('eloralintide'))
+      n.includes('tesofensine') || n.includes('eloralintide') ||
+      n.includes('survodutide'))
     return COMPOUND_WARNINGS.glp1Investigational;
 
   // Approved prescription medicines sold outside the prescription system.
