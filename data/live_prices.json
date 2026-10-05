@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-04T15:01:04Z",
+  "checked_at": "2026-10-05T18:44:29Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -166,7 +166,7 @@
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg)": {
         "url": "https://royal-peptides.com/shop/buy-klow-peptide-blend-online-usa/",
-        "price": 90.0,
+        "price": 75.0,
         "regular_price": null,
         "error": null
       },
@@ -184,26 +184,26 @@
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 50-70mg": {
         "url": "https://royal-peptides.com/shop/glow-blend-vial-kit/",
-        "price": 70.0,
+        "price": 60.0,
         "regular_price": null,
         "error": null
       },
       "Tirzepatide | Vial | 5mg": {
         "url": "https://royal-peptides.com/shop/tirzepatide-vials/?attribute_pa_choose-an-option=5mg",
-        "price": 36.0,
-        "regular_price": null,
+        "price": 28.8,
+        "regular_price": 36.0,
         "error": null
       },
       "Retatrutide | Vial | 5mg": {
         "url": "https://royal-peptides.com/shop/retatrutide-vial/?attribute_pa_choose-an-option=5mg",
-        "price": 45.0,
-        "regular_price": null,
+        "price": 36.0,
+        "regular_price": 45.0,
         "error": null
       },
       "Semaglutide | Vial | 5mg": {
         "url": "https://royal-peptides.com/shop/semaglutide-vial/?attribute_pa_choose-an-option=5mg",
-        "price": 45.0,
-        "regular_price": null,
+        "price": 36.0,
+        "regular_price": 45.0,
         "error": null
       },
       "Tesamorelin | Vial | low-dose vial": {
@@ -214,8 +214,8 @@
       },
       "Cagrilintide | Vial | 5mg/10mg": {
         "url": "https://royal-peptides.com/shop/cagrilintide-kit/",
-        "price": 360.0,
-        "regular_price": null,
+        "price": 288.0,
+        "regular_price": 360.0,
         "error": null
       },
       "Tesamorelin / Ipamorelin combo | Vial | 10mg/3mg": {
@@ -1019,6 +1019,12 @@
         "price": 68.99,
         "regular_price": null,
         "error": null
+      },
+      "Retatrutide / Cagrilintide blend | Vial | 10mg (5/5mg)": {
+        "url": "https://licensedpeptides.com/product/cagrilintide-lp3-r-blend/",
+        "price": 109.99,
+        "regular_price": null,
+        "error": null
       }
     },
     "Midwest Peptide": {
@@ -1192,21 +1198,18 @@
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://midwestpeptide.com/products/glp-3-rt?variant=21a42426-d69d-4fe1-958a-7b940e6b0887",
-        "price": 69.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "variant 21a42426-d69d-4fe1-958a-7b940e6b0887 price not found (default variant not used)"
       },
       "Retatrutide | Vial | 20mg": {
         "url": "https://midwestpeptide.com/products/glp-3-rt?variant=d185705c-48cc-4dc2-a399-d38e11e46774",
-        "price": 134.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "variant d185705c-48cc-4dc2-a399-d38e11e46774 price not found (default variant not used)"
       },
       "Retatrutide | Vial | 30mg": {
         "url": "https://midwestpeptide.com/products/glp-3-rt?variant=37249d34-0184-46ed-b9e7-37532d0e375a",
-        "price": 199.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "variant 37249d34-0184-46ed-b9e7-37532d0e375a price not found (default variant not used)"
       },
       "DSIP | Vial | 10mg": {
         "url": "https://midwestpeptide.com/products/dsip",
@@ -1230,10 +1233,9 @@
     "American Peptides": {
       "BPC-157 | Vial | 5mg": {
         "url": "https://www.americanpeptides.us/products/bpc-157",
-        "price": 48.0,
-        "regular_price": 60.0,
-        "error": null,
-        "override": true
+        "price": 60.0,
+        "regular_price": null,
+        "error": null
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/bpc-157?variant=48140415762587",
@@ -1243,10 +1245,9 @@
       },
       "TB-500 | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/tb-500",
-        "price": 80.0,
-        "regular_price": 100.0,
-        "error": null,
-        "override": true
+        "price": 100.0,
+        "regular_price": null,
+        "error": null
       },
       "CJC-1295 | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/cjc-1295-no-dac",
@@ -1304,10 +1305,9 @@
       },
       "Tirzepatide | Vial | 20mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide?variant=48622112800923",
-        "price": 80.0,
-        "regular_price": 170.0,
-        "error": null,
-        "override": true
+        "price": 170.0,
+        "regular_price": null,
+        "error": null
       },
       "Tirzepatide | Vial | 30mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
@@ -1317,10 +1317,9 @@
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide",
-        "price": 84.0,
-        "regular_price": 105.0,
-        "error": null,
-        "override": true
+        "price": 105.0,
+        "regular_price": null,
+        "error": null
       },
       "Retatrutide | Vial | 20mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179",
@@ -1354,10 +1353,9 @@
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://www.americanpeptides.us/products/glow-mix",
-        "price": 120.0,
-        "regular_price": 150.0,
-        "error": null,
-        "override": true
+        "price": 150.0,
+        "regular_price": null,
+        "error": null
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://www.americanpeptides.us/products/klow-blend",
@@ -1373,10 +1371,9 @@
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://www.americanpeptides.us/products/copper-binding-peptide-ghk-cu",
-        "price": 40.0,
-        "regular_price": 50.0,
-        "error": null,
-        "override": true
+        "price": 50.0,
+        "regular_price": null,
+        "error": null
       },
       "Selank | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/selank",
@@ -1613,6 +1610,18 @@
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://orbitrexpeptide.is/product/klow-80-blend/",
         "price": 119.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Survodutide | Vial | 10mg": {
+        "url": "https://orbitrexpeptide.is/product/survodutide-10mg/",
+        "price": 99.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Adamax | Vial | 10mg": {
+        "url": "https://orbitrexpeptide.is/product/adamax-10mg/",
+        "price": 79.99,
         "regular_price": null,
         "error": null
       }
