@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-05T18:44:29Z",
+  "checked_at": "2026-10-06T16:13:02Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1409,97 +1409,97 @@
     "Offline Peptides": {
       "5-Amino-1MQ | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/5-amino-1mq/",
-        "price": 49.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "5-Amino-1MQ | Vial | 50mg": {
         "url": "https://offlinepeptides.com/product/5-amino-1mq/",
-        "price": 49.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "AOD-9604 | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/aod-9604/",
-        "price": 49.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "BPC-157 | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/bpc-157/",
-        "price": 31.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/bpc-157/",
-        "price": 31.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/epithalon/",
-        "price": 39.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://offlinepeptides.com/product/ghk-cu/",
-        "price": 35.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 100mg": {
         "url": "https://offlinepeptides.com/product/ghk-cu/",
-        "price": 35.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/mots-c/",
-        "price": 42.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "MOTS-C | Vial | 40mg": {
         "url": "https://offlinepeptides.com/product/mots-c/",
-        "price": 42.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "TB-500 | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/tb-500/",
-        "price": 36.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "TB-500 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/tb-500/",
-        "price": 36.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "DSIP | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/dsip/",
-        "price": 39.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://offlinepeptides.com/product/glow-blend/",
-        "price": 79.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/ipamorelin/",
-        "price": 45.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/kisspeptin/",
-        "price": 49.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
@@ -1511,31 +1511,31 @@
       },
       "KPV | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/kpv/",
-        "price": 41.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "LL-37 | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/ll-37/",
-        "price": 35.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "NAD+ | Vial | 500mg": {
         "url": "https://offlinepeptides.com/product/nad/",
-        "price": 51.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "Selank | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/selank/",
-        "price": 39.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "Semax | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/semax/",
-        "price": 39.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
@@ -1547,13 +1547,13 @@
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/thymosin-alpha-1/",
-        "price": 49.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       },
       "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/vip/",
-        "price": 49.0,
+        "price": 0.0,
         "regular_price": null,
         "error": null
       }
