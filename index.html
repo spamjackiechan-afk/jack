@@ -16,7 +16,16 @@
 <meta name="twitter:title" content="Discount Peptides — Compare Research Peptide Prices Across 12 Vendors">
 <meta name="twitter:description" content="Compare research peptide prices across 12 vendors with live daily price checks and discount codes. BPC-157, TB-500, GHK-Cu and 70+ more.">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2309100E'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%2379D9B8' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#09100E">
+<meta property="og:image" content="https://discountspeptides.com/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Discount Peptides. Independent vendor comparison.">
+<meta name="twitter:image" content="https://discountspeptides.com/social-preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -73,6 +82,15 @@
     line-height:0.98;
     margin:0 0 8px;
     letter-spacing:-0.01em;
+  }
+  h1.title .brand{
+    display:inline-flex; align-items:center; gap:14px;
+    text-decoration:none; color:inherit;
+  }
+  h1.title .brand-mark{ height:0.6em; width:auto; flex:none; }
+  @media (max-width:420px){
+    h1.title .brand{ gap:10px; }
+    h1.title{ font-size:31px; }
   }
   h1.title .brand-word{
     font-weight:500;
@@ -868,7 +886,7 @@
     </div>
 
     <div class="mast-top">
-      <h1 class="title"><span class="brand-word">Discount</span> <em>Peptides.</em></h1>
+      <h1 class="title"><a href="/" class="brand"><img src="/logo-symbol.svg" alt="" aria-hidden="true" class="brand-mark"><span class="brand-word">Discount</span> <em>Peptides.</em></a></h1>
       <nav class="mast-nav">
         <a href="about.html" id="aboutLink">About</a>
         <a href="testing.html" id="testingLink">Testing</a>
@@ -914,8 +932,8 @@
   </div>
 
   <div class="signup-band" id="signupBand">
-    <h3>Save your favourite peptides so you don't loose them</h3>
-    <p>Press the star on all peptides you want saved. We ask for your email so you get notified on prices changes, speical deals, discounts and vendors on your saved peptides.</p>
+    <h3>Save your favourite peptides so you don't lose them</h3>
+    <p>Press the star on all peptides you want saved. We ask for your email so you get notified on price changes, special deals, discounts and vendors on your saved peptides.</p>
     <div class="signup-row">
       <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
       <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;"><input type="text" id="signupWebsite" name="website" tabindex="-1" autocomplete="off"></div>
