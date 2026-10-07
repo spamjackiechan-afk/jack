@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-06T16:13:02Z",
+  "checked_at": "2026-10-07T16:48:41Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -178,7 +178,7 @@
       },
       "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
         "url": "https://royal-peptides.com/shop/wolverine-bpc-157-tb-500-blend/",
-        "price": 75.0,
+        "price": 70.0,
         "regular_price": null,
         "error": null
       },
@@ -1409,13 +1409,13 @@
     "Offline Peptides": {
       "5-Amino-1MQ | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/5-amino-1mq/",
-        "price": 0.0,
+        "price": 49.0,
         "regular_price": null,
         "error": null
       },
       "5-Amino-1MQ | Vial | 50mg": {
         "url": "https://offlinepeptides.com/product/5-amino-1mq/",
-        "price": 0.0,
+        "price": 49.0,
         "regular_price": null,
         "error": null
       },
@@ -1469,19 +1469,19 @@
       },
       "TB-500 | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/tb-500/",
-        "price": 0.0,
+        "price": 36.0,
         "regular_price": null,
         "error": null
       },
       "TB-500 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/tb-500/",
-        "price": 0.0,
+        "price": 36.0,
         "regular_price": null,
         "error": null
       },
       "DSIP | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/dsip/",
-        "price": 0.0,
+        "price": 39.0,
         "regular_price": null,
         "error": null
       },
@@ -1493,13 +1493,13 @@
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/ipamorelin/",
-        "price": 0.0,
+        "price": 45.0,
         "regular_price": null,
         "error": null
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/kisspeptin/",
-        "price": 0.0,
+        "price": 49.0,
         "regular_price": null,
         "error": null
       },
@@ -1529,13 +1529,13 @@
       },
       "Selank | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/selank/",
-        "price": 0.0,
+        "price": 39.0,
         "regular_price": null,
         "error": null
       },
       "Semax | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/semax/",
-        "price": 0.0,
+        "price": 39.0,
         "regular_price": null,
         "error": null
       },
