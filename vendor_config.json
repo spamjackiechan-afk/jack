@@ -152,5 +152,22 @@
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://orbitrexpeptide.is/?ref=Discount&utm_campaign=Discount&utm_medium=referral&utm_source=affiliate",
     "promo_code": "discount"
+  },
+  "Validated Peptides": {
+    "status": "approved",
+    "site_url": "https://validatedpeptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://validatedpeptides.com/r/DISCOUNT",
+    "promo_code": "DISCOUNT",
+    "code_disclosure": "I earn a commission when you use my code.",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "Venmo",
+      "Bitcoin"
+    ],
+    "payment_note": null,
+    "shipping_info": "Free shipping on orders over $150. Ships from within the US; same-day shipping before the 3PM CT cutoff; delivery in 2-5 business days.",
+    "shipping_payment_researched": "2026-10-04"
   }
 }
