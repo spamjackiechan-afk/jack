@@ -399,7 +399,6 @@
       "amount_mg": 10,
       "prices": {
         "UltraLife": 219,
-        "Koi Peptides": 89.95,
         "BioIntegrity Research": 134.0,
         "Alpha Peptides": 45.75
       },
@@ -439,7 +438,6 @@
       "prices": {
         "UltraLife": 89,
         "Core Peptides": 97,
-        "Koi Peptides": 59.95,
         "Purity Peptides": 94.99,
         "BioIntegrity Research": 89.0,
         "Alpha Peptides": 25.99,
@@ -452,7 +450,6 @@
       "notes": null,
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/vial-bpc-157-10mg/",
-        "Koi Peptides": "https://koipeptides.com/product/bpc-157/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/bpc-157",
         "Alpha Peptides": "https://alpha-peptides.com/product/bpc-157/",
         "Midwest Peptide": "https://midwestpeptide.com/products/bpc-157-10mg",
@@ -733,7 +730,6 @@
       "amount_mg": 10,
       "prices": {
         "UltraLife": 109,
-        "Koi Peptides": 49.95,
         "Purity Peptides": 64.99,
         "Royal Peptides": 55,
         "BioIntegrity Research": 114.0,
@@ -746,7 +742,6 @@
       "notes": null,
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/vial-kpv-10mg/",
-        "Koi Peptides": "https://koipeptides.com/product/kpv/",
         "Royal Peptides": "https://royal-peptides.com/shop/kpv-10mg-vial/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/kpv",
         "Licensed Peptides": "https://licensedpeptides.com/product/kpv-10mg/",
@@ -967,7 +962,6 @@
       "amount_mg": 10,
       "prices": {
         "UltraLife": 122,
-        "Koi Peptides": 99.95,
         "Purity Peptides": 89.99,
         "Alpha Peptides": 44.53,
         "Midwest Peptide": 59.99,
@@ -2181,8 +2175,7 @@
       "size": "50/10/10mg",
       "amount_mg": 10,
       "prices": {
-        "Core Peptides": 300,
-        "Koi Peptides": 149.95
+        "Core Peptides": 300
       },
       "lowest": 149.95,
       "notes": null,
@@ -2198,7 +2191,6 @@
       "amount_mg": 80,
       "prices": {
         "UltraLife": 189,
-        "Koi Peptides": 169.95,
         "BioIntegrity Research": 154,
         "Alpha Peptides": 70.79,
         "Royal Peptides": 90,
@@ -2245,7 +2237,6 @@
       "prices": {
         "UltraLife": 89,
         "Core Peptides": 140,
-        "Koi Peptides": 59.95,
         "Alpha Peptides": 31.32,
         "Midwest Peptide": 49.99
       },
@@ -2632,7 +2623,6 @@
       "prices": {
         "UltraLife": 175,
         "Core Peptides": 79,
-        "Koi Peptides": 89.95,
         "Purity Peptides": 139.99,
         "Midwest Peptide": 69.99,
         "American Peptides": 120,
