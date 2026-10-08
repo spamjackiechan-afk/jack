@@ -152,39 +152,5 @@
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://orbitrexpeptide.is/?ref=Discount&utm_campaign=Discount&utm_medium=referral&utm_source=affiliate",
     "promo_code": "discount"
-  },
-  "Validated Peptides": {
-    "status": "approved",
-    "site_url": "https://validatedpeptides.com",
-    "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://validatedpeptides.com/r/DISCOUNT",
-    "promo_code": "DISCOUNT",
-    "code_disclosure": "I earn a commission when you use my code.",
-    "payment_methods": [
-      "Visa",
-      "Mastercard",
-      "Venmo",
-      "Bitcoin"
-    ],
-    "payment_note": null,
-    "shipping_info": "Free shipping on orders over $150. Ships from within the US; same-day shipping before the 3PM CT cutoff; delivery in 2-5 business days.",
-    "shipping_payment_researched": "2026-10-04"
-  },
-  "Amino Club": {
-    "status": "approved",
-    "site_url": "https://www.aminoclub.com",
-    "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://aminoclub.com?utm_source=affiliate_marketing&code=DISCOUNTSPEPTIDES",
-    "promo_code": "DISCOUNTSPEPTIDES",
-    "code_disclosure": "I earn a commission when you use my code.",
-    "payment_methods": [
-      "Visa",
-      "American Express",
-      "Apple Pay",
-      "Google Pay"
-    ],
-    "payment_note": null,
-    "shipping_info": "Free standard shipping on orders over $100 (1-4 business days, tracked/insured). 2-Day and Overnight options at checkout. Orders before 3PM ET Mon-Fri ship same day. US only, all 50 states.",
-    "shipping_payment_researched": "2026-10-04"
   }
 }
