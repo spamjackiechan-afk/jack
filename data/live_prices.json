@@ -533,20 +533,6 @@
         "error": null
       }
     },
-    "Koi Peptides": {
-      "BPC-157 | Vial | 10mg": {
-        "url": "https://koipeptides.com/product/bpc-157/",
-        "price": 49.95,
-        "regular_price": null,
-        "error": null
-      },
-      "KPV | Vial | 10mg": {
-        "url": "https://koipeptides.com/product/kpv/",
-        "price": 34.95,
-        "regular_price": null,
-        "error": null
-      }
-    },
     "Core Peptides": {
       "Oxytocin | Nasal | 10mg": {
         "url": "https://www.corepeptides.com/peptides/oxytocin-10mg/",
