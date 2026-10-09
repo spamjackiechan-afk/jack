@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-08T16:47:17Z",
+  "checked_at": "2026-10-09T16:30:45Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -1293,9 +1293,8 @@
       },
       "Semaglutide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/semaglutide?variant=48978865127579",
-        "price": 90.0,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "variant 48978865127579 price not found (default variant not used)"
       },
       "Tirzepatide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide",
@@ -1311,9 +1310,8 @@
       },
       "Tirzepatide | Vial | 30mg": {
         "url": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
-        "price": 240.0,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "variant 49232786063515 price not found (default variant not used)"
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://www.americanpeptides.us/products/retatrutide",
@@ -1421,19 +1419,19 @@
       },
       "AOD-9604 | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/aod-9604/",
-        "price": 0.0,
+        "price": 49.0,
         "regular_price": null,
         "error": null
       },
       "BPC-157 | Vial | 5mg": {
         "url": "https://offlinepeptides.com/product/bpc-157/",
-        "price": 0.0,
+        "price": 31.0,
         "regular_price": null,
         "error": null
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://offlinepeptides.com/product/bpc-157/",
-        "price": 0.0,
+        "price": 31.0,
         "regular_price": null,
         "error": null
       },
