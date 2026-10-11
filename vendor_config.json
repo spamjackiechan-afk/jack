@@ -152,5 +152,22 @@
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://orbitrexpeptide.is/?ref=Discount&utm_campaign=Discount&utm_medium=referral&utm_source=affiliate",
     "promo_code": "discount"
+  },
+  "AFA Biosciences": {
+    "status": "approved",
+    "site_url": "https://afabiosciences.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://afabiosciences.com/?ref=discounts-peptides",
+    "promo_code": "DISCOUNT",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Card",
+      "Wire transfer",
+      "Crypto"
+    ],
+    "payment_note": "Wire and crypto orders ship once funds have cleared.",
+    "shipping_info": "US only (incl. Puerto Rico, Guam, U.S. Virgin Islands); tracked courier, typically 2\u20135 business days. Card orders: flat $15 shipping, free from $500. Orders by 2 PM ET on business days ship same day.",
+    "shipping_payment_researched": "2026-10-11",
+    "affiliate_path_suffix": null
   }
 }
