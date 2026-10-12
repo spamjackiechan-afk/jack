@@ -17,13 +17,13 @@
     },
     testing: {
       welcome:
-        "You’re on the testing page. I can explain what a COA can (and can’t) prove, how vendor tiers work on this site, or pull research notes for a named peptide. No dosing, no medical advice.",
-      pills: ["What can a COA prove?", "Vendor testing tiers", "Ask about a peptide", "Back to price list"],
+        "You’re on the testing page. I can explain what a COA can (and can’t) prove, how vendors test, or pull research notes for a named peptide. No dosing, no medical advice.",
+      pills: ["What can a COA prove?", "How vendors test", "Ask about a peptide", "Back to price list"],
     },
     suppliers: {
       welcome:
-        "You’re on the suppliers page. I can list who’s on the site, summarize shipping/payment from our supplier notes, or send you to testing tiers and the price list. Catalog facts only — no vendor hype.",
-      pills: ["List suppliers", "Ask about a vendor", "See testing tiers", "Back to peptides"],
+        "You’re on the suppliers page. I can list who’s on the site, summarize shipping/payment from our supplier notes, or send you to the testing page and the price list. Catalog facts only — no vendor hype.",
+      pills: ["List suppliers", "Ask about a vendor", "How vendors test", "Back to peptides"],
     },
   };
 
