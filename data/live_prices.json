@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T19:19:02Z",
+  "checked_at": "2026-10-13T17:11:28Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -246,7 +246,7 @@
       },
       "Epitalon | Nasal | 100mg": {
         "url": "https://biointegrityresearch.com/compounds/epitalon",
-        "price": 159.0,
+        "price": 114.0,
         "regular_price": null,
         "error": null
       },
@@ -264,7 +264,7 @@
       },
       "MOTS-C | Nasal | 20mg": {
         "url": "https://biointegrityresearch.com/compounds/mots-c",
-        "price": 174.0,
+        "price": 119.0,
         "regular_price": null,
         "error": null
       },
@@ -336,7 +336,7 @@
       },
       "Epitalon | Vial | 100mg": {
         "url": "https://biointegrityresearch.com/compounds/epitalon",
-        "price": 159.0,
+        "price": 114.0,
         "regular_price": null,
         "error": null
       },
@@ -390,7 +390,7 @@
       },
       "MOTS-C | Vial | 20mg": {
         "url": "https://biointegrityresearch.com/compounds/mots-c",
-        "price": 174.0,
+        "price": 119.0,
         "regular_price": null,
         "error": null
       },
@@ -450,7 +450,7 @@
       },
       "Epitalon | Oral | 100mg": {
         "url": "https://biointegrityresearch.com/compounds/epitalon",
-        "price": 159.0,
+        "price": 114.0,
         "regular_price": null,
         "error": null
       },
@@ -468,7 +468,7 @@
       },
       "MOTS-C | Oral | 20mg": {
         "url": "https://biointegrityresearch.com/compounds/mots-c",
-        "price": 174.0,
+        "price": 119.0,
         "regular_price": null,
         "error": null
       },
