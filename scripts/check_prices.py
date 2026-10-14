@@ -144,6 +144,14 @@ VENDORS = {
                                   # block has "Disallow:" (empty). /product/ pages are allowed. Variable
                                   # pages are pinned with ?attribute_strength=<size>.
     },
+    "True Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt allows / for all agents except /my-account/,
+                                  # /checkout/, /order-confirmation/, /cart/, /recover/ (and blocks a list
+                                  # of archive/SEO bots, not us). /product/ pages are allowed. Not
+                                  # WooCommerce; size variants can't be pinned by URL, so only cards whose
+                                  # default (first) variant is the listed size are included.
+    },
 }
 
 HEADERS = {
