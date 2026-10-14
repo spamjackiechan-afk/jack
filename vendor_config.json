@@ -236,5 +236,16 @@
     ],
     "shipping_info": "Ships within the US. Standard $10 (3-5 business days) or Priority $15 (2-3 business days); free Priority on US orders over $250. Alaska/Hawaii higher. Orders by 1:00 PM PT on business days ship same day.",
     "shipping_payment_researched": "2026-10-14"
+  },
+  "Crownwell Research": {
+    "status": "approved",
+    "site_url": "https://crownwellresearch.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://crownwellresearch.com/afref/a169/",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Ships within the US only. Standard (3-5 business days), Expedited (2 business days) and Overnight options at checkout; costs shown at checkout. Orders before 2:00 PM ET typically dispatch same day. All sales final.",
+    "shipping_payment_researched": "2026-10-14"
   }
 }
