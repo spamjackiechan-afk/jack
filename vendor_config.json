@@ -247,5 +247,16 @@
     "payment_methods": null,
     "shipping_info": "Ships within the US only. Standard (3-5 business days), Expedited (2 business days) and Overnight options at checkout; costs shown at checkout. Orders before 2:00 PM ET typically dispatch same day. All sales final.",
     "shipping_payment_researched": "2026-10-14"
+  },
+  "Vertex Labs": {
+    "status": "approved",
+    "site_url": "https://vertexpeptideslab.org",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://vertexpeptideslab.org/?coupon=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Ships across the USA and Puerto Rico via UPS. Free UPS Ground on orders $150+, free UPS 2nd Day Air on $250+, free UPS Next Day Air on $600+. All shipments insured.",
+    "shipping_payment_researched": "2026-10-14"
   }
 }
