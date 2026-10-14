@@ -124,6 +124,13 @@ VENDORS = {
                                   # listed at their default (lowest) size only, which is what the page's
                                   # JSON-LD lowPrice shows.
     },
+    "Aero Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt is "User-Agent: * / Allow: / / Disallow: /track-order /
+                                  # Disallow: /api/". /product/ pages are allowed. Only single-size pages are
+                                  # listed; the multi-size TB500 page is left out because the checker can't
+                                  # pin a size on this headless storefront.
+    },
 }
 
 HEADERS = {

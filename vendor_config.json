@@ -191,5 +191,16 @@
     ],
     "shipping_info": "Free shipping on US orders $75+. Same-day dispatch before 2 PM on business days; USPS Priority or UPS 2-Day (2-4 business days), FedEx Overnight available. Also ships to Canada, UK and select European countries via DHL Express.",
     "shipping_payment_researched": "2026-10-14"
+  },
+  "Aero Peptides": {
+    "status": "approved",
+    "site_url": "https://aeropeptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://aeropeptides.com/?ref=vdtphiqc",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Ships to all 50 US states; international case-by-case (contact first). Free US shipping over $150 via USPS Priority; otherwise calculated at checkout. Orders before 12:00 PM ET on business days typically ship same day. USPS Priority (1-3 days), Priority Express, or UPS Ground.",
+    "shipping_payment_researched": "2026-10-14"
   }
 }
