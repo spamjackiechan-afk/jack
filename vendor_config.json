@@ -219,5 +219,22 @@
     ],
     "shipping_info": "Ships within the US only. Standard $9.99 (USPS Priority, 3-5 business days), free on orders $150+; Expedited $24.99 (USPS Priority Mail Express, 2 business days). Orders before 2:00 PM ET on business days typically ship same day.",
     "shipping_payment_researched": "2026-10-14"
+  },
+  "Endura Peptides": {
+    "status": "approved",
+    "site_url": "https://endurapeptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://endurapeptides.com/?ref=sytjgnca",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Credit card (no Mastercard)",
+      "Apple Pay",
+      "Google Pay",
+      "Venmo",
+      "Zelle"
+    ],
+    "shipping_info": "Ships within the US. Standard $10 (3-5 business days) or Priority $15 (2-3 business days); free Priority on US orders over $250. Alaska/Hawaii higher. Orders by 1:00 PM PT on business days ship same day.",
+    "shipping_payment_researched": "2026-10-14"
   }
 }
