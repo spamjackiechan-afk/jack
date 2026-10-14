@@ -503,5 +503,20 @@
     "TB-500 | Vial | 10mg": "https://researchpeptideslab.com/shop/tb-500-research-peptide",
     "Tesamorelin | Vial | 10mg": "https://researchpeptideslab.com/shop/tesamorelin-research-peptide",
     "Thymosin Alpha-1 | Vial | 10mg": "https://researchpeptideslab.com/shop/thymosin-alpha-1-research-peptide"
+  },
+  "Endura Peptides": {
+    "SS-31 / Elamipretide | Vial | 10mg": "https://endurapeptides.com/product/ss-31/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack",
+    "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": "https://endurapeptides.com/product/ipamorelin-cjc-1295/?attribute_pa_size=5-5-mg&attribute_pa_quantity=1-pack",
+    "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": "https://endurapeptides.com/product/klow/?attribute_pa_size=50-10-10-10-mg&attribute_pa_quantity=1-pack",
+    "MOTS-C | Vial | 10mg": "https://endurapeptides.com/product/mots-c/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack",
+    "MOTS-C | Vial | 40mg": "https://endurapeptides.com/product/mots-c/?attribute_pa_size=40-mg&attribute_pa_quantity=1-pack",
+    "GHK-Cu (Copper Peptide) | Vial | 50mg": "https://endurapeptides.com/product/ghk-cu/?attribute_pa_size=50-mg&attribute_pa_quantity=1-pack",
+    "GHK-Cu (Copper Peptide) | Vial | 100mg": "https://endurapeptides.com/product/ghk-cu/?attribute_pa_size=100-mg&attribute_pa_quantity=1-pack",
+    "Tirzepatide | Vial | 30mg": "https://endurapeptides.com/product/glp-2t/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack",
+    "Retatrutide | Vial | 10mg": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack",
+    "Retatrutide | Vial | 20mg": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=20-mg&attribute_pa_quantity=1-pack",
+    "Retatrutide | Vial | 30mg": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack",
+    "BPC-157 / TB-500 blend | Vial | 20mg (10/10mg)": "https://endurapeptides.com/product/bpc-157-tb-500/?attribute_pa_size=10-10-mg&attribute_pa_quantity=1-pack",
+    "NAD+ | Vial | 500mg": "https://endurapeptides.com/product/nad-plus/?attribute_pa_size=500-mg&attribute_pa_quantity=1-pack"
   }
 }

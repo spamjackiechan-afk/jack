@@ -131,6 +131,13 @@ VENDORS = {
                                   # listed; the multi-size TB500 page is left out because the checker can't
                                   # pin a size on this headless storefront.
     },
+    "Endura Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: standard WooCommerce robots.txt (wc-logs, transient files,
+                                  # add-to-cart params, /wp-admin/); Yoast block has "Disallow:" (empty).
+                                  # /product/ pages are allowed. Variable pages are pinned with
+                                  # ?attribute_pa_size=...&attribute_pa_quantity=1-pack.
+    },
 }
 
 HEADERS = {

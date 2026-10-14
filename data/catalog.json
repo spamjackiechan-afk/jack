@@ -575,7 +575,8 @@
         "AFA Biosciences": 23.99,
         "Synthrolab": 44.88,
         "Lumera Labs": 29.99,
-        "Research Peptides Lab": 75.0
+        "Research Peptides Lab": 75.0,
+        "Endura Peptides": 38.0
       },
       "lowest": 23.99,
       "notes": null,
@@ -589,7 +590,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/ghk-cu",
         "Synthrolab": "https://synthrolab.com/product/ghk-cu-50mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/ghk-cu",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/ghk-cu-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/ghk-cu-research-peptide",
+        "Endura Peptides": "https://endurapeptides.com/product/ghk-cu/?attribute_pa_size=50-mg&attribute_pa_quantity=1-pack"
       },
       "category": "Cellular & Longevity"
     },
@@ -849,7 +851,8 @@
         "Synthrolab": 88.88,
         "Lumera Labs": 48.99,
         "Aero Peptides": 39.99,
-        "Research Peptides Lab": 75.0
+        "Research Peptides Lab": 75.0,
+        "Endura Peptides": 41.0
       },
       "lowest": 27.55,
       "notes": null,
@@ -863,7 +866,8 @@
         "Synthrolab": "https://synthrolab.com/product/mots-c-10mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/mots-c",
         "Aero Peptides": "https://aeropeptides.com/product/mots-c-10mg",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/mots-c-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/mots-c-research-peptide",
+        "Endura Peptides": "https://endurapeptides.com/product/mots-c/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack"
       },
       "category": "Cellular & Longevity"
     },
@@ -896,15 +900,17 @@
         "UltraLife": 281,
         "American Peptides": 160,
         "Offline Peptides": 84.0,
-        "AFA Biosciences": 106.99
+        "AFA Biosciences": 106.99,
+        "Endura Peptides": 78.0
       },
-      "lowest": 84.0,
+      "lowest": 78.0,
       "notes": null,
       "category": "Cellular & Longevity",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/mots-c?variant=48882685116571",
         "Offline Peptides": "https://offlinepeptides.com/product/mots-c/",
-        "AFA Biosciences": "https://afabiosciences.com/products/mots-c"
+        "AFA Biosciences": "https://afabiosciences.com/products/mots-c",
+        "Endura Peptides": "https://endurapeptides.com/product/mots-c/?attribute_pa_size=40-mg&attribute_pa_quantity=1-pack"
       }
     },
     {
@@ -924,7 +930,8 @@
         "AFA Biosciences": 56.99,
         "Synthrolab": 88.88,
         "Lumera Labs": 68.99,
-        "Research Peptides Lab": 75.0
+        "Research Peptides Lab": 75.0,
+        "Endura Peptides": 60.0
       },
       "lowest": 30.52,
       "notes": null,
@@ -938,7 +945,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/nad-plus",
         "Synthrolab": "https://synthrolab.com/product/nad-500mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/nad",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/nad-plus-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/nad-plus-research-peptide",
+        "Endura Peptides": "https://endurapeptides.com/product/nad-plus/?attribute_pa_size=500-mg&attribute_pa_quantity=1-pack"
       },
       "category": "Cellular & Longevity"
     },
@@ -1077,7 +1085,8 @@
         "Alpha Peptides": 35.79,
         "Midwest Peptide": 59.99,
         "AFA Biosciences": 34.99,
-        "Aero Peptides": 64.99
+        "Aero Peptides": 64.99,
+        "Endura Peptides": 42.0
       },
       "lowest": 34.99,
       "notes": null,
@@ -1087,7 +1096,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/ss-31/",
         "Midwest Peptide": "https://midwestpeptide.com/products/ss-31",
         "AFA Biosciences": "https://afabiosciences.com/products/ss-31",
-        "Aero Peptides": "https://aeropeptides.com/product/ss-31"
+        "Aero Peptides": "https://aeropeptides.com/product/ss-31",
+        "Endura Peptides": "https://endurapeptides.com/product/ss-31/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack"
       },
       "category": "Cellular & Longevity"
     },
@@ -1314,7 +1324,8 @@
         "AFA Biosciences": 48.99,
         "Synthrolab": 78.88,
         "Lumera Labs": 69.99,
-        "Aero Peptides": 69.99
+        "Aero Peptides": 69.99,
+        "Endura Peptides": 56.0
       },
       "lowest": 35.57,
       "notes": null,
@@ -1327,7 +1338,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/cjc-1295-ipamorelin-blend",
         "Synthrolab": "https://synthrolab.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/cjc-1295-no-dac-ipamorelin",
-        "Aero Peptides": "https://aeropeptides.com/product/cjc-1295-no-dac-5mg-ipa-5mg"
+        "Aero Peptides": "https://aeropeptides.com/product/cjc-1295-no-dac-5mg-ipa-5mg",
+        "Endura Peptides": "https://endurapeptides.com/product/ipamorelin-cjc-1295/?attribute_pa_size=5-5-mg&attribute_pa_quantity=1-pack"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -1437,7 +1449,8 @@
         "Midwest Peptide": 57.99,
         "Offline Peptides": 49.0,
         "AFA Biosciences": 46.99,
-        "Aero Peptides": 44.99
+        "Aero Peptides": 44.99,
+        "Endura Peptides": 50.0
       },
       "lowest": 44.99,
       "notes": null,
@@ -1446,7 +1459,8 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/ghk-cu-50mg?variant=c7c41895-e737-43d0-967f-79d61bde1270",
         "Offline Peptides": "https://offlinepeptides.com/product/ghk-cu/",
         "AFA Biosciences": "https://afabiosciences.com/products/ghk-cu",
-        "Aero Peptides": "https://aeropeptides.com/product/ghk-cu-100mg"
+        "Aero Peptides": "https://aeropeptides.com/product/ghk-cu-100mg",
+        "Endura Peptides": "https://endurapeptides.com/product/ghk-cu/?attribute_pa_size=100-mg&attribute_pa_quantity=1-pack"
       }
     },
     {
@@ -2445,15 +2459,17 @@
       "prices": {
         "Purity Peptides": 199.99,
         "Midwest Peptide": 109.99,
-        "Synthrolab": 108.88
+        "Synthrolab": 108.88,
+        "Endura Peptides": 58.0
       },
-      "lowest": 108.88,
+      "lowest": 58.0,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bpc-157-tb-500-blend-10mg-bpc-157-10mg-tb-500-10mg",
         "Midwest Peptide": "https://midwestpeptide.com/products/bpc-157-tb-500-wolverine",
-        "Synthrolab": "https://synthrolab.com/product/bpc-157-10mg-tb-500-10mg/"
+        "Synthrolab": "https://synthrolab.com/product/bpc-157-10mg-tb-500-10mg/",
+        "Endura Peptides": "https://endurapeptides.com/product/bpc-157-tb-500/?attribute_pa_size=10-10-mg&attribute_pa_quantity=1-pack"
       }
     },
     {
@@ -2514,9 +2530,10 @@
         "Orbitrex Peptide": 109.99,
         "AFA Biosciences": 80.99,
         "Lumera Labs": 119.99,
-        "Research Peptides Lab": 165.0
+        "Research Peptides Lab": 165.0,
+        "Endura Peptides": 75.0
       },
-      "lowest": 80.99,
+      "lowest": 75.0,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
@@ -2526,7 +2543,8 @@
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/klow-80-blend/",
         "AFA Biosciences": "https://afabiosciences.com/products/klow-blend",
         "Lumera Labs": "https://mylumeralabs.com/product/klow",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/klow-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/klow-research-peptide",
+        "Endura Peptides": "https://endurapeptides.com/product/klow/?attribute_pa_size=50-10-10-10-mg&attribute_pa_quantity=1-pack"
       }
     },
     {
@@ -2937,9 +2955,10 @@
         "Synthrolab": 78.88,
         "Lumera Labs": 68.99,
         "Aero Peptides": 79.99,
-        "Research Peptides Lab": 85.0
+        "Research Peptides Lab": 85.0,
+        "Endura Peptides": 43.0
       },
-      "lowest": 44.09,
+      "lowest": 43.0,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
@@ -2950,7 +2969,8 @@
         "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=10mg",
         "Lumera Labs": "https://mylumeralabs.com/product/glp-3rt",
         "Aero Peptides": "https://aeropeptides.com/product/retatrutide-10mg",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/glp-3rt"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/glp-3rt",
+        "Endura Peptides": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack"
       }
     },
     {
@@ -2964,16 +2984,18 @@
         "American Peptides": 200,
         "UltraLife": 289,
         "AFA Biosciences": 109.99,
-        "Synthrolab": 88.88
+        "Synthrolab": 88.88,
+        "Endura Peptides": 75.9
       },
-      "lowest": 88.88,
+      "lowest": 75.9,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=d185705c-48cc-4dc2-a399-d38e11e46774",
         "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179",
         "AFA Biosciences": "https://afabiosciences.com/products/glp-3-rt",
-        "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=20mg"
+        "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=20mg",
+        "Endura Peptides": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=20-mg&attribute_pa_quantity=1-pack"
       }
     },
     {
@@ -2986,16 +3008,18 @@
         "Midwest Peptide": 199.99,
         "American Peptides": 240,
         "AFA Biosciences": 163.99,
-        "Synthrolab": 107.88
+        "Synthrolab": 107.88,
+        "Endura Peptides": 84.0
       },
-      "lowest": 107.88,
+      "lowest": 84.0,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=37249d34-0184-46ed-b9e7-37532d0e375a",
         "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48622112637083",
         "AFA Biosciences": "https://afabiosciences.com/products/glp-3-rt",
-        "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=30mg"
+        "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=30mg",
+        "Endura Peptides": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack"
       }
     },
     {
@@ -3299,14 +3323,16 @@
       "prices": {
         "Midwest Peptide": 79.99,
         "American Peptides": 240,
-        "Synthrolab": 53.88
+        "Synthrolab": 53.88,
+        "Endura Peptides": 60.0
       },
       "lowest": 53.88,
       "notes": null,
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-2-tz",
         "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
-        "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=30mg"
+        "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=30mg",
+        "Endura Peptides": "https://endurapeptides.com/product/glp-2t/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack"
       },
       "category": "Metabolic & Weight"
     },
