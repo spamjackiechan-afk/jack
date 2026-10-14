@@ -152,6 +152,14 @@ VENDORS = {
                                   # WooCommerce; size variants can't be pinned by URL, so only cards whose
                                   # default (first) variant is the listed size are included.
     },
+    "Peptide Express": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt "Allow: /" for *; disallows only /admin, /dashboard,
+                                  # /api/ (except the public product/COA JSON), /owner, /mail,
+                                  # /partner/dashboard, /r/, /ref/, /p/. /catalog/ pages are allowed.
+                                  # Not WooCommerce; ?variant=<id> is not honoured by check_product, so only
+                                  # cards whose default (first) variant is the listed size are included.
+    },
 }
 
 HEADERS = {
