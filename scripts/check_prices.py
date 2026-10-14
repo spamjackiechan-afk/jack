@@ -138,6 +138,12 @@ VENDORS = {
                                   # /product/ pages are allowed. Variable pages are pinned with
                                   # ?attribute_pa_size=...&attribute_pa_quantity=1-pack.
     },
+    "Vertex Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: standard WooCommerce robots.txt plus a wpo json file; Yoast
+                                  # block has "Disallow:" (empty). /product/ pages are allowed. Variable
+                                  # pages are pinned with ?attribute_strength=<size>.
+    },
 }
 
 HEADERS = {

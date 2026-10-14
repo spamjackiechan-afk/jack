@@ -452,7 +452,8 @@
         "Lumera Labs": 39.99,
         "Aero Peptides": 44.99,
         "Research Peptides Lab": 75.0,
-        "Crownwell Research": 38.0
+        "Crownwell Research": 38.0,
+        "Vertex Labs": 69.0
       },
       "lowest": 25.99,
       "notes": null,
@@ -469,7 +470,8 @@
         "Lumera Labs": "https://mylumeralabs.com/product/bpc-157",
         "Aero Peptides": "https://aeropeptides.com/product/bpc-157-10mg",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/bpc-157-research-peptide",
-        "Crownwell Research": "https://crownwellresearch.com/product/bpc-157/"
+        "Crownwell Research": "https://crownwellresearch.com/product/bpc-157/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/bpc-157/?attribute_strength=10mg"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -502,7 +504,8 @@
         "Royal Peptides": 45,
         "Alpha Peptides": 21.45,
         "Offline Peptides": 39.0,
-        "AFA Biosciences": 23.99
+        "AFA Biosciences": 23.99,
+        "Vertex Labs": 59.0
       },
       "lowest": 21.45,
       "notes": null,
@@ -510,7 +513,8 @@
         "Royal Peptides": "https://royal-peptides.com/shop/dsip-5mg-vial/",
         "Alpha Peptides": "https://alpha-peptides.com/product/dsip/",
         "Offline Peptides": "https://offlinepeptides.com/product/dsip/",
-        "AFA Biosciences": "https://afabiosciences.com/products/dsip"
+        "AFA Biosciences": "https://afabiosciences.com/products/dsip",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/dsip/"
       },
       "category": "Cognitive & Neurological"
     },
@@ -608,7 +612,8 @@
         "Alpha Peptides": 36.83,
         "Midwest Peptide": 59.99,
         "AFA Biosciences": 48.99,
-        "Aero Peptides": 74.99
+        "Aero Peptides": 74.99,
+        "Vertex Labs": 129.0
       },
       "lowest": 36.83,
       "notes": null,
@@ -617,7 +622,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/glutathione/",
         "Midwest Peptide": "https://midwestpeptide.com/products/glutathione-1500mg",
         "AFA Biosciences": "https://afabiosciences.com/products/glutathione",
-        "Aero Peptides": "https://aeropeptides.com/product/glutathione-1500mg"
+        "Aero Peptides": "https://aeropeptides.com/product/glutathione-1500mg",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glutathione/?attribute_strength=1500mg"
       }
     },
     {
@@ -703,7 +709,8 @@
         "AFA Biosciences": 56.99,
         "Lumera Labs": 89.99,
         "Aero Peptides": 69.99,
-        "Research Peptides Lab": 50.0
+        "Research Peptides Lab": 50.0,
+        "Vertex Labs": 69.0
       },
       "lowest": 45.47,
       "notes": null,
@@ -716,7 +723,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/igf-1-lr3",
         "Lumera Labs": "https://mylumeralabs.com/product/igf-1-lr3",
         "Aero Peptides": "https://aeropeptides.com/product/igf1-lr3",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/igf-1-lr3-growth-factor"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/igf-1-lr3-growth-factor",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/igf-1lr3/"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -783,7 +791,8 @@
         "Offline Peptides": 41.0,
         "AFA Biosciences": 31.99,
         "Aero Peptides": 39.99,
-        "Crownwell Research": 36.0
+        "Crownwell Research": 36.0,
+        "Vertex Labs": 59.0
       },
       "lowest": 25.25,
       "notes": null,
@@ -797,7 +806,8 @@
         "Offline Peptides": "https://offlinepeptides.com/product/kpv/",
         "AFA Biosciences": "https://afabiosciences.com/products/kpv",
         "Aero Peptides": "https://aeropeptides.com/product/kpv-10mg",
-        "Crownwell Research": "https://crownwellresearch.com/product/kpv/"
+        "Crownwell Research": "https://crownwellresearch.com/product/kpv/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/kpv/"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -886,14 +896,16 @@
         "UltraLife": 169,
         "Purity Peptides": 99.99,
         "BioIntegrity Research": 174.0,
-        "AFA Biosciences": 40.99
+        "AFA Biosciences": 40.99,
+        "Vertex Labs": 79.0
       },
       "lowest": 40.99,
       "notes": null,
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/vial-mots-c-20mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/mots-c",
-        "AFA Biosciences": "https://afabiosciences.com/products/mots-c"
+        "AFA Biosciences": "https://afabiosciences.com/products/mots-c",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/mots-c/?attribute_strength=20mg"
       },
       "category": "Cellular & Longevity"
     },
@@ -907,7 +919,8 @@
         "American Peptides": 160,
         "Offline Peptides": 84.0,
         "AFA Biosciences": 106.99,
-        "Endura Peptides": 78.0
+        "Endura Peptides": 78.0,
+        "Vertex Labs": 129.0
       },
       "lowest": 78.0,
       "notes": null,
@@ -916,7 +929,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/mots-c?variant=48882685116571",
         "Offline Peptides": "https://offlinepeptides.com/product/mots-c/",
         "AFA Biosciences": "https://afabiosciences.com/products/mots-c",
-        "Endura Peptides": "https://endurapeptides.com/product/mots-c/?attribute_pa_size=40-mg&attribute_pa_quantity=1-pack"
+        "Endura Peptides": "https://endurapeptides.com/product/mots-c/?attribute_pa_size=40-mg&attribute_pa_quantity=1-pack",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/mots-c/?attribute_strength=40mg"
       }
     },
     {
@@ -938,7 +952,8 @@
         "Lumera Labs": 68.99,
         "Research Peptides Lab": 75.0,
         "Endura Peptides": 60.0,
-        "Crownwell Research": 55.0
+        "Crownwell Research": 55.0,
+        "Vertex Labs": 79.0
       },
       "lowest": 30.52,
       "notes": null,
@@ -954,7 +969,8 @@
         "Lumera Labs": "https://mylumeralabs.com/product/nad",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/nad-plus-research-peptide",
         "Endura Peptides": "https://endurapeptides.com/product/nad-plus/?attribute_pa_size=500-mg&attribute_pa_quantity=1-pack",
-        "Crownwell Research": "https://crownwellresearch.com/product/nad/"
+        "Crownwell Research": "https://crownwellresearch.com/product/nad/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/nad/?attribute_strength=500mg"
       },
       "category": "Cellular & Longevity"
     },
@@ -971,7 +987,8 @@
         "Alpha Peptides": 22.07,
         "AFA Biosciences": 23.99,
         "Lumera Labs": 29.99,
-        "Research Peptides Lab": 55.0
+        "Research Peptides Lab": 55.0,
+        "Vertex Labs": 79.0
       },
       "lowest": 22.07,
       "notes": null,
@@ -981,7 +998,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/pt-141/",
         "AFA Biosciences": "https://afabiosciences.com/products/pt-141",
         "Lumera Labs": "https://mylumeralabs.com/product/pt-141",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/pt-141-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/pt-141-research-peptide",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/pt-141/"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -1003,7 +1021,8 @@
         "AFA Biosciences": 23.99,
         "Lumera Labs": 34.99,
         "Research Peptides Lab": 60.0,
-        "Crownwell Research": 45.0
+        "Crownwell Research": 45.0,
+        "Vertex Labs": 69.0
       },
       "lowest": 23.15,
       "notes": null,
@@ -1019,7 +1038,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/selank",
         "Lumera Labs": "https://mylumeralabs.com/product/selank-10mg",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/selank-research-peptide",
-        "Crownwell Research": "https://crownwellresearch.com/product/selank/"
+        "Crownwell Research": "https://crownwellresearch.com/product/selank/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/selank/"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1039,7 +1059,8 @@
         "American Peptides": 65,
         "AFA Biosciences": 23.99,
         "Lumera Labs": 34.99,
-        "Aero Peptides": 44.99
+        "Aero Peptides": 44.99,
+        "Vertex Labs": 69.0
       },
       "lowest": 20.84,
       "notes": null,
@@ -1053,7 +1074,8 @@
         "Offline Peptides": "https://offlinepeptides.com/product/semax/",
         "AFA Biosciences": "https://afabiosciences.com/products/semax",
         "Lumera Labs": "https://mylumeralabs.com/product/semax",
-        "Aero Peptides": "https://aeropeptides.com/product/semax-10mg"
+        "Aero Peptides": "https://aeropeptides.com/product/semax-10mg",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/semax/"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1096,7 +1118,8 @@
         "Midwest Peptide": 59.99,
         "AFA Biosciences": 34.99,
         "Aero Peptides": 64.99,
-        "Endura Peptides": 42.0
+        "Endura Peptides": 42.0,
+        "Vertex Labs": 59.0
       },
       "lowest": 34.99,
       "notes": null,
@@ -1107,7 +1130,8 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/ss-31",
         "AFA Biosciences": "https://afabiosciences.com/products/ss-31",
         "Aero Peptides": "https://aeropeptides.com/product/ss-31",
-        "Endura Peptides": "https://endurapeptides.com/product/ss-31/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack"
+        "Endura Peptides": "https://endurapeptides.com/product/ss-31/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/ss-31/"
       },
       "category": "Cellular & Longevity"
     },
@@ -1220,7 +1244,8 @@
         "AFA Biosciences": 40.99,
         "Lumera Labs": 48.99,
         "Research Peptides Lab": 50.0,
-        "Crownwell Research": 39.0
+        "Crownwell Research": 39.0,
+        "Vertex Labs": 59.0
       },
       "lowest": 39.0,
       "notes": null,
@@ -1231,7 +1256,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/aod-9604",
         "Lumera Labs": "https://mylumeralabs.com/product/aod-9604",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/aod-9604-research-peptide",
-        "Crownwell Research": "https://crownwellresearch.com/product/aod9604/"
+        "Crownwell Research": "https://crownwellresearch.com/product/aod9604/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/aod-9604/"
       },
       "category": "Metabolic & Weight"
     },
@@ -1279,14 +1305,16 @@
       "prices": {
         "Purity Peptides": 59.99,
         "American Peptides": 60,
-        "Offline Peptides": 31.0
+        "Offline Peptides": 31.0,
+        "Vertex Labs": 49.0
       },
       "lowest": 31.0,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/bpc-157",
-        "Offline Peptides": "https://offlinepeptides.com/product/bpc-157/"
+        "Offline Peptides": "https://offlinepeptides.com/product/bpc-157/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/bpc-157/?attribute_strength=5mg"
       }
     },
     {
@@ -1310,7 +1338,8 @@
         "Purity Peptides": 104.99,
         "Licensed Peptides": 91.99,
         "Alpha Peptides": 33.99,
-        "Research Peptides Lab": 50.0
+        "Research Peptides Lab": 50.0,
+        "Vertex Labs": 89.0
       },
       "lowest": 33.99,
       "notes": null,
@@ -1318,7 +1347,8 @@
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/cjc-1295-dac-5mg/",
         "Alpha Peptides": "https://alpha-peptides.com/product/cjc-1295-dac/",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/cjc-1295-dac-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/cjc-1295-dac-research-peptide",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/cjc-1295-with-dac/"
       }
     },
     {
@@ -1337,7 +1367,8 @@
         "Synthrolab": 78.88,
         "Lumera Labs": 69.99,
         "Aero Peptides": 69.99,
-        "Endura Peptides": 56.0
+        "Endura Peptides": 56.0,
+        "Vertex Labs": 99.0
       },
       "lowest": 35.57,
       "notes": null,
@@ -1351,7 +1382,8 @@
         "Synthrolab": "https://synthrolab.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/cjc-1295-no-dac-ipamorelin",
         "Aero Peptides": "https://aeropeptides.com/product/cjc-1295-no-dac-5mg-ipa-5mg",
-        "Endura Peptides": "https://endurapeptides.com/product/ipamorelin-cjc-1295/?attribute_pa_size=5-5-mg&attribute_pa_quantity=1-pack"
+        "Endura Peptides": "https://endurapeptides.com/product/ipamorelin-cjc-1295/?attribute_pa_size=5-5-mg&attribute_pa_quantity=1-pack",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/cjc-1295-5mg-no-dac-ipamorelin-5mg-blend/"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -1465,7 +1497,8 @@
         "AFA Biosciences": 46.99,
         "Aero Peptides": 44.99,
         "Endura Peptides": 50.0,
-        "Crownwell Research": 35.0
+        "Crownwell Research": 35.0,
+        "Vertex Labs": 69.0
       },
       "lowest": 35.0,
       "notes": null,
@@ -1476,7 +1509,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/ghk-cu",
         "Aero Peptides": "https://aeropeptides.com/product/ghk-cu-100mg",
         "Endura Peptides": "https://endurapeptides.com/product/ghk-cu/?attribute_pa_size=100-mg&attribute_pa_quantity=1-pack",
-        "Crownwell Research": "https://crownwellresearch.com/product/ghk-cu_100/"
+        "Crownwell Research": "https://crownwellresearch.com/product/ghk-cu_100/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/ghk-cu/"
       }
     },
     {
@@ -1537,7 +1571,8 @@
         "AFA Biosciences": 40.99,
         "Synthrolab": 35.88,
         "Research Peptides Lab": 80.0,
-        "Crownwell Research": 62.0
+        "Crownwell Research": 62.0,
+        "Vertex Labs": 69.0
       },
       "lowest": 35.88,
       "notes": null,
@@ -1550,7 +1585,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/ipamorelin",
         "Synthrolab": "https://synthrolab.com/product/ipamorelin-10mg/",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/ipamorelin-research-peptide",
-        "Crownwell Research": "https://crownwellresearch.com/product/ipamorelin/"
+        "Crownwell Research": "https://crownwellresearch.com/product/ipamorelin/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/ipamorelin/"
       }
     },
     {
@@ -1606,7 +1642,8 @@
         "Purity Peptides": 59.99,
         "Licensed Peptides": 68.99,
         "American Peptides": 60,
-        "Research Peptides Lab": 50.0
+        "Research Peptides Lab": 50.0,
+        "Vertex Labs": 69.0
       },
       "lowest": 50.0,
       "notes": null,
@@ -1614,7 +1651,8 @@
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/sermorelin/",
         "American Peptides": "https://www.americanpeptides.us/products/sermorelin",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/sermorelin-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/sermorelin-research-peptide",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/sermorelin/"
       }
     },
     {
@@ -1665,14 +1703,16 @@
       "prices": {
         "Purity Peptides": 69.99,
         "Alpha Peptides": 33.12,
-        "Offline Peptides": 49.0
+        "Offline Peptides": 49.0,
+        "Vertex Labs": 59.0
       },
       "lowest": 33.12,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/5-amino-1mq/",
-        "Offline Peptides": "https://offlinepeptides.com/product/5-amino-1mq/"
+        "Offline Peptides": "https://offlinepeptides.com/product/5-amino-1mq/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/5-amino-1mq/"
       }
     },
     {
@@ -2519,7 +2559,8 @@
         "AFA Biosciences": 72.99,
         "Synthrolab": 118.88,
         "Lumera Labs": 109.99,
-        "Research Peptides Lab": 145.0
+        "Research Peptides Lab": 145.0,
+        "Vertex Labs": 119.0
       },
       "lowest": 48.41,
       "notes": null,
@@ -2533,7 +2574,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/glow-blend",
         "Synthrolab": "https://synthrolab.com/product/ghk-cu-50mg-bpc157-10mg-tb-500-10mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/glow",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/glow-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/glow-research-peptide",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glow-blend/"
       }
     },
     {
@@ -2549,7 +2591,8 @@
         "AFA Biosciences": 80.99,
         "Lumera Labs": 119.99,
         "Research Peptides Lab": 165.0,
-        "Endura Peptides": 75.0
+        "Endura Peptides": 75.0,
+        "Vertex Labs": 159.0
       },
       "lowest": 75.0,
       "notes": null,
@@ -2562,7 +2605,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/klow-blend",
         "Lumera Labs": "https://mylumeralabs.com/product/klow",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/klow-research-peptide",
-        "Endura Peptides": "https://endurapeptides.com/product/klow/?attribute_pa_size=50-10-10-10-mg&attribute_pa_quantity=1-pack"
+        "Endura Peptides": "https://endurapeptides.com/product/klow/?attribute_pa_size=50-10-10-10-mg&attribute_pa_quantity=1-pack",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/klow-blend/"
       }
     },
     {
@@ -2581,7 +2625,8 @@
         "AFA Biosciences": 31.99,
         "Synthrolab": 53.88,
         "Research Peptides Lab": 65.0,
-        "Crownwell Research": 47.0
+        "Crownwell Research": 47.0,
+        "Vertex Labs": 89.0
       },
       "lowest": 31.32,
       "notes": null,
@@ -2597,7 +2642,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/tb-500",
         "Synthrolab": "https://synthrolab.com/product/tb-500-10mg/",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/tb-500-research-peptide",
-        "Crownwell Research": "https://crownwellresearch.com/product/tb-500/"
+        "Crownwell Research": "https://crownwellresearch.com/product/tb-500/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/tb-500/?attribute_strength=10mg"
       }
     },
     {
@@ -2607,14 +2653,16 @@
       "amount_mg": 5,
       "prices": {
         "Purity Peptides": 72.59,
-        "Offline Peptides": 36.0
+        "Offline Peptides": 36.0,
+        "Vertex Labs": 49.0
       },
       "lowest": 36.0,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/tb-500-thymosin-beta-4-5mg",
-        "Offline Peptides": "https://offlinepeptides.com/product/tb-500/"
+        "Offline Peptides": "https://offlinepeptides.com/product/tb-500/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/tb-500/?attribute_strength=5mg"
       }
     },
     {
@@ -2855,7 +2903,8 @@
         "Synthrolab": 107.88,
         "Lumera Labs": 68.99,
         "Aero Peptides": 64.99,
-        "Research Peptides Lab": 90.0
+        "Research Peptides Lab": 90.0,
+        "Vertex Labs": 119.0
       },
       "lowest": 56.99,
       "notes": null,
@@ -2868,7 +2917,8 @@
         "Synthrolab": "https://synthrolab.com/product/tesamorelin-10mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/tesamorlin",
         "Aero Peptides": "https://aeropeptides.com/product/tesamorelin-10mg",
-        "Research Peptides Lab": "https://researchpeptideslab.com/shop/tesamorelin-research-peptide"
+        "Research Peptides Lab": "https://researchpeptideslab.com/shop/tesamorelin-research-peptide",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/tesa/?attribute_strength=10mg"
       }
     },
     {
@@ -2878,13 +2928,15 @@
       "amount_mg": 40,
       "prices": {
         "UltraLife": 345,
-        "Crownwell Research": 127.0
+        "Crownwell Research": 127.0,
+        "Vertex Labs": 209.0
       },
       "lowest": 127.0,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
-        "Crownwell Research": "https://crownwellresearch.com/product/glp2-t-40mg/"
+        "Crownwell Research": "https://crownwellresearch.com/product/glp2-t-40mg/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=40mg"
       }
     },
     {
@@ -2909,7 +2961,8 @@
         "Midwest Peptide": 49.99,
         "American Peptides": 90,
         "Aero Peptides": 69.99,
-        "Crownwell Research": 36.0
+        "Crownwell Research": 36.0,
+        "Vertex Labs": 49.0
       },
       "lowest": 36.0,
       "notes": null,
@@ -2918,7 +2971,8 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-1-sm",
         "American Peptides": "https://www.americanpeptides.us/products/semaglutide?variant=48978865127579",
         "Aero Peptides": "https://aeropeptides.com/product/semaglutide-10mg",
-        "Crownwell Research": "https://crownwellresearch.com/product/glp1-sema/"
+        "Crownwell Research": "https://crownwellresearch.com/product/glp1-sema/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-1-sem/?attribute_strength=10mg"
       }
     },
     {
@@ -2965,13 +3019,15 @@
       "amount_mg": 20,
       "prices": {
         "Purity Peptides": 159.99,
-        "American Peptides": 170
+        "American Peptides": 170,
+        "Vertex Labs": 119.0
       },
-      "lowest": 159.99,
+      "lowest": 119.0,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=48622112800923"
+        "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=48622112800923",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=20mg"
       }
     },
     {
@@ -2991,7 +3047,8 @@
         "Aero Peptides": 79.99,
         "Research Peptides Lab": 85.0,
         "Endura Peptides": 43.0,
-        "Crownwell Research": 65.0
+        "Crownwell Research": 65.0,
+        "Vertex Labs": 79.0
       },
       "lowest": 43.0,
       "notes": null,
@@ -3006,7 +3063,8 @@
         "Aero Peptides": "https://aeropeptides.com/product/retatrutide-10mg",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/glp-3rt",
         "Endura Peptides": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=10-mg&attribute_pa_quantity=1-pack",
-        "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-10mg/"
+        "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-10mg/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-3-rt/?attribute_strength=10mg"
       }
     },
     {
@@ -3022,7 +3080,8 @@
         "AFA Biosciences": 109.99,
         "Synthrolab": 88.88,
         "Endura Peptides": 75.9,
-        "Crownwell Research": 99.0
+        "Crownwell Research": 99.0,
+        "Vertex Labs": 139.0
       },
       "lowest": 75.9,
       "notes": null,
@@ -3033,7 +3092,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/glp-3-rt",
         "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=20mg",
         "Endura Peptides": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=20-mg&attribute_pa_quantity=1-pack",
-        "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-3/"
+        "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-3/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-3-rt/?attribute_strength=20mg"
       }
     },
     {
@@ -3048,7 +3108,8 @@
         "AFA Biosciences": 163.99,
         "Synthrolab": 107.88,
         "Endura Peptides": 84.0,
-        "Crownwell Research": 129.0
+        "Crownwell Research": 129.0,
+        "Vertex Labs": 189.0
       },
       "lowest": 84.0,
       "notes": null,
@@ -3059,7 +3120,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/glp-3-rt",
         "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=30mg",
         "Endura Peptides": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack",
-        "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-2/"
+        "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-2/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-3-rt/?attribute_strength=30mg"
       }
     },
     {
@@ -3068,12 +3130,15 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 79.99
+        "Purity Peptides": 79.99,
+        "Vertex Labs": 79.0
       },
-      "lowest": 79.99,
+      "lowest": 79.0,
       "notes": null,
       "category": "Growth Hormone & Muscle",
-      "vendor_product_urls": {}
+      "vendor_product_urls": {
+        "Vertex Labs": "https://vertexpeptideslab.org/product/tesa/?attribute_strength=5mg"
+      }
     },
     {
       "peptide": "Tesamorelin / Ipamorelin combo",
@@ -3369,7 +3434,8 @@
         "American Peptides": 240,
         "Synthrolab": 53.88,
         "Endura Peptides": 60.0,
-        "Crownwell Research": 107.0
+        "Crownwell Research": 107.0,
+        "Vertex Labs": 169.0
       },
       "lowest": 53.88,
       "notes": null,
@@ -3378,7 +3444,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=49232786063515",
         "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=30mg",
         "Endura Peptides": "https://endurapeptides.com/product/glp-2t/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack",
-        "Crownwell Research": "https://crownwellresearch.com/product/glp-2-tirz-2/"
+        "Crownwell Research": "https://crownwellresearch.com/product/glp-2-tirz-2/",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=30mg"
       },
       "category": "Metabolic & Weight"
     },
@@ -3454,12 +3521,14 @@
       "size": "60mg",
       "amount_mg": 60,
       "prices": {
-        "Synthrolab": 71.88
+        "Synthrolab": 71.88,
+        "Vertex Labs": 269.0
       },
       "lowest": 71.88,
       "notes": null,
       "vendor_product_urls": {
-        "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=60mg"
+        "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=60mg",
+        "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=60mg"
       },
       "category": "Metabolic & Weight"
     },
