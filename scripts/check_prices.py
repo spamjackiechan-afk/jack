@@ -117,6 +117,13 @@ VENDORS = {
                                   # files, add-to-cart query params and a wpo json file; Yoast block
                                   # has "Disallow:" (empty). /product/ pages are allowed.
     },
+    "Lumera Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt is "User-Agent: * / Allow: / / Disallow: /private/".
+                                  # /product/ pages are allowed. Multi-size pages (GHK-Cu, GLP-3RT) are
+                                  # listed at their default (lowest) size only, which is what the page's
+                                  # JSON-LD lowPrice shows.
+    },
 }
 
 HEADERS = {

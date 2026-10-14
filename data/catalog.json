@@ -448,7 +448,8 @@
         "Offline Peptides": 42.0,
         "Orbitrex Peptide": 39.99,
         "AFA Biosciences": 31.99,
-        "Synthrolab": 53.88
+        "Synthrolab": 53.88,
+        "Lumera Labs": 39.99
       },
       "lowest": 25.99,
       "notes": null,
@@ -461,7 +462,8 @@
         "Offline Peptides": "https://offlinepeptides.com/product/bpc-157/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/bpc-15710mg/",
         "AFA Biosciences": "https://afabiosciences.com/products/bpc-157",
-        "Synthrolab": "https://synthrolab.com/product/bpc-157-10mg/"
+        "Synthrolab": "https://synthrolab.com/product/bpc-157-10mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/bpc-157"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -567,7 +569,8 @@
         "Offline Peptides": 35.0,
         "American Peptides": 50,
         "AFA Biosciences": 23.99,
-        "Synthrolab": 44.88
+        "Synthrolab": 44.88,
+        "Lumera Labs": 29.99
       },
       "lowest": 23.99,
       "notes": null,
@@ -579,7 +582,8 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/ghk-cu-50mg?variant=ed5dc886-3ee7-494b-a81f-adc2793065a2",
         "Offline Peptides": "https://offlinepeptides.com/product/ghk-cu/",
         "AFA Biosciences": "https://afabiosciences.com/products/ghk-cu",
-        "Synthrolab": "https://synthrolab.com/product/ghk-cu-50mg/"
+        "Synthrolab": "https://synthrolab.com/product/ghk-cu-50mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/ghk-cu"
       },
       "category": "Cellular & Longevity"
     },
@@ -684,7 +688,8 @@
         "BioIntegrity Research": 149.0,
         "Licensed Peptides": 45.99,
         "Alpha Peptides": 45.47,
-        "AFA Biosciences": 56.99
+        "AFA Biosciences": 56.99,
+        "Lumera Labs": 89.99
       },
       "lowest": 45.47,
       "notes": null,
@@ -694,7 +699,8 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/igf-1-lr3",
         "Licensed Peptides": "https://licensedpeptides.com/product/igf-1-lr3/",
         "Alpha Peptides": "https://alpha-peptides.com/product/igf-1-lr3/",
-        "AFA Biosciences": "https://afabiosciences.com/products/igf-1-lr3"
+        "AFA Biosciences": "https://afabiosciences.com/products/igf-1-lr3",
+        "Lumera Labs": "https://mylumeralabs.com/product/igf-1-lr3"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -822,7 +828,8 @@
         "American Peptides": 100,
         "Offline Peptides": 42.0,
         "AFA Biosciences": 31.99,
-        "Synthrolab": 88.88
+        "Synthrolab": 88.88,
+        "Lumera Labs": 48.99
       },
       "lowest": 27.55,
       "notes": null,
@@ -833,7 +840,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/mots-c",
         "Offline Peptides": "https://offlinepeptides.com/product/mots-c/",
         "AFA Biosciences": "https://afabiosciences.com/products/mots-c",
-        "Synthrolab": "https://synthrolab.com/product/mots-c-10mg/"
+        "Synthrolab": "https://synthrolab.com/product/mots-c-10mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/mots-c"
       },
       "category": "Cellular & Longevity"
     },
@@ -892,7 +900,8 @@
         "Midwest Peptide": 69.99,
         "Offline Peptides": 51.0,
         "AFA Biosciences": 56.99,
-        "Synthrolab": 88.88
+        "Synthrolab": 88.88,
+        "Lumera Labs": 68.99
       },
       "lowest": 30.52,
       "notes": null,
@@ -904,7 +913,8 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/nad-plus-500mg",
         "Offline Peptides": "https://offlinepeptides.com/product/nad/",
         "AFA Biosciences": "https://afabiosciences.com/products/nad-plus",
-        "Synthrolab": "https://synthrolab.com/product/nad-500mg/"
+        "Synthrolab": "https://synthrolab.com/product/nad-500mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/nad"
       },
       "category": "Cellular & Longevity"
     },
@@ -919,7 +929,8 @@
         "Purity Peptides": 82.49,
         "BioIntegrity Research": 124.0,
         "Alpha Peptides": 22.07,
-        "AFA Biosciences": 23.99
+        "AFA Biosciences": 23.99,
+        "Lumera Labs": 29.99
       },
       "lowest": 22.07,
       "notes": null,
@@ -927,7 +938,8 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/pt-141",
         "Alpha Peptides": "https://alpha-peptides.com/product/pt-141/",
-        "AFA Biosciences": "https://afabiosciences.com/products/pt-141"
+        "AFA Biosciences": "https://afabiosciences.com/products/pt-141",
+        "Lumera Labs": "https://mylumeralabs.com/product/pt-141"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -946,7 +958,8 @@
         "Midwest Peptide": 29.99,
         "Offline Peptides": 39.0,
         "American Peptides": 65,
-        "AFA Biosciences": 23.99
+        "AFA Biosciences": 23.99,
+        "Lumera Labs": 34.99
       },
       "lowest": 23.15,
       "notes": null,
@@ -959,7 +972,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/selank/",
         "Midwest Peptide": "https://midwestpeptide.com/products/selank-10mg",
         "Offline Peptides": "https://offlinepeptides.com/product/selank/",
-        "AFA Biosciences": "https://afabiosciences.com/products/selank"
+        "AFA Biosciences": "https://afabiosciences.com/products/selank",
+        "Lumera Labs": "https://mylumeralabs.com/product/selank-10mg"
       },
       "category": "Cognitive & Neurological"
     },
@@ -977,7 +991,8 @@
         "Midwest Peptide": 29.99,
         "Offline Peptides": 39.0,
         "American Peptides": 65,
-        "AFA Biosciences": 23.99
+        "AFA Biosciences": 23.99,
+        "Lumera Labs": 34.99
       },
       "lowest": 20.84,
       "notes": null,
@@ -989,7 +1004,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/semax/",
         "Midwest Peptide": "https://midwestpeptide.com/products/semax-10mg",
         "Offline Peptides": "https://offlinepeptides.com/product/semax/",
-        "AFA Biosciences": "https://afabiosciences.com/products/semax"
+        "AFA Biosciences": "https://afabiosciences.com/products/semax",
+        "Lumera Labs": "https://mylumeralabs.com/product/semax"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1145,7 +1161,8 @@
         "Royal Peptides": 65,
         "Midwest Peptide": 49.99,
         "Offline Peptides": 49.0,
-        "AFA Biosciences": 40.99
+        "AFA Biosciences": 40.99,
+        "Lumera Labs": 48.99
       },
       "lowest": 40.99,
       "notes": null,
@@ -1153,7 +1170,8 @@
         "Royal Peptides": "https://royal-peptides.com/shop/aod-5mg-kit/",
         "Midwest Peptide": "https://midwestpeptide.com/products/aod-9604",
         "Offline Peptides": "https://offlinepeptides.com/product/aod-9604/",
-        "AFA Biosciences": "https://afabiosciences.com/products/aod-9604"
+        "AFA Biosciences": "https://afabiosciences.com/products/aod-9604",
+        "Lumera Labs": "https://mylumeralabs.com/product/aod-9604"
       },
       "category": "Metabolic & Weight"
     },
@@ -1254,7 +1272,8 @@
         "American Peptides": 90,
         "Orbitrex Peptide": 59.99,
         "AFA Biosciences": 48.99,
-        "Synthrolab": 78.88
+        "Synthrolab": 78.88,
+        "Lumera Labs": 69.99
       },
       "lowest": 35.57,
       "notes": null,
@@ -1265,7 +1284,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/cjc-1295-no-dac-ipamorelin",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/cjc-1295-no-dac-5mg-ipa-5mg/",
         "AFA Biosciences": "https://afabiosciences.com/products/cjc-1295-ipamorelin-blend",
-        "Synthrolab": "https://synthrolab.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg/"
+        "Synthrolab": "https://synthrolab.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/cjc-1295-no-dac-ipamorelin"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -1279,7 +1299,8 @@
         "Alpha Peptides": 28.41,
         "Midwest Peptide": 69.99,
         "American Peptides": 110,
-        "Synthrolab": 53.88
+        "Synthrolab": 53.88,
+        "Lumera Labs": 49.99
       },
       "lowest": 28.41,
       "notes": null,
@@ -1288,7 +1309,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/cjc-1295-no-dac/",
         "Midwest Peptide": "https://midwestpeptide.com/products/cjc-1295-no-dac",
         "American Peptides": "https://www.americanpeptides.us/products/cjc-1295-no-dac",
-        "Synthrolab": "https://synthrolab.com/product/cjc-1295-no-dac-10mg/"
+        "Synthrolab": "https://synthrolab.com/product/cjc-1295-no-dac-10mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/cjc-1295-no-dac"
       }
     },
     {
@@ -1343,7 +1365,8 @@
         "Alpha Peptides": 23.68,
         "Offline Peptides": 39.0,
         "AFA Biosciences": 23.99,
-        "Synthrolab": 71.88
+        "Synthrolab": 71.88,
+        "Lumera Labs": 29.99
       },
       "lowest": 23.68,
       "notes": null,
@@ -1353,7 +1376,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/epithalon/",
         "Offline Peptides": "https://offlinepeptides.com/product/epithalon/",
         "AFA Biosciences": "https://afabiosciences.com/products/epithalon",
-        "Synthrolab": "https://synthrolab.com/product/epithalon-10mg/"
+        "Synthrolab": "https://synthrolab.com/product/epithalon-10mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/epithalon"
       },
       "category": "Cellular & Longevity"
     },
@@ -1455,14 +1479,16 @@
       "prices": {
         "Purity Peptides": 59.99,
         "Licensed Peptides": 43.32,
-        "American Peptides": 40
+        "American Peptides": 40,
+        "Lumera Labs": 38.99
       },
-      "lowest": 40,
+      "lowest": 38.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/ipamorelin/",
-        "American Peptides": "https://www.americanpeptides.us/products/ipamorelin"
+        "American Peptides": "https://www.americanpeptides.us/products/ipamorelin",
+        "Lumera Labs": "https://mylumeralabs.com/product/ipamorelin"
       }
     },
     {
@@ -2116,12 +2142,14 @@
       "prices": {
         "Alpha Peptides": 22.11,
         "Offline Peptides": 37.0,
-        "AFA Biosciences": 23.99
+        "AFA Biosciences": 23.99,
+        "Lumera Labs": 30
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/snap-8/",
         "Offline Peptides": "https://offlinepeptides.com/product/snap-8/",
-        "AFA Biosciences": "https://afabiosciences.com/products/snap-8"
+        "AFA Biosciences": "https://afabiosciences.com/products/snap-8",
+        "Lumera Labs": "https://mylumeralabs.com/product/snap-8"
       },
       "lowest": 22.11
     },
@@ -2341,14 +2369,16 @@
       "amount_mg": 10,
       "prices": {
         "Purity Peptides": 124.99,
-        "AFA Biosciences": 64.99
+        "AFA Biosciences": 64.99,
+        "Lumera Labs": 74.99
       },
       "lowest": 64.99,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bpc-157-tb-500-blend-10mg-bpc-157-5mg-tb-500-5mg",
-        "AFA Biosciences": "https://afabiosciences.com/products/wolverine-blend"
+        "AFA Biosciences": "https://afabiosciences.com/products/wolverine-blend",
+        "Lumera Labs": "https://mylumeralabs.com/product/bpc-157-tb-500-wolverine-blend"
       }
     },
     {
@@ -2397,7 +2427,8 @@
         "American Peptides": 150,
         "Offline Peptides": 79.0,
         "AFA Biosciences": 72.99,
-        "Synthrolab": 118.88
+        "Synthrolab": 118.88,
+        "Lumera Labs": 109.99
       },
       "lowest": 48.41,
       "notes": null,
@@ -2409,7 +2440,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/glow-mix",
         "Offline Peptides": "https://offlinepeptides.com/product/glow-blend/",
         "AFA Biosciences": "https://afabiosciences.com/products/glow-blend",
-        "Synthrolab": "https://synthrolab.com/product/ghk-cu-50mg-bpc157-10mg-tb-500-10mg/"
+        "Synthrolab": "https://synthrolab.com/product/ghk-cu-50mg-bpc157-10mg-tb-500-10mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/glow"
       }
     },
     {
@@ -2422,7 +2454,8 @@
         "American Peptides": 200,
         "Offline Peptides": 109.0,
         "Orbitrex Peptide": 109.99,
-        "AFA Biosciences": 80.99
+        "AFA Biosciences": 80.99,
+        "Lumera Labs": 119.99
       },
       "lowest": 80.99,
       "notes": null,
@@ -2432,7 +2465,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/klow-blend",
         "Offline Peptides": "https://offlinepeptides.com/product/klow-bpc-157-tb-500-ghk-cu-kpv/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/klow-80-blend/",
-        "AFA Biosciences": "https://afabiosciences.com/products/klow-blend"
+        "AFA Biosciences": "https://afabiosciences.com/products/klow-blend",
+        "Lumera Labs": "https://mylumeralabs.com/product/klow"
       }
     },
     {
@@ -2712,7 +2746,8 @@
         "American Peptides": 120,
         "Orbitrex Peptide": 79.99,
         "AFA Biosciences": 56.99,
-        "Synthrolab": 107.88
+        "Synthrolab": 107.88,
+        "Lumera Labs": 68.99
       },
       "lowest": 56.99,
       "notes": null,
@@ -2722,7 +2757,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/tesamorelin",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/tesa-10mg-2/",
         "AFA Biosciences": "https://afabiosciences.com/products/tesamorelin",
-        "Synthrolab": "https://synthrolab.com/product/tesamorelin-10mg/"
+        "Synthrolab": "https://synthrolab.com/product/tesamorelin-10mg/",
+        "Lumera Labs": "https://mylumeralabs.com/product/tesamorlin"
       }
     },
     {
@@ -2826,7 +2862,8 @@
         "American Peptides": 105,
         "UltraLife": 149,
         "AFA Biosciences": 56.99,
-        "Synthrolab": 78.88
+        "Synthrolab": 78.88,
+        "Lumera Labs": 68.99
       },
       "lowest": 44.09,
       "notes": null,
@@ -2836,7 +2873,8 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=21a42426-d69d-4fe1-958a-7b940e6b0887",
         "American Peptides": "https://www.americanpeptides.us/products/retatrutide",
         "AFA Biosciences": "https://afabiosciences.com/products/glp-3-rt",
-        "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=10mg"
+        "Synthrolab": "https://synthrolab.com/product/rt/?attribute_strength=10mg",
+        "Lumera Labs": "https://mylumeralabs.com/product/glp-3rt"
       }
     },
     {
@@ -3067,13 +3105,15 @@
       "prices": {
         "Purity Peptides": 54.99,
         "Midwest Peptide": 29.99,
-        "AFA Biosciences": 23.99
+        "AFA Biosciences": 23.99,
+        "Lumera Labs": 34.99
       },
       "lowest": 23.99,
       "notes": null,
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/mt-1-10mg",
-        "AFA Biosciences": "https://afabiosciences.com/products/melanotan-i"
+        "AFA Biosciences": "https://afabiosciences.com/products/melanotan-i",
+        "Lumera Labs": "https://mylumeralabs.com/product/mt-1-melanotan-i"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -3266,6 +3306,36 @@
         "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=60mg"
       },
       "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "Cagrilintide",
+      "format": "Vial",
+      "size": "5mg",
+      "amount_mg": 5,
+      "prices": {
+        "Lumera Labs": 68.99
+      },
+      "lowest": 68.99,
+      "notes": null,
+      "vendor_product_urls": {
+        "Lumera Labs": "https://mylumeralabs.com/product/cagrilintide"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "Glutathione",
+      "format": "Vial",
+      "size": "1200mg",
+      "amount_mg": 1200,
+      "prices": {
+        "Lumera Labs": 64.99
+      },
+      "lowest": 64.99,
+      "notes": null,
+      "vendor_product_urls": {
+        "Lumera Labs": "https://mylumeralabs.com/product/l-glutathione"
+      },
+      "category": "Cellular & Longevity"
     }
   ],
   "excluded": [
