@@ -175,5 +175,21 @@
     "shipping_info": "Ships within the US and Australia. US: $7 standard, $10 express, free over $150 USD. Same-day dispatch; typical delivery 2-3 days. Optional $10 shipping protection.",
     "shipping_payment_researched": "2026-10-14",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+  },
+  "Lumera Labs": {
+    "status": "approved",
+    "site_url": "https://mylumeralabs.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://mylumeralabs.com/?ref=prnqjehm",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "PayPal",
+      "Bitcoin"
+    ],
+    "shipping_info": "Free shipping on US orders $75+. Same-day dispatch before 2 PM on business days; USPS Priority or UPS 2-Day (2-4 business days), FedEx Overnight available. Also ships to Canada, UK and select European countries via DHL Express.",
+    "shipping_payment_researched": "2026-10-14"
   }
 }
