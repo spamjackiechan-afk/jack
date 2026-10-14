@@ -590,5 +590,20 @@
     "NAD+ | Vial | 500mg": "https://true-peptides.com/product/nad-plus",
     "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg)": "https://true-peptides.com/product/klow-blend",
     "MOTS-C | Vial | 10mg": "https://true-peptides.com/product/mots-c"
+  },
+  "Peptide Express": {
+    "Kisspeptin | Vial | 5mg": "https://peptide.express/catalog/kisspeptin",
+    "Semax | Vial | 10mg": "https://peptide.express/catalog/semax",
+    "GHK-Cu (Copper Peptide) | Vial | 50mg": "https://peptide.express/catalog/peptide-ghk-cu",
+    "Retatrutide | Vial | 5mg": "https://peptide.express/catalog/retatrutide",
+    "Melanotan II | Vial | 10mg": "https://peptide.express/catalog/melanotan-ii",
+    "NAD+ | Vial | 500mg": "https://peptide.express/catalog/nad",
+    "Epitalon | Vial | 10mg": "https://peptide.express/catalog/epithalon",
+    "SS-31 / Elamipretide | Vial | 10mg": "https://peptide.express/catalog/ss-31",
+    "Sermorelin | Vial | 10mg": "https://peptide.express/catalog/sermorelin",
+    "Tirzepatide | Vial | 20mg": "https://peptide.express/catalog/glp-tirz",
+    "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": "https://peptide.express/catalog/wolverine-blend-bpctb500",
+    "MOTS-C | Vial | 10mg": "https://peptide.express/catalog/mots-c",
+    "Ipamorelin | Vial | 10mg": "https://peptide.express/catalog/ipamorelin"
   }
 }
