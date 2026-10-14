@@ -258,5 +258,20 @@
     "payment_methods": null,
     "shipping_info": "Ships across the USA and Puerto Rico via UPS. Free UPS Ground on orders $150+, free UPS 2nd Day Air on $250+, free UPS Next Day Air on $600+. All shipments insured.",
     "shipping_payment_researched": "2026-10-14"
+  },
+  "True Peptides": {
+    "status": "approved",
+    "site_url": "https://true-peptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://true-peptides.com/?ref=discount",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Credit/debit card",
+      "Zelle",
+      "Crypto"
+    ],
+    "shipping_info": "Ships within the US only. Free USPS Ground Advantage (3-5 business days) on orders $150+ before tax; faster methods at checkout. Orders typically ship within 1-3 business days.",
+    "shipping_payment_researched": "2026-10-14"
   }
 }
