@@ -110,6 +110,13 @@ VENDORS = {
                                   # portal/affiliate-portal, wp-admin/login/json/xmlrpc, and a few
                                   # querystrings — /product/ and /shop/ pages are not disallowed.
     },
+    "Synthrolab": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: standard WooCommerce + Yoast robots.txt — User-agent: *
+                                  # disallows only /wp-admin/, wc-logs, woocommerce transient/upload
+                                  # files, add-to-cart query params and a wpo json file; Yoast block
+                                  # has "Disallow:" (empty). /product/ pages are allowed.
+    },
 }
 
 HEADERS = {

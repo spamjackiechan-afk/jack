@@ -159,5 +159,21 @@
     "shipping_info": "US only (incl. Puerto Rico, Guam, U.S. Virgin Islands); tracked courier, typically 2\u20135 business days. Card orders: flat $15 shipping, free from $500. Orders by 2 PM ET on business days ship same day.",
     "shipping_payment_researched": "2026-10-11",
     "affiliate_path_suffix": null
+  },
+  "Synthrolab": {
+    "status": "approved",
+    "site_url": "https://synthrolab.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://synthrolab.com/?ref=qifabkai",
+    "affiliate_path_suffix": null,
+    "promo_code": "discountpeptide",
+    "payment_methods": [
+      "Credit/debit cards (statement shows a different billing name)",
+      "Zelle / bank transfer",
+      "Bitcoin"
+    ],
+    "shipping_info": "Ships within the US and Australia. US: $7 standard, $10 express, free over $150 USD. Same-day dispatch; typical delivery 2-3 days. Optional $10 shipping protection.",
+    "shipping_payment_researched": "2026-10-14",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
   }
 }
