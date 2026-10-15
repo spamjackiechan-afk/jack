@@ -136,12 +136,13 @@ def check_no_news(page, root, filename, problems):
 
 # "13 vendors", "13 suppliers", "Across 13 Vendors", "13\nSUPPLIERS" (About
 # stats strip). Per-product counts on the homepage cards ("4 vendors compared")
-# are not site-wide claims and are skipped.
+# are not site-wide claims and are skipped, and so is the daily price-drop
+# banner ("8 prices cut across 2 vendors"), which counts vendors with cuts.
 NUMBER_WORDS = {w: i for i, w in enumerate(
     "zero one two three four five six seven eight nine ten eleven twelve thirteen "
     "fourteen fifteen sixteen seventeen eighteen nineteen twenty".split())}
 VENDOR_COUNT_RE = re.compile(
-    r"\b(\d+|" + "|".join(NUMBER_WORDS) + r")\s+(?:peptide\s+)?(?:vendors|suppliers)\b(?!\s+compared)",
+    r"(?<!across\s)\b(\d+|" + "|".join(NUMBER_WORDS) + r")\s+(?:peptide\s+)?(?:vendors|suppliers)\b(?!\s+compared)",
     re.I)
 
 
