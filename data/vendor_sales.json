@@ -1,4 +1,16 @@
 {
+  "AFA Biosciences": [
+    {
+      "code": "BOGO",
+      "combines_with_our_code": false,
+      "end": null,
+      "exclusions": null,
+      "gives": "Buy one vial, get the second free (up to 3 free vials per order)",
+      "source": "https://afabiosciences.com/",
+      "start": null,
+      "verified": "2026-10-15"
+    }
+  ],
   "American Peptides": [
     {
       "code": "WEEKEND25",
