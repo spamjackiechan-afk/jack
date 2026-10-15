@@ -589,6 +589,8 @@ function supplierCardHtml(name){
   const vendorSales = (typeof VENDOR_SALES !== 'undefined' && VENDOR_SALES[name]) || [];
   for (const sale of vendorSales){
     if (sale.end && Date.parse(sale.end) < nowMs) continue;
+    // Don't show a sale before it starts (a null `start` shows immediately).
+    if (sale.start && Date.parse(sale.start) > nowMs) continue;
     const verifiedMs = sale.verified ? Date.parse(sale.verified + 'T00:00:00Z') : NaN;
     if (Number.isNaN(verifiedMs) || nowMs - verifiedMs > 7 * 24 * 60 * 60 * 1000) continue;
     let offer = sale.gives ? escapeHtml(sale.gives) : 'Sale';
