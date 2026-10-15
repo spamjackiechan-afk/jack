@@ -160,6 +160,13 @@ VENDORS = {
                                   # Not WooCommerce; ?variant=<id> is not honoured by check_product, so only
                                   # cards whose default (first) variant is the listed size are included.
     },
+    "Apex Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-15",
+        "robots_allows": True,   # confirmed: standard WooCommerce robots.txt (wc-logs, transient files,
+                                  # add-to-cart params, /wp-admin/, srsltid) plus a WPForms uploads block.
+                                  # /product/ pages on cms.apexpeptideslab.com are allowed. Variable pages
+                                  # are pinned with ?attribute_pa_size=<size> (KLOW/GLOW: attribute_size).
+    },
 }
 
 HEADERS = {

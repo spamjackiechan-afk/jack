@@ -289,5 +289,16 @@
     "shipping_info": "Ships within the US only (all 50 states) via USPS Priority Mail. Free standard shipping on orders over $150; flat-rate USPS Priority below that. Same-day dispatch on business days for orders before 2 PM ET. All sales final once shipped.",
     "shipping_payment_researched": "2026-10-14",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+  },
+  "Apex Peptides": {
+    "status": "approved",
+    "site_url": "https://apexpeptideslab.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://cms.apexpeptideslab.com/?coupon=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Free standard US shipping (2-5 business days); orders before 12 PM ET ship same day. Expedited next-day and 2-day options at checkout. No card payments on international orders.",
+    "shipping_payment_researched": "2026-10-15"
   }
 }
