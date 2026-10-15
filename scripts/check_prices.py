@@ -110,6 +110,56 @@ VENDORS = {
                                   # portal/affiliate-portal, wp-admin/login/json/xmlrpc, and a few
                                   # querystrings — /product/ and /shop/ pages are not disallowed.
     },
+    "Synthrolab": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: standard WooCommerce + Yoast robots.txt — User-agent: *
+                                  # disallows only /wp-admin/, wc-logs, woocommerce transient/upload
+                                  # files, add-to-cart query params and a wpo json file; Yoast block
+                                  # has "Disallow:" (empty). /product/ pages are allowed.
+    },
+    "Lumera Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt is "User-Agent: * / Allow: / / Disallow: /private/".
+                                  # /product/ pages are allowed. Multi-size pages (GHK-Cu, GLP-3RT) are
+                                  # listed at their default (lowest) size only, which is what the page's
+                                  # JSON-LD lowPrice shows.
+    },
+    "Aero Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt is "User-Agent: * / Allow: / / Disallow: /track-order /
+                                  # Disallow: /api/". /product/ pages are allowed. Only single-size pages are
+                                  # listed; the multi-size TB500 page is left out because the checker can't
+                                  # pin a size on this headless storefront.
+    },
+    "Endura Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: standard WooCommerce robots.txt (wc-logs, transient files,
+                                  # add-to-cart params, /wp-admin/); Yoast block has "Disallow:" (empty).
+                                  # /product/ pages are allowed. Variable pages are pinned with
+                                  # ?attribute_pa_size=...&attribute_pa_quantity=1-pack.
+    },
+    "Vertex Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: standard WooCommerce robots.txt plus a wpo json file; Yoast
+                                  # block has "Disallow:" (empty). /product/ pages are allowed. Variable
+                                  # pages are pinned with ?attribute_strength=<size>.
+    },
+    "True Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt allows / for all agents except /my-account/,
+                                  # /checkout/, /order-confirmation/, /cart/, /recover/ (and blocks a list
+                                  # of archive/SEO bots, not us). /product/ pages are allowed. Not
+                                  # WooCommerce; size variants can't be pinned by URL, so only cards whose
+                                  # default (first) variant is the listed size are included.
+    },
+    "Peptide Express": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-14",
+        "robots_allows": True,   # confirmed: robots.txt "Allow: /" for *; disallows only /admin, /dashboard,
+                                  # /api/ (except the public product/COA JSON), /owner, /mail,
+                                  # /partner/dashboard, /r/, /ref/, /p/. /catalog/ pages are allowed.
+                                  # Not WooCommerce; ?variant=<id> is not honoured by check_product, so only
+                                  # cards whose default (first) variant is the listed size are included.
+    },
 }
 
 HEADERS = {
