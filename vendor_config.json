@@ -159,5 +159,135 @@
     "shipping_info": "US only (incl. Puerto Rico, Guam, U.S. Virgin Islands); tracked courier, typically 2\u20135 business days. Card orders: flat $15 shipping, free from $500. Orders by 2 PM ET on business days ship same day.",
     "shipping_payment_researched": "2026-10-11",
     "affiliate_path_suffix": null
+  },
+  "Synthrolab": {
+    "status": "approved",
+    "site_url": "https://synthrolab.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://synthrolab.com/?ref=qifabkai",
+    "affiliate_path_suffix": null,
+    "promo_code": "discountpeptide",
+    "payment_methods": [
+      "Credit/debit cards (statement shows a different billing name)",
+      "Zelle / bank transfer",
+      "Bitcoin"
+    ],
+    "shipping_info": "Ships within the US and Australia. US: $7 standard, $10 express, free over $150 USD. Same-day dispatch; typical delivery 2-3 days. Optional $10 shipping protection.",
+    "shipping_payment_researched": "2026-10-14",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+  },
+  "Lumera Labs": {
+    "status": "approved",
+    "site_url": "https://mylumeralabs.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://mylumeralabs.com/?ref=prnqjehm",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "PayPal",
+      "Bitcoin"
+    ],
+    "shipping_info": "Free shipping on US orders $75+. Same-day dispatch before 2 PM on business days; USPS Priority or UPS 2-Day (2-4 business days), FedEx Overnight available. Also ships to Canada, UK and select European countries via DHL Express.",
+    "shipping_payment_researched": "2026-10-14"
+  },
+  "Aero Peptides": {
+    "status": "approved",
+    "site_url": "https://aeropeptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://aeropeptides.com/?ref=vdtphiqc",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Ships to all 50 US states; international case-by-case (contact first). Free US shipping over $150 via USPS Priority; otherwise calculated at checkout. Orders before 12:00 PM ET on business days typically ship same day. USPS Priority (1-3 days), Priority Express, or UPS Ground.",
+    "shipping_payment_researched": "2026-10-14"
+  },
+  "Research Peptides Lab": {
+    "status": "approved",
+    "site_url": "https://researchpeptideslab.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://researchpeptideslab.com/?ref=discount",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Credit card",
+      "Apple Pay",
+      "Google Pay",
+      "Cash App",
+      "Zelle"
+    ],
+    "shipping_info": "Ships within the US only. Standard $9.99 (USPS Priority, 3-5 business days), free on orders $150+; Expedited $24.99 (USPS Priority Mail Express, 2 business days). Orders before 2:00 PM ET on business days typically ship same day.",
+    "shipping_payment_researched": "2026-10-14"
+  },
+  "Endura Peptides": {
+    "status": "approved",
+    "site_url": "https://endurapeptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://endurapeptides.com/?ref=sytjgnca",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Credit card (no Mastercard)",
+      "Apple Pay",
+      "Google Pay",
+      "Venmo",
+      "Zelle"
+    ],
+    "shipping_info": "Ships within the US. Standard $10 (3-5 business days) or Priority $15 (2-3 business days); free Priority on US orders over $250. Alaska/Hawaii higher. Orders by 1:00 PM PT on business days ship same day.",
+    "shipping_payment_researched": "2026-10-14"
+  },
+  "Crownwell Research": {
+    "status": "approved",
+    "site_url": "https://crownwellresearch.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://crownwellresearch.com/afref/a169/",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Ships within the US only. Standard (3-5 business days), Expedited (2 business days) and Overnight options at checkout; costs shown at checkout. Orders before 2:00 PM ET typically dispatch same day. All sales final.",
+    "shipping_payment_researched": "2026-10-14"
+  },
+  "Vertex Labs": {
+    "status": "approved",
+    "site_url": "https://vertexpeptideslab.org",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://vertexpeptideslab.org/?coupon=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Ships across the USA and Puerto Rico via UPS. Free UPS Ground on orders $150+, free UPS 2nd Day Air on $250+, free UPS Next Day Air on $600+. All shipments insured.",
+    "shipping_payment_researched": "2026-10-14"
+  },
+  "True Peptides": {
+    "status": "approved",
+    "site_url": "https://true-peptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://true-peptides.com/?ref=discount",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Credit/debit card",
+      "Zelle",
+      "Crypto"
+    ],
+    "shipping_info": "Ships within the US only. Free USPS Ground Advantage (3-5 business days) on orders $150+ before tax; faster methods at checkout. Orders typically ship within 1-3 business days.",
+    "shipping_payment_researched": "2026-10-14"
+  },
+  "Peptide Express": {
+    "status": "approved",
+    "site_url": "https://peptide.express",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://peptide.express/p/discountpept",
+    "affiliate_path_suffix": null,
+    "promo_code": "discountpept",
+    "payment_methods": [
+      "Credit/debit card (Stripe)",
+      "Crypto",
+      "Venmo"
+    ],
+    "shipping_info": "Ships within the US only (all 50 states) via USPS Priority Mail. Free standard shipping on orders over $150; flat-rate USPS Priority below that. Same-day dispatch on business days for orders before 2 PM ET. All sales final once shipped.",
+    "shipping_payment_researched": "2026-10-14",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
   }
 }
