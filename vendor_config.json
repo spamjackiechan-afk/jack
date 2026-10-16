@@ -300,5 +300,17 @@
     "payment_methods": null,
     "shipping_info": "Free standard US shipping (2-5 business days); orders before 12 PM ET ship same day. Expedited next-day and 2-day options at checkout. No card payments on international orders.",
     "shipping_payment_researched": "2026-10-15"
+  },
+  "US Peptide Labs": {
+    "status": "approved",
+    "site_url": "https://uspeptidelabs.co",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://uspeptidelabs.co/?ref=DISCOUNTPEPTIDES",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPEPTIDE",
+    "payment_methods": null,
+    "shipping_info": "Ships from the US with tracked delivery. Free shipping on orders $70+. Orders before the business-day cutoff are typically prepared same day.",
+    "shipping_payment_researched": "2026-10-15",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
   }
 }

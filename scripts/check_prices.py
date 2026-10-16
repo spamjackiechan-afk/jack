@@ -167,6 +167,10 @@ VENDORS = {
                                   # /product/ pages on cms.apexpeptideslab.com are allowed. Variable pages
                                   # are pinned with ?attribute_pa_size=<size> (KLOW/GLOW: attribute_size).
     },
+    "US Peptide Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-15",
+        "robots_allows": True,   # confirmed: Shopify robots.txt allows /products/ (blocks cart/checkout/account/admin only). Multi-size pages pinned with ?variant=<id>.
+    },
 }
 
 HEADERS = {
