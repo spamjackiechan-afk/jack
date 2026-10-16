@@ -312,5 +312,23 @@
     "shipping_info": "Ships from the US with tracked delivery. Free shipping on orders $70+. Orders before the business-day cutoff are typically prepared same day.",
     "shipping_payment_researched": "2026-10-15",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+  },
+  "Quality Peptide USA": {
+    "status": "approved",
+    "site_url": "https://qualitypeptideusa.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://qualitypeptideusa.com/?ref=W3TQAJ55",
+    "affiliate_path_suffix": null,
+    "promo_code": "W3TQAJ55",
+    "payment_methods": [
+      "Credit card",
+      "ACH bank transfer",
+      "Cash App",
+      "Venmo"
+    ],
+    "payment_note": null,
+    "shipping_info": "US only (no NY, MA or CT). $15 flat under $300; free at $300+. Orders before 2PM EST ship same business day; tracked 2\u20133 business days.",
+    "shipping_payment_researched": "2026-10-15",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
   }
 }

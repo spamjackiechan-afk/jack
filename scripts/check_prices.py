@@ -171,6 +171,12 @@ VENDORS = {
         "robots_checked_by": "Grok for Jackson, 2026-10-15",
         "robots_allows": True,   # confirmed: Shopify robots.txt allows /products/ (blocks cart/checkout/account/admin only). Multi-size pages pinned with ?variant=<id>.
     },
+    "Quality Peptide USA": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-15",
+        "robots_allows": True,   # confirmed: robots.txt is "User-agent: * / Allow: /" (plus Sitemap) -- all
+                                  # /products/ pages allowed. Sizes can't be pinned by URL, so only cards whose
+                                  # default (first) size is the listed size are included.
+    },
 }
 
 HEADERS = {
