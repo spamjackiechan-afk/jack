@@ -312,5 +312,16 @@
     "shipping_info": "Ships from the US with tracked delivery. Free shipping on orders $70+. Orders before the business-day cutoff are typically prepared same day.",
     "shipping_payment_researched": "2026-10-15",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+  },
+  "Vector E Lab": {
+    "status": "approved",
+    "site_url": "https://app.vectorelab.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://app.vectorelab.com/?ref=DISCOU2836",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Free shipping may be available on eligible orders over $150, subject to checkout conditions. Delivery times and carrier services vary by location.",
+    "shipping_payment_researched": "2026-10-15"
   }
 }
