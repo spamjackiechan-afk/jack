@@ -323,5 +323,23 @@
     "payment_methods": null,
     "shipping_info": "Free shipping may be available on eligible orders over $150, subject to checkout conditions. Delivery times and carrier services vary by location.",
     "shipping_payment_researched": "2026-10-15"
+  },
+  "Quality Peptide USA": {
+    "status": "approved",
+    "site_url": "https://qualitypeptideusa.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://qualitypeptideusa.com/?ref=W3TQAJ55",
+    "affiliate_path_suffix": null,
+    "promo_code": "W3TQAJ55",
+    "payment_methods": [
+      "Credit card",
+      "ACH bank transfer",
+      "Cash App",
+      "Venmo"
+    ],
+    "payment_note": null,
+    "shipping_info": "US only (no NY, MA or CT). $15 flat under $300; free at $300+. Orders before 2PM EST ship same business day; tracked 2\u20133 business days.",
+    "shipping_payment_researched": "2026-10-15",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
   }
 }
