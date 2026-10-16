@@ -341,5 +341,16 @@
     "shipping_info": "US only (no NY, MA or CT). $15 flat under $300; free at $300+. Orders before 2PM EST ship same business day; tracked 2\u20133 business days.",
     "shipping_payment_researched": "2026-10-15",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+  },
+  "Peptide Titans": {
+    "status": "approved",
+    "site_url": "https://peptidetitans.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://peptidetitans.com/ref/discountpeptides/",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "shipping_info": "Ships from the USA with discreet, tracked delivery; shipping methods and costs are shown at checkout. Orders are typically processed within 24 hours of payment confirmation.",
+    "shipping_payment_researched": "2026-10-16"
   }
 }
