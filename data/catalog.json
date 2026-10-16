@@ -475,7 +475,8 @@
         "Crownwell Research": 38.0,
         "Vertex Labs": 69.0,
         "Apex Peptides": 75.0,
-        "US Peptide Labs": 65.0
+        "US Peptide Labs": 65.0,
+        "Vector E Lab": 49.99
       },
       "lowest": 25.99,
       "notes": null,
@@ -495,7 +496,8 @@
         "Crownwell Research": "https://crownwellresearch.com/product/bpc-157/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/bpc-157/?attribute_strength=10mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/bpc-157/?attribute_pa_size=10mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/bpc-157"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/bpc-157",
+        "Vector E Lab": "https://app.vectorelab.com/product/bpc-157-2/?attribute_mg=10"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -616,7 +618,8 @@
         "True Peptides": 40.0,
         "Peptide Express": 40.0,
         "Apex Peptides": 55.0,
-        "US Peptide Labs": 60.0
+        "US Peptide Labs": 60.0,
+        "Vector E Lab": 39.99
       },
       "lowest": 23.99,
       "notes": null,
@@ -635,7 +638,8 @@
         "True Peptides": "https://true-peptides.com/product/ghk-cu",
         "Peptide Express": "https://peptide.express/catalog/peptide-ghk-cu",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/ghk-cu/?attribute_pa_size=50mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/ghk-cu"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/ghk-cu",
+        "Vector E Lab": "https://app.vectorelab.com/product/ghk-cu/?attribute_mg=50"
       },
       "category": "Cellular & Longevity"
     },
@@ -652,7 +656,8 @@
         "AFA Biosciences": 48.99,
         "Aero Peptides": 74.99,
         "Vertex Labs": 129.0,
-        "Apex Peptides": 79.0
+        "Apex Peptides": 79.0,
+        "Vector E Lab": 150.0
       },
       "lowest": 36.83,
       "notes": null,
@@ -663,7 +668,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/glutathione",
         "Aero Peptides": "https://aeropeptides.com/product/glutathione-1500mg",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glutathione/?attribute_strength=1500mg",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/glutathione/?attribute_pa_size=1500mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/glutathione/?attribute_pa_size=1500mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/glutathione/?attribute_mg=1500"
       }
     },
     {
@@ -753,7 +759,8 @@
         "Aero Peptides": 69.99,
         "Research Peptides Lab": 50.0,
         "Vertex Labs": 69.0,
-        "US Peptide Labs": 140.0
+        "US Peptide Labs": 140.0,
+        "Vector E Lab": 69.99
       },
       "lowest": 45.47,
       "notes": null,
@@ -768,7 +775,8 @@
         "Aero Peptides": "https://aeropeptides.com/product/igf1-lr3",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/igf-1-lr3-growth-factor",
         "Vertex Labs": "https://vertexpeptideslab.org/product/igf-1lr3/",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/igf-1-lr3"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/igf-1-lr3",
+        "Vector E Lab": "https://app.vectorelab.com/product/igf-1-lr3/?attribute_mg=1"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -844,7 +852,8 @@
         "AFA Biosciences": 31.99,
         "Aero Peptides": 39.99,
         "Crownwell Research": 36.0,
-        "Vertex Labs": 59.0
+        "Vertex Labs": 59.0,
+        "Vector E Lab": 50.0
       },
       "lowest": 25.25,
       "notes": null,
@@ -859,7 +868,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/kpv",
         "Aero Peptides": "https://aeropeptides.com/product/kpv-10mg",
         "Crownwell Research": "https://crownwellresearch.com/product/kpv/",
-        "Vertex Labs": "https://vertexpeptideslab.org/product/kpv/"
+        "Vertex Labs": "https://vertexpeptideslab.org/product/kpv/",
+        "Vector E Lab": "https://app.vectorelab.com/product/kpv/?attribute_mg=10"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -922,7 +932,8 @@
         "Crownwell Research": 47.0,
         "True Peptides": 63.0,
         "Peptide Express": 45.0,
-        "Apex Peptides": 69.0
+        "Apex Peptides": 69.0,
+        "Vector E Lab": 70.0
       },
       "lowest": 27.55,
       "notes": null,
@@ -941,7 +952,8 @@
         "Crownwell Research": "https://crownwellresearch.com/product/mots-c/",
         "True Peptides": "https://true-peptides.com/product/mots-c",
         "Peptide Express": "https://peptide.express/catalog/mots-c",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/mots-c/?attribute_pa_size=10mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/mots-c/?attribute_pa_size=10mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/mots-c/?attribute_mg=10"
       },
       "category": "Cellular & Longevity"
     },
@@ -981,7 +993,8 @@
         "AFA Biosciences": 106.99,
         "Endura Peptides": 78.0,
         "Vertex Labs": 129.0,
-        "Apex Peptides": 119.0
+        "Apex Peptides": 119.0,
+        "Vector E Lab": 130.0
       },
       "lowest": 78.0,
       "notes": null,
@@ -992,7 +1005,8 @@
         "AFA Biosciences": "https://afabiosciences.com/products/mots-c",
         "Endura Peptides": "https://endurapeptides.com/product/mots-c/?attribute_pa_size=40-mg&attribute_pa_quantity=1-pack",
         "Vertex Labs": "https://vertexpeptideslab.org/product/mots-c/?attribute_strength=40mg",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/mots-c/?attribute_pa_size=40mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/mots-c/?attribute_pa_size=40mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/mots-c/?attribute_mg=40"
       }
     },
     {
@@ -1099,7 +1113,8 @@
         "Research Peptides Lab": 60.0,
         "Crownwell Research": 45.0,
         "Vertex Labs": 69.0,
-        "US Peptide Labs": 65.0
+        "US Peptide Labs": 65.0,
+        "Vector E Lab": 50.0
       },
       "lowest": 23.15,
       "notes": null,
@@ -1117,7 +1132,8 @@
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/selank-research-peptide",
         "Crownwell Research": "https://crownwellresearch.com/product/selank/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/selank/",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/selank"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/selank",
+        "Vector E Lab": "https://app.vectorelab.com/product/selank/?attribute_mg=10"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1141,7 +1157,8 @@
         "Vertex Labs": 69.0,
         "Peptide Express": 50.0,
         "Apex Peptides": 49.0,
-        "US Peptide Labs": 70.0
+        "US Peptide Labs": 70.0,
+        "Vector E Lab": 50.0
       },
       "lowest": 20.84,
       "notes": null,
@@ -1159,7 +1176,8 @@
         "Vertex Labs": "https://vertexpeptideslab.org/product/semax/",
         "Peptide Express": "https://peptide.express/catalog/semax",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/semax/?attribute_pa_size=10mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/semax"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/semax",
+        "Vector E Lab": "https://app.vectorelab.com/product/semax/?attribute_mg=10"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1473,7 +1491,8 @@
         "Aero Peptides": 69.99,
         "Endura Peptides": 56.0,
         "Vertex Labs": 99.0,
-        "Apex Peptides": 99.0
+        "Apex Peptides": 99.0,
+        "Vector E Lab": 69.99
       },
       "lowest": 35.57,
       "notes": null,
@@ -1489,7 +1508,8 @@
         "Aero Peptides": "https://aeropeptides.com/product/cjc-1295-no-dac-5mg-ipa-5mg",
         "Endura Peptides": "https://endurapeptides.com/product/ipamorelin-cjc-1295/?attribute_pa_size=5-5-mg&attribute_pa_quantity=1-pack",
         "Vertex Labs": "https://vertexpeptideslab.org/product/cjc-1295-5mg-no-dac-ipamorelin-5mg-blend/",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/cjc-1295-ipamorelin-5mg-5mg/?attribute_pa_size=5mg-5mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/cjc-1295-ipamorelin-5mg-5mg/?attribute_pa_size=5mg-5mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/cjc-1295-ipamorelin-no-dac/?attribute_mg=10"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -1687,7 +1707,8 @@
         "Research Peptides Lab": 80.0,
         "Crownwell Research": 62.0,
         "Vertex Labs": 69.0,
-        "Peptide Express": 60.0
+        "Peptide Express": 60.0,
+        "Vector E Lab": 49.99
       },
       "lowest": 35.88,
       "notes": null,
@@ -1702,7 +1723,8 @@
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/ipamorelin-research-peptide",
         "Crownwell Research": "https://crownwellresearch.com/product/ipamorelin/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/ipamorelin/",
-        "Peptide Express": "https://peptide.express/catalog/ipamorelin"
+        "Peptide Express": "https://peptide.express/catalog/ipamorelin",
+        "Vector E Lab": "https://app.vectorelab.com/product/ipamorelin/?attribute_mg=10"
       }
     },
     {
@@ -2375,13 +2397,15 @@
       "size": "5mg",
       "prices": {
         "Alpha Peptides": 84.21,
-        "Orbitrex Peptide": 49.99
+        "Orbitrex Peptide": 49.99,
+        "Vector E Lab": 45.0
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/slu-pp-332/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/slu-pp-332/"
+        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/slu-pp-332/",
+        "Vector E Lab": "https://app.vectorelab.com/product/slu-pp-332/?attribute_mg=5"
       },
-      "lowest": 49.99
+      "lowest": 45.0
     },
     {
       "peptide": "SNAP-8",
@@ -2709,7 +2733,8 @@
         "Lumera Labs": 109.99,
         "Research Peptides Lab": 145.0,
         "Vertex Labs": 119.0,
-        "Apex Peptides": 99.0
+        "Apex Peptides": 99.0,
+        "Vector E Lab": 120.0
       },
       "lowest": 48.41,
       "notes": null,
@@ -2725,7 +2750,8 @@
         "Lumera Labs": "https://mylumeralabs.com/product/glow",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/glow-research-peptide",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glow-blend/",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/glow-bpc-157-10mg-ghk-cu-50mg-tb500-10mg/?attribute_size=70mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/glow-bpc-157-10mg-ghk-cu-50mg-tb500-10mg/?attribute_size=70mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/glow-peptide/?attribute_mg=70"
       }
     },
     {
@@ -2742,7 +2768,8 @@
         "Lumera Labs": 119.99,
         "Research Peptides Lab": 165.0,
         "Endura Peptides": 75.0,
-        "Vertex Labs": 159.0
+        "Vertex Labs": 159.0,
+        "Vector E Lab": 149.0
       },
       "lowest": 75.0,
       "notes": null,
@@ -2756,7 +2783,8 @@
         "Lumera Labs": "https://mylumeralabs.com/product/klow",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/klow-research-peptide",
         "Endura Peptides": "https://endurapeptides.com/product/klow/?attribute_pa_size=50-10-10-10-mg&attribute_pa_quantity=1-pack",
-        "Vertex Labs": "https://vertexpeptideslab.org/product/klow-blend/"
+        "Vertex Labs": "https://vertexpeptideslab.org/product/klow-blend/",
+        "Vector E Lab": "https://app.vectorelab.com/product/klow-peptide/?attribute_mg=80"
       }
     },
     {
@@ -2778,7 +2806,8 @@
         "Crownwell Research": 47.0,
         "Vertex Labs": 89.0,
         "Apex Peptides": 99.0,
-        "US Peptide Labs": 80.0
+        "US Peptide Labs": 80.0,
+        "Vector E Lab": 60.0
       },
       "lowest": 31.32,
       "notes": null,
@@ -2797,7 +2826,8 @@
         "Crownwell Research": "https://crownwellresearch.com/product/tb-500/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/tb-500/?attribute_strength=10mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/tb-500/?attribute_pa_size=10mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/tb-500"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/tb-500",
+        "Vector E Lab": "https://app.vectorelab.com/product/tb-500/?attribute_mg=10"
       }
     },
     {
@@ -2861,13 +2891,15 @@
       "size": "20mg",
       "amount_mg": null,
       "prices": {
-        "American Peptides": 195
+        "American Peptides": 195,
+        "Vector E Lab": 188.99
       },
-      "lowest": 195,
+      "lowest": 188.99,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
-        "American Peptides": "https://www.americanpeptides.us/products/bpc-157-tb-500?variant=48167416168603"
+        "American Peptides": "https://www.americanpeptides.us/products/bpc-157-tb-500?variant=48167416168603",
+        "Vector E Lab": "https://app.vectorelab.com/product/wolverine-stack/?attribute_mg=20"
       }
     },
     {
@@ -3078,7 +3110,8 @@
         "Research Peptides Lab": 90.0,
         "Vertex Labs": 119.0,
         "Apex Peptides": 95.0,
-        "US Peptide Labs": 92.0
+        "US Peptide Labs": 92.0,
+        "Vector E Lab": 120.0
       },
       "lowest": 56.99,
       "notes": null,
@@ -3094,7 +3127,8 @@
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/tesamorelin-research-peptide",
         "Vertex Labs": "https://vertexpeptideslab.org/product/tesa/?attribute_strength=10mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/tesamorelin-5-mg/?attribute_pa_size=10mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/tesamorelin"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/tesamorelin",
+        "Vector E Lab": "https://app.vectorelab.com/product/tesamorelin/?attribute_mg=10"
       }
     },
     {
@@ -3181,7 +3215,8 @@
         "Research Peptides Lab": 75.0,
         "Crownwell Research": 90.0,
         "Apex Peptides": 99.0,
-        "US Peptide Labs": 76.0
+        "US Peptide Labs": 76.0,
+        "Vector E Lab": 90.0
       },
       "lowest": 26.88,
       "notes": null,
@@ -3193,7 +3228,8 @@
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/glp-2tz",
         "Crownwell Research": "https://crownwellresearch.com/product/glp2-tirz/",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=10mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/glp-2t?variant=44076217630807"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/glp-2t?variant=44076217630807",
+        "Vector E Lab": "https://app.vectorelab.com/product/tirzepatide/?attribute_mg=10"
       }
     },
     {
@@ -3206,7 +3242,8 @@
         "American Peptides": 170,
         "Vertex Labs": 119.0,
         "Peptide Express": 50.0,
-        "Apex Peptides": 120.0
+        "Apex Peptides": 120.0,
+        "Vector E Lab": 140.0
       },
       "lowest": 50.0,
       "notes": null,
@@ -3215,7 +3252,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=48622112800923",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=20mg",
         "Peptide Express": "https://peptide.express/catalog/glp-tirz",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=20mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=20mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/tirzepatide/?attribute_mg=20"
       }
     },
     {
@@ -3239,7 +3277,8 @@
         "Vertex Labs": 79.0,
         "True Peptides": 89.0,
         "Apex Peptides": 105.0,
-        "US Peptide Labs": 100.0
+        "US Peptide Labs": 100.0,
+        "Vector E Lab": 90.0
       },
       "lowest": 43.0,
       "notes": null,
@@ -3258,7 +3297,8 @@
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-3-rt/?attribute_strength=10mg",
         "True Peptides": "https://true-peptides.com/product/retatrutide",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-r/?attribute_pa_size=10mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt?variant=44076217532503"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt?variant=44076217532503",
+        "Vector E Lab": "https://app.vectorelab.com/product/glp-3/?attribute_mg=10"
       }
     },
     {
@@ -3277,7 +3317,8 @@
         "Crownwell Research": 99.0,
         "Vertex Labs": 139.0,
         "Apex Peptides": 185.0,
-        "US Peptide Labs": 170.0
+        "US Peptide Labs": 170.0,
+        "Vector E Lab": 169.0
       },
       "lowest": 75.9,
       "notes": null,
@@ -3291,7 +3332,8 @@
         "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-3/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-3-rt/?attribute_strength=20mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-r/?attribute_pa_size=20mg",
-        "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt?variant=44076217565271"
+        "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt?variant=44076217565271",
+        "Vector E Lab": "https://app.vectorelab.com/product/glp-3/?attribute_mg=20"
       }
     },
     {
@@ -3308,7 +3350,8 @@
         "Endura Peptides": 84.0,
         "Crownwell Research": 129.0,
         "Vertex Labs": 189.0,
-        "Apex Peptides": 229.0
+        "Apex Peptides": 229.0,
+        "Vector E Lab": 210.0
       },
       "lowest": 84.0,
       "notes": null,
@@ -3321,7 +3364,8 @@
         "Endura Peptides": "https://endurapeptides.com/product/glp-3r/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack",
         "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-2/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-3-rt/?attribute_strength=30mg",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-r/?attribute_pa_size=30mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-r/?attribute_pa_size=30mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/glp-3/?attribute_mg=30"
       }
     },
     {
@@ -3646,7 +3690,8 @@
         "Endura Peptides": 60.0,
         "Crownwell Research": 107.0,
         "Vertex Labs": 169.0,
-        "Apex Peptides": 159.0
+        "Apex Peptides": 159.0,
+        "Vector E Lab": 160.0
       },
       "lowest": 53.88,
       "notes": null,
@@ -3657,7 +3702,8 @@
         "Endura Peptides": "https://endurapeptides.com/product/glp-2t/?attribute_pa_size=30-mg&attribute_pa_quantity=1-pack",
         "Crownwell Research": "https://crownwellresearch.com/product/glp-2-tirz-2/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=30mg",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=30mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=30mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/tirzepatide/?attribute_mg=30"
       },
       "category": "Metabolic & Weight"
     },
@@ -3735,14 +3781,16 @@
       "prices": {
         "Synthrolab": 71.88,
         "Vertex Labs": 269.0,
-        "Apex Peptides": 249.0
+        "Apex Peptides": 249.0,
+        "Vector E Lab": 210.0
       },
       "lowest": 71.88,
       "notes": null,
       "vendor_product_urls": {
         "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=60mg",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=60mg",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=60mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=60mg",
+        "Vector E Lab": "https://app.vectorelab.com/product/tirzepatide/?attribute_mg=60"
       },
       "category": "Metabolic & Weight"
     },
