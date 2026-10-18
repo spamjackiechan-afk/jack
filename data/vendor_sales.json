@@ -97,5 +97,17 @@
       "start": null,
       "verified": "2026-10-15"
     }
+  ],
+  "Synthrolab": [
+    {
+      "code": null,
+      "combines_with_our_code": null,
+      "end": null,
+      "exclusions": null,
+      "gives": "20% off stacks",
+      "source": "https://synthrolab.com/",
+      "start": null,
+      "verified": "2026-10-15"
+    }
   ]
 }
