@@ -181,6 +181,13 @@ VENDORS = {
                                   # /products/ pages allowed. Sizes can't be pinned by URL, so only cards whose
                                   # default (first) size is the listed size are included.
     },
+    "Peptide Titans": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-16",
+        "robots_allows": True,   # confirmed: robots.txt (BigScoots) for * disallows only /cdn-cgi/, /wp-admin/,
+                                  # /wp-json/, ?s=, ?attachment_id=, add-to-cart and add_to_wishlist params.
+                                  # /product/ pages are allowed. Variable pages are pinned with
+                                  # ?attribute_mg=<size> (e.g. "5+mg", "5/5+mg").
+    },
 }
 
 HEADERS = {
