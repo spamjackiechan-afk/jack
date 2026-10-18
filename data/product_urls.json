@@ -809,5 +809,24 @@
     "Thymosin Alpha-1 | Vial | 5mg": "https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=5+mg",
     "Thymosin Alpha-1 | Vial | 10mg": "https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=10+mg",
     "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": "https://peptidetitans.com/product/vip/?attribute_mg=10+mg"
+  },
+  "Formal Peptides": {
+    "Tirzepatide | Vial | 20mg": "https://formalpeptides.com/product/tirzepatide/?attribute_pa_vial-sizes=20mg",
+    "Tirzepatide | Vial | 40mg": "https://formalpeptides.com/product/tirzepatide/?attribute_pa_vial-sizes=40mg",
+    "Tirzepatide | Vial | 60mg": "https://formalpeptides.com/product/tirzepatide/?attribute_pa_vial-sizes=60mg",
+    "Retatrutide | Vial | 10mg": "https://formalpeptides.com/product/retatrutide/?attribute_pa_vial-sizes=10mg",
+    "Retatrutide | Vial | 20mg": "https://formalpeptides.com/product/retatrutide/?attribute_pa_vial-sizes=20mg",
+    "NAD+ | Vial | 500mg": "https://formalpeptides.com/product/nad-1000mg/?attribute_pa_vial-sizes=500mg",
+    "SS-31 / Elamipretide | Vial | 10mg": "https://formalpeptides.com/product/ss-31-10mg/",
+    "Thymosin Alpha-1 | Vial | 10mg": "https://formalpeptides.com/product/thymosin-alpha-1-10mg/",
+    "PT-141 (Bremelanotide) | Vial | 10mg": "https://formalpeptides.com/product/pt-141-10mg/",
+    "MOTS-C | Vial | 20mg": "https://formalpeptides.com/product/mots-c-20mg/",
+    "KPV | Vial | 10mg": "https://formalpeptides.com/product/kpv-10mg/",
+    "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": "https://formalpeptides.com/product/glow-70mg/",
+    "GHK-Cu (Copper Peptide) | Vial | 50mg": "https://formalpeptides.com/product/ghk-cu-50mg/",
+    "DSIP | Vial | 5mg": "https://formalpeptides.com/product/dsip-5mg/",
+    "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": "https://formalpeptides.com/product/cjc-no-dac-ipamorelin-5-5mg/",
+    "BPC-157 | Vial | 10mg": "https://formalpeptides.com/product/bpc-157-10mg/",
+    "Bacteriostatic Water | Water | 10mL": "https://formalpeptides.com/product/bac-water-10mg/"
   }
 }

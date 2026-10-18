@@ -188,6 +188,13 @@ VENDORS = {
                                   # /product/ pages are allowed. Variable pages are pinned with
                                   # ?attribute_mg=<size> (e.g. "5+mg", "5/5+mg").
     },
+    "Formal Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-17",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only wc-logs, woocommerce_transient_files,
+                                  # woocommerce_uploads, wpforms uploads, ?add-to-cart= and /wp-admin/.
+                                  # /product/ pages are allowed. Variable pages are pinned with
+                                  # ?attribute_pa_vial-sizes=<size> (e.g. "20mg").
+    },
 }
 
 HEADERS = {
