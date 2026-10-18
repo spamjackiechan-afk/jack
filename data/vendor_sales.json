@@ -85,5 +85,17 @@
       "start": null,
       "verified": "2026-10-15"
     }
+  ],
+  "Research Peptides Lab": [
+    {
+      "code": "BOGO50",
+      "combines_with_our_code": null,
+      "end": null,
+      "exclusions": null,
+      "gives": "Buy one, get one 50% off sitewide",
+      "source": "https://researchpeptideslab.com/",
+      "start": null,
+      "verified": "2026-10-15"
+    }
   ]
 }
