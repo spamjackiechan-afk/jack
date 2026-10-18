@@ -167,6 +167,20 @@ VENDORS = {
                                   # /product/ pages on cms.apexpeptideslab.com are allowed. Variable pages
                                   # are pinned with ?attribute_pa_size=<size> (KLOW/GLOW: attribute_size).
     },
+    "US Peptide Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-15",
+        "robots_allows": True,   # confirmed: Shopify robots.txt allows /products/ (blocks cart/checkout/account/admin only). Multi-size pages pinned with ?variant=<id>.
+    },
+    "Vector E Lab": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-15",
+        "robots_allows": True,   # confirmed: app.vectorelab.com robots.txt blocks only cart/checkout/my-account/login and add-to-cart/orderby params; /product/ allowed. Pinned with ?attribute_mg=<n>.
+    },
+    "Quality Peptide USA": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-15",
+        "robots_allows": True,   # confirmed: robots.txt is "User-agent: * / Allow: /" (plus Sitemap) -- all
+                                  # /products/ pages allowed. Sizes can't be pinned by URL, so only cards whose
+                                  # default (first) size is the listed size are included.
+    },
 }
 
 HEADERS = {
