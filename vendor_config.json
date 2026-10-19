@@ -378,5 +378,21 @@
     "payment_note": null,
     "shipping_info": "US only (no international). UPS Expedited (3\u20135 business days) $15; UPS Air Expedited (1\u20132 business days) $49.99; free shipping on orders of $250+. Orders processed on business days.",
     "shipping_payment_researched": "2026-10-17"
+  },
+  "Olympus Peptide Labs": {
+    "status": "approved",
+    "site_url": "https://olympuspeptidelabs.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://olympuspeptidelabs.com/ref/discount-peptides",
+    "affiliate_path_suffix": null,
+    "promo_code": "REF-DISCOUNT-R72A",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Credit card",
+      "Debit card"
+    ],
+    "payment_note": "Charged in USD at checkout via a third-party card processor.",
+    "shipping_info": "US shipping $15 flat; free on orders of $100 or more. Orders are processed within 1-2 business days, with tracking.",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
