@@ -202,6 +202,12 @@ VENDORS = {
                                   # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_size=<size> (e.g. "10mg").
     },
+    "Zeptix Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /api/ and
+                                  # ?add-to-cart= params. /product/ pages are allowed. Sizes are pinned
+                                  # with ?variant=<id> (Next.js payload "variants" list, Midwest-style).
+    },
 }
 
 HEADERS = {

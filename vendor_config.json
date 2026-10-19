@@ -378,5 +378,23 @@
     "payment_note": null,
     "shipping_info": "US only (no international). UPS Expedited (3\u20135 business days) $15; UPS Air Expedited (1\u20132 business days) $49.99; free shipping on orders of $250+. Orders processed on business days.",
     "shipping_payment_researched": "2026-10-17"
+  },
+  "Zeptix Labs": {
+    "status": "approved",
+    "site_url": "https://zeptixlabs.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://zeptixlabs.com/?ref=WQ4ZFYPW",
+    "affiliate_path_suffix": null,
+    "promo_code": "WQ4ZFYPW",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Apple Pay",
+      "Visa",
+      "Mastercard",
+      "American Express"
+    ],
+    "payment_note": null,
+    "shipping_info": "Ships to all 50 US states. Standard shipping $12 flat; free on orders of $200 or more (after discounts). Orders before 6:00 PM ET on business days typically ship the same day, with tracking.",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
