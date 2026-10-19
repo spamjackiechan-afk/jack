@@ -378,5 +378,17 @@
     "payment_note": null,
     "shipping_info": "US only (no international). UPS Expedited (3\u20135 business days) $15; UPS Air Expedited (1\u20132 business days) $49.99; free shipping on orders of $250+. Orders processed on business days.",
     "shipping_payment_researched": "2026-10-17"
+  },
+  "True Research Labs": {
+    "status": "approved",
+    "site_url": "https://trueresearchlabs.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://trueresearchlabs.com/?ref=xucyujzb",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "payment_note": null,
+    "shipping_info": "Orders ship the same or next business day (excluding Sundays and public holidays) with tracking; 2-day FedEx advertised. Shipping cost is calculated at checkout; free shipping and free bacteriostatic water on orders over $250. Also ships internationally where permitted.",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
