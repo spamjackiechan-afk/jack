@@ -2695,15 +2695,13 @@
         "Purity Peptides": 14.99,
         "Alpha Peptides": 10.99,
         "Formal Peptides": 10,
-        "BioLabs Peptides": 11.5,
-        "True Research Labs": 24
+        "BioLabs Peptides": 11.5
       },
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bacteriostatic-water-10ml",
         "Alpha Peptides": "https://alpha-peptides.com/product/bac-water/",
         "Formal Peptides": "https://formalpeptides.com/product/bac-water-10mg/",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/bac-h2o-10-ml/",
-        "True Research Labs": "https://trueresearchlabs.com/shop/bacteriostatic-water-usp-grade/?attribute_pa_dosage=10-ml"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/bac-h2o-10-ml/"
       },
       "lowest": 10
     },
