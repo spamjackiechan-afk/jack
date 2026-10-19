@@ -653,9 +653,10 @@
         "Quality Peptide USA": 59,
         "Peptide Titans": 34.99,
         "Formal Peptides": 49,
-        "BioLabs Peptides": 39.78
+        "BioLabs Peptides": 39.78,
+        "Ride the Tide Peptides": 18.99
       },
-      "lowest": 23.99,
+      "lowest": 18.99,
       "notes": null,
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/vial-ghk-cu-50mg/",
@@ -677,7 +678,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/ghk-cu",
         "Peptide Titans": "https://peptidetitans.com/product/ghk-cu/?attribute_mg=50+mg",
         "Formal Peptides": "https://formalpeptides.com/product/ghk-cu-50mg/",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/ghk-cu/?attribute_size=50mg"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/ghk-cu/?attribute_size=50mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/ghk-cu"
       },
       "category": "Cellular & Longevity"
     },
@@ -1007,6 +1009,7 @@
         "Quality Peptide USA": 89,
         "Peptide Titans": 39.99,
         "BioLabs Peptides": 47.74,
+        "Ride the Tide Peptides": 29.99,
         "True Research Labs": 59
       },
       "lowest": 27.55,
@@ -1031,6 +1034,7 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/mots-c",
         "Peptide Titans": "https://peptidetitans.com/product/mots-c/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/mots-c/?attribute_size=10mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/mots-c",
         "True Research Labs": "https://trueresearchlabs.com/shop/mots-c/?attribute_pa_dosage=10-mg"
       },
       "category": "Cellular & Longevity"
@@ -1122,6 +1126,7 @@
         "US Peptide Labs": 80.0,
         "Quality Peptide USA": 79,
         "Formal Peptides": 49,
+        "Ride the Tide Peptides": 32.99,
         "True Research Labs": 69
       },
       "lowest": 30.52,
@@ -1146,6 +1151,7 @@
         "US Peptide Labs": "https://uspeptidelabs.co/products/nad-plus",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/nad-plus",
         "Formal Peptides": "https://formalpeptides.com/product/nad-1000mg/?attribute_pa_vial-sizes=500mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/nad",
         "True Research Labs": "https://trueresearchlabs.com/shop/nad/?attribute_pa_dosage=500-mg"
       },
       "category": "Cellular & Longevity"
@@ -1216,9 +1222,10 @@
         "Quality Peptide USA": 69,
         "Peptide Titans": 34.99,
         "BioLabs Peptides": 53.05,
+        "Ride the Tide Peptides": 20.99,
         "True Research Labs": 49
       },
-      "lowest": 23.15,
+      "lowest": 20.99,
       "notes": null,
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/selank",
@@ -1239,6 +1246,7 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/selank",
         "Peptide Titans": "https://peptidetitans.com/product/selank/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/selank/",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/selank",
         "True Research Labs": "https://trueresearchlabs.com/shop/selank/?attribute_pa_dosage=10-mg"
       },
       "category": "Cognitive & Neurological"
@@ -1268,6 +1276,7 @@
         "Quality Peptide USA": 69,
         "Peptide Titans": 34.99,
         "BioLabs Peptides": 53.05,
+        "Ride the Tide Peptides": 20.99,
         "True Research Labs": 49
       },
       "lowest": 20.84,
@@ -1291,6 +1300,7 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/semax",
         "Peptide Titans": "https://peptidetitans.com/product/semax/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/semax/",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/semax",
         "True Research Labs": "https://trueresearchlabs.com/shop/semax/?attribute_size=10+MG"
       },
       "category": "Cognitive & Neurological"
@@ -1577,9 +1587,10 @@
         "Vertex Labs": 49.0,
         "Apex Peptides": 55.0,
         "Quality Peptide USA": 59,
-        "Peptide Titans": 39.99
+        "Peptide Titans": 39.99,
+        "Ride the Tide Peptides": 18.0
       },
-      "lowest": 31.0,
+      "lowest": 18.0,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
@@ -1588,7 +1599,8 @@
         "Vertex Labs": "https://vertexpeptideslab.org/product/bpc-157/?attribute_strength=5mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/bpc-157/?attribute_pa_size=5mg",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/bpc-157",
-        "Peptide Titans": "https://peptidetitans.com/product/bpc-157/?attribute_mg=5+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/bpc-157/?attribute_mg=5+mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/bpc-157"
       }
     },
     {
@@ -1725,16 +1737,18 @@
         "Licensed Peptides": 38.99,
         "Apex Peptides": 78.0,
         "Peptide Titans": 49.99,
-        "BioLabs Peptides": 42.44
+        "BioLabs Peptides": 42.44,
+        "Ride the Tide Peptides": 29.99
       },
-      "lowest": 38.99,
+      "lowest": 29.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/cjc-1295-no-dac/",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/cjc-1295-no-dac-5mg/?attribute_pa_size=5mg",
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-no-dac/?attribute_mg=5+mg",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac/?attribute_size=5mg"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac/?attribute_size=5mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/cjc-1295-no-dac"
       }
     },
     {
@@ -1992,9 +2006,10 @@
         "American Peptides": 60,
         "Research Peptides Lab": 50.0,
         "Vertex Labs": 69.0,
-        "Quality Peptide USA": 60
+        "Quality Peptide USA": 60,
+        "Ride the Tide Peptides": 29.99
       },
-      "lowest": 50.0,
+      "lowest": 29.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
@@ -2002,7 +2017,8 @@
         "American Peptides": "https://www.americanpeptides.us/products/sermorelin",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/sermorelin-research-peptide",
         "Vertex Labs": "https://vertexpeptideslab.org/product/sermorelin/",
-        "Quality Peptide USA": "https://qualitypeptideusa.com/products/sermorelin"
+        "Quality Peptide USA": "https://qualitypeptideusa.com/products/sermorelin",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/sermorelin"
       }
     },
     {
@@ -2918,9 +2934,10 @@
         "Aero Peptides": 89.99,
         "Apex Peptides": 99.0,
         "Quality Peptide USA": 109,
-        "Peptide Titans": 49.99
+        "Peptide Titans": 49.99,
+        "Ride the Tide Peptides": 39.99
       },
-      "lowest": 49.99,
+      "lowest": 39.99,
       "notes": null,
       "category": "Tissue Repair & Recovery",
       "vendor_product_urls": {
@@ -2930,7 +2947,8 @@
         "Aero Peptides": "https://aeropeptides.com/product/bpc-5mg-tb-5mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/bpc-tb-500/?attribute_pa_size=5mg-5mg",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/wolverine-blend",
-        "Peptide Titans": "https://peptidetitans.com/product/bpc-157-tb-500-blend/?attribute_mg=5/5+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/bpc-157-tb-500-blend/?attribute_mg=5/5+mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/bpc-5mg-tb-500-5mg"
       }
     },
     {
@@ -2997,6 +3015,7 @@
         "Vector E Lab": 120.0,
         "Peptide Titans": 79.99,
         "Formal Peptides": 85,
+        "Ride the Tide Peptides": 64.99,
         "True Research Labs": 99
       },
       "lowest": 48.41,
@@ -3017,6 +3036,7 @@
         "Vector E Lab": "https://app.vectorelab.com/product/glow-peptide/?attribute_mg=70",
         "Peptide Titans": "https://peptidetitans.com/product/glow/?attribute_mg=70+mg",
         "Formal Peptides": "https://formalpeptides.com/product/glow-70mg/",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/bpc10-tb10-ghk50-glow",
         "True Research Labs": "https://trueresearchlabs.com/shop/glow-blend/?attribute_pa_dosage=70-mg"
       }
     },
@@ -3036,6 +3056,7 @@
         "Endura Peptides": 75.0,
         "Vertex Labs": 159.0,
         "Vector E Lab": 149.0,
+        "Ride the Tide Peptides": 80.99,
         "True Research Labs": 104
       },
       "lowest": 75.0,
@@ -3052,6 +3073,7 @@
         "Endura Peptides": "https://endurapeptides.com/product/klow/?attribute_pa_size=50-10-10-10-mg&attribute_pa_quantity=1-pack",
         "Vertex Labs": "https://vertexpeptideslab.org/product/klow-blend/",
         "Vector E Lab": "https://app.vectorelab.com/product/klow-peptide/?attribute_mg=80",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/tb-bpc-ghk-kpv",
         "True Research Labs": "https://trueresearchlabs.com/shop/klow-blend/?attribute_pa_dosage=80-mg"
       }
     },
@@ -3396,6 +3418,7 @@
         "Vector E Lab": 120.0,
         "Quality Peptide USA": 109,
         "BioLabs Peptides": 76.91,
+        "Ride the Tide Peptides": 59.99,
         "True Research Labs": 69
       },
       "lowest": 56.99,
@@ -3416,6 +3439,7 @@
         "Vector E Lab": "https://app.vectorelab.com/product/tesamorelin/?attribute_mg=10",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/tesamorelin",
         "BioLabs Peptides": "https://biolabspeptides.com/product/tesamorelin/",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/tesamorelin",
         "True Research Labs": "https://trueresearchlabs.com/shop/tesamorelin/?attribute_pa_dosage=10-mg"
       }
     },
@@ -3466,9 +3490,10 @@
         "Crownwell Research": 36.0,
         "Vertex Labs": 49.0,
         "Apex Peptides": 119.0,
+        "Ride the Tide Peptides": 30.99,
         "True Research Labs": 44
       },
-      "lowest": 36.0,
+      "lowest": 30.99,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
@@ -3478,6 +3503,7 @@
         "Crownwell Research": "https://crownwellresearch.com/product/glp1-sema/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-1-sem/?attribute_strength=10mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-s/?attribute_pa_size=10mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/glp1-s",
         "True Research Labs": "https://trueresearchlabs.com/shop/glp-1-sm/?attribute_pa_dosage=10-mg"
       }
     },
@@ -3630,9 +3656,10 @@
         "US Peptide Labs": 170.0,
         "Vector E Lab": 169.0,
         "Formal Peptides": 119,
-        "BioLabs Peptides": 159.13
+        "BioLabs Peptides": 159.13,
+        "Ride the Tide Peptides": 59.99
       },
-      "lowest": 75.9,
+      "lowest": 59.99,
       "notes": null,
       "category": "Metabolic & Weight",
       "vendor_product_urls": {
@@ -3647,7 +3674,8 @@
         "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt?variant=44076217565271",
         "Vector E Lab": "https://app.vectorelab.com/product/glp-3/?attribute_mg=20",
         "Formal Peptides": "https://formalpeptides.com/product/retatrutide/?attribute_pa_vial-sizes=20mg",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/reta/?attribute_size=20mg"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/reta/?attribute_size=20mg",
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/glp3-r"
       }
     },
     {
