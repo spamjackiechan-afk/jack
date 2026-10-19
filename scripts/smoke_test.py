@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Site smoke test: renders the static site in headless Chromium and fails if
-the homepage vendor list, the calculator page, or the suppliers tools are broken.
+the homepage vendor list or the suppliers tools are broken, or if any dosing /
+reconstitution calculator comes back.
 
 Run locally:   pip install playwright && playwright install chromium
                python scripts/smoke_test.py              # serves the repo root
@@ -10,13 +11,14 @@ Run locally:   pip install playwright && playwright install chromium
                   only if the render safety net still draws a usable list)
 
 Fails on:
-  * any uncaught JS error (pageerror) on index.html, calculator.html or suppliers.html
+  * any uncaught JS error (pageerror) on index.html or suppliers.html
   * any console.error tagged [site-guard] (the in-page safety nets)
   * homepage < MIN_CARDS product cards, or < MIN_VENDORS distinct vendor names
   * the render safety net having kicked in (window.__DP_FALLBACK)
-  * the calculator page not producing a result for sample inputs
-  * any page that lists Offline Peptides (index.html, suppliers.html) containing
-    the calculator, or calculator.html containing any Offline/vendor links
+  * calculator.html existing again, or any public page containing calculator
+    markup or a /calculator link. The reconstitution/dosing calculator was
+    removed on purpose (FDA cites these as evidence of human use); it must
+    not come back
   * the homepage Suppliers nav item not linking to /suppliers
   * suppliers.html rendering < MIN_SUPPLIERS cards
   * a vendor count on index.html, suppliers.html or about.html ("13 vendors",
@@ -31,7 +33,7 @@ Fails on:
     suppliers.html not exactly matching data/catalog.json / vendor_config.json
     (scripts/sync_vendor_config.py --check)
   * Google Analytics (ga-consent.js): a public page (index, about, suppliers,
-    testing, privacy, calculator) not loading it; admin-reviews.html or functions/ loading
+    testing, privacy) not loading it; admin-reviews.html or functions/ loading
     it; the Measurement ID appearing in any file other than ga-consent.js;
     privacy.html missing or not in sitemap.xml; on a first visit, the cookie
     banner not showing or any request going to Google's analytics hosts
@@ -57,7 +59,7 @@ NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
 # second copy of it; it may appear only in ga-consent.js.
 GA_FILE = "ga-consent.js"
 GA_ID = "G-" + "CYYYPQ5ZDX"
-GA_PAGES = ["index.html", "about.html", "suppliers.html", "testing.html", "privacy.html", "calculator.html"]
+GA_PAGES = ["index.html", "about.html", "suppliers.html", "testing.html", "privacy.html"]
 GA_HOSTS = ("googletagmanager.com", "google-analytics.com")
 
 
@@ -240,36 +242,15 @@ def main():
         if fallback:
             problems.append("index.html: render safety net was used (main render failed); see errors above")
 
-        # ---- Calculator page (moved off the homepage per Offline partner terms)
-        try:
-            cpage = open_page(browser, base + "/calculator.html", problems, "calculator.html")
-            cpage.fill("#calcVial", "5"); cpage.fill("#calcWater", "2"); cpage.fill("#calcDose", "0.25")
-            cpage.wait_for_timeout(300)
-            units = cpage.inner_text("#calcUnits").strip()
-            notes.append(f"calculator.html: 5mg / 2mL / 0.25mg -> {units!r}")
-            if not cpage.is_visible("#calcSection") or units != "10 units":
-                problems.append(f"calculator.html: expected '10 units' for 5mg/2mL/0.25mg, got {units!r}")
-            # No Offline links and no vendor product links on the calculator page
-            calc_raw = open(os.path.join(root, "calculator.html"), encoding="utf-8", errors="replace").read()
-            calc_text = cpage.inner_text("body")
-            for label, blob in (("raw file", calc_raw), ("rendered page", calc_text)):
-                if re.search(r"offlinepeptides\.com", blob, re.I):
-                    problems.append(f"calculator.html ({label}): contains an Offline Peptides link")
-                if re.search(r"Offline Peptides", blob):
-                    problems.append(f"calculator.html ({label}): mentions Offline Peptides")
-            links = cpage.eval_on_selector_all("a[href]", "els => els.map(e => e.getAttribute('href'))")
-            bad = [h for h in links if h and re.match(r"https?://", h) and "discountspeptides.com" not in h and "fonts.googleapis" not in h]
-            if bad:
-                problems.append(f"calculator.html: vendor/outbound links present: {bad[:3]}")
-            cpage.close()
-        except Exception as e:
-            problems.append(f"calculator.html: could not exercise it: {str(e).splitlines()[0]}")
-
-        # ---- No page that lists Offline Peptides may contain the calculator
-        for offline_page in ("index.html", "suppliers.html"):
-            raw = open(os.path.join(root, offline_page), encoding="utf-8", errors="replace").read()
-            if "calcSection" in raw or "calcVial" in raw:
-                problems.append(f"{offline_page}: lists Offline Peptides but still contains the calculator")
+        # ---- No dosing / reconstitution calculator anywhere. It was removed on
+        # purpose: FDA has cited reconstitution calculators as evidence that
+        # "research use only" products were meant for people.
+        if os.path.exists(os.path.join(root, "calculator.html")):
+            problems.append("calculator.html: exists again; the calculator was removed on purpose")
+        for f in GA_PAGES:
+            raw = open(os.path.join(root, f), encoding="utf-8", errors="replace").read()
+            if re.search(r'calcSection|calcVial|calcDose|href="/calculator', raw):
+                problems.append(f"{f}: contains calculator markup or a /calculator link")
 
         # ---- Suppliers nav item (homepage) must link to the /suppliers page
         try:

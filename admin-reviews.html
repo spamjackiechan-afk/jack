@@ -41,12 +41,15 @@
   .status-badge.approved{color:var(--lowest); border:1px solid var(--lowest);}
   .status-badge.rejected{color:var(--amber); border:1px solid var(--amber);}
   .empty-msg{color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:13px; padding:20px 0;}
+  .rules{background:var(--paper-raised); border:1px solid var(--rule); border-radius:10px; padding:12px 16px; margin:0 0 18px; font-size:13px; line-height:1.5;}
+  .flag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--amber); border:1px solid var(--amber); border-radius:4px; padding:2px 6px;}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Review Moderation</h1>
   <p class="sub">Not linked from the public site. Approved reviews appear on suppliers.html within about 5 minutes.</p>
+  <div class="rules"><strong>Approve service-only reviews.</strong> OK: shipping speed, packaging, communication, support, whether the order matched the listing. <strong>Reject</strong> anything that names a product or mentions use, doses, injecting, effects, results, side effects or health. A disclaimer in the review doesn't fix it. Rows marked <span class="flag">mentions use or results</span> matched the filter and should almost always be rejected.</div>
 
   <div id="loginBox">
     <input type="password" id="passwordInput" placeholder="Admin password">
@@ -66,6 +69,8 @@
 </div>
 
 <script>
+// Same pattern as REVIEW_USE_PATTERN in functions/_lib/records.js (keep in sync).
+const USE_PATTERN = /\b(dos(e|es|ed|ing|age)|mcg|\d+\s?mg|iu|inject\w*|pinn?(ed|ing)|reconstitut\w*|bac\s?water|stack(ed|ing)?|protocol|results?|side[- ]?effects?|fat\s?loss|weight|lost \d+|heal(ed|ing)?|recover(y|ed)|muscle|gains|sleep|skin|glow|bpc|tb-?500|semaglutide|tirzepatide|retatrutide|sema|tirz|reta|glp-?1)\b/i;
 let ADMIN_PASSWORD = '';
 let ALL_REVIEWS = [];
 let currentFilter = 'pending';
@@ -129,7 +134,7 @@ function render(){
           <div class="stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
           <div class="rmeta">${escapeHtml(r.vendor)} · ${escapeHtml(r.reviewer_name)}${r.peptide_ordered ? ` · ordered ${escapeHtml(r.peptide_ordered)}` : ''} · ${new Date(r.date_submitted).toLocaleString()}</div>
         </div>
-        <span class="status-badge ${r.status}">${r.status}</span>
+        ${(USE_PATTERN.test(r.review_text) || r.peptide_ordered) ? '<span class="flag">mentions use or results</span> ' : ''}<span class="status-badge ${r.status}">${r.status}</span>
       </div>
       <div class="rtext">${escapeHtml(r.review_text)}</div>
       ${r.status === 'pending' ? `

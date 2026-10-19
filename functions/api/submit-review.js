@@ -9,10 +9,9 @@
 // requiring a second namespace. Each review is its own key (review:<id>);
 // see functions/_lib/records.js.
 
-import { putReview, looksAutomated, underRateLimit, clientIp, GENERIC_ERROR } from "../_lib/records.js";
+import { putReview, looksAutomated, underRateLimit, clientIp, GENERIC_ERROR, REVIEW_USE_PATTERN } from "../_lib/records.js";
 
 const MAX_NAME_LEN = 60;
-const MAX_PEPTIDE_LEN = 80;
 const MAX_REVIEW_LEN = 2000;
 const MIN_REVIEW_LEN = 10;
 const URL_PATTERN = /https?:\/\/|www\./i;
@@ -38,7 +37,6 @@ export async function onRequestPost(context) {
   }
 
   const vendor = sanitize(body.vendor);
-  const peptide = sanitize(body.peptide_ordered);
   const reviewerName = sanitize(body.reviewer_name);
   const reviewText = sanitize(body.review_text);
   const rating = parseInt(body.rating, 10);
@@ -51,14 +49,16 @@ export async function onRequestPost(context) {
   if (!reviewerName || reviewerName.length > MAX_NAME_LEN) {
     return new Response(JSON.stringify({ error: "Missing or invalid name" }), { status: 400 });
   }
-  if (peptide.length > MAX_PEPTIDE_LEN) {
-    return new Response(JSON.stringify({ error: "Peptide field too long" }), { status: 400 });
-  }
   if (!reviewText || reviewText.length < MIN_REVIEW_LEN || reviewText.length > MAX_REVIEW_LEN) {
     return new Response(JSON.stringify({ error: `Review must be ${MIN_REVIEW_LEN}-${MAX_REVIEW_LEN} characters` }), { status: 400 });
   }
   if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
     return new Response(JSON.stringify({ error: "Rating must be 1-5" }), { status: 400 });
+  }
+  // Service-only reviews: nothing about products, use, dosing or results.
+  // The product-ordered field was removed (Oct 2026); anything sent in it is ignored.
+  if (REVIEW_USE_PATTERN.test(reviewText)) {
+    return new Response(JSON.stringify({ error: "Reviews here are about the service only (shipping, packaging, support). Please leave out product names, use, doses, effects and results." }), { status: 400 });
   }
   // Lightweight spam guard — genuine reviews rarely need to include a link.
   if (URL_PATTERN.test(reviewText) || URL_PATTERN.test(reviewerName)) {
@@ -73,7 +73,6 @@ export async function onRequestPost(context) {
   const review = {
     id,
     vendor,
-    peptide_ordered: peptide || null,
     rating,
     reviewer_name: reviewerName,
     review_text: reviewText,
