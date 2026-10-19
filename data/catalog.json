@@ -502,7 +502,8 @@
         "BioLabs Peptides": 55.69,
         "Zeptix Labs": 59.99,
         "True Research Labs": 64,
-        "Olympus Peptide Labs": 81.37
+        "Olympus Peptide Labs": 81.37,
+        "Veratis Bio": 65.0
       },
       "lowest": 25.99,
       "notes": null,
@@ -529,7 +530,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/bpc-157/",
         "Zeptix Labs": "https://zeptixlabs.com/product/bpc-157/?variant=10",
         "True Research Labs": "https://trueresearchlabs.com/shop/bpc-157/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/3c29b3f2"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/3c29b3f2",
+        "Veratis Bio": "https://veratisbio.com/shop/bpc-157-10mg"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -667,7 +669,8 @@
         "Formal Peptides": 49,
         "BioLabs Peptides": 39.78,
         "Ride the Tide Peptides": 18.99,
-        "Zeptix Labs": 39.99
+        "Zeptix Labs": 39.99,
+        "Veratis Bio": 60.0
       },
       "lowest": 18.99,
       "notes": null,
@@ -693,7 +696,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/ghk-cu-50mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ghk-cu/?attribute_size=50mg",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/ghk-cu",
-        "Zeptix Labs": "https://zeptixlabs.com/product/ghk-cu/?variant=6"
+        "Zeptix Labs": "https://zeptixlabs.com/product/ghk-cu/?variant=6",
+        "Veratis Bio": "https://veratisbio.com/shop/ghk-cu-50mg"
       },
       "category": "Cellular & Longevity"
     },
@@ -937,7 +941,8 @@
         "Formal Peptides": 39,
         "BioLabs Peptides": 66.31,
         "True Research Labs": 59,
-        "Olympus Peptide Labs": 61.65
+        "Olympus Peptide Labs": 61.65,
+        "Veratis Bio": 60.0
       },
       "lowest": 25.25,
       "notes": null,
@@ -959,7 +964,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/kpv-10mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/kpv/",
         "True Research Labs": "https://trueresearchlabs.com/shop/kpv/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b4514d14"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b4514d14",
+        "Veratis Bio": "https://veratisbio.com/shop/kpv-10mg"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -1034,7 +1040,8 @@
         "Ride the Tide Peptides": 29.99,
         "Zeptix Labs": 59.99,
         "True Research Labs": 59,
-        "Olympus Peptide Labs": 51.29
+        "Olympus Peptide Labs": 51.29,
+        "Veratis Bio": 70.0
       },
       "lowest": 27.55,
       "notes": null,
@@ -1061,7 +1068,8 @@
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/mots-c",
         "Zeptix Labs": "https://zeptixlabs.com/product/mots-c/?variant=15",
         "True Research Labs": "https://trueresearchlabs.com/shop/mots-c/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/f66ef5af"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/f66ef5af",
+        "Veratis Bio": "https://veratisbio.com/shop/mots-c-10mg"
       },
       "category": "Cellular & Longevity"
     },
@@ -1156,7 +1164,8 @@
         "Formal Peptides": 49,
         "Ride the Tide Peptides": 32.99,
         "True Research Labs": 69,
-        "Olympus Peptide Labs": 139.05
+        "Olympus Peptide Labs": 139.05,
+        "Veratis Bio": 60.0
       },
       "lowest": 30.52,
       "notes": null,
@@ -1182,7 +1191,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/nad-1000mg/?attribute_pa_vial-sizes=500mg",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/nad",
         "True Research Labs": "https://trueresearchlabs.com/shop/nad/?attribute_pa_dosage=500-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/ce489d23"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/ce489d23",
+        "Veratis Bio": "https://veratisbio.com/shop/nad-plus-500mg"
       },
       "category": "Cellular & Longevity"
     },
@@ -1959,7 +1969,8 @@
         "Vector E Lab": 49.99,
         "Peptide Titans": 84.99,
         "BioLabs Peptides": 55.69,
-        "True Research Labs": 59
+        "True Research Labs": 59,
+        "Veratis Bio": 70.0
       },
       "lowest": 35.88,
       "notes": null,
@@ -1978,7 +1989,8 @@
         "Vector E Lab": "https://app.vectorelab.com/product/ipamorelin/?attribute_mg=10",
         "Peptide Titans": "https://peptidetitans.com/product/ipamorelin/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ipa/?attribute_size=10mg",
-        "True Research Labs": "https://trueresearchlabs.com/shop/ipamorelin/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/ipamorelin/?attribute_pa_dosage=10-mg",
+        "Veratis Bio": "https://veratisbio.com/shop/ipamorelin-10mg"
       }
     },
     {
@@ -2907,7 +2919,8 @@
         "Quality Peptide USA": 69,
         "Peptide Titans": 34.99,
         "BioLabs Peptides": 37.13,
-        "True Research Labs": 39
+        "True Research Labs": 39,
+        "Veratis Bio": 45.0
       },
       "lowest": 21.05,
       "notes": null,
@@ -2928,7 +2941,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/melanotan-2",
         "Peptide Titans": "https://peptidetitans.com/product/melanotan-ii/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/mt-2/",
-        "True Research Labs": "https://trueresearchlabs.com/shop/melanotan-2/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/melanotan-2/?attribute_pa_dosage=10-mg",
+        "Veratis Bio": "https://veratisbio.com/shop/melanotan-2-10mg"
       }
     },
     {
@@ -3061,7 +3075,8 @@
         "Formal Peptides": 85,
         "Ride the Tide Peptides": 64.99,
         "True Research Labs": 99,
-        "Olympus Peptide Labs": 222.12
+        "Olympus Peptide Labs": 222.12,
+        "Veratis Bio": 125.0
       },
       "lowest": 48.41,
       "notes": null,
@@ -3083,7 +3098,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/glow-70mg/",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/bpc10-tb10-ghk50-glow",
         "True Research Labs": "https://trueresearchlabs.com/shop/glow-blend/?attribute_pa_dosage=70-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/94c33dae"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/94c33dae",
+        "Veratis Bio": "https://veratisbio.com/shop/glow-10mg"
       }
     },
     {
@@ -3105,7 +3121,8 @@
         "Ride the Tide Peptides": 80.99,
         "Zeptix Labs": 129.99,
         "True Research Labs": 104,
-        "Olympus Peptide Labs": 166.86
+        "Olympus Peptide Labs": 166.86,
+        "Veratis Bio": 135.0
       },
       "lowest": 75.0,
       "notes": null,
@@ -3124,7 +3141,8 @@
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/tb-bpc-ghk-kpv",
         "Zeptix Labs": "https://zeptixlabs.com/product/klow/?variant=4",
         "True Research Labs": "https://trueresearchlabs.com/shop/klow-blend/?attribute_pa_dosage=80-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/9ccdcd3c"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/9ccdcd3c",
+        "Veratis Bio": "https://veratisbio.com/shop/klow-80mg"
       }
     },
     {
@@ -3152,7 +3170,8 @@
         "Peptide Titans": 44.99,
         "BioLabs Peptides": 61.0,
         "True Research Labs": 69,
-        "Olympus Peptide Labs": 78.2
+        "Olympus Peptide Labs": 78.2,
+        "Veratis Bio": 75.0
       },
       "lowest": 31.32,
       "notes": null,
@@ -3177,7 +3196,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/tb-500/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/tb500-thymosin-b4-acetate/",
         "True Research Labs": "https://trueresearchlabs.com/shop/tb-500/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/11bdc46d"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/11bdc46d",
+        "Veratis Bio": "https://veratisbio.com/shop/tb-500-fragment-10mg"
       }
     },
     {
@@ -3472,7 +3492,8 @@
         "BioLabs Peptides": 76.91,
         "Ride the Tide Peptides": 59.99,
         "Zeptix Labs": 99.99,
-        "True Research Labs": 69
+        "True Research Labs": 69,
+        "Veratis Bio": 105.0
       },
       "lowest": 56.99,
       "notes": null,
@@ -3494,7 +3515,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/tesamorelin/",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/tesamorelin",
         "Zeptix Labs": "https://zeptixlabs.com/product/tesamorelin/?variant=5",
-        "True Research Labs": "https://trueresearchlabs.com/shop/tesamorelin/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/tesamorelin/?attribute_pa_dosage=10-mg",
+        "Veratis Bio": "https://veratisbio.com/shop/tesamorelin-10mg"
       }
     },
     {

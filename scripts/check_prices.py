@@ -218,6 +218,11 @@ VENDORS = {
                                   # ?add-to-cart= params. /product/ pages are allowed. Sizes are pinned
                                   # with ?variant=<id> (Next.js payload "variants" list, Midwest-style).
     },
+    "Veratis Bio": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" with no disallows. /shop/ pages
+                                  # are allowed; each size is its own page with server-rendered Product JSON-LD.
+    },
 }
 
 HEADERS = {
