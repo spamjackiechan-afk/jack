@@ -225,6 +225,11 @@ VENDORS = {
                                   # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_pa_size=<size> (e.g. "10mg").
     },
+    "Veratis Bio": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" with no disallows. /shop/ pages
+                                  # are allowed; each size is its own page with server-rendered Product JSON-LD.
+    },
 }
 
 HEADERS = {

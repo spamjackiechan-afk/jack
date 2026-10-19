@@ -456,5 +456,25 @@
     "payment_note": null,
     "shipping_info": "Ships to all 50 US states. 2-3 day Priority $9.99 (free on orders of $150+) or Overnight $34.99. Orders before 3 PM ET ship the same day, with tracking. Also ships internationally to select countries.",
     "shipping_payment_researched": "2026-10-18"
+  },
+  "Veratis Bio": {
+    "status": "approved",
+    "site_url": "https://veratisbio.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://veratisbio.com/r/DISCOUNTPEPTIDES",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPEPTIDES",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Credit card",
+      "Debit card",
+      "Venmo",
+      "Zelle",
+      "USDC",
+      "Bitcoin"
+    ],
+    "payment_note": "Prices in USD; crypto amounts are locked at the checkout rate. Venmo and Zelle orders release after manual verification.",
+    "shipping_info": "Continental US (lower 48) only. $15 flat; free on orders of $150 or more. Orders by 2:00 PM ET on business days ship the same day, about 2-day delivery (UPS 2nd Day Air or Ground).",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
