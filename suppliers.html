@@ -347,6 +347,24 @@ let REVIEWS = [];
 let CLICK_COUNTS = {};
 const POPULAR_MIN_CLICKS = 3; // same threshold as the homepage: no "popular" off one stray click
 
+// Click tracking for the "Visit site" button (same as trackClick in index.html).
+// Fire-and-forget: a tracking failure must never block the link.
+function trackClick(vendor, peptide){
+  try {
+    fetch('/api/track-click', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ vendor, peptide }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch (err) { /* silent */ }
+  try {
+    if (typeof window.gtag === 'function' && window.dp_ga_loaded) {
+      gtag('event', 'affiliate_click', { vendor_name: vendor, peptide_name: peptide });
+    }
+  } catch (err) { /* silent */ }
+}
+
 function escapeHtml(str){
   const div = document.createElement('div');
   div.textContent = str == null ? '' : String(str);
@@ -650,7 +668,7 @@ function supplierCardHtml(name){
 
   const link = resolveVendorLink(name, { peptide: 'suppliers', vendor_product_urls: {} });
   const visitBtn = link.url
-    ? `<a href="${escapeHtml(link.url)}" target="_blank" rel="${link.state === 'affiliate' ? 'noopener sponsored' : 'noopener'}" class="btn-visit">Visit site ${icon('ext')}</a>`
+    ? `<a href="${escapeHtml(link.url)}" target="_blank" rel="${link.state === 'affiliate' ? 'noopener sponsored' : 'noopener'}" class="btn-visit" data-vendor="${escapeHtml(name)}" onclick="trackClick(this.dataset.vendor, '(suppliers page)')">Visit site ${icon('ext')}</a>`
     : `<span class="btn-visit disabled">No site</span>`;
 
   const flags = {
