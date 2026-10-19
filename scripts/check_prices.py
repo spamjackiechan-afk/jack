@@ -218,6 +218,14 @@ VENDORS = {
                                   # ?add-to-cart= params. /product/ pages are allowed. Sizes are pinned
                                   # with ?variant=<id> (Next.js payload "variants" list, Midwest-style).
     },
+    "Prism Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /admin, /cart,
+                                  # /checkout, /success, /track-order, /reconstitution-calculator and
+                                  # /affiliate(-program). /product/ pages are allowed. Product JSON-LD is
+                                  # server-rendered; only single-size products are listed (multi-size pages
+                                  # expose an AggregateOffer lowPrice only).
+    },
 }
 
 HEADERS = {

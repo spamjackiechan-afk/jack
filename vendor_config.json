@@ -439,5 +439,23 @@
     "payment_note": "Charged in USD at checkout via a third-party card processor.",
     "shipping_info": "US shipping $15 flat; free on orders of $100 or more. Orders are processed within 1-2 business days, with tracking.",
     "shipping_payment_researched": "2026-10-18"
+  },
+  "Prism Labs": {
+    "status": "approved",
+    "site_url": "https://www.prismlabs.store",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://prismlabs.store/?promo=DISCOUNTPEPT",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPEPT",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Credit card",
+      "Debit card",
+      "Apple Pay",
+      "Google Pay"
+    ],
+    "payment_note": "Other Stripe options (e.g. Amazon Pay, Link) may be shown at checkout.",
+    "shipping_info": "US addresses only. UPS Ground $8.99 (free on orders over $125) or UPS 2nd Day Air $14.99. Orders before 4:30 PM CT ship the same day, 7 days a week, with tracking.",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
