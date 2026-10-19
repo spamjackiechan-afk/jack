@@ -476,5 +476,22 @@
     "payment_note": "Prices in USD; crypto amounts are locked at the checkout rate. Venmo and Zelle orders release after manual verification.",
     "shipping_info": "Continental US (lower 48) only. $15 flat; free on orders of $150 or more. Orders by 2:00 PM ET on business days ship the same day, about 2-day delivery (UPS 2nd Day Air or Ground).",
     "shipping_payment_researched": "2026-10-18"
+  },
+  "Stealth Research Labs": {
+    "status": "approved",
+    "site_url": "https://stealthresearchlabs.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://stealthresearchlabs.com/shop/?srl_ref=DISCOUNTPEPTIDES",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPEPTIDES",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Zelle",
+      "Venmo",
+      "Cash App"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "Ships from Dallas, Texas. USPS Priority Mail $9.99, free on qualifying U.S. orders of $200 or more; paid FedEx 2Day and Overnight upgrades available. Orders before 2 PM ET on business days ship the same day after payment verification. International shipping by quote.",
+    "shipping_payment_researched": "2026-10-19"
   }
 }
