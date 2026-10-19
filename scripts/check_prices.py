@@ -195,6 +195,13 @@ VENDORS = {
                                   # /product/ pages are allowed. Variable pages are pinned with
                                   # ?attribute_pa_vial-sizes=<size> (e.g. "20mg").
     },
+    "BioLabs Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-17",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/,
+                                  # woocommerce_transient_files/, woocommerce_uploads/, ?add-to-cart= params
+                                  # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Variable pages are pinned with ?attribute_size=<size> (e.g. "10mg").
+    },
     "Ride the Tide Peptides": {
         "robots_checked_by": "Grok for Jackson, 2026-10-18",
         "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /admin,
