@@ -212,6 +212,12 @@ VENDORS = {
                                   # i.e. the cheapest size, and sizes can't be pinned by URL, so only
                                   # each page's cheapest (default) size is listed.
     },
+    "Zeptix Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /api/ and
+                                  # ?add-to-cart= params. /product/ pages are allowed. Sizes are pinned
+                                  # with ?variant=<id> (Next.js payload "variants" list, Midwest-style).
+    },
 }
 
 HEADERS = {

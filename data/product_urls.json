@@ -891,5 +891,18 @@
     "CJC-1295 | Vial | 5mg": "https://www.ridethetidepeptides.com/products/cjc-1295-no-dac",
     "Sermorelin | Vial | 5mg": "https://www.ridethetidepeptides.com/products/sermorelin",
     "Tesamorelin | Vial | 10mg": "https://www.ridethetidepeptides.com/products/tesamorelin"
+  },
+  "Zeptix Labs": {
+    "Retatrutide | Vial | 10mg": "https://zeptixlabs.com/product/glp-3-r/?variant=1",
+    "Retatrutide | Vial | 20mg": "https://zeptixlabs.com/product/glp-3-r/?variant=2",
+    "Retatrutide | Vial | 30mg": "https://zeptixlabs.com/product/glp-3-r/?variant=3",
+    "BPC-157 | Vial | 10mg": "https://zeptixlabs.com/product/bpc-157/?variant=10",
+    "Tirzepatide | Vial | 10mg": "https://zeptixlabs.com/product/glp-2-t/?variant=8",
+    "Tirzepatide | Vial | 30mg": "https://zeptixlabs.com/product/glp-2-t/?variant=9",
+    "GHK-Cu (Copper Peptide) | Vial | 50mg": "https://zeptixlabs.com/product/ghk-cu/?variant=6",
+    "GHK-Cu (Copper Peptide) | Vial | 100mg": "https://zeptixlabs.com/product/ghk-cu/?variant=7",
+    "Tesamorelin | Vial | 10mg": "https://zeptixlabs.com/product/tesamorelin/?variant=5",
+    "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": "https://zeptixlabs.com/product/klow/?variant=4",
+    "MOTS-C | Vial | 10mg": "https://zeptixlabs.com/product/mots-c/?variant=15"
   }
 }
