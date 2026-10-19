@@ -292,85 +292,42 @@
     "coa prove": "quality-testing"
   },
   "topics": {
-    "fat-loss": {
-      "label": "fat loss / weight / metabolic",
+    "incretin-metabolic": {
+      "label": "incretin & metabolic-pathway compounds",
       "phrases": [
-        "fatloss",
-        "fat loss",
-        "fat-loss",
-        "weight loss",
-        "weightloss",
-        "lose weight",
-        "losing weight",
-        "obesity",
-        "metabolic",
-        "lipolysis",
-        "body fat",
-        "cutting weight",
-        "weight management",
-        "slim down",
-        "burn fat"
+        "incretin",
+        "glp-1 agonist",
+        "gip",
+        "amylin",
+        "metabolic pathway"
       ],
       "evidence_ids": [
         "mazdutide",
         "hgh-fragment-176-191",
         "slu-pp-332",
         "aicar",
-        "oxytocin",
-        "hcg",
         "other-catalog-notes"
       ],
       "catalog_names": [
         "AOD-9604",
         "SLU-PP-332",
-        "Oxytocin",
         "GLP-1 (Semaglutide)",
         "Semaglutide",
         "Tirzepatide",
         "Retatrutide",
         "Cagrilintide",
-        "5-Amino-1MQ",
-        "MOTS-C",
-        "Tesamorelin"
+        "5-Amino-1MQ"
       ],
-      "framing": "Catalog compounds often filed under fat-loss / weight / metabolic research topics. Listing them is not a claim that they cause fat loss in people. Research-chemical incretin vials are not licensed drug products."
+      "framing": "Compounds this site files by compound class (incretin and metabolic-pathway). Catalog grouping only — research use only, not for human or animal use. Research-chemical incretin vials are not licensed drug products."
     },
-    "sleep": {
-      "label": "sleep",
+    "thymosin-fragments": {
+      "label": "thymosin, BPC-157 & peptide fragments",
       "phrases": [
-        "sleep",
-        "insomnia",
-        "jet lag",
-        "jetlag",
-        "sleep onset",
-        "deep sleep",
-        "dsip"
-      ],
-      "evidence_ids": [
-        "melatonin",
-        "epitalon-epithalon"
-      ],
-      "catalog_names": [
-        "DSIP",
-        "Epitalon",
-        "Pinealon",
-        "Oxytocin"
-      ],
-      "framing": "Catalog compounds often discussed under sleep / circadian research topics. Listing them is not a claim they treat insomnia or improve sleep in people."
-    },
-    "recovery": {
-      "label": "recovery / repair",
-      "phrases": [
-        "recovery",
-        "repair",
-        "healing",
-        "injury",
-        "tendon",
-        "muscle recovery",
-        "wound",
-        "post workout",
-        "post-workout",
-        "rehab"
+        "thymosin",
+        "peptide fragment",
+        "pentadecapeptide",
+        "cathelicidin",
+        "thymic"
       ],
       "evidence_ids": [
         "bpc-157",
@@ -389,23 +346,19 @@
         "BPC-157 / TB-500 blend",
         "LL-37",
         "GHK-Cu (Copper Peptide)",
-        "KPV"
+        "KPV",
+        "Thymosin Alpha-1",
+        "Thymalin"
       ],
-      "framing": "Catalog compounds often filed under recovery / tissue-repair research topics. Listing them is not a claim they heal injuries in people. Blends have no combination RCTs in our file."
+      "framing": "Compounds this site files by compound class (thymosin fragments, BPC-157, peptide fragments). Catalog grouping only — research use only, not for human or animal use. Blends have no combination studies in our file."
     },
-    "cognitive": {
-      "label": "cognitive / nootropic",
+    "neuropeptide": {
+      "label": "neuropeptide analogues",
       "phrases": [
-        "cognitive",
-        "cognition",
-        "nootropic",
-        "memory",
-        "focus",
-        "brain",
-        "neuro",
-        "anxiety",
-        "anxiolytic",
-        "mental"
+        "neuropeptide",
+        "neuropeptide analogue",
+        "acth fragment",
+        "tuftsin"
       ],
       "evidence_ids": [
         "semax",
@@ -418,41 +371,14 @@
         "Dihexa",
         "Pinealon"
       ],
-      "framing": "Catalog compounds often discussed under cognitive / nootropic research topics. Listing them is not a claim they improve cognition in people."
-    },
-    "immune": {
-      "label": "immune / thymic",
-      "phrases": [
-        "immune",
-        "immunity",
-        "thymic",
-        "infection",
-        "sepsis"
-      ],
-      "evidence_ids": [
-        "thymosin-alpha-1-thymalfasin",
-        "thymalin",
-        "kpv",
-        "ll-37"
-      ],
-      "catalog_names": [
-        "Thymosin Alpha-1",
-        "Thymalin",
-        "KPV",
-        "LL-37",
-        "NAD+"
-      ],
-      "framing": "Catalog compounds often filed under immune / thymic research topics. Listing them is not a claim they treat infection or boost immunity in people."
+      "framing": "Compounds this site files by compound class (neuropeptide analogues). Catalog grouping only — research use only, not for human or animal use."
     },
     "mitochondria": {
-      "label": "mitochondria / energy",
+      "label": "mitochondrial-derived peptides",
       "phrases": [
         "mitochondria",
         "mitochondrial",
-        "energy",
-        "endurance",
-        "barth",
-        "exercise mimetic"
+        "mitochondrial-derived peptide"
       ],
       "evidence_ids": [
         "ss-31-elamipretide",
@@ -467,41 +393,16 @@
         "NAD+",
         "5-Amino-1MQ"
       ],
-      "framing": "Catalog compounds often discussed under mitochondrial / energetics research topics. Listing them is not a claim they boost energy in people. Do not generalize Barth approval for SS-31 to other uses."
+      "framing": "Compounds this site files by compound class (mitochondrial-derived peptides and cofactors). Catalog grouping only — research use only, not for human or animal use."
     },
-    "skin": {
-      "label": "skin / pigmentation / cosmetic",
+    "melanocortin-hpg": {
+      "label": "melanocortin & HPG-axis compounds",
       "phrases": [
-        "skin",
-        "tanning",
-        "tan",
-        "pigment",
-        "pigmentation",
-        "cosmetic",
-        "wrinkle",
-        "hair",
-        "collagen"
-      ],
-      "evidence_ids": [
-        "ghk-cu",
-        "melanotan-2",
-        "ahk-cu"
-      ],
-      "catalog_names": [
-        "GHK-Cu (Copper Peptide)",
-        "Melanotan II",
-        "Melanotan I",
-        "SNAP-8",
-        "PT-141 (Bremelanotide)"
-      ],
-      "framing": "Catalog compounds often filed under skin / pigmentation / cosmetic research topics. Listing them is not a claim they tan or rejuvenate skin safely in people. PT-141 is a different approved product from Melanotan."
-    },
-    "sexual": {
-      "label": "sexual / melanocortin",
-      "phrases": [
-        "sexual",
-        "libido",
-        "erectile",
+        "melanocortin",
+        "gonadotropin",
+        "gnrh",
+        "kisspeptin",
+        "hpg axis",
         "pt-141",
         "pt141",
         "bremelanotide"
@@ -512,9 +413,11 @@
       "catalog_names": [
         "PT-141 (Bremelanotide)",
         "Melanotan II",
-        "Oxytocin"
+        "Melanotan I",
+        "Kisspeptin",
+        "Gonadorelin"
       ],
-      "framing": "Catalog compounds often discussed under sexual / melanocortin research topics. Listing them is not medical advice. PT-141 (bremelanotide) is a related but different approved product from Melanotan 2."
+      "framing": "Compounds this site files by compound class (melanocortin-receptor agonists, HPG-axis peptides). Catalog grouping only — research use only, not for human or animal use. PT-141 (bremelanotide) is a different compound from Melanotan 2."
     },
     "growth-hormone": {
       "label": "GH secretagogues / GHRH",
@@ -543,78 +446,35 @@
         "Tesamorelin",
         "Tesamorelin / Ipamorelin combo"
       ],
-      "framing": "Catalog compounds often filed under GH-axis / secretagogue research topics. Listing them is not a claim they raise GH usefully or safely in people."
+      "framing": "Compounds this site files by compound class (GH secretagogues, GHRH analogues). Catalog grouping only — research use only, not for human or animal use."
     }
   },
   "topic_phrases": {
-    "fatloss": "fat-loss",
-    "fat loss": "fat-loss",
-    "fat-loss": "fat-loss",
-    "weight loss": "fat-loss",
-    "weightloss": "fat-loss",
-    "lose weight": "fat-loss",
-    "losing weight": "fat-loss",
-    "obesity": "fat-loss",
-    "metabolic": "fat-loss",
-    "lipolysis": "fat-loss",
-    "body fat": "fat-loss",
-    "cutting weight": "fat-loss",
-    "weight management": "fat-loss",
-    "slim down": "fat-loss",
-    "burn fat": "fat-loss",
-    "sleep": "sleep",
-    "insomnia": "sleep",
-    "jet lag": "sleep",
-    "jetlag": "sleep",
-    "sleep onset": "sleep",
-    "deep sleep": "sleep",
-    "dsip": "sleep",
-    "recovery": "recovery",
-    "repair": "recovery",
-    "healing": "recovery",
-    "injury": "recovery",
-    "tendon": "recovery",
-    "muscle recovery": "recovery",
-    "wound": "recovery",
-    "post workout": "recovery",
-    "post-workout": "recovery",
-    "rehab": "recovery",
-    "cognitive": "cognitive",
-    "cognition": "cognitive",
-    "nootropic": "cognitive",
-    "memory": "cognitive",
-    "focus": "cognitive",
-    "brain": "cognitive",
-    "neuro": "cognitive",
-    "anxiety": "cognitive",
-    "anxiolytic": "cognitive",
-    "mental": "cognitive",
-    "immune": "immune",
-    "immunity": "immune",
-    "thymic": "immune",
-    "infection": "immune",
-    "sepsis": "immune",
+    "incretin": "incretin-metabolic",
+    "glp-1 agonist": "incretin-metabolic",
+    "gip": "incretin-metabolic",
+    "amylin": "incretin-metabolic",
+    "metabolic pathway": "incretin-metabolic",
+    "thymosin": "thymosin-fragments",
+    "peptide fragment": "thymosin-fragments",
+    "pentadecapeptide": "thymosin-fragments",
+    "cathelicidin": "thymosin-fragments",
+    "thymic": "thymosin-fragments",
+    "neuropeptide": "neuropeptide",
+    "neuropeptide analogue": "neuropeptide",
+    "acth fragment": "neuropeptide",
+    "tuftsin": "neuropeptide",
     "mitochondria": "mitochondria",
     "mitochondrial": "mitochondria",
-    "energy": "mitochondria",
-    "endurance": "mitochondria",
-    "barth": "mitochondria",
-    "exercise mimetic": "mitochondria",
-    "skin": "skin",
-    "tanning": "skin",
-    "tan": "skin",
-    "pigment": "skin",
-    "pigmentation": "skin",
-    "cosmetic": "skin",
-    "wrinkle": "skin",
-    "hair": "skin",
-    "collagen": "skin",
-    "sexual": "sexual",
-    "libido": "sexual",
-    "erectile": "sexual",
-    "pt-141": "sexual",
-    "pt141": "sexual",
-    "bremelanotide": "sexual",
+    "mitochondrial-derived peptide": "mitochondria",
+    "melanocortin": "melanocortin-hpg",
+    "gonadotropin": "melanocortin-hpg",
+    "gnrh": "melanocortin-hpg",
+    "kisspeptin": "melanocortin-hpg",
+    "hpg axis": "melanocortin-hpg",
+    "pt-141": "melanocortin-hpg",
+    "pt141": "melanocortin-hpg",
+    "bremelanotide": "melanocortin-hpg",
     "growth hormone": "growth-hormone",
     "gh secretagogue": "growth-hormone",
     "ghrh": "growth-hormone",
