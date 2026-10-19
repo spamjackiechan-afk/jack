@@ -218,6 +218,12 @@ VENDORS = {
                                   # ?add-to-cart= params. /product/ pages are allowed. Sizes are pinned
                                   # with ?variant=<id> (Next.js payload "variants" list, Midwest-style).
     },
+    "Alpine Peptide": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only the Woo upload/log dirs,
+                                  # ?add-to-cart= params and /wp-admin/ (Yoast block: empty Disallow).
+                                  # /product/ pages are allowed. Every size is its own simple product.
+    },
 }
 
 HEADERS = {

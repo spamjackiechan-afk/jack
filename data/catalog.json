@@ -502,7 +502,8 @@
         "BioLabs Peptides": 55.69,
         "Zeptix Labs": 59.99,
         "True Research Labs": 64,
-        "Olympus Peptide Labs": 81.37
+        "Olympus Peptide Labs": 81.37,
+        "Alpine Peptide": 59.0
       },
       "lowest": 25.99,
       "notes": null,
@@ -529,7 +530,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/bpc-157/",
         "Zeptix Labs": "https://zeptixlabs.com/product/bpc-157/?variant=10",
         "True Research Labs": "https://trueresearchlabs.com/shop/bpc-157/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/3c29b3f2"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/3c29b3f2",
+        "Alpine Peptide": "https://alpinepeptide.com/product/bpc-157-10mg/"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -667,7 +669,8 @@
         "Formal Peptides": 49,
         "BioLabs Peptides": 39.78,
         "Ride the Tide Peptides": 18.99,
-        "Zeptix Labs": 39.99
+        "Zeptix Labs": 39.99,
+        "Alpine Peptide": 45.0
       },
       "lowest": 18.99,
       "notes": null,
@@ -693,7 +696,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/ghk-cu-50mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ghk-cu/?attribute_size=50mg",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/ghk-cu",
-        "Zeptix Labs": "https://zeptixlabs.com/product/ghk-cu/?variant=6"
+        "Zeptix Labs": "https://zeptixlabs.com/product/ghk-cu/?variant=6",
+        "Alpine Peptide": "https://alpinepeptide.com/product/ghk-cu-50mg/"
       },
       "category": "Cellular & Longevity"
     },
@@ -714,7 +718,8 @@
         "Vector E Lab": 150.0,
         "Quality Peptide USA": 79,
         "Peptide Titans": 69.99,
-        "Olympus Peptide Labs": 88.07
+        "Olympus Peptide Labs": 88.07,
+        "Alpine Peptide": 69.0
       },
       "lowest": 36.83,
       "notes": null,
@@ -729,7 +734,8 @@
         "Vector E Lab": "https://app.vectorelab.com/product/glutathione/?attribute_mg=1500",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/l-glutathione",
         "Peptide Titans": "https://peptidetitans.com/product/glutathione/?attribute_mg=1500+mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/d3ccfea4"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/d3ccfea4",
+        "Alpine Peptide": "https://alpinepeptide.com/product/glutathione-1500mg/"
       }
     },
     {
@@ -824,7 +830,8 @@
         "Quality Peptide USA": 99,
         "BioLabs Peptides": 79.57,
         "True Research Labs": 69,
-        "Olympus Peptide Labs": 247.56
+        "Olympus Peptide Labs": 247.56,
+        "Alpine Peptide": 59.0
       },
       "lowest": 45.47,
       "notes": null,
@@ -844,7 +851,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/igf-1-lr3",
         "BioLabs Peptides": "https://biolabspeptides.com/product/igf-1-lr3/",
         "True Research Labs": "https://trueresearchlabs.com/shop/igf-1lr3/?attribute_pa_dosage=1-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/0276258d"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/0276258d",
+        "Alpine Peptide": "https://alpinepeptide.com/product/igf-1-lr3-1mg/"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -937,7 +945,8 @@
         "Formal Peptides": 39,
         "BioLabs Peptides": 66.31,
         "True Research Labs": 59,
-        "Olympus Peptide Labs": 61.65
+        "Olympus Peptide Labs": 61.65,
+        "Alpine Peptide": 45.0
       },
       "lowest": 25.25,
       "notes": null,
@@ -959,7 +968,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/kpv-10mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/kpv/",
         "True Research Labs": "https://trueresearchlabs.com/shop/kpv/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b4514d14"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b4514d14",
+        "Alpine Peptide": "https://alpinepeptide.com/product/kpv-10-mg/"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -1034,7 +1044,8 @@
         "Ride the Tide Peptides": 29.99,
         "Zeptix Labs": 59.99,
         "True Research Labs": 59,
-        "Olympus Peptide Labs": 51.29
+        "Olympus Peptide Labs": 51.29,
+        "Alpine Peptide": 45.0
       },
       "lowest": 27.55,
       "notes": null,
@@ -1061,7 +1072,8 @@
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/mots-c",
         "Zeptix Labs": "https://zeptixlabs.com/product/mots-c/?variant=15",
         "True Research Labs": "https://trueresearchlabs.com/shop/mots-c/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/f66ef5af"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/f66ef5af",
+        "Alpine Peptide": "https://alpinepeptide.com/product/mots-c-10mg/"
       },
       "category": "Cellular & Longevity"
     },
@@ -1206,7 +1218,8 @@
         "US Peptide Labs": 55.0,
         "Formal Peptides": 39,
         "BioLabs Peptides": 39.78,
-        "True Research Labs": 49
+        "True Research Labs": 49,
+        "Alpine Peptide": 49.0
       },
       "lowest": 22.07,
       "notes": null,
@@ -1223,7 +1236,8 @@
         "US Peptide Labs": "https://uspeptidelabs.co/products/pt-141",
         "Formal Peptides": "https://formalpeptides.com/product/pt-141-10mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/pt-141/",
-        "True Research Labs": "https://trueresearchlabs.com/shop/pt-141/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/pt-141/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/pt-141-10mg/"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -1253,7 +1267,8 @@
         "Peptide Titans": 34.99,
         "BioLabs Peptides": 53.05,
         "Ride the Tide Peptides": 20.99,
-        "True Research Labs": 49
+        "True Research Labs": 49,
+        "Alpine Peptide": 45.0
       },
       "lowest": 20.99,
       "notes": null,
@@ -1277,7 +1292,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/selank/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/selank/",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/selank",
-        "True Research Labs": "https://trueresearchlabs.com/shop/selank/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/selank/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/selank-10mg/"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1351,7 +1367,8 @@
         "Peptide Express": 70.0,
         "Apex Peptides": 79.0,
         "True Research Labs": 69,
-        "Olympus Peptide Labs": 66.1
+        "Olympus Peptide Labs": 66.1,
+        "Alpine Peptide": 65.0
       },
       "lowest": 44.53,
       "notes": null,
@@ -1365,7 +1382,8 @@
         "Peptide Express": "https://peptide.express/catalog/sermorelin",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/sermorelin-10mg/?attribute_pa_size=10mg",
         "True Research Labs": "https://trueresearchlabs.com/shop/sermorelin/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/8e4aa369"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/8e4aa369",
+        "Alpine Peptide": "https://alpinepeptide.com/product/sermorelin-10mg/"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -1390,7 +1408,8 @@
         "Peptide Titans": 79.99,
         "Formal Peptides": 49,
         "BioLabs Peptides": 66.31,
-        "True Research Labs": 54
+        "True Research Labs": 54,
+        "Alpine Peptide": 59.0
       },
       "lowest": 34.99,
       "notes": null,
@@ -1409,7 +1428,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/ss-31/?attribute_mg=10+mg",
         "Formal Peptides": "https://formalpeptides.com/product/ss-31-10mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ss-31/?attribute_size=10mg",
-        "True Research Labs": "https://trueresearchlabs.com/shop/ss-31/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/ss-31/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/ss-31-10-mg/"
       },
       "category": "Cellular & Longevity"
     },
@@ -1702,7 +1722,8 @@
         "Quality Peptide USA": 89,
         "Peptide Titans": 49.99,
         "Formal Peptides": 59,
-        "BioLabs Peptides": 74.27
+        "BioLabs Peptides": 74.27,
+        "Alpine Peptide": 69.0
       },
       "lowest": 35.57,
       "notes": null,
@@ -1723,7 +1744,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/cjc-1295-no-dac-ipamorelin",
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-no-dac-ipamorelin-blend/?attribute_mg=5/5+mg",
         "Formal Peptides": "https://formalpeptides.com/product/cjc-no-dac-ipamorelin-5-5mg/",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac-ipa-cjc-5mg-ipa-5mg/"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac-ipa-cjc-5mg-ipa-5mg/",
+        "Alpine Peptide": "https://alpinepeptide.com/product/cjc-ipam-10-mg/"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -1745,7 +1767,8 @@
         "Quality Peptide USA": 79,
         "Peptide Titans": 74.99,
         "BioLabs Peptides": 95.48,
-        "Olympus Peptide Labs": 88.58
+        "Olympus Peptide Labs": 88.58,
+        "Alpine Peptide": 55.0
       },
       "lowest": 28.41,
       "notes": null,
@@ -1762,7 +1785,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/cjc-1295-no-dac",
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-no-dac/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac/?attribute_size=10mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/3e922851"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/3e922851",
+        "Alpine Peptide": "https://alpinepeptide.com/product/cgc-1295-10mg/"
       }
     },
     {
@@ -1959,7 +1983,8 @@
         "Vector E Lab": 49.99,
         "Peptide Titans": 84.99,
         "BioLabs Peptides": 55.69,
-        "True Research Labs": 59
+        "True Research Labs": 59,
+        "Alpine Peptide": 59.0
       },
       "lowest": 35.88,
       "notes": null,
@@ -1978,7 +2003,8 @@
         "Vector E Lab": "https://app.vectorelab.com/product/ipamorelin/?attribute_mg=10",
         "Peptide Titans": "https://peptidetitans.com/product/ipamorelin/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ipa/?attribute_size=10mg",
-        "True Research Labs": "https://trueresearchlabs.com/shop/ipamorelin/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/ipamorelin/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/ipamorelin/"
       }
     },
     {
@@ -2120,7 +2146,8 @@
         "Offline Peptides": 49.0,
         "Vertex Labs": 59.0,
         "Peptide Titans": 34.99,
-        "True Research Labs": 59
+        "True Research Labs": 59,
+        "Alpine Peptide": 39.0
       },
       "lowest": 33.12,
       "notes": null,
@@ -2130,7 +2157,8 @@
         "Offline Peptides": "https://offlinepeptides.com/product/5-amino-1mq/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/5-amino-1mq/",
         "Peptide Titans": "https://peptidetitans.com/product/5-amino-1mq/?attribute_mg=10+mg",
-        "True Research Labs": "https://trueresearchlabs.com/shop/5-amino-1mq/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/5-amino-1mq/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/5-amino-1mq-10mg/"
       }
     },
     {
@@ -2755,15 +2783,17 @@
         "Purity Peptides": 14.99,
         "Alpha Peptides": 10.99,
         "Formal Peptides": 10,
-        "BioLabs Peptides": 11.5
+        "BioLabs Peptides": 11.5,
+        "Alpine Peptide": 9.0
       },
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bacteriostatic-water-10ml",
         "Alpha Peptides": "https://alpha-peptides.com/product/bac-water/",
         "Formal Peptides": "https://formalpeptides.com/product/bac-water-10mg/",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/bac-h2o-10-ml/"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/bac-h2o-10-ml/",
+        "Alpine Peptide": "https://alpinepeptide.com/product/bacteriostatic-water-10ml/"
       },
-      "lowest": 10
+      "lowest": 9.0
     },
     {
       "peptide": "BPC-157 / TB-500 combo",
@@ -2907,7 +2937,8 @@
         "Quality Peptide USA": 69,
         "Peptide Titans": 34.99,
         "BioLabs Peptides": 37.13,
-        "True Research Labs": 39
+        "True Research Labs": 39,
+        "Alpine Peptide": 45.0
       },
       "lowest": 21.05,
       "notes": null,
@@ -2928,7 +2959,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/melanotan-2",
         "Peptide Titans": "https://peptidetitans.com/product/melanotan-ii/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/mt-2/",
-        "True Research Labs": "https://trueresearchlabs.com/shop/melanotan-2/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/melanotan-2/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/melanotan-10mg/"
       }
     },
     {
@@ -3008,7 +3040,8 @@
         "True Peptides": 110.0,
         "Apex Peptides": 129.0,
         "US Peptide Labs": 85.0,
-        "Peptide Titans": 74.99
+        "Peptide Titans": 74.99,
+        "Alpine Peptide": 109.0
       },
       "lowest": 58.0,
       "notes": null,
@@ -3021,7 +3054,8 @@
         "True Peptides": "https://true-peptides.com/product/bpc-157-plus-tb-500-blend",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/bpc-tb-500/?attribute_pa_size=10mg-10mg",
         "US Peptide Labs": "https://uspeptidelabs.co/products/bpc-157-tb-500",
-        "Peptide Titans": "https://peptidetitans.com/product/bpc-157-tb-500-blend/?attribute_mg=10/10+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/bpc-157-tb-500-blend/?attribute_mg=10/10+mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/wolverine-stack-20mg/"
       }
     },
     {
@@ -3061,7 +3095,8 @@
         "Formal Peptides": 85,
         "Ride the Tide Peptides": 64.99,
         "True Research Labs": 99,
-        "Olympus Peptide Labs": 222.12
+        "Olympus Peptide Labs": 222.12,
+        "Alpine Peptide": 79.0
       },
       "lowest": 48.41,
       "notes": null,
@@ -3083,7 +3118,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/glow-70mg/",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/bpc10-tb10-ghk50-glow",
         "True Research Labs": "https://trueresearchlabs.com/shop/glow-blend/?attribute_pa_dosage=70-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/94c33dae"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/94c33dae",
+        "Alpine Peptide": "https://alpinepeptide.com/product/glow-70/"
       }
     },
     {
@@ -3105,7 +3141,8 @@
         "Ride the Tide Peptides": 80.99,
         "Zeptix Labs": 129.99,
         "True Research Labs": 104,
-        "Olympus Peptide Labs": 166.86
+        "Olympus Peptide Labs": 166.86,
+        "Alpine Peptide": 89.0
       },
       "lowest": 75.0,
       "notes": null,
@@ -3124,7 +3161,8 @@
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/tb-bpc-ghk-kpv",
         "Zeptix Labs": "https://zeptixlabs.com/product/klow/?variant=4",
         "True Research Labs": "https://trueresearchlabs.com/shop/klow-blend/?attribute_pa_dosage=80-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/9ccdcd3c"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/9ccdcd3c",
+        "Alpine Peptide": "https://alpinepeptide.com/product/klow-80/"
       }
     },
     {
@@ -3152,7 +3190,8 @@
         "Peptide Titans": 44.99,
         "BioLabs Peptides": 61.0,
         "True Research Labs": 69,
-        "Olympus Peptide Labs": 78.2
+        "Olympus Peptide Labs": 78.2,
+        "Alpine Peptide": 69.0
       },
       "lowest": 31.32,
       "notes": null,
@@ -3177,7 +3216,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/tb-500/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/tb500-thymosin-b4-acetate/",
         "True Research Labs": "https://trueresearchlabs.com/shop/tb-500/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/11bdc46d"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/11bdc46d",
+        "Alpine Peptide": "https://alpinepeptide.com/product/tb-500-10mg/"
       }
     },
     {
@@ -3472,7 +3512,8 @@
         "BioLabs Peptides": 76.91,
         "Ride the Tide Peptides": 59.99,
         "Zeptix Labs": 99.99,
-        "True Research Labs": 69
+        "True Research Labs": 69,
+        "Alpine Peptide": 79.0
       },
       "lowest": 56.99,
       "notes": null,
@@ -3494,7 +3535,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/tesamorelin/",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/tesamorelin",
         "Zeptix Labs": "https://zeptixlabs.com/product/tesamorelin/?variant=5",
-        "True Research Labs": "https://trueresearchlabs.com/shop/tesamorelin/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/tesamorelin/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/tesamorelin/"
       }
     },
     {
@@ -3545,7 +3587,8 @@
         "Vertex Labs": 49.0,
         "Apex Peptides": 119.0,
         "Ride the Tide Peptides": 30.99,
-        "True Research Labs": 44
+        "True Research Labs": 44,
+        "Alpine Peptide": 39.0
       },
       "lowest": 30.99,
       "notes": null,
@@ -3558,7 +3601,8 @@
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-1-sem/?attribute_strength=10mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-s/?attribute_pa_size=10mg",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/glp1-s",
-        "True Research Labs": "https://trueresearchlabs.com/shop/glp-1-sm/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/glp-1-sm/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/glp-1s-s-e-m-a-10mg/"
       }
     },
     {
@@ -3591,7 +3635,8 @@
         "Vector E Lab": 90.0,
         "BioLabs Peptides": 72.94,
         "Zeptix Labs": 79.99,
-        "True Research Labs": 59
+        "True Research Labs": 59,
+        "Alpine Peptide": 59.0
       },
       "lowest": 26.88,
       "notes": null,
@@ -3607,7 +3652,8 @@
         "Vector E Lab": "https://app.vectorelab.com/product/tirzepatide/?attribute_mg=10",
         "BioLabs Peptides": "https://biolabspeptides.com/product/tirz/?attribute_size=10mg",
         "Zeptix Labs": "https://zeptixlabs.com/product/glp-2-t/?variant=8",
-        "True Research Labs": "https://trueresearchlabs.com/shop/glp-2-tz/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/glp-2-tz/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/glp-2t/"
       }
     },
     {
@@ -3624,7 +3670,8 @@
         "Vector E Lab": 140.0,
         "Quality Peptide USA": 169,
         "Formal Peptides": 118,
-        "BioLabs Peptides": 112.72
+        "BioLabs Peptides": 112.72,
+        "Alpine Peptide": 89.0
       },
       "lowest": 50.0,
       "notes": null,
@@ -3637,7 +3684,8 @@
         "Vector E Lab": "https://app.vectorelab.com/product/tirzepatide/?attribute_mg=20",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/tirzepatide",
         "Formal Peptides": "https://formalpeptides.com/product/tirzepatide/?attribute_pa_vial-sizes=20mg",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/tirz/?attribute_size=20mg"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/tirz/?attribute_size=20mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/glp-2t-t-i-r-z-20mg/"
       }
     },
     {
@@ -3667,7 +3715,8 @@
         "Formal Peptides": 59,
         "BioLabs Peptides": 89.94,
         "Zeptix Labs": 89.99,
-        "True Research Labs": 74
+        "True Research Labs": 74,
+        "Alpine Peptide": 56.0
       },
       "lowest": 43.0,
       "notes": null,
@@ -3692,7 +3741,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/retatrutide/?attribute_pa_vial-sizes=10mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/reta/?attribute_size=10mg",
         "Zeptix Labs": "https://zeptixlabs.com/product/glp-3-r/?variant=1",
-        "True Research Labs": "https://trueresearchlabs.com/shop/glp-3-rt/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/glp-3-rt/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/glp-3r-r-e-t-a-10mg/"
       }
     },
     {
@@ -4146,7 +4196,8 @@
         "Quality Peptide USA": 59,
         "Peptide Titans": 44.99,
         "BioLabs Peptides": 51.73,
-        "True Research Labs": 79
+        "True Research Labs": 79,
+        "Alpine Peptide": 69.0
       },
       "lowest": 29.99,
       "notes": null,
@@ -4156,7 +4207,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/dsip",
         "Peptide Titans": "https://peptidetitans.com/product/dsip/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/dsip/?attribute_size=10mg",
-        "True Research Labs": "https://trueresearchlabs.com/shop/dsip/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/dsip/?attribute_pa_dosage=10-mg",
+        "Alpine Peptide": "https://alpinepeptide.com/product/disp-5mg/"
       },
       "category": "Cognitive & Neurological"
     },
