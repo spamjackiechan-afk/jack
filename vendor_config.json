@@ -423,5 +423,21 @@
     "payment_note": null,
     "shipping_info": "Orders ship the same or next business day (excluding Sundays and public holidays) with tracking; 2-day FedEx advertised. Shipping cost is calculated at checkout; free shipping and free bacteriostatic water on orders over $250. Also ships internationally where permitted.",
     "shipping_payment_researched": "2026-10-18"
+  },
+  "Olympus Peptide Labs": {
+    "status": "approved",
+    "site_url": "https://olympuspeptidelabs.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://olympuspeptidelabs.com/ref/discount-peptides",
+    "affiliate_path_suffix": null,
+    "promo_code": "REF-DISCOUNT-R72A",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Credit card",
+      "Debit card"
+    ],
+    "payment_note": "Charged in USD at checkout via a third-party card processor.",
+    "shipping_info": "US shipping $15 flat; free on orders of $100 or more. Orders are processed within 1-2 business days, with tracking.",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
