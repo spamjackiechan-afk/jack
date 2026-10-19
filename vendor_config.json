@@ -439,5 +439,22 @@
     "payment_note": "Charged in USD at checkout via a third-party card processor.",
     "shipping_info": "US shipping $15 flat; free on orders of $100 or more. Orders are processed within 1-2 business days, with tracking.",
     "shipping_payment_researched": "2026-10-18"
+  },
+  "Elev-8 Labs": {
+    "status": "approved",
+    "site_url": "https://elev-8labs.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://elev-8labs.com/?coupon=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Credit card",
+      "Debit card",
+      "Apple Pay"
+    ],
+    "payment_note": null,
+    "shipping_info": "Ships to all 50 US states. 2-3 day Priority $9.99 (free on orders of $150+) or Overnight $34.99. Orders before 3 PM ET ship the same day, with tracking. Also ships internationally to select countries.",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
