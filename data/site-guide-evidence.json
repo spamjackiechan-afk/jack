@@ -18,7 +18,7 @@
       "regulatory": "Not FDA-approved. BPC-157 and related peptides have been in FDA compounding / Category 2 discussions; PCAC votes are non-binding until rulemaking.",
       "caveats": "Synergy is inferred. Copper from GHK-Cu could affect other peptides; not studied. Injectable GHK-Cu is not the same evidence base as topical cosmetic GHK-Cu. Confirm each component on the lot COA.",
       "sources": "Pickart & Margolina, Int J Mol Sci 2018 (PMID 29986520); HSS Journal 2025 BPC-157 systematic review; thymosin β4 Phase 2 wound / RGN-259 ophthalmic work (parent protein, not the fragment); FDA PCAC / NYT / Science coverage of 2026 compounding votes.",
-      "catalog_keys": "Catalog keys seen on this site (examples; **live catalog always wins**): `GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg` — Alpha Peptides, Midwest Peptide, American Peptides, Offline Peptides. Not listed under Royal Peptides in the current live snapshot. Related: Wolverine (BPC-157/TB-500), KLOW, GHK-Cu, BPC-157, TB-500, KPV as singles."
+      "catalog_keys": "Catalog keys seen on this site (examples; **live catalog always wins**): `GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg` — vendors and prices come from the live catalog only. Related: Wolverine (BPC-157/TB-500), KLOW, GHK-Cu, BPC-157, TB-500, KPV as singles."
     },
     {
       "id": "klow",
@@ -29,7 +29,7 @@
       "regulatory": "Not approved. Same compounding caveats as the components.",
       "caveats": "Fixed 5:1:1:1 ratio may not match doses used in any single-agent study. Half-lives differ (BPC-157 short in animals; tripeptides clear fast). WADA lists thymosin β4 / TB-500 (S2).",
       "sources": "Dalmasso et al., Gastroenterology 2008 (PMID 18061177) — PepT1-mediated KPV uptake, DSS/TNBS colitis in mice; Kelly / Getting α-MSH fragment NF-κB papers; same GHK-Cu / BPC-157 / Tβ4 sources as GLOW.",
-      "catalog_keys": "Catalog keys (examples; **live catalog always wins**): `KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg` (some vendors also key `… | Vial | 10/10/50/10mg`) — Alpha Peptides, Midwest Peptide, American Peptides, Offline Peptides. Not listed under Royal Peptides in the current live snapshot. Related: GLOW, Wolverine, KPV, GHK-Cu / KPV nasal combos on some vendors."
+      "catalog_keys": "Catalog keys (examples; **live catalog always wins**): `KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg` (some vendors also key `… | Vial | 10/10/50/10mg`) — vendors and prices come from the live catalog only. Related: GLOW, Wolverine, KPV, GHK-Cu / KPV nasal combos on some vendors."
     },
     {
       "id": "kpv",
