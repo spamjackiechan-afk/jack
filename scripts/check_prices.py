@@ -202,6 +202,16 @@ VENDORS = {
                                   # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_size=<size> (e.g. "10mg").
     },
+    "Ride the Tide Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /admin,
+                                  # /account, /reset-password, /unsubscribe and /order-confirmation.
+                                  # /products/ pages are allowed.
+        "needs_browser": True,   # confirmed: React SPA; plain requests get an empty shell with no price.
+                                  # The rendered page's Product JSON-LD gives AggregateOffer lowPrice,
+                                  # i.e. the cheapest size, and sizes can't be pinned by URL, so only
+                                  # each page's cheapest (default) size is listed.
+    },
     "Zeptix Labs": {
         "robots_checked_by": "Grok for Jackson, 2026-10-18",
         "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /api/ and
