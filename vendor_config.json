@@ -93,14 +93,16 @@
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://alpha-peptides.com/aff/863/",
     "promo_code": "DISCOUNT",
-    "affiliate_path_suffix": "aff/863/"
+    "affiliate_path_suffix": "aff/863/",
+    "code_discount_pct": 10
   },
   "Midwest Peptide": {
     "status": "approved",
     "site_url": "https://midwestpeptide.com",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://midwestpeptide.com/?ref=DISCOUNT",
-    "promo_code": "DISCOUNT"
+    "promo_code": "DISCOUNT",
+    "code_discount_pct": 10
   },
   "American Peptides": {
     "status": "approved",
@@ -293,7 +295,8 @@
     ],
     "shipping_info": "Ships within the US only (all 50 states) via USPS Priority Mail. Free standard shipping on orders over $150; flat-rate USPS Priority below that. Same-day dispatch on business days for orders before 2 PM ET. All sales final once shipped.",
     "shipping_payment_researched": "2026-10-14",
-    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 10
   },
   "Apex Peptides": {
     "status": "approved",
@@ -345,7 +348,8 @@
     "payment_note": null,
     "shipping_info": "US only (no NY, MA or CT). $15 flat under $300; free at $300+. Orders before 2PM EST ship same business day; tracked 2\u20133 business days.",
     "shipping_payment_researched": "2026-10-15",
-    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 20
   },
   "Peptide Titans": {
     "status": "approved",
