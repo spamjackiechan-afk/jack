@@ -76,14 +76,16 @@
     "promo_code": "DISCOUNT",
     "payment_methods": null,
     "shipping_info": "Calculated at checkout by weight/destination; cold-chain packaging included free. 2-3 day processing, ships via USPS/UPS/FedEx.",
-    "shipping_payment_researched": "2026-08-16"
+    "shipping_payment_researched": "2026-08-16",
+    "code_discount_pct": 10
   },
   "Licensed Peptides": {
     "status": "approved",
     "site_url": "https://licensedpeptides.com",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://licensedpeptides.com/ref/Discountpeptides/",
-    "promo_code": "Affiliate5"
+    "promo_code": "Affiliate5",
+    "code_discount_pct": 5
   },
   "Alpha Peptides": {
     "status": "approved",
@@ -134,7 +136,8 @@
     "payment_note": "Charges appear on statements as OFFLINEPEPTIDES.COM.",
     "shipping_info": "US only; typically 1\u20132 business days processing with tracking. Free Priority Shipping on orders over $250. Delivery estimates not guaranteed.",
     "shipping_payment_researched": "2026-09-15",
-    "affiliate_path_suffix": null
+    "affiliate_path_suffix": null,
+    "code_discount_pct": 10
   },
   "Orbitrex Peptide": {
     "status": "approved",
@@ -158,7 +161,8 @@
     "payment_note": "Wire and crypto orders ship once funds have cleared.",
     "shipping_info": "US only (incl. Puerto Rico, Guam, U.S. Virgin Islands); tracked courier, typically 2\u20135 business days. Card orders: flat $15 shipping, free from $500. Orders by 2 PM ET on business days ship same day.",
     "shipping_payment_researched": "2026-10-11",
-    "affiliate_path_suffix": null
+    "affiliate_path_suffix": null,
+    "code_discount_pct": 20
   },
   "Synthrolab": {
     "status": "approved",
@@ -174,7 +178,8 @@
     ],
     "shipping_info": "Ships within the US and Australia. US: $7 standard, $10 express, free over $150 USD. Same-day dispatch; typical delivery 2-3 days. Optional $10 shipping protection.",
     "shipping_payment_researched": "2026-10-14",
-    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 10
   },
   "Lumera Labs": {
     "status": "approved",
@@ -392,7 +397,8 @@
     ],
     "payment_note": "Other methods may be shown at checkout. Charges appear as RIDETHETIDE or RIDE THE TIDE PEPTIDES.",
     "shipping_info": "US only (no international). Standard shipping $12 flat; free on orders $199+. Orders processed within 1\u20132 business days; delivery typically 3\u20137 business days via USPS, UPS or FedEx, with tracking.",
-    "shipping_payment_researched": "2026-10-18"
+    "shipping_payment_researched": "2026-10-18",
+    "code_discount_pct": 15
   },
   "Zeptix Labs": {
     "status": "approved",
@@ -475,7 +481,8 @@
     ],
     "payment_note": "Prices in USD; crypto amounts are locked at the checkout rate. Venmo and Zelle orders release after manual verification.",
     "shipping_info": "Continental US (lower 48) only. $15 flat; free on orders of $150 or more. Orders by 2:00 PM ET on business days ship the same day, about 2-day delivery (UPS 2nd Day Air or Ground).",
-    "shipping_payment_researched": "2026-10-18"
+    "shipping_payment_researched": "2026-10-18",
+    "code_discount_pct": 15
   },
   "Stealth Research Labs": {
     "status": "approved",
