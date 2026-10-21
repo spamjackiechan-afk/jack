@@ -38,6 +38,9 @@ jobs:
           pip install playwright
           playwright install --with-deps chromium
 
+      - name: Members-only sales Functions (signed cookie, magic link, gating)
+        run: node scripts/test_membership.mjs
+
       - name: Render homepage, calculator, suppliers (must pass)
         run: python scripts/smoke_test.py
 
