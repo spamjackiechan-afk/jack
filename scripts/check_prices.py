@@ -243,6 +243,14 @@ VENDORS = {
                                   # ?add-to-cart= params and /wp-admin/ (Yoast block: empty Disallow).
                                   # /product/ pages are allowed. Every size is its own simple product.
     },
+    "Prism Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /admin, /cart,
+                                  # /checkout, /success, /track-order, /reconstitution-calculator and
+                                  # /affiliate(-program). /product/ pages are allowed. Product JSON-LD is
+                                  # server-rendered; only single-size products are listed (multi-size pages
+                                  # expose an AggregateOffer lowPrice only).
+    },
 }
 
 HEADERS = {
