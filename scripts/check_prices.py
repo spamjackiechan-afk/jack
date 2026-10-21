@@ -237,6 +237,38 @@ VENDORS = {
                                   # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_pa_size=<size> (e.g. "10mg").
     },
+    "Alpine Peptide": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only the Woo upload/log dirs,
+                                  # ?add-to-cart= params and /wp-admin/ (Yoast block: empty Disallow).
+                                  # /product/ pages are allowed. Every size is its own simple product.
+    },
+    "Prism Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /admin, /cart,
+                                  # /checkout, /success, /track-order, /reconstitution-calculator and
+                                  # /affiliate(-program). /product/ pages are allowed. Product JSON-LD is
+                                  # server-rendered; only single-size products are listed (multi-size pages
+                                  # expose an AggregateOffer lowPrice only).
+    },
+    "Echo Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" minus /admin, /api/, /integrations/ and /account.
+                                  # /product/ pages are allowed; each size is its own page with server-rendered Product JSON-LD.
+    },
+    "Axovera Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,
+                                  # woocommerce_uploads/, ?add-to-cart= params and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Product links carry the path-suffix referral, so only single-size pages and the default size of
+                                  # multi-size pages are listed (no ?attribute_ pins).
+    },
+    "Aura Research": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,
+                                  # woocommerce_uploads/, ?add-to-cart= params and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Variable pages are pinned with ?attribute_pa_amount=<size> (e.g. "10mg").
+    },
 }
 
 HEADERS = {

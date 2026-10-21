@@ -23,19 +23,28 @@ Fails on:
     "13 suppliers", title/meta tags, the About stats strip), in the raw file or
     the rendered page, that differs from the number of distinct vendors with
     listings in the homepage DATA
-  * the testing.html References news markup (NEWS_MARKERS) showing up on
-    index.html or suppliers.html, in the raw file or the rendered page; it
-    belongs on testing.html only (see docs/references-format.md)
-  * testing.html rendering fewer than MIN_REFERENCES reference items
+  * the retired References news markup (NEWS_MARKERS, formerly testing.html)
+    showing up on index.html or suppliers.html, raw or rendered
+  * testing.html reappearing, or the Research nav link not pointing to
+    https://peptidehealthdigest.vercel.app/ with target=_blank rel=noopener
   * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
     suppliers.html not exactly matching data/catalog.json / vendor_config.json
     (scripts/sync_vendor_config.py --check)
   * Google Analytics (ga-consent.js): a public page (index, about, suppliers,
-    testing, privacy, calculator) not loading it; admin-reviews.html or functions/ loading
+    privacy, calculator) not loading it; admin-reviews.html or functions/ loading
     it; the Measurement ID appearing in any file other than ga-consent.js;
     privacy.html missing or not in sitemap.xml; on a first visit, the cookie
     banner not showing or any request going to Google's analytics hosts
     before Accept (also checked after Decline)
+  * members-only sales (guest view, /api/member-sales not reachable on a static
+    server): any "% off" badge, the Sales strip, the "% On sale" chip or a
+    "Vendor sale" row showing; the join teaser missing or carrying a number;
+    a vendor sale code from data/vendor_sales.json in the raw index.html or
+    suppliers.html
+  * members-only sales (member view, /api/member-sales mocked as a member):
+    the member sales bar missing, the teaser still showing, "% off" badges
+    missing when the data has observed sales, or the suppliers page not
+    showing every currently-live vendor sale
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
@@ -48,8 +57,8 @@ import sync_vendor_config  # noqa: E402  (embed check)
 MIN_CARDS = 50
 MIN_VENDORS = 8
 MIN_SUPPLIERS = 8
-MIN_REFERENCES = 20
-# Markup/copy used only by the testing.html References list. None of it may
+RESEARCH_URL = "https://peptidehealthdigest.vercel.app/"
+# Markup/copy formerly used only by the testing.html References list (retired). None of it may
 # appear on the homepage or the suppliers page.
 NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
                 "data-tone", "tone-read", "Looks concerning", "Developing"]
@@ -57,7 +66,7 @@ NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
 # second copy of it; it may appear only in ga-consent.js.
 GA_FILE = "ga-consent.js"
 GA_ID = "G-" + "CYYYPQ5ZDX"
-GA_PAGES = ["index.html", "about.html", "suppliers.html", "testing.html", "privacy.html", "calculator.html"]
+GA_PAGES = ["index.html", "about.html", "suppliers.html", "privacy.html", "calculator.html"]
 GA_HOSTS = ("googletagmanager.com", "google-analytics.com")
 
 
@@ -170,6 +179,106 @@ def check_vendor_count_raw(root, filename, expected, problems):
     check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
+def live_vendor_sales(root):
+    """Vendor sales that should be visible right now (same rules as the pages)."""
+    import datetime as dt
+    sales = json.load(open(os.path.join(root, "data", "vendor_sales.json"), encoding="utf-8"))
+    now = dt.datetime.now(dt.timezone.utc)
+    parse = lambda s: dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+    out = []
+    for vendor, items in sales.items():
+        if vendor.startswith("_"):
+            continue
+        for s_ in items or []:
+            if s_.get("end") and parse(s_["end"]) < now: continue
+            if s_.get("start") and parse(s_["start"]) > now: continue
+            if not s_.get("verified"): continue
+            v = dt.datetime.fromisoformat(s_["verified"]).replace(tzinfo=dt.timezone.utc)
+            if (now - v).total_seconds() > 7 * 86400: continue
+            out.append((vendor, s_))
+    return out
+
+
+def check_members_only(browser, base, root, problems, notes):
+    sales = json.load(open(os.path.join(root, "data", "vendor_sales.json"), encoding="utf-8"))
+    cfg = json.load(open(os.path.join(root, "vendor_config.json"), encoding="utf-8"))
+    our_codes = {str(c.get("promo_code") or "").lower() for c in cfg.values() if isinstance(c, dict)}
+    codes = {s_["code"] for v, items in sales.items() if not v.startswith("_") for s_ in (items or [])
+             if s_.get("code") and len(s_["code"]) >= 5 and s_["code"].lower() not in our_codes}
+    for f in ("index.html", "suppliers.html"):
+        raw = open(os.path.join(root, f), encoding="utf-8").read()
+        leaked = sorted(c for c in codes if re.search(r"\b" + re.escape(c) + r"\b", raw))
+        if leaked:
+            problems.append(f"{f}: vendor sale code(s) in the page source (members-only): {leaked}")
+
+    # Guest (no Functions on this static server -> /api/member-sales 404 -> guest)
+    page = open_page(browser, base + "/index.html", problems, "index.html (guest)")
+    page.wait_for_timeout(800)
+    g = page.evaluate("""() => ({
+      badges: document.querySelectorAll('#index .sale-badge').length,
+      deals: document.getElementById('dealsBand').classList.contains('show'),
+      chip: getComputedStyle(document.getElementById('saleChip')).display !== 'none',
+      teaser: Boolean(document.getElementById('memberTeaser')),
+      teaserText: (document.getElementById('memberTeaser') || {}).innerText || '',
+      bar: Boolean(document.getElementById('memberSalesBar')),
+      onSale: DATA.included.filter(i => i.onSale && Object.keys(i.onSale).length).length,
+      withCode: document.querySelectorAll('#index .price-amount.with-code').length,
+    })""")
+    notes.append(f"members-only (guest, homepage): badges={g['badges']} salesStrip={g['deals']} saleChip={g['chip']} "
+                 f"teaser={g['teaser']} withCodePrices={g['withCode']}")
+    if g["badges"] or g["deals"] or g["chip"] or g["onSale"] or g["bar"]:
+        problems.append(f"index.html (guest): sale content visible to a non-member: {g}")
+    if not g["teaser"] or "Members see current vendor sales" not in g["teaserText"]:
+        problems.append("index.html (guest): members-only sales teaser missing")
+    if re.search(r"\d", g["teaserText"]):
+        problems.append(f"index.html (guest): teaser must not carry sale amounts: {g['teaserText']!r}")
+    if not g["withCode"]:
+        problems.append("index.html (guest): no with-code prices rendered (code_discount_pct must still apply)")
+    page.close()
+    page = open_page(browser, base + "/suppliers.html", problems, "suppliers.html (guest)")
+    page.wait_for_timeout(500)
+    rows = page.locator("text=Vendor sale:").count()
+    teaser = page.locator("#memberTeaser").count()
+    notes.append(f"members-only (guest, suppliers): vendor-sale rows={rows} teaser={teaser}")
+    if rows:
+        problems.append(f"suppliers.html (guest): {rows} vendor sale rows visible to a non-member")
+    if not teaser:
+        problems.append("suppliers.html (guest): members-only sales teaser missing")
+    page.close()
+
+    # Member (mocked API answer)
+    ctx = browser.new_context()
+    body = json.dumps({"member": True, "vendor_sales": {k: v for k, v in sales.items() if not k.startswith("_")}})
+    ctx.route("**/api/member-sales", lambda route: route.fulfill(status=200, content_type="application/json", body=body))
+    page = ctx.new_page()
+    errs = []
+    page.on("pageerror", lambda e: errs.append(str(e)))
+    page.goto(base + "/index.html", wait_until="load")
+    page.wait_for_timeout(1500)
+    m = page.evaluate("""() => ({
+      badges: document.querySelectorAll('#index .sale-badge').length,
+      deals: document.getElementById('dealsBand').classList.contains('show'),
+      teaser: Boolean(document.getElementById('memberTeaser')),
+      bar: Boolean(document.getElementById('memberSalesBar')),
+      onSale: DATA.included.filter(i => i.onSale && Object.keys(i.onSale).length).length,
+    })""")
+    notes.append(f"members-only (member, homepage): bar={m['bar']} badges={m['badges']} salesStrip={m['deals']} observedSales={m['onSale']}")
+    if not m["bar"] or m["teaser"]:
+        problems.append(f"index.html (member): member sales bar missing or teaser still shown: {m}")
+    if m["onSale"] and not (m["badges"] and m["deals"]):
+        problems.append(f"index.html (member): observed sales not shown to a member: {m}")
+    page.goto(base + "/suppliers.html", wait_until="load")
+    page.wait_for_timeout(1000)
+    rows = page.locator("text=Vendor sale:").count()
+    expected = len(live_vendor_sales(root))
+    notes.append(f"members-only (member, suppliers): vendor-sale rows={rows} (live in data: {expected})")
+    if rows != expected:
+        problems.append(f"suppliers.html (member): {rows} vendor sale rows, expected {expected}")
+    for e in errs:
+        problems.append(f"members-only (member view): JS error: {e}")
+    ctx.close()
+
+
 def serve(root):
     class Quiet(http.server.SimpleHTTPRequestHandler):
         def log_message(self, *a, **k):
@@ -279,6 +388,21 @@ def main():
                 problems.append(f"suppliers nav link: expected /suppliers, got {href!r}")
         except Exception as e:
             problems.append(f"suppliers nav link: missing: {str(e).splitlines()[0]}")
+        # ---- Research nav item (homepage) links out to Peptide Health Digest;
+        # testing.html is retired (301 in _redirects) and must not come back.
+        try:
+            link = page.locator("#testingLink")
+            href, tgt, rel = (link.get_attribute(x, timeout=5000) for x in ("href", "target", "rel"))
+            notes.append(f"research nav link: {href!r} target={tgt!r} rel={rel!r}")
+            if href != RESEARCH_URL or tgt != "_blank" or "noopener" not in (rel or ""):
+                problems.append(f"research nav link: expected {RESEARCH_URL} target=_blank rel=noopener, got {href!r} {tgt!r} {rel!r}")
+        except Exception as e:
+            problems.append(f"research nav link: missing: {str(e).splitlines()[0]}")
+        if os.path.exists(os.path.join(root, "testing.html")):
+            problems.append("testing.html exists again; it was retired (see _redirects)")
+        for f in ("index.html", "about.html", "suppliers.html", "privacy.html", "calculator.html", "sitemap.xml"):
+            if re.search(r'testing\.html|discountspeptides\.com/testing\b', open(os.path.join(root, f), encoding="utf-8").read()):
+                problems.append(f"{f}: still links to the retired testing page")
         check_no_news(page, root, "index.html", problems)
         vendor_count = data_vendor_count(root)
         notes.append(f"vendor count in DATA: {vendor_count}")
@@ -313,13 +437,8 @@ def main():
                 problems.append(f"about.html: Suppliers stat shows {stat!r} but the data has {vendor_count} vendors")
             page.close()
 
-        # ---- testing.html References (the only page allowed to carry them)
-        page = open_page(browser, base + "/testing.html", problems, "testing.html")
-        refs = page.locator("#refsNews .news-item").count()
-        notes.append(f"testing.html: {refs} reference items")
-        if refs < MIN_REFERENCES:
-            problems.append(f"testing.html: only {refs} reference items (min {MIN_REFERENCES})")
-        page.close()
+        # ---- Members-only sales
+        check_members_only(browser, base, root, problems, notes)
 
         # ---- Google Analytics: consent-first banner, privacy page
         check_ga_static(root, problems, notes)

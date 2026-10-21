@@ -6,9 +6,9 @@ fails, and the fallback script relies on them). They are generated from:
 
   vendor_config.json   ->  `const VENDOR_CONFIG = ...;`  (compact, \\uXXXX escapes)
   data/catalog.json    ->  `const DATA = ...;`            (compact, UTF-8 as-is)
-  data/vendor_sales.json -> `const VENDOR_SALES = ...;`   (suppliers.html only;
-                            vendor-run sale promos, shown as a "Vendor sale"
-                            row separate from our affiliate code)
+  data/vendor_sales.json is NOT embedded: vendor sales are members-only and
+  are served by functions/api/member-sales.js. --check fails if a
+  `const VENDOR_SALES = ...;` line reappears in a page.
 
 Hidden vendors: a vendor with `"hidden": true` in vendor_config.json keeps
 all its data (catalog.json, product_urls.json, its config and its VENDORS
@@ -35,8 +35,7 @@ Syncing:
      listed on stdout), then writes it back (2-space indent, \\uXXXX escapes),
   2. rewrites ONLY the `const VENDOR_CONFIG = ...;` and `const DATA = ...;`
      lines in index.html and suppliers.html (DATA without hidden vendors, see
-     above), plus the `const VENDOR_SALES = ...;` line in suppliers.html
-     (from data/vendor_sales.json). Nothing else in the pages changes.
+     above). Nothing else in the pages changes (no VENDOR_SALES embed).
      data/catalog.json and data/vendor_sales.json themselves are never rewritten.
 Running it twice changes nothing the second time. scripts/smoke_test.py runs
 the --check and fails the site-smoke check if the embeds don't match.
@@ -58,7 +57,7 @@ SALES_PREFIX = "const VENDOR_SALES = "
 # Fields read by index.html / suppliers.html (and the fallback script).
 PUBLIC_FIELDS = [
     "status", "site_url", "tracking_type", "affiliate_link_base",
-    "affiliate_path_suffix", "promo_code", "code_disclosure", "payment_methods", "payment_note",
+    "affiliate_path_suffix", "promo_code", "code_discount_pct", "code_disclosure", "payment_methods", "payment_note",
     "shipping_info", "shipping_payment_researched", "hidden",
 ]
 
@@ -132,9 +131,11 @@ def expected_lines(root):
         DATA_PREFIX: DATA_PREFIX + json.dumps(data, separators=(",", ":"), ensure_ascii=False) + ";",
     }
     lines_by_page = {page: dict(shared) for page in PAGES}
-    lines_by_page["suppliers.html"][SALES_PREFIX] = (
-        SALES_PREFIX + json.dumps(sales, separators=(",", ":"), ensure_ascii=False) + ";"
-    )
+    # Vendor sales are members-only (served by functions/api/member-sales.js),
+    # so they are deliberately NOT embedded in any page; check() fails if a
+    # `const VENDOR_SALES = ` line comes back. `sales` is still loaded above so
+    # a malformed data/vendor_sales.json is caught here.
+    del sales
     return config_text, lines_by_page, dropped
 
 
@@ -169,6 +170,9 @@ def check(root=ROOT):
                     src = {DATA_PREFIX: CATALOG, SALES_PREFIX: SALES}.get(prefix, CONFIG)
                     problems.append(f"{page}: the `{prefix.strip()}` line doesn't match {src}; "
                                     "edit the JSON and run python scripts/sync_vendor_config.py")
+            if any(l.startswith(SALES_PREFIX) for l in lines):
+                problems.append(f"{page}: embeds `{SALES_PREFIX.strip()}`; vendor sales are members-only "
+                                "and must come from /api/member-sales, not the page source")
         except (OSError, ValueError) as e:
             problems.append(str(e))
     return problems
@@ -205,7 +209,7 @@ def main():
         if problems:
             print("OUT OF SYNC:\n  " + "\n  ".join(problems))
             sys.exit(1)
-        print("OK: embeds match vendor_config.json, data/catalog.json and data/vendor_sales.json")
+        print("OK: embeds match vendor_config.json and data/catalog.json; no vendor-sales embed")
         return
     try:
         sync()

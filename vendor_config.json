@@ -76,14 +76,16 @@
     "promo_code": "DISCOUNT",
     "payment_methods": null,
     "shipping_info": "Calculated at checkout by weight/destination; cold-chain packaging included free. 2-3 day processing, ships via USPS/UPS/FedEx.",
-    "shipping_payment_researched": "2026-08-16"
+    "shipping_payment_researched": "2026-08-16",
+    "code_discount_pct": 10
   },
   "Licensed Peptides": {
     "status": "approved",
     "site_url": "https://licensedpeptides.com",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://licensedpeptides.com/ref/Discountpeptides/",
-    "promo_code": "Affiliate5"
+    "promo_code": "Affiliate5",
+    "code_discount_pct": 5
   },
   "Alpha Peptides": {
     "status": "approved",
@@ -91,14 +93,16 @@
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://alpha-peptides.com/aff/863/",
     "promo_code": "DISCOUNT",
-    "affiliate_path_suffix": "aff/863/"
+    "affiliate_path_suffix": "aff/863/",
+    "code_discount_pct": 10
   },
   "Midwest Peptide": {
     "status": "approved",
     "site_url": "https://midwestpeptide.com",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://midwestpeptide.com/?ref=DISCOUNT",
-    "promo_code": "DISCOUNT"
+    "promo_code": "DISCOUNT",
+    "code_discount_pct": 10
   },
   "American Peptides": {
     "status": "approved",
@@ -134,7 +138,8 @@
     "payment_note": "Charges appear on statements as OFFLINEPEPTIDES.COM.",
     "shipping_info": "US only; typically 1\u20132 business days processing with tracking. Free Priority Shipping on orders over $250. Delivery estimates not guaranteed.",
     "shipping_payment_researched": "2026-09-15",
-    "affiliate_path_suffix": null
+    "affiliate_path_suffix": null,
+    "code_discount_pct": 10
   },
   "Orbitrex Peptide": {
     "status": "approved",
@@ -158,7 +163,8 @@
     "payment_note": "Wire and crypto orders ship once funds have cleared.",
     "shipping_info": "US only (incl. Puerto Rico, Guam, U.S. Virgin Islands); tracked courier, typically 2\u20135 business days. Card orders: flat $15 shipping, free from $500. Orders by 2 PM ET on business days ship same day.",
     "shipping_payment_researched": "2026-10-11",
-    "affiliate_path_suffix": null
+    "affiliate_path_suffix": null,
+    "code_discount_pct": 20
   },
   "Synthrolab": {
     "status": "approved",
@@ -174,7 +180,8 @@
     ],
     "shipping_info": "Ships within the US and Australia. US: $7 standard, $10 express, free over $150 USD. Same-day dispatch; typical delivery 2-3 days. Optional $10 shipping protection.",
     "shipping_payment_researched": "2026-10-14",
-    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 10
   },
   "Lumera Labs": {
     "status": "approved",
@@ -288,7 +295,8 @@
     ],
     "shipping_info": "Ships within the US only (all 50 states) via USPS Priority Mail. Free standard shipping on orders over $150; flat-rate USPS Priority below that. Same-day dispatch on business days for orders before 2 PM ET. All sales final once shipped.",
     "shipping_payment_researched": "2026-10-14",
-    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 10
   },
   "Apex Peptides": {
     "status": "approved",
@@ -340,7 +348,8 @@
     "payment_note": null,
     "shipping_info": "US only (no NY, MA or CT). $15 flat under $300; free at $300+. Orders before 2PM EST ship same business day; tracked 2\u20133 business days.",
     "shipping_payment_researched": "2026-10-15",
-    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use."
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 20
   },
   "Peptide Titans": {
     "status": "approved",
@@ -392,7 +401,8 @@
     ],
     "payment_note": "Other methods may be shown at checkout. Charges appear as RIDETHETIDE or RIDE THE TIDE PEPTIDES.",
     "shipping_info": "US only (no international). Standard shipping $12 flat; free on orders $199+. Orders processed within 1\u20132 business days; delivery typically 3\u20137 business days via USPS, UPS or FedEx, with tracking.",
-    "shipping_payment_researched": "2026-10-18"
+    "shipping_payment_researched": "2026-10-18",
+    "code_discount_pct": 15
   },
   "Zeptix Labs": {
     "status": "approved",
@@ -475,7 +485,8 @@
     ],
     "payment_note": "Prices in USD; crypto amounts are locked at the checkout rate. Venmo and Zelle orders release after manual verification.",
     "shipping_info": "Continental US (lower 48) only. $15 flat; free on orders of $150 or more. Orders by 2:00 PM ET on business days ship the same day, about 2-day delivery (UPS 2nd Day Air or Ground).",
-    "shipping_payment_researched": "2026-10-18"
+    "shipping_payment_researched": "2026-10-18",
+    "code_discount_pct": 15
   },
   "Stealth Research Labs": {
     "status": "approved",
@@ -493,5 +504,94 @@
     "payment_note": "Prices in USD.",
     "shipping_info": "Ships from Dallas, Texas. USPS Priority Mail $9.99, free on qualifying U.S. orders of $200 or more; paid FedEx 2Day and Overnight upgrades available. Orders before 2 PM ET on business days ship the same day after payment verification. International shipping by quote.",
     "shipping_payment_researched": "2026-10-19"
+  },
+  "Alpine Peptide": {
+    "status": "approved",
+    "site_url": "https://alpinepeptide.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://alpinepeptide.com/?aff=discounts",
+    "affiliate_path_suffix": null,
+    "promo_code": "discounts15",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "Discover",
+      "American Express",
+      "PayPal",
+      "Venmo",
+      "ACH / eCheck"
+    ],
+    "payment_note": null,
+    "shipping_info": "Free UPS 2-Day Air on orders containing research compounds ($6 UPS Ground for orders without compounds; Hawaii $30 flat). Orders before 4:00 PM MT ship the same day. Some international delivery (1-3 weeks).",
+    "shipping_payment_researched": "2026-10-18"
+  },
+  "Prism Labs": {
+    "status": "approved",
+    "site_url": "https://www.prismlabs.store",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://prismlabs.store/?promo=DISCOUNTPEPT",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPEPT",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Credit card",
+      "Debit card",
+      "Apple Pay",
+      "Google Pay"
+    ],
+    "payment_note": "Other Stripe options (e.g. Amazon Pay, Link) may be shown at checkout.",
+    "shipping_info": "US addresses only. UPS Ground $8.99 (free on orders over $125) or UPS 2nd Day Air $14.99. Orders before 4:30 PM CT ship the same day, 7 days a week, with tracking.",
+    "shipping_payment_researched": "2026-10-18"
+  },
+  "Echo Peptides": {
+    "status": "approved",
+    "site_url": "https://echopeptides.co",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://echopeptides.co/r/DISCOUNT",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNT",
+    "code_discount_pct": 15,
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Card"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "US shipping. Ground $10, Priority $15; free on US orders of $200 or more. Orders ship within 24-48 business hours (Mon-Fri), with tracking.",
+    "shipping_payment_researched": "2026-10-20"
+  },
+  "Axovera Labs": {
+    "status": "approved",
+    "site_url": "https://axoveralabs.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://axoveralabs.com/ref/DISCOUNTS/",
+    "affiliate_path_suffix": "ref/DISCOUNTS/",
+    "promo_code": null,
+    "payment_methods": [
+      "Visa",
+      "Discover",
+      "American Express",
+      "Bank payment"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "Ships from the USA. Free shipping on orders over $200; otherwise shipping is calculated at checkout. Orders before 1 PM ET on business days ship the same day, otherwise the next business day; about 2-day delivery.",
+    "shipping_payment_researched": "2026-10-20"
+  },
+  "Aura Research": {
+    "status": "approved",
+    "site_url": "https://tryauraresearch.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://tryauraresearch.com/?ref=DISCOUNTPE",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPE",
+    "code_discount_pct": 10,
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Visa",
+      "American Express"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "US shipping $9.99; free on orders over $200. Orders before 2 PM PT ship the same day. USPS (2-5 business days), UPS/FedEx expedited (2-3 business days) and overnight where available; P.O. Box and APO/FPO via USPS only. Optional paid shipping protection.",
+    "shipping_payment_researched": "2026-10-20"
   }
 }
