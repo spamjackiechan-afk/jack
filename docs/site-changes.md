@@ -217,3 +217,13 @@ Otherwise the row shows the normal price.
   vendor is compared on the same basis whether or not a code % is known.
 - After adding `code_discount_pct`, run `scripts/sync_vendor_config.py` so
   the embedded `VENDOR_CONFIG` lines match.
+
+## testing.html retired (2026-10)
+
+`testing.html` was removed. The homepage nav item (now labelled **Research**), the
+per-compound warning links and the About-page link go to
+https://peptidehealthdigest.vercel.app/ (external, used with permission) in a new tab.
+`_redirects` 301s `/testing` and `/testing.html` there. The References / testing-refs
+sections above, `docs/references-format.md`, `docs/testing-refs-filter.md` and
+`data/testing-refs-status.json` describe the retired page and are kept for history only.
+Do not copy the external site's dosing or health-claim content onto this site.
