@@ -251,6 +251,11 @@ VENDORS = {
                                   # server-rendered; only single-size products are listed (multi-size pages
                                   # expose an AggregateOffer lowPrice only).
     },
+    "Echo Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" minus /admin, /api/, /integrations/ and /account.
+                                  # /product/ pages are allowed; each size is its own page with server-rendered Product JSON-LD.
+    },
     "Aura Research": {
         "robots_checked_by": "Grok for Jackson, 2026-10-20",
         "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,

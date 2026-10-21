@@ -540,6 +540,22 @@
     "shipping_info": "US addresses only. UPS Ground $8.99 (free on orders over $125) or UPS 2nd Day Air $14.99. Orders before 4:30 PM CT ship the same day, 7 days a week, with tracking.",
     "shipping_payment_researched": "2026-10-18"
   },
+  "Echo Peptides": {
+    "status": "approved",
+    "site_url": "https://echopeptides.co",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://echopeptides.co/r/DISCOUNT",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNT",
+    "code_discount_pct": 15,
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Card"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "US shipping. Ground $10, Priority $15; free on US orders of $200 or more. Orders ship within 24-48 business hours (Mon-Fri), with tracking.",
+    "shipping_payment_researched": "2026-10-20"
+  },
   "Aura Research": {
     "status": "approved",
     "site_url": "https://tryauraresearch.com",
