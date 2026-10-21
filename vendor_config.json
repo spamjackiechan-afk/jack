@@ -493,5 +493,26 @@
     "payment_note": "Prices in USD.",
     "shipping_info": "Ships from Dallas, Texas. USPS Priority Mail $9.99, free on qualifying U.S. orders of $200 or more; paid FedEx 2Day and Overnight upgrades available. Orders before 2 PM ET on business days ship the same day after payment verification. International shipping by quote.",
     "shipping_payment_researched": "2026-10-19"
+  },
+  "Alpine Peptide": {
+    "status": "approved",
+    "site_url": "https://alpinepeptide.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://alpinepeptide.com/?aff=discounts",
+    "affiliate_path_suffix": null,
+    "promo_code": "discounts15",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "Discover",
+      "American Express",
+      "PayPal",
+      "Venmo",
+      "ACH / eCheck"
+    ],
+    "payment_note": null,
+    "shipping_info": "Free UPS 2-Day Air on orders containing research compounds ($6 UPS Ground for orders without compounds; Hawaii $30 flat). Orders before 4:00 PM MT ship the same day. Some international delivery (1-3 weeks).",
+    "shipping_payment_researched": "2026-10-18"
   }
 }
