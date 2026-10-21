@@ -1146,7 +1146,8 @@
         "Peptide Titans": 99.99,
         "BioLabs Peptides": 119.35,
         "Olympus Peptide Labs": 195.7,
-        "Elev-8 Labs": 149.99
+        "Elev-8 Labs": 149.99,
+        "Axovera Labs": 125
       },
       "lowest": 78.0,
       "notes": null,
@@ -1162,7 +1163,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/mots-c/?attribute_mg=40+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/mots-c/?attribute_size=40mg",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/490da0df",
-        "Elev-8 Labs": "https://elev-8labs.com/product/mots-c/?attribute_pa_size=40mg"
+        "Elev-8 Labs": "https://elev-8labs.com/product/mots-c/?attribute_pa_size=40mg",
+        "Axovera Labs": "https://axoveralabs.com/product/mots-c/"
       }
     },
     {
@@ -1197,7 +1199,8 @@
         "Olympus Peptide Labs": 139.05,
         "Elev-8 Labs": 89.99,
         "Veratis Bio": 60.0,
-        "Stealth Research Labs": 59.99
+        "Stealth Research Labs": 59.99,
+        "Axovera Labs": 55
       },
       "lowest": 30.52,
       "notes": null,
@@ -1226,7 +1229,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/ce489d23",
         "Elev-8 Labs": "https://elev-8labs.com/product/nad/?attribute_pa_size=500mg",
         "Veratis Bio": "https://veratisbio.com/shop/nad-plus-500mg",
-        "Stealth Research Labs": "https://stealthresearchlabs.com/product/nad/?attribute_pa_size=500mg"
+        "Stealth Research Labs": "https://stealthresearchlabs.com/product/nad/?attribute_pa_size=500mg",
+        "Axovera Labs": "https://axoveralabs.com/product/nad/"
       },
       "category": "Cellular & Longevity"
     },
@@ -1302,7 +1306,8 @@
         "BioLabs Peptides": 53.05,
         "Ride the Tide Peptides": 20.99,
         "True Research Labs": 49,
-        "Elev-8 Labs": 54.99
+        "Elev-8 Labs": 54.99,
+        "Axovera Labs": 69
       },
       "lowest": 20.99,
       "notes": null,
@@ -1327,7 +1332,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/selank/",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/selank",
         "True Research Labs": "https://trueresearchlabs.com/shop/selank/?attribute_pa_dosage=10-mg",
-        "Elev-8 Labs": "https://elev-8labs.com/product/selank/"
+        "Elev-8 Labs": "https://elev-8labs.com/product/selank/",
+        "Axovera Labs": "https://axoveralabs.com/product/selank/"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1358,7 +1364,8 @@
         "BioLabs Peptides": 53.05,
         "Ride the Tide Peptides": 20.99,
         "True Research Labs": 49,
-        "Elev-8 Labs": 54.99
+        "Elev-8 Labs": 54.99,
+        "Axovera Labs": 59
       },
       "lowest": 20.84,
       "notes": null,
@@ -1383,7 +1390,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/semax/",
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/semax",
         "True Research Labs": "https://trueresearchlabs.com/shop/semax/?attribute_size=10+MG",
-        "Elev-8 Labs": "https://elev-8labs.com/product/semax/"
+        "Elev-8 Labs": "https://elev-8labs.com/product/semax/",
+        "Axovera Labs": "https://axoveralabs.com/product/semax/"
       },
       "category": "Cognitive & Neurological"
     },
@@ -1762,7 +1770,8 @@
         "Quality Peptide USA": 89,
         "Peptide Titans": 49.99,
         "Formal Peptides": 59,
-        "BioLabs Peptides": 74.27
+        "BioLabs Peptides": 74.27,
+        "Axovera Labs": 60
       },
       "lowest": 35.57,
       "notes": null,
@@ -1783,7 +1792,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/cjc-1295-no-dac-ipamorelin",
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-no-dac-ipamorelin-blend/?attribute_mg=5/5+mg",
         "Formal Peptides": "https://formalpeptides.com/product/cjc-no-dac-ipamorelin-5-5mg/",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac-ipa-cjc-5mg-ipa-5mg/"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac-ipa-cjc-5mg-ipa-5mg/",
+        "Axovera Labs": "https://axoveralabs.com/product/cjc-1295/"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -1934,7 +1944,8 @@
         "BioLabs Peptides": 58.35,
         "Zeptix Labs": 59.99,
         "True Research Labs": 54,
-        "Stealth Research Labs": 49.99
+        "Stealth Research Labs": 49.99,
+        "Axovera Labs": 50
       },
       "lowest": 35.0,
       "notes": null,
@@ -1952,7 +1963,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/ghk-cu/?attribute_size=100mg",
         "Zeptix Labs": "https://zeptixlabs.com/product/ghk-cu/?variant=7",
         "True Research Labs": "https://trueresearchlabs.com/shop/ghk-cu/?attribute_pa_dosage=100-mg",
-        "Stealth Research Labs": "https://stealthresearchlabs.com/product/ghk-cu/?attribute_pa_size=100mg"
+        "Stealth Research Labs": "https://stealthresearchlabs.com/product/ghk-cu/?attribute_pa_size=100mg",
+        "Axovera Labs": "https://axoveralabs.com/product/ghk-cu/"
       }
     },
     {
@@ -2025,7 +2037,8 @@
         "BioLabs Peptides": 55.69,
         "True Research Labs": 59,
         "Elev-8 Labs": 35.0,
-        "Veratis Bio": 70.0
+        "Veratis Bio": 70.0,
+        "Axovera Labs": 60
       },
       "lowest": 35.0,
       "notes": null,
@@ -2046,7 +2059,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/ipa/?attribute_size=10mg",
         "True Research Labs": "https://trueresearchlabs.com/shop/ipamorelin/?attribute_pa_dosage=10-mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/ipamorelin/",
-        "Veratis Bio": "https://veratisbio.com/shop/ipamorelin-10mg"
+        "Veratis Bio": "https://veratisbio.com/shop/ipamorelin-10mg",
+        "Axovera Labs": "https://axoveralabs.com/product/ipamorelin/"
       }
     },
     {
@@ -2190,7 +2204,8 @@
         "Offline Peptides": 49.0,
         "Vertex Labs": 59.0,
         "Peptide Titans": 34.99,
-        "True Research Labs": 59
+        "True Research Labs": 59,
+        "Axovera Labs": 59
       },
       "lowest": 33.12,
       "notes": null,
@@ -2200,7 +2215,8 @@
         "Offline Peptides": "https://offlinepeptides.com/product/5-amino-1mq/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/5-amino-1mq/",
         "Peptide Titans": "https://peptidetitans.com/product/5-amino-1mq/?attribute_mg=10+mg",
-        "True Research Labs": "https://trueresearchlabs.com/shop/5-amino-1mq/?attribute_pa_dosage=10-mg"
+        "True Research Labs": "https://trueresearchlabs.com/shop/5-amino-1mq/?attribute_pa_dosage=10-mg",
+        "Axovera Labs": "https://axoveralabs.com/product/5-amino-1mq/"
       }
     },
     {
@@ -3089,7 +3105,8 @@
         "Apex Peptides": 129.0,
         "US Peptide Labs": 85.0,
         "Peptide Titans": 74.99,
-        "Elev-8 Labs": 139.99
+        "Elev-8 Labs": 139.99,
+        "Axovera Labs": 95
       },
       "lowest": 58.0,
       "notes": null,
@@ -3103,7 +3120,8 @@
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/bpc-tb-500/?attribute_pa_size=10mg-10mg",
         "US Peptide Labs": "https://uspeptidelabs.co/products/bpc-157-tb-500",
         "Peptide Titans": "https://peptidetitans.com/product/bpc-157-tb-500-blend/?attribute_mg=10/10+mg",
-        "Elev-8 Labs": "https://elev-8labs.com/product/bpc-157-tb-500-wolverine/"
+        "Elev-8 Labs": "https://elev-8labs.com/product/bpc-157-tb-500-wolverine/",
+        "Axovera Labs": "https://axoveralabs.com/product/bpc-157-tb-500/"
       }
     },
     {
@@ -3146,7 +3164,8 @@
         "Olympus Peptide Labs": 222.12,
         "Elev-8 Labs": 119.99,
         "Veratis Bio": 125.0,
-        "Stealth Research Labs": 99.99
+        "Stealth Research Labs": 99.99,
+        "Axovera Labs": 85
       },
       "lowest": 48.41,
       "notes": null,
@@ -3171,7 +3190,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/94c33dae",
         "Elev-8 Labs": "https://elev-8labs.com/product/glow/",
         "Veratis Bio": "https://veratisbio.com/shop/glow-10mg",
-        "Stealth Research Labs": "https://stealthresearchlabs.com/product/glow-blend/"
+        "Stealth Research Labs": "https://stealthresearchlabs.com/product/glow-blend/",
+        "Axovera Labs": "https://axoveralabs.com/product/glow/"
       }
     },
     {
@@ -3195,7 +3215,8 @@
         "True Research Labs": 104,
         "Olympus Peptide Labs": 166.86,
         "Elev-8 Labs": 154.99,
-        "Veratis Bio": 135.0
+        "Veratis Bio": 135.0,
+        "Axovera Labs": 90
       },
       "lowest": 75.0,
       "notes": null,
@@ -3216,7 +3237,8 @@
         "True Research Labs": "https://trueresearchlabs.com/shop/klow-blend/?attribute_pa_dosage=80-mg",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/9ccdcd3c",
         "Elev-8 Labs": "https://elev-8labs.com/product/klow/",
-        "Veratis Bio": "https://veratisbio.com/shop/klow-80mg"
+        "Veratis Bio": "https://veratisbio.com/shop/klow-80mg",
+        "Axovera Labs": "https://axoveralabs.com/product/klow-blend/"
       }
     },
     {
@@ -3572,7 +3594,8 @@
         "Zeptix Labs": 99.99,
         "True Research Labs": 69,
         "Elev-8 Labs": 109.99,
-        "Veratis Bio": 105.0
+        "Veratis Bio": 105.0,
+        "Axovera Labs": 75
       },
       "lowest": 56.99,
       "notes": null,
@@ -3596,7 +3619,8 @@
         "Zeptix Labs": "https://zeptixlabs.com/product/tesamorelin/?variant=5",
         "True Research Labs": "https://trueresearchlabs.com/shop/tesamorelin/?attribute_pa_dosage=10-mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/tesamorelin/",
-        "Veratis Bio": "https://veratisbio.com/shop/tesamorelin-10mg"
+        "Veratis Bio": "https://veratisbio.com/shop/tesamorelin-10mg",
+        "Axovera Labs": "https://axoveralabs.com/product/tesamorelin/"
       }
     },
     {
@@ -3775,7 +3799,8 @@
         "Zeptix Labs": 89.99,
         "True Research Labs": 74,
         "Elev-8 Labs": 89.99,
-        "Stealth Research Labs": 69.99
+        "Stealth Research Labs": 69.99,
+        "Axovera Labs": 65
       },
       "lowest": 43.0,
       "notes": null,
@@ -3802,7 +3827,8 @@
         "Zeptix Labs": "https://zeptixlabs.com/product/glp-3-r/?variant=1",
         "True Research Labs": "https://trueresearchlabs.com/shop/glp-3-rt/?attribute_pa_dosage=10-mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/el-3-rt/?attribute_pa_size=10mg",
-        "Stealth Research Labs": "https://stealthresearchlabs.com/product/glp-3-rt/?attribute_pa_size=10mg"
+        "Stealth Research Labs": "https://stealthresearchlabs.com/product/glp-3-rt/?attribute_pa_size=10mg",
+        "Axovera Labs": "https://axoveralabs.com/product/glp3rt/"
       }
     },
     {

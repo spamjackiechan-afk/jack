@@ -493,5 +493,22 @@
     "payment_note": "Prices in USD.",
     "shipping_info": "Ships from Dallas, Texas. USPS Priority Mail $9.99, free on qualifying U.S. orders of $200 or more; paid FedEx 2Day and Overnight upgrades available. Orders before 2 PM ET on business days ship the same day after payment verification. International shipping by quote.",
     "shipping_payment_researched": "2026-10-19"
+  },
+  "Axovera Labs": {
+    "status": "approved",
+    "site_url": "https://axoveralabs.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://axoveralabs.com/ref/DISCOUNTS/",
+    "affiliate_path_suffix": "ref/DISCOUNTS/",
+    "promo_code": null,
+    "payment_methods": [
+      "Visa",
+      "Discover",
+      "American Express",
+      "Bank payment"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "Ships from the USA. Free shipping on orders over $200; otherwise shipping is calculated at checkout. Orders before 1 PM ET on business days ship the same day, otherwise the next business day; about 2-day delivery.",
+    "shipping_payment_researched": "2026-10-20"
   }
 }
