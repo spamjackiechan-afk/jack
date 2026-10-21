@@ -237,6 +237,12 @@ VENDORS = {
                                   # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_pa_size=<size> (e.g. "10mg").
     },
+    "Aura Research": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,
+                                  # woocommerce_uploads/, ?add-to-cart= params and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Variable pages are pinned with ?attribute_pa_amount=<size> (e.g. "10mg").
+    },
 }
 
 HEADERS = {
