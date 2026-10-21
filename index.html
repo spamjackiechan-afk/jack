@@ -840,6 +840,9 @@
     text-decoration-color:var(--amber);
   }
 
+  .phd-desc{margin:8px 0 0 42px; font-size:13px; line-height:1.5; color:var(--ink-soft);}
+  .phd-desc a{color:var(--sage-deep); white-space:nowrap;}
+  @media (max-width:600px){ .phd-desc{margin-left:0;} }
   footer{
     margin-top:60px;
     border-top:2px solid var(--ink);
@@ -895,6 +898,7 @@
         <a href="about.html" id="aboutLink">About</a>
         <a href="https://peptidehealthdigest.vercel.app/" id="testingLink" target="_blank" rel="noopener">Research</a>
         <a href="/suppliers" id="suppliersLink">Suppliers</a>
+        <a href="/research" id="researchLink">Guides &amp; Studies</a>
       </nav>
     </div>
 
@@ -994,7 +998,7 @@
     <p><strong>Affiliate disclosure —</strong> this page will contain affiliate links. When a listed vendor's product page is visited through a link here, this site may earn a commission on a resulting sale, at no added cost to the buyer. Vendor inclusion does not imply endorsement of a product's safety, legality, or efficacy.</p>
     <p><strong>Not medical advice —</strong> pricing and evidence notes are for research reference and comparison only. Peptides listed here are, in most cases, not FDA-approved, and evidence quality varies widely by compound — see the note on each listing before assuming a claim is well-supported.</p>
     <p>Vendor prices are checked against original spreadsheet data, cross-referenced with each vendor's live site, and — for vendors with an automated daily price check — confirmed against a live, scheduled read of their actual product pages (see the "● LIVE" tag on those listings).</p>
-    <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a> · <a href="/calculator">Calculator</a></p>
+    <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a> · <a href="/calculator">Calculator</a> · <a href="/research">Guides &amp; Studies</a></p>
   </footer>
 
   <div class="contact-block">
@@ -1594,6 +1598,13 @@ function formatIcon(fmt){
   return `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
 }
 
+const PHD_DESCRIPTIONS = {"AOD-9604": {"d": "A modified 16-amino-acid C-terminal fragment of human growth hormone (hGH 177-191), investigated in research on lipolysis pathways.", "u": "https://peptidehealthdigest.vercel.app/peptides/aod-9604"}, "BPC-157": {"d": "A 15-amino-acid peptide derived from a protein in human gastric juice, studied mainly in preclinical (animal) research on tissue repair, angiogenesis and gut mucosa.", "u": "https://peptidehealthdigest.vercel.app/peptides/bpc-157"}, "PT-141 (Bremelanotide)": {"d": "A cyclic heptapeptide melanocortin receptor (MC3R/MC4R) agonist; as bremelanotide it has FDA approval for hypoactive sexual desire disorder.", "u": "https://peptidehealthdigest.vercel.app/peptides/bremelanotide-pt-141"}, "CJC-1295": {"d": "A synthetic growth hormone-releasing hormone (GHRH) analog with four amino acid substitutions intended to resist enzymatic cleavage.", "u": "https://peptidehealthdigest.vercel.app/peptides/cjc-1295"}, "CJC-1295 with DAC": {"d": "A synthetic growth hormone-releasing hormone (GHRH) analog with four amino acid substitutions intended to resist enzymatic cleavage.", "u": "https://peptidehealthdigest.vercel.app/peptides/cjc-1295"}, "DSIP": {"d": "A nonapeptide first isolated from cerebral venous blood during induced slow-wave sleep, investigated in research on circadian regulation and autonomic stress responses.", "u": "https://peptidehealthdigest.vercel.app/peptides/dsip"}, "Epitalon": {"d": "A synthetic pineal-derived tetrapeptide investigated in cell and animal research on telomerase activity and melatonin rhythms.", "u": "https://peptidehealthdigest.vercel.app/peptides/epithalon"}, "GHK-Cu (Copper Peptide)": {"d": "A human plasma-derived tripeptide with high copper affinity, studied in research on collagen remodeling, skin and gene expression.", "u": "https://peptidehealthdigest.vercel.app/peptides/ghk-cu"}, "Ipamorelin": {"d": "A selective pentapeptide ghrelin receptor (GHS-R1a) agonist, studied for its effect on growth hormone release with minimal reported effect on cortisol, prolactin or aldosterone.", "u": "https://peptidehealthdigest.vercel.app/peptides/ipamorelin"}, "Kisspeptin": {"d": "An endogenous C-terminal decapeptide (kisspeptin-10) studied as a regulator of gonadotropin-releasing hormone (GnRH) and reproductive-axis signaling.", "u": "https://peptidehealthdigest.vercel.app/peptides/kisspeptin-10"}, "MOTS-C": {"d": "A 16-amino-acid mitochondrial-encoded peptide investigated in research on metabolic homeostasis, fatty acid oxidation and AMPK activation.", "u": "https://peptidehealthdigest.vercel.app/peptides/mots-c"}, "Retatrutide": {"d": "A single peptide that acts on the GLP-1, GIP and glucagon receptors (a triple agonist), investigated in clinical research.", "u": "https://peptidehealthdigest.vercel.app/peptides/retatrutide"}, "Retatrutide (listed as 'GLP-3 Triple Agonist')": {"d": "A single peptide that acts on the GLP-1, GIP and glucagon receptors (a triple agonist), investigated in clinical research.", "u": "https://peptidehealthdigest.vercel.app/peptides/retatrutide"}, "Selank": {"d": "A synthetic heptapeptide derived from human tuftsin, investigated in research on anxiety-related, cognitive and immunomodulatory pathways.", "u": "https://peptidehealthdigest.vercel.app/peptides/selank"}, "Semaglutide": {"d": "A long-acting GLP-1 receptor agonist engineered with an albumin-binding fatty acid side chain, studied in research on glycemic control and body weight.", "u": "https://peptidehealthdigest.vercel.app/peptides/semaglutide"}, "GLP-1 (Semaglutide)": {"d": "A long-acting GLP-1 receptor agonist engineered with an albumin-binding fatty acid side chain, studied in research on glycemic control and body weight.", "u": "https://peptidehealthdigest.vercel.app/peptides/semaglutide"}, "GLP-1 (Semaglutide) Oral Spray": {"d": "A long-acting GLP-1 receptor agonist engineered with an albumin-binding fatty acid side chain, studied in research on glycemic control and body weight.", "u": "https://peptidehealthdigest.vercel.app/peptides/semaglutide"}, "Semax": {"d": "A synthetic heptapeptide combining an ACTH fragment with a Pro-Gly-Pro tripeptide, investigated in research on BDNF signaling and cognition, including ischemia models.", "u": "https://peptidehealthdigest.vercel.app/peptides/semax"}, "Sermorelin": {"d": "A 29-amino-acid truncated analog of growth hormone-releasing hormone (GHRH 1-29), studied for its action on pituitary GH secretion.", "u": "https://peptidehealthdigest.vercel.app/peptides/sermorelin"}, "SS-31 / Elamipretide": {"d": "A mitochondria-targeting tetrapeptide that binds cardiolipin in the inner mitochondrial membrane, investigated in research on mitochondrial electron transport.", "u": "https://peptidehealthdigest.vercel.app/peptides/ss-31-elamipretide"}, "TB-500": {"d": "A synthetic peptide related to Thymosin Beta-4, an actin-sequestering protein, studied in research on cell migration and tissue regeneration.", "u": "https://peptidehealthdigest.vercel.app/peptides/tb-500"}, "Tesamorelin": {"d": "A synthetic 44-amino-acid growth hormone-releasing factor analog; it has FDA approval for excess visceral abdominal fat in patients with lipodystrophy.", "u": "https://peptidehealthdigest.vercel.app/peptides/tesamorelin"}, "Thymosin Alpha-1": {"d": "An endogenous 28-amino-acid thymic peptide investigated in research on T-cell and natural killer cell activity and Toll-like receptor signaling.", "u": "https://peptidehealthdigest.vercel.app/peptides/thymosin-alpha-1"}, "Tirzepatide": {"d": "A dual GIP and GLP-1 receptor co-agonist studied in clinical research on metabolism and body composition.", "u": "https://peptidehealthdigest.vercel.app/peptides/tirzepatide"}, "Tirzepatide (listed as 'GLP-2 Dual Agonist')": {"d": "A dual GIP and GLP-1 receptor co-agonist studied in clinical research on metabolism and body composition.", "u": "https://peptidehealthdigest.vercel.app/peptides/tirzepatide"}};
+function phdDescHtml(name){
+  const d = PHD_DESCRIPTIONS[name];
+  if (!d) return '';
+  return `<p class="phd-desc">${d.d} <a href="${d.u}" target="_blank" rel="noopener">Learn more on Peptide Health Digest &rarr;</a></p>`;
+}
+
 function cardHtmlGrouped(group){
   const gid = doseKey(group);
   const pills = group.doses.map((item, i) => `
@@ -1615,6 +1626,7 @@ function cardHtmlGrouped(group){
           <button type="button" class="fav-btn ${isFavourite(group.peptide) ? 'saved' : ''}" title="Save this peptide" aria-label="Save ${group.peptide}" onclick="toggleFavourite('${group.peptide.replace(/'/g, "\\'")}', this)">${isFavourite(group.peptide) ? '★' : '☆'}</button>
         </div>
         ${categoryTag ? `<div style="margin:6px 0 0 42px;">${categoryTag}</div>` : ''}
+        ${phdDescHtml(group.peptide)}
         ${warningHtml(group.peptide, gid)}
         <div class="dose-row">
           <div class="dose-left">
