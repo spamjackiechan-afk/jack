@@ -720,6 +720,10 @@
   .price-row.lowest .vendor{color:var(--sage-deep);}
   .price-row.lowest .price-amount{color:var(--sage-deep);}
   .price-row .val{font-weight:500; display:flex; flex-direction:column; align-items:flex-end; gap:2px;}
+  /* With-code price: shown big, the vendor's list price struck through below it. */
+  .price-amount.with-code{font-size:15px; font-weight:600;}
+  .with-code-star{color:var(--success); font-size:10px; vertical-align:super; margin-left:1px;}
+  .price-list-struck{color:var(--ink-soft); opacity:.75; font-size:11px; text-decoration:line-through;}
   .promo-code{
     display:inline-block;
     font-family:'IBM Plex Mono', monospace;
@@ -1320,6 +1324,21 @@ function render(){
   window.__DP_RENDERED = true; // read by the render safety net at the end of the page
 }
 
+// Price after our promo code, or null. Only when the vendor has a real code
+// AND a verified code_discount_pct in vendor_config.json (never guessed).
+// Skipped for non-USD vendors, and when the tracker saw a vendor-page sale on
+// this item (codes often don't stack with sales; no double discount).
+function withCodePrice(vendor, price, item, link){
+  const cfg = VENDOR_CONFIG[vendor];
+  if (!cfg || !link.promoCode) return null;
+  const pct = cfg.code_discount_pct;
+  if (typeof pct !== 'number' || !(pct > 0 && pct < 100)) return null;
+  if (cfg.currency && cfg.currency !== 'USD') return null;
+  const wasPrice = item.onSale && item.onSale[vendor];
+  if (wasPrice && wasPrice > price) return null;
+  return Math.round(price * (100 - pct)) / 100;
+}
+
 function renderPriceRow(vendor, price, item, lowestVal){
   const link = resolveVendorLink(vendor, item);
   const stateLabel = { affiliate: '', pending: ' · homepage only', pending_product: '', no_program: ' · no affiliate program', unverified: '' }[link.state] || '';
@@ -1336,7 +1355,11 @@ function renderPriceRow(vendor, price, item, lowestVal){
   const saleBadge = (wasPrice && wasPrice > price)
     ? `<span class="sale-badge" title="Was ${fmtPrice(wasPrice)} \u2014 sale price seen on the vendor's page today">${Math.round((1 - price / wasPrice) * 100)}% off</span>`
     : '';
-  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}${popularBadge}</span><span class="val"><span class="price-amount">${fmtPrice(price)}</span>${saleBadge}${codeBadge}${codeDisclosure}${unavailableTag}</span>`;
+  const codePrice = withCodePrice(vendor, price, item, link);
+  const priceHtml = codePrice != null
+    ? `<span class="price-amount with-code" title="With code ${link.promoCode}">${fmtPrice(codePrice)}<span class="with-code-star" aria-label="with code">*</span></span><span class="price-list-struck" title="List price">${fmtPrice(price)}</span>`
+    : `<span class="price-amount">${fmtPrice(price)}</span>`;
+  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}${popularBadge}</span><span class="val">${priceHtml}${saleBadge}${codeBadge}${codeDisclosure}${unavailableTag}</span>`;
   if (link.url){
     return `<a class="price-row ${price === lowestVal ? 'lowest' : ''}" href="${link.url}" target="_blank" rel="noopener sponsored" onclick="trackClick('${vendor.replace(/'/g,"\\'")}', '${item.peptide.replace(/'/g,"\\'")}')">${inner}</a>`;
   }
