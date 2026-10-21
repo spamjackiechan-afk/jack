@@ -237,6 +237,20 @@ VENDORS = {
                                   # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_pa_size=<size> (e.g. "10mg").
     },
+    "Alpine Peptide": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only the Woo upload/log dirs,
+                                  # ?add-to-cart= params and /wp-admin/ (Yoast block: empty Disallow).
+                                  # /product/ pages are allowed. Every size is its own simple product.
+    },
+    "Prism Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /admin, /cart,
+                                  # /checkout, /success, /track-order, /reconstitution-calculator and
+                                  # /affiliate(-program). /product/ pages are allowed. Product JSON-LD is
+                                  # server-rendered; only single-size products are listed (multi-size pages
+                                  # expose an AggregateOffer lowPrice only).
+    },
     "Axovera Labs": {
         "robots_checked_by": "Grok for Jackson, 2026-10-20",
         "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,
