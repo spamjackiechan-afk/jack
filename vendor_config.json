@@ -572,5 +572,22 @@
     "payment_note": "Prices in USD.",
     "shipping_info": "Ships from the USA. Free shipping on orders over $200; otherwise shipping is calculated at checkout. Orders before 1 PM ET on business days ship the same day, otherwise the next business day; about 2-day delivery.",
     "shipping_payment_researched": "2026-10-20"
+  },
+  "Aura Research": {
+    "status": "approved",
+    "site_url": "https://tryauraresearch.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://tryauraresearch.com/?ref=DISCOUNTPE",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPE",
+    "code_discount_pct": 10,
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Visa",
+      "American Express"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "US shipping $9.99; free on orders over $200. Orders before 2 PM PT ship the same day. USPS (2-5 business days), UPS/FedEx expedited (2-3 business days) and overnight where available; P.O. Box and APO/FPO via USPS only. Optional paid shipping protection.",
+    "shipping_payment_researched": "2026-10-20"
   }
 }
