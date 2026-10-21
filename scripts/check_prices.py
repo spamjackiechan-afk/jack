@@ -237,6 +237,11 @@ VENDORS = {
                                   # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_pa_size=<size> (e.g. "10mg").
     },
+    "Echo Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" minus /admin, /api/, /integrations/ and /account.
+                                  # /product/ pages are allowed; each size is its own page with server-rendered Product JSON-LD.
+    },
 }
 
 HEADERS = {
