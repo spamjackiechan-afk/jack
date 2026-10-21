@@ -693,7 +693,8 @@
         "Stealth Research Labs": 39.99,
         "Alpine Peptide": 45.0,
         "Echo Peptides": 49.99,
-        "Aura Research": 39
+        "Aura Research": 39,
+        "Helion Research": 29.99
       },
       "lowest": 18.99,
       "notes": null,
@@ -725,7 +726,8 @@
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/ghk-cu/?attribute_pa_size=50mg",
         "Alpine Peptide": "https://alpinepeptide.com/product/ghk-cu-50mg/",
         "Echo Peptides": "https://echopeptides.co/product/ghk-cu-50mg",
-        "Aura Research": "https://tryauraresearch.com/product/ghk-cu/?attribute_pa_amount=50mg"
+        "Aura Research": "https://tryauraresearch.com/product/ghk-cu/?attribute_pa_amount=50mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=cu50"
       },
       "category": "Cellular & Longevity"
     },
@@ -1097,7 +1099,8 @@
         "Veratis Bio": 70.0,
         "Stealth Research Labs": 54.99,
         "Alpine Peptide": 45.0,
-        "Echo Peptides": 55.99
+        "Echo Peptides": 55.99,
+        "Helion Research": 43.99
       },
       "lowest": 27.55,
       "notes": null,
@@ -1129,7 +1132,8 @@
         "Veratis Bio": "https://veratisbio.com/shop/mots-c-10mg",
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/mots-c/?attribute_pa_size=10mg",
         "Alpine Peptide": "https://alpinepeptide.com/product/mots-c-10mg/",
-        "Echo Peptides": "https://echopeptides.co/product/mots-c-10mg"
+        "Echo Peptides": "https://echopeptides.co/product/mots-c-10mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=ms10"
       },
       "category": "Cellular & Longevity"
     },
@@ -1517,7 +1521,8 @@
         "True Research Labs": 54,
         "Alpine Peptide": 59.0,
         "Prism Labs": 44.99,
-        "Echo Peptides": 89.99
+        "Echo Peptides": 89.99,
+        "Helion Research": 49.99
       },
       "lowest": 34.99,
       "notes": null,
@@ -1539,7 +1544,8 @@
         "True Research Labs": "https://trueresearchlabs.com/shop/ss-31/?attribute_pa_dosage=10-mg",
         "Alpine Peptide": "https://alpinepeptide.com/product/ss-31-10-mg/",
         "Prism Labs": "https://www.prismlabs.store/product/ss-31",
-        "Echo Peptides": "https://echopeptides.co/product/ss-31-10mg"
+        "Echo Peptides": "https://echopeptides.co/product/ss-31-10mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=2s10"
       },
       "category": "Cellular & Longevity"
     },
@@ -1852,7 +1858,8 @@
         "Alpine Peptide": 69.0,
         "Echo Peptides": 99.99,
         "Axovera Labs": 60,
-        "Aura Research": 69
+        "Aura Research": 69,
+        "Helion Research": 44.99
       },
       "lowest": 35.57,
       "notes": null,
@@ -1877,7 +1884,8 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/cjc-ipam-10-mg/",
         "Echo Peptides": "https://echopeptides.co/product/cjc-1295-no-dac-ipamorelin-10mg",
         "Axovera Labs": "https://axoveralabs.com/product/cjc-1295/",
-        "Aura Research": "https://tryauraresearch.com/product/cjc-1295-no-dac-ipamorelin/"
+        "Aura Research": "https://tryauraresearch.com/product/cjc-1295-no-dac-ipamorelin/",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=cp10"
       },
       "category": "Growth Hormone & Muscle"
     },
@@ -3493,7 +3501,8 @@
         "Peptide Express": 75.0,
         "BioLabs Peptides": 63.65,
         "Stealth Research Labs": 59.99,
-        "Echo Peptides": 89.99
+        "Echo Peptides": 89.99,
+        "Helion Research": 59.99
       },
       "lowest": 58.0,
       "notes": null,
@@ -3504,7 +3513,8 @@
         "Peptide Express": "https://peptide.express/catalog/wolverine-blend-bpctb500",
         "BioLabs Peptides": "https://biolabspeptides.com/product/wolverine/?attribute_size=10mg",
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/wolverine-blend/?attribute_pa_size=10mg",
-        "Echo Peptides": "https://echopeptides.co/product/wolverine-10mg"
+        "Echo Peptides": "https://echopeptides.co/product/wolverine-10mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=bb10"
       }
     },
     {
@@ -3831,7 +3841,8 @@
         "Ride the Tide Peptides": 30.99,
         "True Research Labs": 44,
         "Alpine Peptide": 39.0,
-        "Echo Peptides": 64.99
+        "Echo Peptides": 64.99,
+        "Helion Research": 57.99
       },
       "lowest": 30.99,
       "notes": null,
@@ -3846,7 +3857,8 @@
         "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/glp1-s",
         "True Research Labs": "https://trueresearchlabs.com/shop/glp-1-sm/?attribute_pa_dosage=10-mg",
         "Alpine Peptide": "https://alpinepeptide.com/product/glp-1s-s-e-m-a-10mg/",
-        "Echo Peptides": "https://echopeptides.co/product/semaglutide-10mg"
+        "Echo Peptides": "https://echopeptides.co/product/semaglutide-10mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=sm10"
       }
     },
     {
@@ -3923,7 +3935,8 @@
         "BioLabs Peptides": 112.72,
         "Stealth Research Labs": 69.99,
         "Alpine Peptide": 89.0,
-        "Echo Peptides": 129.99
+        "Echo Peptides": 129.99,
+        "Helion Research": 89.99
       },
       "lowest": 50.0,
       "notes": null,
@@ -3939,7 +3952,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/tirz/?attribute_size=20mg",
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/glp-2-tz/?attribute_pa_size=20mg",
         "Alpine Peptide": "https://alpinepeptide.com/product/glp-2t-t-i-r-z-20mg/",
-        "Echo Peptides": "https://echopeptides.co/product/tirzepatide-20mg"
+        "Echo Peptides": "https://echopeptides.co/product/tirzepatide-20mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=t20"
       }
     },
     {
@@ -3975,7 +3989,8 @@
         "Alpine Peptide": 56.0,
         "Echo Peptides": 99.99,
         "Axovera Labs": 65,
-        "Aura Research": 79
+        "Aura Research": 79,
+        "Helion Research": 63.99
       },
       "lowest": 43.0,
       "notes": null,
@@ -4006,7 +4021,8 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/glp-3r-r-e-t-a-10mg/",
         "Echo Peptides": "https://echopeptides.co/product/glp3-rt-10mg",
         "Axovera Labs": "https://axoveralabs.com/product/glp3rt/",
-        "Aura Research": "https://tryauraresearch.com/product/glp-3rt/?attribute_pa_amount=10mg"
+        "Aura Research": "https://tryauraresearch.com/product/glp-3rt/?attribute_pa_amount=10mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=rt10"
       }
     },
     {
@@ -4033,7 +4049,8 @@
         "Zeptix Labs": 139.99,
         "Elev-8 Labs": 149.99,
         "Stealth Research Labs": 109.99,
-        "Echo Peptides": 169.99
+        "Echo Peptides": 169.99,
+        "Helion Research": 114.99
       },
       "lowest": 59.99,
       "notes": null,
@@ -4055,7 +4072,8 @@
         "Zeptix Labs": "https://zeptixlabs.com/product/glp-3-r/?variant=2",
         "Elev-8 Labs": "https://elev-8labs.com/product/el-3-rt/?attribute_pa_size=20mg",
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/glp-3-rt/?attribute_pa_size=20mg",
-        "Echo Peptides": "https://echopeptides.co/product/glp3-rt-20mg"
+        "Echo Peptides": "https://echopeptides.co/product/glp3-rt-20mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=rt20"
       }
     },
     {
@@ -4106,14 +4124,16 @@
       "prices": {
         "Purity Peptides": 79.99,
         "Vertex Labs": 79.0,
-        "Apex Peptides": 69.0
+        "Apex Peptides": 69.0,
+        "Helion Research": 39.99
       },
-      "lowest": 69.0,
+      "lowest": 39.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Vertex Labs": "https://vertexpeptideslab.org/product/tesa/?attribute_strength=5mg",
-        "Apex Peptides": "https://cms.apexpeptideslab.com/product/tesamorelin-5-mg/?attribute_pa_size=5mg"
+        "Apex Peptides": "https://cms.apexpeptideslab.com/product/tesamorelin-5-mg/?attribute_pa_size=5mg",
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=tsm5"
       }
     },
     {
