@@ -931,6 +931,9 @@
     </div>
   </div>
 
+  <!-- Members-only sales: guests get a small join teaser here, members a sales bar (member-sales.js). -->
+  <div id="memberSalesSlot"></div>
+
   <div class="deals-band" id="dealsBand">
     <div class="deals-head">
       <h3>Sales</h3>
@@ -1756,6 +1759,56 @@ document.getElementById('excludedCategories').innerHTML = categoryOrder
     </div>
   `).join('');
 
+// ---------- Members-only sales ----------
+// Sale prices, "% off" badges, the Sales strip and the "% On sale" chip are
+// for members of the email list only (checked server-side by
+// /api/member-sales via member-sales.js). Guests see each vendor's normal list
+// price; our with-code price (code_discount_pct) is then worked out from that
+// list price as usual. The observed sale is parked in item._sale so it can be
+// put back the moment membership is confirmed.
+let SALES_MEMBER = false;
+function recomputeLowest(item){
+  const vals = Object.values(item.prices);
+  if (vals.length) item.lowest = Math.min(...vals);
+}
+function hideSalesForGuests(){
+  if (SALES_MEMBER) return;
+  DATA.included.forEach(item => {
+    if (!item.onSale) return;
+    for (const [vendor, was] of Object.entries(item.onSale)){
+      const now = item.prices[vendor];
+      if (now != null && was > now){
+        item._sale = item._sale || {};
+        item._sale[vendor] = { now, was };
+        item.prices[vendor] = was;
+      }
+    }
+    delete item.onSale;
+    recomputeLowest(item);
+  });
+}
+function revealSalesForMembers(){
+  SALES_MEMBER = true;
+  DATA.included.forEach(item => {
+    if (!item._sale) return;
+    for (const [vendor, s] of Object.entries(item._sale)){
+      if (item.prices[vendor] !== s.was) continue; // live check has replaced it since
+      item.prices[vendor] = s.now;
+      item.onSale = item.onSale || {};
+      item.onSale[vendor] = s.was;
+    }
+    delete item._sale;
+    recomputeLowest(item);
+  });
+}
+hideSalesForGuests();
+window.addEventListener('dp-members', e => {
+  if (!e.detail || !e.detail.member || SALES_MEMBER) return;
+  revealSalesForMembers();
+  render();
+  renderDeals();
+});
+
 render();
 
 // ---------- Trust strip ----------
@@ -1807,6 +1860,7 @@ function applyLiveOverlay(results){
       const match = DATA.included.find(i => i.peptide === peptide && i.format === format && i.size === size);
       if (!match || !(vendor in match.prices)) continue;
 
+      if (match._sale) delete match._sale[vendor];
       if (result.price == null){
         delete match.prices[vendor];
         if (match.vendor_product_urls) delete match.vendor_product_urls[vendor];
@@ -1843,6 +1897,7 @@ async function loadLivePrices(){
     if (!resp.ok) return;
     const live = await resp.json();
     const updatedCount = applyLiveOverlay(live.results || {});
+    hideSalesForGuests(); // no-op for members
 
     if (updatedCount > 0){
       render();
@@ -1974,7 +2029,12 @@ function renderDeals(){
   if (!band) return;
 
   const deals = collectDeals();
-  if (!deals.length){ band.classList.remove('show'); return; }
+  if (!deals.length){
+    band.classList.remove('show');
+    const chip = document.getElementById('saleChip');
+    if (chip) chip.style.display = 'none';
+    return;
+  }
 
   const vendors = new Set(deals.map(d => d.vendor));
   sub.textContent = `${deals.length} price${deals.length === 1 ? '' : 's'} cut across ${vendors.size} vendor${vendors.size === 1 ? '' : 's'} \u00b7 checked today`;
@@ -2002,6 +2062,8 @@ function renderDeals(){
   if (chip && onSaleListings){
     chip.style.display = '';
     if (count) count.textContent = `(${onSaleListings})`;
+  } else if (chip){
+    chip.style.display = 'none';
   }
 }
 
@@ -2129,6 +2191,8 @@ async function submitSignup(where = 'band'){
       // Subscribed, so the first-visit prompt has done its job for good.
       try { localStorage.setItem(MODAL_KEY, 'subscribed'); } catch {}
       setMember(email);
+      // /api/subscribe also set the signed member cookie: unlock sales now.
+      if (window.DPMembers) window.DPMembers.refresh();
 
       // If they got here by trying to star something, finish that action —
       // otherwise they would have to hunt for the card and click it again.
@@ -2230,7 +2294,8 @@ document.getElementById('signupModal')?.addEventListener('click', e => {
   if (e.target.id === 'signupModal') dismissModal();
 });
 
-if (!modalAlreadyHandled() && !isMember()) setTimeout(() => openModal('intro'), MODAL_DELAY_MS);
+if (location.hash === '#join') setTimeout(() => openModal('intro'), 300); // "Join free" from /suppliers
+else if (!modalAlreadyHandled() && !isMember()) setTimeout(() => openModal('intro'), MODAL_DELAY_MS);
 
 updateFavCount();
 
@@ -2286,8 +2351,11 @@ updateHeroStats();
   if (data && Array.isArray(data.included)){
     data.included.forEach(function(i){
       if (!i || !i.prices || !Object.keys(i.prices).length) return;
+      // List price, never a sale price: sales are members-only and the fallback can't check.
+      var listPrices = Object.assign({}, i.prices);
+      Object.keys(i.onSale || {}).forEach(function(v){ if (v in listPrices && i.onSale[v] > listPrices[v]) listPrices[v] = i.onSale[v]; });
       items[keyOf(i.peptide, i.format, i.size)] = { peptide: i.peptide, format: i.format, size: i.size,
-        prices: Object.assign({}, i.prices), vendor_product_urls: i.vendor_product_urls || {} };
+        prices: listPrices, vendor_product_urls: i.vendor_product_urls || {} };
     });
   }
 
@@ -2332,6 +2400,7 @@ updateHeroStats();
       Object.keys(byItem).forEach(function(k){
         var res = byItem[k];
         if (!res || res.price == null || !(res.price > 0)) return;
+        if (res.regular_price && res.regular_price > res.price) res = Object.assign({}, res, { price: res.regular_price });
         var parts = k.split(' | ');
         var key = keyOf(parts[0], parts[1], parts[2]);
         if (items[key]){
@@ -2349,6 +2418,7 @@ updateHeroStats();
 })();
 </script>
 <script src="/site-guide-widget.js" defer></script>
+<script src="/member-sales.js" defer></script>
 <script src="/ga-consent.js" defer></script>
 </body>
 </html>
