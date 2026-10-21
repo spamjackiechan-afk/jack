@@ -256,6 +256,13 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" minus /admin, /api/, /integrations/ and /account.
                                   # /product/ pages are allowed; each size is its own page with server-rendered Product JSON-LD.
     },
+    "Axovera Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,
+                                  # woocommerce_uploads/, ?add-to-cart= params and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Product links carry the path-suffix referral, so only single-size pages and the default size of
+                                  # multi-size pages are listed (no ?attribute_ pins).
+    },
     "Aura Research": {
         "robots_checked_by": "Grok for Jackson, 2026-10-20",
         "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,

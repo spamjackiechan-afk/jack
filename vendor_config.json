@@ -556,6 +556,23 @@
     "shipping_info": "US shipping. Ground $10, Priority $15; free on US orders of $200 or more. Orders ship within 24-48 business hours (Mon-Fri), with tracking.",
     "shipping_payment_researched": "2026-10-20"
   },
+  "Axovera Labs": {
+    "status": "approved",
+    "site_url": "https://axoveralabs.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://axoveralabs.com/ref/DISCOUNTS/",
+    "affiliate_path_suffix": "ref/DISCOUNTS/",
+    "promo_code": null,
+    "payment_methods": [
+      "Visa",
+      "Discover",
+      "American Express",
+      "Bank payment"
+    ],
+    "payment_note": "Prices in USD.",
+    "shipping_info": "Ships from the USA. Free shipping on orders over $200; otherwise shipping is calculated at checkout. Orders before 1 PM ET on business days ship the same day, otherwise the next business day; about 2-day delivery.",
+    "shipping_payment_researched": "2026-10-20"
+  },
   "Aura Research": {
     "status": "approved",
     "site_url": "https://tryauraresearch.com",
