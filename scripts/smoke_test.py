@@ -23,15 +23,15 @@ Fails on:
     "13 suppliers", title/meta tags, the About stats strip), in the raw file or
     the rendered page, that differs from the number of distinct vendors with
     listings in the homepage DATA
-  * the testing.html References news markup (NEWS_MARKERS) showing up on
-    index.html or suppliers.html, in the raw file or the rendered page; it
-    belongs on testing.html only (see docs/references-format.md)
-  * testing.html rendering fewer than MIN_REFERENCES reference items
+  * the retired References news markup (NEWS_MARKERS, formerly testing.html)
+    showing up on index.html or suppliers.html, raw or rendered
+  * testing.html reappearing, or the Research nav link not pointing to
+    https://peptidehealthdigest.vercel.app/ with target=_blank rel=noopener
   * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
     suppliers.html not exactly matching data/catalog.json / vendor_config.json
     (scripts/sync_vendor_config.py --check)
   * Google Analytics (ga-consent.js): a public page (index, about, suppliers,
-    testing, privacy, calculator) not loading it; admin-reviews.html or functions/ loading
+    privacy, calculator) not loading it; admin-reviews.html or functions/ loading
     it; the Measurement ID appearing in any file other than ga-consent.js;
     privacy.html missing or not in sitemap.xml; on a first visit, the cookie
     banner not showing or any request going to Google's analytics hosts
@@ -48,8 +48,8 @@ import sync_vendor_config  # noqa: E402  (embed check)
 MIN_CARDS = 50
 MIN_VENDORS = 8
 MIN_SUPPLIERS = 8
-MIN_REFERENCES = 20
-# Markup/copy used only by the testing.html References list. None of it may
+RESEARCH_URL = "https://peptidehealthdigest.vercel.app/"
+# Markup/copy formerly used only by the testing.html References list (retired). None of it may
 # appear on the homepage or the suppliers page.
 NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
                 "data-tone", "tone-read", "Looks concerning", "Developing"]
@@ -57,7 +57,7 @@ NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
 # second copy of it; it may appear only in ga-consent.js.
 GA_FILE = "ga-consent.js"
 GA_ID = "G-" + "CYYYPQ5ZDX"
-GA_PAGES = ["index.html", "about.html", "suppliers.html", "testing.html", "privacy.html", "calculator.html"]
+GA_PAGES = ["index.html", "about.html", "suppliers.html", "privacy.html", "calculator.html"]
 GA_HOSTS = ("googletagmanager.com", "google-analytics.com")
 
 
@@ -279,6 +279,21 @@ def main():
                 problems.append(f"suppliers nav link: expected /suppliers, got {href!r}")
         except Exception as e:
             problems.append(f"suppliers nav link: missing: {str(e).splitlines()[0]}")
+        # ---- Research nav item (homepage) links out to Peptide Health Digest;
+        # testing.html is retired (301 in _redirects) and must not come back.
+        try:
+            link = page.locator("#testingLink")
+            href, tgt, rel = (link.get_attribute(x, timeout=5000) for x in ("href", "target", "rel"))
+            notes.append(f"research nav link: {href!r} target={tgt!r} rel={rel!r}")
+            if href != RESEARCH_URL or tgt != "_blank" or "noopener" not in (rel or ""):
+                problems.append(f"research nav link: expected {RESEARCH_URL} target=_blank rel=noopener, got {href!r} {tgt!r} {rel!r}")
+        except Exception as e:
+            problems.append(f"research nav link: missing: {str(e).splitlines()[0]}")
+        if os.path.exists(os.path.join(root, "testing.html")):
+            problems.append("testing.html exists again; it was retired (see _redirects)")
+        for f in ("index.html", "about.html", "suppliers.html", "privacy.html", "calculator.html", "sitemap.xml"):
+            if re.search(r'testing\.html|discountspeptides\.com/testing\b', open(os.path.join(root, f), encoding="utf-8").read()):
+                problems.append(f"{f}: still links to the retired testing page")
         check_no_news(page, root, "index.html", problems)
         vendor_count = data_vendor_count(root)
         notes.append(f"vendor count in DATA: {vendor_count}")
@@ -312,14 +327,6 @@ def main():
             if stat != str(vendor_count):
                 problems.append(f"about.html: Suppliers stat shows {stat!r} but the data has {vendor_count} vendors")
             page.close()
-
-        # ---- testing.html References (the only page allowed to carry them)
-        page = open_page(browser, base + "/testing.html", problems, "testing.html")
-        refs = page.locator("#refsNews .news-item").count()
-        notes.append(f"testing.html: {refs} reference items")
-        if refs < MIN_REFERENCES:
-            problems.append(f"testing.html: only {refs} reference items (min {MIN_REFERENCES})")
-        page.close()
 
         # ---- Google Analytics: consent-first banner, privacy page
         check_ga_static(root, problems, notes)

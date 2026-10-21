@@ -893,7 +893,7 @@
       <h1 class="title"><a href="/" class="brand"><img src="/logo-symbol.svg" alt="" aria-hidden="true" class="brand-mark"><span class="brand-word">Discount</span> <em>Peptides.</em></a></h1>
       <nav class="mast-nav">
         <a href="about.html" id="aboutLink">About</a>
-        <a href="testing.html" id="testingLink">Testing</a>
+        <a href="https://peptidehealthdigest.vercel.app/" id="testingLink" target="_blank" rel="noopener">Research</a>
         <a href="/suppliers" id="suppliersLink">Suppliers</a>
       </nav>
     </div>
@@ -1521,12 +1521,12 @@ function warningForPeptide(name){
 
 function warningHtml(name, gid){
   // Compounds with a documented concern no longer carry the full text here.
-  // The detail lives on the Testing & Quality page; this leaves a marker at
+  // The detail lives on Peptide Health Digest (external); this leaves a marker at
   // the point of decision so a reader knows there is something to check,
   // without a block of red on every card.
   if (!warningForPeptide(name)) return '';
   return `
-    <a class="warn-link" href="testing.html#concerns" title="This compound has a documented concern — read it on the Testing &amp; Quality page">
+    <a class="warn-link" href="https://peptidehealthdigest.vercel.app/" target="_blank" rel="noopener" title="This compound has a documented concern — read more on Peptide Health Digest (opens in a new tab)">
       <span aria-hidden="true">⚠</span> Verification notes for this compound &rarr;
     </a>`;
 }
