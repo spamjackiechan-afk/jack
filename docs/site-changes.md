@@ -198,3 +198,22 @@ has re-checked doesn't stay up forever. To keep a sale showing, re-verify
 the code on the vendor's site and bump `verified` to the new date. Then run the sync script so the generated
 `const VENDOR_SALES` line in suppliers.html picks it up. Jackson confirms
 every entry before it goes in.
+
+## With-code price (strikethrough list price)
+
+A homepage price row shows the price after our promo code big, with a `*`
+("with code"), and the vendor's list price struck through below it — but
+ONLY when the vendor's `vendor_config.json` entry has a real `promo_code`
+(shown on site, `tracking_type: link_plus_code`) AND a verified numeric
+`code_discount_pct` (e.g. `10` for 10% off). Never guess the percent from
+the code's name; add it only from the vendor's own confirmation/checkout.
+Otherwise the row shows the normal price.
+
+- No with-code price for link-only vendors, non-USD vendors (`currency`
+  other than USD), or a row where the tracker saw a vendor-page sale
+  (`onSale`) — codes often don't stack with sales, so we never
+  double-discount; the sale price + "% off" badge shows as before.
+- "Lowest" highlight and all price sorting stay on the list price, so every
+  vendor is compared on the same basis whether or not a code % is known.
+- After adding `code_discount_pct`, run `scripts/sync_vendor_config.py` so
+  the embedded `VENDOR_CONFIG` lines match.
