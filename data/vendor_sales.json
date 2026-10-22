@@ -19,6 +19,26 @@
       "source": "https://www.americanpeptides.us/spooky",
       "start": "2026-10-21T17:00:00Z",
       "verified": "2026-10-21"
+    },
+    {
+      "code": null,
+      "combines_with_our_code": null,
+      "end": "2026-10-26T04:59:00Z",
+      "exclusions": null,
+      "gives": "BOO-GO Weekend: buy one, get one free on select peptides (same strength; automatic at checkout, no code)",
+      "source": "https://www.americanpeptides.us/spooky",
+      "start": "2026-10-23T21:00:00Z",
+      "verified": "2026-10-21"
+    },
+    {
+      "code": null,
+      "combines_with_our_code": null,
+      "end": "2026-10-29T04:59:00Z",
+      "exclusions": "One-time items only",
+      "gives": "Stock Up: buy 3 → 20% · buy 5 → 25% · buy 8+ → 30% off (3–4 one-time units 20%, 5–7 25%, 8+ 30%; any mix, automatic at checkout, no code)",
+      "source": "https://www.americanpeptides.us/spooky",
+      "start": "2026-10-26T05:00:00Z",
+      "verified": "2026-10-21"
     }
   ],
   "Peptide Titans": [
