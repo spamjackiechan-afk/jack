@@ -492,7 +492,6 @@
         "Midwest Peptide": 39.99,
         "American Peptides": 80,
         "Offline Peptides": 42.0,
-        "Orbitrex Peptide": 39.99,
         "AFA Biosciences": 31.99,
         "Synthrolab": 53.88,
         "Lumera Labs": 39.99,
@@ -525,7 +524,6 @@
         "Midwest Peptide": "https://midwestpeptide.com/products/bpc-157-10mg",
         "American Peptides": "https://www.americanpeptides.us/products/bpc-157?variant=48140415762587",
         "Offline Peptides": "https://offlinepeptides.com/product/bpc-157/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/bpc-15710mg/",
         "AFA Biosciences": "https://afabiosciences.com/products/bpc-157",
         "Synthrolab": "https://synthrolab.com/product/bpc-157-10mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/bpc-157",
@@ -1463,7 +1461,6 @@
         "Purity Peptides": 89.99,
         "Alpha Peptides": 44.53,
         "Midwest Peptide": 59.99,
-        "Orbitrex Peptide": 49.99,
         "AFA Biosciences": 48.99,
         "Aero Peptides": 64.99,
         "Peptide Express": 70.0,
@@ -1480,7 +1477,6 @@
         "UltraLife": "https://ultralifepeptides.com/shop/vial-sermorelin-10mg/",
         "Alpha Peptides": "https://alpha-peptides.com/product/sermorelin/",
         "Midwest Peptide": "https://midwestpeptide.com/products/sermorelin",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/sermorelin-10mg/",
         "AFA Biosciences": "https://afabiosciences.com/products/sermorelin",
         "Aero Peptides": "https://aeropeptides.com/product/sermorelin-5-10mg",
         "Peptide Express": "https://peptide.express/catalog/sermorelin",
@@ -1836,7 +1832,6 @@
         "Alpha Peptides": 35.57,
         "Midwest Peptide": 69.99,
         "American Peptides": 90,
-        "Orbitrex Peptide": 59.99,
         "AFA Biosciences": 48.99,
         "Synthrolab": 78.88,
         "Lumera Labs": 69.99,
@@ -1861,7 +1856,6 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/cjc-1295-ipamorelin-blend/",
         "Midwest Peptide": "https://midwestpeptide.com/products/cjc-ipa-blend-10mg",
         "American Peptides": "https://www.americanpeptides.us/products/cjc-1295-no-dac-ipamorelin",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/cjc-1295-no-dac-5mg-ipa-5mg/",
         "AFA Biosciences": "https://afabiosciences.com/products/cjc-1295-ipamorelin-blend",
         "Synthrolab": "https://synthrolab.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/cjc-1295-no-dac-ipamorelin",
@@ -2117,7 +2111,6 @@
         "Alpha Peptides": 42.99,
         "American Peptides": 60,
         "Offline Peptides": 45.0,
-        "Orbitrex Peptide": 49.99,
         "AFA Biosciences": 40.99,
         "Synthrolab": 35.88,
         "Research Peptides Lab": 80.0,
@@ -2142,7 +2135,6 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/ipamorelin/",
         "American Peptides": "https://www.americanpeptides.us/products/ipamorelin?variant=49007439806619",
         "Offline Peptides": "https://offlinepeptides.com/product/ipamorelin/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/ipa-10mg/",
         "AFA Biosciences": "https://afabiosciences.com/products/ipamorelin",
         "Synthrolab": "https://synthrolab.com/product/ipamorelin-10mg/",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/ipamorelin-research-peptide",
@@ -2879,14 +2871,12 @@
       "size": "5mg",
       "prices": {
         "Alpha Peptides": 84.21,
-        "Orbitrex Peptide": 49.99,
         "Vector E Lab": 45.0,
         "Peptide Titans": 84.99,
         "Aura Research": 69
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/slu-pp-332/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/slu-pp-332/",
         "Vector E Lab": "https://app.vectorelab.com/product/slu-pp-332/?attribute_mg=5",
         "Peptide Titans": "https://peptidetitans.com/product/slu-pp-332/?attribute_mg=5+mg",
         "Aura Research": "https://tryauraresearch.com/product/slu-pp-332/"
@@ -3335,7 +3325,6 @@
         "Purity Peptides": 199.99,
         "American Peptides": 200,
         "Offline Peptides": 109.0,
-        "Orbitrex Peptide": 109.99,
         "AFA Biosciences": 80.99,
         "Lumera Labs": 119.99,
         "Research Peptides Lab": 165.0,
@@ -3361,7 +3350,6 @@
         "Purity Peptides": "https://puritypeptides.is/product/klow-blend",
         "American Peptides": "https://www.americanpeptides.us/products/klow-blend",
         "Offline Peptides": "https://offlinepeptides.com/product/klow-bpc-157-tb-500-ghk-cu-kpv/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/klow-80-blend/",
         "AFA Biosciences": "https://afabiosciences.com/products/klow-blend",
         "Lumera Labs": "https://mylumeralabs.com/product/klow",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/klow-research-peptide",
@@ -3393,7 +3381,6 @@
         "Midwest Peptide": 49.99,
         "American Peptides": 100,
         "Offline Peptides": 56.0,
-        "Orbitrex Peptide": 49.99,
         "AFA Biosciences": 31.99,
         "Synthrolab": 53.88,
         "Research Peptides Lab": 65.0,
@@ -3422,7 +3409,6 @@
         "American Peptides": "https://www.americanpeptides.us/products/tb-500",
         "Offline Peptides": "https://offlinepeptides.com/product/tb-500/",
         "Royal Peptides": "https://royal-peptides.com/shop/tb-500-10mg-kit/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/tb-500-10mg/",
         "AFA Biosciences": "https://afabiosciences.com/products/tb-500",
         "Synthrolab": "https://synthrolab.com/product/tb-500-10mg/",
         "Research Peptides Lab": "https://researchpeptideslab.com/shop/tb-500-research-peptide",
@@ -3728,7 +3714,6 @@
         "Purity Peptides": 139.99,
         "Midwest Peptide": 69.99,
         "American Peptides": 120,
-        "Orbitrex Peptide": 79.99,
         "AFA Biosciences": 56.99,
         "Synthrolab": 107.88,
         "Lumera Labs": 68.99,
@@ -3757,7 +3742,6 @@
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/tesamorelin-10mg",
         "American Peptides": "https://www.americanpeptides.us/products/tesamorelin",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/tesa-10mg-2/",
         "AFA Biosciences": "https://afabiosciences.com/products/tesamorelin",
         "Synthrolab": "https://synthrolab.com/product/tesamorelin-10mg/",
         "Lumera Labs": "https://mylumeralabs.com/product/tesamorlin",
@@ -4231,16 +4215,14 @@
       "amount_mg": null,
       "prices": {
         "Royal Peptides": 90,
-        "Midwest Peptide": 79.99,
-        "Orbitrex Peptide": 99.99
+        "Midwest Peptide": 79.99
       },
       "lowest": 79.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/tesa-ipa-10mg-blend",
-        "Royal Peptides": "https://royal-peptides.com/shop/tesamorelin-ipamorelin-blend/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/somatopulse/"
+        "Royal Peptides": "https://royal-peptides.com/shop/tesamorelin-ipamorelin-blend/"
       }
     },
     {
@@ -4502,13 +4484,11 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Orbitrex Peptide": 99.99,
         "Quality Peptide USA": 119
       },
-      "lowest": 99.99,
+      "lowest": 119,
       "notes": null,
       "vendor_product_urls": {
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/survodutide-10mg/",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/survodutide"
       },
       "category": "Metabolic & Weight"
@@ -4534,7 +4514,6 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Orbitrex Peptide": 79.99,
         "Aero Peptides": 59.99,
         "Crownwell Research": 99.0,
         "Olympus Peptide Labs": 156.56
@@ -4542,7 +4521,6 @@
       "lowest": 59.99,
       "notes": null,
       "vendor_product_urls": {
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/adamax-10mg/",
         "Aero Peptides": "https://aeropeptides.com/product/adamax",
         "Crownwell Research": "https://crownwellresearch.com/product/adamax/",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/51071792"
