@@ -931,7 +931,7 @@
     </div>
   </div>
 
-  <!-- Members-only sales: guests get a small join teaser here, members a sales bar (member-sales.js). -->
+  <!-- Public vendor sales bar (member-sales.js). -->
   <div id="memberSalesSlot"></div>
 
   <div class="deals-band" id="dealsBand">
@@ -1759,55 +1759,33 @@ document.getElementById('excludedCategories').innerHTML = categoryOrder
     </div>
   `).join('');
 
-// ---------- Members-only sales ----------
+// ---------- Public sales ----------
 // Sale prices, "% off" badges, the Sales strip and the "% On sale" chip are
-// for members of the email list only (checked server-side by
-// /api/member-sales via member-sales.js). Guests see each vendor's normal list
-// price; our with-code price (code_discount_pct) is then worked out from that
-// list price as usual. The observed sale is parked in item._sale so it can be
-// put back the moment membership is confirmed.
-let SALES_MEMBER = false;
+// shown to every visitor, but only for vendors that confirmed tracking and
+// commission (SALE_VENDORS, mirrored in member-sales.js). Any other vendor's
+// observed sale (incl. Offline, Licensed, Midwest, AFA, RPL, Synthrolab) is
+// dropped: that vendor shows its normal list price instead.
+const SALE_VENDORS = new Set(['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides']);
 function recomputeLowest(item){
   const vals = Object.values(item.prices);
   if (vals.length) item.lowest = Math.min(...vals);
 }
-function hideSalesForGuests(){
-  if (SALES_MEMBER) return;
+function hideUnconfirmedSales(){
   DATA.included.forEach(item => {
     if (!item.onSale) return;
+    let changed = false;
     for (const [vendor, was] of Object.entries(item.onSale)){
+      if (SALE_VENDORS.has(vendor)) continue;
       const now = item.prices[vendor];
-      if (now != null && was > now){
-        item._sale = item._sale || {};
-        item._sale[vendor] = { now, was };
-        item.prices[vendor] = was;
-      }
+      if (now != null && was > now) item.prices[vendor] = was;
+      delete item.onSale[vendor];
+      changed = true;
     }
-    delete item.onSale;
-    recomputeLowest(item);
+    if (!Object.keys(item.onSale).length) delete item.onSale;
+    if (changed) recomputeLowest(item);
   });
 }
-function revealSalesForMembers(){
-  SALES_MEMBER = true;
-  DATA.included.forEach(item => {
-    if (!item._sale) return;
-    for (const [vendor, s] of Object.entries(item._sale)){
-      if (item.prices[vendor] !== s.was) continue; // live check has replaced it since
-      item.prices[vendor] = s.now;
-      item.onSale = item.onSale || {};
-      item.onSale[vendor] = s.was;
-    }
-    delete item._sale;
-    recomputeLowest(item);
-  });
-}
-hideSalesForGuests();
-window.addEventListener('dp-members', e => {
-  if (!e.detail || !e.detail.member || SALES_MEMBER) return;
-  revealSalesForMembers();
-  render();
-  renderDeals();
-});
+hideUnconfirmedSales();
 
 render();
 
@@ -1860,7 +1838,6 @@ function applyLiveOverlay(results){
       const match = DATA.included.find(i => i.peptide === peptide && i.format === format && i.size === size);
       if (!match || !(vendor in match.prices)) continue;
 
-      if (match._sale) delete match._sale[vendor];
       if (result.price == null){
         delete match.prices[vendor];
         if (match.vendor_product_urls) delete match.vendor_product_urls[vendor];
@@ -1897,7 +1874,7 @@ async function loadLivePrices(){
     if (!resp.ok) return;
     const live = await resp.json();
     const updatedCount = applyLiveOverlay(live.results || {});
-    hideSalesForGuests(); // no-op for members
+    hideUnconfirmedSales();
 
     if (updatedCount > 0){
       render();

@@ -28,9 +28,9 @@ const req = (path, { method = "GET", body, cookie } = {}) => new Request(BASE + 
 const cookieOf = res => (res.headers.get("Set-Cookie") || "").split(";")[0];
 const ctx = (request, extra = {}) => ({ request, env, ...extra });
 
-// 1. Guest: no sales.
+// 1. Guest: sales are public, member flag is false.
 let r = await memberSales.onRequestGet(ctx(req("/api/member-sales")));
-assert.deepEqual(await r.json(), { member: false });
+{ const g = await r.json(); assert.equal(g.member, false); assert.ok(Object.keys(g.vendor_sales).length > 0, "guests get vendor_sales"); }
 
 // 2. Signup sets a signed HttpOnly cookie that unlocks sales.
 r = await subscribe.onRequestPost(ctx(req("/api/subscribe", { method: "POST", body: { email: "A@Example.com", form_ms: 5000 } })));
@@ -52,10 +52,10 @@ assert.equal(j.member, false);
 j = await (await memberSales.onRequestGet(ctx(req("/api/member-sales", { cookie: "dp_member_sales=" + Buffer.from("x@y.co").toString("base64url") + ".9999999999.sig" })))).json();
 assert.equal(j.member, false);
 
-// 4. Static data/vendor_sales.json: 404 for guests, passes through for members.
+// 4. Static data/vendor_sales.json: public, passes through for everyone.
 const next = async () => new Response(SALES);
 r = await dataMw.onRequest(ctx(req("/data/vendor_sales.json"), { next }));
-assert.equal(r.status, 404);
+assert.equal(r.status, 200);
 r = await dataMw.onRequest(ctx(req("/data/vendor_sales.json", { cookie }), { next }));
 assert.equal(r.status, 200);
 r = await dataMw.onRequest(ctx(req("/data/live_prices.json"), { next }));

@@ -1,6 +1,6 @@
-// GET /api/member-sales — the only place vendor sale promos (data/vendor_sales.json)
-// are served. Non-members get { member: false } and no sale data. Members (signed
-// cookie + active subscriber, see _lib/membership.js) get the sales list.
+// GET /api/member-sales — vendor sale promos (data/vendor_sales.json) for EVERY
+// visitor (sales are public). `member` still reports whether this browser has a
+// signed member cookie (see _lib/membership.js), but it no longer gates the data.
 // DELETE signs this browser out of member view.
 
 import { currentMember, CLEAR_COOKIE } from "../_lib/membership.js";
@@ -8,7 +8,6 @@ import { currentMember, CLEAR_COOKIE } from "../_lib/membership.js";
 export async function onRequestGet(context) {
   let email = null;
   try { email = await currentMember(context); } catch { email = null; }
-  if (!email) return json({ member: false });
   let sales = {};
   try {
     const res = await context.env.ASSETS.fetch(new URL("/data/vendor_sales.json", context.request.url));
@@ -17,7 +16,7 @@ export async function onRequestGet(context) {
       for (const [k, v] of Object.entries(all || {})) if (!k.startsWith("_")) sales[k] = v;
     }
   } catch { sales = {}; }
-  return json({ member: true, vendor_sales: sales });
+  return json({ member: Boolean(email), public: true, vendor_sales: sales });
 }
 
 export async function onRequestDelete() {
