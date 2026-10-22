@@ -263,6 +263,12 @@ VENDORS = {
                                   # woocommerce_uploads/, ?add-to-cart= params and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
                                   # Variable pages are pinned with ?attribute_pa_amount=<size> (e.g. "10mg").
     },
+    "Helion Research": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-21",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /", disallowing only /wp-admin/,
+                                  # /cart/, /checkout/, /my-account/, ?add-to-cart= and WooCommerce uploads.
+                                  # Product pages are /product.html?sku=<sku> (/product/<slug>/ 301s there).
+    },
 }
 
 HEADERS = {

@@ -586,5 +586,27 @@
     "payment_note": "Prices in USD.",
     "shipping_info": "US shipping $9.99; free on orders over $200. Orders before 2 PM PT ship the same day. USPS (2-5 business days), UPS/FedEx expedited (2-3 business days) and overnight where available; P.O. Box and APO/FPO via USPS only. Optional paid shipping protection.",
     "shipping_payment_researched": "2026-10-20"
+  },
+  "Helion Research": {
+    "status": "approved",
+    "site_url": "https://helionresearchusa.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://helionresearchusa.com/?ref=discountpeptides",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTPEPTIDES",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "Zelle",
+      "Venmo",
+      "Bitcoin",
+      "Ethereum",
+      "USDC"
+    ],
+    "payment_note": "Prices in USD. Zelle and crypto take 5% off the order total; cards are charged at the standard price.",
+    "shipping_info": "U.S. domestic shipping only. USPS Priority $9.99, free on orders of $250 or more. Orders by 2 PM PT on business days ship the same day once payment clears, with tracking.",
+    "shipping_payment_researched": "2026-10-21",
+    "code_discount_pct": 20
   }
 }
