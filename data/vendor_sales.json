@@ -3,12 +3,12 @@
     {
       "code": null,
       "combines_with_our_code": null,
-      "end": "2026-10-21T17:00:00Z",
-      "exclusions": "One-time items only",
-      "gives": "40% OFF THE VAULT: 40% off NAD+, Glow Mix, GHK-Cu, Wolverine Blend, CJC-1295 (No DAC) + Ipamorelin, SS-31, Tesamorelin, MOTS-C, Thymosin Alpha-1 and Humanin (automatic at checkout, no code)",
-      "source": "https://americanpeptides.us/spooky",
-      "start": "2026-10-20T17:00:00Z",
-      "verified": "2026-10-20"
+      "end": "2026-11-01T04:59:00Z",
+      "exclusions": "One per email and once per customer; can't combine with other discount codes or automatic deals",
+      "gives": "Trick-or-Treat: pick a pumpkin for 15%, 20%, 25% or 30% off (code revealed in the game, not listed)",
+      "source": "https://www.americanpeptides.us/spooky",
+      "start": null,
+      "verified": "2026-10-22"
     },
     {
       "code": null,
@@ -59,6 +59,28 @@
       "source": "https://www.americanpeptides.us/spooky",
       "start": "2026-10-30T23:00:00Z",
       "verified": "2026-10-21"
+    },
+    {
+      "code": "HALLOWEEN31",
+      "combines_with_our_code": true,
+      "end": "2026-11-01T04:59:00Z",
+      "exclusions": null,
+      "gives": "31% Off for the 31st (Oct 31): 31% off sitewide, all day",
+      "source": "https://www.americanpeptides.us/spooky",
+      "start": "2026-10-31T05:00:00Z",
+      "verified": "2026-10-22"
+    }
+  ],
+  "Midwest Peptide": [
+    {
+      "code": "HARVEST40",
+      "combines_with_our_code": null,
+      "end": null,
+      "exclusions": null,
+      "gives": "Sitewide Sale: 40% off everything with code HARVEST40; 50% off the Box Builder",
+      "source": "https://midwestpeptide.com",
+      "start": null,
+      "verified": "2026-10-22"
     }
   ],
   "Peptide Titans": [
@@ -70,7 +92,7 @@
       "gives": "Mix & Match (automatic, no code): 3–5 items save 8% · 6–9 items save 12% · 10+ items save 15%",
       "source": "https://peptidetitans.com",
       "start": null,
-      "verified": "2026-10-21"
+      "verified": "2026-10-22"
     }
   ],
   "True Peptides": [
@@ -94,7 +116,7 @@
       "gives": "Build your order: any 3 bottles, 5% off each (automatic, no code)",
       "source": "https://veratisbio.com/shop",
       "start": null,
-      "verified": "2026-10-21"
+      "verified": "2026-10-22"
     }
   ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
