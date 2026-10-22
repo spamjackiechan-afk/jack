@@ -36,15 +36,13 @@ Fails on:
     privacy.html missing or not in sitemap.xml; on a first visit, the cookie
     banner not showing or any request going to Google's analytics hosts
     before Accept (also checked after Decline)
-  * members-only sales (guest view, /api/member-sales not reachable on a static
-    server): any "% off" badge, the Sales strip, the "% On sale" chip or a
-    "Vendor sale" row showing; the join teaser missing or carrying a number;
-    a vendor sale code from data/vendor_sales.json in the raw index.html or
+  * public sales (guest view; /api/member-sales is not reachable on a static
+    server, so member-sales.js falls back to data/vendor_sales.json): the sales
+    bar missing, the old "join free" teaser showing, an excluded vendor
+    (Offline, Licensed, Midwest, AFA, RPL, Synthrolab) in the sales, observed
+    sales without badges/Sales strip, or the suppliers page not showing every
+    currently-live vendor sale; a vendor sale code in the raw index.html or
     suppliers.html
-  * members-only sales (member view, /api/member-sales mocked as a member):
-    the member sales bar missing, the teaser still showing, "% off" badges
-    missing when the data has observed sales, or the suppliers page not
-    showing every currently-live vendor sale
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
@@ -179,6 +177,9 @@ def check_vendor_count_raw(root, filename, expected, problems):
     check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
+SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides"}
+
+
 def live_vendor_sales(root):
     """Vendor sales that should be visible right now (same rules as the pages)."""
     import datetime as dt
@@ -187,9 +188,11 @@ def live_vendor_sales(root):
     parse = lambda s: dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
     out = []
     for vendor, items in sales.items():
-        if vendor.startswith("_"):
+        if vendor.startswith("_") or vendor not in SALE_VENDORS:
             continue
         for s_ in items or []:
+            if vendor == "Ride the Tide Peptides" and re.search(r"bogo|buy\s*one,?\s*get\s*one", f"{s_.get('code') or ''} {s_.get('gives') or ''}", re.I):
+                continue
             if s_.get("end") and parse(s_["end"]) < now: continue
             if s_.get("start") and parse(s_["start"]) > now: continue
             if not s_.get("verified"): continue
@@ -211,72 +214,49 @@ def check_members_only(browser, base, root, problems, notes):
         if leaked:
             problems.append(f"{f}: vendor sale code(s) in the page source (members-only): {leaked}")
 
-    # Guest (no Functions on this static server -> /api/member-sales 404 -> guest)
+    # Guest (no Functions on this static server -> /api/member-sales 404 ->
+    # member-sales.js falls back to /data/vendor_sales.json). Sales are PUBLIC.
+    excluded = ["Offline Peptides", "Licensed Peptides", "Midwest Peptide", "AFA Biosciences",
+                "Research Peptides Lab", "Synthrolab"]
     page = open_page(browser, base + "/index.html", problems, "index.html (guest)")
     page.wait_for_timeout(800)
     g = page.evaluate("""() => ({
       badges: document.querySelectorAll('#index .sale-badge').length,
       deals: document.getElementById('dealsBand').classList.contains('show'),
-      chip: getComputedStyle(document.getElementById('saleChip')).display !== 'none',
       teaser: Boolean(document.getElementById('memberTeaser')),
-      teaserText: (document.getElementById('memberTeaser') || {}).innerText || '',
+      slotText: (document.getElementById('memberSalesSlot') || {}).innerText || '',
       bar: Boolean(document.getElementById('memberSalesBar')),
-      onSale: DATA.included.filter(i => i.onSale && Object.keys(i.onSale).length).length,
+      dealVendors: [...document.querySelectorAll('#dealsScroll .deal-vendor')].map(e => e.textContent),
+      onSaleVendors: [...new Set(DATA.included.flatMap(i => Object.keys(i.onSale || {})))],
       withCode: document.querySelectorAll('#index .price-amount.with-code').length,
     })""")
-    notes.append(f"members-only (guest, homepage): badges={g['badges']} salesStrip={g['deals']} saleChip={g['chip']} "
-                 f"teaser={g['teaser']} withCodePrices={g['withCode']}")
-    if g["badges"] or g["deals"] or g["chip"] or g["onSale"] or g["bar"]:
-        problems.append(f"index.html (guest): sale content visible to a non-member: {g}")
-    if not g["teaser"] or "Members see current vendor sales" not in g["teaserText"]:
-        problems.append("index.html (guest): members-only sales teaser missing")
-    if re.search(r"\d", g["teaserText"]):
-        problems.append(f"index.html (guest): teaser must not carry sale amounts: {g['teaserText']!r}")
+    notes.append(f"public sales (guest, homepage): bar={g['bar']} badges={g['badges']} salesStrip={g['deals']} "
+                 f"onSaleVendors={g['onSaleVendors']} withCodePrices={g['withCode']}")
+    if not g["bar"]:
+        problems.append("index.html (guest): public vendor sales bar missing")
+    if g["teaser"] or "join free" in g["slotText"].lower() or "Members see" in g["slotText"]:
+        problems.append("index.html (guest): members-only teaser still shown")
+    bad = [v for v in excluded if v in g["slotText"] or v in g["onSaleVendors"] or any(v in d for d in g["dealVendors"])]
+    if bad:
+        problems.append(f"index.html (guest): excluded vendor(s) in sales: {bad}")
+    if g["onSaleVendors"] and not (g["badges"] and g["deals"]):
+        problems.append(f"index.html (guest): observed sales not shown: {g}")
+    if "applied automatically" in g["slotText"] and "automatic at checkout" in g["slotText"].split("applied automatically")[0].splitlines()[-1]:
+        problems.append("index.html (guest): duplicated 'applied automatically' wording")
     if not g["withCode"]:
         problems.append("index.html (guest): no with-code prices rendered (code_discount_pct must still apply)")
     page.close()
     page = open_page(browser, base + "/suppliers.html", problems, "suppliers.html (guest)")
-    page.wait_for_timeout(500)
-    rows = page.locator("text=Vendor sale:").count()
-    teaser = page.locator("#memberTeaser").count()
-    notes.append(f"members-only (guest, suppliers): vendor-sale rows={rows} teaser={teaser}")
-    if rows:
-        problems.append(f"suppliers.html (guest): {rows} vendor sale rows visible to a non-member")
-    if not teaser:
-        problems.append("suppliers.html (guest): members-only sales teaser missing")
-    page.close()
-
-    # Member (mocked API answer)
-    ctx = browser.new_context()
-    body = json.dumps({"member": True, "vendor_sales": {k: v for k, v in sales.items() if not k.startswith("_")}})
-    ctx.route("**/api/member-sales", lambda route: route.fulfill(status=200, content_type="application/json", body=body))
-    page = ctx.new_page()
-    errs = []
-    page.on("pageerror", lambda e: errs.append(str(e)))
-    page.goto(base + "/index.html", wait_until="load")
-    page.wait_for_timeout(1500)
-    m = page.evaluate("""() => ({
-      badges: document.querySelectorAll('#index .sale-badge').length,
-      deals: document.getElementById('dealsBand').classList.contains('show'),
-      teaser: Boolean(document.getElementById('memberTeaser')),
-      bar: Boolean(document.getElementById('memberSalesBar')),
-      onSale: DATA.included.filter(i => i.onSale && Object.keys(i.onSale).length).length,
-    })""")
-    notes.append(f"members-only (member, homepage): bar={m['bar']} badges={m['badges']} salesStrip={m['deals']} observedSales={m['onSale']}")
-    if not m["bar"] or m["teaser"]:
-        problems.append(f"index.html (member): member sales bar missing or teaser still shown: {m}")
-    if m["onSale"] and not (m["badges"] and m["deals"]):
-        problems.append(f"index.html (member): observed sales not shown to a member: {m}")
-    page.goto(base + "/suppliers.html", wait_until="load")
     page.wait_for_timeout(1000)
     rows = page.locator("text=Vendor sale:").count()
+    teaser = page.locator("#memberTeaser").count()
     expected = len(live_vendor_sales(root))
-    notes.append(f"members-only (member, suppliers): vendor-sale rows={rows} (live in data: {expected})")
+    notes.append(f"public sales (guest, suppliers): vendor-sale rows={rows} (live in data: {expected}) teaser={teaser}")
     if rows != expected:
-        problems.append(f"suppliers.html (member): {rows} vendor sale rows, expected {expected}")
-    for e in errs:
-        problems.append(f"members-only (member view): JS error: {e}")
-    ctx.close()
+        problems.append(f"suppliers.html (guest): {rows} vendor sale rows, expected {expected}")
+    if teaser:
+        problems.append("suppliers.html (guest): members-only teaser still shown")
+    page.close()
 
 
 def serve(root):

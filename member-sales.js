@@ -1,19 +1,24 @@
-/* Members-only sales (shared by index.html and suppliers.html).
+/* Public vendor sales (shared by index.html and suppliers.html).
  *
- * Vendor sales are shown only to members of the email list. Membership is
- * checked server-side by /api/member-sales (signed HttpOnly cookie + an active
- * record in the subscriber store); this script never decides it on its own.
- *   - Guests: a small "Members see current vendor sales — join free" teaser in
- *     #memberSalesSlot, with a "Members: see sales" form that emails a
- *     one-time sign-in link (/api/member-link).
- *   - Members: a bar listing the vendor-run sales currently live.
- * Pages listen for the "dp-members" event (detail = { member, vendor_sales })
- * and read window.DPMembers.state. No sale amounts appear in guest markup.
+ * Vendor sales are shown to EVERY visitor (no membership needed). Sale data
+ * comes from /api/member-sales (which now answers for everyone), falling back
+ * to the static /data/vendor_sales.json. Only vendors that confirmed tracking
+ * and commission are surfaced (SALE_VENDORS); Ride the Tide is allowed except
+ * its BOGO code. A sale hides itself once its UTC `end` passes.
+ * Pages listen for the "dp-members" event (detail = { member, sales, vendor_sales })
+ * and read window.DPMembers.state. (The member cookie code is unused for gating.)
  */
 (function(){
   'use strict';
-  var OFFLINE = 'Offline Peptides'; // standing rule: never surface Offline deals/sales
-  var state = { member: false, vendor_sales: {} };
+  // Only vendors that confirmed tracking + commission. Never Offline, Licensed,
+  // Midwest, AFA, RPL or Synthrolab.
+  var SALE_VENDORS = ['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides'];
+  function saleAllowed(vendor, s){
+    if (SALE_VENDORS.indexOf(vendor) === -1) return false;
+    if (vendor === 'Ride the Tide Peptides' && /bogo|buy\s*one,?\s*get\s*one/i.test((s.code || '') + ' ' + (s.gives || ''))) return false;
+    return true;
+  }
+  var state = { member: false, sales: false, vendor_sales: {} };
   var RENDERED_AT = Date.now();
 
   function esc(s){ var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
@@ -22,9 +27,9 @@
   function activeSales(all){
     var now = Date.now(), out = [];
     Object.keys(all || {}).forEach(function(vendor){
-      if (vendor === OFFLINE || vendor.charAt(0) === '_') return;
+      if (vendor.charAt(0) === '_') return;
       (all[vendor] || []).forEach(function(s){
-        if (!s) return;
+        if (!s || !saleAllowed(vendor, s)) return;
         if (s.end && Date.parse(s.end) < now) return;
         if (s.start && Date.parse(s.start) > now) return;
         var v = s.verified ? Date.parse(s.verified + 'T00:00:00Z') : NaN;
@@ -34,6 +39,14 @@
     });
     return out;
   }
+
+  // "Oct 22, 9:59 PM PT"
+  function fmtEnd(iso){
+    var d = new Date(iso);
+    if (isNaN(d)) return '';
+    return d.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).replace(/\s+/g, ' ') + ' PT';
+  }
+  function saysAutomatic(s){ return /automatic|applied at checkout/i.test(s.gives || ''); }
 
   function injectStyle(){
     if (document.getElementById('dpMembersStyle')) return;
@@ -67,43 +80,20 @@
     var slot = document.getElementById('memberSalesSlot');
     if (!slot) return;
     injectStyle();
-    if (!state.member){
-      slot.innerHTML =
-        '<div class="dpm-teaser" id="memberTeaser">' +
-          
-          '<span><strong>Members see current vendor sales</strong> \u2014 join free with your email.</span>' +
-          '<button type="button" class="dpm-btn solid" id="dpmJoin">Join free</button>' +
-          '<button type="button" class="dpm-link" id="dpmToggle" aria-expanded="false" aria-controls="dpmForm">Members: see sales</button>' +
-          '<div class="dpm-form" id="dpmForm">' +
-            '<input type="email" id="dpmEmail" placeholder="Your member email" autocomplete="email" aria-label="Member email">' +
-            '<div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;"><input type="text" id="dpmWebsite" tabindex="-1" autocomplete="off"></div>' +
-            '<button type="button" class="dpm-btn" id="dpmSend">Email me a link</button>' +
-            '<div class="dpm-msg" id="dpmMsg"></div>' +
-          '</div>' +
-        '</div>';
-      document.getElementById('dpmJoin').onclick = joinAction;
-      document.getElementById('dpmToggle').onclick = function(){
-        var f = document.getElementById('dpmForm');
-        var open = f.classList.toggle('open');
-        this.setAttribute('aria-expanded', open);
-        if (open) document.getElementById('dpmEmail').focus();
-      };
-      document.getElementById('dpmSend').onclick = sendLink;
-      document.getElementById('dpmEmail').addEventListener('keydown', function(e){ if (e.key === 'Enter') sendLink(); });
-      return;
-    }
+    if (!state.sales){ slot.innerHTML = ''; return; }
     var live = activeSales(state.vendor_sales);
     var items = live.map(function(x){
       var s = x.sale;
       var t = '<strong>' + esc(x.vendor) + '</strong> \u2014 ' + esc(s.gives || 'Sale');
-      t += s.code ? ' \u00b7 code <span class="dpm-code">' + esc(s.code) + '</span>' : ' \u00b7 applied automatically';
-      if (s.end) t += ' \u00b7 ends ' + esc(new Date(s.end).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+      if (s.code) t += ' \u00b7 code <span class="dpm-code">' + esc(s.code) + '</span>';
+      else if (!saysAutomatic(s)) t += ' \u00b7 applied automatically';
+      if (s.end) t += ' \u00b7 ends ' + esc(fmtEnd(s.end));
       return '<li>' + t + '</li>';
     }).join('');
     slot.innerHTML =
       '<div class="dpm-bar" id="memberSalesBar">' +
-        '<h3>Member sales</h3>' +
-        '<div>Thanks for being a member. ' + (live.length
+        '<h3>Current vendor sales</h3>' +
+        '<div>' + (live.length
           ? 'These are the vendors\u2019 own promos running now, plus any sale prices our daily check saw (marked \u201c% off\u201d on listings).'
           : 'No vendor-run promos are live right now. Sale prices our daily check sees are marked \u201c% off\u201d on listings.') + '</div>' +
         (items ? '<ul>' + items + '</ul>' : '') +
@@ -130,23 +120,33 @@
   }
 
   function apply(next){
-    state = { member: Boolean(next && next.member), vendor_sales: (next && next.vendor_sales) || {} };
+    state = { member: Boolean(next && next.member), sales: true, vendor_sales: (next && next.vendor_sales) || {} };
     window.DPMembers.state = state;
-    document.documentElement.classList.toggle('dp-sales-member', state.member);
     renderSlot();
     try { window.dispatchEvent(new CustomEvent('dp-members', { detail: state })); } catch (e) {}
   }
 
   function check(){
+    function staticSales(member){
+      return fetch('/data/vendor_sales.json', { cache: 'no-store' })
+        .then(function(r){ return r.ok ? r.json() : {}; })
+        .catch(function(){ return {}; })
+        .then(function(all){ return { member: member, vendor_sales: all || {} }; });
+    }
     return fetch('/api/member-sales', { credentials: 'same-origin', cache: 'no-store' })
-      .then(function(r){ return r.ok ? r.json() : { member: false }; })
-      .catch(function(){ return { member: false }; })
-      .then(function(j){ apply(j && j.member ? j : { member: false }); return state; });
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .catch(function(){ return null; })
+      .then(function(j){ return (j && j.vendor_sales) ? j : staticSales(Boolean(j && j.member)); })
+      .then(function(j){ apply(j); return state; });
   }
 
   window.DPMembers = {
     state: state,
     activeSales: activeSales,
+    saleAllowed: saleAllowed,
+    SALE_VENDORS: SALE_VENDORS,
+    fmtEnd: fmtEnd,
+    saysAutomatic: saysAutomatic,
     refresh: check,            // call after a successful signup: the cookie is set by /api/subscribe
     ready: null,
   };
