@@ -141,13 +141,6 @@
     "affiliate_path_suffix": null,
     "code_discount_pct": 10
   },
-  "Orbitrex Peptide": {
-    "status": "approved",
-    "site_url": "https://orbitrexpeptide.is",
-    "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://orbitrexpeptide.is/?ref=Discount&utm_campaign=Discount&utm_medium=referral&utm_source=affiliate",
-    "promo_code": "discount"
-  },
   "AFA Biosciences": {
     "status": "approved",
     "site_url": "https://afabiosciences.com",
