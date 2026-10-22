@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-21T15:14:42Z",
+  "checked_at": "2026-10-22T15:18:40Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -646,7 +646,7 @@
       },
       "DSIP | Vial | 5mg": {
         "url": "https://alpha-peptides.com/product/dsip/",
-        "price": 15.62,
+        "price": 21.45,
         "regular_price": null,
         "error": null
       },
@@ -3329,9 +3329,8 @@
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/epitalon/?attribute_mg=10+mg",
-        "price": 29.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/epitalon/?attribute_mg=10+mg"
       },
       "Epitalon | Vial | 50mg": {
         "url": "https://peptidetitans.com/product/epitalon/?attribute_mg=50+mg",
@@ -3340,9 +3339,8 @@
       },
       "FOXO4-DRI | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/foxo4-dri/?attribute_mg=10+mg",
-        "price": 94.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/foxo4-dri/?attribute_mg=10+mg"
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://peptidetitans.com/product/ghk-cu/?attribute_mg=50+mg",
@@ -3351,14 +3349,14 @@
       },
       "GHK-Cu (Copper Peptide) | Vial | 100mg": {
         "url": "https://peptidetitans.com/product/ghk-cu/?attribute_mg=100+mg",
-        "price": 39.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/ghk-cu/?attribute_mg=100+mg"
       },
       "GHRP-2 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/ghrp-2/?attribute_mg=5+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/ghrp-2/?attribute_mg=5+mg"
+        "price": 19.99,
+        "regular_price": null,
+        "error": null
       },
       "GHRP-6 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/ghrp-6/?attribute_mg=5+mg",
@@ -3389,42 +3387,41 @@
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/ipamorelin/?attribute_mg=10+mg",
-        "price": 49.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/ipamorelin/?attribute_mg=10+mg"
       },
       "Kisspeptin | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=5+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=5+mg"
+        "price": 29.99,
+        "regular_price": null,
+        "error": null
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=10+mg",
-        "price": 39.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=10+mg"
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg)": {
         "url": "https://peptidetitans.com/product/klow/?attribute_mg=80+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/klow/?attribute_mg=80+mg"
+        "price": 74.99,
+        "regular_price": null,
+        "error": null
       },
       "KPV | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/kpv/?attribute_mg=5+mg",
-        "price": 24.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/kpv/?attribute_mg=5+mg"
       },
       "KPV | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/kpv/?attribute_mg=10+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/kpv/?attribute_mg=10+mg"
-      },
-      "LL-37 | Vial | 5mg": {
-        "url": "https://peptidetitans.com/product/ll-37/?attribute_mg=5+mg",
         "price": 39.99,
         "regular_price": null,
         "error": null
+      },
+      "LL-37 | Vial | 5mg": {
+        "url": "https://peptidetitans.com/product/ll-37/?attribute_mg=5+mg",
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/ll-37/?attribute_mg=5+mg"
       },
       "Melanotan I | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/melanotan-1/?attribute_mg=10+mg",
@@ -3433,25 +3430,25 @@
       },
       "Melanotan II | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/melanotan-ii/?attribute_mg=10+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/melanotan-ii/?attribute_mg=10+mg"
+        "price": 29.99,
+        "regular_price": null,
+        "error": null
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/mots-c/?attribute_mg=10+mg",
-        "price": 34.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/mots-c/?attribute_mg=10+mg"
       },
       "MOTS-C | Vial | 20mg": {
         "url": "https://peptidetitans.com/product/mots-c/?attribute_mg=20+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/mots-c/?attribute_mg=20+mg"
+        "price": 59.99,
+        "regular_price": null,
+        "error": null
       },
       "MOTS-C | Vial | 40mg": {
         "url": "https://peptidetitans.com/product/mots-c/?attribute_mg=40+mg",
-        "price": 99.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/mots-c/?attribute_mg=40+mg"
       },
       "Oxytocin | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/oxytocin/?attribute_mg=10+mg",
@@ -3482,14 +3479,14 @@
       },
       "SLU-PP-332 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/slu-pp-332/?attribute_mg=5+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/slu-pp-332/?attribute_mg=5+mg"
+        "price": 84.99,
+        "regular_price": null,
+        "error": null
       },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/snap-8/?attribute_mg=10+mg",
-        "price": 24.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/snap-8/?attribute_mg=10+mg"
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/ss-31/?attribute_mg=10+mg",
@@ -3509,14 +3506,14 @@
       },
       "Thymalin | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/thymalin/?attribute_mg=10+mg",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/thymalin/?attribute_mg=10+mg"
+        "price": 34.99,
+        "regular_price": null,
+        "error": null
       },
       "Thymosin Alpha-1 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=5+mg",
-        "price": 39.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=5+mg"
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=10+mg",
@@ -4165,8 +4162,9 @@
       },
       "NAD+ | Vial | 500mg": {
         "url": "https://veratisbio.com/shop/nad-plus-500mg",
-        "price": null,
-        "error": "HTTPSConnectionPool(host='veratisbio.com', port=443): Max retries exceeded with url: /shop/nad-plus-500mg (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+        "price": 60.0,
+        "regular_price": null,
+        "error": null
       },
       "TB-500 | Vial | 10mg": {
         "url": "https://veratisbio.com/shop/tb-500-fragment-10mg",
@@ -4864,8 +4862,9 @@
       },
       "Ipamorelin | Vial | 5mg": {
         "url": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=5mg",
-        "price": null,
-        "error": "variation {'attribute_pa_amount': '5mg'} price not found (cheapest variation not used)"
+        "price": 49.0,
+        "regular_price": null,
+        "error": null
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=10mg",
