@@ -177,7 +177,7 @@ def check_vendor_count_raw(root, filename, expected, problems):
     check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
-SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide"}
+SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide", "Orbitrex Peptide"}
 
 
 def live_vendor_sales(root):

@@ -12,7 +12,7 @@
   'use strict';
   // Only vendors that confirmed tracking + commission. Never Offline, Licensed,
   // AFA, RPL or Synthrolab.
-  var SALE_VENDORS = ['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide'];
+  var SALE_VENDORS = ['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide', 'Orbitrex Peptide'];
   function saleAllowed(vendor, s){
     if (SALE_VENDORS.indexOf(vendor) === -1) return false;
     if (vendor === 'Ride the Tide Peptides' && /bogo|buy\s*one,?\s*get\s*one/i.test((s.code || '') + ' ' + (s.gives || ''))) return false;

@@ -104,6 +104,13 @@ VENDORS = {
                                   # querystrings, /wp-admin/ (Allow admin-ajax); Yoast empty Disallow.
                                   # /product/, /shop/, /coa/ not disallowed. Affiliate partner.
     },
+    "Orbitrex Peptide": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23 (relist)",
+        "robots_allows": True,   # re-confirmed 2026-10-23: User-agent * Disallow only /api/, account/cart/
+                                  # checkout/track-your-order, portal/affiliate-portal, reset-password/
+                                  # verify-email, wp-admin/login/json/xmlrpc and add-to-cart/orderby/
+                                  # session_id querystrings — /product/ pages are not disallowed.
+    },
     "Synthrolab": {
         "robots_checked_by": "Grok for Jackson, 2026-10-14",
         "robots_allows": True,   # confirmed: standard WooCommerce + Yoast robots.txt — User-agent: *
