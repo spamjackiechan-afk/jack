@@ -11,8 +11,8 @@
 (function(){
   'use strict';
   // Only vendors that confirmed tracking + commission. Never Offline, Licensed,
-  // Midwest, AFA, RPL or Synthrolab.
-  var SALE_VENDORS = ['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides'];
+  // AFA, RPL or Synthrolab.
+  var SALE_VENDORS = ['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide'];
   function saleAllowed(vendor, s){
     if (SALE_VENDORS.indexOf(vendor) === -1) return false;
     if (vendor === 'Ride the Tide Peptides' && /bogo|buy\s*one,?\s*get\s*one/i.test((s.code || '') + ' ' + (s.gives || ''))) return false;
@@ -46,7 +46,9 @@
     if (isNaN(d)) return '';
     return d.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).replace(/\s+/g, ' ') + ' PT';
   }
-  function saysAutomatic(s){ return /automatic|applied at checkout/i.test(s.gives || ''); }
+  // True when the sale text already explains how the discount is applied (automatic,
+  // or a code that is revealed elsewhere / not listed), so we add no extra wording.
+  function saysAutomatic(s){ return /automatic|applied at checkout|reveal|not listed|no code listed/i.test(s.gives || ''); }
 
   function injectStyle(){
     if (document.getElementById('dpMembersStyle')) return;
