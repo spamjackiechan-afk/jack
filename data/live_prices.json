@@ -5339,6 +5339,176 @@
         "regular_price": null,
         "error": null
       }
+    },
+    "Ares Research": {
+      "Cagrilintide | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/cagrilintide",
+        "price": 94.99,
+        "regular_price": null,
+        "error": null
+      },
+      "5-Amino-1MQ | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/5-amino-1mq",
+        "price": 49.99,
+        "regular_price": null,
+        "error": null
+      },
+      "CJC-1295 with DAC | Vial | 2mg": {
+        "url": "https://aresresearchlab.com/catalog/cjc-1295-dac",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Ipamorelin | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/ipamorelin",
+        "price": 34.99,
+        "regular_price": null,
+        "error": null
+      },
+      "GHRP-2 | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/ghrp-2",
+        "price": 29.99,
+        "regular_price": null,
+        "error": null
+      },
+      "GHRP-6 | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/ghrp-6",
+        "price": 29.99,
+        "regular_price": null,
+        "error": null
+      },
+      "BPC-157 | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/bpc-157",
+        "price": 29.99,
+        "regular_price": null,
+        "error": null
+      },
+      "KPV | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/kpv",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "LL-37 | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/ll-37",
+        "price": 74.99,
+        "regular_price": null,
+        "error": null
+      },
+      "ARA-290 (Cibinetide) | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/ara-290",
+        "price": 84.99,
+        "regular_price": null,
+        "error": null
+      },
+      "NAD+ | Vial | 100mg": {
+        "url": "https://aresresearchlab.com/catalog/nad-plus",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Epitalon | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/epithalon",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Thymosin Alpha-1 | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/thymosin-alpha-1",
+        "price": 59.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Thymalin | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/thymalin",
+        "price": 64.99,
+        "regular_price": null,
+        "error": null
+      },
+      "SS-31 / Elamipretide | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/ss-31",
+        "price": 59.99,
+        "regular_price": null,
+        "error": null
+      },
+      "VIP (Vasoactive Intestinal Peptide) | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/vip",
+        "price": 74.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Dihexa | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/dihexa",
+        "price": 69.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Pinealon | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/pinealon",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "PT-141 (Bremelanotide) | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/pt-141",
+        "price": 64.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Melanotan II | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/melanotan-ii",
+        "price": 34.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Gonadorelin | Vial | 2mg": {
+        "url": "https://aresresearchlab.com/catalog/gonadorelin",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Kisspeptin | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/kisspeptin",
+        "price": 54.99,
+        "regular_price": null,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
+        "url": "https://aresresearchlab.com/catalog/ghk-cu",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Melanotan I | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/mt-1",
+        "price": 24.99,
+        "regular_price": null,
+        "error": null
+      },
+      "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
+        "url": "https://aresresearchlab.com/catalog/glow-stack",
+        "price": 99.99,
+        "regular_price": null,
+        "error": null
+      },
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
+        "url": "https://aresresearchlab.com/catalog/klow-stack",
+        "price": 109.99,
+        "regular_price": null,
+        "error": null
+      },
+      "SNAP-8 | Vial | 10mg": {
+        "url": "https://aresresearchlab.com/catalog/snap-8",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "SLU-PP-332 | Vial | 5mg": {
+        "url": "https://aresresearchlab.com/catalog/slu-pp-332",
+        "price": 64.99,
+        "regular_price": null,
+        "error": null
+      }
     }
   }
 }

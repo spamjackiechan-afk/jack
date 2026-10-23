@@ -651,5 +651,25 @@
     "shipping_payment_researched": "2026-10-23",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
     "code_discount_pct": 5
+  },
+  "Ares Research": {
+    "status": "approved",
+    "site_url": "https://aresresearchlab.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://aresresearchlab.com/?ref=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": [
+      "Credit Card",
+      "Crypto",
+      "Zelle",
+      "Cash App",
+      "Venmo"
+    ],
+    "payment_note": "Prices in USD. Card orders pay a flat $9.99 U.S. shipping; crypto, Zelle, Cash App and Venmo orders ship free. The customer discount our code DISCOUNTS gives is not yet confirmed.",
+    "shipping_info": "U.S. shipping only (no Canada or international). Free U.S. shipping on crypto, Zelle, Cash App and Venmo orders; card orders $9.99 flat. Paid orders before 3 PM ET on business days ship the same day via USPS Ground Advantage.",
+    "shipping_payment_researched": "2026-10-23",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": null
   }
 }
