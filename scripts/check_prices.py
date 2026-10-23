@@ -275,6 +275,12 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /", disallowing only /wp-admin/,
                                   # /cart/, /checkout/, /my-account/, ?add-to-cart= and WooCommerce uploads.
                                   # Product pages are /product.html?sku=<sku> (/product/<slug>/ 301s there).
+    },    "MsAmino": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /", disallowing only /admin/, /api/,
+                                  # /affiliate/, /account/, /cart, /checkout/ and /login. /products/ pages are
+                                  # allowed. Next.js; sizes can't be pinned by URL, so only each page's
+                                  # default (first) size is listed.
     },
 }
 
