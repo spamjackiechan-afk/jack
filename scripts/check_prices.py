@@ -288,6 +288,12 @@ VENDORS = {
                                   # WooCommerce upload/log paths and ?add-to-cart= URLs. /product/<slug>/
                                   # pages are allowed. WooCommerce; each listed product has a single size.
     },
+    "Ares Research": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" (named AI bots also Allow: /).
+                                  # /catalog/<slug> pages are allowed. Sizes can't be pinned by URL, so only
+                                  # cards whose default (first JSON-LD offer) size is the listed size are included.
+    },
     "Direct Research Supply": {
         "robots_checked_by": "Grok for Jackson, 2026-10-23",
         "robots_allows": True,   # confirmed: /robots.txt returns 404 (no rules). WooCommerce; sizes are
