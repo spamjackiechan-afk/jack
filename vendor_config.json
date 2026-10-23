@@ -616,5 +616,23 @@
     "shipping_info": "U.S. domestic shipping only. USPS Priority $9.99, free on orders of $250 or more. Orders by 2 PM PT on business days ship the same day once payment clears, with tracking.",
     "shipping_payment_researched": "2026-10-21",
     "code_discount_pct": 20
+  },
+  "MsAmino": {
+    "status": "approved",
+    "site_url": "https://msamino.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://msamino.com?ref=VKHL8XEX",
+    "affiliate_path_suffix": null,
+    "promo_code": "VKHL8XEX",
+    "payment_methods": [
+      "Visa",
+      "American Express",
+      "Discover"
+    ],
+    "payment_note": "Prices in USD. Card logos (Visa, Amex, Discover) shown on the site; our code VKHL8XEX gives 20% off the first order only.",
+    "shipping_info": "U.S. shipping only. USPS Priority, flat $9.99, free on orders of $200 or more after discounts. Orders before 2 PM ET on business days ship the same day.",
+    "shipping_payment_researched": "2026-10-23",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 20
   }
 }

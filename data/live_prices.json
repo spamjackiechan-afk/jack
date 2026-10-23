@@ -5089,6 +5089,164 @@
         "regular_price": null,
         "error": null
       }
+    },
+    "MsAmino": {
+      "5-Amino-1MQ | Vial | 10mg": {
+        "url": "https://msamino.com/products/5-amino-imq-10mg",
+        "price": 54.99,
+        "regular_price": null,
+        "error": null
+      },
+      "AOD-9604 | Vial | 5mg": {
+        "url": "https://msamino.com/products/aod-9604-5mg",
+        "price": 64.99,
+        "regular_price": null,
+        "error": null
+      },
+      "BPC-157 | Vial | 5mg": {
+        "url": "https://msamino.com/products/bpc-157",
+        "price": 53.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
+        "url": "https://msamino.com/products/bpc-157-tb-500-blend-wolverine",
+        "price": 89.99,
+        "regular_price": null,
+        "error": null
+      },
+      "CJC-1295 | Vial | 10mg": {
+        "url": "https://msamino.com/products/cjc-1295-no-dac-10mg",
+        "price": 74.99,
+        "regular_price": null,
+        "error": null
+      },
+      "CJC-1295 with DAC | Vial | 2mg": {
+        "url": "https://msamino.com/products/cjc-1295-with-dac-2mg",
+        "price": 67.99,
+        "regular_price": null,
+        "error": null
+      },
+      "DSIP | Vial | 10mg": {
+        "url": "https://msamino.com/products/dsip-10mg",
+        "price": 53.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Epitalon | Vial | 10mg": {
+        "url": "https://msamino.com/products/epithalon",
+        "price": 49.99,
+        "regular_price": null,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 50mg": {
+        "url": "https://msamino.com/products/ghk-cu",
+        "price": 49.99,
+        "regular_price": null,
+        "error": null
+      },
+      "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
+        "url": "https://msamino.com/products/glow-blend-70mg",
+        "price": 109.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Glutathione | Vial | 750mg": {
+        "url": "https://msamino.com/products/glutathione-750mg",
+        "price": 49.99,
+        "regular_price": null,
+        "error": null
+      },
+      "IGF-1 LR3 | Vial | 1mg": {
+        "url": "https://msamino.com/products/igf-1-lr3-1mg",
+        "price": 109.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Ipamorelin | Vial | 5mg": {
+        "url": "https://msamino.com/products/ipamorelin",
+        "price": 43.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Kisspeptin | Vial | 10mg": {
+        "url": "https://msamino.com/products/kisspeptin",
+        "price": 59.99,
+        "regular_price": null,
+        "error": null
+      },
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
+        "url": "https://msamino.com/products/klow-80mg",
+        "price": 123.99,
+        "regular_price": null,
+        "error": null
+      },
+      "KPV | Vial | 10mg": {
+        "url": "https://msamino.com/products/kpv",
+        "price": 48.99,
+        "regular_price": null,
+        "error": null
+      },
+      "MOTS-C | Vial | 10mg": {
+        "url": "https://msamino.com/products/mots-c",
+        "price": 49.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Melanotan II | Vial | 10mg": {
+        "url": "https://msamino.com/products/mt-2-melanotan-ii-10mg",
+        "price": 39.99,
+        "regular_price": null,
+        "error": null
+      },
+      "NAD+ | Vial | 500mg": {
+        "url": "https://msamino.com/products/nad-500mg",
+        "price": 63.99,
+        "regular_price": null,
+        "error": null
+      },
+      "PT-141 (Bremelanotide) | Vial | 10mg": {
+        "url": "https://msamino.com/products/pt-141-10mg",
+        "price": 46.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Selank | Vial | 10mg": {
+        "url": "https://msamino.com/products/selank",
+        "price": 59.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Semax | Vial | 10mg": {
+        "url": "https://msamino.com/products/semax-10mg",
+        "price": 47.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Sermorelin | Vial | 10mg": {
+        "url": "https://msamino.com/products/sermorelin-10mg",
+        "price": 104.99,
+        "regular_price": null,
+        "error": null
+      },
+      "SS-31 / Elamipretide | Vial | 10mg": {
+        "url": "https://msamino.com/products/ss-31",
+        "price": 79.99,
+        "regular_price": null,
+        "error": null
+      },
+      "TB-500 | Vial | 5mg": {
+        "url": "https://msamino.com/products/tb500",
+        "price": 53.99,
+        "regular_price": null,
+        "error": null
+      },
+      "Tesamorelin | Vial | 10mg": {
+        "url": "https://msamino.com/products/tesamorelin",
+        "price": 91.99,
+        "regular_price": null,
+        "error": null
+      }
     }
   }
 }
