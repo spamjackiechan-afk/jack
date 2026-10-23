@@ -16,9 +16,9 @@ permissions:
 jobs:
   check-prices:
     runs-on: ubuntu-latest
-    # A normal run takes about 15 minutes. Stop a stuck run after 30 so it
+    # A run takes 25-30 minutes with today's vendor list. Stop a stuck run after 60 so it
     # fails quickly instead of hanging for GitHub's 6-hour limit.
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4

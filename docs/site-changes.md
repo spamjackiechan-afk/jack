@@ -57,7 +57,8 @@ JSON, run the sync script, commit both:**
 
 - product data: `data/catalog.json` → `const DATA` in both pages
 - vendor fields: `vendor_config.json` → `const VENDOR_CONFIG` in both pages
-- vendor sales: `data/vendor_sales.json` → `const VENDOR_SALES` in suppliers.html only
+- vendor sales: `data/vendor_sales.json` is **not** embedded (members-only, served by
+  `/api/member-sales`; `--check` fails if a `const VENDOR_SALES` line comes back)
 
 ```
 python scripts/sync_vendor_config.py          # rewrites only those lines
@@ -197,6 +198,63 @@ render time (same idea as price_overrides expiry), and a null `end` shows
 until the entry is removed. A sale is ALSO hidden when its `verified` date
 is more than 7 days old (a missing `verified` hides it too): a code nobody
 has re-checked doesn't stay up forever. To keep a sale showing, re-verify
-the code on the vendor's site and bump `verified` to the new date. Then run the sync script so the generated
-`const VENDOR_SALES` line in suppliers.html picks it up. Jackson confirms
-every entry before it goes in.
+the code on the vendor's site and bump `verified` to the new date. No sync
+step: the file is served to members by `/api/member-sales` as soon as it is
+deployed. Jackson confirms every entry before it goes in.
+
+## Members-only sales
+
+All sale content is shown only to members of the email list; everyone else
+sees normal list prices and uses our affiliate code.
+
+- **Who is a member:** an address in the existing subscriber store
+  (`sub:<email>` in the `CLICK_COUNTS` KV, written by `/api/subscribe`) that
+  has not unsubscribed. No passwords.
+- **How a browser is unlocked:** a long-lived (400-day) HMAC-signed HttpOnly
+  cookie `dp_member_sales`, set by `/api/subscribe` on a successful signup, or
+  by a one-time emailed link from **"Members: see sales"** (`/api/member-link`,
+  link valid 30 minutes, single use). Every `/api/member-sales` call re-checks
+  the subscriber store, so unsubscribing ends access on the next page load.
+  Signing key: Pages secret `MEMBER_COOKIE_SECRET` if set, otherwise a random
+  key generated once and kept in KV (`secret:member_cookie`).
+- **Sending the link:** needs Pages variables `RESEND_API_KEY` (secret) and
+  `MEMBER_EMAIL_FROM` (a sender on a domain verified in Resend). Without them
+  the form still answers normally but no email goes out.
+- **Gated for guests:** the Sales strip, "% On sale" chip, sale prices and
+  "% off" badges on the homepage (guests see the vendor's list price, with our
+  with-code price worked out from it), and the "Vendor sale" rows on
+  suppliers.html. `data/vendor_sales.json` is not served publicly
+  (`functions/data/_middleware.js`). Guests see a small "Members see current
+  vendor sales — join free" teaser instead (`member-sales.js`).
+- **Not hidden:** `data/live_prices.json` still carries `regular_price` (the
+  daily checker's raw output, needed by the page), so a determined visitor
+  could work out an observed sale price from it.
+
+## With-code price (strikethrough list price)
+
+A homepage price row shows the price after our promo code big, with a `*`
+("with code"), and the vendor's list price struck through below it — but
+ONLY when the vendor's `vendor_config.json` entry has a real `promo_code`
+(shown on site, `tracking_type: link_plus_code`) AND a verified numeric
+`code_discount_pct` (e.g. `10` for 10% off). Never guess the percent from
+the code's name; add it only from the vendor's own confirmation/checkout.
+Otherwise the row shows the normal price.
+
+- No with-code price for link-only vendors, non-USD vendors (`currency`
+  other than USD), or a row where the tracker saw a vendor-page sale
+  (`onSale`) — codes often don't stack with sales, so we never
+  double-discount; the sale price + "% off" badge shows as before.
+- "Lowest" highlight and all price sorting stay on the list price, so every
+  vendor is compared on the same basis whether or not a code % is known.
+- After adding `code_discount_pct`, run `scripts/sync_vendor_config.py` so
+  the embedded `VENDOR_CONFIG` lines match.
+
+## testing.html retired (2026-10)
+
+`testing.html` was removed. The homepage nav item (now labelled **Research**), the
+per-compound warning links and the About-page link go to
+https://peptidehealthdigest.vercel.app/ (external, used with permission) in a new tab.
+`_redirects` 301s `/testing` and `/testing.html` there. The References / testing-refs
+sections above, `docs/references-format.md`, `docs/testing-refs-filter.md` and
+`data/testing-refs-status.json` describe the retired page and are kept for history only.
+Do not copy the external site's dosing or health-claim content onto this site.
