@@ -464,7 +464,8 @@
         "Alpha Peptides": 36.0,
         "Peptide Titans": 39.99,
         "BioLabs Peptides": 39.78,
-        "Olympus Peptide Labs": 101.76
+        "Olympus Peptide Labs": 101.76,
+        "Ares Research": 84.99
       },
       "lowest": 36.0,
       "notes": null,
@@ -474,7 +475,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/ara-290/",
         "Peptide Titans": "https://peptidetitans.com/product/ara-290/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ara-290/",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/e7bd4de5"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/e7bd4de5",
+        "Ares Research": "https://aresresearchlab.com/catalog/ara-290"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -697,7 +699,8 @@
         "Echo Peptides": 49.99,
         "Aura Research": 39,
         "Helion Research": 29.99,
-        "MsAmino": 49.99
+        "MsAmino": 49.99,
+        "Ares Research": 39.99
       },
       "lowest": 18.99,
       "notes": null,
@@ -731,7 +734,8 @@
         "Echo Peptides": "https://echopeptides.co/product/ghk-cu-50mg",
         "Aura Research": "https://tryauraresearch.com/product/ghk-cu/?attribute_pa_amount=50mg",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=cu50",
-        "MsAmino": "https://msamino.com/products/ghk-cu"
+        "MsAmino": "https://msamino.com/products/ghk-cu",
+        "Ares Research": "https://aresresearchlab.com/catalog/ghk-cu"
       },
       "category": "Cellular & Longevity"
     },
@@ -915,7 +919,8 @@
         "US Peptide Labs": 50.0,
         "Quality Peptide USA": 59,
         "Peptide Titans": 29.99,
-        "Echo Peptides": 54.99
+        "Echo Peptides": 54.99,
+        "Ares Research": 54.99
       },
       "lowest": 14.99,
       "notes": null,
@@ -928,7 +933,8 @@
         "US Peptide Labs": "https://uspeptidelabs.co/products/kisspeptin",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/kisspeptin-10",
         "Peptide Titans": "https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=5+mg",
-        "Echo Peptides": "https://echopeptides.co/product/kisspeptin-10-5mg"
+        "Echo Peptides": "https://echopeptides.co/product/kisspeptin-10-5mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/kisspeptin"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -1004,7 +1010,8 @@
         "Alpine Peptide": 45.0,
         "Prism Labs": 49.99,
         "MsAmino": 48.99,
-        "JD BioWorks": 59.84
+        "JD BioWorks": 59.84,
+        "Ares Research": 39.99
       },
       "lowest": 25.25,
       "notes": null,
@@ -1033,7 +1040,8 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/kpv-10-mg/",
         "Prism Labs": "https://www.prismlabs.store/product/kp-10",
         "MsAmino": "https://msamino.com/products/kpv",
-        "JD BioWorks": "https://jdbioworks.com/product/kpv/"
+        "JD BioWorks": "https://jdbioworks.com/product/kpv/",
+        "Ares Research": "https://aresresearchlab.com/catalog/kpv"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -1049,7 +1057,8 @@
         "Alpha Peptides": 35.79,
         "Offline Peptides": 35.0,
         "Peptide Titans": 39.99,
-        "BioLabs Peptides": 46.41
+        "BioLabs Peptides": 46.41,
+        "Ares Research": 74.99
       },
       "lowest": 35.0,
       "notes": null,
@@ -1059,7 +1068,8 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/ll-37/",
         "Offline Peptides": "https://offlinepeptides.com/product/ll-37/",
         "Peptide Titans": "https://peptidetitans.com/product/ll-37/?attribute_mg=5+mg",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/ll37/"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/ll37/",
+        "Ares Research": "https://aresresearchlab.com/catalog/ll-37"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -1328,7 +1338,8 @@
         "Echo Peptides": 54.99,
         "Aura Research": 49,
         "MsAmino": 46.99,
-        "JD BioWorks": 58.7
+        "JD BioWorks": 58.7,
+        "Ares Research": 64.99
       },
       "lowest": 22.07,
       "notes": null,
@@ -1353,7 +1364,8 @@
         "Echo Peptides": "https://echopeptides.co/product/pt-141-10mg",
         "Aura Research": "https://tryauraresearch.com/product/pt-141/",
         "MsAmino": "https://msamino.com/products/pt-141-10mg",
-        "JD BioWorks": "https://jdbioworks.com/product/pt-141/"
+        "JD BioWorks": "https://jdbioworks.com/product/pt-141/",
+        "Ares Research": "https://aresresearchlab.com/catalog/pt-141"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -1557,7 +1569,8 @@
         "Prism Labs": 44.99,
         "Echo Peptides": 89.99,
         "Helion Research": 49.99,
-        "MsAmino": 79.99
+        "MsAmino": 79.99,
+        "Ares Research": 59.99
       },
       "lowest": 34.99,
       "notes": null,
@@ -1581,7 +1594,8 @@
         "Prism Labs": "https://www.prismlabs.store/product/ss-31",
         "Echo Peptides": "https://echopeptides.co/product/ss-31-10mg",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=2s10",
-        "MsAmino": "https://msamino.com/products/ss-31"
+        "MsAmino": "https://msamino.com/products/ss-31",
+        "Ares Research": "https://aresresearchlab.com/catalog/ss-31"
       },
       "category": "Cellular & Longevity"
     },
@@ -1655,7 +1669,8 @@
         "US Peptide Labs": 80.0,
         "Peptide Titans": 74.99,
         "True Research Labs": 84,
-        "Olympus Peptide Labs": 178.09
+        "Olympus Peptide Labs": 178.09,
+        "Ares Research": 74.99
       },
       "lowest": 37.89,
       "notes": null,
@@ -1669,7 +1684,8 @@
         "US Peptide Labs": "https://uspeptidelabs.co/products/vip",
         "Peptide Titans": "https://peptidetitans.com/product/vip/?attribute_mg=10+mg",
         "True Research Labs": "https://trueresearchlabs.com/shop/vip/?attribute_pa_dosage=10-mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b5f5e4b8"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b5f5e4b8",
+        "Ares Research": "https://aresresearchlab.com/catalog/vip"
       },
       "category": "Tissue Repair & Recovery"
     },
@@ -1812,7 +1828,8 @@
         "Stealth Research Labs": 39.99,
         "Echo Peptides": 44.99,
         "Aura Research": 39,
-        "MsAmino": 53.99
+        "MsAmino": 53.99,
+        "Ares Research": 29.99
       },
       "lowest": 18.0,
       "notes": null,
@@ -1828,7 +1845,8 @@
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/bpc-157/?attribute_pa_size=5mg",
         "Echo Peptides": "https://echopeptides.co/product/bpc-157-5mg",
         "Aura Research": "https://tryauraresearch.com/product/bpc-157/?attribute_pa_amount=5mg",
-        "MsAmino": "https://msamino.com/products/bpc-157"
+        "MsAmino": "https://msamino.com/products/bpc-157",
+        "Ares Research": "https://aresresearchlab.com/catalog/bpc-157"
       }
     },
     {
@@ -1838,13 +1856,15 @@
       "amount_mg": 2,
       "prices": {
         "Purity Peptides": 49.99,
-        "MsAmino": 67.99
+        "MsAmino": 67.99,
+        "Ares Research": 39.99
       },
-      "lowest": 49.99,
+      "lowest": 39.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
-        "MsAmino": "https://msamino.com/products/cjc-1295-with-dac-2mg"
+        "MsAmino": "https://msamino.com/products/cjc-1295-with-dac-2mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/cjc-1295-dac"
       }
     },
     {
@@ -2047,7 +2067,8 @@
         "Olympus Peptide Labs": 55.62,
         "Elev-8 Labs": 30.0,
         "Prism Labs": 44.99,
-        "MsAmino": 49.99
+        "MsAmino": 49.99,
+        "Ares Research": 39.99
       },
       "lowest": 23.68,
       "notes": null,
@@ -2067,7 +2088,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/d94d94b4",
         "Elev-8 Labs": "https://elev-8labs.com/product/epithalon/",
         "Prism Labs": "https://www.prismlabs.store/product/epi-10",
-        "MsAmino": "https://msamino.com/products/epithalon"
+        "MsAmino": "https://msamino.com/products/epithalon",
+        "Ares Research": "https://aresresearchlab.com/catalog/epithalon"
       },
       "category": "Cellular & Longevity"
     },
@@ -2127,14 +2149,16 @@
       "prices": {
         "Purity Peptides": 60.49,
         "Alpha Peptides": 14.32,
-        "Peptide Titans": 19.99
+        "Peptide Titans": 19.99,
+        "Ares Research": 29.99
       },
       "lowest": 14.32,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ghrp-2/",
-        "Peptide Titans": "https://peptidetitans.com/product/ghrp-2/?attribute_mg=5+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/ghrp-2/?attribute_mg=5+mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/ghrp-2"
       }
     },
     {
@@ -2145,14 +2169,16 @@
       "prices": {
         "Purity Peptides": 49.99,
         "Alpha Peptides": 14.32,
-        "Peptide Titans": 19.99
+        "Peptide Titans": 19.99,
+        "Ares Research": 29.99
       },
       "lowest": 14.32,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ghrp-6/",
-        "Peptide Titans": "https://peptidetitans.com/product/ghrp-6/?attribute_mg=5+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/ghrp-6/?attribute_mg=5+mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/ghrp-6"
       }
     },
     {
@@ -2161,11 +2187,15 @@
       "size": "2mg",
       "amount_mg": 2,
       "prices": {
-        "Purity Peptides": 99.99
+        "Purity Peptides": 99.99,
+        "Ares Research": 39.99
       },
-      "lowest": 99.99,
+      "lowest": 39.99,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Sexual Health & Hormonal",
+      "vendor_product_urls": {
+        "Ares Research": "https://aresresearchlab.com/catalog/gonadorelin"
+      }
     },
     {
       "peptide": "Ipamorelin",
@@ -2236,9 +2266,10 @@
         "Peptide Titans": 44.99,
         "BioLabs Peptides": 37.13,
         "Aura Research": 49,
-        "MsAmino": 43.99
+        "MsAmino": 43.99,
+        "Ares Research": 34.99
       },
-      "lowest": 37.13,
+      "lowest": 34.99,
       "notes": null,
       "category": "Growth Hormone & Muscle",
       "vendor_product_urls": {
@@ -2250,7 +2281,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/ipamorelin/?attribute_mg=5+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ipa/?attribute_size=5mg",
         "Aura Research": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=5mg",
-        "MsAmino": "https://msamino.com/products/ipamorelin"
+        "MsAmino": "https://msamino.com/products/ipamorelin",
+        "Ares Research": "https://aresresearchlab.com/catalog/ipamorelin"
       }
     },
     {
@@ -2343,7 +2375,8 @@
         "Licensed Peptides": 61.99,
         "Apex Peptides": 89.0,
         "Peptide Titans": 39.99,
-        "BioLabs Peptides": 42.44
+        "BioLabs Peptides": 42.44,
+        "Ares Research": 59.99
       },
       "lowest": 39.99,
       "notes": null,
@@ -2352,7 +2385,8 @@
         "Licensed Peptides": "https://licensedpeptides.com/product/thymosin-alpha-1-5mg/",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/thymosin-alpha-1-5mg/?attribute_pa_size=5mg",
         "Peptide Titans": "https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=5+mg",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/thymosin-alpha-1/?attribute_size=5mg"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/thymosin-alpha-1/?attribute_size=5mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/thymosin-alpha-1"
       }
     },
     {
@@ -2871,11 +2905,13 @@
       "size": "5mg",
       "prices": {
         "Licensed Peptides": 68.99,
-        "Peptide Titans": 24.99
+        "Peptide Titans": 24.99,
+        "Ares Research": 49.99
       },
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/5-amino-1mq-5mg/",
-        "Peptide Titans": "https://peptidetitans.com/product/5-amino-1mq/?attribute_mg=5+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/5-amino-1mq/?attribute_mg=5+mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/5-amino-1mq"
       },
       "lowest": 24.99
     },
@@ -2885,11 +2921,13 @@
       "size": "10mg",
       "prices": {
         "Alpha Peptides": 50.53,
-        "Peptide Titans": 34.99
+        "Peptide Titans": 34.99,
+        "Ares Research": 64.99
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/thymalin/",
-        "Peptide Titans": "https://peptidetitans.com/product/thymalin/?attribute_mg=10+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/thymalin/?attribute_mg=10+mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/thymalin"
       },
       "lowest": 34.99
     },
@@ -2927,13 +2965,15 @@
         "Alpha Peptides": 33.16,
         "Synthrolab": 71.88,
         "BioLabs Peptides": 26.52,
-        "Olympus Peptide Labs": 127.21
+        "Olympus Peptide Labs": 127.21,
+        "Ares Research": 39.99
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/pinealon/",
         "Synthrolab": "https://synthrolab.com/product/pinealon-10mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/pinealon/",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/1aca0725"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/1aca0725",
+        "Ares Research": "https://aresresearchlab.com/catalog/pinealon"
       },
       "lowest": 26.52
     },
@@ -2946,14 +2986,16 @@
         "Orbitrex Peptide": 49.99,
         "Vector E Lab": 45.0,
         "Peptide Titans": 84.99,
-        "Aura Research": 69
+        "Aura Research": 69,
+        "Ares Research": 64.99
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/slu-pp-332/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/slu-pp-332/",
         "Vector E Lab": "https://app.vectorelab.com/product/slu-pp-332/?attribute_mg=5",
         "Peptide Titans": "https://peptidetitans.com/product/slu-pp-332/?attribute_mg=5+mg",
-        "Aura Research": "https://tryauraresearch.com/product/slu-pp-332/"
+        "Aura Research": "https://tryauraresearch.com/product/slu-pp-332/",
+        "Ares Research": "https://aresresearchlab.com/catalog/slu-pp-332"
       },
       "lowest": 45.0
     },
@@ -2968,7 +3010,8 @@
         "Lumera Labs": 30,
         "Peptide Titans": 24.99,
         "Elev-8 Labs": 25.0,
-        "Aura Research": 49
+        "Aura Research": 49,
+        "Ares Research": 39.99
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/snap-8/",
@@ -2977,7 +3020,8 @@
         "Lumera Labs": "https://mylumeralabs.com/product/snap-8",
         "Peptide Titans": "https://peptidetitans.com/product/snap-8/?attribute_mg=10+mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/snap-8/",
-        "Aura Research": "https://tryauraresearch.com/product/snap-8/"
+        "Aura Research": "https://tryauraresearch.com/product/snap-8/",
+        "Ares Research": "https://aresresearchlab.com/catalog/snap-8"
       },
       "lowest": 22.11
     },
@@ -2998,10 +3042,12 @@
       "format": "Vial",
       "size": "5mg",
       "prices": {
-        "Alpha Peptides": 35.79
+        "Alpha Peptides": 35.79,
+        "Ares Research": 69.99
       },
       "vendor_product_urls": {
-        "Alpha Peptides": "https://alpha-peptides.com/product/dihexa/"
+        "Alpha Peptides": "https://alpha-peptides.com/product/dihexa/",
+        "Ares Research": "https://aresresearchlab.com/catalog/dihexa"
       },
       "lowest": 35.79
     },
@@ -3183,7 +3229,8 @@
         "Echo Peptides": 49.99,
         "Aura Research": 49,
         "MsAmino": 39.99,
-        "JD BioWorks": 57.57
+        "JD BioWorks": 57.57,
+        "Ares Research": 34.99
       },
       "lowest": 21.05,
       "notes": null,
@@ -3212,7 +3259,8 @@
         "Echo Peptides": "https://echopeptides.co/product/mt2-10mg",
         "Aura Research": "https://tryauraresearch.com/product/melanotan-ii/",
         "MsAmino": "https://msamino.com/products/mt-2-melanotan-ii-10mg",
-        "JD BioWorks": "https://jdbioworks.com/product/melanotan-ii/"
+        "JD BioWorks": "https://jdbioworks.com/product/melanotan-ii/",
+        "Ares Research": "https://aresresearchlab.com/catalog/melanotan-ii"
       }
     },
     {
@@ -3363,7 +3411,8 @@
         "Axovera Labs": 85,
         "Aura Research": 99,
         "MsAmino": 109.99,
-        "JD BioWorks": 80.99
+        "JD BioWorks": 80.99,
+        "Ares Research": 99.99
       },
       "lowest": 48.41,
       "notes": null,
@@ -3395,7 +3444,8 @@
         "Axovera Labs": "https://axoveralabs.com/product/glow/",
         "Aura Research": "https://tryauraresearch.com/product/glow/",
         "MsAmino": "https://msamino.com/products/glow-blend-70mg",
-        "JD BioWorks": "https://jdbioworks.com/product/glow-70mg-research-blend/"
+        "JD BioWorks": "https://jdbioworks.com/product/glow-70mg-research-blend/",
+        "Ares Research": "https://aresresearchlab.com/catalog/glow-stack"
       }
     },
     {
@@ -3426,7 +3476,8 @@
         "Axovera Labs": 90,
         "Aura Research": 119,
         "MsAmino": 123.99,
-        "JD BioWorks": 108.0
+        "JD BioWorks": 108.0,
+        "Ares Research": 109.99
       },
       "lowest": 75.0,
       "notes": null,
@@ -3454,7 +3505,8 @@
         "Axovera Labs": "https://axoveralabs.com/product/klow-blend/",
         "Aura Research": "https://tryauraresearch.com/product/klow/",
         "MsAmino": "https://msamino.com/products/klow-80mg",
-        "JD BioWorks": "https://jdbioworks.com/product/klow-80mg-research-blend/"
+        "JD BioWorks": "https://jdbioworks.com/product/klow-80mg-research-blend/",
+        "Ares Research": "https://aresresearchlab.com/catalog/klow-stack"
       }
     },
     {
@@ -4410,7 +4462,8 @@
         "True Research Labs": 39,
         "Olympus Peptide Labs": 45.01,
         "Elev-8 Labs": 27.5,
-        "Echo Peptides": 49.99
+        "Echo Peptides": 49.99,
+        "Ares Research": 24.99
       },
       "lowest": 23.99,
       "notes": null,
@@ -4426,7 +4479,8 @@
         "True Research Labs": "https://trueresearchlabs.com/shop/melanotan-1-afamelanotide/?attribute_pa_dosage=10-mg",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/9e8c50e7",
         "Elev-8 Labs": "https://elev-8labs.com/product/melanotan-i/",
-        "Echo Peptides": "https://echopeptides.co/product/mt1-10mg"
+        "Echo Peptides": "https://echopeptides.co/product/mt1-10mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/mt-1"
       },
       "category": "Sexual Health & Hormonal"
     },
@@ -4683,7 +4737,8 @@
         "Lumera Labs": 68.99,
         "Quality Peptide USA": 59,
         "Peptide Titans": 59.99,
-        "Aura Research": 69
+        "Aura Research": 69,
+        "Ares Research": 94.99
       },
       "lowest": 59,
       "notes": null,
@@ -4691,7 +4746,8 @@
         "Lumera Labs": "https://mylumeralabs.com/product/cagrilintide",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/cagrilintide",
         "Peptide Titans": "https://peptidetitans.com/product/cagrilintide/?attribute_mg=5+mg",
-        "Aura Research": "https://tryauraresearch.com/product/cagrilintide/"
+        "Aura Research": "https://tryauraresearch.com/product/cagrilintide/",
+        "Ares Research": "https://aresresearchlab.com/catalog/cagrilintide"
       },
       "category": "Metabolic & Weight"
     },
@@ -4718,12 +4774,14 @@
       "size": "100mg",
       "amount_mg": 100,
       "prices": {
-        "Aero Peptides": 59.99
+        "Aero Peptides": 59.99,
+        "Ares Research": 39.99
       },
-      "lowest": 59.99,
+      "lowest": 39.99,
       "notes": null,
       "vendor_product_urls": {
-        "Aero Peptides": "https://aeropeptides.com/product/nad-100mg"
+        "Aero Peptides": "https://aeropeptides.com/product/nad-100mg",
+        "Ares Research": "https://aresresearchlab.com/catalog/nad-plus"
       },
       "category": "Cellular & Longevity"
     },
