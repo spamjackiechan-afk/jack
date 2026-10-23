@@ -604,7 +604,7 @@ function supplierCardHtml(name){
       const sc = escapeHtml(sale.code);
       offer += ` with code <button type="button" class="code-chip" data-code="${sc}" title="Copy code">${icon('copy')}<span>${sc}</span></button>`;
       offer += ' at checkout';
-    } else if (!/automatic|applied at checkout/i.test(sale.gives || '')) {
+    } else if (!(window.DPMembers ? window.DPMembers.saysAutomatic(sale) : /automatic|applied at checkout|reveal|not listed|no code listed/i.test(sale.gives || ''))) {
       offer += ', applied automatically at checkout';
     }
     if (sale.end) offer += ` (ends ${window.DPMembers ? window.DPMembers.fmtEnd(sale.end) : new Date(sale.end).toUTCString()})`;

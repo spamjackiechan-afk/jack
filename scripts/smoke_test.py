@@ -39,7 +39,7 @@ Fails on:
   * public sales (guest view; /api/member-sales is not reachable on a static
     server, so member-sales.js falls back to data/vendor_sales.json): the sales
     bar missing, the old "join free" teaser showing, an excluded vendor
-    (Offline, Licensed, Midwest, AFA, RPL, Synthrolab) in the sales, observed
+    (Offline, Licensed, AFA, RPL, Synthrolab) in the sales, observed
     sales without badges/Sales strip, or the suppliers page not showing every
     currently-live vendor sale; a vendor sale code in the raw index.html or
     suppliers.html
@@ -177,7 +177,7 @@ def check_vendor_count_raw(root, filename, expected, problems):
     check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
-SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides"}
+SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide"}
 
 
 def live_vendor_sales(root):
@@ -216,7 +216,7 @@ def check_members_only(browser, base, root, problems, notes):
 
     # Guest (no Functions on this static server -> /api/member-sales 404 ->
     # member-sales.js falls back to /data/vendor_sales.json). Sales are PUBLIC.
-    excluded = ["Offline Peptides", "Licensed Peptides", "Midwest Peptide", "AFA Biosciences",
+    excluded = ["Offline Peptides", "Licensed Peptides", "AFA Biosciences",
                 "Research Peptides Lab", "Synthrolab"]
     page = open_page(browser, base + "/index.html", problems, "index.html (guest)")
     page.wait_for_timeout(800)

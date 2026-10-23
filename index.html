@@ -1763,9 +1763,9 @@ document.getElementById('excludedCategories').innerHTML = categoryOrder
 // Sale prices, "% off" badges, the Sales strip and the "% On sale" chip are
 // shown to every visitor, but only for vendors that confirmed tracking and
 // commission (SALE_VENDORS, mirrored in member-sales.js). Any other vendor's
-// observed sale (incl. Offline, Licensed, Midwest, AFA, RPL, Synthrolab) is
+// observed sale (incl. Offline, Licensed, AFA, RPL, Synthrolab) is
 // dropped: that vendor shows its normal list price instead.
-const SALE_VENDORS = new Set(['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides']);
+const SALE_VENDORS = new Set(['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide']);
 function recomputeLowest(item){
   const vals = Object.values(item.prices);
   if (vals.length) item.lowest = Math.min(...vals);
