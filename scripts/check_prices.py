@@ -282,6 +282,12 @@ VENDORS = {
                                   # allowed. Next.js; sizes can't be pinned by URL, so only each page's
                                   # default (first) size is listed.
     },
+    "JD BioWorks": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-admin/ (admin-ajax allowed),
+                                  # WooCommerce upload/log paths and ?add-to-cart= URLs. /product/<slug>/
+                                  # pages are allowed. WooCommerce; each listed product has a single size.
+    },
 }
 
 HEADERS = {

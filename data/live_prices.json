@@ -5247,6 +5247,98 @@
         "regular_price": null,
         "error": null
       }
+    },
+    "JD BioWorks": {
+      "BPC-157 | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/bpc-157/",
+        "price": 59.55,
+        "regular_price": null,
+        "error": null
+      },
+      "TB-500 | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/tb-500/",
+        "price": 74.93,
+        "regular_price": null,
+        "error": null
+      },
+      "KPV | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/kpv/",
+        "price": 59.84,
+        "regular_price": null,
+        "error": null
+      },
+      "PT-141 (Bremelanotide) | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/pt-141/",
+        "price": 58.7,
+        "regular_price": null,
+        "error": null
+      },
+      "Selank | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/selank/",
+        "price": 61.27,
+        "regular_price": null,
+        "error": null
+      },
+      "MOTS-C | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/mots-c/",
+        "price": 59.84,
+        "regular_price": null,
+        "error": null
+      },
+      "NAD+ | Vial | 500mg": {
+        "url": "https://jdbioworks.com/product/nad/",
+        "price": 63.41,
+        "regular_price": null,
+        "error": null
+      },
+      "Tesamorelin | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/tesamorelin/",
+        "price": 78.35,
+        "regular_price": null,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 100mg": {
+        "url": "https://jdbioworks.com/product/ghk-copper/",
+        "price": 59.13,
+        "regular_price": null,
+        "error": null
+      },
+      "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
+        "url": "https://jdbioworks.com/product/glow-70mg-research-blend/",
+        "price": 80.99,
+        "regular_price": null,
+        "error": null
+      },
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
+        "url": "https://jdbioworks.com/product/klow-80mg-research-blend/",
+        "price": 108.0,
+        "regular_price": null,
+        "error": null
+      },
+      "Glutathione | Vial | 1500mg": {
+        "url": "https://jdbioworks.com/product/glutathione-1500mg/",
+        "price": 49.46,
+        "regular_price": null,
+        "error": null
+      },
+      "Epitalon | Vial | 50mg": {
+        "url": "https://jdbioworks.com/product/epitalon/",
+        "price": 99.95,
+        "regular_price": null,
+        "error": null
+      },
+      "Melanotan II | Vial | 10mg": {
+        "url": "https://jdbioworks.com/product/melanotan-ii/",
+        "price": 57.57,
+        "regular_price": null,
+        "error": null
+      },
+      "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
+        "url": "https://jdbioworks.com/product/cjc-1295-no-dac-ipamorelin/",
+        "price": 67.24,
+        "regular_price": null,
+        "error": null
+      }
     }
   }
 }
