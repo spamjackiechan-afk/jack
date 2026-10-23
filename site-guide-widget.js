@@ -12,7 +12,7 @@
     home: {
       welcome:
         "Hi — browse a catalog shelf, compare prices, or ask about a named peptide. Research use only; no dosing or medical advice.",
-      pills: ["Tissue Repair & Recovery", "Metabolic & Weight", "Growth Hormone & Muscle", "Cognitive & Neurological", "Cellular & Longevity", "Sexual Health & Hormonal"],
+      pills: ["Thymosin, BPC-157 & Peptide Fragments", "Incretin & Metabolic-Pathway Compounds", "GH Secretagogues & IGF-Axis Peptides", "Neuropeptide Analogues", "Mitochondrial Peptides, Bioregulators & Cofactors", "Melanocortin & HPG-Axis Compounds"],
     },
     testing: {
       welcome:

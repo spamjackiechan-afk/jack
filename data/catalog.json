@@ -13,7 +13,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-5-amino-1mq-400mg/"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "ARA-290 (Cibinetide)",
@@ -28,7 +28,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-ara-290-20mg/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "BPC-157",
@@ -45,7 +45,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-bpc-157-30mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/bpc-157"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "CJC-1295",
@@ -60,7 +60,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-cjc-1295-10mg/"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "CJC-1295 / Ipamorelin combo",
@@ -79,7 +79,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin",
         "US Peptide Labs": "https://uspeptidelabs.co/products/cjc-1295-ipamorelin-nasal-spray"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "DSIP",
@@ -94,7 +94,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-dsip-8mg/"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Epitalon",
@@ -111,7 +111,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-epitalon-100mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/epitalon"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Epitalon / Thymulin combo",
@@ -126,7 +126,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-epitalon-thymulin-50mg-10mg/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "GHK-Cu (Copper Peptide)",
@@ -146,7 +146,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ghk-cu",
         "US Peptide Labs": "https://uspeptidelabs.co/products/ghk-cu-nasal"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "GHK-Cu / KPV combo",
@@ -161,7 +161,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-ghk-cu-kpv-50mg-10mg/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "KPV",
@@ -178,7 +178,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-kpv-10mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/kpv"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "KPV / Thymosin Alpha-1 combo",
@@ -193,7 +193,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-kpv-thymosin-alpha-1-10mg-10mg/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "MOTS-C",
@@ -210,7 +210,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/mots-c-20mg-n/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/mots-c"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "NAD+",
@@ -229,7 +229,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/nad-plus",
         "US Peptide Labs": "https://uspeptidelabs.co/products/nad-nasal-spray"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Oxytocin",
@@ -247,7 +247,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/",
         "US Peptide Labs": "https://uspeptidelabs.co/products/oxytocin-nasal-spray"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Oxytocin / Methylene Blue combo",
@@ -259,7 +259,7 @@
       },
       "lowest": 139,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "PT-141 (Bremelanotide)",
@@ -279,7 +279,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/pt-141",
         "US Peptide Labs": "https://uspeptidelabs.co/products/pt-141-nasal-spray"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "PT-141 / Oxytocin combo",
@@ -296,7 +296,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-pt-141-oxytocin-tesamorelin-10mg-3mg-10mg/",
         "US Peptide Labs": "https://uspeptidelabs.co/products/pt-141-oxytocin-nasal"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Selank",
@@ -316,7 +316,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/selank",
         "US Peptide Labs": "https://uspeptidelabs.co/products/selank-nasal-spray"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Selank / Semax combo",
@@ -333,7 +333,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-selank-semax-15mg-15mg/",
         "US Peptide Labs": "https://uspeptidelabs.co/products/semax-selank-nasal"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Semax",
@@ -353,7 +353,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/semax",
         "US Peptide Labs": "https://uspeptidelabs.co/products/semax-nasal-spray"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "SS-31 / Elamipretide",
@@ -370,7 +370,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-ss-31-25mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ss-31"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Thymosin Alpha-1",
@@ -387,7 +387,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/nasal-thymosin-alpha-1-10mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "5-Amino-1MQ",
@@ -424,7 +424,7 @@
         "Prism Labs": "https://www.prismlabs.store/product/amino-1mq",
         "Aura Research": "https://tryauraresearch.com/product/5-amino-1mq/?attribute_pa_amount=50mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "AOD-9604",
@@ -451,7 +451,7 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/aod-9604/?attribute_size=10mg",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/8b644e3f"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "ARA-290 (Cibinetide)",
@@ -478,7 +478,7 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/e7bd4de5",
         "Ares Research": "https://aresresearchlab.com/catalog/ara-290"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "BPC-157",
@@ -553,7 +553,7 @@
         "Aura Research": "https://tryauraresearch.com/product/bpc-157/?attribute_pa_amount=10mg",
         "JD BioWorks": "https://jdbioworks.com/product/bpc-157/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "CJC-1295 / Ipamorelin combo",
@@ -573,7 +573,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin",
         "US Peptide Labs": "https://uspeptidelabs.co/products/cjc-1295-ipamorelin"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "DSIP",
@@ -608,7 +608,7 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/dsip/?attribute_size=5mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/dsip/"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Epitalon",
@@ -620,7 +620,7 @@
       },
       "lowest": 90,
       "notes": null,
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Epitalon",
@@ -639,7 +639,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/epitalon",
         "US Peptide Labs": "https://uspeptidelabs.co/products/epitalon"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "FOXO4-DRI",
@@ -654,7 +654,7 @@
       },
       "lowest": 62.63,
       "notes": null,
-      "category": "Cellular & Longevity",
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/foxo4-dri/",
         "Peptide Titans": "https://peptidetitans.com/product/foxo4-dri/?attribute_mg=10+mg",
@@ -737,7 +737,7 @@
         "MsAmino": "https://msamino.com/products/ghk-cu",
         "Ares Research": "https://aresresearchlab.com/catalog/ghk-cu"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Glutathione",
@@ -764,7 +764,7 @@
       },
       "lowest": 36.83,
       "notes": null,
-      "category": "Cellular & Longevity",
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/glutathione/",
         "Midwest Peptide": "https://midwestpeptide.com/products/glutathione-1500mg",
@@ -799,7 +799,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/glutathione",
         "US Peptide Labs": "https://uspeptidelabs.co/products/glutathione-2000mg-vial"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Glutathione / Magnesium combo",
@@ -816,7 +816,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/glutathione-magnesium-50mg-12-5mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/glutathione-magnesium"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Humanin",
@@ -833,7 +833,7 @@
         "UltraLife": "https://ultralifepeptides.com/shop/vial-humanin-5mg/",
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/humanin"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Humanin",
@@ -846,7 +846,7 @@
       },
       "lowest": 108.95,
       "notes": null,
-      "category": "Cellular & Longevity",
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/humanin/"
       }
@@ -902,7 +902,7 @@
         "Echo Peptides": "https://echopeptides.co/product/igf-1-lr3-1mg",
         "MsAmino": "https://msamino.com/products/igf-1-lr3-1mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Kisspeptin",
@@ -936,7 +936,7 @@
         "Echo Peptides": "https://echopeptides.co/product/kisspeptin-10-5mg",
         "Ares Research": "https://aresresearchlab.com/catalog/kisspeptin"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Kisspeptin",
@@ -962,7 +962,7 @@
       },
       "lowest": 27.37,
       "notes": null,
-      "category": "Sexual Health & Hormonal",
+      "category": "Melanocortin & HPG-Axis Compounds",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/kisspeptin-10/",
         "Alpha Peptides": "https://alpha-peptides.com/product/kisspeptin/",
@@ -1043,7 +1043,7 @@
         "JD BioWorks": "https://jdbioworks.com/product/kpv/",
         "Ares Research": "https://aresresearchlab.com/catalog/kpv"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "LL-37",
@@ -1071,7 +1071,7 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/ll37/",
         "Ares Research": "https://aresresearchlab.com/catalog/ll-37"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Methyl B12 (Methylcobalamin)",
@@ -1086,7 +1086,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/vial-methyl-b12/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "MOTS-C",
@@ -1163,7 +1163,7 @@
         "MsAmino": "https://msamino.com/products/mots-c",
         "JD BioWorks": "https://jdbioworks.com/product/mots-c/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "MOTS-C",
@@ -1193,7 +1193,7 @@
         "Formal Peptides": "https://formalpeptides.com/product/mots-c-20mg/",
         "Elev-8 Labs": "https://elev-8labs.com/product/mots-c/?attribute_pa_size=20mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "MOTS-C",
@@ -1218,7 +1218,7 @@
       },
       "lowest": 78.0,
       "notes": null,
-      "category": "Cellular & Longevity",
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/mots-c?variant=48882685116571",
         "Offline Peptides": "https://offlinepeptides.com/product/mots-c/",
@@ -1308,7 +1308,7 @@
         "MsAmino": "https://msamino.com/products/nad-500mg",
         "JD BioWorks": "https://jdbioworks.com/product/nad/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "PT-141 (Bremelanotide)",
@@ -1367,7 +1367,7 @@
         "JD BioWorks": "https://jdbioworks.com/product/pt-141/",
         "Ares Research": "https://aresresearchlab.com/catalog/pt-141"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Selank",
@@ -1435,7 +1435,7 @@
         "MsAmino": "https://msamino.com/products/selank",
         "JD BioWorks": "https://jdbioworks.com/product/selank/"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Semax",
@@ -1499,7 +1499,7 @@
         "Aura Research": "https://tryauraresearch.com/product/semax/",
         "MsAmino": "https://msamino.com/products/semax-10mg"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Sermorelin",
@@ -1541,7 +1541,7 @@
         "Echo Peptides": "https://echopeptides.co/product/sermorelin-10mg",
         "MsAmino": "https://msamino.com/products/sermorelin-10mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "SS-31 / Elamipretide",
@@ -1597,7 +1597,7 @@
         "MsAmino": "https://msamino.com/products/ss-31",
         "Ares Research": "https://aresresearchlab.com/catalog/ss-31"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Thymosin Alpha-1",
@@ -1640,7 +1640,7 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/2cbba119",
         "Elev-8 Labs": "https://elev-8labs.com/product/thymosin-alpha-1/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "VIP (Vasoactive Intestinal Peptide)",
@@ -1652,7 +1652,7 @@
       },
       "lowest": 64,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "VIP (Vasoactive Intestinal Peptide)",
@@ -1687,7 +1687,7 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b5f5e4b8",
         "Ares Research": "https://aresresearchlab.com/catalog/vip"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "5-Amino-1MQ",
@@ -1706,7 +1706,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/5-amino-1mq",
         "Peptide Titans": "https://peptidetitans.com/product/5-amino-1mq-50-mg-capsules/"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Dihexa",
@@ -1721,7 +1721,7 @@
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/capsules-dihexa-10mg/"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "AOD-9604",
@@ -1767,7 +1767,7 @@
         "Aura Research": "https://tryauraresearch.com/product/aod-9604/",
         "MsAmino": "https://msamino.com/products/aod-9604-5mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "BPC-157",
@@ -1779,7 +1779,7 @@
       },
       "lowest": 255.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "BPC-157",
@@ -1791,7 +1791,7 @@
       },
       "lowest": 99.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "BPC-157",
@@ -1805,7 +1805,7 @@
       },
       "lowest": 69.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/bpc-157/?attribute_pa_size=20mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/bpc-157/?attribute_pa_size=20mg"
@@ -1833,7 +1833,7 @@
       },
       "lowest": 18.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/bpc-157",
         "Offline Peptides": "https://offlinepeptides.com/product/bpc-157/",
@@ -1861,7 +1861,7 @@
       },
       "lowest": 39.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "MsAmino": "https://msamino.com/products/cjc-1295-with-dac-2mg",
         "Ares Research": "https://aresresearchlab.com/catalog/cjc-1295-dac"
@@ -1884,7 +1884,7 @@
       },
       "lowest": 33.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/cjc-1295-dac-5mg/",
         "Alpha Peptides": "https://alpha-peptides.com/product/cjc-1295-dac/",
@@ -1953,7 +1953,7 @@
         "Helion Research": "https://helionresearchusa.com/product.html?sku=cp10",
         "JD BioWorks": "https://jdbioworks.com/product/cjc-1295-no-dac-ipamorelin/"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "CJC-1295",
@@ -1979,7 +1979,7 @@
       },
       "lowest": 28.41,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/cjc-1295-no-dac/",
         "Midwest Peptide": "https://midwestpeptide.com/products/cjc-1295-no-dac",
@@ -2012,7 +2012,7 @@
       },
       "lowest": 29.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/cjc-1295-no-dac/",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/cjc-1295-no-dac-5mg/?attribute_pa_size=5mg",
@@ -2031,7 +2031,7 @@
       },
       "lowest": 119.99,
       "notes": null,
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "DSIP",
@@ -2043,7 +2043,7 @@
       },
       "lowest": 99.99,
       "notes": null,
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Epitalon",
@@ -2091,7 +2091,7 @@
         "MsAmino": "https://msamino.com/products/epithalon",
         "Ares Research": "https://aresresearchlab.com/catalog/epithalon"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "GHK-Cu (Copper Peptide)",
@@ -2120,7 +2120,7 @@
       },
       "lowest": 35.0,
       "notes": null,
-      "category": "Cellular & Longevity",
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/ghk-cu-50mg?variant=c7c41895-e737-43d0-967f-79d61bde1270",
         "Offline Peptides": "https://offlinepeptides.com/product/ghk-cu/",
@@ -2154,7 +2154,7 @@
       },
       "lowest": 14.32,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ghrp-2/",
         "Peptide Titans": "https://peptidetitans.com/product/ghrp-2/?attribute_mg=5+mg",
@@ -2174,7 +2174,7 @@
       },
       "lowest": 14.32,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ghrp-6/",
         "Peptide Titans": "https://peptidetitans.com/product/ghrp-6/?attribute_mg=5+mg",
@@ -2192,7 +2192,7 @@
       },
       "lowest": 39.99,
       "notes": null,
-      "category": "Sexual Health & Hormonal",
+      "category": "Melanocortin & HPG-Axis Compounds",
       "vendor_product_urls": {
         "Ares Research": "https://aresresearchlab.com/catalog/gonadorelin"
       }
@@ -2227,7 +2227,7 @@
       },
       "lowest": 35.0,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ipamorelin/",
         "American Peptides": "https://www.americanpeptides.us/products/ipamorelin?variant=49007439806619",
@@ -2271,7 +2271,7 @@
       },
       "lowest": 34.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/ipamorelin/",
         "American Peptides": "https://www.americanpeptides.us/products/ipamorelin",
@@ -2296,7 +2296,7 @@
       },
       "lowest": 24.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Peptide Titans": "https://peptidetitans.com/product/kpv/?attribute_mg=5+mg"
       }
@@ -2311,7 +2311,7 @@
       },
       "lowest": 109.99,
       "notes": null,
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Sermorelin",
@@ -2330,7 +2330,7 @@
       },
       "lowest": 29.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/sermorelin/",
         "American Peptides": "https://www.americanpeptides.us/products/sermorelin",
@@ -2351,7 +2351,7 @@
       },
       "lowest": 114.99,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "SLU-PP-332",
@@ -2363,7 +2363,7 @@
       },
       "lowest": 189.99,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Thymosin Alpha-1",
@@ -2380,7 +2380,7 @@
       },
       "lowest": 39.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/thymosin-alpha-1-5mg/",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/thymosin-alpha-1-5mg/?attribute_pa_size=5mg",
@@ -2407,7 +2407,7 @@
       },
       "lowest": 33.12,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/5-amino-1mq/",
         "Offline Peptides": "https://offlinepeptides.com/product/5-amino-1mq/",
@@ -2432,7 +2432,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/vesugen-20mg/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "MOTS-C",
@@ -2447,7 +2447,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/mots-c-peptide/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "GHK-Cu (Copper Peptide)",
@@ -2462,7 +2462,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/ghk-cu-peptide/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "BPC-157",
@@ -2477,7 +2477,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/bpc-157-10mg-vial-kit/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "PT-141 (Bremelanotide)",
@@ -2494,7 +2494,7 @@
         "Royal Peptides": "https://royal-peptides.com/shop/pt-141-10mg-vial/",
         "Midwest Peptide": "https://midwestpeptide.com/products/pt-141"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Selank / Semax combo",
@@ -2513,7 +2513,7 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/semax-selank",
         "Peptide Titans": "https://peptidetitans.com/product/semax-selank-blend/?attribute_mg=10/10+mg"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Sermorelin",
@@ -2528,7 +2528,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/sermorelin-10mg-kit/"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Ipamorelin",
@@ -2543,7 +2543,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/ipamorelin-10mg-kit10-vials/"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Glutathione",
@@ -2558,7 +2558,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/buy-glutathione/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "SS-31 / Elamipretide",
@@ -2573,7 +2573,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/31pv/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Thymosin Alpha-1",
@@ -2588,7 +2588,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/thymosin-alpha-1-ta-1-10mg-kit/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "ARA-290 (Cibinetide)",
@@ -2603,7 +2603,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/ara-290-peptide-cibinetide/"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Oxytocin",
@@ -2624,7 +2624,7 @@
         "Alpha Peptides": "https://alpha-peptides.com/product/oxytocin/",
         "Peptide Titans": "https://peptidetitans.com/product/oxytocin/?attribute_mg=10+mg"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Pinealon",
@@ -2639,7 +2639,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/pinealon-10mg-peptide/"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "CJC-1295",
@@ -2654,7 +2654,7 @@
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/cjc-1295-no-dac-5mg-kit/"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "CJC-1295 / Ipamorelin combo",
@@ -2669,7 +2669,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/cjc-1295-ipamorelin"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Epitalon",
@@ -2684,7 +2684,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/epitalon"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "GHK-Cu (Copper Peptide)",
@@ -2699,7 +2699,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ghk-cu"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Methyl B12 (Methylcobalamin)",
@@ -2714,7 +2714,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/methyl-b12"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "MOTS-C",
@@ -2729,7 +2729,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/mots-c"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "NAD+",
@@ -2746,7 +2746,7 @@
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/nad-plus",
         "US Peptide Labs": "https://uspeptidelabs.co/products/nad-oral"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "SS-31 / Elamipretide",
@@ -2761,7 +2761,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/ss-31"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "PT-141 (Bremelanotide)",
@@ -2776,7 +2776,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/pt-141"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Selank",
@@ -2791,7 +2791,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/selank"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Semax",
@@ -2806,7 +2806,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/semax"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "BPC-157",
@@ -2821,7 +2821,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/bpc-157"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "KPV",
@@ -2836,7 +2836,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/kpv"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Thymosin Alpha-1",
@@ -2851,7 +2851,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Thymosin Alpha-1",
@@ -2866,7 +2866,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Thymosin Alpha-1",
@@ -2881,7 +2881,7 @@
       "vendor_product_urls": {
         "BioIntegrity Research": "https://biointegrityresearch.com/compounds/thymosin-alpha-1"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Semax",
@@ -3088,7 +3088,7 @@
       },
       "lowest": 110.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "US Peptide Labs": "https://uspeptidelabs.co/products/bpc-tb-nasal"
       }
@@ -3103,7 +3103,7 @@
       },
       "lowest": 199,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)",
@@ -3115,7 +3115,7 @@
       },
       "lowest": 269,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Melanotan II",
@@ -3127,7 +3127,7 @@
       },
       "lowest": 149,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Melanotan II",
@@ -3139,7 +3139,7 @@
       },
       "lowest": 190,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "BPC-157 / TB-500 combo",
@@ -3151,7 +3151,7 @@
       },
       "lowest": 99,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "GLOW Blend (GHK-Cu/BPC-157/TB-500)",
@@ -3164,7 +3164,7 @@
       },
       "lowest": 102.12,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Core Peptides": "https://www.corepeptides.com/peptides/bpc-157-tb-500-ghk-cu-blend/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/glow-ghk50mg-tb10mg-bpc10mg/"
@@ -3188,7 +3188,7 @@
       },
       "lowest": 70.79,
       "notes": "Midwest Peptide: vendor page lists 80mg in details and 90mg in title; size not yet confirmed.",
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/klow/",
         "Royal Peptides": "https://royal-peptides.com/shop/buy-klow-peptide-blend-online-usa/",
@@ -3234,7 +3234,7 @@
       },
       "lowest": 21.05,
       "notes": null,
-      "category": "Sexual Health & Hormonal",
+      "category": "Melanocortin & HPG-Axis Compounds",
       "vendor_product_urls": {
         "Core Peptides": "https://www.corepeptides.com/peptides/melanotan-2-10mg/",
         "Purity Peptides": "https://puritypeptides.is/product/melanotan-ii-10mg",
@@ -3276,7 +3276,7 @@
       },
       "lowest": 31.32,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Core Peptides": "https://www.corepeptides.com/peptides/tb-500/",
         "Alpha Peptides": "https://alpha-peptides.com/product/tb-500/",
@@ -3293,7 +3293,7 @@
       },
       "lowest": 99.99,
       "notes": null,
-      "category": "Sexual Health & Hormonal",
+      "category": "Melanocortin & HPG-Axis Compounds",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/melanotan-ii-nasal-spray-10mg"
       }
@@ -3315,7 +3315,7 @@
       },
       "lowest": 39.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bpc-157-tb-500-blend-10mg-bpc-157-5mg-tb-500-5mg",
         "AFA Biosciences": "https://afabiosciences.com/products/wolverine-blend",
@@ -3348,7 +3348,7 @@
       },
       "lowest": 58.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bpc-157-tb-500-blend-10mg-bpc-157-10mg-tb-500-10mg",
         "Midwest Peptide": "https://midwestpeptide.com/products/bpc-157-tb-500-wolverine",
@@ -3374,7 +3374,7 @@
       },
       "lowest": 179.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/glow-blend-tb-500-bpc-157-ghk-cu-nasal-spray-70mg"
       }
@@ -3416,7 +3416,7 @@
       },
       "lowest": 48.41,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/glow-ghk-cu-bpc-157-tb-500",
         "Alpha Peptides": "https://alpha-peptides.com/product/glow/",
@@ -3481,7 +3481,7 @@
       },
       "lowest": 75.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/klow-blend",
         "American Peptides": "https://www.americanpeptides.us/products/klow-blend",
@@ -3543,7 +3543,7 @@
       },
       "lowest": 31.32,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/tb-500-thymosin-beta-4-10mg",
         "Alpha Peptides": "https://alpha-peptides.com/product/tb-500/",
@@ -3588,7 +3588,7 @@
       },
       "lowest": 29.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/tb-500-thymosin-beta-4-5mg",
         "Offline Peptides": "https://offlinepeptides.com/product/tb-500/",
@@ -3609,7 +3609,7 @@
       },
       "lowest": 109.99,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/tb-500-nasal-spray-10mg"
       }
@@ -3631,7 +3631,7 @@
       },
       "lowest": 58.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/wolverine-bpc-157-tb-500-blend/",
         "Crownwell Research": "https://crownwellresearch.com/product/bpc-157-tb-500-wolverine/",
@@ -3656,7 +3656,7 @@
       },
       "lowest": 99.46,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/bpc-157-tb-500?variant=48167416168603",
         "Vector E Lab": "https://app.vectorelab.com/product/wolverine-stack/?attribute_mg=20",
@@ -3674,7 +3674,7 @@
       },
       "lowest": 70,
       "notes": null,
-      "category": "Tissue Repair & Recovery",
+      "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/glow-blend-vial-kit/"
       }
@@ -3689,7 +3689,7 @@
       },
       "lowest": 64.0,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "TB-500",
@@ -3701,7 +3701,7 @@
       },
       "lowest": 94.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "BPC-157 / TB-500 blend",
@@ -3713,7 +3713,7 @@
       },
       "lowest": 104.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)",
@@ -3725,7 +3725,7 @@
       },
       "lowest": 154.0,
       "notes": null,
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "GLP-1 (Semaglutide) Oral Spray",
@@ -3737,7 +3737,7 @@
       },
       "lowest": 206,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "PT-141 / Oxytocin / Tesamorelin combo",
@@ -3749,7 +3749,7 @@
       },
       "lowest": 304,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Retatrutide",
@@ -3762,7 +3762,7 @@
       },
       "lowest": 220.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt-nasal?variant=44076811845719"
       }
@@ -3778,7 +3778,7 @@
       },
       "lowest": 350.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt-nasal?variant=44076218482775"
       }
@@ -3793,7 +3793,7 @@
       },
       "lowest": 574,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Tesamorelin",
@@ -3805,7 +3805,7 @@
       },
       "lowest": 185,
       "notes": null,
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Tirzepatide",
@@ -3817,7 +3817,7 @@
       },
       "lowest": 222,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Tirzepatide",
@@ -3830,7 +3830,7 @@
       },
       "lowest": 220.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "US Peptide Labs": "https://uspeptidelabs.co/products/glp-2t-nasal"
       }
@@ -3847,7 +3847,7 @@
       },
       "lowest": 149.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Crownwell Research": "https://crownwellresearch.com/product/glp3-reta-40mg/",
         "US Peptide Labs": "https://uspeptidelabs.co/products/glp-3rt?variant=44076217598039"
@@ -3891,7 +3891,7 @@
       },
       "lowest": 56.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/tesamorelin-10mg",
         "American Peptides": "https://www.americanpeptides.us/products/tesamorelin",
@@ -3935,7 +3935,7 @@
       },
       "lowest": 127.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Crownwell Research": "https://crownwellresearch.com/product/glp2-t-40mg/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=40mg",
@@ -3953,7 +3953,7 @@
       },
       "lowest": 125,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Semaglutide",
@@ -3976,7 +3976,7 @@
       },
       "lowest": 30.99,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-1-sm",
         "American Peptides": "https://www.americanpeptides.us/products/semaglutide?variant=48978865127579",
@@ -4001,7 +4001,7 @@
       },
       "lowest": 139.99,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Tirzepatide",
@@ -4029,7 +4029,7 @@
       },
       "lowest": 26.88,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/tirzepatide",
         "Synthrolab": "https://synthrolab.com/product/trz/?attribute_strength=10mg",
@@ -4070,7 +4070,7 @@
       },
       "lowest": 50.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/tirzepatide?variant=48622112800923",
         "Vertex Labs": "https://vertexpeptideslab.org/product/glp-2-trz/?attribute_strength=20mg",
@@ -4124,7 +4124,7 @@
       },
       "lowest": 43.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/glp-3-rt/",
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=21a42426-d69d-4fe1-958a-7b940e6b0887",
@@ -4184,7 +4184,7 @@
       },
       "lowest": 59.99,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=d185705c-48cc-4dc2-a399-d38e11e46774",
         "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48140477825179",
@@ -4229,7 +4229,7 @@
       },
       "lowest": 84.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/glp-3-rt?variant=37249d34-0184-46ed-b9e7-37532d0e375a",
         "American Peptides": "https://www.americanpeptides.us/products/retatrutide?variant=48622112637083",
@@ -4259,7 +4259,7 @@
       },
       "lowest": 39.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Vertex Labs": "https://vertexpeptideslab.org/product/tesa/?attribute_strength=5mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/tesamorelin-5-mg/?attribute_pa_size=5mg",
@@ -4277,7 +4277,7 @@
       },
       "lowest": 119,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/tesamorelin-ipamorelin"
       }
@@ -4293,7 +4293,7 @@
       },
       "lowest": 36,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/tirzepatide-vials/?attribute_pa_choose-an-option=5mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=5mg"
@@ -4312,7 +4312,7 @@
       },
       "lowest": 43.82,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/retatrutide-vial/?attribute_pa_choose-an-option=5mg",
         "Peptide Express": "https://peptide.express/catalog/retatrutide",
@@ -4334,7 +4334,7 @@
       },
       "lowest": 30.0,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/semaglutide",
         "Royal Peptides": "https://royal-peptides.com/shop/semaglutide-vial/?attribute_pa_choose-an-option=5mg",
@@ -4352,7 +4352,7 @@
       },
       "lowest": 75,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/tesamorelin-10mg/"
       }
@@ -4368,7 +4368,7 @@
       },
       "lowest": 56.99,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/cagrilintide/",
         "Royal Peptides": "https://royal-peptides.com/shop/cagrilintide-kit/"
@@ -4386,7 +4386,7 @@
       },
       "lowest": 79.99,
       "notes": null,
-      "category": "Growth Hormone & Muscle",
+      "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/tesa-ipa-10mg-blend",
         "Royal Peptides": "https://royal-peptides.com/shop/tesamorelin-ipamorelin-blend/",
@@ -4403,7 +4403,7 @@
       },
       "lowest": 560,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Sildenafil Citrate",
@@ -4415,7 +4415,7 @@
       },
       "lowest": 135,
       "notes": null,
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "MK-677 (Ibutamoren) / MK-2866 (Ostarine) combo",
@@ -4427,7 +4427,7 @@
       },
       "lowest": 85,
       "notes": null,
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Tesofensine",
@@ -4439,7 +4439,7 @@
       },
       "lowest": 175,
       "notes": null,
-      "category": "Metabolic & Weight",
+      "category": "Incretin & Metabolic-Pathway Compounds",
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/tesofensine-500mcg-100-tablets/"
       }
@@ -4482,7 +4482,7 @@
         "Echo Peptides": "https://echopeptides.co/product/mt1-10mg",
         "Ares Research": "https://aresresearchlab.com/catalog/mt-1"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "GLP-1 (Semaglutide)",
@@ -4494,7 +4494,7 @@
       },
       "lowest": 117.0,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Tirzepatide (listed as 'GLP-2 Dual Agonist')",
@@ -4506,7 +4506,7 @@
       },
       "lowest": 124.0,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Retatrutide (listed as 'GLP-3 Triple Agonist')",
@@ -4518,7 +4518,7 @@
       },
       "lowest": 144.0,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "GLP-3 Triple / GLP-1 Blend",
@@ -4530,7 +4530,7 @@
       },
       "lowest": 259.0,
       "notes": null,
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Tesamorelin",
@@ -4542,7 +4542,7 @@
       },
       "lowest": 164.0,
       "notes": null,
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "5-Amino-1MQ",
@@ -4557,7 +4557,7 @@
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/5-amino-1mq"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Cagrilintide",
@@ -4584,7 +4584,7 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/cagrilintide/",
         "Echo Peptides": "https://echopeptides.co/product/cagrilintide-10mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Tirzepatide",
@@ -4617,7 +4617,7 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/tirz/?attribute_size=30mg",
         "Zeptix Labs": "https://zeptixlabs.com/product/glp-2-t/?variant=9"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "DSIP",
@@ -4648,7 +4648,7 @@
         "Prism Labs": "https://www.prismlabs.store/product/dsip",
         "MsAmino": "https://msamino.com/products/dsip-10mg"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Survodutide",
@@ -4665,7 +4665,7 @@
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/survodutide-10mg/",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/survodutide"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Retatrutide / Cagrilintide blend",
@@ -4680,7 +4680,7 @@
       "vendor_product_urls": {
         "Licensed Peptides": "https://licensedpeptides.com/product/cagrilintide-lp3-r-blend/"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Adamax",
@@ -4701,7 +4701,7 @@
         "Crownwell Research": "https://crownwellresearch.com/product/adamax/",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/51071792"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Tirzepatide",
@@ -4726,7 +4726,7 @@
         "Formal Peptides": "https://formalpeptides.com/product/tirzepatide/?attribute_pa_vial-sizes=60mg",
         "Aura Research": "https://tryauraresearch.com/product/glp-2tz/?attribute_pa_amount=60mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Cagrilintide",
@@ -4749,7 +4749,7 @@
         "Aura Research": "https://tryauraresearch.com/product/cagrilintide/",
         "Ares Research": "https://aresresearchlab.com/catalog/cagrilintide"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Glutathione",
@@ -4766,7 +4766,7 @@
         "Lumera Labs": "https://mylumeralabs.com/product/l-glutathione",
         "Crownwell Research": "https://crownwellresearch.com/product/glutathione-1200-mg/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "NAD+",
@@ -4783,7 +4783,7 @@
         "Aero Peptides": "https://aeropeptides.com/product/nad-100mg",
         "Ares Research": "https://aresresearchlab.com/catalog/nad-plus"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Epitalon",
@@ -4812,7 +4812,7 @@
         "Aura Research": "https://tryauraresearch.com/product/epithalon/?attribute_pa_amount=50mg",
         "JD BioWorks": "https://jdbioworks.com/product/epitalon/"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "5-Amino-1MQ",
@@ -4827,7 +4827,7 @@
       "vendor_product_urls": {
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/5-amino-1mq"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Glutathione",
@@ -4842,7 +4842,7 @@
       "vendor_product_urls": {
         "MsAmino": "https://msamino.com/products/glutathione-750mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "BPC-157 / TB-500 blend",
@@ -4857,7 +4857,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157-tb-500/?attribute_strength=10mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "BPC-157 / TB-500 blend",
@@ -4872,7 +4872,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157-tb-500/?attribute_strength=20mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "TB-500",
@@ -4887,7 +4887,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/tb-500/?attribute_strength=2mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "TB-500",
@@ -4902,7 +4902,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/tb-500/?attribute_strength=5mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "TB-500",
@@ -4917,7 +4917,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/tb-500/?attribute_strength=10mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)",
@@ -4932,7 +4932,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/klow/?attribute_strength=80mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "NAD+",
@@ -4947,7 +4947,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/nad/?attribute_strength=100mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "NAD+",
@@ -4962,7 +4962,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/nad/?attribute_strength=500mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "NAD+",
@@ -4977,7 +4977,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/nad/?attribute_strength=1000mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "CJC-1295 / Ipamorelin combo",
@@ -4992,7 +4992,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/cjc-1295-ipamorelin/?attribute_strength=10mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Selank",
@@ -5007,7 +5007,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/selank/?attribute_strength=5mg"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Selank",
@@ -5022,7 +5022,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/selank/?attribute_strength=10mg"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "BPC-157",
@@ -5037,7 +5037,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157/?attribute_strength=5mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "BPC-157",
@@ -5052,7 +5052,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157/?attribute_strength=10mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "GHK-Cu (Copper Peptide)",
@@ -5067,7 +5067,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/ghk-cu/?attribute_strength=50mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "GHK-Cu (Copper Peptide)",
@@ -5082,7 +5082,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/ghk-cu/?attribute_strength=100mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Semax",
@@ -5097,7 +5097,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/semax/?attribute_strength=5mg"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Semax",
@@ -5112,7 +5112,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/semax/?attribute_strength=10mg"
       },
-      "category": "Cognitive & Neurological"
+      "category": "Neuropeptide Analogues"
     },
     {
       "peptide": "Glutathione",
@@ -5127,7 +5127,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/glutathione/?attribute_strength=600mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Glutathione",
@@ -5142,7 +5142,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/glutathione/?attribute_strength=1500mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "PT-141 (Bremelanotide)",
@@ -5157,7 +5157,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/pt-141/?attribute_strength=10mg"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "KPV",
@@ -5172,7 +5172,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/kpv/?attribute_strength=10mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Tesamorelin",
@@ -5187,7 +5187,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/tesamorelin/?attribute_strength=10mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "GLOW Blend (GHK-Cu/BPC-157/TB-500)",
@@ -5202,7 +5202,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/glow/?attribute_strength=70mg"
       },
-      "category": "Tissue Repair & Recovery"
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
     {
       "peptide": "Melanotan I",
@@ -5217,7 +5217,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/melanotan-1/?attribute_strength=10mg"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Melanotan II",
@@ -5232,7 +5232,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/melanotan-2/?attribute_strength=10mg"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "MOTS-C",
@@ -5247,7 +5247,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/mots-c/?attribute_strength=10mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "MOTS-C",
@@ -5262,7 +5262,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/mots-c/?attribute_strength=20mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "MOTS-C",
@@ -5277,7 +5277,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/mots-c/?attribute_strength=40mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "CJC-1295",
@@ -5292,7 +5292,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/cjc-1295-no-dac/?attribute_strength=5mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "CJC-1295",
@@ -5307,7 +5307,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/cjc-1295-no-dac/?attribute_strength=10mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "SS-31 / Elamipretide",
@@ -5322,7 +5322,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/ss-31/?attribute_strength=10mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "IGF-1 LR3",
@@ -5337,7 +5337,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/igf-1-lr3/?attribute_strength=0.1mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "SLU-PP-332",
@@ -5352,7 +5352,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/slu-pp-332/?attribute_strength=5mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "AOD-9604",
@@ -5367,7 +5367,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/aod-9604/?attribute_strength=5mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "AOD-9604",
@@ -5382,7 +5382,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/aod-9604/?attribute_strength=10mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Ipamorelin",
@@ -5397,7 +5397,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/ipamorelin/?attribute_strength=5mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Ipamorelin",
@@ -5412,7 +5412,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/ipamorelin/?attribute_strength=10mg"
       },
-      "category": "Growth Hormone & Muscle"
+      "category": "GH Secretagogues & IGF-Axis Peptides"
     },
     {
       "peptide": "Cagrilintide",
@@ -5427,7 +5427,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/cagrilintide/?attribute_strength=5mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Cagrilintide",
@@ -5442,7 +5442,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/cagrilintide/?attribute_strength=10mg"
       },
-      "category": "Metabolic & Weight"
+      "category": "Incretin & Metabolic-Pathway Compounds"
     },
     {
       "peptide": "Epitalon",
@@ -5457,7 +5457,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/epithalon/?attribute_strength=10mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Epitalon",
@@ -5472,7 +5472,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/epithalon/?attribute_strength=50mg"
       },
-      "category": "Cellular & Longevity"
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
     {
       "peptide": "Kisspeptin",
@@ -5487,7 +5487,7 @@
       "vendor_product_urls": {
         "Direct Research Supply": "https://directresearchsupply.com/product/kisspeptin/?attribute_strength=10mg"
       },
-      "category": "Sexual Health & Hormonal"
+      "category": "Melanocortin & HPG-Axis Compounds"
     },
     {
       "peptide": "Bacteriostatic Water",
