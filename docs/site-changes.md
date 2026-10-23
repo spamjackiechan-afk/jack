@@ -21,7 +21,9 @@ The check serves the repo statically and renders it in headless Chromium. It fai
 - any uncaught JavaScript error happens on `index.html` or `suppliers.html`;
 - the homepage shows fewer than 50 product cards or fewer than 8 vendor names;
 - the in-page render safety net had to kick in (`[site-guard]` console errors);
-- the reconstitution calculator doesn't return `10 units` for 5 mg / 2 mL / 0.25 mg;
+- `calculator.html` exists again, or any public page has calculator markup or a
+  `/calculator` link. The reconstitution calculator was removed on purpose in
+  Oct 2026 (FDA cites these as evidence of human use). Don't bring it back;
 - the homepage Suppliers nav item doesn't link to `/suppliers`, or `suppliers.html` shows fewer than 8 supplier cards.
 - the embedded `DATA` / `VENDOR_CONFIG` lines don't exactly match
   `data/catalog.json` (minus any hidden vendors, see below) / `vendor_config.json`.
