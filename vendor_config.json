@@ -634,5 +634,22 @@
     "shipping_payment_researched": "2026-10-23",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
     "code_discount_pct": 20
+  },
+  "JD BioWorks": {
+    "status": "approved",
+    "site_url": "https://jdbioworks.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://jdbioworks.com/r/discount-peptides/",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNT",
+    "payment_methods": [
+      "Zelle",
+      "Pay by Bank"
+    ],
+    "payment_note": "Prices in USD. Zelle or Pay by Bank (ACH) only; Zelle orders must be paid within 24 hours. Our code DISCOUNT gives an extra 5% off eligible products (not the JD-2TR 10mg special) and can't be combined with another coupon.",
+    "shipping_info": "U.S. shipping only (no P.O. boxes). FedEx 2Day free on every eligible U.S. order, no minimum. Most verified, in-stock orders ship the same or next business day.",
+    "shipping_payment_researched": "2026-10-23",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 5
   }
 }
