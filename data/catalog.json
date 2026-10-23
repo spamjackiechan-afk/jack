@@ -4785,6 +4785,666 @@
         "MsAmino": "https://msamino.com/products/glutathione-750mg"
       },
       "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "BPC-157 / TB-500 blend",
+      "format": "Vial",
+      "size": "10mg (5/5mg) (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 225
+      },
+      "lowest": 225,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157-tb-500/?attribute_strength=10mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "BPC-157 / TB-500 blend",
+      "format": "Vial",
+      "size": "20mg (10/10mg) (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 315
+      },
+      "lowest": 315,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157-tb-500/?attribute_strength=20mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "TB-500",
+      "format": "Vial",
+      "size": "2mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 155
+      },
+      "lowest": 155,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/tb-500/?attribute_strength=2mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "TB-500",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 200
+      },
+      "lowest": 200,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/tb-500/?attribute_strength=5mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "TB-500",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 265
+      },
+      "lowest": 265,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/tb-500/?attribute_strength=10mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "KLOW (BPC-157/TB-500/GHK-Cu/KPV)",
+      "format": "Vial",
+      "size": "80mg (10/10/50/10mg) (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 295
+      },
+      "lowest": 295,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/klow/?attribute_strength=80mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "NAD+",
+      "format": "Vial",
+      "size": "100mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 145
+      },
+      "lowest": 145,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/nad/?attribute_strength=100mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "NAD+",
+      "format": "Vial",
+      "size": "500mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 185
+      },
+      "lowest": 185,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/nad/?attribute_strength=500mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "NAD+",
+      "format": "Vial",
+      "size": "1000mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 245
+      },
+      "lowest": 245,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/nad/?attribute_strength=1000mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "CJC-1295 / Ipamorelin combo",
+      "format": "Vial",
+      "size": "5mg/5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 215
+      },
+      "lowest": 215,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/cjc-1295-ipamorelin/?attribute_strength=10mg"
+      },
+      "category": "Growth Hormone & Muscle"
+    },
+    {
+      "peptide": "Selank",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 160
+      },
+      "lowest": 160,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/selank/?attribute_strength=5mg"
+      },
+      "category": "Cognitive & Neurological"
+    },
+    {
+      "peptide": "Selank",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 200
+      },
+      "lowest": 200,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/selank/?attribute_strength=10mg"
+      },
+      "category": "Cognitive & Neurological"
+    },
+    {
+      "peptide": "BPC-157",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 145
+      },
+      "lowest": 145,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157/?attribute_strength=5mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "BPC-157",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 175
+      },
+      "lowest": 175,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/bpc-157/?attribute_strength=10mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "GHK-Cu (Copper Peptide)",
+      "format": "Vial",
+      "size": "50mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 140
+      },
+      "lowest": 140,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/ghk-cu/?attribute_strength=50mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "GHK-Cu (Copper Peptide)",
+      "format": "Vial",
+      "size": "100mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 165
+      },
+      "lowest": 165,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/ghk-cu/?attribute_strength=100mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "Semax",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 160
+      },
+      "lowest": 160,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/semax/?attribute_strength=5mg"
+      },
+      "category": "Cognitive & Neurological"
+    },
+    {
+      "peptide": "Semax",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 200
+      },
+      "lowest": 200,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/semax/?attribute_strength=10mg"
+      },
+      "category": "Cognitive & Neurological"
+    },
+    {
+      "peptide": "Glutathione",
+      "format": "Vial",
+      "size": "600mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 155
+      },
+      "lowest": 155,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/glutathione/?attribute_strength=600mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "Glutathione",
+      "format": "Vial",
+      "size": "1500mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 185
+      },
+      "lowest": 185,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/glutathione/?attribute_strength=1500mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "PT-141 (Bremelanotide)",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 175
+      },
+      "lowest": 175,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/pt-141/?attribute_strength=10mg"
+      },
+      "category": "Sexual Health & Hormonal"
+    },
+    {
+      "peptide": "KPV",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 175
+      },
+      "lowest": 175,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/kpv/?attribute_strength=10mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "Tesamorelin",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 305
+      },
+      "lowest": 305,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/tesamorelin/?attribute_strength=10mg"
+      },
+      "category": "Growth Hormone & Muscle"
+    },
+    {
+      "peptide": "GLOW Blend (GHK-Cu/BPC-157/TB-500)",
+      "format": "Vial",
+      "size": "70mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 295
+      },
+      "lowest": 295,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/glow/?attribute_strength=70mg"
+      },
+      "category": "Tissue Repair & Recovery"
+    },
+    {
+      "peptide": "Melanotan I",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 160
+      },
+      "lowest": 160,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/melanotan-1/?attribute_strength=10mg"
+      },
+      "category": "Sexual Health & Hormonal"
+    },
+    {
+      "peptide": "Melanotan II",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 160
+      },
+      "lowest": 160,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/melanotan-2/?attribute_strength=10mg"
+      },
+      "category": "Sexual Health & Hormonal"
+    },
+    {
+      "peptide": "MOTS-C",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 170
+      },
+      "lowest": 170,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/mots-c/?attribute_strength=10mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "MOTS-C",
+      "format": "Vial",
+      "size": "20mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 230
+      },
+      "lowest": 230,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/mots-c/?attribute_strength=20mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "MOTS-C",
+      "format": "Vial",
+      "size": "40mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 350
+      },
+      "lowest": 350,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/mots-c/?attribute_strength=40mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "CJC-1295",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 190
+      },
+      "lowest": 190,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/cjc-1295-no-dac/?attribute_strength=5mg"
+      },
+      "category": "Growth Hormone & Muscle"
+    },
+    {
+      "peptide": "CJC-1295",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 265
+      },
+      "lowest": 265,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/cjc-1295-no-dac/?attribute_strength=10mg"
+      },
+      "category": "Growth Hormone & Muscle"
+    },
+    {
+      "peptide": "SS-31 / Elamipretide",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 205
+      },
+      "lowest": 205,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/ss-31/?attribute_strength=10mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "IGF-1 LR3",
+      "format": "Vial",
+      "size": "0.1mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 145
+      },
+      "lowest": 145,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/igf-1-lr3/?attribute_strength=0.1mg"
+      },
+      "category": "Growth Hormone & Muscle"
+    },
+    {
+      "peptide": "SLU-PP-332",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 255
+      },
+      "lowest": 255,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/slu-pp-332/?attribute_strength=5mg"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "AOD-9604",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 205
+      },
+      "lowest": 205,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/aod-9604/?attribute_strength=5mg"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "AOD-9604",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 285
+      },
+      "lowest": 285,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/aod-9604/?attribute_strength=10mg"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "Ipamorelin",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 145
+      },
+      "lowest": 145,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/ipamorelin/?attribute_strength=5mg"
+      },
+      "category": "Growth Hormone & Muscle"
+    },
+    {
+      "peptide": "Ipamorelin",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 175
+      },
+      "lowest": 175,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/ipamorelin/?attribute_strength=10mg"
+      },
+      "category": "Growth Hormone & Muscle"
+    },
+    {
+      "peptide": "Cagrilintide",
+      "format": "Vial",
+      "size": "5mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 225
+      },
+      "lowest": 225,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/cagrilintide/?attribute_strength=5mg"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "Cagrilintide",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 335
+      },
+      "lowest": 335,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/cagrilintide/?attribute_strength=10mg"
+      },
+      "category": "Metabolic & Weight"
+    },
+    {
+      "peptide": "Epitalon",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 145
+      },
+      "lowest": 145,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/epithalon/?attribute_strength=10mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "Epitalon",
+      "format": "Vial",
+      "size": "50mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 255
+      },
+      "lowest": 255,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/epithalon/?attribute_strength=50mg"
+      },
+      "category": "Cellular & Longevity"
+    },
+    {
+      "peptide": "Kisspeptin",
+      "format": "Vial",
+      "size": "10mg (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 215
+      },
+      "lowest": 215,
+      "notes": "Price shown is for a 10-vial kit, not a single vial.",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/kisspeptin/?attribute_strength=10mg"
+      },
+      "category": "Sexual Health & Hormonal"
+    },
+    {
+      "peptide": "Bacteriostatic Water",
+      "format": "Water",
+      "size": "10mL (10-vial kit)",
+      "amount_mg": null,
+      "prices": {
+        "Direct Research Supply": 47
+      },
+      "lowest": 47,
+      "notes": "Price shown is for a 10-vial kit, not a single vial. BAC water is excluded from the DISCOUNTS code and is an add-on item (must be bought with another product).",
+      "vendor_product_urls": {
+        "Direct Research Supply": "https://directresearchsupply.com/product/bacteriostatic-bac-water/?attribute_strength=10mL"
+      },
+      "category": null
     }
   ],
   "excluded": [

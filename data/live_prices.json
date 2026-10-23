@@ -5339,6 +5339,272 @@
         "regular_price": null,
         "error": null
       }
+    },
+    "Direct Research Supply": {
+      "BPC-157 / TB-500 blend | Vial | 10mg (5/5mg) (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/bpc-157-tb-500/?attribute_strength=10mg",
+        "price": 225,
+        "regular_price": null,
+        "error": null
+      },
+      "BPC-157 / TB-500 blend | Vial | 20mg (10/10mg) (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/bpc-157-tb-500/?attribute_strength=20mg",
+        "price": 315,
+        "regular_price": null,
+        "error": null
+      },
+      "TB-500 | Vial | 2mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/tb-500/?attribute_strength=2mg",
+        "price": 155,
+        "regular_price": null,
+        "error": null
+      },
+      "TB-500 | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/tb-500/?attribute_strength=5mg",
+        "price": 200,
+        "regular_price": null,
+        "error": null
+      },
+      "TB-500 | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/tb-500/?attribute_strength=10mg",
+        "price": 265,
+        "regular_price": null,
+        "error": null
+      },
+      "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg) (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/klow/?attribute_strength=80mg",
+        "price": 295,
+        "regular_price": null,
+        "error": null
+      },
+      "NAD+ | Vial | 100mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/nad/?attribute_strength=100mg",
+        "price": 145,
+        "regular_price": null,
+        "error": null
+      },
+      "NAD+ | Vial | 500mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/nad/?attribute_strength=500mg",
+        "price": 185,
+        "regular_price": null,
+        "error": null
+      },
+      "NAD+ | Vial | 1000mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/nad/?attribute_strength=1000mg",
+        "price": 245,
+        "regular_price": null,
+        "error": null
+      },
+      "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/cjc-1295-ipamorelin/?attribute_strength=10mg",
+        "price": 215,
+        "regular_price": null,
+        "error": null
+      },
+      "Selank | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/selank/?attribute_strength=5mg",
+        "price": 160,
+        "regular_price": null,
+        "error": null
+      },
+      "Selank | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/selank/?attribute_strength=10mg",
+        "price": 200,
+        "regular_price": null,
+        "error": null
+      },
+      "BPC-157 | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/bpc-157/?attribute_strength=5mg",
+        "price": 145,
+        "regular_price": null,
+        "error": null
+      },
+      "BPC-157 | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/bpc-157/?attribute_strength=10mg",
+        "price": 175,
+        "regular_price": null,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 50mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/ghk-cu/?attribute_strength=50mg",
+        "price": 140,
+        "regular_price": null,
+        "error": null
+      },
+      "GHK-Cu (Copper Peptide) | Vial | 100mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/ghk-cu/?attribute_strength=100mg",
+        "price": 165,
+        "regular_price": null,
+        "error": null
+      },
+      "Semax | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/semax/?attribute_strength=5mg",
+        "price": 160,
+        "regular_price": null,
+        "error": null
+      },
+      "Semax | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/semax/?attribute_strength=10mg",
+        "price": 200,
+        "regular_price": null,
+        "error": null
+      },
+      "Glutathione | Vial | 600mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/glutathione/?attribute_strength=600mg",
+        "price": 155,
+        "regular_price": null,
+        "error": null
+      },
+      "Glutathione | Vial | 1500mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/glutathione/?attribute_strength=1500mg",
+        "price": 185,
+        "regular_price": null,
+        "error": null
+      },
+      "PT-141 (Bremelanotide) | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/pt-141/?attribute_strength=10mg",
+        "price": 175,
+        "regular_price": null,
+        "error": null
+      },
+      "KPV | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/kpv/?attribute_strength=10mg",
+        "price": 175,
+        "regular_price": null,
+        "error": null
+      },
+      "Tesamorelin | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/tesamorelin/?attribute_strength=10mg",
+        "price": 305,
+        "regular_price": null,
+        "error": null
+      },
+      "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/glow/?attribute_strength=70mg",
+        "price": 295,
+        "regular_price": null,
+        "error": null
+      },
+      "Melanotan I | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/melanotan-1/?attribute_strength=10mg",
+        "price": 160,
+        "regular_price": null,
+        "error": null
+      },
+      "Melanotan II | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/melanotan-2/?attribute_strength=10mg",
+        "price": 160,
+        "regular_price": null,
+        "error": null
+      },
+      "MOTS-C | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/mots-c/?attribute_strength=10mg",
+        "price": 170,
+        "regular_price": null,
+        "error": null
+      },
+      "MOTS-C | Vial | 20mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/mots-c/?attribute_strength=20mg",
+        "price": 230,
+        "regular_price": null,
+        "error": null
+      },
+      "MOTS-C | Vial | 40mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/mots-c/?attribute_strength=40mg",
+        "price": 350,
+        "regular_price": null,
+        "error": null
+      },
+      "CJC-1295 | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/cjc-1295-no-dac/?attribute_strength=5mg",
+        "price": 190,
+        "regular_price": null,
+        "error": null
+      },
+      "CJC-1295 | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/cjc-1295-no-dac/?attribute_strength=10mg",
+        "price": 265,
+        "regular_price": null,
+        "error": null
+      },
+      "SS-31 / Elamipretide | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/ss-31/?attribute_strength=10mg",
+        "price": 205,
+        "regular_price": null,
+        "error": null
+      },
+      "IGF-1 LR3 | Vial | 0.1mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/igf-1-lr3/?attribute_strength=0.1mg",
+        "price": 145,
+        "regular_price": null,
+        "error": null
+      },
+      "SLU-PP-332 | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/slu-pp-332/?attribute_strength=5mg",
+        "price": 255,
+        "regular_price": null,
+        "error": null
+      },
+      "AOD-9604 | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/aod-9604/?attribute_strength=5mg",
+        "price": 205,
+        "regular_price": null,
+        "error": null
+      },
+      "AOD-9604 | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/aod-9604/?attribute_strength=10mg",
+        "price": 285,
+        "regular_price": null,
+        "error": null
+      },
+      "Ipamorelin | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/ipamorelin/?attribute_strength=5mg",
+        "price": 145,
+        "regular_price": null,
+        "error": null
+      },
+      "Ipamorelin | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/ipamorelin/?attribute_strength=10mg",
+        "price": 175,
+        "regular_price": null,
+        "error": null
+      },
+      "Cagrilintide | Vial | 5mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/cagrilintide/?attribute_strength=5mg",
+        "price": 225,
+        "regular_price": null,
+        "error": null
+      },
+      "Cagrilintide | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/cagrilintide/?attribute_strength=10mg",
+        "price": 335,
+        "regular_price": null,
+        "error": null
+      },
+      "Epitalon | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/epithalon/?attribute_strength=10mg",
+        "price": 145,
+        "regular_price": null,
+        "error": null
+      },
+      "Epitalon | Vial | 50mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/epithalon/?attribute_strength=50mg",
+        "price": 255,
+        "regular_price": null,
+        "error": null
+      },
+      "Kisspeptin | Vial | 10mg (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/kisspeptin/?attribute_strength=10mg",
+        "price": 215,
+        "regular_price": null,
+        "error": null
+      },
+      "Bacteriostatic Water | Water | 10mL (10-vial kit)": {
+        "url": "https://directresearchsupply.com/product/bacteriostatic-bac-water/?attribute_strength=10mL",
+        "price": 47,
+        "regular_price": null,
+        "error": null
+      }
     }
   }
 }

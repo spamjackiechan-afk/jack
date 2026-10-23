@@ -288,6 +288,11 @@ VENDORS = {
                                   # WooCommerce upload/log paths and ?add-to-cart= URLs. /product/<slug>/
                                   # pages are allowed. WooCommerce; each listed product has a single size.
     },
+    "Direct Research Supply": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: /robots.txt returns 404 (no rules). WooCommerce; sizes are
+                                  # pinned with ?attribute_strength=<size>. All prices are 10-vial kit totals.
+    },
 }
 
 HEADERS = {
