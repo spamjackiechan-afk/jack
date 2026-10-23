@@ -294,6 +294,11 @@ VENDORS = {
                                   # /catalog/<slug> pages are allowed. Sizes can't be pinned by URL, so only
                                   # cards whose default (first JSON-LD offer) size is the listed size are included.
     },
+    "Direct Research Supply": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: /robots.txt returns 404 (no rules). WooCommerce; sizes are
+                                  # pinned with ?attribute_strength=<size>. All prices are 10-vial kit totals.
+    },
 }
 
 HEADERS = {
