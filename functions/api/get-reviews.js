@@ -42,6 +42,10 @@ export async function onRequestGet(context) {
     reviews = await approvedFromBlob(env.CLICK_COUNTS);
   }
 
+  // Service-only reviews: never publish the old "peptide ordered" field,
+  // even on reviews approved before it was removed (Oct 2026).
+  reviews = reviews.filter((r) => r && typeof r === "object").map(({ peptide_ordered, ...rest }) => rest);
+
   const response = new Response(JSON.stringify(reviews), {
     status: 200,
     headers: {

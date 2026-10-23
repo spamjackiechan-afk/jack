@@ -1,113 +1,123 @@
 {
   "American Peptides": [
     {
-      "code": "WEEKEND25",
+      "code": null,
       "combines_with_our_code": null,
-      "end": "2026-10-12T04:59:00Z",
-      "exclusions": null,
-      "gives": "25% off sitewide",
+      "end": "2026-11-01T04:59:00Z",
+      "exclusions": "One per email and once per customer; can't combine with other discount codes or automatic deals",
+      "gives": "Trick-or-Treat: pick a pumpkin for 15%, 20%, 25% or 30% off (code revealed in the game, not listed)",
       "source": "https://www.americanpeptides.us/spooky",
-      "start": "2026-10-09T05:00:00Z",
-      "verified": "2026-10-08"
+      "start": null,
+      "verified": "2026-10-22"
     },
     {
       "code": null,
       "combines_with_our_code": null,
-      "end": "2026-10-12T04:59:00Z",
-      "exclusions": null,
-      "gives": "Buy one, get one free on select peptides (same strength)",
+      "end": "2026-10-23T04:59:00Z",
+      "exclusions": "One-time items only",
+      "gives": "Spend More, Unlock More: $150+ → 20% off · $250+ → 25% · $400+ → 30% off (one-time items only; automatic at checkout, no code)",
       "source": "https://www.americanpeptides.us/spooky",
-      "start": "2026-10-09T21:00:00Z",
-      "verified": "2026-10-09"
+      "start": "2026-10-21T17:00:00Z",
+      "verified": "2026-10-21"
     },
     {
       "code": null,
       "combines_with_our_code": null,
-      "end": "2026-10-16T04:59:00Z",
+      "end": "2026-10-26T04:59:00Z",
       "exclusions": null,
-      "gives": "30% off any 3+ single-compound peptides or blends",
+      "gives": "BOO-GO Weekend: buy one, get one free on select peptides (same strength; automatic at checkout, no code)",
       "source": "https://www.americanpeptides.us/spooky",
-      "start": "2026-10-12T05:00:00Z",
-      "verified": "2026-10-11"
-    },
-    {
-      "code": "MAD25",
-      "combines_with_our_code": null,
-      "end": "2026-10-19T04:59:00Z",
-      "exclusions": null,
-      "gives": "25% off sitewide",
-      "source": "https://www.americanpeptides.us/spooky",
-      "start": "2026-10-16T05:00:00Z",
-      "verified": "2026-10-13"
+      "start": "2026-10-23T05:00:00Z",
+      "verified": "2026-10-21"
     },
     {
       "code": null,
       "combines_with_our_code": null,
-      "end": "2026-10-19T04:59:00Z",
-      "exclusions": null,
-      "gives": "Buy one, get one free on select peptides (same strength)",
+      "end": "2026-10-29T04:59:00Z",
+      "exclusions": "One-time items only",
+      "gives": "Stock Up: buy 3 → 20% · buy 5 → 25% · buy 8+ → 30% off (3–4 one-time units 20%, 5–7 25%, 8+ 30%; any mix, automatic at checkout, no code)",
       "source": "https://www.americanpeptides.us/spooky",
-      "start": "2026-10-16T21:00:00Z",
-      "verified": "2026-10-13"
+      "start": "2026-10-26T05:00:00Z",
+      "verified": "2026-10-21"
+    },
+    {
+      "code": "NIGHT30",
+      "combines_with_our_code": true,
+      "end": "2026-10-30T04:59:00Z",
+      "exclusions": null,
+      "gives": "Witching Hour Flash (Thu Oct 29): 30% OFF sitewide, 6 PM – 11:59 PM CT only",
+      "source": "https://www.americanpeptides.us/spooky",
+      "start": "2026-10-29T23:00:00Z",
+      "verified": "2026-10-21"
+    },
+    {
+      "code": "NIGHT30",
+      "combines_with_our_code": true,
+      "end": "2026-10-31T04:59:00Z",
+      "exclusions": null,
+      "gives": "Witching Hour Flash (Fri Oct 30): 30% OFF sitewide, 6 PM – 11:59 PM CT only",
+      "source": "https://www.americanpeptides.us/spooky",
+      "start": "2026-10-30T23:00:00Z",
+      "verified": "2026-10-21"
+    },
+    {
+      "code": "HALLOWEEN31",
+      "combines_with_our_code": true,
+      "end": "2026-11-01T04:59:00Z",
+      "exclusions": null,
+      "gives": "31% Off for the 31st (Oct 31): 31% off sitewide, all day",
+      "source": "https://www.americanpeptides.us/spooky",
+      "start": "2026-10-31T05:00:00Z",
+      "verified": "2026-10-22"
     }
   ],
   "Midwest Peptide": [
-    {
-      "code": "WEBACK30",
-      "combines_with_our_code": null,
-      "end": "2026-10-06T05:00:00Z",
-      "exclusions": null,
-      "gives": "30% off",
-      "source": "midwestpeptide.com homepage banner",
-      "start": null,
-      "verified": "2026-10-02"
-    },
     {
       "code": "HARVEST40",
       "combines_with_our_code": null,
       "end": null,
       "exclusions": null,
-      "gives": "40% off sitewide",
-      "source": "https://midwestpeptide.com/",
+      "gives": "Sitewide Sale: 40% off everything with code HARVEST40; 50% off the Box Builder",
+      "source": "https://midwestpeptide.com",
       "start": null,
-      "verified": "2026-10-15"
+      "verified": "2026-10-22"
     }
   ],
-  "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added.",
-  "AFA Biosciences": [
+  "Peptide Titans": [
     {
-      "code": "BOGO",
-      "combines_with_our_code": false,
-      "end": null,
-      "exclusions": null,
-      "gives": "Buy one vial, get the second free (up to 3 free vials per order)",
-      "source": "https://afabiosciences.com/",
-      "start": null,
-      "verified": "2026-10-15"
-    }
-  ],
-  "Research Peptides Lab": [
-    {
-      "code": "BOGO50",
+      "code": null,
       "combines_with_our_code": null,
       "end": null,
-      "exclusions": null,
-      "gives": "Buy one, get one 50% off sitewide",
-      "source": "https://researchpeptideslab.com/",
+      "exclusions": "Eligible products only",
+      "gives": "Mix & Match (automatic, no code): 3–5 items save 8% · 6–9 items save 12% · 10+ items save 15%",
+      "source": "https://peptidetitans.com",
       "start": null,
-      "verified": "2026-10-15"
+      "verified": "2026-10-22"
     }
   ],
-  "Synthrolab": [
+  "True Peptides": [
+    {
+      "code": null,
+      "combines_with_our_code": null,
+      "end": null,
+      "exclusions": "First order only",
+      "gives": "10% off your first order (applied automatically at checkout, no code)",
+      "source": "https://true-peptides.com",
+      "start": null,
+      "verified": "2026-10-21"
+    }
+  ],
+  "Veratis Bio": [
     {
       "code": null,
       "combines_with_our_code": null,
       "end": null,
       "exclusions": null,
-      "gives": "20% off stacks",
-      "source": "https://synthrolab.com/",
+      "gives": "Build your order: any 3 bottles, 5% off each (automatic, no code)",
+      "source": "https://veratisbio.com/shop",
       "start": null,
-      "verified": "2026-10-15"
+      "verified": "2026-10-22"
     }
-  ]
+  ],
+  "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
 }

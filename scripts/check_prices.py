@@ -105,10 +105,11 @@ VENDORS = {
                                   # /product/, /shop/, /coa/ not disallowed. Affiliate partner.
     },
     "Orbitrex Peptide": {
-        "robots_checked_by": "research 2026-09-15 (GoAffPro onboarding)",
-        "robots_allows": True,   # confirmed: User-agent * Disallow only /api/, account/cart/checkout,
-                                  # portal/affiliate-portal, wp-admin/login/json/xmlrpc, and a few
-                                  # querystrings — /product/ and /shop/ pages are not disallowed.
+        "robots_checked_by": "Grok for Jackson, 2026-10-23 (relist)",
+        "robots_allows": True,   # re-confirmed 2026-10-23: User-agent * Disallow only /api/, account/cart/
+                                  # checkout/track-your-order, portal/affiliate-portal, reset-password/
+                                  # verify-email, wp-admin/login/json/xmlrpc and add-to-cart/orderby/
+                                  # session_id querystrings — /product/ pages are not disallowed.
     },
     "Synthrolab": {
         "robots_checked_by": "Grok for Jackson, 2026-10-14",
@@ -229,6 +230,69 @@ VENDORS = {
         "robots_checked_by": "Grok for Jackson, 2026-10-18",
         "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" with no disallows. /shop/ pages
                                   # are allowed; each size is its own page with server-rendered Product JSON-LD.
+    },
+    "Stealth Research Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-19",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/,
+                                  # woocommerce_transient_files/, woocommerce_uploads/, ?add-to-cart= params
+                                  # and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Variable pages are pinned with ?attribute_pa_size=<size> (e.g. "10mg").
+    },
+    "Alpine Peptide": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only the Woo upload/log dirs,
+                                  # ?add-to-cart= params and /wp-admin/ (Yoast block: empty Disallow).
+                                  # /product/ pages are allowed. Every size is its own simple product.
+    },
+    "Prism Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-18",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" and disallows only /admin, /cart,
+                                  # /checkout, /success, /track-order, /reconstitution-calculator and
+                                  # /affiliate(-program). /product/ pages are allowed. Product JSON-LD is
+                                  # server-rendered; only single-size products are listed (multi-size pages
+                                  # expose an AggregateOffer lowPrice only).
+    },
+    "Echo Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" minus /admin, /api/, /integrations/ and /account.
+                                  # /product/ pages are allowed; each size is its own page with server-rendered Product JSON-LD.
+    },
+    "Axovera Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,
+                                  # woocommerce_uploads/, ?add-to-cart= params and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Product links carry the path-suffix referral, so only single-size pages and the default size of
+                                  # multi-size pages are listed (no ?attribute_ pins).
+    },
+    "Aura Research": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-20",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-content/uploads/wc-logs/, woocommerce_transient_files/,
+                                  # woocommerce_uploads/, ?add-to-cart= params and /wp-admin/ (admin-ajax.php allowed). /product/ pages are allowed.
+                                  # Variable pages are pinned with ?attribute_pa_amount=<size> (e.g. "10mg").
+    },
+    "Helion Research": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-21",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /", disallowing only /wp-admin/,
+                                  # /cart/, /checkout/, /my-account/, ?add-to-cart= and WooCommerce uploads.
+                                  # Product pages are /product.html?sku=<sku> (/product/<slug>/ 301s there).
+    },    "MsAmino": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /", disallowing only /admin/, /api/,
+                                  # /affiliate/, /account/, /cart, /checkout/ and /login. /products/ pages are
+                                  # allowed. Next.js; sizes can't be pinned by URL, so only each page's
+                                  # default (first) size is listed.
+    },
+    "JD BioWorks": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: robots.txt for * disallows only /wp-admin/ (admin-ajax allowed),
+                                  # WooCommerce upload/log paths and ?add-to-cart= URLs. /product/<slug>/
+                                  # pages are allowed. WooCommerce; each listed product has a single size.
+    },
+    "Ares Research": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /" (named AI bots also Allow: /).
+                                  # /catalog/<slug> pages are allowed. Sizes can't be pinned by URL, so only
+                                  # cards whose default (first JSON-LD offer) size is the listed size are included.
     },
 }
 

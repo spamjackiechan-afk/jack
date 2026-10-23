@@ -4,7 +4,7 @@
   "disclaimer": "Research use only. Not for human or animal consumption. Not medical advice.",
   "site_map": {
     "home": "https://discountspeptides.com/",
-    "testing": "https://discountspeptides.com/testing.html",
+    "quality": "https://discountspeptides.com/about.html",
     "suppliers": "https://discountspeptides.com/suppliers.html",
     "about": "https://discountspeptides.com/about.html"
   },
@@ -264,7 +264,7 @@
     "oxytocin": "oxytocin",
     "melatonin": "melatonin",
     "other catalog notes": "other-catalog-notes",
-    "quality / testing talking points (from testing.html)": "quality-testing",
+    "quality / testing talking points (from about.html)": "quality-testing",
     "from testing.html": "quality-testing",
     "quality / testing talking points": "quality-testing",
     "glow blend": "glow",

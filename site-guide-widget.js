@@ -4,7 +4,6 @@
 
   const PAGE = (function () {
     const p = (location.pathname || "").toLowerCase();
-    if (p.endsWith("testing.html") || p.includes("/testing")) return "testing";
     if (p.endsWith("suppliers.html") || p.includes("/suppliers")) return "suppliers";
     return "home";
   })();
@@ -22,8 +21,8 @@
     },
     suppliers: {
       welcome:
-        "You’re on the suppliers page. I can list who’s on the site, summarize shipping/payment from our supplier notes, or send you to testing tiers and the price list. Catalog facts only — no vendor hype.",
-      pills: ["List suppliers", "Ask about a vendor", "See testing tiers", "Back to peptides"],
+        "You’re on the suppliers page. I can list who’s on the site, summarize shipping/payment from our supplier notes, or explain how we look at vendor testing and send you to the price list. Catalog facts only — no vendor hype.",
+      pills: ["List suppliers", "Ask about a vendor", "What can a COA prove?", "Back to peptides"],
     },
   };
 

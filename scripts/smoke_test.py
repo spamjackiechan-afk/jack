@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Site smoke test: renders the static site in headless Chromium and fails if
-the homepage vendor list, the calculator page, or the suppliers tools are broken.
+the homepage vendor list or the suppliers tools are broken, or if any dosing /
+reconstitution calculator comes back.
 
 Run locally:   pip install playwright && playwright install chromium
                python scripts/smoke_test.py              # serves the repo root
@@ -10,32 +11,40 @@ Run locally:   pip install playwright && playwright install chromium
                   only if the render safety net still draws a usable list)
 
 Fails on:
-  * any uncaught JS error (pageerror) on index.html, calculator.html or suppliers.html
+  * any uncaught JS error (pageerror) on index.html or suppliers.html
   * any console.error tagged [site-guard] (the in-page safety nets)
   * homepage < MIN_CARDS product cards, or < MIN_VENDORS distinct vendor names
   * the render safety net having kicked in (window.__DP_FALLBACK)
-  * the calculator page not producing a result for sample inputs
-  * any page that lists Offline Peptides (index.html, suppliers.html) containing
-    the calculator, or calculator.html containing any Offline/vendor links
+  * calculator.html existing again, or any public page containing calculator
+    markup or a /calculator link. The reconstitution/dosing calculator was
+    removed on purpose (FDA cites these as evidence of human use); it must
+    not come back
   * the homepage Suppliers nav item not linking to /suppliers
   * suppliers.html rendering < MIN_SUPPLIERS cards
   * a vendor count on index.html, suppliers.html or about.html ("13 vendors",
     "13 suppliers", title/meta tags, the About stats strip), in the raw file or
     the rendered page, that differs from the number of distinct vendors with
     listings in the homepage DATA
-  * the testing.html References news markup (NEWS_MARKERS) showing up on
-    index.html or suppliers.html, in the raw file or the rendered page; it
-    belongs on testing.html only (see docs/references-format.md)
-  * testing.html rendering fewer than MIN_REFERENCES reference items
+  * the retired References news markup (NEWS_MARKERS, formerly testing.html)
+    showing up on index.html or suppliers.html, raw or rendered
+  * testing.html reappearing, or the Research nav link not pointing to
+    https://peptidehealthdigest.vercel.app/ with target=_blank rel=noopener
   * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
     suppliers.html not exactly matching data/catalog.json / vendor_config.json
     (scripts/sync_vendor_config.py --check)
   * Google Analytics (ga-consent.js): a public page (index, about, suppliers,
-    testing, privacy, calculator) not loading it; admin-reviews.html or functions/ loading
+    privacy, research) not loading it; admin-reviews.html or functions/ loading
     it; the Measurement ID appearing in any file other than ga-consent.js;
     privacy.html missing or not in sitemap.xml; on a first visit, the cookie
     banner not showing or any request going to Google's analytics hosts
     before Accept (also checked after Decline)
+  * public sales (guest view; /api/member-sales is not reachable on a static
+    server, so member-sales.js falls back to data/vendor_sales.json): the sales
+    bar missing, the old "join free" teaser showing, an excluded vendor
+    (Offline, Licensed, AFA, RPL, Synthrolab) in the sales, observed
+    sales without badges/Sales strip, or the suppliers page not showing every
+    currently-live vendor sale; a vendor sale code in the raw index.html or
+    suppliers.html
 Network errors (fonts, analytics, /api/* Cloudflare functions that don't exist
 on a static server) are ignored on purpose.
 """
@@ -48,8 +57,8 @@ import sync_vendor_config  # noqa: E402  (embed check)
 MIN_CARDS = 50
 MIN_VENDORS = 8
 MIN_SUPPLIERS = 8
-MIN_REFERENCES = 20
-# Markup/copy used only by the testing.html References list. None of it may
+RESEARCH_URL = "https://peptidehealthdigest.vercel.app/"
+# Markup/copy formerly used only by the testing.html References list (retired). None of it may
 # appear on the homepage or the suppliers page.
 NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
                 "data-tone", "tone-read", "Looks concerning", "Developing"]
@@ -57,7 +66,7 @@ NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
 # second copy of it; it may appear only in ga-consent.js.
 GA_FILE = "ga-consent.js"
 GA_ID = "G-" + "CYYYPQ5ZDX"
-GA_PAGES = ["index.html", "about.html", "suppliers.html", "testing.html", "privacy.html", "calculator.html"]
+GA_PAGES = ["index.html", "about.html", "suppliers.html", "privacy.html", "research.html"]
 GA_HOSTS = ("googletagmanager.com", "google-analytics.com")
 
 
@@ -170,6 +179,88 @@ def check_vendor_count_raw(root, filename, expected, problems):
     check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
+SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide", "Orbitrex Peptide"}
+
+
+def live_vendor_sales(root):
+    """Vendor sales that should be visible right now (same rules as the pages)."""
+    import datetime as dt
+    sales = json.load(open(os.path.join(root, "data", "vendor_sales.json"), encoding="utf-8"))
+    now = dt.datetime.now(dt.timezone.utc)
+    parse = lambda s: dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+    out = []
+    for vendor, items in sales.items():
+        if vendor.startswith("_") or vendor not in SALE_VENDORS:
+            continue
+        for s_ in items or []:
+            if vendor == "Ride the Tide Peptides" and re.search(r"bogo|buy\s*one,?\s*get\s*one", f"{s_.get('code') or ''} {s_.get('gives') or ''}", re.I):
+                continue
+            if s_.get("end") and parse(s_["end"]) < now: continue
+            if s_.get("start") and parse(s_["start"]) > now: continue
+            if not s_.get("verified"): continue
+            v = dt.datetime.fromisoformat(s_["verified"]).replace(tzinfo=dt.timezone.utc)
+            if (now - v).total_seconds() > 7 * 86400: continue
+            out.append((vendor, s_))
+    return out
+
+
+def check_members_only(browser, base, root, problems, notes):
+    sales = json.load(open(os.path.join(root, "data", "vendor_sales.json"), encoding="utf-8"))
+    cfg = json.load(open(os.path.join(root, "vendor_config.json"), encoding="utf-8"))
+    our_codes = {str(c.get("promo_code") or "").lower() for c in cfg.values() if isinstance(c, dict)}
+    codes = {s_["code"] for v, items in sales.items() if not v.startswith("_") for s_ in (items or [])
+             if s_.get("code") and len(s_["code"]) >= 5 and s_["code"].lower() not in our_codes}
+    for f in ("index.html", "suppliers.html"):
+        raw = open(os.path.join(root, f), encoding="utf-8").read()
+        leaked = sorted(c for c in codes if re.search(r"\b" + re.escape(c) + r"\b", raw))
+        if leaked:
+            problems.append(f"{f}: vendor sale code(s) in the page source (members-only): {leaked}")
+
+    # Guest (no Functions on this static server -> /api/member-sales 404 ->
+    # member-sales.js falls back to /data/vendor_sales.json). Sales are PUBLIC.
+    excluded = ["Offline Peptides", "Licensed Peptides", "AFA Biosciences",
+                "Research Peptides Lab", "Synthrolab"]
+    page = open_page(browser, base + "/index.html", problems, "index.html (guest)")
+    page.wait_for_timeout(800)
+    g = page.evaluate("""() => ({
+      badges: document.querySelectorAll('#index .sale-badge').length,
+      deals: document.getElementById('dealsBand').classList.contains('show'),
+      teaser: Boolean(document.getElementById('memberTeaser')),
+      slotText: (document.getElementById('memberSalesSlot') || {}).innerText || '',
+      bar: Boolean(document.getElementById('memberSalesBar')),
+      dealVendors: [...document.querySelectorAll('#dealsScroll .deal-vendor')].map(e => e.textContent),
+      onSaleVendors: [...new Set(DATA.included.flatMap(i => Object.keys(i.onSale || {})))],
+      withCode: document.querySelectorAll('#index .price-amount.with-code').length,
+    })""")
+    notes.append(f"public sales (guest, homepage): bar={g['bar']} badges={g['badges']} salesStrip={g['deals']} "
+                 f"onSaleVendors={g['onSaleVendors']} withCodePrices={g['withCode']}")
+    if not g["bar"]:
+        problems.append("index.html (guest): public vendor sales bar missing")
+    if g["teaser"] or "join free" in g["slotText"].lower() or "Members see" in g["slotText"]:
+        problems.append("index.html (guest): members-only teaser still shown")
+    bad = [v for v in excluded if v in g["slotText"] or v in g["onSaleVendors"] or any(v in d for d in g["dealVendors"])]
+    if bad:
+        problems.append(f"index.html (guest): excluded vendor(s) in sales: {bad}")
+    if g["onSaleVendors"] and not (g["badges"] and g["deals"]):
+        problems.append(f"index.html (guest): observed sales not shown: {g}")
+    if "applied automatically" in g["slotText"] and "automatic at checkout" in g["slotText"].split("applied automatically")[0].splitlines()[-1]:
+        problems.append("index.html (guest): duplicated 'applied automatically' wording")
+    if not g["withCode"]:
+        problems.append("index.html (guest): no with-code prices rendered (code_discount_pct must still apply)")
+    page.close()
+    page = open_page(browser, base + "/suppliers.html", problems, "suppliers.html (guest)")
+    page.wait_for_timeout(1000)
+    rows = page.locator("text=Vendor sale:").count()
+    teaser = page.locator("#memberTeaser").count()
+    expected = len(live_vendor_sales(root))
+    notes.append(f"public sales (guest, suppliers): vendor-sale rows={rows} (live in data: {expected}) teaser={teaser}")
+    if rows != expected:
+        problems.append(f"suppliers.html (guest): {rows} vendor sale rows, expected {expected}")
+    if teaser:
+        problems.append("suppliers.html (guest): members-only teaser still shown")
+    page.close()
+
+
 def serve(root):
     class Quiet(http.server.SimpleHTTPRequestHandler):
         def log_message(self, *a, **k):
@@ -240,36 +331,15 @@ def main():
         if fallback:
             problems.append("index.html: render safety net was used (main render failed); see errors above")
 
-        # ---- Calculator page (moved off the homepage per Offline partner terms)
-        try:
-            cpage = open_page(browser, base + "/calculator.html", problems, "calculator.html")
-            cpage.fill("#calcVial", "5"); cpage.fill("#calcWater", "2"); cpage.fill("#calcDose", "0.25")
-            cpage.wait_for_timeout(300)
-            units = cpage.inner_text("#calcUnits").strip()
-            notes.append(f"calculator.html: 5mg / 2mL / 0.25mg -> {units!r}")
-            if not cpage.is_visible("#calcSection") or units != "10 units":
-                problems.append(f"calculator.html: expected '10 units' for 5mg/2mL/0.25mg, got {units!r}")
-            # No Offline links and no vendor product links on the calculator page
-            calc_raw = open(os.path.join(root, "calculator.html"), encoding="utf-8", errors="replace").read()
-            calc_text = cpage.inner_text("body")
-            for label, blob in (("raw file", calc_raw), ("rendered page", calc_text)):
-                if re.search(r"offlinepeptides\.com", blob, re.I):
-                    problems.append(f"calculator.html ({label}): contains an Offline Peptides link")
-                if re.search(r"Offline Peptides", blob):
-                    problems.append(f"calculator.html ({label}): mentions Offline Peptides")
-            links = cpage.eval_on_selector_all("a[href]", "els => els.map(e => e.getAttribute('href'))")
-            bad = [h for h in links if h and re.match(r"https?://", h) and "discountspeptides.com" not in h and "fonts.googleapis" not in h]
-            if bad:
-                problems.append(f"calculator.html: vendor/outbound links present: {bad[:3]}")
-            cpage.close()
-        except Exception as e:
-            problems.append(f"calculator.html: could not exercise it: {str(e).splitlines()[0]}")
-
-        # ---- No page that lists Offline Peptides may contain the calculator
-        for offline_page in ("index.html", "suppliers.html"):
-            raw = open(os.path.join(root, offline_page), encoding="utf-8", errors="replace").read()
-            if "calcSection" in raw or "calcVial" in raw:
-                problems.append(f"{offline_page}: lists Offline Peptides but still contains the calculator")
+        # ---- No dosing / reconstitution calculator anywhere. It was removed on
+        # purpose: FDA has cited reconstitution calculators as evidence that
+        # "research use only" products were meant for people.
+        if os.path.exists(os.path.join(root, "calculator.html")):
+            problems.append("calculator.html: exists again; the calculator was removed on purpose")
+        for f in GA_PAGES:
+            raw = open(os.path.join(root, f), encoding="utf-8", errors="replace").read()
+            if re.search(r'calcSection|calcVial|calcDose|href="/calculator', raw):
+                problems.append(f"{f}: contains calculator markup or a /calculator link")
 
         # ---- Suppliers nav item (homepage) must link to the /suppliers page
         try:
@@ -279,6 +349,21 @@ def main():
                 problems.append(f"suppliers nav link: expected /suppliers, got {href!r}")
         except Exception as e:
             problems.append(f"suppliers nav link: missing: {str(e).splitlines()[0]}")
+        # ---- Research nav item (homepage) links out to Peptide Health Digest;
+        # testing.html is retired (301 in _redirects) and must not come back.
+        try:
+            link = page.locator("#testingLink")
+            href, tgt, rel = (link.get_attribute(x, timeout=5000) for x in ("href", "target", "rel"))
+            notes.append(f"research nav link: {href!r} target={tgt!r} rel={rel!r}")
+            if href != RESEARCH_URL or tgt != "_blank" or "noopener" not in (rel or ""):
+                problems.append(f"research nav link: expected {RESEARCH_URL} target=_blank rel=noopener, got {href!r} {tgt!r} {rel!r}")
+        except Exception as e:
+            problems.append(f"research nav link: missing: {str(e).splitlines()[0]}")
+        if os.path.exists(os.path.join(root, "testing.html")):
+            problems.append("testing.html exists again; it was retired (see _redirects)")
+        for f in ("index.html", "about.html", "suppliers.html", "privacy.html", "research.html", "sitemap.xml"):
+            if re.search(r'testing\.html|discountspeptides\.com/testing\b', open(os.path.join(root, f), encoding="utf-8").read()):
+                problems.append(f"{f}: still links to the retired testing page")
         check_no_news(page, root, "index.html", problems)
         vendor_count = data_vendor_count(root)
         notes.append(f"vendor count in DATA: {vendor_count}")
@@ -313,13 +398,8 @@ def main():
                 problems.append(f"about.html: Suppliers stat shows {stat!r} but the data has {vendor_count} vendors")
             page.close()
 
-        # ---- testing.html References (the only page allowed to carry them)
-        page = open_page(browser, base + "/testing.html", problems, "testing.html")
-        refs = page.locator("#refsNews .news-item").count()
-        notes.append(f"testing.html: {refs} reference items")
-        if refs < MIN_REFERENCES:
-            problems.append(f"testing.html: only {refs} reference items (min {MIN_REFERENCES})")
-        page.close()
+        # ---- Members-only sales
+        check_members_only(browser, base, root, problems, notes)
 
         # ---- Google Analytics: consent-first banner, privacy page
         check_ga_static(root, problems, notes)

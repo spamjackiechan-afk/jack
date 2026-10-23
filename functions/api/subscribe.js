@@ -10,6 +10,7 @@
 // read as a fallback (functions/_lib/records.js).
 
 import { readSubscriber, putSubscriber, looksAutomated, underRateLimit, clientIp, GENERIC_ERROR } from "../_lib/records.js";
+import { memberCookieHeader } from "../_lib/membership.js";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const MAX_FAVOURITES = 200;
@@ -63,7 +64,11 @@ export async function onRequestPost(context) {
       // Kept when an existing subscriber signs up again, so old links still work.
       unsubscribe_token: existing?.unsubscribe_token || crypto.randomUUID(),
     });
-    return json({ ok: true, returning: Boolean(existing) });
+    // Signing up is membership: unlock members-only sales on this browser now
+    // (long-lived signed cookie; see _lib/membership.js).
+    let cookie = null;
+    try { cookie = await memberCookieHeader(env, email); } catch { cookie = null; }
+    return json({ ok: true, returning: Boolean(existing), member: Boolean(cookie) }, 200, cookie ? { "Set-Cookie": cookie } : {});
   } catch (e) {
     return json({ error: "Could not save — please try again" }, 500);
   }
@@ -130,9 +135,9 @@ function sameString(a, b) {
   return diff === 0;
 }
 
-function json(obj, status) {
+function json(obj, status, extra = {}) {
   return new Response(JSON.stringify(obj), {
     status,
-    headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
+    headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*", ...extra },
   });
 }

@@ -148,3 +148,11 @@ export async function underRateLimit(kv, key, max, windowSeconds) {
 export function clientIp(request) {
   return request.headers.get("CF-Connecting-IP") || "unknown";
 }
+
+// Reviews are service-only (shipping, packaging, support, order accuracy).
+// Text that talks about using a product, dosing or results is refused at
+// submit time and flagged on the admin page. FDA has cited customer
+// testimonials against peptide sellers as evidence of human use. This is a
+// first filter; the admin approval step is still the real gate.
+export const REVIEW_USE_PATTERN =
+  /\b(dos(e|es|ed|ing|age)|mcg|\d+\s?mg|iu|inject\w*|pinn?(ed|ing)|reconstitut\w*|bac\s?water|stack(ed|ing)?|protocol|results?|side[- ]?effects?|fat\s?loss|weight|lost \d+|heal(ed|ing)?|recover(y|ed)|muscle|gains|sleep|skin|glow|bpc|tb-?500|semaglutide|tirzepatide|retatrutide|sema|tirz|reta|glp-?1)\b/i;
