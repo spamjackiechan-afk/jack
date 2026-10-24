@@ -517,7 +517,8 @@
         "Alpine Peptide": 59.0,
         "Echo Peptides": 69.99,
         "Aura Research": 69,
-        "JD BioWorks": 59.55
+        "JD BioWorks": 59.55,
+        "Backroad Aminos": 39.0
       },
       "lowest": 25.99,
       "notes": null,
@@ -551,7 +552,8 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/bpc-157-10mg/",
         "Echo Peptides": "https://echopeptides.co/product/bpc-157-10mg",
         "Aura Research": "https://tryauraresearch.com/product/bpc-157/?attribute_pa_amount=10mg",
-        "JD BioWorks": "https://jdbioworks.com/product/bpc-157/"
+        "JD BioWorks": "https://jdbioworks.com/product/bpc-157/",
+        "Backroad Aminos": "https://backroadaminos.com/product/bpc-157/?attribute_pa_dosage=10mg"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -958,7 +960,8 @@
         "Olympus Peptide Labs": 90.02,
         "Stealth Research Labs": 49.99,
         "Aura Research": 49,
-        "MsAmino": 59.99
+        "MsAmino": 59.99,
+        "Backroad Aminos": 40.0
       },
       "lowest": 27.37,
       "notes": null,
@@ -976,7 +979,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/42c3ec58",
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/kisspeptin/?attribute_pa_size=10mg",
         "Aura Research": "https://tryauraresearch.com/product/kisspeptin/",
-        "MsAmino": "https://msamino.com/products/kisspeptin"
+        "MsAmino": "https://msamino.com/products/kisspeptin",
+        "Backroad Aminos": "https://backroadaminos.com/product/kisspeptin-10mg/"
       }
     },
     {
@@ -1011,7 +1015,8 @@
         "Prism Labs": 49.99,
         "MsAmino": 48.99,
         "JD BioWorks": 59.84,
-        "Ares Research": 39.99
+        "Ares Research": 39.99,
+        "Backroad Aminos": 40.0
       },
       "lowest": 25.25,
       "notes": null,
@@ -1041,7 +1046,8 @@
         "Prism Labs": "https://www.prismlabs.store/product/kp-10",
         "MsAmino": "https://msamino.com/products/kpv",
         "JD BioWorks": "https://jdbioworks.com/product/kpv/",
-        "Ares Research": "https://aresresearchlab.com/catalog/kpv"
+        "Ares Research": "https://aresresearchlab.com/catalog/kpv",
+        "Backroad Aminos": "https://backroadaminos.com/product/kpv-10mg/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1126,7 +1132,8 @@
         "Echo Peptides": 55.99,
         "Helion Research": 43.99,
         "MsAmino": 49.99,
-        "JD BioWorks": 59.84
+        "JD BioWorks": 59.84,
+        "Backroad Aminos": 35.0
       },
       "lowest": 27.55,
       "notes": null,
@@ -1161,7 +1168,8 @@
         "Echo Peptides": "https://echopeptides.co/product/mots-c-10mg",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=ms10",
         "MsAmino": "https://msamino.com/products/mots-c",
-        "JD BioWorks": "https://jdbioworks.com/product/mots-c/"
+        "JD BioWorks": "https://jdbioworks.com/product/mots-c/",
+        "Backroad Aminos": "https://backroadaminos.com/product/mots-c/?attribute_pa_dosage=10mg"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1214,9 +1222,10 @@
         "Olympus Peptide Labs": 195.7,
         "Elev-8 Labs": 149.99,
         "Axovera Labs": 125,
-        "Aura Research": 139
+        "Aura Research": 139,
+        "Backroad Aminos": 59.26
       },
-      "lowest": 78.0,
+      "lowest": 59.26,
       "notes": null,
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors",
       "vendor_product_urls": {
@@ -1232,7 +1241,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/490da0df",
         "Elev-8 Labs": "https://elev-8labs.com/product/mots-c/?attribute_pa_size=40mg",
         "Axovera Labs": "https://axoveralabs.com/product/mots-c/",
-        "Aura Research": "https://tryauraresearch.com/product/mots-c/?attribute_pa_amount=40mg"
+        "Aura Research": "https://tryauraresearch.com/product/mots-c/?attribute_pa_amount=40mg",
+        "Backroad Aminos": "https://backroadaminos.com/product/mots-c/?attribute_pa_dosage=40mg"
       }
     },
     {
@@ -1339,7 +1349,8 @@
         "Aura Research": 49,
         "MsAmino": 46.99,
         "JD BioWorks": 58.7,
-        "Ares Research": 64.99
+        "Ares Research": 64.99,
+        "Backroad Aminos": 41.0
       },
       "lowest": 22.07,
       "notes": null,
@@ -1365,7 +1376,8 @@
         "Aura Research": "https://tryauraresearch.com/product/pt-141/",
         "MsAmino": "https://msamino.com/products/pt-141-10mg",
         "JD BioWorks": "https://jdbioworks.com/product/pt-141/",
-        "Ares Research": "https://aresresearchlab.com/catalog/pt-141"
+        "Ares Research": "https://aresresearchlab.com/catalog/pt-141",
+        "Backroad Aminos": "https://backroadaminos.com/product/pt-141-7mg/"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -1402,7 +1414,8 @@
         "Axovera Labs": 69,
         "Aura Research": 39,
         "MsAmino": 59.99,
-        "JD BioWorks": 61.27
+        "JD BioWorks": 61.27,
+        "Backroad Aminos": 42.0
       },
       "lowest": 20.99,
       "notes": null,
@@ -1433,7 +1446,8 @@
         "Axovera Labs": "https://axoveralabs.com/product/selank/",
         "Aura Research": "https://tryauraresearch.com/product/selank/",
         "MsAmino": "https://msamino.com/products/selank",
-        "JD BioWorks": "https://jdbioworks.com/product/selank/"
+        "JD BioWorks": "https://jdbioworks.com/product/selank/",
+        "Backroad Aminos": "https://backroadaminos.com/product/selank-10mg/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1468,7 +1482,8 @@
         "Echo Peptides": 59.99,
         "Axovera Labs": 59,
         "Aura Research": 39,
-        "MsAmino": 47.99
+        "MsAmino": 47.99,
+        "Backroad Aminos": 42.0
       },
       "lowest": 20.84,
       "notes": null,
@@ -1497,7 +1512,8 @@
         "Echo Peptides": "https://echopeptides.co/product/semax-10mg",
         "Axovera Labs": "https://axoveralabs.com/product/semax/",
         "Aura Research": "https://tryauraresearch.com/product/semax/",
-        "MsAmino": "https://msamino.com/products/semax-10mg"
+        "MsAmino": "https://msamino.com/products/semax-10mg",
+        "Backroad Aminos": "https://backroadaminos.com/product/semax-10mg/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1521,7 +1537,8 @@
         "Alpine Peptide": 65.0,
         "Prism Labs": 64.99,
         "Echo Peptides": 49.99,
-        "MsAmino": 104.99
+        "MsAmino": 104.99,
+        "Backroad Aminos": 53.0
       },
       "lowest": 44.53,
       "notes": null,
@@ -1539,7 +1556,8 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/sermorelin-10mg/",
         "Prism Labs": "https://www.prismlabs.store/product/serm-10",
         "Echo Peptides": "https://echopeptides.co/product/sermorelin-10mg",
-        "MsAmino": "https://msamino.com/products/sermorelin-10mg"
+        "MsAmino": "https://msamino.com/products/sermorelin-10mg",
+        "Backroad Aminos": "https://backroadaminos.com/product/sermorelin-10mg/"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -1570,7 +1588,8 @@
         "Echo Peptides": 89.99,
         "Helion Research": 49.99,
         "MsAmino": 79.99,
-        "Ares Research": 59.99
+        "Ares Research": 59.99,
+        "Backroad Aminos": 43.7
       },
       "lowest": 34.99,
       "notes": null,
@@ -1595,7 +1614,8 @@
         "Echo Peptides": "https://echopeptides.co/product/ss-31-10mg",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=2s10",
         "MsAmino": "https://msamino.com/products/ss-31",
-        "Ares Research": "https://aresresearchlab.com/catalog/ss-31"
+        "Ares Research": "https://aresresearchlab.com/catalog/ss-31",
+        "Backroad Aminos": "https://backroadaminos.com/product/ss-31/?attribute_pa_dosage=10mg"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1620,7 +1640,8 @@
         "BioLabs Peptides": 72.94,
         "True Research Labs": 129,
         "Olympus Peptide Labs": 208.42,
-        "Elev-8 Labs": 30.0
+        "Elev-8 Labs": 30.0,
+        "Backroad Aminos": 63.0
       },
       "lowest": 30.0,
       "notes": null,
@@ -1638,7 +1659,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/thymosin-alpha-1/?attribute_size=10mg",
         "True Research Labs": "https://trueresearchlabs.com/shop/thymosin-alpha-1/?attribute_pa_dosage=10-mg",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/2cbba119",
-        "Elev-8 Labs": "https://elev-8labs.com/product/thymosin-alpha-1/"
+        "Elev-8 Labs": "https://elev-8labs.com/product/thymosin-alpha-1/",
+        "Backroad Aminos": "https://backroadaminos.com/product/thymosin-alpha-1-10mg/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1880,7 +1902,8 @@
         "Vertex Labs": 89.0,
         "Quality Peptide USA": 69,
         "Peptide Titans": 49.99,
-        "BioLabs Peptides": 63.65
+        "BioLabs Peptides": 63.65,
+        "Backroad Aminos": 60.0
       },
       "lowest": 33.99,
       "notes": null,
@@ -1892,7 +1915,8 @@
         "Vertex Labs": "https://vertexpeptideslab.org/product/cjc-1295-with-dac/",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/cjc-1295-dac",
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-with-dac/?attribute_mg=5+mg",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-5mg-w-dac/"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-5mg-w-dac/",
+        "Backroad Aminos": "https://backroadaminos.com/product/cjc-with-dac-5mg/"
       }
     },
     {
@@ -1924,7 +1948,8 @@
         "Axovera Labs": 60,
         "Aura Research": 69,
         "Helion Research": 44.99,
-        "JD BioWorks": 67.24
+        "JD BioWorks": 67.24,
+        "Backroad Aminos": 51.0
       },
       "lowest": 35.57,
       "notes": null,
@@ -1951,7 +1976,8 @@
         "Axovera Labs": "https://axoveralabs.com/product/cjc-1295/",
         "Aura Research": "https://tryauraresearch.com/product/cjc-1295-no-dac-ipamorelin/",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=cp10",
-        "JD BioWorks": "https://jdbioworks.com/product/cjc-1295-no-dac-ipamorelin/"
+        "JD BioWorks": "https://jdbioworks.com/product/cjc-1295-no-dac-ipamorelin/",
+        "Backroad Aminos": "https://backroadaminos.com/product/cjc-1295-no-dac-5mg-ipamorelin-5mg/"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -2068,7 +2094,8 @@
         "Elev-8 Labs": 30.0,
         "Prism Labs": 44.99,
         "MsAmino": 49.99,
-        "Ares Research": 39.99
+        "Ares Research": 39.99,
+        "Backroad Aminos": 32.59
       },
       "lowest": 23.68,
       "notes": null,
@@ -2089,7 +2116,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/epithalon/",
         "Prism Labs": "https://www.prismlabs.store/product/epi-10",
         "MsAmino": "https://msamino.com/products/epithalon",
-        "Ares Research": "https://aresresearchlab.com/catalog/epithalon"
+        "Ares Research": "https://aresresearchlab.com/catalog/epithalon",
+        "Backroad Aminos": "https://backroadaminos.com/product/epithalon-10mg/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -2116,7 +2144,8 @@
         "Echo Peptides": 69.99,
         "Axovera Labs": 50,
         "Aura Research": 69,
-        "JD BioWorks": 59.13
+        "JD BioWorks": 59.13,
+        "Backroad Aminos": 35.0
       },
       "lowest": 35.0,
       "notes": null,
@@ -2138,7 +2167,8 @@
         "Echo Peptides": "https://echopeptides.co/product/ghk-cu-100mg",
         "Axovera Labs": "https://axoveralabs.com/product/ghk-cu/",
         "Aura Research": "https://tryauraresearch.com/product/ghk-cu/?attribute_pa_amount=100mg",
-        "JD BioWorks": "https://jdbioworks.com/product/ghk-copper/"
+        "JD BioWorks": "https://jdbioworks.com/product/ghk-copper/",
+        "Backroad Aminos": "https://backroadaminos.com/product/ghk-cu-100mg/?attribute_pa_dosage=100mg-in-3ml-vial"
       }
     },
     {
@@ -2223,7 +2253,8 @@
         "Alpine Peptide": 59.0,
         "Prism Labs": 49.99,
         "Axovera Labs": 60,
-        "Aura Research": 79
+        "Aura Research": 79,
+        "Backroad Aminos": 44.0
       },
       "lowest": 35.0,
       "notes": null,
@@ -2248,7 +2279,8 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/ipamorelin/",
         "Prism Labs": "https://www.prismlabs.store/product/ipa",
         "Axovera Labs": "https://axoveralabs.com/product/ipamorelin/",
-        "Aura Research": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=10mg"
+        "Aura Research": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=10mg",
+        "Backroad Aminos": "https://backroadaminos.com/product/ipamorelin-10mg/"
       }
     },
     {
@@ -3477,9 +3509,10 @@
         "Aura Research": 119,
         "MsAmino": 123.99,
         "JD BioWorks": 108.0,
-        "Ares Research": 109.99
+        "Ares Research": 109.99,
+        "Backroad Aminos": 62.22
       },
-      "lowest": 75.0,
+      "lowest": 62.22,
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
@@ -3506,7 +3539,8 @@
         "Aura Research": "https://tryauraresearch.com/product/klow/",
         "MsAmino": "https://msamino.com/products/klow-80mg",
         "JD BioWorks": "https://jdbioworks.com/product/klow-80mg-research-blend/",
-        "Ares Research": "https://aresresearchlab.com/catalog/klow-stack"
+        "Ares Research": "https://aresresearchlab.com/catalog/klow-stack",
+        "Backroad Aminos": "https://backroadaminos.com/product/klow-80mg/"
       }
     },
     {
@@ -3652,16 +3686,18 @@
         "American Peptides": 195,
         "Vector E Lab": 188.99,
         "BioLabs Peptides": 99.46,
-        "Echo Peptides": 149.99
+        "Echo Peptides": 149.99,
+        "Backroad Aminos": 59.26
       },
-      "lowest": 99.46,
+      "lowest": 59.26,
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
         "American Peptides": "https://www.americanpeptides.us/products/bpc-157-tb-500?variant=48167416168603",
         "Vector E Lab": "https://app.vectorelab.com/product/wolverine-stack/?attribute_mg=20",
         "BioLabs Peptides": "https://biolabspeptides.com/product/wolverine/?attribute_size=20mg",
-        "Echo Peptides": "https://echopeptides.co/product/wolverine-20mg"
+        "Echo Peptides": "https://echopeptides.co/product/wolverine-20mg",
+        "Backroad Aminos": "https://backroadaminos.com/product/wolverine-bpc-157-tb-500/?attribute_pa_dosage=10-10mg"
       }
     },
     {
@@ -3887,9 +3923,10 @@
         "Axovera Labs": 75,
         "Aura Research": 79,
         "MsAmino": 91.99,
-        "JD BioWorks": 78.35
+        "JD BioWorks": 78.35,
+        "Backroad Aminos": 50.0
       },
-      "lowest": 56.99,
+      "lowest": 50.0,
       "notes": null,
       "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
@@ -3918,7 +3955,8 @@
         "Axovera Labs": "https://axoveralabs.com/product/tesamorelin/",
         "Aura Research": "https://tryauraresearch.com/product/tesamorelin/?attribute_pa_amount=10mg",
         "MsAmino": "https://msamino.com/products/tesamorelin",
-        "JD BioWorks": "https://jdbioworks.com/product/tesamorelin/"
+        "JD BioWorks": "https://jdbioworks.com/product/tesamorelin/",
+        "Backroad Aminos": "https://backroadaminos.com/product/tesamorelin/?attribute_pa_dosage=10mg"
       }
     },
     {
@@ -4382,15 +4420,17 @@
       "prices": {
         "Royal Peptides": 90,
         "Midwest Peptide": 79.99,
-        "Orbitrex Peptide": 89.99
+        "Orbitrex Peptide": 89.99,
+        "Backroad Aminos": 67.0
       },
-      "lowest": 79.99,
+      "lowest": 67.0,
       "notes": null,
       "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
         "Midwest Peptide": "https://midwestpeptide.com/products/tesa-ipa-10mg-blend",
         "Royal Peptides": "https://royal-peptides.com/shop/tesamorelin-ipamorelin-blend/",
-        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/somatopulse/"
+        "Orbitrex Peptide": "https://orbitrexpeptide.is/product/somatopulse/",
+        "Backroad Aminos": "https://backroadaminos.com/product/shredder-tesamorelin-ipamorelin-10mg-3mg/"
       }
     },
     {
@@ -4463,7 +4503,8 @@
         "Olympus Peptide Labs": 45.01,
         "Elev-8 Labs": 27.5,
         "Echo Peptides": 49.99,
-        "Ares Research": 24.99
+        "Ares Research": 24.99,
+        "Backroad Aminos": 40.0
       },
       "lowest": 23.99,
       "notes": null,
@@ -4480,7 +4521,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/9e8c50e7",
         "Elev-8 Labs": "https://elev-8labs.com/product/melanotan-i/",
         "Echo Peptides": "https://echopeptides.co/product/mt1-10mg",
-        "Ares Research": "https://aresresearchlab.com/catalog/mt-1"
+        "Ares Research": "https://aresresearchlab.com/catalog/mt-1",
+        "Backroad Aminos": "https://backroadaminos.com/product/melanotan-1-10mg/"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -4571,7 +4613,8 @@
         "Crownwell Research": 80.0,
         "Peptide Titans": 109.99,
         "Elev-8 Labs": 50.0,
-        "Echo Peptides": 109.99
+        "Echo Peptides": 109.99,
+        "Backroad Aminos": 70.0
       },
       "lowest": 50.0,
       "notes": null,
@@ -4582,7 +4625,8 @@
         "Crownwell Research": "https://crownwellresearch.com/product/cagrilinitide/",
         "Peptide Titans": "https://peptidetitans.com/product/cagrilintide/?attribute_mg=10+mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/cagrilintide/",
-        "Echo Peptides": "https://echopeptides.co/product/cagrilintide-10mg"
+        "Echo Peptides": "https://echopeptides.co/product/cagrilintide-10mg",
+        "Backroad Aminos": "https://backroadaminos.com/product/cagrilintide-5mg/?attribute_pa_dosage=10mg"
       },
       "category": "Incretin & Metabolic-Pathway Compounds"
     },
@@ -4633,7 +4677,8 @@
         "True Research Labs": 79,
         "Alpine Peptide": 69.0,
         "Prism Labs": 39.99,
-        "MsAmino": 53.99
+        "MsAmino": 53.99,
+        "Backroad Aminos": 45.0
       },
       "lowest": 29.99,
       "notes": null,
@@ -4646,7 +4691,8 @@
         "True Research Labs": "https://trueresearchlabs.com/shop/dsip/?attribute_pa_dosage=10-mg",
         "Alpine Peptide": "https://alpinepeptide.com/product/disp-5mg/",
         "Prism Labs": "https://www.prismlabs.store/product/dsip",
-        "MsAmino": "https://msamino.com/products/dsip-10mg"
+        "MsAmino": "https://msamino.com/products/dsip-10mg",
+        "Backroad Aminos": "https://backroadaminos.com/product/dsip-10mg/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -4691,15 +4737,17 @@
         "Orbitrex Peptide": 69.99,
         "Aero Peptides": 59.99,
         "Crownwell Research": 99.0,
-        "Olympus Peptide Labs": 156.56
+        "Olympus Peptide Labs": 156.56,
+        "Backroad Aminos": 59.26
       },
-      "lowest": 59.99,
+      "lowest": 59.26,
       "notes": null,
       "vendor_product_urls": {
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/adamax-10mg/",
         "Aero Peptides": "https://aeropeptides.com/product/adamax",
         "Crownwell Research": "https://crownwellresearch.com/product/adamax/",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/51071792"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/51071792",
+        "Backroad Aminos": "https://backroadaminos.com/product/adamax-1032-10mg/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -4758,13 +4806,15 @@
       "amount_mg": 1200,
       "prices": {
         "Lumera Labs": 64.99,
-        "Crownwell Research": 56.0
+        "Crownwell Research": 56.0,
+        "Backroad Aminos": 52.0
       },
-      "lowest": 56.0,
+      "lowest": 52.0,
       "notes": null,
       "vendor_product_urls": {
         "Lumera Labs": "https://mylumeralabs.com/product/l-glutathione",
-        "Crownwell Research": "https://crownwellresearch.com/product/glutathione-1200-mg/"
+        "Crownwell Research": "https://crownwellresearch.com/product/glutathione-1200-mg/",
+        "Backroad Aminos": "https://backroadaminos.com/product/glutathione-1200mg/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -5503,6 +5553,96 @@
         "Direct Research Supply": "https://directresearchsupply.com/product/bacteriostatic-bac-water/?attribute_strength=10mL"
       },
       "category": null
+    },
+    {
+      "peptide": "ARA-290 (Cibinetide)",
+      "format": "Vial",
+      "size": "30mg",
+      "amount_mg": 30,
+      "prices": {
+        "Backroad Aminos": 87.0
+      },
+      "lowest": 87.0,
+      "notes": null,
+      "vendor_product_urls": {
+        "Backroad Aminos": "https://backroadaminos.com/product/ara-29p-30mg/"
+      },
+      "category": "Thymosin, BPC-157 & Peptide Fragments"
+    },
+    {
+      "peptide": "SLU-PP-332",
+      "format": "Vial",
+      "size": "10mg",
+      "amount_mg": 10,
+      "prices": {
+        "Backroad Aminos": 70.0
+      },
+      "lowest": 70.0,
+      "notes": null,
+      "vendor_product_urls": {
+        "Backroad Aminos": "https://backroadaminos.com/product/slu-pp-332-10mg/"
+      },
+      "category": "Incretin & Metabolic-Pathway Compounds"
+    },
+    {
+      "peptide": "Pinealon",
+      "format": "Vial",
+      "size": "20mg",
+      "amount_mg": 20,
+      "prices": {
+        "Backroad Aminos": 55.0
+      },
+      "lowest": 55.0,
+      "notes": null,
+      "vendor_product_urls": {
+        "Backroad Aminos": "https://backroadaminos.com/product/pinealon-20mg/"
+      },
+      "category": "Neuropeptide Analogues"
+    },
+    {
+      "peptide": "Bacteriostatic Water",
+      "format": "Water",
+      "size": "30mL",
+      "amount_mg": null,
+      "prices": {
+        "Backroad Aminos": 27.0
+      },
+      "lowest": 27.0,
+      "notes": null,
+      "vendor_product_urls": {
+        "Backroad Aminos": "https://backroadaminos.com/product/creek-water-bac-30ml/"
+      },
+      "category": null
+    },
+    {
+      "peptide": "SS-31 / Elamipretide",
+      "format": "Vial",
+      "size": "50mg",
+      "amount_mg": 50,
+      "prices": {
+        "Backroad Aminos": 103.7
+      },
+      "lowest": 103.7,
+      "notes": null,
+      "vendor_product_urls": {
+        "Backroad Aminos": "https://backroadaminos.com/product/ss-31/?attribute_pa_dosage=50mg"
+      },
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
+    },
+    {
+      "peptide": "NAD+",
+      "format": "Vial",
+      "size": "1000mg",
+      "amount_mg": 1000,
+      "prices": {
+        "Backroad Aminos": 66.0
+      },
+      "lowest": 66.0,
+      "notes": null,
+      "vendor_product_urls": {
+        "Backroad Aminos": "https://backroadaminos.com/product/nad1000mg/"
+      },
+      "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     }
   ],
   "excluded": [
