@@ -700,7 +700,8 @@
         "Aura Research": 39,
         "Helion Research": 29.99,
         "MsAmino": 49.99,
-        "Ares Research": 39.99
+        "Ares Research": 39.99,
+        "Sparta Labs": 30
       },
       "lowest": 18.99,
       "notes": null,
@@ -735,7 +736,8 @@
         "Aura Research": "https://tryauraresearch.com/product/ghk-cu/?attribute_pa_amount=50mg",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=cu50",
         "MsAmino": "https://msamino.com/products/ghk-cu",
-        "Ares Research": "https://aresresearchlab.com/catalog/ghk-cu"
+        "Ares Research": "https://aresresearchlab.com/catalog/ghk-cu",
+        "Sparta Labs": "https://spartalabs.net/us/products/ghk-cu"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -760,7 +762,8 @@
         "Elev-8 Labs": 119.0,
         "Stealth Research Labs": 69.99,
         "Alpine Peptide": 69.0,
-        "JD BioWorks": 49.46
+        "JD BioWorks": 49.46,
+        "Sparta Labs": 80
       },
       "lowest": 36.83,
       "notes": null,
@@ -779,7 +782,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/glutathione/",
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/glutathione/?attribute_pa_size=1500mg",
         "Alpine Peptide": "https://alpinepeptide.com/product/glutathione-1500mg/",
-        "JD BioWorks": "https://jdbioworks.com/product/glutathione-1500mg/"
+        "JD BioWorks": "https://jdbioworks.com/product/glutathione-1500mg/",
+        "Sparta Labs": "https://spartalabs.net/us/products/glutathione"
       }
     },
     {
@@ -920,7 +924,8 @@
         "Quality Peptide USA": 59,
         "Peptide Titans": 29.99,
         "Echo Peptides": 54.99,
-        "Ares Research": 54.99
+        "Ares Research": 54.99,
+        "Sparta Labs": 45
       },
       "lowest": 14.99,
       "notes": null,
@@ -934,7 +939,8 @@
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/kisspeptin-10",
         "Peptide Titans": "https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=5+mg",
         "Echo Peptides": "https://echopeptides.co/product/kisspeptin-10-5mg",
-        "Ares Research": "https://aresresearchlab.com/catalog/kisspeptin"
+        "Ares Research": "https://aresresearchlab.com/catalog/kisspeptin",
+        "Sparta Labs": "https://spartalabs.net/us/products/kisspeptin-10"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -1011,7 +1017,8 @@
         "Prism Labs": 49.99,
         "MsAmino": 48.99,
         "JD BioWorks": 59.84,
-        "Ares Research": 39.99
+        "Ares Research": 39.99,
+        "Sparta Labs": 50
       },
       "lowest": 25.25,
       "notes": null,
@@ -1041,7 +1048,8 @@
         "Prism Labs": "https://www.prismlabs.store/product/kp-10",
         "MsAmino": "https://msamino.com/products/kpv",
         "JD BioWorks": "https://jdbioworks.com/product/kpv/",
-        "Ares Research": "https://aresresearchlab.com/catalog/kpv"
+        "Ares Research": "https://aresresearchlab.com/catalog/kpv",
+        "Sparta Labs": "https://spartalabs.net/us/products/kpv"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1126,7 +1134,8 @@
         "Echo Peptides": 55.99,
         "Helion Research": 43.99,
         "MsAmino": 49.99,
-        "JD BioWorks": 59.84
+        "JD BioWorks": 59.84,
+        "Sparta Labs": 50
       },
       "lowest": 27.55,
       "notes": null,
@@ -1161,7 +1170,8 @@
         "Echo Peptides": "https://echopeptides.co/product/mots-c-10mg",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=ms10",
         "MsAmino": "https://msamino.com/products/mots-c",
-        "JD BioWorks": "https://jdbioworks.com/product/mots-c/"
+        "JD BioWorks": "https://jdbioworks.com/product/mots-c/",
+        "Sparta Labs": "https://spartalabs.net/us/products/mots-c"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1272,7 +1282,8 @@
         "Axovera Labs": 55,
         "Aura Research": 129,
         "MsAmino": 63.99,
-        "JD BioWorks": 63.41
+        "JD BioWorks": 63.41,
+        "Sparta Labs": 65
       },
       "lowest": 30.52,
       "notes": null,
@@ -1306,7 +1317,8 @@
         "Axovera Labs": "https://axoveralabs.com/product/nad/",
         "Aura Research": "https://tryauraresearch.com/product/nad/?attribute_pa_amount=500mg",
         "MsAmino": "https://msamino.com/products/nad-500mg",
-        "JD BioWorks": "https://jdbioworks.com/product/nad/"
+        "JD BioWorks": "https://jdbioworks.com/product/nad/",
+        "Sparta Labs": "https://spartalabs.net/us/products/nad-plus"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1339,7 +1351,8 @@
         "Aura Research": 49,
         "MsAmino": 46.99,
         "JD BioWorks": 58.7,
-        "Ares Research": 64.99
+        "Ares Research": 64.99,
+        "Sparta Labs": 45
       },
       "lowest": 22.07,
       "notes": null,
@@ -1365,7 +1378,8 @@
         "Aura Research": "https://tryauraresearch.com/product/pt-141/",
         "MsAmino": "https://msamino.com/products/pt-141-10mg",
         "JD BioWorks": "https://jdbioworks.com/product/pt-141/",
-        "Ares Research": "https://aresresearchlab.com/catalog/pt-141"
+        "Ares Research": "https://aresresearchlab.com/catalog/pt-141",
+        "Sparta Labs": "https://spartalabs.net/us/products/pt-141"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -1402,7 +1416,8 @@
         "Axovera Labs": 69,
         "Aura Research": 39,
         "MsAmino": 59.99,
-        "JD BioWorks": 61.27
+        "JD BioWorks": 61.27,
+        "Sparta Labs": 50
       },
       "lowest": 20.99,
       "notes": null,
@@ -1433,7 +1448,8 @@
         "Axovera Labs": "https://axoveralabs.com/product/selank/",
         "Aura Research": "https://tryauraresearch.com/product/selank/",
         "MsAmino": "https://msamino.com/products/selank",
-        "JD BioWorks": "https://jdbioworks.com/product/selank/"
+        "JD BioWorks": "https://jdbioworks.com/product/selank/",
+        "Sparta Labs": "https://spartalabs.net/us/products/selank"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1468,7 +1484,8 @@
         "Echo Peptides": 59.99,
         "Axovera Labs": 59,
         "Aura Research": 39,
-        "MsAmino": 47.99
+        "MsAmino": 47.99,
+        "Sparta Labs": 50
       },
       "lowest": 20.84,
       "notes": null,
@@ -1497,7 +1514,8 @@
         "Echo Peptides": "https://echopeptides.co/product/semax-10mg",
         "Axovera Labs": "https://axoveralabs.com/product/semax/",
         "Aura Research": "https://tryauraresearch.com/product/semax/",
-        "MsAmino": "https://msamino.com/products/semax-10mg"
+        "MsAmino": "https://msamino.com/products/semax-10mg",
+        "Sparta Labs": "https://spartalabs.net/us/products/semax"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1745,7 +1763,8 @@
         "Elev-8 Labs": 35.0,
         "Prism Labs": 49.99,
         "Aura Research": 59,
-        "MsAmino": 64.99
+        "MsAmino": 64.99,
+        "Sparta Labs": 80
       },
       "lowest": 35.0,
       "notes": null,
@@ -1765,7 +1784,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/aod-9604/",
         "Prism Labs": "https://www.prismlabs.store/product/aod",
         "Aura Research": "https://tryauraresearch.com/product/aod-9604/",
-        "MsAmino": "https://msamino.com/products/aod-9604-5mg"
+        "MsAmino": "https://msamino.com/products/aod-9604-5mg",
+        "Sparta Labs": "https://spartalabs.net/us/products/aod9604"
       },
       "category": "Incretin & Metabolic-Pathway Compounds"
     },
@@ -1880,7 +1900,8 @@
         "Vertex Labs": 89.0,
         "Quality Peptide USA": 69,
         "Peptide Titans": 49.99,
-        "BioLabs Peptides": 63.65
+        "BioLabs Peptides": 63.65,
+        "Sparta Labs": 120
       },
       "lowest": 33.99,
       "notes": null,
@@ -1892,7 +1913,8 @@
         "Vertex Labs": "https://vertexpeptideslab.org/product/cjc-1295-with-dac/",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/cjc-1295-dac",
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-with-dac/?attribute_mg=5+mg",
-        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-5mg-w-dac/"
+        "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-5mg-w-dac/",
+        "Sparta Labs": "https://spartalabs.net/us/products/cjc-1295-with-dac"
       }
     },
     {
@@ -2068,7 +2090,8 @@
         "Elev-8 Labs": 30.0,
         "Prism Labs": 44.99,
         "MsAmino": 49.99,
-        "Ares Research": 39.99
+        "Ares Research": 39.99,
+        "Sparta Labs": 40
       },
       "lowest": 23.68,
       "notes": null,
@@ -2089,7 +2112,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/epithalon/",
         "Prism Labs": "https://www.prismlabs.store/product/epi-10",
         "MsAmino": "https://msamino.com/products/epithalon",
-        "Ares Research": "https://aresresearchlab.com/catalog/epithalon"
+        "Ares Research": "https://aresresearchlab.com/catalog/epithalon",
+        "Sparta Labs": "https://spartalabs.net/us/products/epithalon"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -2150,7 +2174,8 @@
         "Purity Peptides": 60.49,
         "Alpha Peptides": 14.32,
         "Peptide Titans": 19.99,
-        "Ares Research": 29.99
+        "Ares Research": 29.99,
+        "Sparta Labs": 30
       },
       "lowest": 14.32,
       "notes": null,
@@ -2158,7 +2183,8 @@
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ghrp-2/",
         "Peptide Titans": "https://peptidetitans.com/product/ghrp-2/?attribute_mg=5+mg",
-        "Ares Research": "https://aresresearchlab.com/catalog/ghrp-2"
+        "Ares Research": "https://aresresearchlab.com/catalog/ghrp-2",
+        "Sparta Labs": "https://spartalabs.net/us/products/ghrp-2"
       }
     },
     {
@@ -2170,7 +2196,8 @@
         "Purity Peptides": 49.99,
         "Alpha Peptides": 14.32,
         "Peptide Titans": 19.99,
-        "Ares Research": 29.99
+        "Ares Research": 29.99,
+        "Sparta Labs": 30
       },
       "lowest": 14.32,
       "notes": null,
@@ -2178,7 +2205,8 @@
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/ghrp-6/",
         "Peptide Titans": "https://peptidetitans.com/product/ghrp-6/?attribute_mg=5+mg",
-        "Ares Research": "https://aresresearchlab.com/catalog/ghrp-6"
+        "Ares Research": "https://aresresearchlab.com/catalog/ghrp-6",
+        "Sparta Labs": "https://spartalabs.net/us/products/ghrp-6"
       }
     },
     {
@@ -2267,7 +2295,8 @@
         "BioLabs Peptides": 37.13,
         "Aura Research": 49,
         "MsAmino": 43.99,
-        "Ares Research": 34.99
+        "Ares Research": 34.99,
+        "Sparta Labs": 35
       },
       "lowest": 34.99,
       "notes": null,
@@ -2282,7 +2311,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/ipa/?attribute_size=5mg",
         "Aura Research": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=5mg",
         "MsAmino": "https://msamino.com/products/ipamorelin",
-        "Ares Research": "https://aresresearchlab.com/catalog/ipamorelin"
+        "Ares Research": "https://aresresearchlab.com/catalog/ipamorelin",
+        "Sparta Labs": "https://spartalabs.net/us/products/ipamorelin"
       }
     },
     {
@@ -2949,11 +2979,13 @@
       "size": "5mg",
       "prices": {
         "Alpha Peptides": 29.53,
-        "Peptide Titans": 44.99
+        "Peptide Titans": 44.99,
+        "Sparta Labs": 70
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/hexarelin/",
-        "Peptide Titans": "https://peptidetitans.com/product/hexarelin/?attribute_mg=5+mg"
+        "Peptide Titans": "https://peptidetitans.com/product/hexarelin/?attribute_mg=5+mg",
+        "Sparta Labs": "https://spartalabs.net/us/products/hexarelin"
       },
       "lowest": 29.53
     },
@@ -2966,14 +2998,16 @@
         "Synthrolab": 71.88,
         "BioLabs Peptides": 26.52,
         "Olympus Peptide Labs": 127.21,
-        "Ares Research": 39.99
+        "Ares Research": 39.99,
+        "Sparta Labs": 55
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/pinealon/",
         "Synthrolab": "https://synthrolab.com/product/pinealon-10mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/pinealon/",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/1aca0725",
-        "Ares Research": "https://aresresearchlab.com/catalog/pinealon"
+        "Ares Research": "https://aresresearchlab.com/catalog/pinealon",
+        "Sparta Labs": "https://spartalabs.net/us/products/pinealon"
       },
       "lowest": 26.52
     },
@@ -3063,7 +3097,8 @@
         "Stealth Research Labs": 12.99,
         "Alpine Peptide": 9.0,
         "Prism Labs": 14.99,
-        "Echo Peptides": 12.99
+        "Echo Peptides": 12.99,
+        "Sparta Labs": 10
       },
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bacteriostatic-water-10ml",
@@ -3073,7 +3108,8 @@
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/bacteriostatic-water/?attribute_pa_size=10ml",
         "Alpine Peptide": "https://alpinepeptide.com/product/bacteriostatic-water-10ml/",
         "Prism Labs": "https://www.prismlabs.store/product/prism-h2o",
-        "Echo Peptides": "https://echopeptides.co/product/bacteriostatic-water-10ml"
+        "Echo Peptides": "https://echopeptides.co/product/bacteriostatic-water-10ml",
+        "Sparta Labs": "https://spartalabs.net/us/products/bac-water"
       },
       "lowest": 9.0
     },
@@ -3230,7 +3266,8 @@
         "Aura Research": 49,
         "MsAmino": 39.99,
         "JD BioWorks": 57.57,
-        "Ares Research": 34.99
+        "Ares Research": 34.99,
+        "Sparta Labs": 55
       },
       "lowest": 21.05,
       "notes": null,
@@ -3260,7 +3297,8 @@
         "Aura Research": "https://tryauraresearch.com/product/melanotan-ii/",
         "MsAmino": "https://msamino.com/products/mt-2-melanotan-ii-10mg",
         "JD BioWorks": "https://jdbioworks.com/product/melanotan-ii/",
-        "Ares Research": "https://aresresearchlab.com/catalog/melanotan-ii"
+        "Ares Research": "https://aresresearchlab.com/catalog/melanotan-ii",
+        "Sparta Labs": "https://spartalabs.net/us/products/mt2"
       }
     },
     {
@@ -3344,7 +3382,8 @@
         "Elev-8 Labs": 139.99,
         "Alpine Peptide": 109.0,
         "Axovera Labs": 95,
-        "Aura Research": 89
+        "Aura Research": 89,
+        "Sparta Labs": 135
       },
       "lowest": 58.0,
       "notes": null,
@@ -3361,7 +3400,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/bpc-157-tb-500-wolverine/",
         "Alpine Peptide": "https://alpinepeptide.com/product/wolverine-stack-20mg/",
         "Axovera Labs": "https://axoveralabs.com/product/bpc-157-tb-500/",
-        "Aura Research": "https://tryauraresearch.com/product/bpc-157-tb-500/"
+        "Aura Research": "https://tryauraresearch.com/product/bpc-157-tb-500/",
+        "Sparta Labs": "https://spartalabs.net/us/products/bpc-157-tb-500-blend-10-10"
       }
     },
     {
@@ -3584,7 +3624,8 @@
         "Apex Peptides": 69.0,
         "Peptide Titans": 29.99,
         "Echo Peptides": 59.99,
-        "MsAmino": 53.99
+        "MsAmino": 53.99,
+        "Sparta Labs": 60
       },
       "lowest": 29.99,
       "notes": null,
@@ -3596,7 +3637,8 @@
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/tb-500/?attribute_pa_size=5mg",
         "Peptide Titans": "https://peptidetitans.com/product/tb-500/?attribute_mg=5+mg",
         "Echo Peptides": "https://echopeptides.co/product/tb-500-5mg",
-        "MsAmino": "https://msamino.com/products/tb500"
+        "MsAmino": "https://msamino.com/products/tb500",
+        "Sparta Labs": "https://spartalabs.net/us/products/tb-500"
       }
     },
     {
@@ -4571,7 +4613,8 @@
         "Crownwell Research": 80.0,
         "Peptide Titans": 109.99,
         "Elev-8 Labs": 50.0,
-        "Echo Peptides": 109.99
+        "Echo Peptides": 109.99,
+        "Sparta Labs": 115
       },
       "lowest": 50.0,
       "notes": null,
@@ -4582,7 +4625,8 @@
         "Crownwell Research": "https://crownwellresearch.com/product/cagrilinitide/",
         "Peptide Titans": "https://peptidetitans.com/product/cagrilintide/?attribute_mg=10+mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/cagrilintide/",
-        "Echo Peptides": "https://echopeptides.co/product/cagrilintide-10mg"
+        "Echo Peptides": "https://echopeptides.co/product/cagrilintide-10mg",
+        "Sparta Labs": "https://spartalabs.net/us/products/cagrilintide"
       },
       "category": "Incretin & Metabolic-Pathway Compounds"
     },
@@ -5503,6 +5547,21 @@
         "Direct Research Supply": "https://directresearchsupply.com/product/bacteriostatic-bac-water/?attribute_strength=10mL"
       },
       "category": null
+    },
+    {
+      "peptide": "Oxytocin",
+      "format": "Vial",
+      "size": "5mg",
+      "amount_mg": 5,
+      "prices": {
+        "Sparta Labs": 45
+      },
+      "lowest": 45,
+      "notes": null,
+      "vendor_product_urls": {
+        "Sparta Labs": "https://spartalabs.net/us/products/oxytocin-acetate"
+      },
+      "category": "Melanocortin & HPG-Axis Compounds"
     }
   ],
   "excluded": [
