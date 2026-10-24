@@ -258,3 +258,7 @@ https://peptidehealthdigest.vercel.app/ (external, used with permission) in a ne
 sections above, `docs/references-format.md`, `docs/testing-refs-filter.md` and
 `data/testing-refs-status.json` describe the retired page and are kept for history only.
 Do not copy the external site's dosing or health-claim content onto this site.
+
+## Per-vendor partner pill label
+
+Approved vendors show an "Affiliate partner" pill on supplier cards. Set the optional public field `partner_label` in vendor_config.json to override the text for one vendor (e.g. Sparta Labs uses `"Affiliate"` because its programme terms ban calling us a partner). Run `scripts/sync_vendor_config.py` afterwards.
