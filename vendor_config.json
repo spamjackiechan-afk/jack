@@ -685,7 +685,7 @@
       "Google Pay",
       "Crypto"
     ],
-    "payment_note": "Prices in USD and are for 10-vial kits. Card, Apple Pay and Google Pay go through Stripe; crypto through PayRam. You need an account (verified email, 18+) to buy. Code DISCOUNTS gives 5% off eligible products; BAC water and acetic acid are excluded.",
+    "payment_note": "Prices in USD and are for 10-vial kits. Card, Apple Pay and Google Pay go through Stripe; crypto through PayRam. You need an account (confirmed email, 18+) to buy. Code DISCOUNTS gives 5% off eligible products; BAC water and acetic acid are excluded.",
     "shipping_info": "U.S. shipping is $30 flat, free on orders over $350. International shipping is $80 from an international warehouse.",
     "shipping_payment_researched": "2026-10-23",
     "code_disclosure": "I earn a commission from purchases made using my DRS code. Research use only. Not for human consumption.",
