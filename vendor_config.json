@@ -693,6 +693,7 @@
   },
   "Sparta Labs": {
     "status": "approved",
+    "partner_label": "Affiliate",
     "site_url": "https://spartalabs.net",
     "tracking_type": "link_plus_code",
     "affiliate_link_base": "https://spartalabs.net/us/store?aff=SL75DZEV",
