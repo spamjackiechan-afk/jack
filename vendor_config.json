@@ -704,5 +704,23 @@
     "shipping_payment_researched": "2026-10-23",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": null
+  },
+  "Sparta Labs": {
+    "status": "approved",
+    "partner_label": "Affiliate",
+    "site_url": "https://spartalabs.net",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://spartalabs.net/us/store?aff=SL75DZEV",
+    "affiliate_path_suffix": null,
+    "promo_code": "SL75DZEV",
+    "payment_methods": [
+      "Credit Card",
+      "Crypto"
+    ],
+    "payment_note": "Prices in USD (U.S. store only). Card checkout (Visa, Mastercard, Amex, Discover); the site also lists wallet and crypto payments. The customer discount our code SL75DZEV gives is not yet confirmed.",
+    "shipping_info": "Ships within the U.S. only. Standard shipping is listed at $14.99, with dispatch within 24 hours and 2\u20135 day transit.",
+    "shipping_payment_researched": "2026-10-23",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": null
   }
 }

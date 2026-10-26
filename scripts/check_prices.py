@@ -299,6 +299,12 @@ VENDORS = {
         "robots_allows": True,   # confirmed: /robots.txt returns 404 (no rules). WooCommerce; sizes are
                                   # pinned with ?attribute_strength=<size>. All prices are 10-vial kit totals.
     },
+    "Sparta Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-23",
+        "robots_allows": True,   # confirmed: robots.txt "Allow: /" (disallows only account/checkout/cart/order/api).
+                                  # /us/products/<slug> pages are allowed. Sizes can't be pinned by URL, so only
+                                  # the default (JSON-LD offer) size of each product is listed.
+    },
 }
 
 HEADERS = {
