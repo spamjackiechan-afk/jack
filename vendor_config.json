@@ -691,6 +691,20 @@
     "code_disclosure": "I earn a commission from purchases made using my DRS code. Research use only. Not for human consumption.",
     "code_discount_pct": 5
   },
+  "Backroad Aminos": {
+    "status": "approved",
+    "site_url": "https://backroadaminos.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://backroadaminos.com/?coupon=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": null,
+    "payment_note": "Prices in USD. The customer discount our code DISCOUNTS gives is not yet confirmed.",
+    "shipping_info": "Free shipping on orders over $200 (site banner).",
+    "shipping_payment_researched": "2026-10-23",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": null
+  },
   "Sparta Labs": {
     "status": "approved",
     "partner_label": "Affiliate",
