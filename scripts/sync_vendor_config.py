@@ -60,6 +60,7 @@ PUBLIC_FIELDS = [
     "affiliate_path_suffix", "promo_code", "code_discount_pct", "code_disclosure", "payment_methods", "payment_note",
     "shipping_info", "shipping_payment_researched", "hidden",
     "partner_label",  # optional per-vendor card pill text (default "Affiliate partner")
+    "extra_links",  # optional [{label, url}] vendor pages shown on the supplier card (same site as site_url)
 ]
 
 # Per-vendor fields on a catalog row that must go when the vendor is hidden.

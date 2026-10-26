@@ -615,7 +615,17 @@
     "payment_note": "Prices in USD. Zelle and crypto take 5% off the order total; cards are charged at the standard price.",
     "shipping_info": "U.S. domestic shipping only. USPS Priority $9.99, free on orders of $250 or more. Orders by 2 PM PT on business days ship the same day once payment clears, with tracking.",
     "shipping_payment_researched": "2026-10-21",
-    "code_discount_pct": 20
+    "code_discount_pct": 20,
+    "extra_links": [
+      {
+        "label": "Lab reports (COA)",
+        "url": "https://helionresearchusa.com/coa.html?ref=DISCOUNTPEPTIDES"
+      },
+      {
+        "label": "Shop",
+        "url": "https://helionresearchusa.com/shop.html?ref=DISCOUNTPEPTIDES"
+      }
+    ]
   },
   "MsAmino": {
     "status": "approved",
