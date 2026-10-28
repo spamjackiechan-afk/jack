@@ -703,7 +703,8 @@
         "Helion Research": 29.99,
         "MsAmino": 49.99,
         "Ares Research": 39.99,
-        "Sparta Labs": 30
+        "Sparta Labs": 30,
+        "Mindful Peptides": 64.99
       },
       "lowest": 18.99,
       "notes": null,
@@ -739,7 +740,8 @@
         "Helion Research": "https://helionresearchusa.com/product.html?sku=cu50",
         "MsAmino": "https://msamino.com/products/ghk-cu",
         "Ares Research": "https://aresresearchlab.com/catalog/ghk-cu",
-        "Sparta Labs": "https://spartalabs.net/us/products/ghk-cu"
+        "Sparta Labs": "https://spartalabs.net/us/products/ghk-cu",
+        "Mindful Peptides": "https://mindfulpeptides.com/product/ghk-cu-50/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1233,7 +1235,8 @@
         "Elev-8 Labs": 149.99,
         "Axovera Labs": 125,
         "Aura Research": 139,
-        "Backroad Aminos": 59.26
+        "Backroad Aminos": 59.26,
+        "Mindful Peptides": 125.0
       },
       "lowest": 59.26,
       "notes": null,
@@ -1252,7 +1255,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/mots-c/?attribute_pa_size=40mg",
         "Axovera Labs": "https://axoveralabs.com/product/mots-c/",
         "Aura Research": "https://tryauraresearch.com/product/mots-c/?attribute_pa_amount=40mg",
-        "Backroad Aminos": "https://backroadaminos.com/product/mots-c/?attribute_pa_dosage=40mg"
+        "Backroad Aminos": "https://backroadaminos.com/product/mots-c/?attribute_pa_dosage=40mg",
+        "Mindful Peptides": "https://mindfulpeptides.com/product/mots-c/"
       }
     },
     {
@@ -1293,7 +1297,8 @@
         "Aura Research": 129,
         "MsAmino": 63.99,
         "JD BioWorks": 63.41,
-        "Sparta Labs": 65
+        "Sparta Labs": 65,
+        "Mindful Peptides": 69.99
       },
       "lowest": 30.52,
       "notes": null,
@@ -1328,7 +1333,8 @@
         "Aura Research": "https://tryauraresearch.com/product/nad/?attribute_pa_amount=500mg",
         "MsAmino": "https://msamino.com/products/nad-500mg",
         "JD BioWorks": "https://jdbioworks.com/product/nad/",
-        "Sparta Labs": "https://spartalabs.net/us/products/nad-plus"
+        "Sparta Labs": "https://spartalabs.net/us/products/nad-plus",
+        "Mindful Peptides": "https://mindfulpeptides.com/product/nad-500/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -3966,7 +3972,8 @@
         "Aura Research": 79,
         "MsAmino": 91.99,
         "JD BioWorks": 78.35,
-        "Backroad Aminos": 50.0
+        "Backroad Aminos": 50.0,
+        "Mindful Peptides": 90.0
       },
       "lowest": 50.0,
       "notes": null,
@@ -3998,7 +4005,8 @@
         "Aura Research": "https://tryauraresearch.com/product/tesamorelin/?attribute_pa_amount=10mg",
         "MsAmino": "https://msamino.com/products/tesamorelin",
         "JD BioWorks": "https://jdbioworks.com/product/tesamorelin/",
-        "Backroad Aminos": "https://backroadaminos.com/product/tesamorelin/?attribute_pa_dosage=10mg"
+        "Backroad Aminos": "https://backroadaminos.com/product/tesamorelin/?attribute_pa_dosage=10mg",
+        "Mindful Peptides": "https://mindfulpeptides.com/product/tesamorelin/"
       }
     },
     {
@@ -5664,12 +5672,14 @@
       "size": "50mg",
       "amount_mg": 50,
       "prices": {
-        "Backroad Aminos": 103.7
+        "Backroad Aminos": 103.7,
+        "Mindful Peptides": 150.0
       },
       "lowest": 103.7,
       "notes": null,
       "vendor_product_urls": {
-        "Backroad Aminos": "https://backroadaminos.com/product/ss-31/?attribute_pa_dosage=50mg"
+        "Backroad Aminos": "https://backroadaminos.com/product/ss-31/?attribute_pa_dosage=50mg",
+        "Mindful Peptides": "https://mindfulpeptides.com/product/ss-31/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -5679,12 +5689,14 @@
       "size": "1000mg",
       "amount_mg": 1000,
       "prices": {
-        "Backroad Aminos": 66.0
+        "Backroad Aminos": 66.0,
+        "Mindful Peptides": 100.0
       },
       "lowest": 66.0,
       "notes": null,
       "vendor_product_urls": {
-        "Backroad Aminos": "https://backroadaminos.com/product/nad1000mg/"
+        "Backroad Aminos": "https://backroadaminos.com/product/nad1000mg/",
+        "Mindful Peptides": "https://mindfulpeptides.com/product/nad-1000/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },

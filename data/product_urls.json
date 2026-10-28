@@ -1337,5 +1337,13 @@
     "KPV | Vial | 10mg": "https://spartalabs.net/us/products/kpv",
     "Semax | Vial | 10mg": "https://spartalabs.net/us/products/semax",
     "PT-141 (Bremelanotide) | Vial | 10mg": "https://spartalabs.net/us/products/pt-141"
+  },
+  "Mindful Peptides": {
+    "GHK-Cu (Copper Peptide) | Vial | 50mg": "https://mindfulpeptides.com/product/ghk-cu-50/",
+    "MOTS-C | Vial | 40mg": "https://mindfulpeptides.com/product/mots-c/",
+    "SS-31 / Elamipretide | Vial | 50mg": "https://mindfulpeptides.com/product/ss-31/",
+    "Tesamorelin | Vial | 10mg": "https://mindfulpeptides.com/product/tesamorelin/",
+    "NAD+ | Vial | 500mg": "https://mindfulpeptides.com/product/nad-500/",
+    "NAD+ | Vial | 1000mg": "https://mindfulpeptides.com/product/nad-1000/"
   }
 }
