@@ -733,6 +733,19 @@
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": null
   },
+  "Mindful Peptides": {
+    "status": "approved",
+    "site_url": "https://mindfulpeptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://mindfulpeptides.com/?ref=43",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "payment_note": "Prices in USD. The site lists encrypted card checkout; payment methods were not confirmed beyond that.",
+    "shipping_info": "Ships within the USA. Free shipping on every order; tracked, 1\u20132 day processing (per mindfulpeptides.com).",
+    "shipping_payment_researched": "2026-10-28",
+    "code_discount_pct": null
+  },
   "Certa Peptides": {
     "status": "approved",
     "site_url": "https://certapeptides.com",
