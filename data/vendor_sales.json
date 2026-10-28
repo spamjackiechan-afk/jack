@@ -129,65 +129,7 @@
       "verified": "2026-10-23"
     }
   ],
-  "Synthrolab": [
-    {
-      "code": "SPOOKY30",
-      "combines_with_our_code": null,
-      "end": null,
-      "exclusions": null,
-      "gives": "Spooky Sale: 30% off sitewide with code SPOOKY30 (banner countdown shows no end date)",
-      "source": "https://synthrolab.com",
-      "start": null,
-      "verified": "2026-10-24"
-    }
-  ],
-  "Crownwell Research": [
-    {
-      "code": "FALL25",
-      "combines_with_our_code": null,
-      "end": null,
-      "exclusions": null,
-      "gives": "Fall Sale: 25% off sitewide with code FALL25",
-      "source": "https://crownwellresearch.com",
-      "start": null,
-      "verified": "2026-10-24"
-    }
-  ],
-  "Research Peptides Lab": [
-    {
-      "code": "BOGO50",
-      "combines_with_our_code": null,
-      "end": null,
-      "exclusions": null,
-      "gives": "Limited-time: buy 1, get 1 50% off sitewide with code BOGO50",
-      "source": "https://researchpeptideslab.com",
-      "start": null,
-      "verified": "2026-10-24"
-    }
-  ],
-  "AFA Biosciences": [
-    {
-      "code": "BOGO",
-      "combines_with_our_code": null,
-      "end": null,
-      "exclusions": "One code per order, codes do not stack",
-      "gives": "Buy a vial, get the second free (free vial of equal or lower price, up to 3 free vials per order) with code BOGO; free gift with every order, no code",
-      "source": "https://afabiosciences.com",
-      "start": null,
-      "verified": "2026-10-24"
-    }
-  ],
   "Quality Peptide USA": [
-    {
-      "code": "FREEDOM",
-      "combines_with_our_code": null,
-      "end": null,
-      "exclusions": "First order only; can't combine with bundle pricing, Subscribe & Save or other promotional discounts; one discount per order",
-      "gives": "20% off first order (new customers only) with code FREEDOM",
-      "source": "https://qualitypeptideusa.com",
-      "start": null,
-      "verified": "2026-10-24"
-    },
     {
       "code": "FALL15",
       "combines_with_our_code": null,
@@ -195,42 +137,6 @@
       "exclusions": "Promotional exclusions may apply",
       "gives": "Fall Savings: 15% off everything with code FALL15, valid through November; free shipping and a free QPUSA T-shirt on orders over $300 (while supplies last)",
       "source": "https://qualitypeptideusa.com",
-      "start": null,
-      "verified": "2026-10-24"
-    }
-  ],
-  "Royal Peptides": [
-    {
-      "code": null,
-      "combines_with_our_code": null,
-      "end": null,
-      "exclusions": "20% applies to GLPs only",
-      "gives": "Limited GLP pricing event: 20% off all GLPs (sale prices already applied); also 5% off when you add 3 compounds, and extra crypto savings; automatic, no code",
-      "source": "https://royal-peptides.com",
-      "start": null,
-      "verified": "2026-10-24"
-    }
-  ],
-  "Helion Research": [
-    {
-      "code": "WELCOME20",
-      "combines_with_our_code": null,
-      "end": null,
-      "exclusions": "First order only for WELCOME20; stacking not stated",
-      "gives": "20% off your first order with code WELCOME20; bundle savings 5% off 5+, 15% off 10+ (automatic); 5% off with Zelle or crypto",
-      "source": "https://helionresearchusa.com",
-      "start": null,
-      "verified": "2026-10-23"
-    }
-  ],
-  "Alpine Peptide": [
-    {
-      "code": "FALL",
-      "combines_with_our_code": null,
-      "end": "2026-11-01T05:59:00Z",
-      "exclusions": null,
-      "gives": "Fall Sale: 25% off all compounds with code FALL; buy any 3 compounds, get 1 free (the two stack); complimentary BAC with every compound and free 2-day shipping",
-      "source": "https://alpinepeptide.com",
       "start": null,
       "verified": "2026-10-24"
     }
