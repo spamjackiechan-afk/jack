@@ -757,10 +757,13 @@
       "Visa",
       "SEPA bank transfer"
     ],
-    "payment_note": "Prices in EUR (not USD). EU store operated by CERTALAB S.R.L., Romania.",
+    "payment_note": "Prices in euros (EUR), shown as listed by the vendor; not converted and not compared with USD prices. EU store operated by CERTALAB S.R.L., Romania.",
     "shipping_info": "Ships from Romania to 26 EU countries plus Switzerland and the UK; no U.S. shipping listed. Free shipping over EUR 200. Import duties outside the EU are paid by the recipient.",
     "shipping_payment_researched": "2026-10-28",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
-    "code_discount_pct": 10
+    "code_discount_pct": 10,
+    "currency": "EUR",
+    "ships_to": "EU,CH,GB",
+    "ships_to_label": "Ships to EU, Switzerland & UK only \u2014 not the US"
   }
 }
