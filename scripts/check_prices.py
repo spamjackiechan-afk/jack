@@ -310,6 +310,11 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt (Rank Math/WooCommerce) disallows only /wp-admin/, wc-logs/uploads,
                                   # add-to-cart, ?s=, ?orderby= and ?filter_ URLs; /product/<slug>/ pages are allowed.
     },
+    "Certa Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-28",
+        "robots_allows": True,   # confirmed: robots.txt is "Allow: /" and disallows only /api/, /checkout, /cart,
+                                  # /auth, /account and add-to-cart; /shop/<slug> pages are allowed. Prices are EUR.
+    },
 }
 
 HEADERS = {
@@ -590,7 +595,34 @@ def extract_variant_price(html: str, variant_id: str) -> tuple:
         elif not _default_size_shown(html, text, m.start()):
             continue
         return price, None
-    return None, None
+    return _jsonld_variant_url_price(html, variant_id)
+
+
+def _jsonld_variant_url_price(html: str, variant_id: str) -> tuple:
+    """Certa Peptides: a JSON-LD ProductGroup whose hasVariant entries each carry
+    their own url (".../shop/<slug>?variant=<id>") and Offer price. Used only when
+    exactly one variant's url names this id. Prices are taken as listed (no
+    currency conversion; the vendor's currency comes from vendor_config.json)."""
+    found = []
+    for m in re.finditer(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S):
+        try:
+            data = json.loads(m.group(1))
+        except ValueError:
+            continue
+        for node in (data if isinstance(data, list) else [data]):
+            if not isinstance(node, dict) or node.get("@type") != "ProductGroup":
+                continue
+            for v in node.get("hasVariant") or []:
+                url = str((v or {}).get("url") or "")
+                if not re.search(r"[?&]variant=%s(?:&|$)" % re.escape(variant_id), url):
+                    continue
+                offer = v.get("offers") or {}
+                offer = offer[0] if isinstance(offer, list) and offer else offer
+                try:
+                    found.append(float(offer.get("price")))
+                except (TypeError, ValueError, AttributeError):
+                    pass
+    return (found[0], None) if len(found) == 1 else (None, None)
 
 
 def _default_size_shown(html: str, text: str, pos: int) -> bool:
@@ -717,7 +749,27 @@ def check_product_with_browser(url: str, browser) -> dict:
     return {"url": url, "price": price, "regular_price": extract_regular_price(html, price), "error": None}
 
 
-def apply_live_overlay(included: list, results: dict) -> int:
+def non_usd_vendors(config_path: Path = None) -> dict:
+    """Vendor -> currency for vendors whose vendor_config.json `currency` is set
+    and isn't USD (absent means USD). Their prices are never converted and
+    never count as a row's lowest price (same rule as index.html usdLowest)."""
+    config_path = config_path or Path(__file__).parent.parent / "vendor_config.json"
+    try:
+        cfg = json.loads(Path(config_path).read_text())
+    except (OSError, ValueError):
+        return {}
+    return {v: str(c.get("currency")).upper() for v, c in cfg.items()
+            if not v.startswith("_") and isinstance(c, dict)
+            and str(c.get("currency") or "USD").upper() != "USD"}
+
+
+def usd_lowest(prices: dict, non_usd: dict):
+    """Lowest USD price in a row's prices, or None when it has none."""
+    vals = [p for v, p in (prices or {}).items() if v not in non_usd]
+    return min(vals) if vals else None
+
+
+def apply_live_overlay(included: list, results: dict, non_usd: dict = None) -> int:
     """Reference implementation of how the homepage applies live_prices.json
     (index.html applyLiveOverlay — keep the two in step). Mutates `included`
     (the DATA.included list) in place and returns how many vendor prices it
@@ -732,7 +784,11 @@ def apply_live_overlay(included: list, results: dict) -> int:
     * vendor not already on the row -> ignored (freshness overlay, not catalog).
     * safety: if every result for a vendor is None (site down / run blocked),
       nothing is cleared for that vendor.
+    * `lowest` counts USD prices only (None if a row has none); a vendor with a
+      non-USD `currency` in vendor_config.json keeps its price, unconverted.
     """
+    if non_usd is None:
+        non_usd = non_usd_vendors()
     touched = 0
     for vendor, items in (results or {}).items():
         vals = list((items or {}).values())
@@ -757,14 +813,14 @@ def apply_live_overlay(included: list, results: dict) -> int:
                     if isinstance(match.get(field), dict):
                         match[field].pop(vendor, None)
                 if match["prices"]:
-                    match["lowest"] = min(match["prices"].values())
+                    match["lowest"] = usd_lowest(match["prices"], non_usd)
                 else:
                     included.remove(match)
                 touched += 1
                 continue
             match["prices"][vendor] = price
             match.setdefault("liveVerified", {})[vendor] = True
-            match["lowest"] = min(match["prices"].values())
+            match["lowest"] = usd_lowest(match["prices"], non_usd)
             regular = result.get("regular_price")
             if vendor != "Offline Peptides" and regular and regular > price:
                 match.setdefault("onSale", {})[vendor] = regular

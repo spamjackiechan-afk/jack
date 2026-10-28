@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from check_prices import apply_live_overlay  # noqa: E402
+from check_prices import apply_live_overlay, non_usd_vendors, usd_lowest  # noqa: E402
 
 
 def row(peptide, size, prices, urls=None, fmt="Vial"):
@@ -67,6 +67,17 @@ class OverlayTests(unittest.TestCase):
         self.assertEqual(inc[0].get("onSale"), {"B": 40.0})
         self.assertEqual(inc[0]["lowest"], 25.0)
 
+    def test_non_usd_price_never_lowest(self):
+        inc = [row("X", "10mg", {"A": 50.0, "CadShop": 40.0}), row("Y", "5mg", {"CadShop": 30.0})]
+        res = {"CadShop": {"X | Vial | 10mg": {"price": 35.0, "regular_price": None, "error": None},
+                           "Y | Vial | 5mg": {"price": 31.0, "regular_price": None, "error": None}},
+               "A": {"X | Vial | 10mg": {"price": 55.0, "regular_price": None, "error": None}}}
+        apply_live_overlay(inc, res, non_usd={"CadShop": "CAD"})
+        self.assertEqual(inc[0]["prices"], {"A": 55.0, "CadShop": 35.0})  # kept, not converted
+        self.assertEqual(inc[0]["lowest"], 55.0)   # the USD price, not the cheaper CAD one
+        self.assertEqual(inc[1]["prices"], {"CadShop": 31.0})
+        self.assertIsNone(inc[1]["lowest"])         # CAD-only row: no lowest
+
     def test_real_repo_data_offline_404s_hidden(self):
         inc = copy.deepcopy(load_data()["included"])
         live = json.loads((ROOT / "data" / "live_prices.json").read_text())
@@ -76,17 +87,21 @@ class OverlayTests(unittest.TestCase):
             m = next((i for i in inc if (i["peptide"], i["format"], i["size"]) == (pep, fmt, size)), None)
             if r.get("price") is None:
                 self.assertTrue(m is None or "Offline Peptides" not in m["prices"], key)
+        non_usd = non_usd_vendors()
         for i in inc:
-            self.assertEqual(i["lowest"], min(i["prices"].values()), i["peptide"])
+            self.assertEqual(i["lowest"], usd_lowest(i["prices"], non_usd), i["peptide"])
 
     @unittest.skipUnless(shutil.which("node"), "node not installed")
     def test_page_js_matches_python_reference(self):
         html = (ROOT / "index.html").read_text()
         m = re.search(r"^function applyLiveOverlay\(results\)\{.*?^\}", html, re.S | re.M)
         self.assertIsNotNone(m, "applyLiveOverlay not found in index.html")
+        cur = re.search(r"^// ---------- Currency .*?^// ---------- end currency ----------$", html, re.S | re.M)
+        self.assertIsNotNone(cur, "currency helpers not found in index.html")
+        cfg_line = next(l for l in html.split("\n") if l.startswith("const VENDOR_CONFIG = "))
         data = load_data()
         live = json.loads((ROOT / "data" / "live_prices.json").read_text())
-        js = ("const DATA = " + json.dumps(data) + ";\n" + m.group(0) +
+        js = (cfg_line + "\n" + cur.group(0) + "\nconst DATA = " + json.dumps(data) + ";\n" + m.group(0) +
               "\napplyLiveOverlay(" + json.dumps(live["results"]) + ");\n"
               "process.stdout.write(JSON.stringify(DATA.included));")
         # Script goes in on stdin: as an argument it can exceed the OS limit (E2BIG).
