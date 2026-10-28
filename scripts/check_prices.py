@@ -305,6 +305,11 @@ VENDORS = {
                                   # /us/products/<slug> pages are allowed. Sizes can't be pinned by URL, so only
                                   # the default (JSON-LD offer) size of each product is listed.
     },
+    "Mindful Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-28",
+        "robots_allows": True,   # confirmed: robots.txt (Rank Math/WooCommerce) disallows only /wp-admin/, wc-logs/uploads,
+                                  # add-to-cart, ?s=, ?orderby= and ?filter_ URLs; /product/<slug>/ pages are allowed.
+    },
 }
 
 HEADERS = {
