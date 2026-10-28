@@ -93,6 +93,16 @@
       "source": "https://peptidetitans.com",
       "start": null,
       "verified": "2026-10-23"
+    },
+    {
+      "code": "SPOOKY20",
+      "combines_with_our_code": null,
+      "end": "2026-10-29T06:59:00Z",
+      "exclusions": null,
+      "gives": "Halloween Sale: 20% off everything with code SPOOKY20 (site banner says \"Ends Nov 1\"; a second banner says \"Last Day / Final day\")",
+      "source": "https://peptidetitans.com",
+      "start": null,
+      "verified": "2026-10-28"
     }
   ],
   "True Peptides": [
@@ -116,7 +126,7 @@
       "gives": "Build your order: any 3 bottles, 5% off each (automatic, no code)",
       "source": "https://veratisbio.com/shop",
       "start": null,
-      "verified": "2026-10-22"
+      "verified": "2026-10-28"
     },
     {
       "code": null,
@@ -127,6 +137,16 @@
       "source": "https://veratisbio.com",
       "start": null,
       "verified": "2026-10-23"
+    },
+    {
+      "code": "DISCOUNTPEPTIDES",
+      "combines_with_our_code": null,
+      "end": "2026-10-31T04:59:00Z",
+      "exclusions": null,
+      "gives": "Halloween week: our code DISCOUNTPEPTIDES gives 25% off instead of 15% (Sun Oct 25, 12:00 PM CT through Fri Oct 30, 11:59 PM CT), then back to 15%",
+      "source": "Veratis partner email \"VERATIS AFFILIATES: Read this! Your code is 25% off this week\" (Oct 25, 2026)",
+      "start": "2026-10-25T17:00:00Z",
+      "verified": "2026-10-28"
     }
   ],
   "Quality Peptide USA": [
@@ -139,6 +159,18 @@
       "source": "https://qualitypeptideusa.com",
       "start": null,
       "verified": "2026-10-24"
+    }
+  ],
+  "Orbitrex Peptide": [
+    {
+      "code": "TREAT25",
+      "combines_with_our_code": true,
+      "end": "2026-11-01T04:59:00Z",
+      "exclusions": "GLP products (semaglutide, tirzepatide, retatrutide) excluded",
+      "gives": "25% off with code TREAT25 (October 27–31, 2026); stacks with affiliate codes",
+      "source": "Orbitrex affiliate email \"Orbitrex announcement: SALE DATE CORRECTION\" (Oct 25, 2026)",
+      "start": "2026-10-27T05:00:00Z",
+      "verified": "2026-10-28"
     }
   ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
