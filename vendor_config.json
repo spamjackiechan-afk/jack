@@ -732,5 +732,22 @@
     "shipping_payment_researched": "2026-10-23",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": null
+  },
+  "Certa Peptides": {
+    "status": "approved",
+    "site_url": "https://certapeptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://certapeptides.com/?ref=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": [
+      "Visa",
+      "SEPA bank transfer"
+    ],
+    "payment_note": "Prices in EUR (not USD). EU store operated by CERTALAB S.R.L., Romania.",
+    "shipping_info": "Ships from Romania to 26 EU countries plus Switzerland and the UK; no U.S. shipping listed. Free shipping over EUR 200. Import duties outside the EU are paid by the recipient.",
+    "shipping_payment_researched": "2026-10-28",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 10
   }
 }
