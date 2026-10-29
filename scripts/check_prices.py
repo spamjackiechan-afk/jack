@@ -315,6 +315,12 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt is "Allow: /" and disallows only /api/, /checkout, /cart,
                                   # /auth, /account and add-to-cart; /shop/<slug> pages are allowed. Prices are EUR.
     },
+    "PrymaLab": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-29",
+        "robots_allows": True,   # confirmed: robots.txt group "User-agent: *" disallows /wp-admin/, /wp-json/, /cart/,
+                                  # /checkout/, /my-account/, add-to-cart and ?orderby=/?filter_/review-filter params;
+                                  # /product/<slug>/ pages (incl. ?attribute_ variation links) are allowed.
+    },
 }
 
 HEADERS = {

@@ -407,7 +407,8 @@
         "Elev-8 Labs": 35.0,
         "Prism Labs": 59.99,
         "Aura Research": 69,
-        "Certa Peptides": 79.99
+        "Certa Peptides": 79.99,
+        "PrymaLab": 79.99
       },
       "lowest": 35.0,
       "notes": null,
@@ -424,7 +425,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/5-amino-1mq/",
         "Prism Labs": "https://www.prismlabs.store/product/amino-1mq",
         "Aura Research": "https://tryauraresearch.com/product/5-amino-1mq/?attribute_pa_amount=50mg",
-        "Certa Peptides": "https://certapeptides.com/shop/5-amino-1mq?variant=944"
+        "Certa Peptides": "https://certapeptides.com/shop/5-amino-1mq?variant=944",
+        "PrymaLab": "https://prymalab.net/product/5-amino-1mq-50mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Incretin & Metabolic-Pathway Compounds"
     },
@@ -467,7 +469,8 @@
         "Peptide Titans": 39.99,
         "BioLabs Peptides": 39.78,
         "Olympus Peptide Labs": 101.76,
-        "Ares Research": 84.99
+        "Ares Research": 84.99,
+        "PrymaLab": 48.99
       },
       "lowest": 36.0,
       "notes": null,
@@ -478,7 +481,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/ara-290/?attribute_mg=10+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/ara-290/",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/e7bd4de5",
-        "Ares Research": "https://aresresearchlab.com/catalog/ara-290"
+        "Ares Research": "https://aresresearchlab.com/catalog/ara-290",
+        "PrymaLab": "https://prymalab.net/product/ara-290-peptide-benefits-10ml/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -599,9 +603,10 @@
         "Formal Peptides": 29,
         "BioLabs Peptides": 34.48,
         "Elev-8 Labs": 49.99,
-        "Certa Peptides": 27.99
+        "Certa Peptides": 27.99,
+        "PrymaLab": 14.99
       },
-      "lowest": 21.45,
+      "lowest": 14.99,
       "notes": null,
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/dsip-5mg-vial/",
@@ -614,7 +619,8 @@
         "Formal Peptides": "https://formalpeptides.com/product/dsip-5mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/dsip/?attribute_size=5mg",
         "Elev-8 Labs": "https://elev-8labs.com/product/dsip/",
-        "Certa Peptides": "https://certapeptides.com/shop/dsip?variant=812"
+        "Certa Peptides": "https://certapeptides.com/shop/dsip?variant=812",
+        "PrymaLab": "https://prymalab.net/product/dsip-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -658,7 +664,8 @@
         "Core Peptides": 235,
         "Alpha Peptides": 62.63,
         "Peptide Titans": 114.99,
-        "Olympus Peptide Labs": 517.63
+        "Olympus Peptide Labs": 517.63,
+        "PrymaLab": 199.99
       },
       "lowest": 62.63,
       "notes": null,
@@ -666,7 +673,8 @@
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/foxo4-dri/",
         "Peptide Titans": "https://peptidetitans.com/product/foxo4-dri/?attribute_mg=10+mg",
-        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/052ab633"
+        "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/052ab633",
+        "PrymaLab": "https://prymalab.net/product/foxo4-dri-10mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -776,7 +784,8 @@
         "Alpine Peptide": 69.0,
         "JD BioWorks": 49.46,
         "Sparta Labs": 80,
-        "Certa Peptides": 43.49
+        "Certa Peptides": 43.49,
+        "PrymaLab": 54.99
       },
       "lowest": 36.83,
       "notes": null,
@@ -797,7 +806,8 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/glutathione-1500mg/",
         "JD BioWorks": "https://jdbioworks.com/product/glutathione-1500mg/",
         "Sparta Labs": "https://spartalabs.net/us/products/glutathione",
-        "Certa Peptides": "https://certapeptides.com/shop/glutathione-1500mg"
+        "Certa Peptides": "https://certapeptides.com/shop/glutathione-1500mg",
+        "PrymaLab": "https://prymalab.net/product/glutathione-1500mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -897,7 +907,8 @@
         "Olympus Peptide Labs": 247.56,
         "Alpine Peptide": 59.0,
         "Echo Peptides": 109.99,
-        "MsAmino": 109.99
+        "MsAmino": 109.99,
+        "PrymaLab": 54.99
       },
       "lowest": 45.47,
       "notes": null,
@@ -920,7 +931,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/0276258d",
         "Alpine Peptide": "https://alpinepeptide.com/product/igf-1-lr3-1mg/",
         "Echo Peptides": "https://echopeptides.co/product/igf-1-lr3-1mg",
-        "MsAmino": "https://msamino.com/products/igf-1-lr3-1mg"
+        "MsAmino": "https://msamino.com/products/igf-1-lr3-1mg",
+        "PrymaLab": "https://prymalab.net/product/igf1-lr3-1mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -942,7 +954,8 @@
         "Echo Peptides": 54.99,
         "Ares Research": 54.99,
         "Sparta Labs": 45,
-        "Certa Peptides": 25.49
+        "Certa Peptides": 25.49,
+        "PrymaLab": 39.99
       },
       "lowest": 14.99,
       "notes": null,
@@ -958,7 +971,8 @@
         "Echo Peptides": "https://echopeptides.co/product/kisspeptin-10-5mg",
         "Ares Research": "https://aresresearchlab.com/catalog/kisspeptin",
         "Sparta Labs": "https://spartalabs.net/us/products/kisspeptin-10",
-        "Certa Peptides": "https://certapeptides.com/shop/kisspeptin-10?variant=906"
+        "Certa Peptides": "https://certapeptides.com/shop/kisspeptin-10?variant=906",
+        "PrymaLab": "https://prymalab.net/product/kisspeptin-10-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -1042,7 +1056,8 @@
         "Ares Research": 39.99,
         "Backroad Aminos": 40.0,
         "Sparta Labs": 50,
-        "Certa Peptides": 42.99
+        "Certa Peptides": 42.99,
+        "PrymaLab": 39.99
       },
       "lowest": 25.25,
       "notes": null,
@@ -1075,7 +1090,8 @@
         "Ares Research": "https://aresresearchlab.com/catalog/kpv",
         "Backroad Aminos": "https://backroadaminos.com/product/kpv-10mg/",
         "Sparta Labs": "https://spartalabs.net/us/products/kpv",
-        "Certa Peptides": "https://certapeptides.com/shop/kpv"
+        "Certa Peptides": "https://certapeptides.com/shop/kpv",
+        "PrymaLab": "https://prymalab.net/product/kpv-10mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1165,7 +1181,8 @@
         "JD BioWorks": 59.84,
         "Backroad Aminos": 35.0,
         "Sparta Labs": 50,
-        "Certa Peptides": 37.99
+        "Certa Peptides": 37.99,
+        "PrymaLab": 34.99
       },
       "lowest": 27.55,
       "notes": null,
@@ -1203,7 +1220,8 @@
         "JD BioWorks": "https://jdbioworks.com/product/mots-c/",
         "Backroad Aminos": "https://backroadaminos.com/product/mots-c/?attribute_pa_dosage=10mg",
         "Sparta Labs": "https://spartalabs.net/us/products/mots-c",
-        "Certa Peptides": "https://certapeptides.com/shop/mots-c?variant=914"
+        "Certa Peptides": "https://certapeptides.com/shop/mots-c?variant=914",
+        "PrymaLab": "https://prymalab.net/product/mots-c-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1396,7 +1414,8 @@
         "Ares Research": 64.99,
         "Backroad Aminos": 41.0,
         "Sparta Labs": 45,
-        "Certa Peptides": 37.99
+        "Certa Peptides": 37.99,
+        "PrymaLab": 41.99
       },
       "lowest": 22.07,
       "notes": null,
@@ -1425,7 +1444,8 @@
         "Ares Research": "https://aresresearchlab.com/catalog/pt-141",
         "Backroad Aminos": "https://backroadaminos.com/product/pt-141-7mg/",
         "Sparta Labs": "https://spartalabs.net/us/products/pt-141",
-        "Certa Peptides": "https://certapeptides.com/shop/pt-141-10mg"
+        "Certa Peptides": "https://certapeptides.com/shop/pt-141-10mg",
+        "PrymaLab": "https://prymalab.net/product/buy-pt-141-bremelanotide-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -1594,7 +1614,8 @@
         "Prism Labs": 64.99,
         "Echo Peptides": 49.99,
         "MsAmino": 104.99,
-        "Backroad Aminos": 53.0
+        "Backroad Aminos": 53.0,
+        "PrymaLab": 69.99
       },
       "lowest": 44.53,
       "notes": null,
@@ -1613,7 +1634,8 @@
         "Prism Labs": "https://www.prismlabs.store/product/serm-10",
         "Echo Peptides": "https://echopeptides.co/product/sermorelin-10mg",
         "MsAmino": "https://msamino.com/products/sermorelin-10mg",
-        "Backroad Aminos": "https://backroadaminos.com/product/sermorelin-10mg/"
+        "Backroad Aminos": "https://backroadaminos.com/product/sermorelin-10mg/",
+        "PrymaLab": "https://prymalab.net/product/buy-sermorelin-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -1753,7 +1775,8 @@
         "True Research Labs": 84,
         "Olympus Peptide Labs": 178.09,
         "Ares Research": 74.99,
-        "Certa Peptides": 89.99
+        "Certa Peptides": 89.99,
+        "PrymaLab": 69.99
       },
       "lowest": 37.89,
       "notes": null,
@@ -1769,7 +1792,8 @@
         "True Research Labs": "https://trueresearchlabs.com/shop/vip/?attribute_pa_dosage=10-mg",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/b5f5e4b8",
         "Ares Research": "https://aresresearchlab.com/catalog/vip",
-        "Certa Peptides": "https://certapeptides.com/shop/vip?variant=968"
+        "Certa Peptides": "https://certapeptides.com/shop/vip?variant=968",
+        "PrymaLab": "https://prymalab.net/product/vip5-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1830,9 +1854,10 @@
         "Prism Labs": 49.99,
         "Aura Research": 59,
         "MsAmino": 64.99,
-        "Sparta Labs": 80
+        "Sparta Labs": 80,
+        "PrymaLab": 34.99
       },
-      "lowest": 35.0,
+      "lowest": 34.99,
       "notes": null,
       "vendor_product_urls": {
         "Royal Peptides": "https://royal-peptides.com/shop/aod-5mg-kit/",
@@ -1851,7 +1876,8 @@
         "Prism Labs": "https://www.prismlabs.store/product/aod",
         "Aura Research": "https://tryauraresearch.com/product/aod-9604/",
         "MsAmino": "https://msamino.com/products/aod-9604-5mg",
-        "Sparta Labs": "https://spartalabs.net/us/products/aod9604"
+        "Sparta Labs": "https://spartalabs.net/us/products/aod9604",
+        "PrymaLab": "https://prymalab.net/product/aod9604-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Incretin & Metabolic-Pathway Compounds"
     },
@@ -1918,7 +1944,8 @@
         "Aura Research": 39,
         "MsAmino": 53.99,
         "Ares Research": 29.99,
-        "Certa Peptides": 26.99
+        "Certa Peptides": 26.99,
+        "PrymaLab": 19.99
       },
       "lowest": 18.0,
       "notes": null,
@@ -1936,7 +1963,8 @@
         "Aura Research": "https://tryauraresearch.com/product/bpc-157/?attribute_pa_amount=5mg",
         "MsAmino": "https://msamino.com/products/bpc-157",
         "Ares Research": "https://aresresearchlab.com/catalog/bpc-157",
-        "Certa Peptides": "https://certapeptides.com/shop/bpc-157?variant=261"
+        "Certa Peptides": "https://certapeptides.com/shop/bpc-157?variant=261",
+        "PrymaLab": "https://prymalab.net/product/bpc-157-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -1972,7 +2000,8 @@
         "Peptide Titans": 49.99,
         "BioLabs Peptides": 63.65,
         "Backroad Aminos": 60.0,
-        "Sparta Labs": 120
+        "Sparta Labs": 120,
+        "PrymaLab": 38.99
       },
       "lowest": 33.99,
       "notes": null,
@@ -1986,7 +2015,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-with-dac/?attribute_mg=5+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-5mg-w-dac/",
         "Backroad Aminos": "https://backroadaminos.com/product/cjc-with-dac-5mg/",
-        "Sparta Labs": "https://spartalabs.net/us/products/cjc-1295-with-dac"
+        "Sparta Labs": "https://spartalabs.net/us/products/cjc-1295-with-dac",
+        "PrymaLab": "https://prymalab.net/product/cjc-1295-dac-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -2104,9 +2134,10 @@
         "Apex Peptides": 78.0,
         "Peptide Titans": 49.99,
         "BioLabs Peptides": 42.44,
-        "Ride the Tide Peptides": 29.99
+        "Ride the Tide Peptides": 29.99,
+        "PrymaLab": 24.99
       },
-      "lowest": 29.99,
+      "lowest": 24.99,
       "notes": null,
       "category": "GH Secretagogues & IGF-Axis Peptides",
       "vendor_product_urls": {
@@ -2114,7 +2145,8 @@
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/cjc-1295-no-dac-5mg/?attribute_pa_size=5mg",
         "Peptide Titans": "https://peptidetitans.com/product/cjc-1295-no-dac/?attribute_mg=5+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac/?attribute_size=5mg",
-        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/cjc-1295-no-dac"
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/cjc-1295-no-dac",
+        "PrymaLab": "https://prymalab.net/product/cjc-1295-no-dac-5mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -2220,7 +2252,8 @@
         "Aura Research": 69,
         "JD BioWorks": 59.13,
         "Backroad Aminos": 35.0,
-        "Certa Peptides": 48.99
+        "Certa Peptides": 48.99,
+        "PrymaLab": 39.99
       },
       "lowest": 35.0,
       "notes": null,
@@ -2244,7 +2277,8 @@
         "Aura Research": "https://tryauraresearch.com/product/ghk-cu/?attribute_pa_amount=100mg",
         "JD BioWorks": "https://jdbioworks.com/product/ghk-copper/",
         "Backroad Aminos": "https://backroadaminos.com/product/ghk-cu-100mg/?attribute_pa_dosage=100mg-in-3ml-vial",
-        "Certa Peptides": "https://certapeptides.com/shop/ghk-cu?variant=271"
+        "Certa Peptides": "https://certapeptides.com/shop/ghk-cu?variant=271",
+        "PrymaLab": "https://prymalab.net/product/ghk-cu-100mg-copper-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -2298,13 +2332,15 @@
       "amount_mg": 2,
       "prices": {
         "Purity Peptides": 99.99,
-        "Ares Research": 39.99
+        "Ares Research": 39.99,
+        "PrymaLab": 14.99
       },
-      "lowest": 39.99,
+      "lowest": 14.99,
       "notes": null,
       "category": "Melanocortin & HPG-Axis Compounds",
       "vendor_product_urls": {
-        "Ares Research": "https://aresresearchlab.com/catalog/gonadorelin"
+        "Ares Research": "https://aresresearchlab.com/catalog/gonadorelin",
+        "PrymaLab": "https://prymalab.net/product/gonadorelin-2mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -2334,7 +2370,8 @@
         "Prism Labs": 49.99,
         "Axovera Labs": 60,
         "Aura Research": 79,
-        "Backroad Aminos": 44.0
+        "Backroad Aminos": 44.0,
+        "PrymaLab": 49.99
       },
       "lowest": 35.0,
       "notes": null,
@@ -2360,7 +2397,8 @@
         "Prism Labs": "https://www.prismlabs.store/product/ipa",
         "Axovera Labs": "https://axoveralabs.com/product/ipamorelin/",
         "Aura Research": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=10mg",
-        "Backroad Aminos": "https://backroadaminos.com/product/ipamorelin-10mg/"
+        "Backroad Aminos": "https://backroadaminos.com/product/ipamorelin-10mg/",
+        "PrymaLab": "https://prymalab.net/product/buy-ipamorelin-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -2491,7 +2529,8 @@
         "Peptide Titans": 39.99,
         "BioLabs Peptides": 42.44,
         "Ares Research": 59.99,
-        "Certa Peptides": 44.99
+        "Certa Peptides": 44.99,
+        "PrymaLab": 59.99
       },
       "lowest": 39.99,
       "notes": null,
@@ -2502,7 +2541,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=5+mg",
         "BioLabs Peptides": "https://biolabspeptides.com/product/thymosin-alpha-1/?attribute_size=5mg",
         "Ares Research": "https://aresresearchlab.com/catalog/thymosin-alpha-1",
-        "Certa Peptides": "https://certapeptides.com/shop/thymosin-alpha-1?variant=911"
+        "Certa Peptides": "https://certapeptides.com/shop/thymosin-alpha-1?variant=911",
+        "PrymaLab": "https://prymalab.net/product/thymosin-alpha-1-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -3047,13 +3087,15 @@
         "Alpha Peptides": 50.53,
         "Peptide Titans": 34.99,
         "Ares Research": 64.99,
-        "Certa Peptides": 41.99
+        "Certa Peptides": 41.99,
+        "PrymaLab": 34.99
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/thymalin/",
         "Peptide Titans": "https://peptidetitans.com/product/thymalin/?attribute_mg=10+mg",
         "Ares Research": "https://aresresearchlab.com/catalog/thymalin",
-        "Certa Peptides": "https://certapeptides.com/shop/thymalin-10mg"
+        "Certa Peptides": "https://certapeptides.com/shop/thymalin-10mg",
+        "PrymaLab": "https://prymalab.net/product/buy-thymalin-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "lowest": 34.99
     },
@@ -3144,7 +3186,8 @@
         "Elev-8 Labs": 25.0,
         "Aura Research": 49,
         "Ares Research": 39.99,
-        "Certa Peptides": 25.49
+        "Certa Peptides": 25.49,
+        "PrymaLab": 39.99
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/snap-8/",
@@ -3155,7 +3198,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/snap-8/",
         "Aura Research": "https://tryauraresearch.com/product/snap-8/",
         "Ares Research": "https://aresresearchlab.com/catalog/snap-8",
-        "Certa Peptides": "https://certapeptides.com/shop/snap-8-10mg"
+        "Certa Peptides": "https://certapeptides.com/shop/snap-8-10mg",
+        "PrymaLab": "https://prymalab.net/product/buy-snap-8-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "lowest": 22.11
     },
@@ -3164,10 +3208,12 @@
       "format": "Vial",
       "size": "1mg",
       "prices": {
-        "Alpha Peptides": 84.21
+        "Alpha Peptides": 84.21,
+        "PrymaLab": 99.99
       },
       "vendor_product_urls": {
-        "Alpha Peptides": "https://alpha-peptides.com/product/follistatin-344/"
+        "Alpha Peptides": "https://alpha-peptides.com/product/follistatin-344/",
+        "PrymaLab": "https://prymalab.net/product/follistatin-344/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "lowest": 84.21
     },
@@ -3198,7 +3244,8 @@
         "Alpine Peptide": 9.0,
         "Prism Labs": 14.99,
         "Echo Peptides": 12.99,
-        "Sparta Labs": 10
+        "Sparta Labs": 10,
+        "PrymaLab": 7.99
       },
       "vendor_product_urls": {
         "Purity Peptides": "https://puritypeptides.is/product/bacteriostatic-water-10ml",
@@ -3209,9 +3256,10 @@
         "Alpine Peptide": "https://alpinepeptide.com/product/bacteriostatic-water-10ml/",
         "Prism Labs": "https://www.prismlabs.store/product/prism-h2o",
         "Echo Peptides": "https://echopeptides.co/product/bacteriostatic-water-10ml",
-        "Sparta Labs": "https://spartalabs.net/us/products/bac-water"
+        "Sparta Labs": "https://spartalabs.net/us/products/bac-water",
+        "PrymaLab": "https://prymalab.net/product/bacteriostatic-water-peptides-10ml/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
-      "lowest": 9.0
+      "lowest": 7.99
     },
     {
       "peptide": "BPC-157 / TB-500 combo",
@@ -3368,7 +3416,8 @@
         "JD BioWorks": 57.57,
         "Ares Research": 34.99,
         "Sparta Labs": 55,
-        "Certa Peptides": 34.99
+        "Certa Peptides": 34.99,
+        "PrymaLab": 33.99
       },
       "lowest": 21.05,
       "notes": null,
@@ -3400,7 +3449,8 @@
         "JD BioWorks": "https://jdbioworks.com/product/melanotan-ii/",
         "Ares Research": "https://aresresearchlab.com/catalog/melanotan-ii",
         "Sparta Labs": "https://spartalabs.net/us/products/mt2",
-        "Certa Peptides": "https://certapeptides.com/shop/mt-2-melanotan-2-acetate?variant=807"
+        "Certa Peptides": "https://certapeptides.com/shop/mt-2-melanotan-2-acetate?variant=807",
+        "PrymaLab": "https://prymalab.net/product/buy-melanotan-2-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -3451,7 +3501,8 @@
         "Apex Peptides": 99.0,
         "Quality Peptide USA": 109,
         "Peptide Titans": 49.99,
-        "Ride the Tide Peptides": 39.99
+        "Ride the Tide Peptides": 39.99,
+        "PrymaLab": 39.99
       },
       "lowest": 39.99,
       "notes": null,
@@ -3464,7 +3515,8 @@
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/bpc-tb-500/?attribute_pa_size=5mg-5mg",
         "Quality Peptide USA": "https://qualitypeptideusa.com/products/wolverine-blend",
         "Peptide Titans": "https://peptidetitans.com/product/bpc-157-tb-500-blend/?attribute_mg=5/5+mg",
-        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/bpc-5mg-tb-500-5mg"
+        "Ride the Tide Peptides": "https://www.ridethetidepeptides.com/products/bpc-5mg-tb-500-5mg",
+        "PrymaLab": "https://prymalab.net/product/bpc-157-5mg-tb500-5mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -3554,7 +3606,8 @@
         "Aura Research": 99,
         "MsAmino": 109.99,
         "JD BioWorks": 80.99,
-        "Ares Research": 99.99
+        "Ares Research": 99.99,
+        "PrymaLab": 79.99
       },
       "lowest": 48.41,
       "notes": null,
@@ -3587,7 +3640,8 @@
         "Aura Research": "https://tryauraresearch.com/product/glow/",
         "MsAmino": "https://msamino.com/products/glow-blend-70mg",
         "JD BioWorks": "https://jdbioworks.com/product/glow-70mg-research-blend/",
-        "Ares Research": "https://aresresearchlab.com/catalog/glow-stack"
+        "Ares Research": "https://aresresearchlab.com/catalog/glow-stack",
+        "PrymaLab": "https://prymalab.net/product/glow-blend-70mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -3620,7 +3674,8 @@
         "MsAmino": 123.99,
         "JD BioWorks": 108.0,
         "Ares Research": 109.99,
-        "Backroad Aminos": 62.22
+        "Backroad Aminos": 62.22,
+        "PrymaLab": 119.99
       },
       "lowest": 62.22,
       "notes": null,
@@ -3650,7 +3705,8 @@
         "MsAmino": "https://msamino.com/products/klow-80mg",
         "JD BioWorks": "https://jdbioworks.com/product/klow-80mg-research-blend/",
         "Ares Research": "https://aresresearchlab.com/catalog/klow-stack",
-        "Backroad Aminos": "https://backroadaminos.com/product/klow-80mg/"
+        "Backroad Aminos": "https://backroadaminos.com/product/klow-80mg/",
+        "PrymaLab": "https://prymalab.net/product/klow-blend-80mg-peptide-stack/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -3729,9 +3785,10 @@
         "Peptide Titans": 29.99,
         "Echo Peptides": 59.99,
         "MsAmino": 53.99,
-        "Sparta Labs": 60
+        "Sparta Labs": 60,
+        "PrymaLab": 17.99
       },
-      "lowest": 29.99,
+      "lowest": 17.99,
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
@@ -3742,7 +3799,8 @@
         "Peptide Titans": "https://peptidetitans.com/product/tb-500/?attribute_mg=5+mg",
         "Echo Peptides": "https://echopeptides.co/product/tb-500-5mg",
         "MsAmino": "https://msamino.com/products/tb500",
-        "Sparta Labs": "https://spartalabs.net/us/products/tb-500"
+        "Sparta Labs": "https://spartalabs.net/us/products/tb-500",
+        "PrymaLab": "https://prymalab.net/product/tb-500-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -4037,7 +4095,8 @@
         "MsAmino": 91.99,
         "JD BioWorks": 78.35,
         "Backroad Aminos": 50.0,
-        "Mindful Peptides": 90.0
+        "Mindful Peptides": 90.0,
+        "PrymaLab": 69.99
       },
       "lowest": 50.0,
       "notes": null,
@@ -4070,7 +4129,8 @@
         "MsAmino": "https://msamino.com/products/tesamorelin",
         "JD BioWorks": "https://jdbioworks.com/product/tesamorelin/",
         "Backroad Aminos": "https://backroadaminos.com/product/tesamorelin/?attribute_pa_dosage=10mg",
-        "Mindful Peptides": "https://mindfulpeptides.com/product/tesamorelin/"
+        "Mindful Peptides": "https://mindfulpeptides.com/product/tesamorelin/",
+        "PrymaLab": "https://prymalab.net/product/buy-tesamorelin-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       }
     },
     {
@@ -4619,7 +4679,8 @@
         "Echo Peptides": 49.99,
         "Ares Research": 24.99,
         "Backroad Aminos": 40.0,
-        "Certa Peptides": 34.99
+        "Certa Peptides": 34.99,
+        "PrymaLab": 39.99
       },
       "lowest": 23.99,
       "notes": null,
@@ -4638,7 +4699,8 @@
         "Echo Peptides": "https://echopeptides.co/product/mt1-10mg",
         "Ares Research": "https://aresresearchlab.com/catalog/mt-1",
         "Backroad Aminos": "https://backroadaminos.com/product/melanotan-1-10mg/",
-        "Certa Peptides": "https://certapeptides.com/shop/mt-1-10mg?variant=11042"
+        "Certa Peptides": "https://certapeptides.com/shop/mt-1-10mg?variant=11042",
+        "PrymaLab": "https://prymalab.net/product/buy-melanotan-1-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -4973,7 +5035,8 @@
         "Olympus Peptide Labs": 163.41,
         "Aura Research": 89,
         "JD BioWorks": 99.95,
-        "Certa Peptides": 104.99
+        "Certa Peptides": 104.99,
+        "PrymaLab": 149.99
       },
       "lowest": 59,
       "notes": null,
@@ -4986,7 +5049,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/df02981d",
         "Aura Research": "https://tryauraresearch.com/product/epithalon/?attribute_pa_amount=50mg",
         "JD BioWorks": "https://jdbioworks.com/product/epitalon/",
-        "Certa Peptides": "https://certapeptides.com/shop/epitalon-50mg?variant=1394"
+        "Certa Peptides": "https://certapeptides.com/shop/epitalon-50mg?variant=1394",
+        "PrymaLab": "https://prymalab.net/product/epitalon-50mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -5717,13 +5781,15 @@
       "amount_mg": 20,
       "prices": {
         "Backroad Aminos": 55.0,
-        "Certa Peptides": 70.99
+        "Certa Peptides": 70.99,
+        "PrymaLab": 59.99
       },
       "lowest": 55.0,
       "notes": null,
       "vendor_product_urls": {
         "Backroad Aminos": "https://backroadaminos.com/product/pinealon-20mg/",
-        "Certa Peptides": "https://certapeptides.com/shop/pinealon?variant=980"
+        "Certa Peptides": "https://certapeptides.com/shop/pinealon?variant=980",
+        "PrymaLab": "https://prymalab.net/product/pinealon-20mg-lab-research-supply/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -5767,14 +5833,16 @@
       "prices": {
         "Backroad Aminos": 66.0,
         "Mindful Peptides": 100.0,
-        "Certa Peptides": 144.99
+        "Certa Peptides": 144.99,
+        "PrymaLab": 59.99
       },
-      "lowest": 66.0,
+      "lowest": 59.99,
       "notes": null,
       "vendor_product_urls": {
         "Backroad Aminos": "https://backroadaminos.com/product/nad1000mg/",
         "Mindful Peptides": "https://mindfulpeptides.com/product/nad-1000/",
-        "Certa Peptides": "https://certapeptides.com/shop/nad?variant=960"
+        "Certa Peptides": "https://certapeptides.com/shop/nad?variant=960",
+        "PrymaLab": "https://prymalab.net/product/product-nad-1000mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },

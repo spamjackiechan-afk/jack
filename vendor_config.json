@@ -765,5 +765,26 @@
     "currency": "EUR",
     "ships_to": "EU,CH,GB",
     "ships_to_label": "Ships to EU, Switzerland & UK only \u2014 not the US"
+  },
+  "PrymaLab": {
+    "status": "approved",
+    "site_url": "https://prymalab.net",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://prymalab.net/?ref=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "Discover",
+      "Zelle",
+      "Cash App",
+      "Crypto"
+    ],
+    "payment_note": "Prices listed in USD (one-time single-vial price). Per the vendor's FAQ, card payments (Visa, Mastercard, Discover; orders up to $1,000) are processed in Mexican pesos (MXN), so your bank converts the amount and may add a foreign-transaction fee. Pay by Bank, Zelle, Cash App and crypto are also listed.",
+    "shipping_info": "Ships from Ashland, Kentucky by USPS with tracking; same-day processing on weekday orders before 12 PM ET. Free U.S. shipping over $100 and free worldwide shipping over $200; international duties are paid by the recipient.",
+    "shipping_payment_researched": "2026-10-29",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 10
   }
 }
