@@ -315,6 +315,12 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt is "Allow: /" and disallows only /api/, /checkout, /cart,
                                   # /auth, /account and add-to-cart; /shop/<slug> pages are allowed. Prices are EUR.
     },
+    "Blackline Scientific": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-29",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" is Allow: / and disallows only /admin/, /api/,
+                                  # /account/, /checkout/ and /orders/; /products/<slug> pages are allowed. (Named AI
+                                  # crawlers are blocked; this checker sends a browser user agent, not one of those.)
+    },
 }
 
 HEADERS = {
