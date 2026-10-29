@@ -321,6 +321,12 @@ VENDORS = {
                                   # /checkout/, /my-account/, add-to-cart and ?orderby=/?filter_/review-filter params;
                                   # /product/<slug>/ pages (incl. ?attribute_ variation links) are allowed.
     },
+    "Blackline Scientific": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-29",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" is Allow: / and disallows only /admin/, /api/,
+                                  # /account/, /checkout/ and /orders/; /products/<slug> pages are allowed. (Named AI
+                                  # crawlers are blocked; this checker sends a browser user agent, not one of those.)
+    },
 }
 
 HEADERS = {
