@@ -251,7 +251,7 @@ Otherwise the row shows the normal price.
 
 ## testing.html retired (2026-10)
 
-`testing.html` was removed. The homepage nav item (now labelled **Research**), the
+`testing.html` was removed. The homepage nav item (now labelled **Peptide Health Digest**), the
 per-compound warning links and the About-page link go to
 https://peptidehealthdigest.vercel.app/ (external, used with permission) in a new tab.
 `_redirects` 301s `/testing` and `/testing.html` there. The References / testing-refs
