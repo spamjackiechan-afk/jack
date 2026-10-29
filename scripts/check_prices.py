@@ -327,6 +327,16 @@ VENDORS = {
                                   # /account/, /checkout/ and /orders/; /products/<slug> pages are allowed. (Named AI
                                   # crawlers are blocked; this checker sends a browser user agent, not one of those.)
     },
+    "Elytra Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-29",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" is Allow: / and disallows only /admin.html,
+                                  # /account.html, /order.html, /checkout.html, /email-templates.html, /offline.html;
+                                  # /product-<id> pages are allowed. Prices render client-side (Firestore), so browser
+                                  # mode is needed, and the page never reaches networkidle.
+        "needs_browser": True,
+        "browser_wait_until": "domcontentloaded",
+        "browser_settle_ms": 5000,
+    },
 }
 
 HEADERS = {
@@ -723,7 +733,7 @@ def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None
     return {"url": url, "price": price, "regular_price": extract_regular_price(resp.text, price), "error": None}
 
 
-def check_product_with_browser(url: str, browser) -> dict:
+def check_product_with_browser(url: str, browser, wait_until: str = "networkidle", settle_ms: int = 0) -> dict:
     """
     Same idea as check_product(), but for vendors that only serve full,
     real content to an actual JS-executing browser (confirmed necessary
@@ -734,7 +744,12 @@ def check_product_with_browser(url: str, browser) -> dict:
     """
     page = browser.new_page()
     try:
-        page.goto(url, timeout=20000, wait_until="networkidle")
+        # Default "networkidle". Sites that hold a live connection open (e.g.
+        # Elytra Labs' Firestore listener) never go idle, so their VENDORS entry
+        # sets browser_wait_until="domcontentloaded" plus browser_settle_ms.
+        page.goto(url, timeout=20000, wait_until=wait_until)
+        if settle_ms:
+            page.wait_for_timeout(settle_ms)
         html = page.content()
     except Exception as e:
         return {"url": url, "price": None, "error": f"browser navigation failed: {e}"}
@@ -897,7 +912,11 @@ def main():
                 vendor_items = catalog.get(vendor, {})
                 print(f"Checking {len(vendor_items)} {vendor} products (browser mode)...")
                 for item_key, url in vendor_items.items():
-                    result = check_product_with_browser(url, browser)
+                    result = check_product_with_browser(
+                        url, browser,
+                        wait_until=cfg.get("browser_wait_until", "networkidle"),
+                        settle_ms=cfg.get("browser_settle_ms", 0),
+                    )
                     results.setdefault(vendor, {})[item_key] = result
                     if result["error"]:
                         errors.append(f"{vendor} — {item_key}: {result['error']}")
