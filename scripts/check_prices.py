@@ -342,6 +342,7 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt "User-agent: *" disallows only /wp-admin/ (admin-ajax allowed),
                                   # WooCommerce log/upload dirs and add-to-cart URLs; /product/<slug>/ pages (incl.
                                   # ?attribute_ variation links) are allowed.
+        "prefer_visible_price": True,  # JSON-LD drops cents (78 vs on-page $78.20); read the on-page price.
     },
 }
 
@@ -708,7 +709,22 @@ def extract_woo_variation_price(html: str, attrs: dict) -> tuple:
     return None, None
 
 
-def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None) -> dict:
+def extract_visible_woo_price(html: str) -> float | None:
+    """Price from the page's FIRST WooCommerce `p.price` block (the main
+    product's on-page price; the sale <ins> amount when struck through).
+    Used only for vendors whose VENDORS entry sets prefer_visible_price=True
+    (AminoVault: its JSON-LD drops the cents, e.g. 78 for $78.20). Returns
+    None for a price range or when nothing parses, so the caller falls back
+    to extract_price()."""
+    el = BeautifulSoup(html, "html.parser").select_one("p.price")
+    if el is None or "–" in el.get_text() or len(el.select(".amount")) > 2:
+        return None
+    amt = el.select_one("ins .amount") or el.select_one(".amount")
+    m = PRICE_PATTERN.search(amt.get_text()) if amt else None
+    return float(m.group(1).replace(",", "")) if m else None
+
+
+def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None, prefer_visible_price: bool = False) -> dict:
     try:
         resp = requests.get(url, headers=headers, proxies=proxies, timeout=20)
         if is_bot_challenge(resp.status_code, resp.headers, resp.text):
@@ -733,7 +749,9 @@ def check_product(url: str, headers: dict = HEADERS, proxies: dict | None = None
             return {"url": url, "price": None, "error": f"variant {variant_id} price not found (default variant not used)"}
         return {"url": url, "price": price, "regular_price": regular, "error": None}
 
-    price = extract_price(resp.text)
+    price = extract_visible_woo_price(resp.text) if prefer_visible_price else None
+    if price is None:
+        price = extract_price(resp.text)
     if price is None:
         return {"url": url, "price": None, "error": "no confident price match — page structure may have changed"}
     return {"url": url, "price": price, "regular_price": extract_regular_price(resp.text, price), "error": None}
@@ -900,7 +918,8 @@ def main():
         via = " via fixed-IP proxy" if proxies else ""
         print(f"Checking {len(vendor_items)} {vendor} products{via}...")
         for item_key, url in vendor_items.items():
-            result = check_product(url, headers=headers, proxies=proxies)
+            result = check_product(url, headers=headers, proxies=proxies,
+                                   prefer_visible_price=cfg.get("prefer_visible_price", False))
             results.setdefault(vendor, {})[item_key] = result
             if result["error"]:
                 errors.append(f"{vendor} — {item_key}: {result['error']}")
