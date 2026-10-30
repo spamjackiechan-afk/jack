@@ -860,7 +860,8 @@
     "status": "approved",
     "site_url": "https://ascensionpeptides.com",
     "tracking_type": "link_plus_code",
-    "affiliate_link_base": "https://ascensionpeptides.com/?ref=Discountspeptides",
+    "affiliate_link_base": "https://ascensionpeptides.link/Discountspeptides",
+    "affiliate_link_style": "base",
     "affiliate_path_suffix": null,
     "promo_code": "Discountspeptides",
     "payment_methods": [
