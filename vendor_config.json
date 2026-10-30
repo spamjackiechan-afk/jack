@@ -855,5 +855,24 @@
     "shipping_payment_researched": "2026-10-29",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": 15
+  },
+  "Seacoast Aminos": {
+    "status": "approved",
+    "site_url": "https://seacoastaminos.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://seacoastaminos.com/?coupon=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": [
+      "Card",
+      "Apple Pay",
+      "Google Pay",
+      "Bank transfer (EFT)"
+    ],
+    "payment_note": "Prices in USD (single-vial price shown on each product page). Checkout requires a verified account (name, email and mobile one-time code).",
+    "shipping_info": "Ships within the continental United States only (no PO boxes, APO/FPO or restricted states). USPS Priority or UPS; rates calculated at checkout, free shipping on orders over $250. Orders ship within 1\u20132 business days from New Hampshire; most arrive in 2\u201310 business days.",
+    "shipping_payment_researched": "2026-10-30",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 15
   }
 }
