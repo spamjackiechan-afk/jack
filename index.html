@@ -391,6 +391,25 @@
   .signup-consent{font-size:11.5px; color:var(--ink-soft); margin-top:11px; line-height:1.5;}
   .signup-msg{font-family:'IBM Plex Mono', monospace; font-size:12px; margin-top:10px; min-height:16px;}
   .signup-msg.ok{color:var(--lowest);} .signup-msg.err{color:var(--amber);}
+  .community-band{margin:0 0 28px;}
+  .community-band h3{font-family:'Fraunces', serif; font-weight:500; font-size:20px; margin:0 0 5px;}
+  .community-band > p{font-size:13.5px; color:var(--ink-soft); margin:0 0 14px; max-width:660px; line-height:1.55;}
+  .community-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:12px;}
+  .community-card{
+    border:1px solid var(--rule); background:var(--paper-raised); border-radius:12px;
+    padding:18px 20px; display:flex; flex-direction:column; gap:8px;
+  }
+  .community-card .cc-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--lowest);}
+  .community-card h4{font-family:'Fraunces', serif; font-weight:500; font-size:18px; margin:0;}
+  .community-card p{font-size:13px; color:var(--ink-soft); margin:0; line-height:1.5; flex:1;}
+  .community-card a.cc-btn{
+    align-self:flex-start; margin-top:4px; text-decoration:none;
+    background:var(--lowest); border:1.5px solid var(--lowest); color:var(--paper);
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600; text-transform:uppercase;
+    letter-spacing:.04em; padding:10px 16px; border-radius:8px;
+  }
+  .community-card a.cc-btn.ghost{background:transparent; color:var(--lowest);}
+  .community-note{font-size:11.5px; color:var(--ink-soft); margin-top:11px; line-height:1.5;}
   .sale-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--success);}
   #saleChip.active{background:var(--success); border-color:var(--success); color:var(--paper);}
   .fav-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--success);}
@@ -958,6 +977,32 @@
     <div class="signup-msg" id="signupMsg"></div>
   </div>
 
+  <section class="community-band" id="community" aria-labelledby="communityTitle">
+    <h3 id="communityTitle">Join the Discount Peptides community</h3>
+    <p>Codes and sales change every week. Join us below to hear about new codes and sales as they land, plus subscriber deals as vendors add them.</p>
+    <div class="community-grid">
+      <div class="community-card">
+        <span class="cc-eyebrow">Newsletter · Free</span>
+        <h4>Discount Peptides on Substack</h4>
+        <p>Our vendor codes, this week's sales and buyer guides, by email. Subscribers will be first to get subscriber-only codes as vendors set them up.</p>
+        <a class="cc-btn" href="https://discountspeptides.substack.com/subscribe" target="_blank" rel="noopener">Subscribe free</a>
+      </div>
+      <div class="community-card">
+        <span class="cc-eyebrow">Community</span>
+        <h4>Discount Peptides on Reddit</h4>
+        <p>Deal posts, new vendor codes and questions about the comparison table. Follow us to see new posts.</p>
+        <a class="cc-btn ghost" href="https://www.reddit.com/user/discounts_peptides/" target="_blank" rel="noopener">Follow on Reddit</a>
+      </div>
+      <div class="community-card">
+        <span class="cc-eyebrow">Price alerts</span>
+        <h4>Alerts from this site</h4>
+        <p>Star the peptides you're watching and add your email. We'll tell you when they drop in price or a vendor runs a sale.</p>
+        <a class="cc-btn ghost" href="#signupBand">Set up alerts</a>
+      </div>
+    </div>
+    <div class="community-note">Research use only. We never ask for a phone number, and we don't share your email with vendors.</div>
+  </section>
+
   <div class="sort-note" id="sortNote"></div>
 
 
@@ -1003,7 +1048,7 @@
     <p><strong>Affiliate disclosure —</strong> this page will contain affiliate links. When a listed vendor's product page is visited through a link here, this site may earn a commission on a resulting sale, at no added cost to the buyer. Vendor inclusion does not imply endorsement of a product's safety, legality, or efficacy.</p>
     <p><strong>Not medical advice —</strong> pricing and evidence notes are for research reference and comparison only. Peptides listed here are, in most cases, not FDA-approved, and evidence quality varies widely by compound — see the note on each listing before assuming a claim is well-supported.</p>
     <p>Vendor prices are checked against original spreadsheet data, cross-referenced with each vendor's live site, and — for vendors with an automated daily price check — confirmed against a live, scheduled read of their actual product pages (see the "● LIVE" tag on those listings).</p>
-    <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a> · <a href="/research">Guides &amp; Studies</a></p>
+    <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a> · <a href="/research">Guides &amp; Studies</a> · <a href="https://discountspeptides.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="https://www.reddit.com/user/discounts_peptides/" target="_blank" rel="noopener">Reddit</a></p>
   </footer>
 
   <div class="contact-block">
