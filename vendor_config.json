@@ -825,5 +825,18 @@
     "shipping_payment_researched": "2026-10-29",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": 10
+  },
+  "AminoVault": {
+    "status": "approved",
+    "site_url": "https://aminovault.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://aminovault.com/crew/126/",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": null,
+    "payment_note": "Prices in USD, shown with the site's automatic 15% off already applied (more off at 6+ or 8+ vials). Payment methods are shown only at checkout and were not confirmed.",
+    "shipping_info": "Free FedEx (with optional shipping protection) or USPS Priority shipping on every order; orders processed in 1\u20132 business days (per aminovault.com).",
+    "shipping_payment_researched": "2026-10-29",
+    "code_discount_pct": null
   }
 }

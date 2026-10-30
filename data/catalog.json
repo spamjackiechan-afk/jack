@@ -473,7 +473,8 @@
         "Olympus Peptide Labs": 101.76,
         "Ares Research": 84.99,
         "PrymaLab": 48.99,
-        "Blackline Scientific": 35
+        "Blackline Scientific": 35,
+        "AminoVault": 63.75
       },
       "lowest": 35,
       "notes": null,
@@ -486,7 +487,8 @@
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/e7bd4de5",
         "Ares Research": "https://aresresearchlab.com/catalog/ara-290",
         "PrymaLab": "https://prymalab.net/product/ara-290-peptide-benefits-10ml/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/ara-290"
+        "Blackline Scientific": "https://blacklinescientific.com/products/ara-290",
+        "AminoVault": "https://aminovault.com/product/ara-290/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -531,7 +533,8 @@
         "Backroad Aminos": 39.0,
         "Certa Peptides": 49.99,
         "Blackline Scientific": 45,
-        "Elytra Labs": 35.0
+        "Elytra Labs": 35.0,
+        "AminoVault": 57.0
       },
       "lowest": 25.99,
       "notes": null,
@@ -569,7 +572,8 @@
         "Backroad Aminos": "https://backroadaminos.com/product/bpc-157/?attribute_pa_dosage=10mg",
         "Certa Peptides": "https://certapeptides.com/shop/bpc-157?variant=1238",
         "Blackline Scientific": "https://blacklinescientific.com/products/bpc-157-10mg",
-        "Elytra Labs": "https://elytralabs.shop/product-bc10"
+        "Elytra Labs": "https://elytralabs.shop/product-bc10",
+        "AminoVault": "https://aminovault.com/product/bp-10-20/?attribute_product-grade=US+Sourced"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -796,7 +800,8 @@
         "Sparta Labs": 80,
         "Certa Peptides": 43.49,
         "PrymaLab": 54.99,
-        "Blackline Scientific": 50
+        "Blackline Scientific": 50,
+        "AminoVault": 67.58
       },
       "lowest": 36.83,
       "notes": null,
@@ -819,7 +824,8 @@
         "Sparta Labs": "https://spartalabs.net/us/products/glutathione",
         "Certa Peptides": "https://certapeptides.com/shop/glutathione-1500mg",
         "PrymaLab": "https://prymalab.net/product/glutathione-1500mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/glutathione-1500mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/glutathione-1500mg",
+        "AminoVault": "https://aminovault.com/product/l-glutathione/"
       }
     },
     {
@@ -922,7 +928,8 @@
         "MsAmino": 109.99,
         "PrymaLab": 54.99,
         "Blackline Scientific": 90,
-        "Elytra Labs": 55.0
+        "Elytra Labs": 55.0,
+        "AminoVault": 69.7
       },
       "lowest": 45.47,
       "notes": null,
@@ -948,7 +955,8 @@
         "MsAmino": "https://msamino.com/products/igf-1-lr3-1mg",
         "PrymaLab": "https://prymalab.net/product/igf1-lr3-1mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
         "Blackline Scientific": "https://blacklinescientific.com/products/igf-1-lr3-1mg",
-        "Elytra Labs": "https://elytralabs.shop/product-ig1"
+        "Elytra Labs": "https://elytralabs.shop/product-ig1",
+        "AminoVault": "https://aminovault.com/product/igf-1-lr3/"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -1077,7 +1085,8 @@
         "Certa Peptides": 42.99,
         "PrymaLab": 39.99,
         "Blackline Scientific": 40,
-        "Elytra Labs": 30.0
+        "Elytra Labs": 30.0,
+        "AminoVault": 68.85
       },
       "lowest": 25.25,
       "notes": null,
@@ -1113,7 +1122,8 @@
         "Certa Peptides": "https://certapeptides.com/shop/kpv",
         "PrymaLab": "https://prymalab.net/product/kpv-10mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
         "Blackline Scientific": "https://blacklinescientific.com/products/kpv-10mg",
-        "Elytra Labs": "https://elytralabs.shop/product-kpv10"
+        "Elytra Labs": "https://elytralabs.shop/product-kpv10",
+        "AminoVault": "https://aminovault.com/product/kpv10/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1205,7 +1215,8 @@
         "Sparta Labs": 50,
         "Certa Peptides": 37.99,
         "PrymaLab": 34.99,
-        "Blackline Scientific": 40
+        "Blackline Scientific": 40,
+        "AminoVault": 54.0
       },
       "lowest": 27.55,
       "notes": null,
@@ -1245,7 +1256,8 @@
         "Sparta Labs": "https://spartalabs.net/us/products/mots-c",
         "Certa Peptides": "https://certapeptides.com/shop/mots-c?variant=914",
         "PrymaLab": "https://prymalab.net/product/mots-c-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/mots-c-10mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/mots-c-10mg",
+        "AminoVault": "https://aminovault.com/product/mots-c/?attribute_weight=10+MG+US+Sourced"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1303,7 +1315,8 @@
         "Mindful Peptides": 125.0,
         "Certa Peptides": 103.49,
         "Blackline Scientific": 110,
-        "Elytra Labs": 65.0
+        "Elytra Labs": 65.0,
+        "AminoVault": 192.0
       },
       "lowest": 59.26,
       "notes": null,
@@ -1326,7 +1339,8 @@
         "Mindful Peptides": "https://mindfulpeptides.com/product/mots-c/",
         "Certa Peptides": "https://certapeptides.com/shop/mots-c?variant=915",
         "Blackline Scientific": "https://blacklinescientific.com/products/mots-c-40mg",
-        "Elytra Labs": "https://elytralabs.shop/product-ms40"
+        "Elytra Labs": "https://elytralabs.shop/product-ms40",
+        "AminoVault": "https://aminovault.com/product/mots-c/?attribute_weight=40+MG+US+Sourced"
       }
     },
     {
@@ -1446,7 +1460,8 @@
         "Sparta Labs": 45,
         "Certa Peptides": 37.99,
         "PrymaLab": 41.99,
-        "Blackline Scientific": 40
+        "Blackline Scientific": 40,
+        "AminoVault": 46.75
       },
       "lowest": 22.07,
       "notes": null,
@@ -1477,7 +1492,8 @@
         "Sparta Labs": "https://spartalabs.net/us/products/pt-141",
         "Certa Peptides": "https://certapeptides.com/shop/pt-141-10mg",
         "PrymaLab": "https://prymalab.net/product/buy-pt-141-bremelanotide-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/pt-141-10mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/pt-141-10mg",
+        "AminoVault": "https://aminovault.com/product/pt-141/?attribute_product-grade=US+Sourced"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -1519,7 +1535,8 @@
         "Sparta Labs": 50,
         "Certa Peptides": 35.99,
         "Blackline Scientific": 40,
-        "Elytra Labs": 30.0
+        "Elytra Labs": 30.0,
+        "AminoVault": 70.55
       },
       "lowest": 20.99,
       "notes": null,
@@ -1555,7 +1572,8 @@
         "Sparta Labs": "https://spartalabs.net/us/products/selank",
         "Certa Peptides": "https://certapeptides.com/shop/selank?variant=273",
         "Blackline Scientific": "https://blacklinescientific.com/products/selank-10mg",
-        "Elytra Labs": "https://elytralabs.shop/product-sk10"
+        "Elytra Labs": "https://elytralabs.shop/product-sk10",
+        "AminoVault": "https://aminovault.com/product/selank/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1594,7 +1612,8 @@
         "Backroad Aminos": 42.0,
         "Sparta Labs": 50,
         "Certa Peptides": 39.99,
-        "Elytra Labs": 30.0
+        "Elytra Labs": 30.0,
+        "AminoVault": 57.8
       },
       "lowest": 20.84,
       "notes": null,
@@ -1627,7 +1646,8 @@
         "Backroad Aminos": "https://backroadaminos.com/product/semax-10mg/",
         "Sparta Labs": "https://spartalabs.net/us/products/semax",
         "Certa Peptides": "https://certapeptides.com/shop/semax?variant=275",
-        "Elytra Labs": "https://elytralabs.shop/product-xa10"
+        "Elytra Labs": "https://elytralabs.shop/product-xa10",
+        "AminoVault": "https://aminovault.com/product/semax/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1765,7 +1785,8 @@
         "Elev-8 Labs": 30.0,
         "Backroad Aminos": 63.0,
         "Certa Peptides": 79.99,
-        "Blackline Scientific": 65
+        "Blackline Scientific": 65,
+        "AminoVault": 84.15
       },
       "lowest": 30.0,
       "notes": null,
@@ -1786,7 +1807,8 @@
         "Elev-8 Labs": "https://elev-8labs.com/product/thymosin-alpha-1/",
         "Backroad Aminos": "https://backroadaminos.com/product/thymosin-alpha-1-10mg/",
         "Certa Peptides": "https://certapeptides.com/shop/thymosin-alpha-1?variant=912",
-        "Blackline Scientific": "https://blacklinescientific.com/products/thymosin-alpha-1-10mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/thymosin-alpha-1-10mg",
+        "AminoVault": "https://aminovault.com/product/thymosin-alpha-1/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -2151,7 +2173,8 @@
         "BioLabs Peptides": 95.48,
         "Olympus Peptide Labs": 88.58,
         "Alpine Peptide": 55.0,
-        "MsAmino": 74.99
+        "MsAmino": 74.99,
+        "AminoVault": 78.2
       },
       "lowest": 28.41,
       "notes": null,
@@ -2170,7 +2193,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/cjc-1295-no-dac/?attribute_size=10mg",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/3e922851",
         "Alpine Peptide": "https://alpinepeptide.com/product/cgc-1295-10mg/",
-        "MsAmino": "https://msamino.com/products/cjc-1295-no-dac-10mg"
+        "MsAmino": "https://msamino.com/products/cjc-1295-no-dac-10mg",
+        "AminoVault": "https://aminovault.com/product/cjc-1295-no-dac/"
       }
     },
     {
@@ -2249,7 +2273,8 @@
         "Ares Research": 39.99,
         "Backroad Aminos": 32.59,
         "Sparta Labs": 40,
-        "Certa Peptides": 41.99
+        "Certa Peptides": 41.99,
+        "AminoVault": 42.5
       },
       "lowest": 23.68,
       "notes": null,
@@ -2273,7 +2298,8 @@
         "Ares Research": "https://aresresearchlab.com/catalog/epithalon",
         "Backroad Aminos": "https://backroadaminos.com/product/epithalon-10mg/",
         "Sparta Labs": "https://spartalabs.net/us/products/epithalon",
-        "Certa Peptides": "https://certapeptides.com/shop/epitalon-50mg?variant=1393"
+        "Certa Peptides": "https://certapeptides.com/shop/epitalon-50mg?variant=1393",
+        "AminoVault": "https://aminovault.com/product/epithalon-epitalon/?attribute_product-grade=US+Sourced"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -2305,7 +2331,8 @@
         "Certa Peptides": 48.99,
         "PrymaLab": 39.99,
         "Blackline Scientific": 55,
-        "Elytra Labs": 35.0
+        "Elytra Labs": 35.0,
+        "AminoVault": 66.0
       },
       "lowest": 35.0,
       "notes": null,
@@ -2332,7 +2359,8 @@
         "Certa Peptides": "https://certapeptides.com/shop/ghk-cu?variant=271",
         "PrymaLab": "https://prymalab.net/product/ghk-cu-100mg-copper-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
         "Blackline Scientific": "https://blacklinescientific.com/products/ghk-cu-100mg",
-        "Elytra Labs": "https://elytralabs.shop/product-cu100"
+        "Elytra Labs": "https://elytralabs.shop/product-cu100",
+        "AminoVault": "https://aminovault.com/product/ghk-cu/?attribute_product-grade=US+Sourced"
       }
     },
     {
@@ -2426,7 +2454,8 @@
         "Aura Research": 79,
         "Backroad Aminos": 44.0,
         "PrymaLab": 49.99,
-        "Blackline Scientific": 45
+        "Blackline Scientific": 45,
+        "AminoVault": 56.95
       },
       "lowest": 35.0,
       "notes": null,
@@ -2454,7 +2483,8 @@
         "Aura Research": "https://tryauraresearch.com/product/ipamorelin/?attribute_pa_amount=10mg",
         "Backroad Aminos": "https://backroadaminos.com/product/ipamorelin-10mg/",
         "PrymaLab": "https://prymalab.net/product/buy-ipamorelin-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/ipamorelin-10mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/ipamorelin-10mg",
+        "AminoVault": "https://aminovault.com/product/ipamorelin/?attribute_product-grade=US+Sourced"
       }
     },
     {
@@ -2515,11 +2545,15 @@
       "size": "5mg/5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 109.99
+        "Purity Peptides": 109.99,
+        "AminoVault": 67.15
       },
-      "lowest": 109.99,
+      "lowest": 67.15,
       "notes": null,
-      "category": "Neuropeptide Analogues"
+      "category": "Neuropeptide Analogues",
+      "vendor_product_urls": {
+        "AminoVault": "https://aminovault.com/product/selank-semax/"
+      }
     },
     {
       "peptide": "Sermorelin",
@@ -3147,7 +3181,8 @@
         "Ares Research": 64.99,
         "Certa Peptides": 41.99,
         "PrymaLab": 34.99,
-        "Blackline Scientific": 45
+        "Blackline Scientific": 45,
+        "AminoVault": 45.9
       },
       "vendor_product_urls": {
         "Alpha Peptides": "https://alpha-peptides.com/product/thymalin/",
@@ -3155,7 +3190,8 @@
         "Ares Research": "https://aresresearchlab.com/catalog/thymalin",
         "Certa Peptides": "https://certapeptides.com/shop/thymalin-10mg",
         "PrymaLab": "https://prymalab.net/product/buy-thymalin-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/thymalin-10mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/thymalin-10mg",
+        "AminoVault": "https://aminovault.com/product/thymalin/"
       },
       "lowest": 34.99
     },
@@ -3479,7 +3515,8 @@
         "Certa Peptides": 34.99,
         "PrymaLab": 33.99,
         "Blackline Scientific": 40,
-        "Elytra Labs": 25.0
+        "Elytra Labs": 25.0,
+        "AminoVault": 47.0
       },
       "lowest": 21.05,
       "notes": null,
@@ -3514,7 +3551,8 @@
         "Certa Peptides": "https://certapeptides.com/shop/mt-2-melanotan-2-acetate?variant=807",
         "PrymaLab": "https://prymalab.net/product/buy-melanotan-2-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
         "Blackline Scientific": "https://blacklinescientific.com/products/mt2-10mg",
-        "Elytra Labs": "https://elytralabs.shop/product-ml10"
+        "Elytra Labs": "https://elytralabs.shop/product-ml10",
+        "AminoVault": "https://aminovault.com/product/melanotan-2/?attribute_product-grade=US+Sourced"
       }
     },
     {
@@ -3605,7 +3643,8 @@
         "Aura Research": 89,
         "Sparta Labs": 135,
         "Blackline Scientific": 80,
-        "Elytra Labs": 50.0
+        "Elytra Labs": 50.0,
+        "AminoVault": 105.4
       },
       "lowest": 50.0,
       "notes": null,
@@ -3625,7 +3664,8 @@
         "Aura Research": "https://tryauraresearch.com/product/bpc-157-tb-500/",
         "Sparta Labs": "https://spartalabs.net/us/products/bpc-157-tb-500-blend-10-10",
         "Blackline Scientific": "https://blacklinescientific.com/products/bpc-157-tb-500-20mg",
-        "Elytra Labs": "https://elytralabs.shop/product-wolv"
+        "Elytra Labs": "https://elytralabs.shop/product-wolv",
+        "AminoVault": "https://aminovault.com/product/wolverine-blend/?attribute_product-grade=US+Sourced"
       }
     },
     {
@@ -3749,7 +3789,8 @@
         "Backroad Aminos": 62.22,
         "PrymaLab": 119.99,
         "Blackline Scientific": 100,
-        "Elytra Labs": 75.0
+        "Elytra Labs": 75.0,
+        "AminoVault": 101.15
       },
       "lowest": 62.22,
       "notes": null,
@@ -3782,7 +3823,8 @@
         "Backroad Aminos": "https://backroadaminos.com/product/klow-80mg/",
         "PrymaLab": "https://prymalab.net/product/klow-blend-80mg-peptide-stack/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
         "Blackline Scientific": "https://blacklinescientific.com/products/klow-80mg",
-        "Elytra Labs": "https://elytralabs.shop/product-klow"
+        "Elytra Labs": "https://elytralabs.shop/product-klow",
+        "AminoVault": "https://aminovault.com/product/klow/?attribute_product-grade=US+Sourced"
       }
     },
     {
@@ -3817,7 +3859,8 @@
         "Aura Research": 89,
         "JD BioWorks": 74.93,
         "Blackline Scientific": 55,
-        "Elytra Labs": 40.0
+        "Elytra Labs": 40.0,
+        "AminoVault": 53.5
       },
       "lowest": 31.32,
       "notes": null,
@@ -3849,7 +3892,8 @@
         "Aura Research": "https://tryauraresearch.com/product/tb-500/",
         "JD BioWorks": "https://jdbioworks.com/product/tb-500/",
         "Blackline Scientific": "https://blacklinescientific.com/products/tb4-tb500-10mg",
-        "Elytra Labs": "https://elytralabs.shop/product-bt10"
+        "Elytra Labs": "https://elytralabs.shop/product-bt10",
+        "AminoVault": "https://aminovault.com/product/tb-500-thymosin-beta-4-43aa/?attribute_product-grade=US+Sourced"
       }
     },
     {
@@ -4177,7 +4221,8 @@
         "Backroad Aminos": 50.0,
         "Mindful Peptides": 90.0,
         "PrymaLab": 69.99,
-        "Blackline Scientific": 70
+        "Blackline Scientific": 70,
+        "AminoVault": 84.15
       },
       "lowest": 50.0,
       "notes": null,
@@ -4212,7 +4257,8 @@
         "Backroad Aminos": "https://backroadaminos.com/product/tesamorelin/?attribute_pa_dosage=10mg",
         "Mindful Peptides": "https://mindfulpeptides.com/product/tesamorelin/",
         "PrymaLab": "https://prymalab.net/product/buy-tesamorelin-10mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/tesamorelin-10mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/tesamorelin-10mg",
+        "AminoVault": "https://aminovault.com/product/tesamorelin/?attribute_product-grade=US+Sourced"
       }
     },
     {
@@ -5937,7 +5983,8 @@
         "Mindful Peptides": 100.0,
         "Certa Peptides": 144.99,
         "PrymaLab": 59.99,
-        "Elytra Labs": 55.0
+        "Elytra Labs": 55.0,
+        "AminoVault": 135.15
       },
       "lowest": 55.0,
       "notes": null,
@@ -5946,7 +5993,8 @@
         "Mindful Peptides": "https://mindfulpeptides.com/product/nad-1000/",
         "Certa Peptides": "https://certapeptides.com/shop/nad?variant=960",
         "PrymaLab": "https://prymalab.net/product/product-nad-1000mg/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Elytra Labs": "https://elytralabs.shop/product-nad1k"
+        "Elytra Labs": "https://elytralabs.shop/product-nad1k",
+        "AminoVault": "https://aminovault.com/product/nad/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
