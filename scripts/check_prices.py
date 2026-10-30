@@ -337,6 +337,12 @@ VENDORS = {
         "browser_wait_until": "domcontentloaded",
         "browser_settle_ms": 5000,
     },
+    "AminoVault": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-29",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" disallows only /wp-admin/ (admin-ajax allowed),
+                                  # WooCommerce log/upload dirs and add-to-cart URLs; /product/<slug>/ pages (incl.
+                                  # ?attribute_ variation links) are allowed.
+    },
 }
 
 HEADERS = {
