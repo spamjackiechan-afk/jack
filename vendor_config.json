@@ -838,5 +838,22 @@
     "shipping_info": "Free FedEx (with optional shipping protection) or USPS Priority shipping on every order; orders processed in 1\u20132 business days (per aminovault.com).",
     "shipping_payment_researched": "2026-10-29",
     "code_discount_pct": null
+  },
+  "BioLongevity Labs": {
+    "status": "approved",
+    "site_url": "https://biolongevitylabs.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://go.biolongevitylabs.com/aff_c?offer_id=1&aff_id=2823",
+    "affiliate_path_suffix": null,
+    "affiliate_link_style": "base",
+    "promo_code": "DISCOUNT",
+    "payment_methods": [
+      "Card"
+    ],
+    "payment_note": "Prices in USD; list (regular) single-vial prices shown. Checkout accepts all major credit cards. The site runs frequent storewide sales, so the price at checkout may be lower than shown.",
+    "shipping_info": "Free shipping on orders over $400. USPS Priority / FedEx options; orders before noon PT usually ship the same business day; domestic delivery 3\u20135 business days. Ships to a limited list of countries (e.g. Canada). Returns not accepted.",
+    "shipping_payment_researched": "2026-10-29",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 15
   }
 }
