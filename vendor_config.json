@@ -855,5 +855,21 @@
     "shipping_payment_researched": "2026-10-29",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": 15
+  },
+  "Rivn Peptides": {
+    "status": "approved",
+    "site_url": "https://rivnresearch.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://rivnresearch.com/?sld=6090",
+    "affiliate_path_suffix": null,
+    "promo_code": "discountspeptides15",
+    "payment_methods": [
+      "Card"
+    ],
+    "payment_note": "Prices in USD. Checkout accepts major debit and credit cards (Visa, American Express, Discover per rivnresearch.com FAQ).",
+    "shipping_info": "Ships within the USA and Puerto Rico only. Free USPS Ground on all orders; UPS 2-Day Air $18.99. Ships business days only; most deliveries arrive 2\u20133 business days after dispatch (per rivnresearch.com FAQ).",
+    "shipping_payment_researched": "2026-10-30",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 15
   }
 }
