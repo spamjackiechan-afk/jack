@@ -69,6 +69,7 @@ PUBLIC_FIELDS = [
     # non-USD prices are shown with their currency and kept out of every
     # lowest-price / price-sort computation.
     "currency", "ships_to", "ships_to_label",
+    "affiliate_link_style",  # optional; "base" = always link to affiliate_link_base as-is (network click links)
 ]
 
 # Per-vendor fields on a catalog row that must go when the vendor is hidden.

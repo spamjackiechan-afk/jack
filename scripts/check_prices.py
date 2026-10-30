@@ -343,6 +343,11 @@ VENDORS = {
                                   # WooCommerce log/upload dirs and add-to-cart URLs; /product/<slug>/ pages (incl.
                                   # ?attribute_ variation links) are allowed.
         "prefer_visible_price": True,  # JSON-LD drops cents (78 vs on-page $78.20); read the on-page price.
+    },    "BioLongevity Labs": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-29",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" disallows only WooCommerce log/upload dirs and
+                                  # /wp-admin/ (admin-ajax allowed); /product/<slug>/ pages are allowed. check_product
+                                  # reads the regular (list) price, which is what the catalog stores.
     },
 }
 
