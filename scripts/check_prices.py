@@ -349,6 +349,13 @@ VENDORS = {
                                   # /wp-admin/ (admin-ajax allowed); /product/<slug>/ pages are allowed. check_product
                                   # reads the regular (list) price, which is what the catalog stores.
     },
+    "Rivn Peptides": {
+        "robots_checked_by": "Grok for Jackson, 2026-10-30",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" disallows only WooCommerce log/upload dirs,
+                                  # ?add-to-cart= URLs, /wp-admin/ (admin-ajax allowed) and /wp-includes/; /product/<slug>/
+                                  # pages (incl. ?attribute_ variation links) are allowed.
+        "prefer_visible_price": True,  # JSON-LD/price meta reads 0.0 (free add-on); read the on-page price.
+    },
 }
 
 HEADERS = {
