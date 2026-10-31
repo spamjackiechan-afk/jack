@@ -873,5 +873,22 @@
     "shipping_payment_researched": "2026-10-29",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": 50
+  },
+  "Unyx Peptides": {
+    "status": "approved",
+    "site_url": "https://unyxpeptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://unyxpeptides.com/ref/235/",
+    "affiliate_path_suffix": null,
+    "affiliate_link_style": "base",
+    "promo_code": "DISCOUNTSP10",
+    "payment_methods": [
+      "Card"
+    ],
+    "payment_note": "Prices in USD (one-time single-vial price; the site also offers subscriptions). The FAQ lists all major credit cards. Every page sits behind a 21+ researcher-verification gate.",
+    "shipping_info": "USPS Priority Mail; flat $20 shipping, free over $200. Orders verified before 12 PM MST ship the same business day (per the site's FAQ).",
+    "shipping_payment_researched": "2026-10-30",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 10
   }
 }
