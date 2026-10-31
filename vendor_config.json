@@ -856,6 +856,24 @@
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": 15
   },
+  "Ascension Peptides": {
+    "status": "approved",
+    "site_url": "https://ascensionpeptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://ascensionpeptides.link/Discountspeptides",
+    "affiliate_link_style": "base",
+    "affiliate_path_suffix": null,
+    "promo_code": "Discountspeptides",
+    "payment_methods": [
+      "Card",
+      "ACH bank draft"
+    ],
+    "payment_note": "Prices in USD. The Shipping Policies page lists Visa or ACH bank draft; the Terms list Visa or Mastercard. Listed prices are the single-vial price shown on each product page (most pages show a struck-through higher price).",
+    "shipping_info": "Ships within the United States only. $15 flat rate on domestic orders. Orders before 2 PM Central usually ship the same business day; allow 2\u20135 business days via UPS or USPS. All sales are final.",
+    "shipping_payment_researched": "2026-10-29",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 50
+  },
   "Unyx Peptides": {
     "status": "approved",
     "site_url": "https://unyxpeptides.com",
