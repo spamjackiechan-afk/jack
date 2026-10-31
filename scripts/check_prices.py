@@ -349,6 +349,13 @@ VENDORS = {
                                   # /wp-admin/ (admin-ajax allowed); /product/<slug>/ pages are allowed. check_product
                                   # reads the regular (list) price, which is what the catalog stores.
     },
+    "Optimum ReGen Peptides": {
+        "robots_checked_by": "Claude for Jackson, 2026-10-31",
+        "robots_allows": True,   # confirmed: robots.txt for * is "Allow: /", disallowing only /api/, /admin, /dashboard,
+                                  # /checkout, /login, /a/, /r/, /go/, /affiliate/ and similar account paths.
+                                  # /peptide/<slug> pages are allowed. Pages list several sizes; only the default
+                                  # (first JSON-LD offer) size is listed, since sizes can't be pinned by URL.
+    },
 }
 
 HEADERS = {

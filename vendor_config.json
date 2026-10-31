@@ -890,5 +890,26 @@
     "shipping_payment_researched": "2026-10-30",
     "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
     "code_discount_pct": 10
+  },
+  "Optimum ReGen Peptides": {
+    "status": "approved",
+    "site_url": "https://www.optimumregenpeptides.com",
+    "tracking_type": "link",
+    "affiliate_link_base": "https://www.optimumregenpeptides.com/a/discount-peptides",
+    "affiliate_path_suffix": null,
+    "promo_code": null,
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "American Express",
+      "Discover",
+      "Apple Pay",
+      "Google Pay",
+      "Klarna"
+    ],
+    "payment_note": "Prices in USD, shown with the store's Halloween sitewide sale (up to 31% off, listed as ending 1 Nov 2026); no code needed. Per the FAQ: cards, Apple Pay, Google Pay, Klarna and most bank accounts at checkout.",
+    "shipping_info": "U.S. shipping only. Every order ships 2-Day Priority Air with tracking; shipping cost is calculated at checkout (per the site's FAQ and shipping policy).",
+    "shipping_payment_researched": "2026-10-31",
+    "code_discount_pct": null
   }
 }
