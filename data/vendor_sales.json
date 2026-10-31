@@ -11,26 +11,6 @@
       "verified": "2026-10-24"
     },
     {
-      "code": "NIGHT30",
-      "combines_with_our_code": true,
-      "end": "2026-10-30T04:59:00Z",
-      "exclusions": null,
-      "gives": "Witching Hour Flash (Thu Oct 29): 30% OFF sitewide, 6 PM – 11:59 PM CT only",
-      "source": "https://www.americanpeptides.us/spooky",
-      "start": "2026-10-29T23:00:00Z",
-      "verified": "2026-10-24"
-    },
-    {
-      "code": "NIGHT30",
-      "combines_with_our_code": true,
-      "end": "2026-10-31T04:59:00Z",
-      "exclusions": null,
-      "gives": "Witching Hour Flash (Fri Oct 30): 30% OFF sitewide, 6 PM – 11:59 PM CT only",
-      "source": "https://www.americanpeptides.us/spooky",
-      "start": "2026-10-30T23:00:00Z",
-      "verified": "2026-10-24"
-    },
-    {
       "code": "HALLOWEEN31",
       "combines_with_our_code": true,
       "end": "2026-11-01T04:59:00Z",
@@ -107,16 +87,6 @@
       "source": "https://veratisbio.com",
       "start": null,
       "verified": "2026-10-23"
-    },
-    {
-      "code": "DISCOUNTPEPTIDES",
-      "combines_with_our_code": null,
-      "end": "2026-10-31T04:59:00Z",
-      "exclusions": null,
-      "gives": "Halloween week: our code DISCOUNTPEPTIDES gives 25% off instead of 15% (Sun Oct 25, 12:00 PM CT through Fri Oct 30, 11:59 PM CT), then back to 15%",
-      "source": "Veratis partner email \"VERATIS AFFILIATES: Read this! Your code is 25% off this week\" (Oct 25, 2026)",
-      "start": "2026-10-25T17:00:00Z",
-      "verified": "2026-10-29"
     }
   ],
   "Orbitrex Peptide": [
