@@ -234,7 +234,9 @@ function welcomeFor(page) {
 }
 
 function isRefusal(lower) {
-  return /\b(dos(e|ing|es)|reconstitut|inject(ion|ing|able)? technique|how (do|would|should) i (inject|pin|reconstitute)|syringe|iu\b|mcg\/kg|mg\/kg|stack(ing)?|cycle length|what dose|dose for my|for my (knee|shoulder|injury))\b/.test(
+  // Dosing, reconstitution, injection, stacking, cycles and personal protocols.
+  // Kept deliberately broad: a false refusal costs little, a missed one is an FDA risk.
+  return /(\bdos(e|es|ed|ing|age)\b|\bmicrodos|\breconstitut|\bbacteriostatic\b|\bbac\s*water\b|\bsterile water\b|\bdiluent\b|\binject|\binjection|\bsubq\b|\bsub-?cutaneous|\bintramuscular\b|\bsyringes?\b|\bneedles?\b|\bdraw(ing)? up\b|\bmix(ing)? (it|them|the|a|my|this|that)\b|\bpin(ning)? (it|myself)\b|\biu\b|\bunits? (per|a|each|every)\b|\b(mcg|mg|ml|iu)\s*(\/|per|a|each)\s*(kg|day|dose|week|injection|shot)\b|\bhow (much|many|often|long|frequently)\b[^.?!]{0,60}\b(take|use|run|inject|administer|dose|per day|a day|daily|weekly)\b|\bhow should i (take|use|run|administer)\b|\bshould i take\b|\bstack(s|ed|ing)?\b|\bcycl(e|es|ing)\b|\b\d+\s*weeks? (on|off)\b|\bon\/off\b|\bprotocols?\b|\bregimen\b|\b(together|combine|combining|combo|combination|with each other|alongside)\b[^.?!]{0,60}\b(take|use|run)\b|\b(combine|combining|combo of|mix)\b|\b(and|with|plus)\b[^.?!]{0,30}\b(together)\b|\bwhat dose\b|\bfor my (knee|shoulder|injury|back|elbow|tendon)\b|\bwhen (should|do) i (take|inject|use)\b|\bbefore (bed|bedtime|workout|meals?)\b|\bon an empty stomach\b|\bmg\/kg\b|\bmcg\/kg\b)/.test(
     lower
   );
 }
