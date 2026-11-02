@@ -386,6 +386,39 @@ async function loadClicks(){
   }
 }
 
+// Same path as the homepage price rows: POST /api/track-click, stored as
+// "peptide|||vendor". The peptide half is a fixed label, not a catalog
+// peptide, so homepage "Popular here" badges (keyed by real peptide names)
+// ignore these. get-clicks and this page's Popular row still read the vendor
+// from the segment after "|||".
+const SUPPLIERS_CLICK_PEPTIDE = 'Suppliers page';
+const CLICK_TRACK_URL = '/api/track-click';
+
+function trackClick(vendor, peptide){
+  // Fire-and-forget — never let a tracking failure interfere with the
+  // actual link the visitor is following (it opens in a new tab regardless).
+  try {
+    fetch(CLICK_TRACK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ vendor, peptide }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch (err) { /* silent — tracking should never break the site */ }
+  // Google Analytics event, only if the visitor accepted analytics
+  // (dp_ga_loaded is set by ga-consent.js). Vendor + peptide names only.
+  try {
+    if (typeof window.gtag === 'function' && window.dp_ga_loaded) {
+      gtag('event', 'affiliate_click', { vendor_name: vendor, peptide_name: peptide });
+    }
+  } catch (err) { /* silent — analytics must never stop the link opening */ }
+}
+
+function trackClickAttr(vendor){
+  const v = String(vendor).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\x22');
+  return `onclick="trackClick('${v}', '${SUPPLIERS_CLICK_PEPTIDE}')"`;
+}
+
 async function submitReview(btn){
   const form = btn.closest('.review-form');
   const picker = form.parentElement.querySelector('.star-picker');
@@ -604,7 +637,7 @@ function supplierCardHtml(name){
       rows.push(`
       <div class="row">
         <span class="row-ico" title="Vendor pages">${icon('ext')}</span>
-        <div class="row-body">${links.map(l => `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener sponsored">${escapeHtml(l.label)}</a>`).join(' · ')}</div>
+        <div class="row-body">${links.map(l => `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener sponsored" ${trackClickAttr(name)}>${escapeHtml(l.label)}</a>`).join(' · ')}</div>
       </div>`);
     }
   }
@@ -683,7 +716,7 @@ function supplierCardHtml(name){
 
   const link = resolveVendorLink(name, { peptide: 'suppliers', vendor_product_urls: {} });
   const visitBtn = link.url
-    ? `<a href="${escapeHtml(link.url)}" target="_blank" rel="${link.state === 'affiliate' ? 'noopener sponsored' : 'noopener'}" class="btn-visit">Visit site ${icon('ext')}</a>`
+    ? `<a href="${escapeHtml(link.url)}" target="_blank" rel="${link.state === 'affiliate' ? 'noopener sponsored' : 'noopener'}" class="btn-visit" ${trackClickAttr(name)}>Visit site ${icon('ext')}</a>`
     : `<span class="btn-visit disabled">No site</span>`;
 
   const flags = {
