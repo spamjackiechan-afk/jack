@@ -806,6 +806,30 @@
     .index{grid-template-columns:1fr;}
   }
 
+  /* ---------- Compound pages (/peptides/<slug>) ---------- */
+  .compound-mode .wrap > :not(header.mast):not(#compoundView):not(footer):not(.modal-overlay){display:none !important;}
+  .name-row h3 a.cv-link{color:inherit; text-decoration:none;}
+  .name-row h3 a.cv-link:hover{color:var(--lowest); text-decoration:underline; text-underline-offset:3px;}
+  .cv{padding:30px 0 40px; max-width:860px;}
+  .cv-back{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--lowest); text-decoration:none;}
+  .cv-back:hover{text-decoration:underline;}
+  .cv-kicker{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--lowest); margin:26px 0 10px;}
+  .cv-head{display:flex; align-items:flex-start; gap:14px;}
+  .cv-title{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(32px, 5vw, 52px); line-height:1.05; letter-spacing:-.02em; margin:0; overflow-wrap:anywhere;}
+  .cv-fav{margin-left:auto; font-size:22px;}
+  .cv .phd-desc{font-size:15.5px; line-height:1.6; max-width:680px; margin:16px 0 0;}
+  .cv-lede{font-size:16px; color:var(--ink-soft); margin:14px 0 0;}
+  .cv-lede a{color:var(--lowest);}
+  .cv-meta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); margin:16px 0 0;}
+  .cv-live{color:var(--success);}
+  .cv-ruo{margin:22px 0 8px; padding:14px 18px; border-left:2px solid var(--success); background:linear-gradient(135deg, rgba(232,184,75,.12), transparent); border-radius:0 12px 12px 0; font-size:13px; line-height:1.6; color:var(--ink-soft);}
+  .cv-ruo strong{display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--success); margin-bottom:4px;}
+  .cv-format{display:flex; align-items:center; gap:10px; font-family:'Fraunces', serif; font-weight:500; font-size:22px; margin:34px 0 12px;}
+  .cv-size{border:1px solid var(--rule); background:var(--paper-raised); border-radius:14px; padding:16px 18px; margin:0 0 14px;}
+  .cv-size-head{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:12px;}
+  .cv-size-name{font-family:'IBM Plex Mono', monospace; font-size:15px; color:var(--ink);}
+  .cv-size-meta{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);}
+
   /* ---------- Excluded ledger ---------- */
   .excluded-section{
     margin-top:56px;
@@ -897,7 +921,7 @@
     <div class="mast-top">
       <h1 class="title"><a href="/" class="brand"><img src="/logo-symbol.svg" alt="" aria-hidden="true" class="brand-mark"><span class="brand-word">Discount</span> <em>Peptides.</em></a></h1>
       <nav class="mast-nav">
-        <a href="about.html" id="aboutLink">About</a>
+        <a href="/about" id="aboutLink">About</a>
         <a href="https://peptidehealthdigest.vercel.app/" id="testingLink" target="_blank" rel="noopener" aria-label="Peptide Health Digest (opens in a new tab)">Peptide Health Digest <span aria-hidden="true">&#8599;</span></a>
         <a href="/suppliers" id="suppliersLink">Suppliers</a>
         <a href="/research" id="researchLink">Guides &amp; Studies</a>
@@ -1657,7 +1681,7 @@ function cardHtmlGrouped(group){
       <div class="name-block">
         <div class="name-row">
           <div class="icon-badge" title="${group.format}">${formatIcon(group.format)}</div>
-          <h3>${group.peptide}</h3>
+          <h3><a class="cv-link" href="/peptides/${compoundSlug(group.peptide)}">${group.peptide}</a></h3>
           <span class="meta-tag" style="margin-left:auto;">${group.format}</span>
           <button type="button" class="fav-btn ${isFavourite(group.peptide) ? 'saved' : ''}" title="Save this peptide" aria-label="Save ${group.peptide}" onclick="toggleFavourite('${group.peptide.replace(/'/g, "\\'")}', this)">${isFavourite(group.peptide) ? '★' : '☆'}</button>
         </div>
@@ -1821,6 +1845,100 @@ function hideUnconfirmedSales(){
   });
 }
 hideUnconfirmedSales();
+
+// ---------- Compound pages (/peptides/<slug>) ----------
+// _redirects serves this same page for /peptides/*; here it swaps the catalogue
+// for one compound's full price list, reusing the rows, codes and live tags
+// the cards use. ?compound=<slug> does the same (handy for local previews).
+function compoundSlug(name){
+  return String(name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+const COMPOUND_SLUG = (location.pathname.match(/^\/peptides\/([^\/]+)\/?$/) || [])[1]
+  || new URLSearchParams(location.search).get('compound') || '';
+
+function setMeta(selector, attr, value){
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
+}
+
+function renderCompound(){
+  let view = document.getElementById('compoundView');
+  if (!view){
+    view = document.createElement('section');
+    view.id = 'compoundView';
+    view.className = 'cv';
+    document.querySelector('header.mast').after(view);
+  }
+  const rows = DATA.included.filter(i => compoundSlug(i.peptide) === COMPOUND_SLUG);
+  if (!rows.length){
+    document.title = 'Compound not found — Discount Peptides';
+    view.innerHTML = `
+      <a class="cv-back" href="/">&larr; All compounds</a>
+      <h2 class="cv-title">We don't list that compound.</h2>
+      <p class="cv-lede">It may have been renamed or removed. <a href="/">Search all compounds &rarr;</a></p>`;
+    return;
+  }
+  const name = rows[0].peptide;
+  const category = rows.find(i => i.category)?.category || '';
+  const vendors = new Set(rows.flatMap(i => Object.keys(i.prices)));
+  const liveCount = rows.reduce((n, i) => n + Object.keys(i.liveVerified || {}).length, 0);
+  const FORMAT_ORDER = ['Vial', 'Nasal', 'Oral', 'Capsules', 'Water'];
+  const formats = [...new Set(rows.map(i => i.format))]
+    .sort((a, b) => (FORMAT_ORDER.indexOf(a) + 1 || 99) - (FORMAT_ORDER.indexOf(b) + 1 || 99));
+
+  const url = 'https://discountspeptides.com/peptides/' + COMPOUND_SLUG;
+  const title = `${name} prices — compare research vendors | Discount Peptides`;
+  const desc = `${name} (research use only): ${vendors.size} vendor price${vendors.size === 1 ? '' : 's'} compared side by side, with discount codes and daily price checks.`;
+  document.title = title;
+  setMeta('link[rel="canonical"]', 'href', url);
+  setMeta('meta[property="og:url"]', 'content', url);
+  setMeta('meta[name="description"]', 'content', desc);
+  setMeta('meta[property="og:title"]', 'content', title);
+  setMeta('meta[property="og:description"]', 'content', desc);
+  setMeta('meta[name="twitter:title"]', 'content', title);
+  setMeta('meta[name="twitter:description"]', 'content', desc);
+
+  const sizeBlocks = formats.map(fmt => {
+    const sizes = rows.filter(i => i.format === fmt)
+      // Plain mg sizes smallest first; kits and unconfirmed sizes after them.
+      .sort((a, b) => ((/[^0-9.mg]/i.test(a.size) || !a.amount_mg) - (/[^0-9.mg]/i.test(b.size) || !b.amount_mg))
+        || (a.amount_mg || 0) - (b.amount_mg || 0) || String(a.size).localeCompare(String(b.size)));
+    return `
+      <h3 class="cv-format"><span class="icon-badge" aria-hidden="true">${formatIcon(fmt)}</span>${escapeHtml(fmt)}</h3>
+      ${sizes.map(item => {
+        const lowestVal = usdLowest(item.prices);
+        const entries = Object.entries(item.prices).sort(cmpVendorPrice);
+        return `
+        <div class="cv-size">
+          <div class="cv-size-head">
+            <span class="cv-size-name">${escapeHtml(item.size)}</span>
+            <span class="cv-size-meta">${entries.length} offer${entries.length === 1 ? '' : 's'}</span>
+          </div>
+          ${item.notes ? `<div class="price-caveat">⚠ ${item.notes}</div>` : ''}
+          <div class="price-grid">${entries.map(([v, p]) => renderPriceRow(v, p, item, lowestVal)).join('')}</div>
+        </div>`;
+      }).join('')}`;
+  }).join('');
+
+  view.innerHTML = `
+    <a class="cv-back" href="/">&larr; All compounds</a>
+    <p class="cv-kicker">Compound detail${category ? ' &middot; ' + escapeHtml(category) : ''}</p>
+    <div class="cv-head">
+      <h2 class="cv-title">${escapeHtml(name)}</h2>
+      <button type="button" class="fav-btn cv-fav ${isFavourite(name) ? 'saved' : ''}" title="Save this peptide" aria-label="Save ${escapeHtml(name)}" onclick="toggleFavourite('${name.replace(/'/g, "\\'")}', this)">${isFavourite(name) ? '★' : '☆'}</button>
+    </div>
+    ${phdDescHtml(name)}
+    ${warningHtml(name, 'cv')}
+    <p class="cv-meta">${vendors.size} vendor${vendors.size === 1 ? '' : 's'} &middot; ${rows.length} size${rows.length === 1 ? '' : 's'}${liveCount ? ` &middot; <span class="cv-live">● ${liveCount} live-checked prices</span>` : ''}</p>
+    <aside class="cv-ruo"><strong>Research use only</strong> Not for human or animal consumption. Listed for laboratory reference, not as a recommendation, dosing protocol, or endorsement of safety, legality or efficacy.</aside>
+    ${sizeBlocks}`;
+}
+
+if (COMPOUND_SLUG){
+  document.body.classList.add('compound-mode');
+  // Everything that redraws the catalogue (live prices, saved stars) redraws this view instead.
+  render = renderCompound;
+}
 
 render();
 
