@@ -392,6 +392,46 @@
   .signup-msg{font-family:'IBM Plex Mono', monospace; font-size:12px; margin-top:10px; min-height:16px;}
   .signup-msg.ok{color:var(--lowest);} .signup-msg.err{color:var(--amber);}
   .sale-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--success);}
+
+  /* ---------- Homepage hero + stats (redesign) ---------- */
+  .dp-hero{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr); gap:44px; align-items:end; padding:44px 0 36px;}
+  .dp-kicker{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--lowest); margin:0 0 16px;}
+  .dp-hero h2{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(34px, 5vw, 60px); line-height:1.05; letter-spacing:-.025em; margin:0; max-width:760px; color:var(--ink);}
+  .dp-hero h2 em{font-style:italic; color:var(--lowest);}
+  .dp-lede{font-size:17px; line-height:1.6; color:var(--ink-soft); margin:18px 0 0; max-width:620px;}
+  .dp-hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:24px;}
+  .dp-btn{display:inline-flex; align-items:center; justify-content:center; border-radius:9px; padding:12px 18px; font-family:'IBM Plex Sans', sans-serif; font-size:14px; font-weight:600; text-decoration:none; cursor:pointer; border:1.5px solid var(--lowest);}
+  .dp-btn-primary{background:var(--lowest); color:var(--paper);}
+  .dp-btn-primary:hover{background:var(--sage);}
+  .dp-btn-ghost{background:transparent; color:var(--ink); border-color:var(--rule);}
+  .dp-btn-ghost:hover{border-color:var(--lowest); color:var(--lowest);}
+  .dp-hero-note{padding:18px 20px; border-left:2px solid var(--success); background:linear-gradient(135deg, rgba(232,184,75,.12), transparent); border-radius:0 14px 14px 0;}
+  .dp-hero-note strong{display:block; font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--success); margin-bottom:8px;}
+  .dp-hero-note p{font-size:13.5px; line-height:1.6; color:var(--ink-soft); margin:0;}
+  .dp-stats{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); margin:0 0 28px;}
+  .dp-stat{padding:18px 16px 20px 0; border-right:1px solid var(--rule); min-width:0;}
+  .dp-stat + .dp-stat{padding-left:24px;}
+  .dp-stat:last-child{border-right:0;}
+  .dp-stat-value{display:block; font-family:'Fraunces', serif; font-size:30px; line-height:1.15; color:var(--lowest);}
+  .dp-stat-label{display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);}
+  /* Vendor sales: a compact gold callout instead of a full panel. */
+  #memberSalesSlot .dpm-bar{border-color:rgba(232,184,75,.7); background:linear-gradient(130deg, rgba(232,184,75,.11), rgba(16,27,23,.9)); border-radius:14px; padding:14px 20px; margin:0 0 20px; font-size:13px;}
+  #memberSalesSlot .dpm-bar h3{font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:14px; color:var(--success); margin:0 0 2px;}
+  #memberSalesSlot .dpm-bar > h3 + div{display:none;}
+  #memberSalesSlot .dpm-bar ul{margin:6px 0 0;}
+  #memberSalesSlot .dpm-bar .dpm-note{font-size:11.5px;}
+  #signupBand{margin-top:32px;}
+  @media (max-width:900px){
+    .dp-hero{grid-template-columns:minmax(0,1fr); gap:24px; padding-top:32px;}
+  }
+  @media (max-width:640px){
+    .dp-stats{grid-template-columns:repeat(2, minmax(0,1fr));}
+    .dp-stat, .dp-stat + .dp-stat{padding:14px 10px 14px 0; border-bottom:1px solid var(--rule);}
+    .dp-stat:nth-child(2n){padding-left:12px; border-right:0;}
+    .dp-stat:nth-child(n+3){border-bottom:0;}
+    .dp-stat-value{font-size:26px;}
+    .dp-hero-actions .dp-btn{flex:1 1 100%;}
+  }
   #saleChip.active{background:var(--success); border-color:var(--success); color:var(--paper);}
   .fav-count{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--success);}
   .empty-favs{color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:13px; padding:28px 0; text-align:center;}
@@ -904,10 +944,31 @@
       </nav>
     </div>
 
-    <p class="ruo-line">Research use only &mdash; not for human or animal consumption</p>
-
     <div id="trustStrip" style="display:none;"></div>
   </header>
+
+  <section class="dp-hero" aria-labelledby="heroTitle">
+    <div>
+      <p class="dp-kicker">Prices checked at the vendor &middot; updated daily</p>
+      <h2 id="heroTitle">Compare research peptide prices <em>without the noise.</em></h2>
+      <p class="dp-lede">Like-for-like sizes, vendor prices and discount codes in one place.</p>
+      <div class="dp-hero-actions">
+        <button type="button" class="dp-btn dp-btn-primary" onclick="startComparing()">Start comparing</button>
+        <a class="dp-btn dp-btn-ghost" href="about.html">How the data is checked</a>
+      </div>
+    </div>
+    <aside class="dp-hero-note">
+      <strong>Research use only</strong>
+      <p>Not for human or animal consumption. Listings are for laboratory reference, not recommendations, dosing protocols, or endorsements of safety, legality or efficacy.</p>
+    </aside>
+  </section>
+
+  <div class="dp-stats" aria-label="What we compare">
+    <div class="dp-stat"><span class="dp-stat-value" id="statProducts">&nbsp;</span><span class="dp-stat-label">products</span></div>
+    <div class="dp-stat"><span class="dp-stat-value" id="statSuppliers">&nbsp;</span><span class="dp-stat-label">suppliers</span></div>
+    <div class="dp-stat"><span class="dp-stat-value" id="statPrices">&nbsp;</span><span class="dp-stat-label">price points</span></div>
+    <div class="dp-stat"><span class="dp-stat-value" id="statChecked">Daily</span><span class="dp-stat-label" id="statCheckedLabel">price checks</span></div>
+  </div>
 
     <div class="modal-overlay" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
@@ -944,20 +1005,6 @@
     <div class="deals-scroll" id="dealsScroll"></div>
   </div>
 
-  <div class="signup-band" id="signupBand">
-    <h3>Save your favourite peptides so you don't lose them</h3>
-    <p>Press the star on all peptides you want saved. We ask for your email so you get notified on price changes, special deals, discounts and vendors on your saved peptides.</p>
-    <div class="signup-row">
-      <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
-      <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;"><input type="text" id="signupWebsite" name="website" tabindex="-1" autocomplete="off"></div>
-      <button type="button" id="signupBtn" onclick="submitSignup()">Notify me</button>
-    </div>
-    <div class="signup-consent">
-      By subscribing you agree to receive occasional emails about price changes and vendor offers. Every email we send includes an unsubscribe link. We don't sell your address, and we don't share it with vendors or advertisers. Email only — we don't ask for a phone number.
-    </div>
-    <div class="signup-msg" id="signupMsg"></div>
-  </div>
-
   <div class="sort-note" id="sortNote"></div>
 
 
@@ -990,6 +1037,20 @@
 
   </div>
   <div class="index" id="index"></div>
+
+  <div class="signup-band" id="signupBand">
+    <h3>Save your favourite peptides so you don't lose them</h3>
+    <p>Press the star on all peptides you want saved. We ask for your email so you get notified on price changes, special deals, discounts and vendors on your saved peptides.</p>
+    <div class="signup-row">
+      <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
+      <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;"><input type="text" id="signupWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+      <button type="button" id="signupBtn" onclick="submitSignup()">Notify me</button>
+    </div>
+    <div class="signup-consent">
+      By subscribing you agree to receive occasional emails about price changes and vendor offers. Every email we send includes an unsubscribe link. We don't sell your address, and we don't share it with vendors or advertisers. Email only — we don't ask for a phone number.
+    </div>
+    <div class="signup-msg" id="signupMsg"></div>
+  </div>
 
   <div class="excluded-section">
     <h2>Why it isn't listed</h2>
@@ -1839,7 +1900,28 @@ render();
     <span class="trust-item">${checkIcon} ${productCount} products across ${vendorCount} vendors</span>
     <span class="trust-item">${checkIcon} ${liveVendorCount} vendor${liveVendorCount === 1 ? '' : 's'} price-tracked live daily</span>
   `;
+
+  const pricePoints = DATA.included.reduce((n, i) => n + Object.keys(i.prices || {}).length, 0);
+  document.getElementById('statProducts').textContent = productCount.toLocaleString('en-US');
+  document.getElementById('statSuppliers').textContent = vendorCount.toLocaleString('en-US');
+  document.getElementById('statPrices').textContent = pricePoints.toLocaleString('en-US');
 })();
+
+// Hero stat: how long ago the daily price check ran (checked_at in live_prices.json).
+function showLastChecked(iso){
+  const t = Date.parse(iso);
+  if (isNaN(t)) return;
+  const hours = Math.max(0, Math.round((Date.now() - t) / 36e5));
+  if (hours > 72) return;
+  document.getElementById('statChecked').textContent = hours < 1 ? 'Now' : hours + 'h ago';
+  document.getElementById('statCheckedLabel').textContent = 'last price check';
+}
+
+function startComparing(){
+  const box = document.getElementById('search');
+  box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  box.focus({ preventScroll: true });
+}
 
 // ---------- Live price overlay ----------
 // Pulls real-time-checked prices from the GitHub repo running the automated
@@ -1908,6 +1990,7 @@ async function loadLivePrices(){
     const resp = await fetch(LIVE_PRICES_URL, { cache: 'no-store' });
     if (!resp.ok) return;
     const live = await resp.json();
+    showLastChecked(live.checked_at);
     const updatedCount = applyLiveOverlay(live.results || {});
     hideUnconfirmedSales();
 
