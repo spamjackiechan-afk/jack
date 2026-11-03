@@ -39,7 +39,7 @@ Fails on:
     sort low->high and high->low) a card with no USD price placed before a
     card that has one. Rows are checked in the fallback list too.
   * Google Analytics (ga-consent.js): a public page (index, about, suppliers,
-    privacy, research) not loading it; admin-reviews.html or functions/ loading
+    privacy) not loading it; admin-reviews.html or functions/ loading
     it; the Measurement ID appearing in any file other than ga-consent.js;
     privacy.html missing or not in sitemap.xml; on a first visit, the cookie
     banner not showing or any request going to Google's analytics hosts
@@ -72,7 +72,7 @@ NEWS_MARKERS = ["news-tier", "news-item", "news-type", "peptide-chip",
 # second copy of it; it may appear only in ga-consent.js.
 GA_FILE = "ga-consent.js"
 GA_ID = "G-" + "CYYYPQ5ZDX"
-GA_PAGES = ["index.html", "about.html", "suppliers.html", "privacy.html", "research.html"]
+GA_PAGES = ["index.html", "about.html", "suppliers.html", "privacy.html"]
 GA_HOSTS = ("googletagmanager.com", "google-analytics.com")
 
 
@@ -449,7 +449,7 @@ def main():
             problems.append(f"research nav link: missing: {str(e).splitlines()[0]}")
         if os.path.exists(os.path.join(root, "testing.html")):
             problems.append("testing.html exists again; it was retired (see _redirects)")
-        for f in ("index.html", "about.html", "suppliers.html", "privacy.html", "research.html", "sitemap.xml"):
+        for f in ("index.html", "about.html", "suppliers.html", "privacy.html", "sitemap.xml"):
             if re.search(r'testing\.html|discountspeptides\.com/testing\b', open(os.path.join(root, f), encoding="utf-8").read()):
                 problems.append(f"{f}: still links to the retired testing page")
         check_no_news(page, root, "index.html", problems)
