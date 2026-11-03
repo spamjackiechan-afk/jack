@@ -3,6 +3,9 @@
 /methodology /about 301
 /methodology.html /about 301
 
+# Compound pages: index.html draws /peptides/<slug> from the same data (200 = rewrite, URL stays).
+/peptides/* /index.html 200
+
 # The reconstitution calculator was removed (Oct 2026). Send old links home.
 /calculator / 301
 /calculator.html / 301
