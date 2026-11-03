@@ -593,6 +593,12 @@
     margin-top:8px;
     border-top:1px dashed var(--rule);
   }
+  /* Redesign: two roomy columns of compound cards, one on phones. */
+  .index .card-grid{grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px;}
+  @media (max-width:760px){ .index .card-grid{grid-template-columns:minmax(0,1fr);} }
+  .index .card{padding:20px 22px; border-radius:14px;}
+  .meta-tag.live-checks{color:var(--success); border-color:rgba(232,184,75,.45);}
+  .per-mg{font-family:'IBM Plex Mono', monospace; font-size:10.5px; font-weight:400; color:var(--ink-soft); white-space:nowrap;}
   .trust-item{
     display:flex;
     align-items:center;
@@ -1041,7 +1047,7 @@ function toggleExpand(btn, count){
   const hiddenDiv = btn.previousElementSibling;
   const isHidden = hiddenDiv.style.display === 'none';
   hiddenDiv.style.display = isHidden ? 'grid' : 'none';
-  btn.textContent = isHidden ? 'Show fewer ↑' : ('+' + count + ' more →');
+  btn.textContent = isHidden ? 'Show fewer ↑' : ('Compare all ' + count + ' offers →');
 }
 
 function copyCode(btn){
@@ -1398,7 +1404,10 @@ function renderPriceRow(vendor, price, item, lowestVal){
   const priceHtml = codePrice != null
     ? `<span class="price-amount with-code" data-currency="USD" title="With code ${link.promoCode}">${fmtPrice(codePrice)}<span class="with-code-star" aria-label="with code">*</span></span><span class="price-list-struck" title="List price">${fmtPrice(price)}</span>`
     : `<span class="price-amount${cur !== 'USD' ? ' non-usd' : ''}" data-currency="${cur}"${curTitle}>${fmtMoney(price, cur)}</span>`;
-  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}${popularBadge}${shipLabel}</span><span class="val">${priceHtml}${saleBadge}${codeBadge}${codeDisclosure}${unavailableTag}</span>`;
+  // Price per mg, only where the size is a single plain mg amount (not combos).
+  const perMgHtml = cur === 'USD' && item.amount_mg > 0 && !/[\/+]/.test(item.size)
+    ? `<span class="per-mg">${fmtPrice((codePrice != null ? codePrice : price) / item.amount_mg)}/mg</span>` : '';
+  const inner = `<span class="vendor">${vendor}${stateLabel}${liveBadge}${popularBadge}${shipLabel}</span><span class="val">${priceHtml}${perMgHtml}${saleBadge}${codeBadge}${codeDisclosure}${unavailableTag}</span>`;
   if (link.url){
     return `<a class="price-row ${isLowest ? 'lowest' : ''}" href="${link.url}" target="_blank" rel="noopener sponsored" onclick="trackClick('${vendor.replace(/'/g,"\\'")}', '${item.peptide.replace(/'/g,"\\'")}')">${inner}</a>`;
   }
@@ -1430,13 +1439,15 @@ function dosePanelHtml(item, panelId, isActive){
   const visibleRows = visible.map(([v,p]) => renderPriceRow(v,p,item,lowestVal)).join('');
   const hiddenSection = hidden.length ? `
         <div class="price-grid hidden-rows" style="display:none;">${hidden.map(([v,p]) => renderPriceRow(v,p,item,lowestVal)).join('')}</div>
-        <button type="button" class="expand-toggle" onclick="toggleExpand(this, ${hidden.length})">+${hidden.length} more →</button>` : '';
+        <button type="button" class="expand-toggle" onclick="toggleExpand(this, ${entries.length})">Compare all ${entries.length} offers →</button>` : '';
+  const liveCount = entries.filter(([v]) => item.liveVerified && item.liveVerified[v]).length;
 
   return `
     <div class="dose-panel" id="${panelId}" style="display:${isActive ? 'block' : 'none'};">
       <div class="meta-tags">
         <span class="meta-tag">${item.size}</span>
         <span class="meta-tag vendor-count">${entries.length} vendor${entries.length === 1 ? '' : 's'} compared</span>
+        ${liveCount ? `<span class="meta-tag live-checks" title="Prices confirmed by the latest automated daily check">● ${liveCount} live-checked</span>` : ''}
       </div>
       ${item.notes ? `<div class="price-caveat">⚠ ${item.notes}</div>` : ''}
       <div class="price-grid">${visibleRows}</div>
