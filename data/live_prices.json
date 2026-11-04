@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-03T18:04:21Z",
+  "checked_at": "2026-11-04T18:16:59Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -215,7 +215,7 @@
       "Cagrilintide | Vial | 5mg/10mg": {
         "url": "https://royal-peptides.com/shop/cagrilintide-kit/",
         "price": 288.0,
-        "regular_price": 360.0,
+        "regular_price": 310.0,
         "error": null
       },
       "Tesamorelin / Ipamorelin combo | Vial | 10mg/3mg": {
@@ -2961,7 +2961,7 @@
       "AOD-9604 | Vial | 10mg": {
         "url": "https://qualitypeptideusa.com/products/aod-9604",
         "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "error": "HTTPSConnectionPool(host='qualitypeptideusa.com', port=443): Read timed out. (read timeout=20)"
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://qualitypeptideusa.com/products/ghk-cu",
@@ -3178,32 +3178,32 @@
       "Cagrilintide | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/cagrilintide/?attribute_mg=5+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/cagrilintide/?attribute_mg=5+mg"
+        "error": "variation {'attribute_mg': '5 mg'} price not found (cheapest variation not used)"
       },
       "Cagrilintide | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/cagrilintide/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/cagrilintide/?attribute_mg=10+mg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "CJC-1295 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/cjc-1295-no-dac/?attribute_mg=5+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/cjc-1295-no-dac/?attribute_mg=5+mg"
+        "error": "variation {'attribute_mg': '5 mg'} price not found (cheapest variation not used)"
       },
       "CJC-1295 | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/cjc-1295-no-dac/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/cjc-1295-no-dac/?attribute_mg=10+mg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "CJC-1295 with DAC | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/cjc-1295-with-dac/?attribute_mg=5+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/cjc-1295-with-dac/?attribute_mg=5+mg"
+        "error": "variation {'attribute_mg': '5 mg'} price not found (cheapest variation not used)"
       },
       "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
         "url": "https://peptidetitans.com/product/cjc-1295-no-dac-ipamorelin-blend/?attribute_mg=5/5+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/cjc-1295-no-dac-ipamorelin-blend/?attribute_mg=5/5+mg"
+        "error": "variation {'attribute_mg': '5/5 mg'} price not found (cheapest variation not used)"
       },
       "DSIP | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/dsip/?attribute_mg=5+mg",
@@ -3213,7 +3213,7 @@
       "DSIP | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/dsip/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/dsip/?attribute_mg=10+mg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "Epitalon | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/epitalon/?attribute_mg=10+mg",
@@ -3228,7 +3228,7 @@
       "FOXO4-DRI | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/foxo4-dri/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/foxo4-dri/?attribute_mg=10+mg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://peptidetitans.com/product/ghk-cu/?attribute_mg=50+mg",
@@ -3253,7 +3253,7 @@
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://peptidetitans.com/product/glow/?attribute_mg=70+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/glow/?attribute_mg=70+mg"
+        "error": "variation {'attribute_mg': '70 mg'} price not found (cheapest variation not used)"
       },
       "Glutathione | Vial | 1500mg": {
         "url": "https://peptidetitans.com/product/glutathione/?attribute_mg=1500+mg",
@@ -3263,7 +3263,7 @@
       "Hexarelin | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/hexarelin/?attribute_mg=5+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/hexarelin/?attribute_mg=5+mg"
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fhexarelin%2F%3Fattribute_mg%3D5%2Bmg"
       },
       "Ipamorelin | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/ipamorelin/?attribute_mg=5+mg",
@@ -3283,12 +3283,12 @@
       "Kisspeptin | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/kisspeptin-10/?attribute_mg=10+mg"
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fkisspeptin-10%2F%3Fattribute_mg%3D10%2Bmg"
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg (10/10/50/10mg)": {
         "url": "https://peptidetitans.com/product/klow/?attribute_mg=80+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fklow%2F%3Fattribute_mg%3D80%2Bmg"
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/klow/?attribute_mg=80+mg"
       },
       "KPV | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/kpv/?attribute_mg=5+mg",
@@ -3298,12 +3298,12 @@
       "KPV | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/kpv/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/kpv/?attribute_mg=10+mg"
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fkpv%2F%3Fattribute_mg%3D10%2Bmg"
       },
       "LL-37 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/ll-37/?attribute_mg=5+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fll-37%2F%3Fattribute_mg%3D5%2Bmg"
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/ll-37/?attribute_mg=5+mg"
       },
       "Melanotan I | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/melanotan-1/?attribute_mg=10+mg",
@@ -3313,7 +3313,7 @@
       "Melanotan II | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/melanotan-ii/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fmelanotan-ii%2F%3Fattribute_mg%3D10%2Bmg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/mots-c/?attribute_mg=10+mg",
@@ -3328,7 +3328,7 @@
       "MOTS-C | Vial | 40mg": {
         "url": "https://peptidetitans.com/product/mots-c/?attribute_mg=40+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fmots-c%2F%3Fattribute_mg%3D40%2Bmg"
+        "error": "variation {'attribute_mg': '40 mg'} price not found (cheapest variation not used)"
       },
       "Oxytocin | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/oxytocin/?attribute_mg=10+mg",
@@ -3343,7 +3343,7 @@
       "Semax | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/semax/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fsemax%2F%3Fattribute_mg%3D10%2Bmg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "Semax | Vial | 30mg": {
         "url": "https://peptidetitans.com/product/semax/?attribute_mg=30+mg",
@@ -3363,12 +3363,12 @@
       "SNAP-8 | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/snap-8/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/product/snap-8/?attribute_mg=10+mg"
+        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fsnap-8%2F%3Fattribute_mg%3D10%2Bmg"
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/ss-31/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fss-31%2F%3Fattribute_mg%3D10%2Bmg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "TB-500 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/tb-500/?attribute_mg=5+mg",
@@ -3383,7 +3383,7 @@
       "Thymalin | Vial | 10mg": {
         "url": "https://peptidetitans.com/product/thymalin/?attribute_mg=10+mg",
         "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://peptidetitans.com/login/?redirect_to=https%3A%2F%2Fpeptidetitans.com%2Fproduct%2Fthymalin%2F%3Fattribute_mg%3D10%2Bmg"
+        "error": "variation {'attribute_mg': '10 mg'} price not found (cheapest variation not used)"
       },
       "Thymosin Alpha-1 | Vial | 5mg": {
         "url": "https://peptidetitans.com/product/thymosin-alpha-1/?attribute_mg=5+mg",
@@ -4762,18 +4762,21 @@
       },
       "SLU-PP-332 | Vial | 5mg": {
         "url": "https://tryauraresearch.com/product/slu-pp-332/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 69.0,
+        "regular_price": null,
+        "error": null
       },
       "SNAP-8 | Vial | 10mg": {
         "url": "https://tryauraresearch.com/product/snap-8/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 49.0,
+        "regular_price": null,
+        "error": null
       },
       "BPC-157 / TB-500 blend | Vial | 20mg (10/10mg)": {
         "url": "https://tryauraresearch.com/product/bpc-157-tb-500/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 89.0,
+        "regular_price": null,
+        "error": null
       },
       "PT-141 (Bremelanotide) | Vial | 10mg": {
         "url": "https://tryauraresearch.com/product/pt-141/",
@@ -4789,56 +4792,64 @@
       },
       "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
         "url": "https://tryauraresearch.com/product/cjc-1295-no-dac-ipamorelin/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 69.0,
+        "regular_price": null,
+        "error": null
       },
       "Melanotan II | Vial | 10mg": {
         "url": "https://tryauraresearch.com/product/melanotan-ii/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 49.0,
+        "regular_price": null,
+        "error": null
       },
       "TB-500 | Vial | 10mg": {
         "url": "https://tryauraresearch.com/product/tb-500/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 89.0,
+        "regular_price": null,
+        "error": null
       },
       "Selank | Vial | 10mg": {
         "url": "https://tryauraresearch.com/product/selank/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 39.0,
+        "regular_price": null,
+        "error": null
       },
       "Semax | Vial | 10mg": {
         "url": "https://tryauraresearch.com/product/semax/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 39.0,
+        "regular_price": null,
+        "error": null
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": {
         "url": "https://tryauraresearch.com/product/glow/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 99.0,
+        "regular_price": null,
+        "error": null
       },
       "AOD-9604 | Vial | 5mg": {
         "url": "https://tryauraresearch.com/product/aod-9604/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 59.0,
+        "regular_price": null,
+        "error": null
       },
       "Cagrilintide | Vial | 5mg": {
         "url": "https://tryauraresearch.com/product/cagrilintide/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 69.0,
+        "regular_price": null,
+        "error": null
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://tryauraresearch.com/product/klow/",
-        "price": null,
-        "error": "no confident price match \u2014 page structure may have changed"
+        "price": 119.0,
+        "regular_price": null,
+        "error": null
       }
     },
     "Helion Research": {
       "Semaglutide | Vial | 10mg": {
         "url": "https://helionresearchusa.com/product.html?sku=sm10",
-        "price": 57.99,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "429 Client Error: Too Many Requests for url: https://helionresearchusa.com/product.html?sku=sm10"
       },
       "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
         "url": "https://helionresearchusa.com/product.html?sku=cp10",
@@ -4847,13 +4858,15 @@
       },
       "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
         "url": "https://helionresearchusa.com/product.html?sku=bb10",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://helionresearchusa.com/product.html?sku=bb10"
+        "price": 59.99,
+        "regular_price": null,
+        "error": null
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://helionresearchusa.com/product.html?sku=ms10",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://helionresearchusa.com/product.html?sku=ms10"
+        "price": 38.99,
+        "regular_price": null,
+        "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://helionresearchusa.com/product.html?sku=cu50",
@@ -4867,23 +4880,27 @@
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://helionresearchusa.com/product.html?sku=2s10",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://helionresearchusa.com/product.html?sku=2s10"
+        "price": 49.99,
+        "regular_price": null,
+        "error": null
       },
       "Tirzepatide | Vial | 20mg": {
         "url": "https://helionresearchusa.com/product.html?sku=t20",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://helionresearchusa.com/product.html?sku=t20"
+        "price": 89.99,
+        "regular_price": null,
+        "error": null
       },
       "Retatrutide | Vial | 20mg": {
         "url": "https://helionresearchusa.com/product.html?sku=rt20",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://helionresearchusa.com/product.html?sku=rt20"
+        "price": 111.99,
+        "regular_price": null,
+        "error": null
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://helionresearchusa.com/product.html?sku=rt10",
-        "price": null,
-        "error": "429 Client Error: Too Many Requests for url: https://helionresearchusa.com/product.html?sku=rt10"
+        "price": 63.99,
+        "regular_price": null,
+        "error": null
       }
     },
     "MsAmino": {
@@ -6401,9 +6418,8 @@
       },
       "IGF-1 LR3 | Vial | 1mg": {
         "url": "https://aminovault.com/product/igf-1-lr3/",
-        "price": 69.7,
-        "regular_price": null,
-        "error": null
+        "price": null,
+        "error": "404 Client Error: Not Found for url: https://aminovault.com/product/igf-1-lr3/"
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://aminovault.com/product/ipamorelin/?attribute_product-grade=US+Sourced",
@@ -6413,9 +6429,8 @@
       },
       "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": {
         "url": "https://aminovault.com/product/klow/?attribute_product-grade=US+Sourced",
-        "price": 101.15,
-        "regular_price": 119.0,
-        "error": null
+        "price": null,
+        "error": "404 Client Error: Not Found for url: https://aminovault.com/product/klow/?attribute_product-grade=US+Sourced"
       },
       "KPV | Vial | 10mg": {
         "url": "https://aminovault.com/product/kpv10/",
@@ -6483,9 +6498,8 @@
       },
       "Tesamorelin | Vial | 10mg": {
         "url": "https://aminovault.com/product/tesamorelin/?attribute_product-grade=US+Sourced",
-        "price": 84.15,
-        "regular_price": 99.0,
-        "error": null
+        "price": null,
+        "error": "404 Client Error: Not Found for url: https://aminovault.com/product/tesamorelin/?attribute_product-grade=US+Sourced"
       },
       "Thymalin | Vial | 10mg": {
         "url": "https://aminovault.com/product/thymalin/",
