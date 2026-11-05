@@ -630,7 +630,8 @@
         "Certa Peptides": 27.99,
         "PrymaLab": 14.99,
         "BioLongevity Labs": 55.97,
-        "Unyx Peptides": 59.99
+        "Unyx Peptides": 59.99,
+        "PepMarket": 44.99
       },
       "lowest": 14.99,
       "notes": null,
@@ -648,7 +649,8 @@
         "Certa Peptides": "https://certapeptides.com/shop/dsip?variant=812",
         "PrymaLab": "https://prymalab.net/product/dsip-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/dsip-5mg/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/dsip-delta-sleep-inducing-peptide/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/dsip-delta-sleep-inducing-peptide/",
+        "PepMarket": "https://www.pepmarket.net/product/dsip"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -755,7 +757,8 @@
         "Blackline Scientific": 35,
         "BioLongevity Labs": 84.97,
         "Unyx Peptides": 45,
-        "Optimum ReGen Peptides": 24.15
+        "Optimum ReGen Peptides": 24.15,
+        "PepMarket": 34.99
       },
       "lowest": 18.99,
       "notes": null,
@@ -797,7 +800,8 @@
         "Blackline Scientific": "https://blacklinescientific.com/products/ghk-50mg",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/ghk-cu-50mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/ghk-cu-copper-peptide/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/ghk-cu"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/ghk-cu",
+        "PepMarket": "https://www.pepmarket.net/product/ghk-cu"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -958,7 +962,8 @@
         "Blackline Scientific": 90,
         "Elytra Labs": 55.0,
         "AminoVault": 69.7,
-        "Optimum ReGen Peptides": 55.2
+        "Optimum ReGen Peptides": 55.2,
+        "PepMarket": 64.99
       },
       "lowest": 45.47,
       "notes": null,
@@ -986,7 +991,8 @@
         "Blackline Scientific": "https://blacklinescientific.com/products/igf-1-lr3-1mg",
         "Elytra Labs": "https://elytralabs.shop/product-ig1",
         "AminoVault": "https://aminovault.com/product/igf-1-lr3/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/igf-1lr3"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/igf-1lr3",
+        "PepMarket": "https://www.pepmarket.net/product/igf-1-lr3"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -1126,7 +1132,8 @@
         "BioLongevity Labs": 99.97,
         "Ascension Peptides": 50,
         "Unyx Peptides": 89.99,
-        "Optimum ReGen Peptides": 41.4
+        "Optimum ReGen Peptides": 41.4,
+        "PepMarket": 54.99
       },
       "lowest": 25.25,
       "notes": null,
@@ -1167,7 +1174,8 @@
         "BioLongevity Labs": "https://biolongevitylabs.com/product/kpv-10mg/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/kpv-10mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/kpv/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/kpv"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/kpv",
+        "PepMarket": "https://www.pepmarket.net/product/kpv"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1268,7 +1276,8 @@
         "BioLongevity Labs": 109.97,
         "Ascension Peptides": 62,
         "Unyx Peptides": 60,
-        "Optimum ReGen Peptides": 34.5
+        "Optimum ReGen Peptides": 34.5,
+        "PepMarket": 44.99
       },
       "lowest": 27.55,
       "notes": null,
@@ -1313,7 +1322,8 @@
         "BioLongevity Labs": "https://biolongevitylabs.com/product/motsc-10mg/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/mots-c-10mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/mots-c/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/motc"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/motc",
+        "PepMarket": "https://www.pepmarket.net/product/mots-c"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1445,7 +1455,8 @@
         "Blackline Scientific": 40,
         "BioLongevity Labs": 249.97,
         "Unyx Peptides": 90,
-        "Optimum ReGen Peptides": 48.3
+        "Optimum ReGen Peptides": 48.3,
+        "PepMarket": 69.99
       },
       "lowest": 30.52,
       "notes": null,
@@ -1486,7 +1497,8 @@
         "Blackline Scientific": "https://blacklinescientific.com/products/nad-500mg%ef%bc%88buffered%ef%bc%89",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/nad-500mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/nad-plus/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/nad-500"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/nad-500",
+        "PepMarket": "https://www.pepmarket.net/product/nad-plus"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1609,7 +1621,8 @@
         "AminoVault": 70.55,
         "Ascension Peptides": 50,
         "Unyx Peptides": 60,
-        "Optimum ReGen Peptides": 41.4
+        "Optimum ReGen Peptides": 41.4,
+        "PepMarket": 39.99
       },
       "lowest": 20.99,
       "notes": null,
@@ -1649,7 +1662,8 @@
         "AminoVault": "https://aminovault.com/product/selank/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/selank-10mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/selank/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/selank"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/selank",
+        "PepMarket": "https://www.pepmarket.net/product/selank"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1692,7 +1706,8 @@
         "AminoVault": 57.8,
         "Ascension Peptides": 50,
         "Unyx Peptides": 60,
-        "Optimum ReGen Peptides": 41.4
+        "Optimum ReGen Peptides": 41.4,
+        "PepMarket": 39.99
       },
       "lowest": 20.84,
       "notes": null,
@@ -1729,7 +1744,8 @@
         "AminoVault": "https://aminovault.com/product/semax/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/semax-10mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/semax/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/semax"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/semax",
+        "PepMarket": "https://www.pepmarket.net/product/semax"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -2115,7 +2131,8 @@
         "Certa Peptides": 26.99,
         "PrymaLab": 19.99,
         "Unyx Peptides": 40,
-        "Optimum ReGen Peptides": 24.15
+        "Optimum ReGen Peptides": 24.15,
+        "PepMarket": 39.99
       },
       "lowest": 18.0,
       "notes": null,
@@ -2136,7 +2153,8 @@
         "Certa Peptides": "https://certapeptides.com/shop/bpc-157?variant=261",
         "PrymaLab": "https://prymalab.net/product/bpc-157-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
         "Unyx Peptides": "https://unyxpeptides.com/product/bpc-157/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/bpc-157"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/bpc-157",
+        "PepMarket": "https://www.pepmarket.net/product/bpc-157"
       }
     },
     {
@@ -2176,7 +2194,8 @@
         "Backroad Aminos": 60.0,
         "Sparta Labs": 120,
         "PrymaLab": 38.99,
-        "Blackline Scientific": 65
+        "Blackline Scientific": 65,
+        "PepMarket": 54.99
       },
       "lowest": 33.99,
       "notes": null,
@@ -2192,7 +2211,8 @@
         "Backroad Aminos": "https://backroadaminos.com/product/cjc-with-dac-5mg/",
         "Sparta Labs": "https://spartalabs.net/us/products/cjc-1295-with-dac",
         "PrymaLab": "https://prymalab.net/product/cjc-1295-dac-5mg-peptide/?attribute_package=Vial&attribute_purchase-type=One-time+Purchase",
-        "Blackline Scientific": "https://blacklinescientific.com/products/cjc-with-dac-5mg"
+        "Blackline Scientific": "https://blacklinescientific.com/products/cjc-with-dac-5mg",
+        "PepMarket": "https://www.pepmarket.net/product/cjc-1295-dac"
       }
     },
     {
@@ -2290,7 +2310,8 @@
         "MsAmino": 74.99,
         "AminoVault": 78.2,
         "Ascension Peptides": 70,
-        "Unyx Peptides": 100
+        "Unyx Peptides": 100,
+        "PepMarket": 49.99
       },
       "lowest": 28.41,
       "notes": null,
@@ -2312,7 +2333,8 @@
         "MsAmino": "https://msamino.com/products/cjc-1295-no-dac-10mg",
         "AminoVault": "https://aminovault.com/product/cjc-1295-no-dac/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/cjc-1295-no-dac-10mg/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/cjc-1295-without-dac/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/cjc-1295-without-dac/",
+        "PepMarket": "https://www.pepmarket.net/product/cjc-1295-no-dac"
       }
     },
     {
@@ -2593,7 +2615,8 @@
         "Blackline Scientific": 45,
         "AminoVault": 56.95,
         "BioLongevity Labs": 79.97,
-        "Unyx Peptides": 80
+        "Unyx Peptides": 80,
+        "PepMarket": 59.99
       },
       "lowest": 35.0,
       "notes": null,
@@ -2624,7 +2647,8 @@
         "Blackline Scientific": "https://blacklinescientific.com/products/ipamorelin-10mg",
         "AminoVault": "https://aminovault.com/product/ipamorelin/?attribute_product-grade=US+Sourced",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/ipamorelin-10mg/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/ipamorelin/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/ipamorelin/",
+        "PepMarket": "https://www.pepmarket.net/product/ipamorelin"
       }
     },
     {
@@ -3680,7 +3704,8 @@
         "Elytra Labs": 25.0,
         "AminoVault": 47.0,
         "Ascension Peptides": 50,
-        "Unyx Peptides": 69.99
+        "Unyx Peptides": 69.99,
+        "PepMarket": 29.99
       },
       "lowest": 21.05,
       "notes": null,
@@ -3718,7 +3743,8 @@
         "Elytra Labs": "https://elytralabs.shop/product-ml10",
         "AminoVault": "https://aminovault.com/product/melanotan-2/?attribute_product-grade=US+Sourced",
         "Ascension Peptides": "https://ascensionpeptides.com/product/melanotan-ii-10mg/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/melanotan-2-mt-2/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/melanotan-2-mt-2/",
+        "PepMarket": "https://www.pepmarket.net/product/mt-2"
       }
     },
     {
@@ -3897,7 +3923,8 @@
         "Elytra Labs": 65.0,
         "BioLongevity Labs": 259.97,
         "Ascension Peptides": 110,
-        "Unyx Peptides": 130
+        "Unyx Peptides": 130,
+        "PepMarket": 89.99
       },
       "lowest": 48.41,
       "notes": null,
@@ -3935,7 +3962,8 @@
         "Elytra Labs": "https://elytralabs.shop/product-glow70",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/glow-blend-ghk-cu-bpc-157-tb-500/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/glow-advanced-peptide-blend-for-radiance-recovery/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/glow-ghk-cu-skin-peptide/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/glow-ghk-cu-skin-peptide/",
+        "PepMarket": "https://www.pepmarket.net/product/glow"
       }
     },
     {
@@ -3975,7 +4003,8 @@
         "AminoVault": 101.15,
         "BioLongevity Labs": 274.97,
         "Ascension Peptides": 120,
-        "Optimum ReGen Peptides": 69.0
+        "Optimum ReGen Peptides": 69.0,
+        "PepMarket": 109.99
       },
       "lowest": 62.22,
       "notes": null,
@@ -4012,7 +4041,8 @@
         "AminoVault": "https://aminovault.com/product/klow/?attribute_product-grade=US+Sourced",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/klow-blend-ghk-cu-bpc-157-tb-500-kpv/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/klow-ghk-cu-bpc-157-thymosin-beta4-kpv/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/klow"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/klow",
+        "PepMarket": "https://www.pepmarket.net/product/klow"
       }
     },
     {
@@ -4050,7 +4080,8 @@
         "Elytra Labs": 40.0,
         "AminoVault": 53.5,
         "BioLongevity Labs": 164.97,
-        "Unyx Peptides": 109.99
+        "Unyx Peptides": 109.99,
+        "PepMarket": 54.99
       },
       "lowest": 31.32,
       "notes": null,
@@ -4085,7 +4116,8 @@
         "Elytra Labs": "https://elytralabs.shop/product-bt10",
         "AminoVault": "https://aminovault.com/product/tb-500-thymosin-beta-4-43aa/?attribute_product-grade=US+Sourced",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/tb500-10mg/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/tb-500-thymosin-beta-4/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/tb-500-thymosin-beta-4/",
+        "PepMarket": "https://www.pepmarket.net/product/tb-500"
       }
     },
     {
@@ -4153,7 +4185,8 @@
         "Stealth Research Labs": 59.99,
         "Echo Peptides": 89.99,
         "Helion Research": 59.99,
-        "MsAmino": 89.99
+        "MsAmino": 89.99,
+        "PepMarket": 79.99
       },
       "lowest": 58.0,
       "notes": null,
@@ -4166,7 +4199,8 @@
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/wolverine-blend/?attribute_pa_size=10mg",
         "Echo Peptides": "https://echopeptides.co/product/wolverine-10mg",
         "Helion Research": "https://helionresearchusa.com/product.html?sku=bb10",
-        "MsAmino": "https://msamino.com/products/bpc-157-tb-500-blend-wolverine"
+        "MsAmino": "https://msamino.com/products/bpc-157-tb-500-blend-wolverine",
+        "PepMarket": "https://www.pepmarket.net/product/wolverine"
       }
     },
     {
@@ -4422,7 +4456,8 @@
         "Blackline Scientific": 70,
         "AminoVault": 84.15,
         "Unyx Peptides": 135,
-        "Optimum ReGen Peptides": 55.2
+        "Optimum ReGen Peptides": 55.2,
+        "PepMarket": 64.99
       },
       "lowest": 50.0,
       "notes": null,
@@ -4460,7 +4495,8 @@
         "Blackline Scientific": "https://blacklinescientific.com/products/tesamorelin-10mg",
         "AminoVault": "https://aminovault.com/product/tesamorelin/?attribute_product-grade=US+Sourced",
         "Unyx Peptides": "https://unyxpeptides.com/product/tesamorelin/",
-        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/tesamorelin"
+        "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/tesamorelin",
+        "PepMarket": "https://www.pepmarket.net/product/tesamorelin"
       }
     },
     {
@@ -5020,7 +5056,8 @@
         "Blackline Scientific": 40,
         "BioLongevity Labs": 55.97,
         "Ascension Peptides": 50,
-        "Unyx Peptides": 79.99
+        "Unyx Peptides": 79.99,
+        "PepMarket": 29.99
       },
       "lowest": 23.99,
       "notes": null,
@@ -5044,7 +5081,8 @@
         "Blackline Scientific": "https://blacklinescientific.com/products/mt-1-10mg",
         "BioLongevity Labs": "https://biolongevitylabs.com/product/melanotan-1-10mg/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/melanotan-i-10mg/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/melanotan-1-mt-1/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/melanotan-1-mt-1/",
+        "PepMarket": "https://www.pepmarket.net/product/mt-1"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
