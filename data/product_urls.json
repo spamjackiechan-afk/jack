@@ -1627,5 +1627,26 @@
     "Kisspeptin | Vial | 10mg": "https://www.optimumregenpeptides.com/peptide/kisspeptin",
     "PT-141 (Bremelanotide) | Vial | 10mg": "https://www.optimumregenpeptides.com/peptide/pt-141-10mg",
     "Tesamorelin | Vial | 10mg": "https://www.optimumregenpeptides.com/peptide/tesamorelin"
+  },
+  "PepMarket": {
+    "BPC-157 | Vial | 5mg": "https://www.pepmarket.net/product/bpc-157",
+    "CJC-1295 with DAC | Vial | 5mg": "https://www.pepmarket.net/product/cjc-1295-dac",
+    "CJC-1295 | Vial | 10mg": "https://www.pepmarket.net/product/cjc-1295-no-dac",
+    "DSIP | Vial | 5mg": "https://www.pepmarket.net/product/dsip",
+    "GHK-Cu (Copper Peptide) | Vial | 50mg": "https://www.pepmarket.net/product/ghk-cu",
+    "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 70mg": "https://www.pepmarket.net/product/glow",
+    "IGF-1 LR3 | Vial | 1mg": "https://www.pepmarket.net/product/igf-1-lr3",
+    "Ipamorelin | Vial | 10mg": "https://www.pepmarket.net/product/ipamorelin",
+    "KLOW (BPC-157/TB-500/GHK-Cu/KPV) | Vial | 80mg": "https://www.pepmarket.net/product/klow",
+    "KPV | Vial | 10mg": "https://www.pepmarket.net/product/kpv",
+    "MOTS-C | Vial | 10mg": "https://www.pepmarket.net/product/mots-c",
+    "Melanotan I | Vial | 10mg": "https://www.pepmarket.net/product/mt-1",
+    "Melanotan II | Vial | 10mg": "https://www.pepmarket.net/product/mt-2",
+    "NAD+ | Vial | 500mg": "https://www.pepmarket.net/product/nad-plus",
+    "Selank | Vial | 10mg": "https://www.pepmarket.net/product/selank",
+    "Semax | Vial | 10mg": "https://www.pepmarket.net/product/semax",
+    "TB-500 | Vial | 10mg": "https://www.pepmarket.net/product/tb-500",
+    "Tesamorelin | Vial | 10mg": "https://www.pepmarket.net/product/tesamorelin",
+    "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": "https://www.pepmarket.net/product/wolverine"
   }
 }

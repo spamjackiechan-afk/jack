@@ -911,5 +911,27 @@
     "shipping_info": "U.S. shipping only. Every order ships 2-Day Priority Air with tracking; shipping cost is calculated at checkout (per the site's FAQ and shipping policy).",
     "shipping_payment_researched": "2026-10-31",
     "code_discount_pct": null
+  },
+  "PepMarket": {
+    "status": "approved",
+    "site_url": "https://www.pepmarket.net",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://www.pepmarket.net/r/HTTPSDISCOUNTSPE",
+    "affiliate_path_suffix": null,
+    "affiliate_link_style": "base",
+    "promo_code": "HTTPSDISCOUNTSPE",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "American Express",
+      "Discover",
+      "Zelle",
+      "Cryptocurrency"
+    ],
+    "payment_note": "Prices in USD, before shipping and tax (per the Terms). The site shows up to 7.5% off for paying by Zelle, Cash App or cryptocurrency, which is not included in the listed prices. Our code gives 15% off.",
+    "shipping_info": "U.S. shipping only. Ships lab-sealed by standard discreet courier with tracking; most orders arrive in 2-4 business days (per the FAQ). Shipping cost is added at checkout.",
+    "shipping_payment_researched": "2026-11-05",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 15
   }
 }

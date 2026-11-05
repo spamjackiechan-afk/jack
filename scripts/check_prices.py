@@ -356,6 +356,12 @@ VENDORS = {
                                   # /peptide/<slug> pages are allowed. Pages list several sizes; only the default
                                   # (first JSON-LD offer) size is listed, since sizes can't be pinned by URL.
     },
+    "PepMarket": {
+        "robots_checked_by": "Claude for Jackson, 2026-11-05",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" is Allow: / and disallows only /admin, /api, /cart and
+                                  # /checkout; /product/<slug> pages are allowed. (Named AI crawlers are blocked; this checker
+                                  # sends a browser user agent, not one of those.) Each product page is a single size.
+    },
 }
 
 HEADERS = {
