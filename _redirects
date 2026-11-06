@@ -10,3 +10,7 @@
 # Testing page retired; links to Peptide Health Digest (external, with permission).
 /testing https://peptidehealthdigest.vercel.app/ 301
 /testing.html https://peptidehealthdigest.vercel.app/ 301
+
+# Guides & Studies page removed (Nov 2026); its summaries came from Peptide Health Digest.
+/research https://peptidehealthdigest.vercel.app/ 301
+/research.html https://peptidehealthdigest.vercel.app/ 301
