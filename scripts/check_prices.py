@@ -362,6 +362,13 @@ VENDORS = {
                                   # /checkout; /product/<slug> pages are allowed. (Named AI crawlers are blocked; this checker
                                   # sends a browser user agent, not one of those.) Each product page is a single size.
     },
+    # Voltera Sciences is intentionally absent. robots.txt (checked 2026-11-06)
+    # allows /product/ — it disallows only WooCommerce log/upload dirs, add-to-cart
+    # query URLs and /wp-admin/. A signed-out request still 302s to ?catalog=locked
+    # (sign-in plus a 21+ / research-use attestation). Do not tick that gate from
+    # this checker, and do not record it as a working fetcher. Prices stay as
+    # committed in the catalog until there is a public feed. Same manual skip as
+    # other gated vendors that are not registered here.
 }
 
 HEADERS = {
