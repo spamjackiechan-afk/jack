@@ -77,5 +77,17 @@
       "verified": "2026-11-05"
     }
   ],
+  "Voltera Sciences": [
+    {
+      "code": null,
+      "combines_with_our_code": true,
+      "end": null,
+      "exclusions": "Free products are chosen at checkout from a curated selection; reward tiers use the net total after sale pricing and partner codes",
+      "gives": "Promotion: 30% off sitewide (automatic) + your 10% partner code (ours: DISCOUNTS) + extra 5% with Zelle, Venmo or Cash App, up to 45% off; $150+ free ground shipping + free 3ml bac water, $250+ free 2-day shipping + bac water + 1 free product, $350+ same + 2 free products. No official end date yet (planned Monday, may be extended)",
+      "source": "https://volterasciences.com",
+      "start": null,
+      "verified": "2026-11-06"
+    }
+  ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
 }
