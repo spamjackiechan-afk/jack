@@ -30,7 +30,8 @@ Fails on:
   * testing.html reappearing, or the Research nav link not pointing to
     https://peptidehealthdigest.vercel.app/ with target=_blank rel=noopener
   * the embedded `const DATA` / `const VENDOR_CONFIG` lines in index.html or
-    suppliers.html not exactly matching data/catalog.json / vendor_config.json
+    suppliers.html not exactly matching data/catalog.json / vendor_config.json,
+    or the sitemap.xml compound URLs not matching the compounds in DATA
     (scripts/sync_vendor_config.py --check)
   * a non-USD vendor's price (vendor_config `currency`, USD when absent)
     shown without its currency prefix (CA$ for CAD, else "CODE 0.00"), a USD

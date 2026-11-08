@@ -6,6 +6,8 @@ fails, and the fallback script relies on them). They are generated from:
 
   vendor_config.json   ->  `const VENDOR_CONFIG = ...;`  (compact, \\uXXXX escapes)
   data/catalog.json    ->  `const DATA = ...;`            (compact, UTF-8 as-is)
+  data/catalog.json    ->  sitemap.xml compound URLs   (one /peptides/<slug> per
+                            compound in `const DATA`, between the marker comments)
   data/vendor_sales.json is NOT embedded: vendor sales are members-only and
   are served by functions/api/member-sales.js. --check fails if a
   `const VENDOR_SALES = ...;` line reappears in a page.
@@ -37,11 +39,15 @@ Syncing:
      lines in index.html and suppliers.html (DATA without hidden vendors, see
      above). Nothing else in the pages changes (no VENDOR_SALES embed).
      data/catalog.json and data/vendor_sales.json themselves are never rewritten.
+  3. rewrites ONLY the compound block of sitemap.xml (between COMPOUNDS_START
+     and COMPOUNDS_END): one /peptides/<slug> URL per compound in `const DATA`,
+     slugged like index.html compoundSlug(), sorted.
 Running it twice changes nothing the second time. scripts/smoke_test.py runs
 the --check and fails the site-smoke check if the embeds don't match.
 """
 import json
 import os
+import re
 import sys
 from collections import OrderedDict
 
@@ -53,6 +59,10 @@ PAGES = ["index.html", "suppliers.html"]
 PREFIX = "const VENDOR_CONFIG = "
 DATA_PREFIX = "const DATA = "
 SALES_PREFIX = "const VENDOR_SALES = "
+SITEMAP = "sitemap.xml"
+SITE = "https://discountspeptides.com"
+COMPOUNDS_START = "  <!-- Compound pages: written by scripts/sync_vendor_config.py from const DATA -->"
+COMPOUNDS_END = "  <!-- /Compound pages -->"
 
 # Fields read by index.html / suppliers.html (and the fallback script).
 PUBLIC_FIELDS = [
@@ -144,6 +154,24 @@ def visible_catalog(catalog, hidden, non_usd=None):
     return out
 
 
+def compound_slug(name):
+    """Same as compoundSlug() in index.html, so every URL here opens a page."""
+    return re.sub(r"^-+|-+$", "", re.sub(r"[^a-z0-9]+", "-", str(name).lower()))
+
+
+def expected_sitemap(root, data):
+    """sitemap.xml with its compound block rebuilt from the embedded DATA."""
+    with open(os.path.join(root, SITEMAP), encoding="utf-8") as f:
+        text = f.read()
+    start, end = text.find(COMPOUNDS_START), text.find(COMPOUNDS_END)
+    if start < 0 or end < start:
+        raise ValueError(f"{SITEMAP}: compound marker comments missing")
+    slugs = sorted({compound_slug(r["peptide"]) for r in data.get("included", []) if r.get("peptide")} - {""})
+    urls = "".join(f"  <url>\n    <loc>{SITE}/peptides/{s}</loc>\n    <changefreq>daily</changefreq>\n"
+                   f"    <priority>0.6</priority>\n  </url>\n" for s in slugs)
+    return text[:start] + COMPOUNDS_START + "\n" + urls + text[end:]
+
+
 def load_json(root, rel):
     with open(os.path.join(root, rel), encoding="utf-8") as f:
         return json.load(f, object_pairs_hook=OrderedDict)
@@ -152,7 +180,7 @@ def load_json(root, rel):
 def expected_lines(root):
     """The public vendor_config.json text and the embed lines each page should carry.
 
-    Returns (config_text, lines_by_page, dropped) where lines_by_page maps
+    Returns (config_text, lines_by_page, dropped, sitemap_text) where lines_by_page maps
     page -> {prefix: full line}. suppliers.html additionally carries
     const VENDOR_SALES from data/vendor_sales.json (the vendor's own sale
     promos, shown separately from our affiliate code); keys starting with
@@ -171,7 +199,7 @@ def expected_lines(root):
     # `const VENDOR_SALES = ` line comes back. `sales` is still loaded above so
     # a malformed data/vendor_sales.json is caught here.
     del sales
-    return config_text, lines_by_page, dropped
+    return config_text, lines_by_page, dropped, expected_sitemap(root, data)
 
 
 def read_page(root, page):
@@ -190,9 +218,12 @@ def check(root=ROOT):
     """Return a list of problems (empty = everything in sync). Changes nothing."""
     problems = []
     try:
-        config_text, want, dropped = expected_lines(root)
+        config_text, want, dropped, sitemap_text = expected_lines(root)
     except (OSError, ValueError) as e:
         return [f"embeds: cannot read the JSON sources: {e}"]
+    with open(os.path.join(root, SITEMAP), encoding="utf-8") as f:
+        if f.read() != sitemap_text:
+            problems.append(f"{SITEMAP}: compound URLs don't match {CATALOG}; run python scripts/sync_vendor_config.py")
     with open(os.path.join(root, CONFIG), encoding="utf-8") as f:
         if f.read() != config_text:
             extra = f" (non-public fields: {', '.join(dropped)})" if dropped else ""
@@ -214,7 +245,7 @@ def check(root=ROOT):
 
 
 def sync(root=ROOT):
-    config_text, want, dropped = expected_lines(root)
+    config_text, want, dropped, sitemap_text = expected_lines(root)
     if dropped:
         print("dropped from the public config (keep these in the private notes file):",
               ", ".join(dropped))
@@ -237,6 +268,14 @@ def sync(root=ROOT):
                 f.write("\n".join(lines))
         print(f"{'updated' if changed else 'unchanged'}: {page}" + (f" ({', '.join(changed)} line)" if changed else ""))
 
+    path = os.path.join(root, SITEMAP)
+    with open(path, encoding="utf-8") as f:
+        changed = f.read() != sitemap_text
+    if changed:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(sitemap_text)
+    print(("updated" if changed else "unchanged") + f": {SITEMAP} (compound URLs)")
+
 
 def main():
     if "--check" in sys.argv[1:]:
@@ -244,7 +283,7 @@ def main():
         if problems:
             print("OUT OF SYNC:\n  " + "\n  ".join(problems))
             sys.exit(1)
-        print("OK: embeds match vendor_config.json and data/catalog.json; no vendor-sales embed")
+        print("OK: embeds and sitemap compound URLs match vendor_config.json and data/catalog.json; no vendor-sales embed")
         return
     try:
         sync()
