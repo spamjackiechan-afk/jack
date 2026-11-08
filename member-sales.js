@@ -99,7 +99,7 @@
           ? 'These are the vendors\u2019 own promos running now, plus any sale prices our daily check saw (marked \u201c% off\u201d on listings).'
           : 'No vendor-run promos are live right now. Sale prices our daily check sees are marked \u201c% off\u201d on listings.') + '</div>' +
         (items ? '<ul>' + items + '</ul>' : '') +
-        '<div class="dpm-note">A vendor\u2019s sale code usually replaces our affiliate code at checkout (one code per order unless the vendor says otherwise). Details on <a href="/suppliers" style="color:var(--lowest)">Suppliers</a>.</div>' +
+        '<div class="dpm-note">Most vendors take one code per order, so a sale code usually replaces ours. Details on <a href="/suppliers" style="color:var(--lowest)">Suppliers</a>.</div>' +
       '</div>';
   }
 

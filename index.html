@@ -1049,7 +1049,7 @@
         <button type="button" id="modalBtn" onclick="submitSignup('modal')">Notify me</button>
       </div>
       <div class="signup-consent">
-        Occasional emails about special deals, discounts, price changes and vendor offers. Email only — we'll never ask for your phone number or postal address.
+        Occasional emails about deals, price drops and vendor offers. Email only — no phone number or postal address.
       </div>
       <div class="signup-msg" id="modalMsg"></div>
       <button type="button" class="modal-later" onclick="dismissModal()">No thanks, I'll browse first</button>
@@ -1129,10 +1129,9 @@
   </div>
 
   <footer id="disclosures">
-    <p><strong>About the codes —</strong> promo codes shown on this page (like <strong>DISCOUNT</strong>) give you a discount at checkout, and also let the vendor know the order came through this site — which is how this site earns a commission on it, at no extra cost to you. Using a code isn't required to buy, but it's appreciated if this page helped you compare.</p>
-    <p><strong>Research use only —</strong> all products referenced on this page are supplied by third-party vendors for laboratory and research use only. They are not for human or animal consumption, and nothing here is a recommendation, dosing protocol, or endorsement of use.</p>
-    <p><strong>Affiliate disclosure —</strong> this page will contain affiliate links. When a listed vendor's product page is visited through a link here, this site may earn a commission on a resulting sale, at no added cost to the buyer. Vendor inclusion does not imply endorsement of a product's safety, legality, or efficacy.</p>
-    <p><strong>Not medical advice —</strong> pricing and evidence notes are for research reference and comparison only. Peptides listed here are, in most cases, not FDA-approved, and evidence quality varies widely by compound — see the note on each listing before assuming a claim is well-supported.</p>
+    <p><strong>Codes and affiliate links —</strong> codes here (like <strong>DISCOUNT</strong>) give you a discount and tell the vendor you came from this site. Codes and vendor links may earn this site a commission, at no extra cost to you. Codes are optional. Listing a vendor doesn't endorse a product's safety, legality or efficacy.</p>
+    <p><strong>Research use only —</strong> products are sold by third-party vendors for laboratory research only. Not for human or animal consumption. Nothing here is a recommendation, dosing protocol or endorsement of use.</p>
+    <p><strong>Not medical advice —</strong> prices and notes are for research reference only. Most peptides listed are not FDA-approved, and evidence varies by compound.</p>
     <p>Vendor prices are checked against original spreadsheet data, cross-referenced with each vendor's live site, and — for vendors with an automated daily price check — confirmed against a live, scheduled read of their actual product pages (see the "● LIVE" tag on those listings).</p>
     <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a></p>
   </footer>
@@ -1578,7 +1577,7 @@ function dosePanelHtml(item, panelId, isActive){
       ${item.notes ? `<div class="price-caveat">⚠ ${item.notes}</div>` : ''}
       <div class="price-grid">${visibleRows}</div>
       ${hiddenSection}
-      <div class="cta">View lowest-priced listing → vendor product page (affiliate)</div>
+      <div class="cta">Lowest price → vendor site (affiliate)</div>
     </div>`;
 }
 
@@ -2554,7 +2553,7 @@ function openModal(mode = 'intro'){
     if (eyebrow) eyebrow.textContent = 'One step \u00b7 No password';
   } else {
     title.textContent = "Don't overpay because you weren't watching.";
-    blurb.textContent = 'Prices here move week to week. Save the compounds you care about and we\u2019ll tell you when one gets cheaper.';
+    blurb.textContent = 'Prices here move week to week.';
     if (later) later.textContent = "No thanks, I'll browse first";
     if (eyebrow) eyebrow.textContent = 'Free \u00b7 No password';
   }
