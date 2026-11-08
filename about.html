@@ -36,10 +36,12 @@
   .sect-sub{font-size:14.5px; color:var(--ink-soft); margin:0 0 22px; max-width:680px;}
 
   /* 1) Stats strip */
-  .stats{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:8px;}
-  .stat{background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:26px 20px; text-align:center;}
-  .stat-num{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(36px, 6vw, 52px); line-height:1; color:var(--lowest);}
-  .stat-label{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-soft); margin-top:10px;}
+  .stats{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); margin-top:8px;}
+  .stat{padding:20px 16px 22px 0; border-right:1px solid var(--rule);}
+  .stat + .stat{padding-left:24px;}
+  .stat:last-child{border-right:0;}
+  .stat-num{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(30px, 5vw, 44px); line-height:1.1; color:var(--lowest);}
+  .stat-label{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--ink-soft); margin-top:6px;}
   .stats-note{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-soft); margin:10px 0 0; text-align:right;}
 
   /* 2) Numbered how-it-works cards */
@@ -50,11 +52,19 @@
   .step p{font-size:14px; line-height:1.55; color:var(--ink-soft); margin:0;}
 
   /* 3) Values 2x2 */
-  .values{display:grid; grid-template-columns:repeat(2, 1fr); gap:12px;}
-  .value{background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:20px 22px;}
-  .value h3{font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--lowest); margin:0 0 8px; font-weight:500;}
-  .value p{font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0;}
+  .method{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:20px; align-items:start;}
+  .values{border:1px solid var(--rule); background:var(--paper-raised); border-radius:16px; padding:6px 22px; counter-reset:step;}
+  .value{display:grid; grid-template-columns:40px minmax(0,1fr); gap:0 12px; padding:18px 0; border-top:1px solid var(--rule); counter-increment:step;}
+  .value:first-child{border-top:0;}
+  .value::before{content:counter(step, decimal-leading-zero); font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--lowest); padding-top:4px;}
+  .value h3{font-family:'Fraunces', serif; font-size:20px; color:var(--ink); margin:0 0 6px; font-weight:500;}
+  .value p{grid-column:2; font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0;}
   .value p a{color:var(--ink);}
+  .no-claim{border:1px solid rgba(232,184,75,.6); background:linear-gradient(135deg, rgba(232,184,75,.10), transparent); border-radius:16px; padding:20px 22px;}
+  .no-claim .label{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--success);}
+  .no-claim h3{font-family:'Fraunces', serif; font-weight:500; font-size:22px; margin:8px 0 8px;}
+  .no-claim p{font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0 0 12px;}
+  .no-claim ul{margin:0; padding-left:18px; font-size:14px; color:var(--ink-soft); line-height:1.8;}
 
   /* 4) Contact */
   .contact-card{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:18px 20px;}
@@ -69,8 +79,10 @@
   .dp-foot-links{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); margin-top:14px;}
 
   @media (max-width:720px){
-    .stats, .steps{grid-template-columns:1fr;}
-    .values{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+    .method{grid-template-columns:1fr;}
+    .stat, .stat + .stat{padding:16px 10px 16px 0;}
+    .stat + .stat{padding-left:12px;}
     .stats-note{text-align:left;}
   }
   @media (max-width:600px){ .wrap{padding:40px 18px 64px;} }
@@ -122,6 +134,7 @@
   <!-- 3) Values -->
   <h2>Our Values</h2>
   <p class="sect-sub">What we self-support to and what we can back up</p>
+  <div class="method" id="method">
   <section class="values">
     <div class="value">
       <h3>How we look at testing</h3>
@@ -140,6 +153,18 @@
       <p>We read every message and fix errors fast. Wrong price, missing supplier, broken link — tell us. at discountspeptides@gmail.com</p>
     </div>
   </section>
+  <aside class="no-claim">
+    <span class="label">What we do not claim</span>
+    <h3>Comparison is not endorsement.</h3>
+    <p>A listing, a code, a live tag or a lower price does not mean a product is safe, legal, pure or effective.</p>
+    <ul>
+      <li>No dosing information</li>
+      <li>No medical advice</li>
+      <li>No lab testing of our own</li>
+      <li>No paid placements</li>
+    </ul>
+  </aside>
+  </div>
 
   <!-- 4) Contact -->
   <h2>Questions, corrections, suggestions?</h2>
