@@ -152,6 +152,31 @@
     text-transform:uppercase;
   }
   .chip:hover{background:var(--lowest-bg);}
+
+  /* ---------- Search + filter workbench (redesign) ---------- */
+  .controls:has(.wb-top){display:block; border:1px solid var(--rule); background:var(--paper-raised); border-radius:16px; padding:18px; margin:8px 0 24px;}
+  .wb-top{display:flex; gap:12px; align-items:stretch;}
+  .wb-search{flex:1; min-width:0; display:flex; align-items:center; gap:10px; border:1.5px solid var(--sage); border-radius:10px; padding:0 14px; background:var(--paper);}
+  .wb-search:focus-within{border-color:var(--lowest);}
+  .wb-search span{color:var(--lowest); font-size:18px;}
+  .wb-search input[type="search"]{flex:1; min-width:0; border:0; background:transparent; padding:12px 0;}
+  .wb-filters-btn, .wb-select{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.03em; text-transform:uppercase; color:var(--ink); background:var(--paper); border:1.5px solid var(--rule); border-radius:9px; padding:9px 12px; cursor:pointer; max-width:100%; min-width:0;}
+  .wb-filters-btn{display:inline-flex; align-items:center; gap:8px; white-space:nowrap;}
+  .wb-filters-btn:hover, .wb-filters-btn[aria-expanded="true"]{border-color:var(--lowest); color:var(--lowest);}
+  .wb-count{min-width:20px; padding:1px 6px; border:1px solid var(--lowest); border-radius:999px; text-align:center; font-size:11px; color:var(--lowest);}
+  .wb-row{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:12px;}
+  .wb-formats{display:flex; gap:6px; flex-wrap:wrap;}
+  .wb-formats .chip{border-radius:8px; padding:8px 12px; font-size:11.5px;}
+  .wb-active{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--lowest); margin-left:4px;}
+  .wb-active button{background:none; border:0; padding:0; color:inherit; font:inherit; text-decoration:underline; cursor:pointer;}
+  .wb-sort{margin-left:auto;}
+  .wb-panel{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; padding-top:12px; border-top:1px dashed var(--rule);}
+  .wb-panel[hidden], .wb-active[hidden], .wb-count[hidden]{display:none;}
+  @media (max-width:640px){
+    .controls:has(.wb-top){padding:14px; border-radius:14px;}
+    .wb-sort{margin-left:0;}
+    .wb-panel .wb-select{flex:1 1 100%;}
+  }
   .chip.active{
     border-color:var(--lowest);
     background:var(--lowest);
@@ -1022,32 +1047,40 @@
 
 
   <div class="controls">
-    <input type="search" id="search" placeholder="Search a peptide or vendor — e.g. BPC-157, NAD+, Alpha Peptides…">
-    <button class="chip active" data-filter="All">All formats</button>
-    <button class="chip" data-filter="Nasal">Nasal</button>
-    <button class="chip" data-filter="Vial">Vial</button>
-    <button class="chip" data-filter="Capsules">Capsules</button>
-    <button class="chip" data-filter="Oral">Oral</button>
-    <button class="chip" data-filter="Water">Water</button>
-    <button class="chip" data-filter="__sale" id="saleChip" style="display:none;">% On sale <span class="sale-count" id="saleCount"></span></button>
-    <button class="chip" data-filter="__saved" id="savedChip">★ Saved <span class="fav-count" id="favCount"></span></button>
-    <select id="vendorFilter" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
-      <option value="All">All vendors</option>
-    </select>
-    <select id="categoryFilter" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
-      <option value="All">All categories</option>
-    </select>
-    <select id="sortBy" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
-      <option value="name">Sort: A–Z</option>
-      <option value="price-low">Sort: Price low–high</option>
-      <option value="price-high">Sort: Price high–low</option>
-    </select>
-
-    <select id="vendorOrderMaster" title="How vendors are ordered inside each listing" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:9px 10px; background:var(--paper-raised); border:1.5px solid var(--rule); color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.03em;">
-      <option value="cheapest">Vendors: Cheapest</option>
-      <option value="popular">Vendors: Popular</option>
-    </select>
-
+    <div class="wb-top">
+      <label class="wb-search"><span aria-hidden="true">&#8981;</span><input type="search" id="search" placeholder="Search a peptide or vendor — e.g. BPC-157, NAD+, Alpha Peptides…" aria-label="Search peptides or vendors"></label>
+      <button type="button" class="wb-filters-btn" id="filtersBtn" aria-expanded="false" aria-controls="filterPanel" onclick="filterPanelTouched = true; toggleFilterPanel()">Filters <span class="wb-count" id="filterCount" hidden></span></button>
+    </div>
+    <div class="wb-row">
+      <div class="wb-formats" role="group" aria-label="Format">
+        <button class="chip active" data-filter="All">All formats</button>
+        <button class="chip" data-filter="Nasal">Nasal</button>
+        <button class="chip" data-filter="Vial">Vial</button>
+        <button class="chip" data-filter="Capsules">Capsules</button>
+        <button class="chip" data-filter="Oral">Oral</button>
+        <button class="chip" data-filter="Water">Water</button>
+        <button class="chip" data-filter="__sale" id="saleChip" style="display:none;">% On sale <span class="sale-count" id="saleCount"></span></button>
+        <button class="chip" data-filter="__saved" id="savedChip">★ Saved <span class="fav-count" id="favCount"></span></button>
+      </div>
+      <span class="wb-active" id="activeFilters" hidden></span>
+      <select id="sortBy" class="wb-select wb-sort" aria-label="Sort listings">
+        <option value="name">Sort: A–Z</option>
+        <option value="price-low">Sort: Price low–high</option>
+        <option value="price-high">Sort: Price high–low</option>
+      </select>
+    </div>
+    <div class="wb-panel" id="filterPanel" hidden>
+      <select id="vendorFilter" class="wb-select" aria-label="Vendor">
+        <option value="All">All vendors</option>
+      </select>
+      <select id="categoryFilter" class="wb-select" aria-label="Category">
+        <option value="All">All categories</option>
+      </select>
+      <select id="vendorOrderMaster" class="wb-select" title="How vendors are ordered inside each listing" aria-label="How vendors are ordered inside each listing">
+        <option value="cheapest">Vendors: Cheapest</option>
+        <option value="popular">Vendors: Popular</option>
+      </select>
+    </div>
   </div>
   <div class="index" id="index"></div>
 
@@ -1366,6 +1399,7 @@ function matchesSearch(item, q){
 }
 
 function render(){
+  updateFilterSummary();
   const q = searchEl.value.trim().toLowerCase();
   const favSet = new Set(getFavourites());
   let items = DATA.included.filter(i => {
@@ -1788,6 +1822,41 @@ Object.keys(CATEGORIES).forEach(cat => {
   categorySelect.appendChild(opt);
 });
 categorySelect.addEventListener('change', () => { activeCategory = categorySelect.value; render(); });
+
+// ---------- Filter panel ----------
+// Vendor, category and vendor-order selects live behind the Filters button;
+// the summary line says what is narrowing the list and offers a reset.
+let filterPanelTouched = false; // once someone opens/closes it, stop auto-opening
+function toggleFilterPanel(force){
+  const panel = document.getElementById('filterPanel');
+  const btn = document.getElementById('filtersBtn');
+  const open = typeof force === 'boolean' ? force : panel.hidden;
+  panel.hidden = !open;
+  btn.setAttribute('aria-expanded', String(open));
+}
+
+function updateFilterSummary(){
+  const panelCount = (activeVendor !== 'All') + (activeCategory !== 'All');
+  const total = panelCount + (activeFilter !== 'All') + Boolean(searchEl.value.trim());
+  const badge = document.getElementById('filterCount');
+  badge.textContent = panelCount;
+  badge.hidden = !panelCount;
+  if (panelCount && !filterPanelTouched) toggleFilterPanel(true);
+  const line = document.getElementById('activeFilters');
+  line.hidden = !total;
+  line.innerHTML = total ? `${total} filter${total === 1 ? '' : 's'} active &middot; <button type="button" onclick="clearAllFilters()">Clear all</button>` : '';
+}
+
+function clearAllFilters(){
+  searchEl.value = '';
+  activeFilter = 'All';
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === 'All'));
+  activeVendor = 'All';
+  vendorSelect.value = 'All';
+  activeCategory = 'All';
+  categorySelect.value = 'All';
+  render();
+}
 
 // Deep-links: /?q=… fills search; /?category=<exact CATEGORIES key> sets the filter; /?vendor=<name> sets the vendor filter.
 (function applyCatalogUrlParams(){
