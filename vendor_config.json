@@ -952,5 +952,19 @@
     "shipping_payment_researched": "2026-11-06",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
     "code_discount_pct": 10
+  },
+  "Peptixa Labs": {
+    "status": "approved",
+    "site_url": "https://peptixalabs.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://peptixalabs.com/?ic=DISCOUNTP",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTP",
+    "payment_methods": null,
+    "payment_note": "Prices in USD. Listed prices are the selling prices shown on 2026-11-08. Each of those pages also shows a higher struck-through price, which is not stored. Code DISCOUNTP is 15% off. Whether that code stacks with the displayed sale was not confirmed. The terms say payment goes through a secure third-party processor and do not name the brands. The site asks for a 21+ researcher attestation.",
+    "shipping_info": "Ships to all 50 US states. Flat $15.99 for 2-day delivery. Orders placed before 12:00 PM Eastern on a business day ship the same day; later orders, weekends, and federal holidays ship the next business day.",
+    "shipping_payment_researched": "2026-11-08",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 15
   }
 }

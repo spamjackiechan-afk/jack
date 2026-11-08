@@ -1148,7 +1148,8 @@
         "Unyx Peptides": 89.99,
         "Optimum ReGen Peptides": 41.4,
         "PepMarket": 54.99,
-        "Voltera Sciences": 34.99
+        "Voltera Sciences": 34.99,
+        "Peptixa Labs": 46.75
       },
       "lowest": 25.25,
       "notes": null,
@@ -1191,7 +1192,8 @@
         "Unyx Peptides": "https://unyxpeptides.com/product/kpv/",
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/kpv",
         "PepMarket": "https://www.pepmarket.net/product/kpv",
-        "Voltera Sciences": "https://volterasciences.com/product/kpv-10mg/"
+        "Voltera Sciences": "https://volterasciences.com/product/kpv-10mg/",
+        "Peptixa Labs": "https://peptixalabs.com/product/kpv-10mg/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1402,7 +1404,8 @@
         "Elytra Labs": 65.0,
         "AminoVault": 192.0,
         "Unyx Peptides": 189.99,
-        "Voltera Sciences": 73.49
+        "Voltera Sciences": 73.49,
+        "Peptixa Labs": 76.49
       },
       "lowest": 59.26,
       "notes": null,
@@ -1428,7 +1431,8 @@
         "Elytra Labs": "https://elytralabs.shop/product-ms40",
         "AminoVault": "https://aminovault.com/product/mots-c/?attribute_weight=40+MG+US+Sourced",
         "Unyx Peptides": "https://unyxpeptides.com/product/mots-c/",
-        "Voltera Sciences": "https://volterasciences.com/product/mots-c/"
+        "Voltera Sciences": "https://volterasciences.com/product/mots-c/",
+        "Peptixa Labs": "https://peptixalabs.com/product/mots-c-40mg/"
       }
     },
     {
@@ -3691,7 +3695,8 @@
         "Apex Peptides": 129.0,
         "Peptide Titans": 109.99,
         "Stealth Research Labs": 109.99,
-        "Unyx Peptides": 150
+        "Unyx Peptides": 150,
+        "Peptixa Labs": 127.49
       },
       "lowest": 70.79,
       "notes": "Midwest Peptide: vendor page lists 80mg in details and 90mg in title; size not yet confirmed.",
@@ -3704,7 +3709,8 @@
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/klow-ghk-cu-50-mg-bpc-157-10-mg-tb-4-10-mg-kpv-10-mg/?attribute_size=80mg",
         "Peptide Titans": "https://peptidetitans.com/product/klow/?attribute_mg=80+mg",
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/klow-blend/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/klow/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/klow/",
+        "Peptixa Labs": "https://peptixalabs.com/product/klow-peptide-blend/"
       }
     },
     {
@@ -3890,7 +3896,8 @@
         "Elytra Labs": 50.0,
         "AminoVault": 105.4,
         "Ascension Peptides": 90,
-        "Unyx Peptides": 139.99
+        "Unyx Peptides": 139.99,
+        "Peptixa Labs": 127.49
       },
       "lowest": 50.0,
       "notes": null,
@@ -3913,7 +3920,8 @@
         "Elytra Labs": "https://elytralabs.shop/product-wolv",
         "AminoVault": "https://aminovault.com/product/wolverine-blend/?attribute_product-grade=US+Sourced",
         "Ascension Peptides": "https://ascensionpeptides.com/product/wolverine-stack/",
-        "Unyx Peptides": "https://unyxpeptides.com/product/bpc-157-tb-500-blend/"
+        "Unyx Peptides": "https://unyxpeptides.com/product/bpc-157-tb-500-blend/",
+        "Peptixa Labs": "https://peptixalabs.com/product/wolverine-stack/"
       }
     },
     {
@@ -4514,7 +4522,8 @@
         "Unyx Peptides": 135,
         "Optimum ReGen Peptides": 55.2,
         "PepMarket": 64.99,
-        "Voltera Sciences": 48.99
+        "Voltera Sciences": 48.99,
+        "Peptixa Labs": 106.24
       },
       "lowest": 48.99,
       "notes": null,
@@ -4554,7 +4563,8 @@
         "Unyx Peptides": "https://unyxpeptides.com/product/tesamorelin/",
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/tesamorelin",
         "PepMarket": "https://www.pepmarket.net/product/tesamorelin",
-        "Voltera Sciences": "https://volterasciences.com/product/tesamorelin-10mg/"
+        "Voltera Sciences": "https://volterasciences.com/product/tesamorelin-10mg/",
+        "Peptixa Labs": "https://peptixalabs.com/product/tesamorelin-10mg/"
       }
     },
     {
@@ -4756,7 +4766,8 @@
         "Echo Peptides": 99.99,
         "Axovera Labs": 65,
         "Aura Research": 79,
-        "Helion Research": 63.99
+        "Helion Research": 63.99,
+        "Peptixa Labs": 72.24
       },
       "lowest": 43.0,
       "notes": null,
@@ -4788,7 +4799,8 @@
         "Echo Peptides": "https://echopeptides.co/product/glp3-rt-10mg",
         "Axovera Labs": "https://axoveralabs.com/product/glp3rt/",
         "Aura Research": "https://tryauraresearch.com/product/glp-3rt/?attribute_pa_amount=10mg",
-        "Helion Research": "https://helionresearchusa.com/product.html?sku=rt10"
+        "Helion Research": "https://helionresearchusa.com/product.html?sku=rt10",
+        "Peptixa Labs": "https://peptixalabs.com/product/reta-10mg/?attribute_mg=10MG"
       }
     },
     {
@@ -4861,7 +4873,8 @@
         "BioLabs Peptides": 202.95,
         "Zeptix Labs": 159.99,
         "Echo Peptides": 219.99,
-        "Aura Research": 139
+        "Aura Research": 139,
+        "Peptixa Labs": 110.49
       },
       "lowest": 84.0,
       "notes": null,
@@ -4879,7 +4892,8 @@
         "BioLabs Peptides": "https://biolabspeptides.com/product/reta/?attribute_size=30mg",
         "Zeptix Labs": "https://zeptixlabs.com/product/glp-3-r/?variant=3",
         "Echo Peptides": "https://echopeptides.co/product/glp3-rt-30mg",
-        "Aura Research": "https://tryauraresearch.com/product/glp-3rt/?attribute_pa_amount=30mg"
+        "Aura Research": "https://tryauraresearch.com/product/glp-3rt/?attribute_pa_amount=30mg",
+        "Peptixa Labs": "https://peptixalabs.com/product/reta-10mg/?attribute_mg=30MG"
       }
     },
     {
@@ -5265,7 +5279,8 @@
         "Apex Peptides": 159.0,
         "Vector E Lab": 160.0,
         "BioLabs Peptides": 139.24,
-        "Zeptix Labs": 110
+        "Zeptix Labs": 110,
+        "Peptixa Labs": 101.99
       },
       "lowest": 53.88,
       "notes": null,
@@ -5279,7 +5294,8 @@
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/apex-t/?attribute_pa_size=30mg",
         "Vector E Lab": "https://app.vectorelab.com/product/tirzepatide/?attribute_mg=30",
         "BioLabs Peptides": "https://biolabspeptides.com/product/tirz/?attribute_size=30mg",
-        "Zeptix Labs": "https://zeptixlabs.com/product/glp-2-t/?variant=9"
+        "Zeptix Labs": "https://zeptixlabs.com/product/glp-2-t/?variant=9",
+        "Peptixa Labs": "https://peptixalabs.com/product/tirzepatide-30mg-dual-glp-1-gip-receptor-agonist-research-compound/"
       },
       "category": "Incretin & Metabolic-Pathway Compounds"
     },
