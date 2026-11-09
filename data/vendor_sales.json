@@ -81,12 +81,12 @@
     {
       "code": null,
       "combines_with_our_code": true,
-      "end": null,
+      "end": "2026-11-10T07:59:00Z",
       "exclusions": "Free products are chosen at checkout from a curated selection; reward tiers use the net total after sale pricing and partner codes",
-      "gives": "Promotion: 30% off sitewide (automatic) + your 10% partner code (ours: DISCOUNTS) + extra 5% with Zelle, Venmo or Cash App, up to 45% off; $150+ free ground shipping + free 3ml bac water, $250+ free 2-day shipping + bac water + 1 free product, $350+ same + 2 free products. No official end date yet (planned Monday, may be extended)",
-      "source": "partnership@volterasciences.com emails: \"New Promotion Starting Tomorrow: 30% Off + Free Product Rewards\" (2026-11-06) and \"New Promotion Now Live ! Up to 45% Off + Free Product Rewards\" (2026-11-06)",
+      "gives": "Promotion: 30% off sitewide (automatic) + your 10% partner code (ours: DISCOUNTS) + extra 5% with Zelle, Venmo or Cash App, up to 45% off; $150+ free ground shipping + free 3ml bac water, $250+ free 2-day shipping + bac water + 1 free product, $350+ same + 2 free products. Ends Monday Nov 9 11:59 PM PST",
+      "source": "partnership@volterasciences.com emails: \"New Promotion Starting Tomorrow: 30% Off + Free Product Rewards\" (2026-11-06) and \"New Promotion Now Live ! Up to 45% Off + Free Product Rewards\" (2026-11-06); \"Re: New Promotion Now Live ! Up to 45% Off + Free Product Rewards\" (partnership@volterasciences.com, 2026-11-09 01:58Z) stating \"our current promotion ends Monday, November 9 at 11:59 PM PST\"",
       "start": "2026-11-07T15:00:00Z",
-      "verified": "2026-11-06"
+      "verified": "2026-11-09"
     }
   ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
