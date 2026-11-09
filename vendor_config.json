@@ -952,5 +952,20 @@
     "shipping_payment_researched": "2026-11-06",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
     "code_discount_pct": 10
+  },
+  "Dynamite Research Peptides": {
+    "status": "approved",
+    "site_url": "https://www.dynamitepeptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://checkout.dynamitepeptides.com/?coupon=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "affiliate_link_style": "base",
+    "promo_code": "DISCOUNTS",
+    "payment_methods": null,
+    "payment_note": "Prices in USD. Listed prices are the BOGO selling prices shown on 2026-11-09; each size also has a higher struck-through price, which is not stored. The public affiliate terms say the code gives 10% off the first order only and cannot be combined with other promotions, so that 10% is not applied on top of these sale prices. The terms say payment methods are whatever checkout displays and do not name them. Buyers must be 21+ and confirm research use.",
+    "shipping_info": "United States only. Processing is typically 1-3 business days (up to 5 in busy periods). Standard delivery is typically 5-8 business days after shipment; the cost is shown at checkout. Expedited options, where offered, are also priced at checkout. Ships in plain outer packaging.",
+    "shipping_payment_researched": "2026-11-09",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": null
   }
 }
