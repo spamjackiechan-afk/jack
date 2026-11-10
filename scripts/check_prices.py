@@ -375,6 +375,11 @@ VENDORS = {
     # still prohibit scraping or data-mining the site for commercial purposes,
     # and a plain request from this environment was stopped by a SiteGround
     # captcha. Do not register it as a working fetcher. Prices stay as committed.
+    # Dynamite Research Peptides is intentionally absent. robots.txt (checked
+    # 2026-11-09) allows product pages and disallows /admin, /api/, /checkout
+    # and /coa/. The pages are server-rendered, but extract_price reads the
+    # struck-through pre-BOGO list price, not the BOGO selling price, so a
+    # fetch would replace the selling price. Not registered as a working fetcher.
 }
 
 HEADERS = {
