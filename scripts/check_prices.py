@@ -362,6 +362,13 @@ VENDORS = {
                                   # /checkout; /product/<slug> pages are allowed. (Named AI crawlers are blocked; this checker
                                   # sends a browser user agent, not one of those.) Each product page is a single size.
     },
+    "TrustedPeps": {
+        "robots_checked_by": "Grok for Jackson, 2026-11-10",
+        "robots_allows": True,   # confirmed: User-agent * is Allow: / (Woo logs, add-to-cart and /wp-admin/ disallowed).
+                                  # Named AI training crawlers are Disallow: /. This checker sends a browser user agent.
+                                  # Only single-size product pages are listed. A request from this environment returned
+                                  # HTTP 520, so a run that cannot reach the site leaves the committed prices in place.
+    },
     # Voltera Sciences is intentionally absent. robots.txt (checked 2026-11-06)
     # allows /product/ — it disallows only WooCommerce log/upload dirs, add-to-cart
     # query URLs and /wp-admin/. A signed-out request still 302s to ?catalog=locked

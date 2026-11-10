@@ -981,5 +981,19 @@
     "shipping_payment_researched": "2026-11-09",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
     "code_discount_pct": null
+  },
+  "TrustedPeps": {
+    "status": "approved",
+    "site_url": "https://trustedpeps.us",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://trustedpeps.us/?ref=discounts",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": null,
+    "payment_note": "Prices in USD, the single-vial price on 2026-11-10. Code DISCOUNTS is 10% off every order, and the referral link applies it. A separate welcome popup offers 5% off a first order; that is not this code. Quantity breaks (3 vials 5%, 5 vials 7%) and Build-a-Kit (10+ vials, 20% off) are not in these prices. Checkout says all payments are accepted and does not name the brands. Buyers pass a 21+ researcher check.",
+    "shipping_info": "United States. FedEx 2Day. Orders by 2:00 PM Eastern Monday-Friday, or by 8:00 AM Eastern Saturday, normally ship the same day. Free shipping on orders over $200. Later orders, Sundays and carrier holidays ship the next shipping day.",
+    "shipping_payment_researched": "2026-11-10",
+    "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
+    "code_discount_pct": 10
   }
 }
