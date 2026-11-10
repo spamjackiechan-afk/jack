@@ -362,13 +362,6 @@ VENDORS = {
                                   # /checkout; /product/<slug> pages are allowed. (Named AI crawlers are blocked; this checker
                                   # sends a browser user agent, not one of those.) Each product page is a single size.
     },
-    "TrustedPeps": {
-        "robots_checked_by": "Grok for Jackson, 2026-11-10",
-        "robots_allows": True,   # confirmed: User-agent * is Allow: / (Woo logs, add-to-cart and /wp-admin/ disallowed).
-                                  # Named AI training crawlers are Disallow: /. This checker sends a browser user agent.
-                                  # Only single-size product pages are listed. A request from this environment returned
-                                  # HTTP 520, so a run that cannot reach the site leaves the committed prices in place.
-    },
     # Voltera Sciences is intentionally absent. robots.txt (checked 2026-11-06)
     # allows /product/ — it disallows only WooCommerce log/upload dirs, add-to-cart
     # query URLs and /wp-admin/. A signed-out request still 302s to ?catalog=locked
@@ -382,6 +375,14 @@ VENDORS = {
     # still prohibit scraping or data-mining the site for commercial purposes,
     # and a plain request from this environment was stopped by a SiteGround
     # captcha. Do not register it as a working fetcher. Prices stay as committed.
+    # TrustedPeps is intentionally absent. robots.txt (checked 2026-11-10)
+    # allows product pages for a normal browser: User-agent * is Allow: /
+    # (Woo logs, add-to-cart and /wp-admin/ disallowed; named AI training
+    # crawlers are Disallow: /). The Terms (https://trustedpeps.us/terms/)
+    # still prohibit scraping or mining the site without prior written
+    # permission. Do not register it as a working fetcher. The daily job only
+    # fetches vendors in this dict, so the product URL list is unused.
+    # Prices and the public listing stay as committed.
     # Dynamite Research Peptides is intentionally absent. robots.txt (checked
     # 2026-11-09) allows product pages and disallows /admin, /api/, /checkout
     # and /coa/. The pages are server-rendered, but extract_price reads the
