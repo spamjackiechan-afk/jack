@@ -947,11 +947,11 @@
       "Zelle",
       "Venmo"
     ],
-    "payment_note": "Prices in USD. Listed prices are the signed-in selling prices captured on 2026-11-06; many pages also show a higher struck-through price, which is not stored. Code DISCOUNTS is 10% and the vendor says it stacks with sitewide promotions, so that 10% is not already taken off these prices. Homepage payment icons show cards, Zelle and Venmo. A sales reward also mentions Cash App. The catalog requires sign-in and a 21+ / research-use attestation.",
+    "payment_note": "Prices in USD. Listed prices are the signed-in selling prices captured on 2026-11-06; many pages also show a higher struck-through price, which is not stored. Code DISCOUNTS is 15% and the vendor says it stacks with sitewide promotions, so that 15% is not already taken off these prices. Homepage payment icons show cards, Zelle and Venmo. A sales reward also mentions Cash App. The catalog requires sign-in and a 21+ / research-use attestation.",
     "shipping_info": "US orders. Free ground shipping on qualifying orders after discounts; faster options are priced at checkout. Eligible orders can be processed the same day. The public FAQ and the shipping policy disagree on the free-shipping cutoff, so no dollar cutoff is listed here.",
     "shipping_payment_researched": "2026-11-06",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
-    "code_discount_pct": 10
+    "code_discount_pct": 15
   },
   "Peptixa Labs": {
     "status": "approved",
