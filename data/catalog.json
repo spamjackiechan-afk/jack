@@ -414,7 +414,8 @@
         "Blackline Scientific": 55,
         "Optimum ReGen Peptides": 48.3,
         "Voltera Sciences": 74.19,
-        "Dynamite Research Peptides": 115.99
+        "Dynamite Research Peptides": 115.99,
+        "TrustedPeps": 40
       },
       "lowest": 35.0,
       "notes": null,
@@ -436,7 +437,8 @@
         "Blackline Scientific": "https://blacklinescientific.com/products/5-amino-1mq-50mg",
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/5-amino-1mq",
         "Voltera Sciences": "https://volterasciences.com/product/5-amino-1mq-10mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/5-amino-1mq"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/5-amino-1mq",
+        "TrustedPeps": "https://trustedpeps.us/product/5-amino-1mq-50mg/"
       },
       "category": "Incretin & Metabolic-Pathway Compounds"
     },
@@ -555,7 +557,8 @@
         "Ascension Peptides": 49,
         "Unyx Peptides": 65,
         "Voltera Sciences": 34.99,
-        "Dynamite Research Peptides": 54.49
+        "Dynamite Research Peptides": 54.49,
+        "TrustedPeps": 30
       },
       "lowest": 25.99,
       "notes": null,
@@ -599,7 +602,8 @@
         "Ascension Peptides": "https://ascensionpeptides.com/product/bpc-157-10mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/bpc-157/",
         "Voltera Sciences": "https://volterasciences.com/product/bpc157-10mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/bpc-157"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/bpc-157",
+        "TrustedPeps": "https://trustedpeps.us/product/bpc-157-10mg/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -989,9 +993,10 @@
         "Optimum ReGen Peptides": 55.2,
         "PepMarket": 64.99,
         "Voltera Sciences": 67.19,
-        "Dynamite Research Peptides": 111.99
+        "Dynamite Research Peptides": 111.99,
+        "TrustedPeps": 40
       },
-      "lowest": 45.47,
+      "lowest": 40,
       "notes": null,
       "vendor_product_urls": {
         "UltraLife": "https://ultralifepeptides.com/shop/vial-igf-1-lr3-1mg/",
@@ -1020,7 +1025,8 @@
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/igf-1lr3",
         "PepMarket": "https://www.pepmarket.net/product/igf-1-lr3",
         "Voltera Sciences": "https://volterasciences.com/product/igf-lr3-1mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/igf-1lr3"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/igf-1lr3",
+        "TrustedPeps": "https://trustedpeps.us/product/igf-1-lr3-1mg/"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -1168,7 +1174,8 @@
         "PepMarket": 54.99,
         "Voltera Sciences": 34.99,
         "Peptixa Labs": 46.75,
-        "Dynamite Research Peptides": 44.99
+        "Dynamite Research Peptides": 44.99,
+        "TrustedPeps": 30
       },
       "lowest": 25.25,
       "notes": null,
@@ -1213,7 +1220,8 @@
         "PepMarket": "https://www.pepmarket.net/product/kpv",
         "Voltera Sciences": "https://volterasciences.com/product/kpv-10mg/",
         "Peptixa Labs": "https://peptixalabs.com/product/kpv-10mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/kpv"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/kpv",
+        "TrustedPeps": "https://trustedpeps.us/product/kpv-10mg-2/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1319,7 +1327,8 @@
         "Optimum ReGen Peptides": 34.5,
         "PepMarket": 44.99,
         "Voltera Sciences": 46.19,
-        "Dynamite Research Peptides": 44.99
+        "Dynamite Research Peptides": 44.99,
+        "TrustedPeps": 30
       },
       "lowest": 27.55,
       "notes": null,
@@ -1367,7 +1376,8 @@
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/motc",
         "PepMarket": "https://www.pepmarket.net/product/mots-c",
         "Voltera Sciences": "https://volterasciences.com/product/mots-c/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/mots-c"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/mots-c",
+        "TrustedPeps": "https://trustedpeps.us/product/mots-c-10mg/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },
@@ -1678,7 +1688,8 @@
         "Optimum ReGen Peptides": 41.4,
         "PepMarket": 39.99,
         "Voltera Sciences": 32.19,
-        "Dynamite Research Peptides": 59.99
+        "Dynamite Research Peptides": 59.99,
+        "TrustedPeps": 30
       },
       "lowest": 20.99,
       "notes": null,
@@ -1721,7 +1732,8 @@
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/selank",
         "PepMarket": "https://www.pepmarket.net/product/selank",
         "Voltera Sciences": "https://volterasciences.com/product/selank-10mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/selank"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/selank",
+        "TrustedPeps": "https://trustedpeps.us/product/selank-10mg-2/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1767,7 +1779,8 @@
         "Optimum ReGen Peptides": 41.4,
         "PepMarket": 39.99,
         "Voltera Sciences": 34.99,
-        "Dynamite Research Peptides": 59.99
+        "Dynamite Research Peptides": 59.99,
+        "TrustedPeps": 30
       },
       "lowest": 20.84,
       "notes": null,
@@ -1807,7 +1820,8 @@
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/semax",
         "PepMarket": "https://www.pepmarket.net/product/semax",
         "Voltera Sciences": "https://volterasciences.com/product/semax-10mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/semax"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/semax",
+        "TrustedPeps": "https://trustedpeps.us/product/semax-10mg/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -2336,7 +2350,8 @@
         "Ascension Peptides": 70,
         "Optimum ReGen Peptides": 55.2,
         "Voltera Sciences": 41.99,
-        "Dynamite Research Peptides": 44.99
+        "Dynamite Research Peptides": 44.99,
+        "TrustedPeps": 40
       },
       "lowest": 35.57,
       "notes": null,
@@ -2371,7 +2386,8 @@
         "Ascension Peptides": "https://ascensionpeptides.com/product/fit-stack-cjc-1295-ipamorelin/",
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/cjc-1295-ipamorelin",
         "Voltera Sciences": "https://volterasciences.com/product/cjc-1295-without-dac-5mg-ipamorelin-5mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/cjc-ipa-blend"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/cjc-ipa-blend",
+        "TrustedPeps": "https://trustedpeps.us/product/cjc-1295-no-dac-ipamorelin-blend-10mg/"
       },
       "category": "GH Secretagogues & IGF-Axis Peptides"
     },
@@ -2580,9 +2596,10 @@
         "Ascension Peptides": 59,
         "Unyx Peptides": 65,
         "Voltera Sciences": 33.31,
-        "Dynamite Research Peptides": 59.99
+        "Dynamite Research Peptides": 59.99,
+        "TrustedPeps": 30
       },
-      "lowest": 33.31,
+      "lowest": 30,
       "notes": null,
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors",
       "vendor_product_urls": {
@@ -2612,7 +2629,8 @@
         "Ascension Peptides": "https://ascensionpeptides.com/product/ghk-cu-100mg-3ml/",
         "Unyx Peptides": "https://unyxpeptides.com/product/ghk-cu-copper-peptide/",
         "Voltera Sciences": "https://volterasciences.com/product/ghk-cu/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/ghk-cu"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/ghk-cu",
+        "TrustedPeps": "https://trustedpeps.us/product/ghk-cu-100mg/"
       }
     },
     {
@@ -3767,9 +3785,10 @@
         "Stealth Research Labs": 109.99,
         "Unyx Peptides": 150,
         "Peptixa Labs": 127.49,
-        "Dynamite Research Peptides": 79.99
+        "Dynamite Research Peptides": 79.99,
+        "TrustedPeps": 60
       },
-      "lowest": 70.79,
+      "lowest": 60,
       "notes": "Midwest Peptide: vendor page lists 80mg in details and 90mg in title; size not yet confirmed.",
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
@@ -3782,7 +3801,8 @@
         "Stealth Research Labs": "https://stealthresearchlabs.com/product/klow-blend/",
         "Unyx Peptides": "https://unyxpeptides.com/product/klow/",
         "Peptixa Labs": "https://peptixalabs.com/product/klow-peptide-blend/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/klow-blend"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/klow-blend",
+        "TrustedPeps": "https://trustedpeps.us/product/klow-80mg/"
       }
     },
     {
@@ -3827,7 +3847,8 @@
         "Unyx Peptides": 69.99,
         "PepMarket": 29.99,
         "Voltera Sciences": 28.69,
-        "Dynamite Research Peptides": 40.49
+        "Dynamite Research Peptides": 40.49,
+        "TrustedPeps": 30
       },
       "lowest": 21.05,
       "notes": null,
@@ -3868,7 +3889,8 @@
         "Unyx Peptides": "https://unyxpeptides.com/product/melanotan-2-mt-2/",
         "PepMarket": "https://www.pepmarket.net/product/mt-2",
         "Voltera Sciences": "https://volterasciences.com/product/mt-2-10mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/melanotan-2"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/melanotan-2",
+        "TrustedPeps": "https://trustedpeps.us/product/mt2-10mg-2/"
       }
     },
     {
@@ -5213,7 +5235,8 @@
         "BioLongevity Labs": 55.97,
         "Ascension Peptides": 50,
         "Unyx Peptides": 79.99,
-        "PepMarket": 29.99
+        "PepMarket": 29.99,
+        "TrustedPeps": 30
       },
       "lowest": 23.99,
       "notes": null,
@@ -5238,7 +5261,8 @@
         "BioLongevity Labs": "https://biolongevitylabs.com/product/melanotan-1-10mg/",
         "Ascension Peptides": "https://ascensionpeptides.com/product/melanotan-i-10mg/",
         "Unyx Peptides": "https://unyxpeptides.com/product/melanotan-1-mt-1/",
-        "PepMarket": "https://www.pepmarket.net/product/mt-1"
+        "PepMarket": "https://www.pepmarket.net/product/mt-1",
+        "TrustedPeps": "https://trustedpeps.us/product/mt1-10mg/"
       },
       "category": "Melanocortin & HPG-Axis Compounds"
     },
@@ -5475,9 +5499,10 @@
         "Crownwell Research": 99.0,
         "Olympus Peptide Labs": 156.56,
         "Backroad Aminos": 59.26,
-        "Certa Peptides": 49.99
+        "Certa Peptides": 49.99,
+        "TrustedPeps": 30
       },
-      "lowest": 59.26,
+      "lowest": 30,
       "notes": null,
       "vendor_product_urls": {
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/adamax-10mg/",
@@ -5485,7 +5510,8 @@
         "Crownwell Research": "https://crownwellresearch.com/product/adamax/",
         "Olympus Peptide Labs": "https://olympuspeptidelabs.com/product/51071792",
         "Backroad Aminos": "https://backroadaminos.com/product/adamax-1032-10mg/",
-        "Certa Peptides": "https://certapeptides.com/shop/adamax-5mg"
+        "Certa Peptides": "https://certapeptides.com/shop/adamax-5mg",
+        "TrustedPeps": "https://trustedpeps.us/product/adamax-10mg/"
       },
       "category": "Neuropeptide Analogues"
     },
