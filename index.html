@@ -1971,7 +1971,10 @@ document.getElementById('excludedCategories').innerHTML = categoryOrder
 // commission (SALE_VENDORS, mirrored in member-sales.js). Any other vendor's
 // observed sale (incl. Offline, Licensed, AFA, RPL, Synthrolab) is
 // dropped: that vendor shows its normal list price instead.
-const SALE_VENDORS = new Set(['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide', 'Orbitrex Peptide', 'Voltera Sciences']);
+// Helion Research: written sale-order commission confirmation — Helion Research
+// email to discountspeptides@gmail.com, subject "Helion is buy 1, get 1 free all
+// November", 2026-11-09 23:49Z (the order is still credited at our usual commission).
+const SALE_VENDORS = new Set(['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide', 'Orbitrex Peptide', 'Voltera Sciences', 'Helion Research']);
 function recomputeLowest(item){
   // USD prices only (non-USD vendors never count as the lowest).
   item.lowest = usdLowest(item.prices);
