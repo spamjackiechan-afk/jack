@@ -369,6 +369,12 @@ VENDORS = {
     # this checker, and do not record it as a working fetcher. Prices stay as
     # committed in the catalog until there is a public feed. Same manual skip as
     # other gated vendors that are not registered here.
+    # Peptixa Labs is intentionally absent. robots.txt (checked 2026-11-08)
+    # allows product pages: it disallows only /wp-admin/ (admin-ajax allowed),
+    # /cart/, /checkout/, /my-account/, and add-to-cart query URLs. The Terms
+    # still prohibit scraping or data-mining the site for commercial purposes,
+    # and a plain request from this environment was stopped by a SiteGround
+    # captcha. Do not register it as a working fetcher. Prices stay as committed.
     # Dynamite Research Peptides is intentionally absent. robots.txt (checked
     # 2026-11-09) allows product pages and disallows /admin, /api/, /checkout
     # and /coa/. The pages are server-rendered, but extract_price reads the

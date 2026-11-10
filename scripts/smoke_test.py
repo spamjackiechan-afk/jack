@@ -186,7 +186,10 @@ def check_vendor_count_raw(root, filename, expected, problems):
     check_vendor_count(raw, f"{filename} (source file)", expected, problems)
 
 
-SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide", "Orbitrex Peptide", "Voltera Sciences"}
+# Helion Research: written sale-order commission confirmation — Helion Research
+# email to discountspeptides@gmail.com, subject "Helion is buy 1, get 1 free all
+# November", 2026-11-09 23:49Z (the order is still credited at our usual commission).
+SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide", "Orbitrex Peptide", "Voltera Sciences", "Helion Research"}
 
 
 def live_vendor_sales(root):
