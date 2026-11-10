@@ -89,5 +89,17 @@
       "verified": "2026-11-09"
     }
   ],
+  "Helion Research": [
+    {
+      "code": null,
+      "combines_with_our_code": false,
+      "end": "2026-12-01T07:59:00Z",
+      "exclusions": "stacking the 20% code on 2-vial orders (the free vial replaces the 20% code discount; it doesn't stack)",
+      "gives": "Buy 1, get 1 free through Nov 30",
+      "source": "Helion Research email to discountspeptides@gmail.com, subject \"Helion is buy 1, get 1 free all November\", 2026-11-09 23:49Z, which states the order is still credited at our usual commission",
+      "start": "2026-11-09T23:49:00Z",
+      "verified": "2026-11-10"
+    }
+  ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
 }
