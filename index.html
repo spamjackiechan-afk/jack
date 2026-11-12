@@ -452,6 +452,17 @@
   #memberSalesSlot .dpm-bar ul{margin:6px 0 0;}
   #memberSalesSlot .dpm-bar .dpm-note{font-size:11.5px;}
   #signupBand{margin-top:32px;}
+  .community-band{margin:28px 0 0;}
+  .community-band h3{font-family:'Fraunces', serif; font-weight:500; font-size:20px; margin:0 0 5px;}
+  .community-band > p{font-size:13.5px; color:var(--ink-soft); margin:0 0 14px; max-width:640px; line-height:1.55;}
+  .community-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px;}
+  .community-card{border:1px solid var(--rule); background:var(--paper-raised); border-radius:12px; padding:18px 20px; display:flex; flex-direction:column; gap:8px;}
+  .community-card .cc-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--lowest);}
+  .community-card h4{font-family:'Fraunces', serif; font-weight:500; font-size:18px; margin:0;}
+  .community-card p{font-size:13px; color:var(--ink-soft); margin:0; line-height:1.5; flex:1;}
+  .community-card a.cc-btn{align-self:flex-start; margin-top:4px; text-decoration:none; background:var(--lowest); border:1.5px solid var(--lowest); color:var(--paper); font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; padding:10px 16px; border-radius:8px;}
+  .community-card a.cc-btn.ghost{background:transparent; color:var(--lowest);}
+  .community-note{font-size:11.5px; color:var(--ink-soft); margin-top:11px; line-height:1.5;}
   @media (max-width:900px){
     .dp-hero{grid-template-columns:minmax(0,1fr); gap:24px; padding-top:32px;}
   }
@@ -1122,6 +1133,26 @@
     <div class="signup-msg" id="signupMsg"></div>
   </div>
 
+  <section class="community-band" id="community" aria-labelledby="communityTitle">
+    <h3 id="communityTitle">Follow along for new codes</h3>
+    <p>Vendors change their codes and sales most weeks. These are the two places we post them first.</p>
+    <div class="community-grid">
+      <div class="community-card">
+        <span class="cc-eyebrow">Newsletter · Free</span>
+        <h4>Discount Peptides on Substack</h4>
+        <p>This week's codes and sales, plus short buyer guides, in your inbox.</p>
+        <a class="cc-btn" href="https://discountspeptides.substack.com/subscribe" target="_blank" rel="noopener">Subscribe free</a>
+      </div>
+      <div class="community-card">
+        <span class="cc-eyebrow">Reddit</span>
+        <h4>Discount Peptides on Reddit</h4>
+        <p>Deal posts and new vendor codes. Questions about the price table are welcome too.</p>
+        <a class="cc-btn ghost" href="https://www.reddit.com/user/discounts_peptides/" target="_blank" rel="noopener">Follow on Reddit</a>
+      </div>
+    </div>
+    <div class="community-note">Research use only. Not medical advice.</div>
+  </section>
+
   <div class="excluded-section">
     <h2>Why it isn't listed</h2>
     <p>Compounds carry concerns when sold legally, so this site lists them with those concerns.</p>
@@ -1133,7 +1164,7 @@
     <p><strong>Research use only —</strong> products are sold by third-party vendors for laboratory research only. Not for human or animal consumption. Nothing here is a recommendation, dosing protocol or endorsement of use.</p>
     <p><strong>Not medical advice —</strong> prices and notes are for research reference only. Most peptides listed are not FDA-approved, and evidence varies by compound.</p>
     <p>Prices are checked against each vendor's own site. Listings tagged "● LIVE" are re-read from the vendor's product page every day.</p>
-    <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a></p>
+    <p class="dp-foot-links"><a href="/privacy">Privacy</a> · <a href="/privacy#your-choice" data-dp-cookie-settings>Cookie settings</a> · <a href="https://discountspeptides.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="https://www.reddit.com/user/discounts_peptides/" target="_blank" rel="noopener">Reddit</a></p>
   </footer>
 
   <div class="contact-block">
