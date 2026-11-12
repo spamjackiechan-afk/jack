@@ -11,13 +11,13 @@
   const GREETINGS = {
     home: {
       welcome:
-        "Hi — browse a catalog shelf, compare prices, or ask about a named peptide. Research use only; no dosing or medical advice.",
+        "Hi — search the site: type a peptide, vendor, size or format (e.g. “bpc 10mg”, “nasal”, “Royal Peptides”), or browse a shelf. Research use only; no dosing or medical advice.",
       pills: ["Thymosin, BPC-157 & Peptide Fragments", "Incretin & Metabolic-Pathway Compounds", "GH Secretagogues & IGF-Axis Peptides", "Neuropeptide Analogues", "Mitochondrial Peptides, Bioregulators & Cofactors", "Melanocortin & HPG-Axis Compounds"],
     },
     testing: {
       welcome:
-        "You’re on the testing page. I can explain what a COA can (and can’t) prove, how vendor tiers work on this site, or pull research notes for a named peptide. No dosing, no medical advice.",
-      pills: ["What can a COA prove?", "Vendor testing tiers", "Ask about a peptide", "Back to price list"],
+        "You’re on the testing page. I can explain what a COA can (and can’t) prove, how we look at vendor testing, or pull research notes for a named peptide. No dosing, no medical advice.",
+      pills: ["What can a COA prove?", "How vendors test", "Ask about a peptide", "Back to price list"],
     },
     suppliers: {
       welcome:
@@ -128,7 +128,7 @@
   const input = el("input", {
     id: "sg-input",
     type: "text",
-    placeholder: "Ask about a peptide…",
+    placeholder: "Search peptides, vendors, pages…",
     autocomplete: "off",
     maxlength: "500",
   });
@@ -197,6 +197,7 @@
     } finally {
       busy = false;
       send.disabled = false;
+      setPills(g.pills);
       input.value = "";
       input.focus();
     }
