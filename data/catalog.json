@@ -518,7 +518,7 @@
       "prices": {
         "UltraLife": 89,
         "Core Peptides": 97,
-        "Purity Peptides": 94.99,
+        "Purity Peptides": 89.99,
         "BioIntegrity Research": 89.0,
         "Alpha Peptides": 25.99,
         "Midwest Peptide": 39.99,
@@ -741,7 +741,7 @@
       "prices": {
         "UltraLife": 89,
         "Core Peptides": 58,
-        "Purity Peptides": 79.99,
+        "Purity Peptides": 69.99,
         "BioIntegrity Research": 94.0,
         "Licensed Peptides": 61.99,
         "Alpha Peptides": 23.99,
@@ -838,7 +838,7 @@
       "amount_mg": 1500,
       "prices": {
         "Southern Aminos": 44,
-        "Purity Peptides": 109.99,
+        "Purity Peptides": 99.99,
         "Alpha Peptides": 36.83,
         "Midwest Peptide": 59.99,
         "AFA Biosciences": 48.99,
@@ -1077,7 +1077,7 @@
       "amount_mg": 10,
       "prices": {
         "Core Peptides": 63,
-        "Purity Peptides": 89.99,
+        "Purity Peptides": 83.99,
         "Licensed Peptides": 68.99,
         "Alpha Peptides": 27.37,
         "Midwest Peptide": 49.99,
@@ -1478,7 +1478,7 @@
       "amount_mg": 500,
       "prices": {
         "UltraLife": 139,
-        "Purity Peptides": 126.49,
+        "Purity Peptides": 99.99,
         "Royal Peptides": 35,
         "BioIntegrity Research": 139.0,
         "Licensed Peptides": 129.99,
@@ -1570,7 +1570,7 @@
       "prices": {
         "UltraLife": 119,
         "Core Peptides": 43,
-        "Purity Peptides": 82.49,
+        "Purity Peptides": 65.99,
         "BioIntegrity Research": 124.0,
         "Alpha Peptides": 22.07,
         "AFA Biosciences": 23.99,
@@ -1650,7 +1650,7 @@
       "amount_mg": 10,
       "prices": {
         "UltraLife": 105,
-        "Purity Peptides": 84.99,
+        "Purity Peptides": 65.99,
         "Royal Peptides": 65,
         "BioIntegrity Research": 64.0,
         "Licensed Peptides": 61.99,
@@ -1744,7 +1744,7 @@
       "amount_mg": 10,
       "prices": {
         "UltraLife": 105,
-        "Purity Peptides": 109.99,
+        "Purity Peptides": 65.99,
         "Royal Peptides": 65,
         "BioIntegrity Research": 64.0,
         "Alpha Peptides": 20.84,
@@ -1885,7 +1885,7 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 79.99,
+        "Purity Peptides": 88.99,
         "BioIntegrity Research": 99.0,
         "Licensed Peptides": 99.99,
         "Alpha Peptides": 35.79,
@@ -2163,9 +2163,9 @@
       "size": "500mcg x100 tabs",
       "amount_mg": 0.5,
       "prices": {
-        "Purity Peptides": 255.0
+        "Purity Peptides": 254.99
       },
-      "lowest": 255.0,
+      "lowest": 254.99,
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -2279,7 +2279,7 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 104.99,
+        "Purity Peptides": 85.99,
         "Licensed Peptides": 91.99,
         "Alpha Peptides": 33.99,
         "Research Peptides Lab": 50.0,
@@ -2397,7 +2397,7 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 99.99,
+        "Purity Peptides": 86.99,
         "Alpha Peptides": 28.41,
         "Midwest Peptide": 69.99,
         "American Peptides": 110,
@@ -2449,7 +2449,7 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 69.99,
+        "Purity Peptides": 75.99,
         "Licensed Peptides": 38.99,
         "Apex Peptides": 78.0,
         "Peptide Titans": 49.99,
@@ -2505,7 +2505,7 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 89.99,
+        "Purity Peptides": 62.99,
         "Royal Peptides": 55,
         "Licensed Peptides": 91.99,
         "Alpha Peptides": 23.68,
@@ -2569,7 +2569,7 @@
       "size": "100mg",
       "amount_mg": 100,
       "prices": {
-        "Purity Peptides": 119.99,
+        "Purity Peptides": 89.99,
         "Midwest Peptide": 57.99,
         "Offline Peptides": 49.0,
         "AFA Biosciences": 46.99,
@@ -2705,7 +2705,7 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 119.99,
+        "Purity Peptides": 100.99,
         "Alpha Peptides": 42.99,
         "American Peptides": 60,
         "Offline Peptides": 45.0,
@@ -2777,7 +2777,7 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 59.99,
+        "Purity Peptides": 70.99,
         "Licensed Peptides": 43.32,
         "American Peptides": 40,
         "Lumera Labs": 38.99,
@@ -2819,7 +2819,7 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 40.99,
+        "Purity Peptides": 39.99,
         "Peptide Titans": 24.99
       },
       "lowest": 24.99,
@@ -2907,7 +2907,7 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 72.59,
+        "Purity Peptides": 59.99,
         "Licensed Peptides": 61.99,
         "Apex Peptides": 89.0,
         "Peptide Titans": 39.99,
@@ -2937,7 +2937,6 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 69.99,
         "Alpha Peptides": 33.12,
         "Offline Peptides": 49.0,
         "Vertex Labs": 59.0,
@@ -3660,7 +3659,7 @@
         "PrymaLab": 7.99
       },
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/bacteriostatic-water-10ml",
+        "Purity Peptides": "https://purityresearch.is/product/bacteriostatic-water-10ml",
         "Alpha Peptides": "https://alpha-peptides.com/product/bac-water/",
         "Formal Peptides": "https://formalpeptides.com/product/bac-water-10mg/",
         "BioLabs Peptides": "https://biolabspeptides.com/product/bac-h2o-10-ml/",
@@ -3855,7 +3854,7 @@
       "category": "Melanocortin & HPG-Axis Compounds",
       "vendor_product_urls": {
         "Core Peptides": "https://www.corepeptides.com/peptides/melanotan-2-10mg/",
-        "Purity Peptides": "https://puritypeptides.is/product/melanotan-ii-10mg",
+        "Purity Peptides": "https://purityresearch.is/product/melanotan-ii-10mg",
         "Alpha Peptides": "https://alpha-peptides.com/product/mt-2/",
         "Midwest Peptide": "https://midwestpeptide.com/products/mt-2-10mg",
         "Royal Peptides": "https://royal-peptides.com/shop/melanotan-10mg/",
@@ -3926,7 +3925,7 @@
       "notes": null,
       "category": "Melanocortin & HPG-Axis Compounds",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/melanotan-ii-nasal-spray-10mg",
+        "Purity Peptides": "https://purityresearch.is/product/melanotan-ii-nasal-spray-10mg",
         "Voltera Sciences": "https://volterasciences.com/product/mt-2-10ml/"
       }
     },
@@ -3936,7 +3935,7 @@
       "size": "10mg (5/5mg)",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 124.99,
+        "Purity Peptides": 106.99,
         "AFA Biosciences": 64.99,
         "Lumera Labs": 74.99,
         "Aero Peptides": 89.99,
@@ -3955,7 +3954,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/bpc-157-tb-500-blend-10mg-bpc-157-5mg-tb-500-5mg",
+        "Purity Peptides": "https://purityresearch.is/product/bpc-157-tb-500-blend-10mg-bpc-157-5mg-tb-500-5mg",
         "AFA Biosciences": "https://afabiosciences.com/products/wolverine-blend",
         "Lumera Labs": "https://mylumeralabs.com/product/bpc-157-tb-500-wolverine-blend",
         "Aero Peptides": "https://aeropeptides.com/product/bpc-5mg-tb-5mg",
@@ -3977,7 +3976,7 @@
       "size": "20mg (10/10mg)",
       "amount_mg": 20,
       "prices": {
-        "Purity Peptides": 199.99,
+        "Purity Peptides": 130.99,
         "Midwest Peptide": 109.99,
         "Synthrolab": 108.88,
         "Endura Peptides": 58.0,
@@ -4002,7 +4001,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/bpc-157-tb-500-blend-10mg-bpc-157-10mg-tb-500-10mg",
+        "Purity Peptides": "https://purityresearch.is/product/bpc-157-tb-500-blend-10mg-bpc-157-10mg-tb-500-10mg",
         "Midwest Peptide": "https://midwestpeptide.com/products/bpc-157-tb-500-wolverine",
         "Synthrolab": "https://synthrolab.com/product/bpc-157-10mg-tb-500-10mg/",
         "Endura Peptides": "https://endurapeptides.com/product/bpc-157-tb-500/?attribute_pa_size=10-10-mg&attribute_pa_quantity=1-pack",
@@ -4036,7 +4035,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/glow-blend-tb-500-bpc-157-ghk-cu-nasal-spray-70mg"
+        "Purity Peptides": "https://purityresearch.is/product/glow-blend-tb-500-bpc-157-ghk-cu-nasal-spray-70mg"
       }
     },
     {
@@ -4085,7 +4084,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/glow-ghk-cu-bpc-157-tb-500",
+        "Purity Peptides": "https://purityresearch.is/product/glow-ghk-cu-bpc-157-tb-500",
         "Alpha Peptides": "https://alpha-peptides.com/product/glow/",
         "Midwest Peptide": "https://midwestpeptide.com/products/glow-70mg",
         "American Peptides": "https://www.americanpeptides.us/products/glow-mix",
@@ -4128,7 +4127,7 @@
       "size": "80mg",
       "amount_mg": 80,
       "prices": {
-        "Purity Peptides": 199.99,
+        "Purity Peptides": 154.99,
         "American Peptides": 200,
         "Offline Peptides": 109.0,
         "Orbitrex Peptide": 119.99,
@@ -4167,7 +4166,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/klow-blend",
+        "Purity Peptides": "https://purityresearch.is/product/klow-blend",
         "American Peptides": "https://www.americanpeptides.us/products/klow-blend",
         "Offline Peptides": "https://offlinepeptides.com/product/klow-bpc-157-tb-500-ghk-cu-kpv/",
         "Orbitrex Peptide": "https://orbitrexpeptide.is/product/klow-80-blend/",
@@ -4209,7 +4208,7 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 89.99,
+        "Purity Peptides": 84.99,
         "Royal Peptides": 70,
         "Alpha Peptides": 31.32,
         "Midwest Peptide": 49.99,
@@ -4247,7 +4246,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/tb-500-thymosin-beta-4-10mg",
+        "Purity Peptides": "https://purityresearch.is/product/tb-500-thymosin-beta-4-10mg",
         "Alpha Peptides": "https://alpha-peptides.com/product/tb-500/",
         "Midwest Peptide": "https://midwestpeptide.com/products/tb-500",
         "American Peptides": "https://www.americanpeptides.us/products/tb-500",
@@ -4288,7 +4287,7 @@
       "size": "5mg",
       "amount_mg": 5,
       "prices": {
-        "Purity Peptides": 72.59,
+        "Purity Peptides": 72.99,
         "Offline Peptides": 36.0,
         "Vertex Labs": 49.0,
         "Apex Peptides": 69.0,
@@ -4306,7 +4305,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/tb-500-thymosin-beta-4-5mg",
+        "Purity Peptides": "https://purityresearch.is/product/tb-500-thymosin-beta-4-5mg",
         "Offline Peptides": "https://offlinepeptides.com/product/tb-500/",
         "Vertex Labs": "https://vertexpeptideslab.org/product/tb-500/?attribute_strength=5mg",
         "Apex Peptides": "https://cms.apexpeptideslab.com/product/tb-500/?attribute_pa_size=5mg",
@@ -4333,7 +4332,7 @@
       "notes": null,
       "category": "Thymosin, BPC-157 & Peptide Fragments",
       "vendor_product_urls": {
-        "Purity Peptides": "https://puritypeptides.is/product/tb-500-nasal-spray-10mg"
+        "Purity Peptides": "https://purityresearch.is/product/tb-500-nasal-spray-10mg"
       }
     },
     {
@@ -4713,7 +4712,6 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 119.99,
         "Midwest Peptide": 49.99,
         "American Peptides": 90,
         "Aero Peptides": 69.99,
@@ -4744,24 +4742,11 @@
       }
     },
     {
-      "peptide": "Semaglutide",
-      "format": "Nasal",
-      "size": "10mg",
-      "amount_mg": 10,
-      "prices": {
-        "Purity Peptides": 139.99
-      },
-      "lowest": 139.99,
-      "notes": null,
-      "category": "Incretin & Metabolic-Pathway Compounds"
-    },
-    {
       "peptide": "Tirzepatide",
       "format": "Vial",
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 104.99,
         "American Peptides": 100,
         "UltraLife": 129,
         "Synthrolab": 26.88,
@@ -4806,7 +4791,6 @@
       "size": "20mg",
       "amount_mg": 20,
       "prices": {
-        "Purity Peptides": 159.99,
         "American Peptides": 170,
         "Vertex Labs": 119.0,
         "Peptide Express": 50.0,
@@ -4844,7 +4828,6 @@
       "size": "10mg",
       "amount_mg": 10,
       "prices": {
-        "Purity Peptides": 104.99,
         "Alpha Peptides": 44.09,
         "Midwest Peptide": 69.99,
         "American Peptides": 105,
@@ -4915,7 +4898,6 @@
       "size": "20mg",
       "amount_mg": 20,
       "prices": {
-        "Purity Peptides": 199.0,
         "Midwest Peptide": 134.99,
         "American Peptides": 200,
         "UltraLife": 289,
@@ -4966,7 +4948,6 @@
       "size": "30mg",
       "amount_mg": 30,
       "prices": {
-        "Purity Peptides": 299.99,
         "Midwest Peptide": 199.99,
         "American Peptides": 240,
         "AFA Biosciences": 163.99,
@@ -5088,7 +5069,6 @@
       "prices": {
         "Royal Peptides": 45,
         "American Peptides": 60,
-        "Purity Peptides": 89.99,
         "Crownwell Research": 30.0,
         "Apex Peptides": 70.0
       },
