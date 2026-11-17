@@ -55,6 +55,18 @@
       "verified": "2026-11-05"
     }
   ],
+  "Voltera Sciences": [
+    {
+      "code": null,
+      "combines_with_our_code": true,
+      "end": "2026-12-01T07:59:00Z",
+      "exclusions": "BOGO items may rotate and more may be added. Order rewards: $150+ free ground shipping and a free 3ml bac water; $250+ free priority shipping, a free 3ml bac water and 1 free product from the gift selection. Extra 5% off with Zelle, Venmo or Cash App",
+      "gives": "Buy one, get one free on all BOGO products, including Selank, KPV, DSIP and Sermorelin. The free vial is added to the cart automatically. 35% off everything else on the site. Our 10% partner code DISCOUNTS stacks on top. Ends Monday Nov 30 11:59 PM PST.",
+      "source": "partnership@volterasciences.com emails: \"Our deepest discount yet: BOGO + 35% off is live\" (2026-11-13 15:48Z) and \"Fwd: Our deepest discount yet: BOGO + 35% off is live\" (2026-11-16 22:50Z), which says \"We're extending the BOGO sale through November 30 at 11:59 PM PST\" and adds Selank, KPV, DSIP, Sermorelin to the BOGO list, \"35% off everything else on the site. Your partner code and the usual payment method discounts still apply on top.\"",
+      "start": "2026-11-13T15:48:00Z",
+      "verified": "2026-11-17"
+    }
+  ],
   "Helion Research": [
     {
       "code": null,
