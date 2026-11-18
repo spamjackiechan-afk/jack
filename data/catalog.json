@@ -1508,7 +1508,7 @@
         "Axovera Labs": 55,
         "Aura Research": 129,
         "MsAmino": 63.99,
-        "JD BioWorks": 63.41,
+        "JD BioWorks": 39.95,
         "Sparta Labs": 65,
         "Mindful Peptides": 69.99,
         "Certa Peptides": 101.99,
@@ -1559,6 +1559,9 @@
         "Unyx Peptides": "https://unyxpeptides.com/product/nad-plus/",
         "Optimum ReGen Peptides": "https://www.optimumregenpeptides.com/peptide/nad-500",
         "PepMarket": "https://www.pepmarket.net/product/nad-plus"
+      },
+      "noCode": {
+        "JD BioWorks": true
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },

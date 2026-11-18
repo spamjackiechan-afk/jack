@@ -59,6 +59,36 @@ class OverlayTests(unittest.TestCase):
                                        "W | Vial | 1mg": {"price": 2.0, "error": None}}})
         self.assertEqual(inc[0]["prices"], {"A": 30.0})
 
+    def test_nocode_survives_price_update_and_clears_when_vendor_removed(self):
+        inc = [row("X", "10mg", {"A": 39.95, "B": 50.0})]
+        inc[0]["noCode"] = {"A": True, "B": True}
+        res = {"A": {"X | Vial | 10mg": {"price": 39.95, "regular_price": None, "error": None, "no_code": True}},
+               "B": {"X | Vial | 10mg": {"price": None, "error": "404"},
+                     "Y | Vial | 5mg": {"price": 8.0, "error": None}}}
+        apply_live_overlay(inc, res)
+        self.assertEqual(inc[0]["prices"], {"A": 39.95})
+        self.assertEqual(inc[0]["noCode"], {"A": True})
+        self.assertNotIn("B", inc[0]["prices"])
+        apply_live_overlay(inc, {"A": {"X | Vial | 10mg": {"price": 66.0, "regular_price": None, "error": None}}})
+        self.assertEqual(inc[0]["prices"]["A"], 66.0)
+        self.assertNotIn("noCode", inc[0])
+
+    def test_price_override_pins_final_price_without_code(self):
+        from check_prices import apply_price_overrides
+        catalog = json.loads((ROOT / "data" / "product_urls.json").read_text())
+        overrides = ROOT / "data" / "price_overrides.json"
+        results = {"JD BioWorks": {"NAD+ | Vial | 500mg": {"url": "https://jdbioworks.com/product/nad/",
+                                                           "price": 66.0, "regular_price": None, "error": None},
+                                    "BPC-157 | Vial | 10mg": {"price": 64.95, "regular_price": None, "error": None}}}
+        # 2026-11-18 is inside the November pin (expires 2026-12-01T04:59:00Z).
+        apply_price_overrides(results, catalog, overrides, now=1794960000)
+        nad = results["JD BioWorks"]["NAD+ | Vial | 500mg"]
+        self.assertEqual(nad["price"], 39.95)
+        self.assertIsNone(nad["regular_price"])
+        self.assertTrue(nad["no_code"])
+        self.assertTrue(nad["override"])
+        self.assertEqual(results["JD BioWorks"]["BPC-157 | Vial | 10mg"]["price"], 64.95)
+
     def test_offline_never_gets_onsale(self):
         inc = [row("X", "10mg", {"Offline Peptides": 30.0, "B": 40.0})]
         res = {"Offline Peptides": {"X | Vial | 10mg": {"price": 25.0, "regular_price": 30.0, "error": None}},
@@ -110,6 +140,26 @@ class OverlayTests(unittest.TestCase):
         ref = copy.deepcopy(data["included"])
         apply_live_overlay(ref, live["results"])
         self.assertEqual(page, ref)
+
+    @unittest.skipUnless(shutil.which("node"), "node not installed")
+    def test_with_code_price_skips_nocode_sku(self):
+        html = (ROOT / "index.html").read_text()
+        m = re.search(r"^function withCodePrice\(vendor, price, item, link\)\{.*?^\}", html, re.S | re.M)
+        self.assertIsNotNone(m, "withCodePrice not found in index.html")
+        js = m.group(0) + """
+const VENDOR_CONFIG = { 'JD BioWorks': { promo_code: 'DISCOUNT', code_discount_pct: 5 } };
+const link = { promoCode: 'DISCOUNT' };
+const nad = { noCode: { 'JD BioWorks': true } };
+const other = {};
+process.stdout.write(JSON.stringify({
+  nad: withCodePrice('JD BioWorks', 39.95, nad, link),
+  bpc: withCodePrice('JD BioWorks', 64.95, other, link)
+}));
+"""
+        out = subprocess.run(["node"], input=js, capture_output=True, text=True, check=True).stdout
+        got = json.loads(out)
+        self.assertIsNone(got["nad"])
+        self.assertEqual(got["bpc"], 61.7)
 
 
 if __name__ == "__main__":
