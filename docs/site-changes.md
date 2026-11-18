@@ -176,10 +176,13 @@ The daily price run rewrites `data/live_prices.json` from scratch. To keep a
 confirmed sale price (e.g. from a vendor's code email), add it to
 `data/price_overrides.json` under the vendor and the **exact** item key from
 `data/product_urls.json`, with `price`, `regular_price`, `expires` (UTC,
-`YYYY-MM-DDTHH:MM:SSZ`) and `source`. `scripts/check_prices.py` merges
-unexpired entries after each run and marks them `"override": true`. It skips
-and logs expired entries and keys that aren't in the catalogue, and it never
-works out prices for other sizes. Jackson confirms every entry before it goes in.
+`YYYY-MM-DDTHH:MM:SSZ`) and `source`. Add `"no_code": true` when that price is
+final and our promo percent must not be applied (the live overlay sets
+`noCode` on that SKU). Leave `regular_price` null for that case so it is not
+shown as a struck-through sale. `scripts/check_prices.py` merges unexpired
+entries after each run and marks them `"override": true`. It skips and logs
+expired entries and keys that aren't in the catalogue, and it never works out
+prices for other sizes. Jackson confirms every entry before it goes in.
 
 ## Vendor sales (vendor-run promos)
 
@@ -241,9 +244,12 @@ the code's name; add it only from the vendor's own confirmation/checkout.
 Otherwise the row shows the normal price.
 
 - No with-code price for link-only vendors, non-USD vendors (`currency`
-  other than USD), or a row where the tracker saw a vendor-page sale
-  (`onSale`) — codes often don't stack with sales, so we never
-  double-discount; the sale price + "% off" badge shows as before.
+  other than USD), a SKU marked `noCode` for that vendor (a final price that
+  does not take our code; `{ "Vendor": true }` on the catalog row), or a row
+  where the tracker saw a vendor-page sale (`onSale`) — codes often don't
+  stack with sales, so we never double-discount; the sale price + "% off"
+  badge shows as before. A `no_code: true` price override re-applies `noCode`
+  on the live overlay so the daily checker cannot put the code back.
 - "Lowest" highlight and all price sorting stay on the list price, so every
   vendor is compared on the same basis whether or not a code % is known.
 - After adding `code_discount_pct`, run `scripts/sync_vendor_config.py` so

@@ -83,7 +83,7 @@ PUBLIC_FIELDS = [
 ]
 
 # Per-vendor fields on a catalog row that must go when the vendor is hidden.
-ROW_VENDOR_FIELDS = ("prices", "vendor_product_urls", "onSale", "liveVerified")
+ROW_VENDOR_FIELDS = ("prices", "vendor_product_urls", "onSale", "liveVerified", "noCode")
 
 
 def public_config(cfg):

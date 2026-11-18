@@ -5140,7 +5140,9 @@
         "url": "https://jdbioworks.com/product/nad/",
         "price": 39.95,
         "regular_price": null,
-        "error": null
+        "error": null,
+        "override": true,
+        "no_code": true
       },
       "Tesamorelin | Vial | 10mg": {
         "url": "https://jdbioworks.com/product/tesamorelin/",

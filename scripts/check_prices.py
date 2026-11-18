@@ -873,9 +873,11 @@ def apply_live_overlay(included: list, results: dict, non_usd: dict = None) -> i
     * numeric price, vendor already on the row -> price updated, `lowest`
       recomputed. Offline Peptides never gets an onSale mark (standing rule).
     * price None (404, no confident parse, network error) -> that vendor is
-      REMOVED from the row (prices, vendor_product_urls, onSale, liveVerified)
-      and `lowest` recomputed; a row left with no vendors is dropped. Before
-      this change a null was skipped, so the stale embedded price stayed up.
+      REMOVED from the row (prices, vendor_product_urls, onSale, liveVerified,
+      noCode) and `lowest` recomputed; a row left with no vendors is dropped.
+      Before this change a null was skipped, so the stale embedded price stayed up.
+    * result no_code true -> set noCode for that vendor so our promo percent
+      is not applied on top of a pinned final price.
     * vendor not already on the row -> ignored (freshness overlay, not catalog).
     * safety: if every result for a vendor is None (site down / run blocked),
       nothing is cleared for that vendor.
@@ -904,7 +906,7 @@ def apply_live_overlay(included: list, results: dict, non_usd: dict = None) -> i
                 continue
             if price is None:
                 match["prices"].pop(vendor, None)
-                for field in ("vendor_product_urls", "onSale", "liveVerified"):
+                for field in ("vendor_product_urls", "onSale", "liveVerified", "noCode"):
                     if isinstance(match.get(field), dict):
                         match[field].pop(vendor, None)
                 if match["prices"]:
@@ -919,6 +921,14 @@ def apply_live_overlay(included: list, results: dict, non_usd: dict = None) -> i
             regular = result.get("regular_price")
             if vendor != "Offline Peptides" and regular and regular > price:
                 match.setdefault("onSale", {})[vendor] = regular
+            # A pinned final price (price_overrides.json no_code) does not take our code.
+            # A later check without that flag drops it, so the code applies again.
+            if result.get("no_code"):
+                match.setdefault("noCode", {})[vendor] = True
+            elif isinstance(match.get("noCode"), dict):
+                match["noCode"].pop(vendor, None)
+                if not match["noCode"]:
+                    del match["noCode"]
             touched += 1
     return touched
 
@@ -1015,6 +1025,8 @@ def apply_price_overrides(results: dict, catalog: dict, overrides_path: Path, no
     """Merge data/price_overrides.json into `results` (in place).
 
     Each entry is  {vendor: {item_key: {"price", "regular_price", "expires", "source"}}}.
+    Optional "no_code": true marks a final price that must not take our promo
+    percent (copied onto the result; the page sets noCode from it).
     An entry is used only if item_key exists in product_urls.json for that
     vendor (exact match; sale prices are never worked out for other sizes),
     price is a number, and `expires` (ISO time, e.g. 2026-10-05T04:59:00Z) is
@@ -1056,13 +1068,18 @@ def apply_price_overrides(results: dict, catalog: dict, overrides_path: Path, no
                     regular is not None and (not isinstance(regular, (int, float)) or isinstance(regular, bool))):
                 print(f"Price override skipped (price / regular_price must be numbers): {label}")
                 continue
-            results.setdefault(vendor, {})[item_key] = {
+            entry = {
                 "url": url,
                 "price": float(price),
                 "regular_price": float(regular) if regular is not None else None,
                 "error": None,
                 "override": True,
             }
+            # no_code: this price is final and our promo percent must not be applied.
+            # regular_price stays null so it is not treated as a struck-through sale.
+            if ov.get("no_code") is True:
+                entry["no_code"] = True
+            results.setdefault(vendor, {})[item_key] = entry
             applied.append(label)
             print(f"Price override applied (until {ov['expires']}): {label}")
     return applied
