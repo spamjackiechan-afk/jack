@@ -995,5 +995,26 @@
     "shipping_payment_researched": "2026-11-10",
     "code_disclosure": "I earn a commission when you use my code or link. For laboratory research use only. Not for human or veterinary use.",
     "code_discount_pct": 10
+  },
+  "Molequa": {
+    "status": "approved",
+    "site_url": "https://molequa.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://molequa.com/en/",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "Bank transfer"
+    ],
+    "payment_note": "Prices in euros (EUR), shown as listed by the vendor; not converted and not compared with USD prices. EU store operated by IB products s.r.o. Our code DISCOUNTS gives 15% off.",
+    "shipping_info": "Ships from an EU warehouse to EU countries (plus Liechtenstein and Monaco); no U.S. shipping listed. Dispatched within 6 hours, delivery in 1 to 7 days, tracked. Shipping from EUR 3.90; free over EUR 40 or EUR 150 depending on country.",
+    "shipping_payment_researched": "2026-11-19",
+    "code_disclosure": "I earn a commission on purchases made with my code. Research use only. Not for human consumption.",
+    "code_discount_pct": 15,
+    "currency": "EUR",
+    "ships_to": "EU",
+    "ships_to_label": "Ships to EU countries only \u2014 not the US"
   }
 }

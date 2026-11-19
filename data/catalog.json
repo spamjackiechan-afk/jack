@@ -558,7 +558,8 @@
         "Unyx Peptides": 65,
         "Voltera Sciences": 34.99,
         "Dynamite Research Peptides": 54.49,
-        "TrustedPeps": 30
+        "TrustedPeps": 30,
+        "Molequa": 44.9
       },
       "lowest": 25.99,
       "notes": null,
@@ -603,7 +604,8 @@
         "Unyx Peptides": "https://unyxpeptides.com/product/bpc-157/",
         "Voltera Sciences": "https://volterasciences.com/product/bpc157-10mg/",
         "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/bpc-157",
-        "TrustedPeps": "https://trustedpeps.us/product/bpc-157-10mg/"
+        "TrustedPeps": "https://trustedpeps.us/product/bpc-157-10mg/",
+        "Molequa": "https://molequa.com/en/peptidy/bpc-157/"
       },
       "category": "Thymosin, BPC-157 & Peptide Fragments"
     },
@@ -1692,7 +1694,8 @@
         "PepMarket": 39.99,
         "Voltera Sciences": 32.19,
         "Dynamite Research Peptides": 59.99,
-        "TrustedPeps": 30
+        "TrustedPeps": 30,
+        "Molequa": 35.9
       },
       "lowest": 20.99,
       "notes": null,
@@ -1736,7 +1739,8 @@
         "PepMarket": "https://www.pepmarket.net/product/selank",
         "Voltera Sciences": "https://volterasciences.com/product/selank-10mg/",
         "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/selank",
-        "TrustedPeps": "https://trustedpeps.us/product/selank-10mg-2/"
+        "TrustedPeps": "https://trustedpeps.us/product/selank-10mg-2/",
+        "Molequa": "https://molequa.com/en/peptidy/selank/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -1783,7 +1787,8 @@
         "PepMarket": 39.99,
         "Voltera Sciences": 34.99,
         "Dynamite Research Peptides": 59.99,
-        "TrustedPeps": 30
+        "TrustedPeps": 30,
+        "Molequa": 35.9
       },
       "lowest": 20.84,
       "notes": null,
@@ -1824,7 +1829,8 @@
         "PepMarket": "https://www.pepmarket.net/product/semax",
         "Voltera Sciences": "https://volterasciences.com/product/semax-10mg/",
         "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/semax",
-        "TrustedPeps": "https://trustedpeps.us/product/semax-10mg/"
+        "TrustedPeps": "https://trustedpeps.us/product/semax-10mg/",
+        "Molequa": "https://molequa.com/en/peptidy/semax/"
       },
       "category": "Neuropeptide Analogues"
     },
@@ -2600,7 +2606,8 @@
         "Unyx Peptides": 65,
         "Voltera Sciences": 33.31,
         "Dynamite Research Peptides": 59.99,
-        "TrustedPeps": 30
+        "TrustedPeps": 30,
+        "Molequa": 53.9
       },
       "lowest": 30,
       "notes": null,
@@ -2633,7 +2640,8 @@
         "Unyx Peptides": "https://unyxpeptides.com/product/ghk-cu-copper-peptide/",
         "Voltera Sciences": "https://volterasciences.com/product/ghk-cu/",
         "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/ghk-cu",
-        "TrustedPeps": "https://trustedpeps.us/product/ghk-cu-100mg/"
+        "TrustedPeps": "https://trustedpeps.us/product/ghk-cu-100mg/",
+        "Molequa": "https://molequa.com/en/peptidy/ghk-cu/"
       }
     },
     {
@@ -3851,7 +3859,8 @@
         "PepMarket": 29.99,
         "Voltera Sciences": 28.69,
         "Dynamite Research Peptides": 40.49,
-        "TrustedPeps": 30
+        "TrustedPeps": 30,
+        "Molequa": 35.9
       },
       "lowest": 21.05,
       "notes": null,
@@ -3893,7 +3902,8 @@
         "PepMarket": "https://www.pepmarket.net/product/mt-2",
         "Voltera Sciences": "https://volterasciences.com/product/mt-2-10mg/",
         "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/melanotan-2",
-        "TrustedPeps": "https://trustedpeps.us/product/mt2-10mg-2/"
+        "TrustedPeps": "https://trustedpeps.us/product/mt2-10mg-2/",
+        "Molequa": "https://molequa.com/en/peptidy/melanotan-ii/"
       }
     },
     {
@@ -4244,7 +4254,8 @@
         "Unyx Peptides": 109.99,
         "PepMarket": 54.99,
         "Voltera Sciences": 35.69,
-        "Dynamite Research Peptides": 82.49
+        "Dynamite Research Peptides": 82.49,
+        "Molequa": 62.9
       },
       "lowest": 31.32,
       "notes": null,
@@ -4282,7 +4293,8 @@
         "Unyx Peptides": "https://unyxpeptides.com/product/tb-500-thymosin-beta-4/",
         "PepMarket": "https://www.pepmarket.net/product/tb-500",
         "Voltera Sciences": "https://volterasciences.com/product/tb-500-thymosin-b4-acetate-10mg/",
-        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/tb500"
+        "Dynamite Research Peptides": "https://www.dynamitepeptides.com/product/tb500",
+        "Molequa": "https://molequa.com/en/peptidy/tb-500/"
       }
     },
     {
@@ -5597,14 +5609,16 @@
       "prices": {
         "Aero Peptides": 59.99,
         "Ares Research": 39.99,
-        "Certa Peptides": 35.99
+        "Certa Peptides": 35.99,
+        "Molequa": 35.9
       },
       "lowest": 39.99,
       "notes": null,
       "vendor_product_urls": {
         "Aero Peptides": "https://aeropeptides.com/product/nad-100mg",
         "Ares Research": "https://aresresearchlab.com/catalog/nad-plus",
-        "Certa Peptides": "https://certapeptides.com/shop/nad?variant=957"
+        "Certa Peptides": "https://certapeptides.com/shop/nad?variant=957",
+        "Molequa": "https://molequa.com/en/peptidy/nad-plus/"
       },
       "category": "Mitochondrial Peptides, Bioregulators & Cofactors"
     },

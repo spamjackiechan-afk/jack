@@ -310,6 +310,12 @@ VENDORS = {
         "robots_allows": True,   # confirmed: robots.txt (Rank Math/WooCommerce) disallows only /wp-admin/, wc-logs/uploads,
                                   # add-to-cart, ?s=, ?orderby= and ?filter_ URLs; /product/<slug>/ pages are allowed.
     },
+    "Molequa": {
+        "robots_checked_by": "Claude (Vendor adder) for Jackson, 2026-11-19",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" is Allow: / and disallows only /admin/ and
+                                  # /private/; /en/peptidy/<slug>/ pages are allowed. Prices are EUR. The site's WAF
+                                  # blocks browser-spoofed user agents, so a plain client user agent is needed.
+    },
     "Certa Peptides": {
         "robots_checked_by": "Grok for Jackson, 2026-10-28",
         "robots_allows": True,   # confirmed: robots.txt is "Allow: /" and disallows only /api/, /checkout, /cart,
