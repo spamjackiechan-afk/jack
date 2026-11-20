@@ -53,6 +53,16 @@
       "source": "https://veratisbio.com",
       "start": null,
       "verified": "2026-11-05"
+    },
+    {
+      "code": null,
+      "combines_with_our_code": false,
+      "end": "2026-12-01T05:59:00Z",
+      "exclusions": "No percent codes stack that week. Free bottles replace the usual $300 reward. Free shipping over $150 and the free Reconstitution Solution at $200 still apply. Early access Nov 20-22 for returning customers and the early link",
+      "gives": "Black Friday week (Mon Nov 23 - Mon Nov 30, 11:59 PM Central): a free bottle on every order. 1-2 bottles: free GHK-CU 50mg in the box. 3 bottles: lowest-priced bottle free. 5 bottles: the 2 lowest-priced free. Our code DISCOUNTPEPTIDES and link still credit us on every order",
+      "source": "veratisbio.com Black Friday partner kit email (2026-11-18)",
+      "start": "2026-11-23T06:00:00Z",
+      "verified": "2026-11-19"
     }
   ],
   "Voltera Sciences": [
@@ -77,6 +87,30 @@
       "source": "Helion Research email to discountspeptides@gmail.com, subject \"Helion is buy 1, get 1 free all November\", 2026-11-09 23:49Z, which states the order is still credited at our usual commission",
       "start": "2026-11-09T23:49:00Z",
       "verified": "2026-11-10"
+    }
+  ],
+  "Backroad Aminos": [
+    {
+      "code": null,
+      "combines_with_our_code": true,
+      "end": "2026-12-01T04:59:00Z",
+      "exclusions": "Buy 2 Get 1 Free needs 3 of the exact same research vial (no mixing products or sizes). The two base deals do not combine on the same vials. 35% off applies to original retail on individual vials, cosmetics, BAC water and merchandise",
+      "gives": "Black Friday (Nov 18-30): either Buy 2, Get 1 Free on research vials (priced from the current 25%-off website prices) or 35% off original retail instead of the standard 25%. Applied automatically at checkout, no sale code needed. Our code DISCOUNTS stacks on top of both. Ends Nov 30",
+      "source": "backroadaminos.com Black Friday affiliate announcement email (2026-11-18): \"YOUR AFFILIATE CODE STACKS WITH BOTH BLACK FRIDAY PROMOTIONS\"",
+      "start": "2026-11-18T05:00:00Z",
+      "verified": "2026-11-19"
+    }
+  ],
+  "Orbitrex Peptide": [
+    {
+      "code": null,
+      "combines_with_our_code": true,
+      "end": "2026-11-27T04:59:00Z",
+      "exclusions": "Not all products are 30% off. Doorbusters drop Nov 27 (details not yet shared). Live code boosts are paused during the sale",
+      "gives": "Black Friday (Nov 19-26): up to 30% off sitewide, applied automatically, no sale code needed. Affiliate codes (ours: DISCOUNTS) give shoppers 10% off during the sale",
+      "source": "orbitrexpeptide.is affiliate community announcement email (2026-11-19)",
+      "start": "2026-11-19T05:00:00Z",
+      "verified": "2026-11-19"
     }
   ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
