@@ -79,5 +79,17 @@
       "verified": "2026-11-10"
     }
   ],
+  "Ares Research": [
+    {
+      "code": null,
+      "combines_with_our_code": false,
+      "end": "2026-12-01T07:59:00Z",
+      "exclusions": "a second discount on the same order (one discount per order; the cart applies whichever saves more), the BOGO outside select vials and outside Nov 23-27 and Mon Nov 30, and the crypto 35% outside sale items",
+      "gives": "Buy 1, Get 1 Free on select peptide vials (up to 5 free vials per order) Nov 23-27 and again Mon Nov 30 (Cyber Monday). Also 30% off every peptide vial and HGH all week, and 35% off sale items when paying with crypto.",
+      "source": "affiliate@aresresearchlab.com email to discountspeptides@gmail.com, subject \"Black Friday at Ares: dates, offer and your code\", 2026-11-20 17:06Z, and https://aresresearchlab.com/black-friday. The email states Buy 1, Get 1 Free on select peptide vials Mon Nov 23 to Fri Nov 27 and again on Cyber Monday (Nov 30), mix and match up to 5 free vials per order; 30% off every peptide vial and HGH all week; 35% off sale items when paying with crypto; discounts apply automatically; one discount per order and the cart applies whichever saves more. During the sale the bigger discount wins, the order is still credited, and commission is paid on the order total after the discount. The page states the same offer: \"One discount per order: your cart applies whichever saves you more. Buy 1, Get 1 applies to select vials only.\"",
+      "start": "2026-11-23T14:00:00Z",
+      "verified": "2026-11-20"
+    }
+  ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
 }
