@@ -15,7 +15,11 @@
   // Helion Research: written sale-order commission confirmation — Helion Research
   // email to discountspeptides@gmail.com, subject "Helion is buy 1, get 1 free all
   // November", 2026-11-09 23:49Z (the order is still credited at our usual commission).
-  var SALE_VENDORS = ['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide', 'Orbitrex Peptide', 'Voltera Sciences', 'Helion Research'];
+  // Ares Research: written sale-order commission confirmation — Ares Research
+  // Affiliate Team email to discountspeptides@gmail.com, subject "Black Friday
+  // at Ares: dates, offer and your code", 2026-11-20 17:06Z (the order is still
+  // credited; commission is paid on the order total after the discount).
+  var SALE_VENDORS = ['American Peptides', 'Peptide Titans', 'True Peptides', 'Veratis Bio', 'Ride the Tide Peptides', 'Midwest Peptide', 'Orbitrex Peptide', 'Voltera Sciences', 'Helion Research', 'Ares Research'];
   function saleAllowed(vendor, s){
     if (SALE_VENDORS.indexOf(vendor) === -1) return false;
     if (vendor === 'Ride the Tide Peptides' && /bogo|buy\s*one,?\s*get\s*one/i.test((s.code || '') + ' ' + (s.gives || ''))) return false;
