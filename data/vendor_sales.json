@@ -113,5 +113,17 @@
       "verified": "2026-11-23"
     }
   ],
+  "Alpha Peptides": [
+    {
+      "code": null,
+      "combines_with_our_code": true,
+      "end": "2026-12-01T04:59:00Z",
+      "exclusions": "Tier discounts and free items apply automatically by order total.",
+      "gives": "Black Friday: 20% off any order automatically, 25% off at $200+, 30% off at $350+. Free 10 mL reconstitution solution at $150+, plus a free GHK-Cu 50mg at $250+. Our code DISCOUNT takes an extra 10% on top.",
+      "source": "Alpha Peptides affiliate email from JP to discountspeptides@gmail.com, 2026-11-23 07:37Z. The email says affiliates \"earn your usual commission on every order through your link or code.\" The sale itself has no code and applies automatically: 20% off any order, 25% off at $200+, 30% off at $350+. Free 10 mL reconstitution solution at $150+, plus a free GHK-Cu 50mg at $250+. Code DISCOUNT takes an extra 10% on top.",
+      "start": "2026-11-23T05:00:00Z",
+      "verified": "2026-11-24"
+    }
+  ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
 }
