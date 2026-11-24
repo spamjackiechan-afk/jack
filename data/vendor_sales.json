@@ -113,5 +113,17 @@
       "verified": "2026-11-23"
     }
   ],
+  "Axovera Labs": [
+    {
+      "code": "HOLIDAY25",
+      "combines_with_our_code": false,
+      "end": "2027-01-01T04:59:00Z",
+      "exclusions": "HOLIDAY25 applies to one-time purchases (not Subscribe and Save) and can't be combined with other codes, including our partner code. Only HOLIDAY25 adds the free vials. Free vials are credited on the lowest-priced vials in the order, up to three. Free shipping over $200",
+      "gives": "Holiday season sale (through Dec 31, 11:59 PM ET): 25% off storewide with code HOLIDAY25, plus free vials added automatically: 1 free vial on $300+, 2 on $400+, 3 on $500+. Orders through our link are still credited to us for 30 days even when the customer checks out with HOLIDAY25; our own code and HOLIDAY25 can't be combined",
+      "source": "axoveralabs.com partner email \"The holiday sale is live: here's what to share\" (2026-11-24)",
+      "start": "2026-11-24T05:00:00Z",
+      "verified": "2026-11-24"
+    }
+  ],
   "_readme": "Vendor-run sale promos shown on suppliers.html as a 'Vendor sale' row, separate from our affiliate code (vendor_config.json promo_code stays OUR code). Format: {\"<vendor>\": [{\"code\": \"WEBACK30\", \"gives\": \"30% off\", \"start\": null, \"end\": null, \"exclusions\": null, \"combines_with_our_code\": null, \"source\": \"midwestpeptide.com homepage banner\", \"verified\": \"2026-09-30\"}]}. Fill fields ONLY from the vendor's own site, terms, or email; leave a field null when unconfirmed. A sale with a past 'end' (UTC, YYYY-MM-DDTHH:MM:SSZ) is hidden automatically at render time, like price_overrides expiry. Embedded into suppliers.html as const VENDOR_SALES by scripts/sync_vendor_config.py. Jackson approves every entry before it is added."
 }
