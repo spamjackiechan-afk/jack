@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-24T21:11:35Z",
+  "checked_at": "2026-11-25T20:20:43Z",
   "results": {
     "Royal Peptides": {
       "5-Amino-1MQ Capsules | Vial | 50mg": {
@@ -971,7 +971,7 @@
       },
       "Ipamorelin | Vial | 5mg": {
         "url": "https://licensedpeptides.com/product/ipamorelin/",
-        "price": 43.32,
+        "price": 42.99,
         "regular_price": null,
         "error": null
       },
@@ -2605,8 +2605,9 @@
       },
       "CJC-1295 / Ipamorelin combo | Nasal | 10mg/10mg": {
         "url": "https://uspeptidelabs.co/products/cjc-1295-ipamorelin-nasal-spray",
-        "price": null,
-        "error": "('Connection broken: IncompleteRead(7835 bytes read, 2405 more expected)', IncompleteRead(7835 bytes read, 2405 more expected))"
+        "price": 188.0,
+        "regular_price": null,
+        "error": null
       },
       "Semax | Nasal | 10mg": {
         "url": "https://uspeptidelabs.co/products/semax-nasal-spray",
@@ -3492,50 +3493,50 @@
     "BioLabs Peptides": {
       "Bacteriostatic Water | Water | 10mL": {
         "url": "https://biolabspeptides.com/product/bac-h2o-10-ml/",
-        "price": 14.99,
+        "price": 13.49,
         "regular_price": null,
         "error": null
       },
       "Melanotan II | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/mt-2/",
-        "price": 37.13,
+        "price": 33.42,
         "regular_price": null,
         "error": null
       },
       "Melanotan I | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/mt-1/",
-        "price": 37.13,
+        "price": 33.42,
         "regular_price": null,
         "error": null
       },
       "Wolverine (BPC-157/TB-500 blend) | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/wolverine/?attribute_size=10mg",
-        "price": 63.65,
-        "regular_price": 74.97,
+        "price": 57.29,
+        "regular_price": 67.47,
         "error": null
       },
       "Wolverine (BPC-157/TB-500 blend) | Vial | 20mg": {
         "url": "https://biolabspeptides.com/product/wolverine/?attribute_size=20mg",
-        "price": 99.46,
-        "regular_price": 117.14,
+        "price": 89.51,
+        "regular_price": 105.43,
         "error": null
       },
       "Tirzepatide | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/tirz/?attribute_size=10mg",
-        "price": 72.94,
-        "regular_price": 85.91,
+        "price": 65.65,
+        "regular_price": 77.32,
         "error": null
       },
       "Tirzepatide | Vial | 20mg": {
         "url": "https://biolabspeptides.com/product/tirz/?attribute_size=20mg",
-        "price": 112.72,
-        "regular_price": 132.77,
+        "price": 101.45,
+        "regular_price": 119.49,
         "error": null
       },
       "Tirzepatide | Vial | 30mg": {
         "url": "https://biolabspeptides.com/product/tirz/?attribute_size=30mg",
-        "price": 139.24,
-        "regular_price": 164.0,
+        "price": 125.32,
+        "regular_price": 147.6,
         "error": null
       },
       "LL-37 | Vial | 5mg": {
@@ -3555,31 +3556,31 @@
       },
       "KPV | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/kpv/",
-        "price": 66.31,
+        "price": 59.68,
         "regular_price": null,
         "error": null
       },
       "ARA-290 (Cibinetide) | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/ara-290/",
-        "price": 39.78,
+        "price": 35.8,
         "regular_price": null,
         "error": null
       },
       "IGF-1 LR3 | Vial | 1mg": {
         "url": "https://biolabspeptides.com/product/igf-1-lr3/",
-        "price": 79.57,
+        "price": 71.61,
         "regular_price": null,
         "error": null
       },
       "5-Amino-1MQ | Vial | 50mg": {
         "url": "https://biolabspeptides.com/product/5-amino-1mq/",
-        "price": 79.57,
+        "price": 71.61,
         "regular_price": null,
         "error": null
       },
       "Kisspeptin | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/kisspeptin/",
-        "price": 46.41,
+        "price": 41.77,
         "regular_price": null,
         "error": null
       },
@@ -3590,32 +3591,32 @@
       },
       "SS-31 / Elamipretide | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/ss-31/?attribute_size=10mg",
-        "price": 66.31,
-        "regular_price": 78.1,
+        "price": 59.68,
+        "regular_price": 70.29,
         "error": null
       },
       "GLOW Blend (GHK-Cu/BPC-157/TB-500) | Vial | 50/10/10mg": {
         "url": "https://biolabspeptides.com/product/glow-ghk50mg-tb10mg-bpc10mg/",
-        "price": 102.12,
+        "price": 91.91,
         "regular_price": null,
         "error": null
       },
       "PT-141 (Bremelanotide) | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/pt-141/",
-        "price": 39.78,
+        "price": 35.8,
         "regular_price": null,
         "error": null
       },
       "Ipamorelin | Vial | 5mg": {
         "url": "https://biolabspeptides.com/product/ipa/?attribute_size=5mg",
-        "price": 37.13,
-        "regular_price": 43.73,
+        "price": 33.42,
+        "regular_price": 39.36,
         "error": null
       },
       "Ipamorelin | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/ipa/?attribute_size=10mg",
-        "price": 55.69,
-        "regular_price": 65.6,
+        "price": 50.12,
+        "regular_price": 59.04,
         "error": null
       },
       "CJC-1295 | Vial | 5mg": {
@@ -3630,13 +3631,13 @@
       },
       "CJC-1295 with DAC | Vial | 5mg": {
         "url": "https://biolabspeptides.com/product/cjc-1295-5mg-w-dac/",
-        "price": 63.65,
+        "price": 57.29,
         "regular_price": null,
         "error": null
       },
       "CJC-1295 / Ipamorelin combo | Vial | 5mg/5mg": {
         "url": "https://biolabspeptides.com/product/cjc-1295-no-dac-ipa-cjc-5mg-ipa-5mg/",
-        "price": 74.27,
+        "price": 66.84,
         "regular_price": null,
         "error": null
       },
@@ -3652,104 +3653,104 @@
       },
       "Thymosin Alpha-1 | Vial | 5mg": {
         "url": "https://biolabspeptides.com/product/thymosin-alpha-1/?attribute_size=5mg",
-        "price": 42.44,
-        "regular_price": 49.98,
+        "price": 38.2,
+        "regular_price": 44.98,
         "error": null
       },
       "Thymosin Alpha-1 | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/thymosin-alpha-1/?attribute_size=10mg",
-        "price": 72.94,
-        "regular_price": 85.91,
+        "price": 65.65,
+        "regular_price": 77.32,
         "error": null
       },
       "Semax | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/semax/",
-        "price": 53.05,
+        "price": 47.75,
         "regular_price": null,
         "error": null
       },
       "Selank | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/selank/",
-        "price": 53.05,
+        "price": 47.75,
         "regular_price": null,
         "error": null
       },
       "MOTS-C | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/mots-c/?attribute_size=10mg",
-        "price": 47.74,
-        "regular_price": 56.22,
+        "price": 42.97,
+        "regular_price": 50.6,
         "error": null
       },
       "MOTS-C | Vial | 40mg": {
         "url": "https://biolabspeptides.com/product/mots-c/?attribute_size=40mg",
-        "price": 119.35,
-        "regular_price": 140.56,
+        "price": 107.42,
+        "regular_price": 126.5,
         "error": null
       },
       "AOD-9604 | Vial | 5mg": {
         "url": "https://biolabspeptides.com/product/aod-9604/?attribute_size=5mg",
-        "price": 47.74,
-        "regular_price": 56.22,
+        "price": 42.97,
+        "regular_price": 50.6,
         "error": null
       },
       "AOD-9604 | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/aod-9604/?attribute_size=10mg",
-        "price": 79.57,
-        "regular_price": 93.71,
+        "price": 71.61,
+        "regular_price": 84.34,
         "error": null
       },
       "TB-500 | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/tb500-thymosin-b4-acetate/",
-        "price": 61.0,
+        "price": 54.9,
         "regular_price": null,
         "error": null
       },
       "BPC-157 | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/bpc-157/",
-        "price": 55.69,
+        "price": 50.12,
         "regular_price": null,
         "error": null
       },
       "Tesamorelin | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/tesamorelin/",
-        "price": 76.91,
+        "price": 69.22,
         "regular_price": null,
         "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 50mg": {
         "url": "https://biolabspeptides.com/product/ghk-cu/?attribute_size=50mg",
-        "price": 39.78,
-        "regular_price": 46.85,
+        "price": 35.8,
+        "regular_price": 42.17,
         "error": null
       },
       "GHK-Cu (Copper Peptide) | Vial | 100mg": {
         "url": "https://biolabspeptides.com/product/ghk-cu/?attribute_size=100mg",
-        "price": 58.35,
-        "regular_price": 68.72,
+        "price": 52.52,
+        "regular_price": 61.85,
         "error": null
       },
       "Retatrutide | Vial | 5mg": {
         "url": "https://biolabspeptides.com/product/reta/?attribute_size=5mg",
-        "price": 43.82,
-        "regular_price": 51.61,
+        "price": 39.44,
+        "regular_price": 46.45,
         "error": null
       },
       "Retatrutide | Vial | 10mg": {
         "url": "https://biolabspeptides.com/product/reta/?attribute_size=10mg",
-        "price": 89.94,
-        "regular_price": 105.93,
+        "price": 80.95,
+        "regular_price": 95.34,
         "error": null
       },
       "Retatrutide | Vial | 20mg": {
         "url": "https://biolabspeptides.com/product/reta/?attribute_size=20mg",
-        "price": 159.13,
-        "regular_price": 187.42,
+        "price": 143.22,
+        "regular_price": 168.68,
         "error": null
       },
       "Retatrutide | Vial | 30mg": {
         "url": "https://biolabspeptides.com/product/reta/?attribute_size=30mg",
-        "price": 202.95,
-        "regular_price": 239.03,
+        "price": 182.66,
+        "regular_price": 215.13,
         "error": null
       }
     },
@@ -5762,7 +5763,7 @@
       },
       "MOTS-C | Vial | 40mg": {
         "url": "https://mindfulpeptides.com/product/mots-c/",
-        "price": 125.0,
+        "price": 100.0,
         "regular_price": null,
         "error": null
       },
@@ -5774,7 +5775,7 @@
       },
       "Tesamorelin | Vial | 10mg": {
         "url": "https://mindfulpeptides.com/product/tesamorelin/",
-        "price": 90.0,
+        "price": 72.0,
         "regular_price": null,
         "error": null
       },
