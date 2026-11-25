@@ -82,11 +82,11 @@
       "code": null,
       "combines_with_our_code": false,
       "end": "2026-12-01T07:59:00Z",
-      "exclusions": "stacking the 20% code on 2-vial orders (the free vial replaces the 20% code discount; it doesn't stack)",
-      "gives": "Buy 1, get 1 free through Nov 30",
-      "source": "Helion Research email to discountspeptides@gmail.com, subject \"Helion is buy 1, get 1 free all November\", 2026-11-09 23:49Z, which states the order is still credited at our usual commission",
-      "start": "2026-11-09T23:49:00Z",
-      "verified": "2026-11-10"
+      "exclusions": "One offer per order (our code DISCOUNTPEPTIDES, normally 20% off, does not stack with the sale). The buy 1, get 1 free offer is over. Orders from our link are still credited and pay us 20% commission on the sale price",
+      "gives": "Black Friday: 40% off everything, applied automatically at checkout with no code, through Monday Nov 30, 11:59 PM Pacific. Free US shipping on orders of $25 or more before the discount",
+      "source": "helionresearchusa.com email to Discount Peptides \"Helion: 40% off, lower than your code price\" (2026-11-25)",
+      "start": "2026-11-25T18:47:00Z",
+      "verified": "2026-11-25"
     }
   ],
   "Ares Research": [
