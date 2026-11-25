@@ -70,11 +70,11 @@
       "code": null,
       "combines_with_our_code": true,
       "end": "2026-12-01T07:59:00Z",
-      "exclusions": "BOGO items may rotate and more may be added. Order rewards: $150+ free ground shipping and a free 3ml bac water; $250+ free priority shipping, a free 3ml bac water and 1 free product from the gift selection. Extra 5% off with Zelle, Venmo or Cash App",
-      "gives": "Buy one, get one free on all BOGO products, including Selank, KPV, DSIP and Sermorelin. The free vial is added to the cart automatically. 35% off everything else on the site. Our 10% partner code DISCOUNTS stacks on top. Ends Monday Nov 30 11:59 PM PST.",
-      "source": "partnership@volterasciences.com emails: \"Our deepest discount yet: BOGO + 35% off is live\" (2026-11-13 15:48Z) and \"Fwd: Our deepest discount yet: BOGO + 35% off is live\" (2026-11-16 22:50Z), which says \"We're extending the BOGO sale through November 30 at 11:59 PM PST\" and adds Selank, KPV, DSIP, Sermorelin to the BOGO list, \"35% off everything else on the site. Your partner code and the usual payment method discounts still apply on top.\"",
+      "exclusions": null,
+      "gives": "Black Friday: Buy 1 Get 1 Free sitewide, mix and match (for every 2 items, the lowest-priced item is free). Our code DISCOUNTS takes an extra 10%. Combined BOGO and code savings are capped at 50% of the cart subtotal. Extra 5% off when paying with Zelle, Venmo or Cash App.",
+      "source": "partnership@volterasciences.com email, subject \"BOGO just went sitewide\", 2026-11-24 13:28Z (gmail id 1a20dbe5ea261a49). It states Buy 1 Get 1 Free is sitewide, mix and match (for every 2 items, the lowest-priced item is free), code DISCOUNTS takes an extra 10%, combined BOGO and code savings are capped at 50% of the cart subtotal, and there is an extra 5% off when paying with Zelle, Venmo or Cash App. The sale runs through Monday, November 30 at 11:59 PM PST.",
       "start": "2026-11-13T15:48:00Z",
-      "verified": "2026-11-17"
+      "verified": "2026-11-24"
     }
   ],
   "Helion Research": [
@@ -122,6 +122,18 @@
       "gives": "Black Friday: 20% off any order automatically, 25% off at $200+, 30% off at $350+. Free 10 mL reconstitution solution at $150+, plus a free GHK-Cu 50mg at $250+. Our code DISCOUNT takes an extra 10% on top.",
       "source": "Alpha Peptides affiliate email from JP to discountspeptides@gmail.com, 2026-11-23 07:37Z. The email says affiliates \"earn your usual commission on every order through your link or code.\" The sale itself has no code and applies automatically: 20% off any order, 25% off at $200+, 30% off at $350+. Free 10 mL reconstitution solution at $150+, plus a free GHK-Cu 50mg at $250+. Code DISCOUNT takes an extra 10% on top.",
       "start": "2026-11-23T05:00:00Z",
+      "verified": "2026-11-24"
+    }
+  ],
+  "Axovera Labs": [
+    {
+      "code": "HOLIDAY25",
+      "combines_with_our_code": false,
+      "end": "2027-01-01T04:59:00Z",
+      "exclusions": "HOLIDAY25 applies to one-time purchases (not Subscribe and Save) and can't be combined with other codes, including our partner code. Only HOLIDAY25 adds the free vials. Free vials are credited on the lowest-priced vials in the order, up to three. Free shipping over $200",
+      "gives": "Holiday season sale (through Dec 31, 11:59 PM ET): 25% off storewide with code HOLIDAY25, plus free vials added automatically: 1 free vial on $300+, 2 on $400+, 3 on $500+. Orders through our link are still credited to us for 30 days even when the customer checks out with HOLIDAY25; our own code and HOLIDAY25 can't be combined",
+      "source": "axoveralabs.com partner email \"The holiday sale is live: here's what to share\" (2026-11-24)",
+      "start": "2026-11-24T05:00:00Z",
       "verified": "2026-11-24"
     }
   ],
