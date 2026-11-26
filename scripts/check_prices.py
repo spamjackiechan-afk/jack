@@ -316,6 +316,13 @@ VENDORS = {
                                   # /private/; /en/peptidy/<slug>/ pages are allowed. Prices are EUR. The site's WAF
                                   # blocks browser-spoofed user agents, so a plain client user agent is needed.
     },
+    "V8 Peptides": {
+        "robots_checked_by": "Claude (Vendor adder) for Jackson, 2026-11-26",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" is Allow: / and disallows only /admin, /api,
+                                  # /account, /affiliate/, /checkout and similar account paths; /products/<slug> pages
+                                  # are allowed. Sizes can't be pinned by URL, so only each product's default
+                                  # (first JSON-LD offer) size is listed.
+    },
     "Certa Peptides": {
         "robots_checked_by": "Grok for Jackson, 2026-10-28",
         "robots_allows": True,   # confirmed: robots.txt is "Allow: /" and disallows only /api/, /checkout, /cart,
