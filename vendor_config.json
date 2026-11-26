@@ -1016,5 +1016,23 @@
     "currency": "EUR",
     "ships_to": "EU",
     "ships_to_label": "Ships to EU countries only \u2014 not the US"
+  },
+  "V8 Peptides": {
+    "status": "approved",
+    "site_url": "https://v8peptides.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://v8peptides.com/?ref=DISCOUNTS",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": [
+      "Card (Stripe invoice)",
+      "Zelle",
+      "Cryptocurrency"
+    ],
+    "payment_note": "Prices in USD, before shipping and tax, default size per product on 2026-11-26. Our code DISCOUNTS gives 10% off.",
+    "shipping_info": "United States only, shipped from Florida via USPS Ground ($7.50, 3-5 business days) or USPS Priority ($11.50, 1-3 business days). Orders ship within 1-2 business days of payment, in discreet packaging with tracking.",
+    "shipping_payment_researched": "2026-11-26",
+    "code_disclosure": "I earn a commission on purchases made with my code or link. Research use only. Not for human consumption.",
+    "code_discount_pct": 10
   }
 }
