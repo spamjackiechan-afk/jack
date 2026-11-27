@@ -193,7 +193,10 @@ def check_vendor_count_raw(root, filename, expected, problems):
 # Affiliate Team email to discountspeptides@gmail.com, subject "Black Friday
 # at Ares: dates, offer and your code", 2026-11-20 17:06Z (the order is still
 # credited; commission is paid on the order total after the discount).
-SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide", "Orbitrex Peptide", "Voltera Sciences", "Helion Research", "Ares Research"}
+# Alpha Peptides: written sale-order commission confirmation — Alpha Peptides
+# affiliate email from JP to discountspeptides@gmail.com, 2026-11-23 07:37Z
+# (affiliates earn their usual commission on every order through their link or code).
+SALE_VENDORS = {"American Peptides", "Peptide Titans", "True Peptides", "Veratis Bio", "Ride the Tide Peptides", "Midwest Peptide", "Orbitrex Peptide", "Voltera Sciences", "Helion Research", "Ares Research", "Alpha Peptides"}
 
 
 def live_vendor_sales(root):
