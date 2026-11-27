@@ -19,6 +19,16 @@
       "source": "https://peptidetitans.com",
       "start": null,
       "verified": "2026-11-05"
+    },
+    {
+      "code": null,
+      "combines_with_our_code": true,
+      "end": "2026-12-01T04:59:00Z",
+      "exclusions": "Our code is good for one order per customer. Bacteriostatic water stays at the usual code rate. Free gift vials do not earn commission. Paying by card requires logging in or creating an account at checkout",
+      "gives": "Black Friday week (Tue Nov 24 to Mon Nov 30, 11:59 PM ET): our affiliate code takes 25% off everything instead of the usual 10%. Mix & Match bundle discount applies first and the code comes off after it, for up to 36% off on 10+ items. Orders of $150, $300, $500, $750 and $1,000 (after discounts) each unlock a free vial of the customer's choice, five at $1,000",
+      "source": "peptidetitans.com affiliate email \"Your code is 25% off for Black Friday week\" (2026-11-22)",
+      "start": "2026-11-24T05:00:00Z",
+      "verified": "2026-11-22"
     }
   ],
   "True Peptides": [
