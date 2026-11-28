@@ -93,16 +93,6 @@
     {
       "code": null,
       "combines_with_our_code": false,
-      "end": "2026-11-28T07:59:00Z",
-      "exclusions": "Select vials only. One discount per order; the cart applies whichever saves more.",
-      "gives": "Buy 1, Get 1 Free on select peptide vials (mix and match, up to 5 free vials per order). Ends Fri Nov 27 at 11:59pm PT.",
-      "source": "Ares Research Affiliate Team email to discountspeptides@gmail.com, subject \"Last day: Buy 1, Get 1 Free ends tonight\", 2026-11-27 14:02Z (gmail id 1a21d50d7da15afd), and Ares Research Support email \"Last day: Buy 1, Get 1 Free\", 2026-11-27 13:08Z (gmail id 1a21d1f31d757854). They state Buy 1, Get 1 Free on select peptide vials (mix and match, up to 5 free per order) ends tonight at 11:59pm PT; 30% off every peptide vial and HGH continues through Monday; sale items are 35% off when paying with crypto; every order placed with code DISCOUNTS or the link is credited, and during the sale the cart applies whichever discount saves the buyer more.",
-      "start": "2026-11-23T14:00:00Z",
-      "verified": "2026-11-27"
-    },
-    {
-      "code": null,
-      "combines_with_our_code": false,
       "end": "2026-12-01T07:59:00Z",
       "exclusions": "One discount per order; the cart applies whichever saves more. Crypto 35% applies to sale items only.",
       "gives": "30% off every peptide vial and HGH, and 35% off sale items when paying with crypto, through Mon Nov 30 at 11:59pm PT.",
@@ -114,13 +104,13 @@
   "Orbitrex Peptide": [
     {
       "code": null,
-      "combines_with_our_code": false,
-      "end": "2026-11-27T04:59:00Z",
-      "exclusions": "Not all products are 30% off. Our code DISCOUNTS gives 10% off during the sale (live code boosts paused); the email does not say whether it stacks on discounted items. Doorbuster deals on Nov 27 are separate and not included. GLP products excluded from our listing.",
-      "gives": "Black Friday (Nov 19–26): up to 30% off sitewide, applied automatically, no sale code needed. Not all products are 30% off.",
-      "source": "accounts@orbitrexpeptide.is email (reply-to affiliates@orbitrexpeptide.com), subject \"Orbitrex announcement: Hey team,\", 2026-11-19 13:08Z",
-      "start": "2026-11-19T05:00:00Z",
-      "verified": "2026-11-23"
+      "combines_with_our_code": null,
+      "end": "2026-11-30T17:00:00Z",
+      "exclusions": "The email does not say whether our code works on top of this deal. Time zone not stated (recorded as Eastern). The earlier Black Friday window (Nov 19-26, up to 30% off sitewide) has ended",
+      "gives": "Black Friday door buster: Buy 2, Get 3 FREE from 12:00 AM to 6:00 AM Nov 27, then Buy 2, Get 1 FREE from 6:00 AM Nov 27 to 12:00 PM Nov 30",
+      "source": "orbitrexpeptide.is affiliate community announcement email \"Friday Door Buster deal updated\" (2026-11-28)",
+      "start": "2026-11-27T11:00:00Z",
+      "verified": "2026-11-28"
     }
   ],
   "Axovera Labs": [
