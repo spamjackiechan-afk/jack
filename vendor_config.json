@@ -1034,5 +1034,25 @@
     "shipping_payment_researched": "2026-11-26",
     "code_disclosure": "I earn a commission on purchases made with my code or link. Research use only. Not for human consumption.",
     "code_discount_pct": 10
+  },
+  "Lyra Vital": {
+    "status": "approved",
+    "site_url": "https://lyravital.com",
+    "tracking_type": "link_plus_code",
+    "affiliate_link_base": "https://lyravital.com/?ref=discounts",
+    "affiliate_path_suffix": null,
+    "promo_code": "DISCOUNTS",
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "American Express",
+      "Discover",
+      "Zelle"
+    ],
+    "payment_note": "Prices in USD, before shipping and tax, default size per product on 2026-11-28. Our code DISCOUNTS gives 10% off. The site also runs Buy 4, get 1 free, which is not in these prices.",
+    "shipping_info": "United States only, shipped from Orlando, Florida. Standard $12 (free over $200) or Express $29. Orders dispatch within 1 business day of cleared payment (same business day before 2pm Eastern), with tracking.",
+    "shipping_payment_researched": "2026-11-28",
+    "code_disclosure": "I earn a commission on purchases made with my code or link. Research use only. Not for human consumption.",
+    "code_discount_pct": 10
   }
 }

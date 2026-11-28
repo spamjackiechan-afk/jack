@@ -323,6 +323,13 @@ VENDORS = {
                                   # are allowed. Sizes can't be pinned by URL, so only each product's default
                                   # (first JSON-LD offer) size is listed.
     },
+    "Lyra Vital": {
+        "robots_checked_by": "Claude (Vendor adder) for Jackson, 2026-11-28",
+        "robots_allows": True,   # confirmed: robots.txt "User-agent: *" is Allow: / and disallows only /api/ (except
+                                  # /api/coa), /admin/, /affiliates/dashboard, /checkout, /account and /coa-reports/;
+                                  # /product/<slug> pages are allowed. Sizes can't be pinned by URL, so only each
+                                  # product's default (first JSON-LD offer) size is listed.
+    },
     "Certa Peptides": {
         "robots_checked_by": "Grok for Jackson, 2026-10-28",
         "robots_allows": True,   # confirmed: robots.txt is "Allow: /" and disallows only /api/, /checkout, /cart,
